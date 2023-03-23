@@ -9,8 +9,6 @@ export default class NotifyMgr extends ParentMgr {
 
     static Instance : NotifyMgr;
 
-    
-
     static getInstance()
     {   
         let mgr : NotifyMgr = NotifyMgr.Instance;
