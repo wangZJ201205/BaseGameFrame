@@ -8,6 +8,8 @@ export default class UIMgr extends ParentMgr {
 
     static Instance : UIMgr;
 
+    
+
     static getInstance()
     {
         return UIMgr.Instance;
@@ -24,5 +26,8 @@ export default class UIMgr extends ParentMgr {
         console.info("start UIMgr");
     }
 
-    // update (dt) {}
+    update (dt) 
+    {
+
+    }
 }
