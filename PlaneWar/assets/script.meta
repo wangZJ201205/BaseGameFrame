@@ -1,12 +1,20 @@
 {
   "ver": "1.1.2",
-  "uuid": "fc195567-7835-41ae-8fac-c246ed702285",
-  "isBundle": false,
+  "uuid": "a9f8b247-85ee-4c26-a3a7-fa9bc9155401",
+  "isBundle": true,
   "bundleName": "",
   "priority": 1,
-  "compressionType": {},
-  "optimizeHotUpdate": {},
-  "inlineSpriteFrames": {},
-  "isRemoteBundle": {},
+  "compressionType": {
+    "baidugame": "default"
+  },
+  "optimizeHotUpdate": {
+    "baidugame": false
+  },
+  "inlineSpriteFrames": {
+    "baidugame": false
+  },
+  "isRemoteBundle": {
+    "baidugame": false
+  },
   "subMetas": {}
 }

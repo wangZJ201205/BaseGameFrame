@@ -1,0 +1,38 @@
+{
+  "ver": "2.3.7",
+  "uuid": "ced6a5c2-808d-46ba-9dde-68bffacaab89",
+  "importer": "texture",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "genMipmaps": false,
+  "packable": true,
+  "width": 800,
+  "height": 600,
+  "platformSettings": {},
+  "subMetas": {
+    "female_clothes_24_2_04": {
+      "ver": "1.0.6",
+      "uuid": "199f7d9e-4e93-48b7-84ae-87d3d24a8523",
+      "importer": "sprite-frame",
+      "rawTextureUuid": "ced6a5c2-808d-46ba-9dde-68bffacaab89",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 4.5,
+      "offsetY": 50.5,
+      "trimX": 356,
+      "trimY": 184,
+      "width": 97,
+      "height": 131,
+      "rawWidth": 800,
+      "rawHeight": 600,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}
