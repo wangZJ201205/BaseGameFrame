@@ -3,7 +3,7 @@ let moduleMap = {
 'src/scripts/resources/index.js' () { return require('src/scripts/resources/index.js') },
 'assets/script/index.js' () { return require('assets/script/index.js') },
 'src/scripts/startscene/index.js' () { return require('src/scripts/startscene/index.js') },
-'src/scripts/main/index.js' () { return require('src/scripts/main/index.js') },
+'assets/main/index.js' () { return require('assets/main/index.js') },
 // tail
 };
 

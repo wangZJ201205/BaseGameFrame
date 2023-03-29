@@ -1,8 +1,8 @@
 let moduleMap = {
 'assets/internal/index.js' () { return require('assets/internal/index.js') },
-'assets/resources/index.js' () { return require('assets/resources/index.js') },
-'assets/script/index.js' () { return require('assets/script/index.js') },
-'assets/startscene/index.js' () { return require('assets/startscene/index.js') },
+'src/scripts/resources/index.js' () { return require('src/scripts/resources/index.js') },
+'src/scripts/script/index.js' () { return require('src/scripts/script/index.js') },
+'src/scripts/startscene/index.js' () { return require('src/scripts/startscene/index.js') },
 'src/scripts/main/index.js' () { return require('src/scripts/main/index.js') },
 // tail
 };
