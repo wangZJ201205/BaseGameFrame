@@ -1,7 +1,7 @@
 
 //网络管理器
-
 const {ccclass, property} = cc._decorator;
+
 
 @ccclass
 export default class NetMgr extends cc.Component {
@@ -19,6 +19,8 @@ export default class NetMgr extends cc.Component {
         return mgr;
     }
 
+    socket : Socket = null;
+
     start () {
 
         //测试
@@ -27,7 +29,7 @@ export default class NetMgr extends cc.Component {
 
         // //请求
         // let request = cc.loader.getXMLHttpRequest();
-        // request.open("GET",url,true); //异步
+        // request.open("GET","http://localhost:9000",true); //异步
         // request.onreadystatechange = ()=>{
         //     //请求状态改变
         //     //请求结束后，获取信息
@@ -38,9 +40,21 @@ export default class NetMgr extends cc.Component {
         //     }
         // };
         // request.send();
-
+        let opts = {
+            'reconnection':false,
+            'force new connection': true,
+            'transports':['websocket', 'polling']
+        }
+        this.socket = io.connect('http://localhost:9000',opts);
         
+        this.socket.on('connect',(data)=>{
+            console.info("连接成功");
+        });
 
+        this.socket.on('disconnect',(data)=>{
+            console.log("disconnect");
+            // this.connected = false;
+        }); 
 
     }
 
