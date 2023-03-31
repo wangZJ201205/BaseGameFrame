@@ -4,17 +4,6 @@ var io = require('socket.io')(http,{
     'transports': ['websocket', 'polling']
   });
 
-// var cors = require('cors');
-// app.use(cors());
-
-app.get('/', function(req, res){
-    console.info('有客戶端有消息请求');
-    res.send('<html><body><h1>Hello World!</h1></body></html>');
-    res.on('message',function(data){
-        console.log('客户端发来消息' + data);
-      });
-});
-
 //设置跨域访问
 app.all('*', function(req, res, next) {
     res.header("Access-Control-Allow-Origin", "*");
@@ -46,6 +35,14 @@ http.listen(9000, function(){
         };
         request.send();
 */
+
+app.get('/', function(req, res){
+    console.info('有客戶端有消息请求');
+    res.send('<html><body><h1>Hello World!</h1></body></html>');
+    res.on('message',function(data){
+        console.log('客户端发来消息' + data);
+      });
+});
 
 
 //监听有客户端连接
