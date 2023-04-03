@@ -2,7 +2,7 @@
  * 消息中心
  */
 
-const WZJEvent = {
+const Event = {
     
     _event : [],
 
@@ -38,4 +38,4 @@ const WZJEvent = {
 
 };
 
-wzj.event = module.exports = WZJEvent
+wzj.event = module.exports = Event

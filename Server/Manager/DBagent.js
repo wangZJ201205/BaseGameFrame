@@ -7,7 +7,7 @@ var sequelize = null;
 
 
 
-const WZJDBagent = {
+const DBagent = {
 
     init : function ()
     {
@@ -54,12 +54,11 @@ const WZJDBagent = {
         //     console.error(player);
         // });
 
-        
-
+      
     },
 
 
 
 };
 
-wzj.dbagent = module.exports = WZJDBagent;
+wzj.dbagent = module.exports = DBagent;

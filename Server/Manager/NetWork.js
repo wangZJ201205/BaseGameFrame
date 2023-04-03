@@ -1,3 +1,4 @@
+const MessageName = require('../Common/MessageDefine');
 
 const app = require('express')();
 const http = require('http').Server(app);
@@ -5,7 +6,7 @@ const io = require('socket.io')(http,{
     'transports': ['websocket', 'polling']
   });
 
-const WZJNetWork = {
+const NetWork = {
 
   init : function()
   {
@@ -51,28 +52,34 @@ const WZJNetWork = {
     app.get('/', function(req, res){
         console.info('有客戶端有消息请求');
         res.send('<html><body><h1>Hello World!</h1></body></html>');
-        res.on('message',function(data){
-            console.log('客户端发来消息' + data);
-          });
+        // res.on('message',function(data){
+        //     console.log('客户端发来消息' + data);
+        //   });
     });
 
     //监听有客户端连接
     io.on('connection', function(socket){
         //发送消息
-        //socket.emit('message','连接成功了');
+        socket.emit( MessageName.BUILD_CONNECTION ,'连接成功了');
+        
         //监听客户端发来的消息
         console.info('有客戶端鏈接');
-        socket.on('message',function(data){
-          console.log('客户端发来消息' + data);
-        });
-        socket.on('disconnect', function () {
+    
+        socket.on(MessageName.DISCONNECTION , function () {
           console.log('A user disconnected');
         });
-        socket.on('login', function (obj) {
-          console.log('obj.username');
+
+        socket.on(MessageName.PING ,function(data){
+          socket.emit(MessageName.PONG);
         });
+
+        
+
     });
+
+
+
   }
 };
 
-wzj.NetWork = module.exports = WZJNetWork;
+wzj.NetWork = module.exports = NetWork;

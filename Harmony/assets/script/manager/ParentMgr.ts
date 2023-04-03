@@ -6,7 +6,7 @@ export default class ParentMgr extends cc.Component {
 
     onLoad () 
     {
-        
+        this.register();
     }
 
     start () {
@@ -14,4 +14,8 @@ export default class ParentMgr extends cc.Component {
     }
 
     // update (dt) {}
+
+    register(){}
+
+
 }

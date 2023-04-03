@@ -2,9 +2,9 @@
 //程序启动入口
 global.wzj = global.wzj || {};
 
-require('./Common/WZJNetWork');
-require('./Common/WZJDBagent');
-require('./Common/WZJEvent');
+require('./Manager/NetWork');
+require('./Manager/DBagent');
+require('./Manager/Event');
 
 //初始化
 function init()
