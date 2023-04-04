@@ -10,7 +10,22 @@ export default class LoadMgr extends ParentMgr {
 
     public static readonly Instance : LoadMgr = new LoadMgr();
 
-    
+    /*====================================================================================================*/
+    /**
+     * 加载资源清单
+     */
+    /*====================================================================================================*/
+    loadResources(callback)
+    {
+        cc.assetManager.loadBundle('resources', (err,bundle)=>{
+            if (err) {
+                cc.error("LoadAsset failed ... and path = ");
+                return;
+            }
+            callback();
+        });
+    }
+
     /*====================================================================================================*/
     /**
      * 异步加载资源
@@ -18,24 +33,9 @@ export default class LoadMgr extends ParentMgr {
     /*====================================================================================================*/
     LoadAsset(relative_path, complete_callback) 
     {
-        // cc.assetManager.loadBundle(relative_path, (err,bundle)=>{
-        //     if (err) {
-        //         cc.error("LoadAsset failed ... and path = " + relative_path);
-        //         return;
-        //     }
-        //     bundle.load(relative_path ,(error,asset) =>
-        //     {
-        //         if (error) {
-        //             cc.error("LoadAsset failed ... and path = " + relative_path);
-        //             return;
-        //         }
-        //         else {
-        //             complete_callback && complete_callback(asset);
-        //         }
-        //     });
-        //     // complete_callback && complete_callback(asset);
-        // });  
-        cc.resources.load(relative_path, (error, asset) => {
+        var bundles = cc.assetManager.getBundle('resources');
+        bundles.load(relative_path ,(error,asset) =>
+        {
             if (error) {
                 cc.error("LoadAsset failed ... and path = " + relative_path);
                 return;
@@ -43,13 +43,8 @@ export default class LoadMgr extends ParentMgr {
             else {
                 complete_callback && complete_callback(asset);
             }
-        }); 
+        });
     }
 
     
-
-
-
-
-    // update (dt) {}
 }

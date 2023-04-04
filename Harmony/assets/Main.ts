@@ -23,7 +23,7 @@ export default class Main extends cc.Component {
         let bundleRoot = [];
         bundleRoot.push('script');
         bundleRoot.push('startscene');
-        bundleRoot.push('resources');
+        // bundleRoot.push('resources');
 
         let count = 0;
 

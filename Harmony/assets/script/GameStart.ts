@@ -4,6 +4,7 @@
 import EventName from "./common/EventName";
 import UIConfig from "./config/UIConfig";
 import EventMgr from "./manager/EventMgr";
+import LoadMgr from "./manager/LoadMgr";
 import NetMgr from "./manager/NetMgr";
 
 const {ccclass, property} = cc._decorator;
@@ -21,13 +22,16 @@ export default class GameStart extends cc.Component {
         //加载配置文件
         UIConfig.init();
 
+        
+
         //加载管理类
         EventMgr.Instance.start();
         NetMgr.Instance.start();
 
-
-
-        EventMgr.Instance.Emit(EventName.UI_OPEN_PANEL,{name:EventName.UI_LOGIN});
+        
+        LoadMgr.Instance.loadResources(()=>{
+            EventMgr.Instance.Emit(EventName.UI_OPEN_PANEL,{name:EventName.UI_LOGIN});
+        });
 
     }
 

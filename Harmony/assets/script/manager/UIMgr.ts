@@ -59,7 +59,6 @@ export default class UIMgr extends ParentMgr {
             // this.uiCamera.getp.addChild(uiPref);
             // var node = new cc.Node();
             // node.parent = this.uiLayer;
-            // camer
         });
 
 

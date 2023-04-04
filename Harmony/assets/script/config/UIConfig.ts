@@ -7,7 +7,7 @@ import EventName from "../common/EventName";
 
 export default class UIConfig{
 
-    private static readonly PreGame : string = 'ui/mainUI/';
+    private static readonly PreGame : string = '/ui/mainUI/';
 
 
     private static UIReg : {}; //界面地址注册

@@ -1,30 +1,42 @@
 {
-  "description": "项目配置文件。",
-  "miniprogramRoot": "",
-  "setting": {
-    "urlCheck": true,
-    "es6": true,
-    "postcss": true,
-    "minified": false,
-    "newFeature": false,
-    "babelSetting": {
-      "ignore": [],
-      "disablePlugins": [],
-      "outputPath": ""
+    "description": "项目配置文件。",
+    "miniprogramRoot": "./",
+    "setting": {
+        "urlCheck": true,
+        "es6": true,
+        "postcss": true,
+        "minified": false,
+        "newFeature": false
     },
-    "condition": false
-  },
-  "compileType": "game",
-  "libVersion": "2.30.3",
-  "appid": "wxa5852a3f8a956afe",
-  "projectname": "Harmony",
-  "condition": {},
-  "packOptions": {
-    "ignore": [],
-    "include": []
-  },
-  "editorSetting": {
-    "tabIndent": "insertSpaces",
-    "tabSize": 2
-  }
+    "compileType": "game",
+    "libVersion": "game",
+    "appid": "wxa5852a3f8a956afe",
+    "projectname": "Harmony",
+    "condition": {
+        "search": {
+            "current": -1,
+            "list": []
+        },
+        "conversation": {
+            "current": -1,
+            "list": []
+        },
+        "game": {
+            "currentL": -1,
+            "list": [],
+            "current": -1
+        },
+        "miniprogram": {
+            "current": -1,
+            "list": []
+        }
+    },
+    "packOptions": {
+        "ignore": [],
+        "include": []
+    },
+    "editorSetting": {
+        "tabIndent": "insertSpaces",
+        "tabSize": 2
+    }
 }
