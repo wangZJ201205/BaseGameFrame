@@ -18,24 +18,32 @@ export default class LoadMgr extends ParentMgr {
     /*====================================================================================================*/
     LoadAsset(relative_path, complete_callback) 
     {
-        function cb(err)
-        {
-            if (err) {
-                return console.error(err.message, err.stack);
+        // cc.assetManager.loadBundle(relative_path, (err,bundle)=>{
+        //     if (err) {
+        //         cc.error("LoadAsset failed ... and path = " + relative_path);
+        //         return;
+        //     }
+        //     bundle.load(relative_path ,(error,asset) =>
+        //     {
+        //         if (error) {
+        //             cc.error("LoadAsset failed ... and path = " + relative_path);
+        //             return;
+        //         }
+        //         else {
+        //             complete_callback && complete_callback(asset);
+        //         }
+        //     });
+        //     // complete_callback && complete_callback(asset);
+        // });  
+        cc.resources.load(relative_path, (error, asset) => {
+            if (error) {
+                cc.error("LoadAsset failed ... and path = " + relative_path);
+                return;
             }
-
-            count++;
-            console.info(cc.assetManager.bundles);
-            if (count === bundleRoot.length) {
-                //cc.game.run(option, onStart);
-                cc.director.loadScene("startscene/game");
+            else {
+                complete_callback && complete_callback(asset);
             }
-        }
-
-        for( let i = 0; i < bundleRoot.length ; i++)
-        {
-            cc.assetManager.loadBundle(bundleRoot[i], cb);
-        }
+        }); 
     }
 
     

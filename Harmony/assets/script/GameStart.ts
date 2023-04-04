@@ -2,6 +2,7 @@
 //游戏入口
 
 import EventName from "./common/EventName";
+import UIConfig from "./config/UIConfig";
 import EventMgr from "./manager/EventMgr";
 import NetMgr from "./manager/NetMgr";
 
@@ -16,6 +17,11 @@ export default class GameStart extends cc.Component {
     start () {
         console.info("Harmony GameStart");
         
+
+        //加载配置文件
+        UIConfig.init();
+
+        //加载管理类
         EventMgr.Instance.start();
         NetMgr.Instance.start();
 

@@ -24,7 +24,7 @@
     "android": false
   },
   "isRemoteBundle": {
-    "wechatgame": false,
+    "wechatgame": true,
     "web-mobile": false,
     "bytedance": true,
     "android": true

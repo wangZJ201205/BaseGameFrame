@@ -1,6 +1,10 @@
-
+/**
+ * 界面管理类
+ */
 import EventName from "../common/EventName";
+import UIConfig from "../config/UIConfig";
 import EventMgr from "./EventMgr";
+import LoadMgr from "./LoadMgr";
 import ParentMgr from "./ParentMgr";
 
 const {ccclass, property} = cc._decorator;
@@ -34,9 +38,23 @@ export default class UIMgr extends ParentMgr {
     openUI(data)
     {   
         var uiname = data.name;
-        console.info(">>>>>>open ui" + uiname);
+        var uipath = UIConfig.getUIPath(uiname);
 
+        if(!uipath)
+        {
+            console.error('没有注册此界面资源路径' + uiname + ',先注册此界面路径！');
+            return;
+        }
+
+        console.info(">>>>>>open uiname:" + uiname+" | uipath:"+uipath.path);
         
+        LoadMgr.Instance.LoadAsset(uipath.path,(prefab)=>{
+            console.info("资源加载完成！" + uiname);
+            var uiPref = cc.instantiate(prefab);
+            uiPref.parent = this.uiCamera;
+        });
+
+
 
     }
 
