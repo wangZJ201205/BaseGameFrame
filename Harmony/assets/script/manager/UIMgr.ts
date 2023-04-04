@@ -15,6 +15,9 @@ export default class UIMgr extends ParentMgr {
     @property(cc.Camera)
     uiCamera: cc.Camera = null;
 
+    @property(cc.Node)
+    uiLayer: cc.Node = null;
+
     onLoad () 
     {
         super.onLoad();
@@ -50,8 +53,13 @@ export default class UIMgr extends ParentMgr {
         
         LoadMgr.Instance.LoadAsset(uipath.path,(prefab)=>{
             console.info("资源加载完成！" + uiname);
+            //周四过来研究一下camera怎么用的
             var uiPref = cc.instantiate(prefab);
-            uiPref.parent = this.uiCamera;
+            uiPref.parent = this.uiLayer;
+            // this.uiCamera.getp.addChild(uiPref);
+            // var node = new cc.Node();
+            // node.parent = this.uiLayer;
+            // camer
         });
 
 
