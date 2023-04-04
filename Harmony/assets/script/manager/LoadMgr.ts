@@ -15,16 +15,16 @@ export default class LoadMgr extends ParentMgr {
      * 加载资源清单
      */
     /*====================================================================================================*/
-    loadResources(callback)
-    {
-        cc.assetManager.loadBundle('resources', (err,bundle)=>{
-            if (err) {
-                cc.error("LoadAsset failed ... and path = ");
-                return;
-            }
-            callback();
-        });
-    }
+    // loadResources(callback)
+    // {
+    //     cc.assetManager.loadBundle('resources', (err,bundle)=>{
+    //         if (err) {
+    //             cc.error("LoadAsset failed ... and path = ");
+    //             return;
+    //         }
+    //         callback();
+    //     });
+    // }
 
     /*====================================================================================================*/
     /**

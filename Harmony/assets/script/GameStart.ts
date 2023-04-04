@@ -28,10 +28,10 @@ export default class GameStart extends cc.Component {
         EventMgr.Instance.start();
         NetMgr.Instance.start();
 
-        
-        LoadMgr.Instance.loadResources(()=>{
+
+        // LoadMgr.Instance.loadResources(()=>{
             EventMgr.Instance.Emit(EventName.UI_OPEN_PANEL,{name:EventName.UI_LOGIN});
-        });
+        // });
 
     }
 
