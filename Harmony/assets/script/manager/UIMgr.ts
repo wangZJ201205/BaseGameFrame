@@ -2,6 +2,7 @@
  * 界面管理类
  */
 import EventName from "../common/EventName";
+import GameData from "../common/GameData";
 import UIConfig from "../config/UIConfig";
 import EventMgr from "./EventMgr";
 import LoadMgr from "./LoadMgr";
@@ -9,38 +10,62 @@ import ParentMgr from "./ParentMgr";
 
 const {ccclass, property} = cc._decorator;
 
+enum UIState
+{
+    Loading, //加载状态
+    Open,    //运行状态
+    Hide,    //隐藏状态
+    Close,   //关闭等待回收状态
+}
+
 @ccclass
 export default class UIMgr extends ParentMgr {
+    public static readonly Instance : UIMgr = new UIMgr();
 
-    @property(cc.Camera)
-    uiCamera: cc.Camera = null;
 
-    @property(cc.Node)
-    uiLayer: cc.Node = null;
+    uiLayer: cc.Node = null; //ui显示层
+    uiList:Map<string,{}>;
 
     onLoad () 
     {
         super.onLoad();
-        console.info("load UIMgr222");
+        this.uiList = new Map();
     }
 
-    start () {
-        console.info("start UIMgr222");
+    start () 
+    {
+        var canvas = cc.director.getScene().getChildByName('Canvas');
+        this.uiLayer = new cc.Node();
+        this.uiLayer.zIndex = 999;
+        this.uiLayer.width = cc.winSize.width;
+        this.uiLayer.height = cc.winSize.height;
+        this.uiLayer.parent = canvas;
+
+        this.uiLayer.runAction(cc.repeatForever(cc.sequence(cc.delayTime(1),cc.callFunc(this.update, this))));
     }
 
     update (dt) 
     {
-
+        for (const key in this.uiList) {
+            if (Object.prototype.hasOwnProperty.call(this.uiList, key)) {
+                const element = this.uiList[key];
+                if(element.state == UIState.Close)
+                {
+                    element.uiContainer.parent = null;
+                    delete this.uiList[key];
+                    return;
+                }
+            }
+        }
     }
 
     register()
     {
-        EventMgr.Instance.On(EventName.UI_OPEN_PANEL,this.openUI,this);//打开界面
+        // EventMgr.Instance.On(EventName.UI_OPEN_PANEL,this.openUI,this);//打开界面
     }
 
-    openUI(data)
+    openUI(uiname)
     {   
-        var uiname = data.name;
         var uipath = UIConfig.getUIPath(uiname);
 
         if(!uipath)
@@ -49,20 +74,79 @@ export default class UIMgr extends ParentMgr {
             return;
         }
 
-        console.info(">>>>>>open uiname:" + uiname+" | uipath:"+uipath.path);
+        if( GameData.IsDebug )
+        {
+            console.info(">>>>>>open uiname:" + uiname+" | uipath:"+uipath.path);
+        }
+        
+        var uiInf = this.getUI(uiname);
+
+        if( uiInf )
+        {
+            if(uiInf.state == UIState.Close)
+            {
+                uiInf.uiContainer.parent = this.uiLayer; //重新打开
+                uiInf.state = UIState.Open;
+            }
+            else{
+                console.info(">>>有该对象! = "+ uiname);
+            }
+            return;
+        }
+
+        this.addUI(uiname, UIState.Loading);
         
         LoadMgr.Instance.LoadAsset(uipath.path,(prefab)=>{
             console.info("资源加载完成！" + uiname);
-            //周四过来研究一下camera怎么用的
+            
             var uiPref = cc.instantiate(prefab);
             uiPref.parent = this.uiLayer;
-            // this.uiCamera.getp.addChild(uiPref);
-            // var node = new cc.Node();
-            // node.parent = this.uiLayer;
+            
+            var uiInf = this.getUI(uiname);
+            if( uiInf ){
+                uiInf.uiContainer = uiPref;
+                uiInf.state = UIState.Open;
+            }
         });
+    }
 
+    closeUI(uiname)
+    {
+        var uiInf = this.getUI(uiname);
+        if(!uiInf)
+        {
+            return;
+        }
+        uiInf.state = UIState.Close;
+    }
 
+    /**
+     * 添加界面
+     * @param uiName 界面名字 
+     * @param state 状态
+     */
+    addUI(uiName,state)
+    {
+        this.uiList[uiName] = {name:uiName,state:state};
+    }
 
+    getUI(uiName)
+    {
+        return this.uiList[uiName] || null;
+    }
+
+    /**
+     * 获取界面状态
+     * @param uiname 
+     * @returns 
+     */
+    getUIState(uiname)
+    {
+        if(!this.getUI(uiname))
+        {
+            return UIState.Close;
+        }
+        return this.getUI(uiname).state;
     }
 
 }

@@ -1,3 +1,4 @@
+import GameData from "../common/GameData";
 import MessageName from "../common/MessageDefine";
 import ParentMgr from "./ParentMgr";
 
@@ -45,7 +46,7 @@ export default class NetMgr extends ParentMgr {
             'force new connection': true,
             'transports':['websocket', 'polling']
         }
-        this.socket = io.connect('http://localhost:9000',opts);
+        this.socket = io.connect(GameData.IpPort, opts);
             
         this.socket.on(MessageName.BUILD_CONNECTION, (data)=>{
             console.info(data);
@@ -59,7 +60,6 @@ export default class NetMgr extends ParentMgr {
         }); 
 
     }
-
 
     //启动心跳
     startHearBeat(){
@@ -113,6 +113,9 @@ export default class NetMgr extends ParentMgr {
         this.socket = null;
     }
 
+    /**
+     * 心跳
+     */
     update (dt) {
         if(!this.connectState)
         {
@@ -124,14 +127,44 @@ export default class NetMgr extends ParentMgr {
         }
     }
 
-    send(eventName,data)
+    /**
+     * 发送消息
+     * @param socketName 消息名
+     * @param data 数据
+     */
+    send(socketName,data)
     {
         if(this.socket)
         {
-            this.socket.emit(eventName, data);
+            this.socket.emit(socketName, data);
         }
     }
 
-    
+    /**
+     * 注册监听事件
+     * @param socketName 
+     * @param callBack 
+     * @returns 
+     */
+    on(socketName,callBack)
+    {
+        if(!this.socket){
+            return;
+        }
+        this.socket.on(socketName,callBack);
+    }
 
+    /**
+     * 移除监听事件
+     * @param socketName 
+     * @param callBack 
+     * @returns 
+     */
+    off(socketName,callBack)
+    {
+        if(!this.socket){
+            return;
+        }
+        this.socket.off(socketName,callBack);
+    }
 }

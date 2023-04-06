@@ -55,13 +55,10 @@
       },
       {
         "__id__": 67
-      },
-      {
-        "__id__": 68
       }
     ],
     "_prefab": {
-      "__id__": 69
+      "__id__": 68
     },
     "_opacity": 255,
     "_color": {
@@ -1007,7 +1004,7 @@
         1,
         1,
         1,
-        1
+        0
       ]
     },
     "_eulerAngles": {
@@ -1078,7 +1075,7 @@
         1,
         1,
         1,
-        1
+        0
       ]
     },
     "_eulerAngles": {
@@ -1114,14 +1111,14 @@
     "_opacity": 255,
     "_color": {
       "__type__": "cc.Color",
-      "r": 0,
-      "g": 0,
+      "r": 255,
+      "g": 158,
       "b": 0,
       "a": 255
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 100,
+      "width": 150,
       "height": 40
     },
     "_anchorPoint": {
@@ -1175,7 +1172,7 @@
     "_dstBlendFactor": 771,
     "_string": "开始游戏",
     "_N$string": "开始游戏",
-    "_fontSize": 25,
+    "_fontSize": 30,
     "_lineHeight": 40,
     "_enableWrapText": false,
     "_N$file": null,
@@ -1283,12 +1280,12 @@
     "_normalMaterial": null,
     "_grayMaterial": null,
     "duration": 0.1,
-    "zoomScale": 1.2,
+    "zoomScale": 1.1,
     "clickEvents": [],
     "_N$interactable": true,
     "_N$enableAutoGrayEffect": false,
-    "_N$transition": 2,
-    "transition": 2,
+    "_N$transition": 3,
+    "transition": 3,
     "_N$normalColor": {
       "__type__": "cc.Color",
       "r": 230,
@@ -1341,10 +1338,10 @@
       "__uuid__": "36f5598a-0b05-4058-b71a-faf19d9d7cd3"
     },
     "_N$hoverSprite": {
-      "__uuid__": "36f5598a-0b05-4058-b71a-faf19d9d7cd3"
+      "__uuid__": "a4e2d9af-ba8d-4896-8015-5494e477f4f7"
     },
     "hoverSprite": {
-      "__uuid__": "36f5598a-0b05-4058-b71a-faf19d9d7cd3"
+      "__uuid__": "a4e2d9af-ba8d-4896-8015-5494e477f4f7"
     },
     "_N$disabledSprite": {
       "__uuid__": "a4e2d9af-ba8d-4896-8015-5494e477f4f7"
@@ -2414,23 +2411,6 @@
     "sync": false
   },
   {
-    "__type__": "cc.Canvas",
-    "_name": "",
-    "_objFlags": 0,
-    "node": {
-      "__id__": 1
-    },
-    "_enabled": true,
-    "_designResolution": {
-      "__type__": "cc.Size",
-      "width": 1280,
-      "height": 720
-    },
-    "_fitWidth": false,
-    "_fitHeight": true,
-    "_id": ""
-  },
-  {
     "__type__": "cc.Widget",
     "_name": "",
     "_objFlags": 0,
@@ -2465,6 +2445,8 @@
       "__id__": 1
     },
     "_enabled": true,
+    "label": null,
+    "text": "hello",
     "accountEB": {
       "__id__": 49
     },

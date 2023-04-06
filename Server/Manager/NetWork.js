@@ -72,9 +72,6 @@ const NetWork = {
         socket.on(MessageName.PING ,function(data){
           socket.emit(MessageName.PONG);
         });
-
-        
-
     });
 
 

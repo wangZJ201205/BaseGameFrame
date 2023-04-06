@@ -12,6 +12,7 @@ let MessageName = {
     
     DISCONNECTION : string = 'disconnect', //断开连接
 
+    LOGIN_CHECK_PLAYER: string = 'LOGIN_CHECK_PLAYER',//登陆验证角色
     
 }
 
