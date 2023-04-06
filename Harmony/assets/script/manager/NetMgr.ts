@@ -136,7 +136,8 @@ export default class NetMgr extends ParentMgr {
     {
         if(this.socket)
         {
-            this.socket.emit(socketName, data);
+            data['socketName'] = socketName;
+            this.socket.emit(MessageName.CLIENT_TO_SERVER, data);
         }
     }
 

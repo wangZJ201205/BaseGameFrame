@@ -11,7 +11,7 @@ const DBagent = {
 
     init : function ()
     {
-        console.info('wzjdbagent init');
+        console.info('dbagent init');
 
         //连接数据库
         sequelize = new Sequelize('wemix_wzj_game', 'root', '123', {
@@ -32,7 +32,7 @@ const DBagent = {
 
     start : function()
     {
-        console.info('wzjdbagent start');
+        console.info('dbagent start');
 
         /**
          * 实现外部传入参数
@@ -61,4 +61,4 @@ const DBagent = {
 
 };
 
-wzj.dbagent = module.exports = DBagent;
+server.dbagent = module.exports = DBagent;

@@ -6,12 +6,11 @@ const Event = {
     
     _event : [],
 
-    On( eventname, callback, target) {
+    On( eventname, callback) {
         const message = {
-          id: this.messages.length + 1,
+          id: this._event.length + 1,
           eventname,
           callback,
-          target,
         };
         this._event.push(message);
         return message.id;
@@ -22,7 +21,7 @@ const Event = {
             var event = this._event[index];
             if(event.eventname == eventname)
             {
-                event.callback( event.target, data );
+                event.callback( data );
             }
         }
     },
@@ -38,4 +37,4 @@ const Event = {
 
 };
 
-wzj.event = module.exports = Event
+server.event = module.exports = Event

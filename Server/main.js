@@ -1,24 +1,30 @@
+const LoginMsgHandle = require('./Login/LoginMsgHandle');
 
 //程序启动入口
-global.wzj = global.wzj || {};
+global.server = global.server || {};
 
 require('./Manager/NetWork');
 require('./Manager/DBagent');
 require('./Manager/Event');
+require('./Manager/PlayerMgr');
 
 //初始化
 function init()
 {
-    wzj.NetWork.init();
-    wzj.dbagent.init();
+    server.NetWork.init();
+    server.dbagent.init();
+    server.Players.init();
+
+    LoginMsgHandle.register();
 
 }
 
 //运行
 function start()
 {
-    wzj.NetWork.start();
-    wzj.dbagent.start();
+    server.NetWork.start();
+    server.dbagent.start();
+    server.Players.start();
     
     
 }

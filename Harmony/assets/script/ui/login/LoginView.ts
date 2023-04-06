@@ -41,7 +41,7 @@ export default class LoginView extends UIParent {
     openGame(event,param)
     {
         var msg = {};
-        msg['userName'] = this.accountEB.string;
+        msg['accountId'] = this.accountEB.string;
         msg['password'] = this.passwordEB.string;
         NetMgr.Instance.send(MessageName.LOGIN_CHECK_PLAYER,msg);
         // EventMgr.Instance.Emit(EventName.UI_CLOSE_PANEL + this.getUIName(),null);

@@ -61,22 +61,43 @@ const NetWork = {
     io.on('connection', function(socket){
         //发送消息
         socket.emit( MessageName.BUILD_CONNECTION ,'连接成功了');
-        
+
         //监听客户端发来的消息
         console.info('有客戶端鏈接');
     
         socket.on(MessageName.DISCONNECTION , function () {
           console.log('A user disconnected');
+          
         });
 
         socket.on(MessageName.PING ,function(data){
           socket.emit(MessageName.PONG);
         });
+
+        //发送消息
+        socket.on(MessageName.CLIENT_TO_SERVER ,function(data){
+          console.info('>>MessageName.CLIENT_TO_SERVER clientid:'+socket.id);
+          data['client_id'] = socket.id;
+          server.event.send(data.socketName,data);
+        });
+
+
     });
+  },
 
-
-
-  }
+  /**
+     * 发送消息
+     * socketName 消息名
+     * data 数据内容
+     */
+  emit(socketName,data)
+  {
+    var socket = io.sockets.connected[data.client_id];
+    if(socket)
+    {
+      socket.emit(socketName,data);
+    }
+  },
 };
 
-wzj.NetWork = module.exports = NetWork;
+server.NetWork = module.exports = NetWork;
