@@ -4,10 +4,9 @@
 class Entity {
     
     // _prop_map:{};
-
     // _account_id:String; //账号id
     // _client_id:String; //与客户端通信的socketId
-
+    
     constructor(accountId,clientId) {
         this._account_id = accountId;
         this._client_id = clientId;
