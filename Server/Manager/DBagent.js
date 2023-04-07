@@ -102,7 +102,7 @@ const DBagent = {
               msg.error = 0;
               msg.client_id = acc.cid;
               msg.accountId = acc.accountId;
-              server.event.send(EventName.DB_LOGIN_CHECK_ACCOUNT_RESPONSE,msg);
+              server.event.send(EventName.DB_LOGIN_CHECK_ACCOUNT_RESPONSE,msg); 
             }
             else //密码错误
             {
