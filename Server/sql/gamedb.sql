@@ -32,9 +32,9 @@ ENGINE=InnoDB DEFAULT CHARACTER SET=utf8 COLLATE=utf8_general_ci;
 -- ----------------------------
 -- DROP TABLE IF EXISTS `playerex_data`;
 CREATE TABLE `playerex_data` (
-	`aid` int(10) NOT NULL,
+	`pid` int(10) NOT NULL,
 	`ctype` int(10) NULL DEFAULT 0,
 	`data` int(10) NULL DEFAULT NULL,
-	PRIMARY KEY (`aid`,`ctype`)
+	PRIMARY KEY (`pid`,`ctype`)
 )
 ENGINE=InnoDB DEFAULT CHARACTER SET=utf8 COLLATE=utf8_general_ci;

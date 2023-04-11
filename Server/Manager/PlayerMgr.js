@@ -46,7 +46,7 @@ const PlayerMgr = {
     {
         for (let i = 0; i < this._players.length; i++) {
             var element = this._players[i];
-            if(element.getPlayerByPid() == pid)
+            if(element.getPlayerId() == pid)
             {
                 return element;
             }

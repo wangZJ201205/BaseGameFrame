@@ -1,12 +1,13 @@
-const LoginMsgHandle = require('./Login/LoginMsgHandle');
-
 //程序启动入口
 global.server = global.server || {};
+
+const LoginMsgHandle = require('./Login/LoginMsgHandle');
 
 require('./Manager/NetWork');
 require('./Manager/DBagent');
 require('./Manager/Event');
 require('./Manager/PlayerMgr');
+require('./Common/Definition');
 
 //初始化
 function init()

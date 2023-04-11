@@ -1,3 +1,5 @@
+const Definition = require("../Common/Definition");
+
 /**
  * 玩家对象
  */
@@ -20,27 +22,27 @@ class Entity {
 
     getPlayerId()
     {
-        return this._prop_map[ENTITY_PROP.PID];
+        return this._prop_map[Definition.ENTITY_PROP_PID];
     }
 
-     getClientId()
+    getClientId()
     {
         return this._client_id;
     }
 
-     setClientId(client_id)
+    setClientId(client_id)
     {
         this._client_id = client_id;
     }
 
     //给客户端发送消息
-     sendMessageToClient(socketName,data)
+    sendMessageToClient(socketName,data)
     {
         data['client_id'] = this._client_id;
         server.NetWork.emit(socketName,data)
     }
 
-     setProp(key,value)
+    setProp(key,value)
     {
         this._prop_map[key] = value;
     }

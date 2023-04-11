@@ -28,7 +28,8 @@ export default class LoginView extends UIParent {
 
     start () 
     {
-        
+        this.accountEB.string = cc.sys.localStorage.getItem("user_name") || "";
+        this.passwordEB.string = cc.sys.localStorage.getItem("user_password") || "";
     }
 
     register(): void 
@@ -44,6 +45,11 @@ export default class LoginView extends UIParent {
         msg['accountId'] = this.accountEB.string;
         msg['password'] = this.passwordEB.string;
         NetMgr.Instance.send(MessageName.LOGIN_CHECK_PLAYER,msg);
+        
+        //存储
+        cc.sys.localStorage.setItem('user_name', this.accountEB.string);
+        cc.sys.localStorage.setItem('user_password', this.passwordEB.string);
+
         // EventMgr.Instance.Emit(EventName.UI_CLOSE_PANEL + this.getUIName(),null);
     }
 

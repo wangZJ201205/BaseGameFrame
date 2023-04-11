@@ -4,6 +4,7 @@
 const Sequelize = require('sequelize');
 const mysql = require('mysql2');
 const EventName = require('../Common/EventName');
+const Definition = require('../Common/Definition');
 var sequelize = null;
 
 
@@ -100,33 +101,54 @@ const DBagent = {
               //有该角色
               var msg = {};
               msg.error = 0;
-              msg.client_id = acc.cid;
+              msg.client_id = data.client_id;
               msg.accountId = acc.accountId;
               server.event.send(EventName.DB_LOGIN_CHECK_ACCOUNT_RESPONSE,msg); 
             }
             else //密码错误
             {
               var msg = {};
-              msg.error = ERROR_CODE.PASSWORD_ERROR;
-              server.event.send(MessageName.LOGIN_CHECK_PLAYER_RESPONSE,msg);
+              msg.error = Definition.ERROR_CODE_PASSWORD_ERROR;
+              server.event.send(EventName.LOGIN_CHECK_PLAYER_RESPONSE,msg);
             }
 
           })
 
+      });
+
+    server.event.On(EventName.DB_LOAD_PLAYER_INFO_REQUEST,(data)=>{
+      var sql = 'SELECT * FROM player WHERE accountId = :accountId';
+      var replacements = { accountId: data.accountId};
+      var pid = 0;
+      sequelize.query(sql, { replacements:replacements, type: Sequelize.QueryTypes.SELECT })
+        .catch(err => {
+            console.error(err);
+        })
+        .then(player => {
+          pid = player[0].pid;
+
+          sql = 'SELECT * FROM playerex_data WHERE pid = :pid';
+          replacements = { pid: pid};
+          sequelize.query(sql, { replacements:replacements, type: Sequelize.QueryTypes.SELECT })
+            .catch(err => {
+                console.error(err);
+            })
+            .then(playerex => {
+              var msg = {}
+              msg.accountId = data.accountId;
+              msg.pid = pid;
+              msg.playerex = playerex;
+              server.event.send(EventName.DB_LOAD_PLAYER_INFO_RESPONSE,msg);
+            });
         });
+    });
+
+
+    
 
 
 
-
-
-
-
-
-
-
-
-
-    }
+  }
 
 };
 

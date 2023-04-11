@@ -3,14 +3,18 @@
  * 常量类
  */
 
-const ENTITY_PROP = {
-    PID : 1, //玩家playerid
+let Definition = {
+
+    ENTITY_PROP_PID : 1, //玩家playerid
+
+
+
+
+    //错误码
+    ERROR_CODE_SUCCESS : 0, //成功
+    ERROR_CODE_PASSWORD_ERROR : 1, //密码错误
+
 
 }
 
-//错误码
-const ERROR_CODE = {
-    SUCCESS : 0, //成功
-
-    PASSWORD_ERROR : 1, //密码错误
-}
+module.exports = Definition;
