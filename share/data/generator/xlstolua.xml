@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<addressbook>
+  <excel id="BOSS积分.xlsx">
+    <lua id="do_exercise.lua"></lua>
+  </excel>
+    <excel id="NPC数据.xlsx">
+    <lua id="do_npcs.lua"></lua>
+  </excel>
+  <excel id="vip数据.xlsx">
+    <lua id="do_vip.lua"></lua>
+  </excel>
+  <excel id="称号数据表.xlsx">
+    <lua id="do_headtitle.lua"></lua>
+  </excel>
+  <excel id="成就数据.xlsx">
+    <lua id="do_achievement.lua"></lua>
+  </excel>
+  <excel id="翅膀数据.xlsx">
+    <lua id="do_wings.lua"></lua>
+  </excel>
+  <excel id="地图NPC分布.xlsx">
+    <lua id="do_map.lua"></lua>
+  </excel>
+  <excel id="地图分线.xlsx">
+    <lua id="do_map.lua"></lua>
+  </excel>
+  <excel id="地图怪物分布.xlsx">
+    <lua id="do_map.lua"></lua>
+  </excel>
+  <excel id="地图数据.xlsx">
+    <lua id="do_map.lua"></lua>
+  </excel>
+  <excel id="锻造数据.xlsx">
+    <lua id="do_items_ex.lua"></lua>
+  </excel>
+  <excel id="怪物掉落.xlsx">
+    <lua id="do_loot.lua"></lua>
+  </excel>
+  <excel id="怪物技能.xlsx">
+    <lua id="do_skill.lua"></lua>
+  </excel>
+  <excel id="怪物数据.xlsx">
+    <lua id="do_monster.lua"></lua>
+  </excel>
+  <excel id="行会.xlsx">
+    <lua id="do_guild.lua"></lua>
+  </excel>
+  <excel id="回馈活动.xlsx">
+    <lua id="do_activitygift.lua"></lua>
+  </excel>
+  <excel id="活动奖励.xlsx">
+    <lua id="do_activitygift.lua"></lua>
+  </excel>
+  <excel id="活动列表.xlsx">
+    <lua id="do_event.lua"></lua>
+  </excel>
+  <excel id="活跃度.xlsx">
+    <lua id="do_event2.lua"></lua>
+  </excel>
+  <excel id="基因数据.xlsx">
+    <lua id="do_skill.lua"></lua>
+  </excel>
+  <excel id="技能表.xlsx">
+    <lua id="do_skill.lua"></lua>
+  </excel>
+  <excel id="角色数据.xlsx">
+    <lua id="do_role.lua"></lua>
+  </excel>
+  <excel id="快捷购买提示窗.xlsx">
+    <lua id="do_shops_dialog.lua"></lua>
+  </excel>
+  <excel id="运营活动.xlsx">
+    <lua id="do_holiday.lua"></lua>
+  </excel>
+</addressbook>

@@ -34,11 +34,16 @@ export default class SceneMgr extends ParentMgr {
 
         this.layer.runAction(cc.repeatForever(cc.sequence(cc.delayTime(1),cc.callFunc(this.update, this))));
 
-        
+
     }
 
     update (dt) {
 
+    }
+
+    enterScene(sceneid)
+    {
+        
     }
 
 
