@@ -93,6 +93,7 @@ const NetWork = {
   emit(socketName,data)
   {
     var socket = io.sockets.connected[data.client_id];
+    data.client_id = null;
     if(socket)
     {
       socket.emit(socketName,data);

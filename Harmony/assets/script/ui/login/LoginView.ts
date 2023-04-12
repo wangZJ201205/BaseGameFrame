@@ -35,7 +35,7 @@ export default class LoginView extends UIParent {
     register(): void 
     {
         this.startButton.node.on(cc.Node.EventType.TOUCH_END,this.openGame,this); //添加监听
-        NetMgr.Instance.on(MessageName.LOGIN_CHECK_PLAYER,this.loginCheck);
+        NetMgr.Instance.on(MessageName.LOGIN_CHECK_PLAYER_RESPONSE,this.loginCheck);
         super.register();
     }
 
@@ -55,13 +55,14 @@ export default class LoginView extends UIParent {
 
     close()
     {
-        NetMgr.Instance.off(MessageName.LOGIN_CHECK_PLAYER,this.loginCheck);
+        NetMgr.Instance.off(MessageName.LOGIN_CHECK_PLAYER_RESPONSE,this.loginCheck);
         super.close();
     }
 
     loginCheck(data)
     {
-
+        console.info(data);
+        //进入游戏
     }
 
 }

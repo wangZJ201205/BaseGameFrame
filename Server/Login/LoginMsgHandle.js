@@ -1,6 +1,7 @@
 const Definition = require("../Common/Definition");
 const EventName = require("../Common/EventName");
 const MessageName = require("../Common/MessageDefine");
+const NetWork = require("../Manager/NetWork");
 const PlayerMgr = require("../Manager/PlayerMgr");
 /**
  * 登陆消息
@@ -40,10 +41,13 @@ const LoginMsgHandle = {
                 const element = data.playerex[i];
                 player.setProp(element.ctype,element.data);
             }
-            
+            var msg = {};
+            msg.error = Definition.ERROR_CODE_SUCCESS;
+            msg.client_id = player.getClientId()
+            server.NetWork.emit(MessageName.LOGIN_CHECK_PLAYER_RESPONSE,msg);
         });
 
-        
+
 
     },
 
