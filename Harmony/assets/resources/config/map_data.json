@@ -1,0 +1,22 @@
+[
+	{
+		"id": 10001,
+		"path": "map/scene1/scene1.tmx",
+		"subs": {"id": 1,"boo": true,"path": "123"}
+	},
+	{
+		"id": 10002,
+		"path": "map/scene1/scene1.tmx",
+		"subs": {"id": 1,"boo": true,"path": "123"}
+	},
+	{
+		"id": 10003,
+		"path": "map/scene1/scene1.tmx",
+		"subs": {"id": 1,"boo": true,"path": "123"}
+	},
+	{
+		"id": 10004,
+		"path": "map/scene1/scene1.tmx",
+		"subs": {"id": 1,"boo": true,"path": "123"}
+	}
+]

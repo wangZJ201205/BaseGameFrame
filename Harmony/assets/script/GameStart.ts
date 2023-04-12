@@ -3,7 +3,9 @@
 
 import EventName from "./common/EventName";
 import GameData from "./common/GameData";
+import DictConfig from "./config/DictConfig";
 import UIConfig from "./config/UIConfig";
+import DictMgr from "./manager/DictMgr";
 import EventMgr from "./manager/EventMgr";
 import GhostMgr from "./manager/GhostMgr";
 import LoadMgr from "./manager/LoadMgr";
@@ -32,10 +34,12 @@ export default class GameStart extends cc.Component {
 
         //加载配置文件
         UIConfig.init();
+        DictConfig.init();
 
         UIMgr.Instance.onLoad();
         GhostMgr.Instance.onLoad();
         SceneMgr.Instance.onLoad();
+        DictMgr.Instance.onLoad();
 
         //加载管理类
         EventMgr.Instance.start();
@@ -43,16 +47,33 @@ export default class GameStart extends cc.Component {
         UIMgr.Instance.start();
         GhostMgr.Instance.start();
         SceneMgr.Instance.start();
+        DictMgr.Instance.start();
 
         // LoadMgr.Instance.loadResources(()=>{
             // EventMgr.Instance.Emit(EventName.UI_OPEN_PANEL,{name:EventName.UI_LOGIN});
-            UIMgr.Instance.openUI(EventName.UI_LOGIN);
+            // UIMgr.Instance.openUI(EventName.UI_LOGIN);
         // });
 
+        this.register();
+    }
+
+    register()
+    {
+        EventMgr.Instance.On(EventName.EVENT_LOADED_MODULE,this.onLoaded,this);
     }
 
     update (dt) 
     {
         NetMgr.Instance.update(dt);
+    }
+
+    onLoaded(data)
+    {
+        GameData.CurrLoadModules++;
+        if(GameData.CurrLoadModules == GameData.NeedWaitModules)
+        {
+            EventMgr.Instance.Emit(EventName.UI_OPEN_PANEL,{name:EventName.UI_LOGIN});
+            UIMgr.Instance.openUI(EventName.UI_LOGIN);
+        }
     }
 }

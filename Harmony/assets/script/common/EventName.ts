@@ -10,4 +10,7 @@ export default class EventName {
     
     public static readonly UI_LOGIN : string = 'UI_LOGIN';
 
+
+    public static readonly EVENT_LOADED_MODULE : string = 'EVENT_LOADED_MODULE';
+
 }
