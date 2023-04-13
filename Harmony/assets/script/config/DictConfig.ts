@@ -23,6 +23,7 @@ export default class DictConfig{
         //注册配置文件
 
         DictConfig.registerDict("map_data");
+        DictConfig.registerDict("language_data");
 
     }
 

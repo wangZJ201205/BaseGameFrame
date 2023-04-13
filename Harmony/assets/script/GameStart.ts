@@ -3,6 +3,7 @@
 
 import EventName from "./common/EventName";
 import GameData from "./common/GameData";
+import UIName from "./common/UIName";
 import DictConfig from "./config/DictConfig";
 import UIConfig from "./config/UIConfig";
 import DictMgr from "./manager/DictMgr";
@@ -72,8 +73,8 @@ export default class GameStart extends cc.Component {
         GameData.CurrLoadModules++;
         if(GameData.CurrLoadModules == GameData.NeedWaitModules)
         {
-            EventMgr.Instance.Emit(EventName.UI_OPEN_PANEL,{name:EventName.UI_LOGIN});
-            UIMgr.Instance.openUI(EventName.UI_LOGIN);
+            UIMgr.Instance.openUI(UIName.MSGBOX);
+            UIMgr.Instance.openUI(UIName.LOGIN);
         }
     }
 }

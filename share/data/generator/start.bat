@@ -1,5 +1,8 @@
 
 @lua.exe do_map.lua
+@lua.exe do_language.lua
+
+
 @cd ..
 @if not exist "database" mkdir "database"
 @for %%s in (*.lua) do (

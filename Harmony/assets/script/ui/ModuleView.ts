@@ -17,7 +17,7 @@ export default class LoginView extends UIParent {
  
     onLoad () 
     {
-        this.setUIName(EventName.UI_LOGIN);
+        this.setUIName(UIName.LOGIN));
         super.onLoad();
     }
 

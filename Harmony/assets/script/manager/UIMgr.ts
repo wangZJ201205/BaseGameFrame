@@ -66,17 +66,17 @@ export default class UIMgr extends ParentMgr {
 
     openUI(uiname)
     {   
-        var uipath = UIConfig.getUIPath(uiname);
+        var uiConfig = UIConfig.getUIPath(uiname);
 
-        if(!uipath)
+        if(!uiConfig)
         {
-            console.error('没有注册此界面资源路径' + uiname + ',先注册此界面路径！');
+            console.error('没有注册此界面资源路径' + uiname + ',先去UIConfig中写入界面路径！');
             return;
         }
 
         if( GameData.IsDebug )
         {
-            console.info(">>>>>>open uiname:" + uiname+" | uipath:"+uipath.path);
+            console.info(">>>>>>open uiname:" + uiname+" | uipath:"+uiConfig.path);
         }
         
         var uiInf = this.getUI(uiname);
@@ -96,11 +96,12 @@ export default class UIMgr extends ParentMgr {
 
         this.addUI(uiname, UIState.Loading);
         
-        LoadMgr.Instance.LoadAsset(uipath.path,(prefab)=>{
+        LoadMgr.Instance.LoadAsset(uiConfig.path,(prefab)=>{
             console.info("资源加载完成！" + uiname);
             
             var uiPref = cc.instantiate(prefab);
             uiPref.parent = this.uiLayer;
+            uiPref.zIndex = uiConfig.index + this.uiLayer.childrenCount; //界面深度 配置的深度值+ 当前显示界面的数量
             
             var uiInf = this.getUI(uiname);
             if( uiInf ){
@@ -128,6 +129,7 @@ export default class UIMgr extends ParentMgr {
     addUI(uiName,state)
     {
         this.uiList[uiName] = {name:uiName,state:state};
+        
     }
 
     getUI(uiName)

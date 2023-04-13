@@ -1,7 +1,10 @@
+import Definition from "../../common/Definition";
 import EventName from "../../common/EventName";
 import MessageName from "../../common/MessageDefine";
+import UIName from "../../common/UIName";
 import EventMgr from "../../manager/EventMgr";
 import NetMgr from "../../manager/NetMgr";
+import SceneMgr from "../../manager/SceneMgr";
 import UIMgr from "../../manager/UIMgr";
 import UIParent from "../UIParent";
 
@@ -22,7 +25,7 @@ export default class LoginView extends UIParent {
  
     onLoad () 
     {
-        this.setUIName(EventName.UI_LOGIN);
+        this.setUIName(UIName.LOGIN);
         super.onLoad();
     }
 
@@ -30,6 +33,7 @@ export default class LoginView extends UIParent {
     {
         this.accountEB.string = cc.sys.localStorage.getItem("user_name") || "";
         this.passwordEB.string = cc.sys.localStorage.getItem("user_password") || "";
+        super.start();
     }
 
     register(): void 
@@ -61,8 +65,14 @@ export default class LoginView extends UIParent {
 
     loginCheck(data)
     {
-        console.info(data);
         //进入游戏
+        if( data.error != Definition.ERROR_CODE_SUCCESS)
+        {
+            EventMgr.Instance.Emit(EventName.EVENT_MSGBOX_ERROR,{error:data.error});
+            return;
+        }
+        
+        SceneMgr.Instance.enterScene(10001);
     }
 
 }

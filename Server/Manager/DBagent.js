@@ -109,7 +109,9 @@ const DBagent = {
             {
               var msg = {};
               msg.error = Definition.ERROR_CODE_PASSWORD_ERROR;
-              server.event.send(EventName.LOGIN_CHECK_PLAYER_RESPONSE,msg);
+              msg.client_id = data.client_id;
+              msg.accountId = acc.accountId;
+              server.event.send(EventName.DB_LOGIN_CHECK_ACCOUNT_RESPONSE,msg);
             }
 
           })
@@ -144,7 +146,7 @@ const DBagent = {
     });
 
 
-    
+
 
 
 

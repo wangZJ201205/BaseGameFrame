@@ -22,6 +22,14 @@ const LoginMsgHandle = {
 
         //登陆账号
         server.event.On(EventName.DB_LOGIN_CHECK_ACCOUNT_RESPONSE,(data)=>{
+            if (data.error != 0)
+            {
+                var msg = {};
+                msg.error = data.error
+                msg.client_id = data.client_id
+                server.NetWork.emit(MessageName.LOGIN_CHECK_PLAYER_RESPONSE,msg);
+                return;
+            }
             server.Players.addPlayer(data.accountId,data.client_id);
             var msg = {}
             msg.accountId = data.accountId
