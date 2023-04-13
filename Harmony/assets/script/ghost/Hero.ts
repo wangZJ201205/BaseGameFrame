@@ -22,7 +22,7 @@ export default class Hero{
     {
         this._entity = entity;
     }
-
+    
     getEntity()
     {
         return this._entity;
