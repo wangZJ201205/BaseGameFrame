@@ -1,6 +1,7 @@
 /**
  * 界面管理类
  */
+import ClientDef from "../common/ClientDef";
 import EventName from "../common/EventName";
 import GameData from "../common/GameData";
 import UIConfig from "../config/UIConfig";
@@ -36,7 +37,7 @@ export default class UIMgr extends ParentMgr {
     {
         var canvas = cc.director.getScene().getChildByName('Canvas');
         this.uiLayer = new cc.Node();
-        this.uiLayer.zIndex = 999;
+        this.uiLayer.zIndex = ClientDef.GAME_INDEX_UI;
         this.uiLayer.width = cc.winSize.width;
         this.uiLayer.height = cc.winSize.height;
         this.uiLayer.parent = canvas;

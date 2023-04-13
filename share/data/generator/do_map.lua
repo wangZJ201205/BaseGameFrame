@@ -30,7 +30,7 @@ function handle_map(o)
 	d.subs.path = "123"
 	d.subs.boo = true
 
-	table.insert(gdmap, d);
+	gdmap[tostring(d.id)] = d
 end
 
 
@@ -38,5 +38,5 @@ export_csv("..\\design\\地图信息.xlsx")
 handle_file("tmp\\地图.csv", handle_map)
 clear_csv()
 
-output_table_json(gdmap, of_file, nil, nil, weight_tbl)
+output_table_json(gdmap, of_file, nil, true, weight_tbl,true)
 

@@ -6,6 +6,7 @@ import GameData from "./common/GameData";
 import UIName from "./common/UIName";
 import DictConfig from "./config/DictConfig";
 import UIConfig from "./config/UIConfig";
+import Hero from "./ghost/Hero";
 import DictMgr from "./manager/DictMgr";
 import EventMgr from "./manager/EventMgr";
 import GhostMgr from "./manager/GhostMgr";
@@ -13,6 +14,7 @@ import LoadMgr from "./manager/LoadMgr";
 import NetMgr from "./manager/NetMgr";
 import SceneMgr from "./manager/SceneMgr";
 import UIMgr from "./manager/UIMgr";
+import SocketRegister from "./socket/SocketRegister";
 
 const {ccclass, property} = cc._decorator;
 
@@ -41,6 +43,7 @@ export default class GameStart extends cc.Component {
         GhostMgr.Instance.onLoad();
         SceneMgr.Instance.onLoad();
         DictMgr.Instance.onLoad();
+        Hero.Instance.onLoad();
 
         //加载管理类
         EventMgr.Instance.start();
@@ -49,6 +52,9 @@ export default class GameStart extends cc.Component {
         GhostMgr.Instance.start();
         SceneMgr.Instance.start();
         DictMgr.Instance.start();
+        Hero.Instance.start();
+
+        SocketRegister.start();
 
         // LoadMgr.Instance.loadResources(()=>{
             // EventMgr.Instance.Emit(EventName.UI_OPEN_PANEL,{name:EventName.UI_LOGIN});

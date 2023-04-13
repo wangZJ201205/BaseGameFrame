@@ -1,6 +1,11 @@
 /**
  * 场景
  */
+import ClientDef from "../common/ClientDef";
+import Hero from "../ghost/Hero";
+import DictMgr from "./DictMgr";
+import GhostMgr from "./GhostMgr";
+import LoadMgr from "./LoadMgr";
 import ParentMgr from "./ParentMgr";
 
 const {ccclass, property} = cc._decorator;
@@ -27,7 +32,7 @@ export default class SceneMgr extends ParentMgr {
 
         var canvas = cc.director.getScene().getChildByName('Canvas');
         this.layer = new cc.Node();
-        this.layer.zIndex = 1;
+        this.layer.zIndex = ClientDef.GAME_INDEX_SCENE;
         this.layer.width = cc.winSize.width;
         this.layer.height = cc.winSize.height;
         this.layer.parent = canvas;
@@ -43,7 +48,24 @@ export default class SceneMgr extends ParentMgr {
 
     enterScene(sceneid)
     {
-        
+        console.info(">>>>>>进入场景："+ sceneid);
+        this.loadSceneSrc(sceneid);
+
+        var player = GhostMgr.Instance.spawnEntity(ClientDef.ENTITY_TYPE_PLAYER);
+        Hero.Instance.setEntity(player);
+
+    }
+
+    loadSceneSrc(sceneid)
+    {
+
+        //显示场景
+        var sceneInfo = DictMgr.Instance.getDictByName("map_data");
+        LoadMgr.Instance.LoadAsset(sceneInfo[sceneid].path,(asset)=>{
+            var tilemap : cc.TiledMap = this.layer.addComponent(cc.TiledMap);
+            tilemap.tmxAsset = asset;
+        });
+
     }
 
 

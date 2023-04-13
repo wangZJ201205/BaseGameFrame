@@ -39,7 +39,7 @@ export default class LoginView extends UIParent {
     register(): void 
     {
         this.startButton.node.on(cc.Node.EventType.TOUCH_END,this.openGame,this); //添加监听
-        NetMgr.Instance.on(MessageName.LOGIN_CHECK_PLAYER_RESPONSE,this.loginCheck);
+        EventMgr.Instance.On(MessageName.LOGIN_CHECK_PLAYER_RESPONSE,this.loginCheck,this);
         super.register();
     }
 
@@ -59,7 +59,7 @@ export default class LoginView extends UIParent {
 
     close()
     {
-        NetMgr.Instance.off(MessageName.LOGIN_CHECK_PLAYER_RESPONSE,this.loginCheck);
+        EventMgr.Instance.Off(MessageName.LOGIN_CHECK_PLAYER_RESPONSE,this.loginCheck,this);
         super.close();
     }
 
@@ -73,6 +73,7 @@ export default class LoginView extends UIParent {
         }
         
         SceneMgr.Instance.enterScene(10001);
+        EventMgr.Instance.Emit(EventName.UI_CLOSE_PANEL + this.getUIName(),null);
     }
 
 }

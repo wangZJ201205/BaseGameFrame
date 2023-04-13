@@ -1,6 +1,9 @@
 /**
  * 对象管理
  */
+import ClientDef from "../common/ClientDef";
+import Entity from "../ghost/Entity";
+import Player from "../ghost/Hero";
 import ParentMgr from "./ParentMgr";
 
 const {ccclass, property} = cc._decorator;
@@ -11,7 +14,8 @@ export default class GhostMgr extends ParentMgr {
     public static readonly Instance : GhostMgr = new GhostMgr();
 
     layer: cc.Node = null; //ui显示层
-    entitys:[];
+    entitys:Entity[];
+    spawnEntityId:number = 0; //用来生成对象id
 
     static getInstance()
     {
@@ -30,7 +34,7 @@ export default class GhostMgr extends ParentMgr {
 
         var canvas = cc.director.getScene().getChildByName('Canvas');
         this.layer = new cc.Node();
-        this.layer.zIndex = 300;
+        this.layer.zIndex = ClientDef.GAME_INDEX_GHOST;
         this.layer.width = cc.winSize.width;
         this.layer.height = cc.winSize.height;
         this.layer.parent = canvas;
@@ -42,8 +46,43 @@ export default class GhostMgr extends ParentMgr {
 
     }
 
+    /**
+     * 生成对象
+     * @param entityType  对象类型
+     * @returns entity对象
+     */
+    spawnEntity(entityType)
+    {
+        var entity:Entity = this.layer.addComponent(Entity);
+        entity.setClientProp(ClientDef.ENTITY_PROP_TYPE,entityType);
+        
+        this.addEntity(entity)
+        return entity;
+    }
 
+    /**
+     * 放入对象池
+     * @param entity 对象
+     */
+    addEntity(entity)
+    {
+        this.spawnEntityId++;
+        entity.setClientProp(ClientDef.ENTITY_PROP_ID,this.spawnEntityId); //设置它的ID
+        this.entitys.push(entity);
+    }
 
+    /**
+     * 删除所有对象
+     */
+    deleteAllEntity()
+    {
+        for (let i = 0; i < this.entitys.length; i++) {
+            const element = this.entitys[i];
+            element.remove();
+        }
+        this.layer.removeAllChildren();
+        this.entitys = [];
+    }
 
 
 }
