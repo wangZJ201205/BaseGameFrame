@@ -26,16 +26,27 @@ export default class Entity extends cc.Component {
 
     start () {
 
-        this.addEntityComponent(ClientDef.ENTITY_COMP_CLOTH,(new ClothComponent()).onLoad(this,this.node)); //添加衣服组件
-        
+        // this.node.setPosition(640,360);
         this._entityStateMachine = new EntityStateMachine();
         this._entityStateMachine.onLoad(this);
+
+        var cloth = new ClothComponent();
+        cloth.onLoad(this);
+        this.addEntityComponent(ClientDef.ENTITY_COMP_CLOTH,cloth); //添加衣服组件
+
+
+
+        this._entityStateMachine.runNextState();
 
     }
 
     remove()
     {
 
+    }
+
+    getEntityNode(){
+        return this.node;
     }
 
     setClientProp(type,value)

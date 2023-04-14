@@ -8,10 +8,9 @@ const {ccclass, property} = cc._decorator;
 @ccclass
 export default class ComponentParent{
 
-    _node:cc.Component;
     _host:Entity;
 
-    onLoad (host,parent) 
+    onLoad (host) 
     {
         this._host = host;
         this.start();
