@@ -1,5 +1,6 @@
 import ClientDef from "../common/ClientDef";
 import ClothComponent from "./Component/ClothComponent";
+import EntityStateMachine from "./StateMachine/EntityStateMachine";
 
 /**
  * 对象类
@@ -14,6 +15,7 @@ export default class Entity extends cc.Component {
     _server_prop_map:{}; //对象服务器属性
 
     _entity_components:{}; //对象组件
+    _entityStateMachine:EntityStateMachine; //对象状态机
 
     onLoad () 
     {
@@ -24,9 +26,11 @@ export default class Entity extends cc.Component {
 
     start () {
 
+        this.addEntityComponent(ClientDef.ENTITY_COMP_CLOTH,(new ClothComponent()).onLoad(this,this.node)); //添加衣服组件
         
-        this.addEntityComponent(ClientDef.ENTITY_COMP_CLOTH,(new ClothComponent()).onLoad(this.node)); //添加衣服组件
-    
+        this._entityStateMachine = new EntityStateMachine();
+        this._entityStateMachine.onLoad(this);
+
     }
 
     remove()
@@ -52,6 +56,12 @@ export default class Entity extends cc.Component {
     getServerProp(type)
     {
         return this._server_prop_map[type] || null;
+    }
+
+    //获取组件
+    getEntityComponent(type)
+    {
+        return this._entity_components[type] || null;
     }
 
     addEntityComponent(type,component)

@@ -1,3 +1,5 @@
+import Entity from "../Entity";
+
 /**
  * 人物组件父类
  */
@@ -6,10 +8,12 @@ const {ccclass, property} = cc._decorator;
 @ccclass
 export default class ComponentParent{
 
-    node:cc.Component;
+    _node:cc.Component;
+    _host:Entity;
 
-    onLoad (parent) 
+    onLoad (host,parent) 
     {
+        this._host = host;
         this.start();
     }
 
@@ -22,5 +26,8 @@ export default class ComponentParent{
 
     }
 
-    // update (dt) {}
+    update (dt) 
+    {
+
+    }
 }
