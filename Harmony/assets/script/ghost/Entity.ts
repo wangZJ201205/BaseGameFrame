@@ -36,7 +36,6 @@ export default class Entity extends cc.Component
         this.addEntityComponent(ClientDef.ENTITY_COMP_CLOTH,cloth); //添加衣服组件
 
 
-
         this._entityStateMachine.runNextState();
 
     }
@@ -53,7 +52,7 @@ export default class Entity extends cc.Component
     setClientProp(type,value)
     {
         this._client_prop_map[type] = value;
-        
+
         if(type == ClientDef.ENTITY_PROP_DIR)
         {
             var cloth:ClothComponent = this._entity_components[ClientDef.ENTITY_COMP_CLOTH];
@@ -101,6 +100,11 @@ export default class Entity extends cc.Component
         component.remove();
         component.parent = null;
         delete this._entity_components[type];
+    }
+
+    getStateMachine()
+    {
+        return this._entityStateMachine;
     }
 
     // update (dt) {}

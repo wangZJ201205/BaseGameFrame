@@ -12,7 +12,7 @@ const {ccclass, property} = cc._decorator;
 @ccclass
 export default class EntityStateMachine{
 
-    _state_list:[];//状态列表
+    _state_list:number[];//状态列表
     _curState : StateParent;
     _host:Entity;
 
@@ -68,6 +68,11 @@ export default class EntityStateMachine{
             else if(state == ClientDef.ENTITY_STATE_WALK){return new PlayerWalk(); }
         }
         return null;
+    }
+
+    addState(state)
+    {
+        this._state_list.push(state);
     }
 
     // update (dt) {}
