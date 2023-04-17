@@ -8,7 +8,8 @@ import EntityStateMachine from "./StateMachine/EntityStateMachine";
 const {ccclass, property} = cc._decorator;
 
 @ccclass
-export default class Entity extends cc.Component {
+export default class Entity extends cc.Component 
+{
 
    
     _client_prop_map:{}; //对象客户端属性
@@ -52,6 +53,16 @@ export default class Entity extends cc.Component {
     setClientProp(type,value)
     {
         this._client_prop_map[type] = value;
+        
+        if(type == ClientDef.ENTITY_PROP_DIR)
+        {
+            var cloth:ClothComponent = this._entity_components[ClientDef.ENTITY_COMP_CLOTH];
+            if(cloth)
+            {
+                cloth.changeDir(value);
+            }
+        }
+
     }
 
     getClientProp(type)

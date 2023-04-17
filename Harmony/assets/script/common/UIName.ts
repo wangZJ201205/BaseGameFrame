@@ -4,4 +4,5 @@
 export default class UIName {
     public static readonly LOGIN : string = 'LOGIN';
     public static readonly MSGBOX : string = 'MSGBOX';
+    public static readonly ROCKVIEW : string = 'ROCKVIEW';
 }

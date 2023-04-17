@@ -8,11 +8,14 @@ const {ccclass, property} = cc._decorator;
 @ccclass
 export default class ComponentParent{
 
-    _host:Entity;
+    private _host:Entity;
+    private _node:cc.Node;
 
     onLoad (host) 
     {
         this._host = host;
+        this._node = new cc.Node();
+        host.getEntityNode().addChild(this._node);
         this.start();
     }
 
@@ -23,6 +26,16 @@ export default class ComponentParent{
     remove()
     {
 
+    }
+
+    getHost()
+    {
+        return this._host;
+    }
+
+    getNode()
+    {
+        return this._node;
     }
 
     update (dt) 

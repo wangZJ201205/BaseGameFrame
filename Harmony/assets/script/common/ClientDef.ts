@@ -10,6 +10,7 @@ export default class ClientDef{
 
     //界面深度
     public static readonly UI_INDEX_COMMON :number = 0;
+    public static readonly UI_INDEX_MIDDLE :number = 500;
     public static readonly UI_INDEX_TOP : number = 999;
 
     //对象组件
@@ -26,5 +27,6 @@ export default class ClientDef{
     //对象属性
     public static readonly ENTITY_PROP_ID : number = 1; //对象id
     public static readonly ENTITY_PROP_TYPE : number = 2; //对象类型
+    public static readonly ENTITY_PROP_DIR : number = 3; //对象方向
 
 }

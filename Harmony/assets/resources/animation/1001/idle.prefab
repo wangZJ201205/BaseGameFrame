@@ -13,7 +13,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "1001_idle",
+    "_name": "idle",
     "_objFlags": 0,
     "_parent": null,
     "_children": [

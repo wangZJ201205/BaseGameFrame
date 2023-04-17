@@ -1,22 +1,22 @@
 {
 	"10001": {
 		"id": 10001,
-		"path": "map/scene1/scene1.tmx",
+		"path": "map/scene1/scene1",
 		"subs": {"id": 1,"boo": true,"path": "123"}
 	},
 	"10002": {
 		"id": 10002,
-		"path": "map/scene1/scene1.tmx",
+		"path": "map/scene1/scene2",
 		"subs": {"id": 1,"boo": true,"path": "123"}
 	},
 	"10003": {
 		"id": 10003,
-		"path": "map/scene1/scene1.tmx",
+		"path": "map/scene1/scene3",
 		"subs": {"id": 1,"boo": true,"path": "123"}
 	},
 	"10004": {
 		"id": 10004,
-		"path": "map/scene1/scene1.tmx",
+		"path": "map/scene1/scene4",
 		"subs": {"id": 1,"boo": true,"path": "123"}
 	}
 }

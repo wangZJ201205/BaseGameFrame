@@ -2,11 +2,13 @@
  * 场景
  */
 import ClientDef from "../common/ClientDef";
+import UIName from "../common/UIName";
 import Hero from "../ghost/Hero";
 import DictMgr from "./DictMgr";
 import GhostMgr from "./GhostMgr";
 import LoadMgr from "./LoadMgr";
 import ParentMgr from "./ParentMgr";
+import UIMgr from "./UIMgr";
 
 const {ccclass, property} = cc._decorator;
 
@@ -50,6 +52,8 @@ export default class SceneMgr extends ParentMgr {
     {
         console.info(">>>>>>进入场景："+ sceneid);
         this.loadSceneSrc(sceneid);
+
+        UIMgr.Instance.openUI(UIName.ROCKVIEW);
 
         var player = GhostMgr.Instance.spawnEntity(ClientDef.ENTITY_TYPE_PLAYER);
         Hero.Instance.setEntity(player);

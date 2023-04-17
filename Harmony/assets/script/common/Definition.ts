@@ -1,7 +1,9 @@
 
+
 export default class Definition {
 
     public static readonly ENTITY_PROP_PID = 1; //玩家playerid
+    public static readonly ENTITY_PROP_CLOTH = 2; //玩家的衣服id
 
 
 
