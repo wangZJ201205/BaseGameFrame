@@ -4,7 +4,7 @@ import StateParent from "../StateParent";
 const {ccclass, property} = cc._decorator;
 
 @ccclass
-export default class PlayerWalk extends StateParent {
+export default class EntityWalk extends StateParent {
 
     
     onLoad (id,host) 
@@ -25,6 +25,6 @@ export default class PlayerWalk extends StateParent {
 
     update (dt) 
     {
-        this.getHost().getStateMachine().runNextState();
+        // this.getHost().getStateMachine().runNextState();
     }
 }

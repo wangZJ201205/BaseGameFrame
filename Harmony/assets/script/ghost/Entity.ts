@@ -1,6 +1,7 @@
 import ClientDef from "../common/ClientDef";
 import ClothComponent from "./Component/ClothComponent";
 import EntityStateMachine from "./StateMachine/EntityStateMachine";
+import PlayerStateMachine from "./StateMachine/PlayerStateMachine";
 
 /**
  * 对象类
@@ -27,8 +28,7 @@ export default class Entity extends cc.Component
 
     start () {
 
-        // this.node.setPosition(640,360);
-        this._entityStateMachine = new EntityStateMachine();
+        this._entityStateMachine = this.spawnStateMachine();
         this._entityStateMachine.onLoad(this);
 
         var cloth = new ClothComponent();
@@ -42,7 +42,22 @@ export default class Entity extends cc.Component
 
     remove()
     {
-
+        
+    }
+    
+    spawnStateMachine()
+    {
+        var entityType = this._client_prop_map[ClientDef.ENTITY_PROP_TYPE];
+        var machine = null;
+        if(entityType == ClientDef.ENTITY_TYPE_PLAYER)
+        {
+            machine = new PlayerStateMachine();
+        }
+        else if(entityType == ClientDef.ENTITY_TYPE_MONSTER)
+        {
+            machine = new EntityStateMachine();
+        }
+        return machine;
     }
 
     getEntityNode(){
@@ -107,5 +122,11 @@ export default class Entity extends cc.Component
         return this._entityStateMachine;
     }
 
-    // update (dt) {}
+    update (dt) 
+    {
+        if(this._entityStateMachine)
+        {
+            this._entityStateMachine.update(dt);
+        }
+    }
 }

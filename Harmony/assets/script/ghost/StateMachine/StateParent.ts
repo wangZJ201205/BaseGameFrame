@@ -22,7 +22,7 @@ export default class StateParent {
         cloth.runState(this._stateID);
     }
 
-    destory()
+    stop()
     {
 
     }
@@ -35,5 +35,10 @@ export default class StateParent {
     getStateID()
     {
         return this._stateID;
+    }
+
+    getHost()
+    {
+        return this._host;
     }
 }

@@ -1,6 +1,8 @@
 import ClientDef from "../../common/ClientDef";
 import Entity from "../Entity";
 import StateParent from "./StateParent";
+import EntityIdle from "./States/EntityIdle";
+import EntityWalk from "./States/EntityWalk";
 import PlayerIdle from "./States/PlayerIdle";
 import PlayerWalk from "./States/PlayerWalk";
 
@@ -26,6 +28,11 @@ export default class EntityStateMachine{
 
     }
 
+    getHost()
+    {
+        return this._host
+    }
+
     //获取状态id
     getStateID()
     {
@@ -39,7 +46,9 @@ export default class EntityStateMachine{
         {
             return ClientDef.ENTITY_STATE_IDLE;
         }
-
+        var state = this._state_list[0];
+        this._state_list.splice(0,1);
+        return state;
     }
 
     //运行状态
@@ -48,7 +57,12 @@ export default class EntityStateMachine{
         var state = this.getNextState();
         if(this._curState)
         {
-            this._curState.destory();
+            this._curState.stop();
+            if(this._curState.getStateID() == state) //重新初始化
+            {
+                this._curState.start();
+                return;
+            }
             this._curState = null;
         }
         this._curState = this.spawnState(state);
@@ -62,11 +76,8 @@ export default class EntityStateMachine{
     //生成状态
     spawnState(state)
     {
-        if(this._host.getClientProp(ClientDef.ENTITY_PROP_TYPE) == ClientDef.ENTITY_TYPE_PLAYER)
-        {
-            if(state == ClientDef.ENTITY_STATE_IDLE){return new PlayerIdle(); }
-            else if(state == ClientDef.ENTITY_STATE_WALK){return new PlayerWalk(); }
-        }
+        if(state == ClientDef.ENTITY_STATE_IDLE){return new EntityIdle(); }
+        else if(state == ClientDef.ENTITY_STATE_WALK){return new EntityWalk(); }
         return null;
     }
 
@@ -75,5 +86,11 @@ export default class EntityStateMachine{
         this._state_list.push(state);
     }
 
-    // update (dt) {}
+    update (dt) 
+    {
+        if(this._curState)
+        {
+            this._curState.update(dt);
+        }
+    }
 }

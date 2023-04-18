@@ -314,13 +314,13 @@
             <key>premultiplyAlpha</key>
             <false/>
             <key>realTextureFileName</key>
-            <string>1001.png</string>
+            <string>1001_idle.png</string>
             <key>size</key>
             <string>{234,926}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:3d4fa9b40051ad82d2eb1c9851984dff:e6f18ae5f5837d86820d37f09c3c6f52:90d709d121983a5508ba3f2396d30f68$</string>
+            <string>$TexturePacker:SmartUpdate:a10c717b7e0f8bdbf0e4197fec89d12f:e6f18ae5f5837d86820d37f09c3c6f52:55c44c6d4d245fc263acb14971a3dd1a$</string>
             <key>textureFileName</key>
-            <string>1001.png</string>
+            <string>1001_idle.png</string>
         </dict>
     </dict>
 </plist>

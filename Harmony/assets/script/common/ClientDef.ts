@@ -24,9 +24,13 @@ export default class ClientDef{
     public static readonly ENTITY_STATE_IDLE: number = 1; //站立
     public static readonly ENTITY_STATE_WALK: number = 2; //移动
 
+    //控制玩家的类型
+    public static readonly PLAYER_CONTROL_TYPE_ROCK:number = 1; //玩家控制类型-遥感
+
     //对象属性
     public static readonly ENTITY_PROP_ID : number = 1; //对象id
     public static readonly ENTITY_PROP_TYPE : number = 2; //对象类型
     public static readonly ENTITY_PROP_DIR : number = 3; //对象方向
+    public static readonly ENTITY_PROP_CONTROL_STATE:number = 4; //对象控制类型
 
 }

@@ -120,8 +120,8 @@ export default class ClothComponent extends ComponentParent {
         {
             return;
         }
-
-        for (let index = 1; index <= animation.childrenCount; index++) {
+        for (let index = 1; index <= animation.childrenCount; index++) 
+        {
             const element = animation.getChildByName(index+"");
             if(index == this._curDir)
             {
@@ -140,7 +140,7 @@ export default class ClothComponent extends ComponentParent {
         this._animations_state[animationName] = ANIMATION_STATE.LOADING;
         var clothId = this.getHost().getServerProp(Definition.ENTITY_PROP_CLOTH) || 0;
         var clothResource = DictMgr.Instance.getDictByName("equip_data")[clothId].resource;
-        var loadPath = 'animation/' + + clothResource +"/"+ animationName;
+        var loadPath = 'animation/' +  clothResource +"/"+ animationName ;
         LoadMgr.Instance.LoadAsset(loadPath,(asset)=>
             {
                 var aniPref = cc.instantiate(asset);

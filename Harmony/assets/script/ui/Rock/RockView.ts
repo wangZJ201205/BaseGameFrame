@@ -52,8 +52,9 @@ export default class RockView extends UIParent {
     onJoyStickTouchStart(event)
     {
         this.onJoyStickTouchMove(event);
-        var machine = Hero.Instance.getEntity().getStateMachine();
-        machine.addState(ClientDef.ENTITY_STATE_WALK);
+        // var machine = Hero.Instance.getEntity().getStateMachine();
+        // machine.addState(ClientDef.ENTITY_STATE_WALK);
+        Hero.Instance.getEntity().setClientProp(ClientDef.ENTITY_PROP_CONTROL_STATE, ClientDef.PLAYER_CONTROL_TYPE_ROCK);
     }
 
     onJoyStickTouchMove(event)
@@ -85,8 +86,9 @@ export default class RockView extends UIParent {
     {
         // 更新虚拟摇杆的位置
         this.joyStickNode.node.setPosition(this._startPosition);
-        var machine = Hero.Instance.getEntity().getStateMachine();
-        machine.addState(ClientDef.ENTITY_STATE_IDLE); //这里需要思考一下 是否一直停留在一个状态中
+        // var machine = Hero.Instance.getEntity().getStateMachine();
+        // machine.addState(ClientDef.ENTITY_STATE_IDLE); //这里需要思考一下 是否一直停留在一个状态中
+        Hero.Instance.getEntity().setClientProp(ClientDef.ENTITY_PROP_CONTROL_STATE, 0);
     }
 
     update(deltaTime: number) {
