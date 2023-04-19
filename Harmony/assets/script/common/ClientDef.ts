@@ -32,5 +32,7 @@ export default class ClientDef{
     public static readonly ENTITY_PROP_TYPE : number = 2; //对象类型
     public static readonly ENTITY_PROP_DIR : number = 3; //对象方向
     public static readonly ENTITY_PROP_CONTROL_STATE:number = 4; //对象控制类型
+    public static readonly ENTITY_PROP_MOVE_X : number = 5; //移动x轴
+    public static readonly ENTITY_PROP_MOVE_Y : number = 6; //移动y轴
 
 }

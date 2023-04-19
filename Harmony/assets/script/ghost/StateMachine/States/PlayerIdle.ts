@@ -24,7 +24,7 @@ export default class PlayerIdle extends StateParent {
 
     }
 
-    update (dt) 
+    update () 
     {
         this.getHost().getStateMachine().runNextState();
     }

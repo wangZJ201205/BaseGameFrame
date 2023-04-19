@@ -41,7 +41,12 @@
           }
         },
         "props": {
-          "anchorY": []
+          "anchorY": [
+            {
+              "frame": 0,
+              "value": 0
+            }
+          ]
         }
       },
       "2": {

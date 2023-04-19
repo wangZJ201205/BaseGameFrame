@@ -209,7 +209,12 @@
           }
         },
         "props": {
-          "anchorY": []
+          "anchorY": [
+            {
+              "frame": 0,
+              "value": 0
+            }
+          ]
         }
       },
       "5": {
@@ -266,7 +271,12 @@
       },
       "6": {
         "props": {
-          "anchorY": [],
+          "anchorY": [
+            {
+              "frame": 0,
+              "value": 0
+            }
+          ],
           "scaleX": [
             {
               "frame": 0,

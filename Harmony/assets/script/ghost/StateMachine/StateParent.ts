@@ -27,9 +27,9 @@ export default class StateParent {
 
     }
 
-    update (dt) 
+    update () 
     {
-
+        this.getHost().getStateMachine().runNextState();
     }
 
     getStateID()

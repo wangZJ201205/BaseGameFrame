@@ -17,7 +17,7 @@ export default class RockView extends UIParent {
     @property
     max_radius:number = 70; // 遥感的最大半径
     @property
-    radius_threshold:number = 10; // 遥感半径小于该值时，不移动人物
+    radius_threshold:number = 50; // 遥感半径小于该值时，不移动人物
 
     joyStickDir:cc.Vec2;
     joyStickDistance:number = 0;
@@ -52,9 +52,6 @@ export default class RockView extends UIParent {
     onJoyStickTouchStart(event)
     {
         this.onJoyStickTouchMove(event);
-        // var machine = Hero.Instance.getEntity().getStateMachine();
-        // machine.addState(ClientDef.ENTITY_STATE_WALK);
-        Hero.Instance.getEntity().setClientProp(ClientDef.ENTITY_PROP_CONTROL_STATE, ClientDef.PLAYER_CONTROL_TYPE_ROCK);
     }
 
     onJoyStickTouchMove(event)
@@ -86,26 +83,24 @@ export default class RockView extends UIParent {
     {
         // 更新虚拟摇杆的位置
         this.joyStickNode.node.setPosition(this._startPosition);
-        // var machine = Hero.Instance.getEntity().getStateMachine();
-        // machine.addState(ClientDef.ENTITY_STATE_IDLE); //这里需要思考一下 是否一直停留在一个状态中
-        Hero.Instance.getEntity().setClientProp(ClientDef.ENTITY_PROP_CONTROL_STATE, 0);
+        this.joyStickDistance = 0;
+        
     }
 
-    update(deltaTime: number) {
+    update(deltaTime: number) 
+    {
+        
         // 如果没有人物节点或者遥感半径过小，则不移动人物
-        if ( this.joyStickDistance < this.radius_threshold) {
-          return;
+        if ( this.joyStickDistance < this.radius_threshold) 
+        {
+            Hero.Instance.getEntity().setClientProp(ClientDef.ENTITY_PROP_CONTROL_STATE, 0);
+            return;
         }
-    
-        // // 根据遥感方向和距离计算人物的速度
-        // const velocity = this.joyStickDir.mul(this.move_speed);
-        // // 计算重力对速度的影响
-        // velocity.y -= this.gravity * deltaTime;
-    
-        // 移动人物节点
-        //console.info(velocity.mul(deltaTime));
-        //this.playerNode.setPosition(this.playerNode.position.add(velocity.mul(deltaTime)));
-      }
+        // console.info(this.joyStickDistance ,this.radius_threshold);
+        Hero.Instance.getEntity().setClientProp(ClientDef.ENTITY_PROP_CONTROL_STATE, ClientDef.PLAYER_CONTROL_TYPE_ROCK);
+        Hero.Instance.getEntity().setClientProp(ClientDef.ENTITY_PROP_MOVE_X,this.joyStickDir.x);
+        Hero.Instance.getEntity().setClientProp(ClientDef.ENTITY_PROP_MOVE_Y,this.joyStickDir.y);
+    }
 
     degreeToEntityDirection(angle)
     {

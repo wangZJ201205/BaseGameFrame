@@ -9,7 +9,7 @@ import PlayerStateMachine from "./StateMachine/PlayerStateMachine";
 const {ccclass, property} = cc._decorator;
 
 @ccclass
-export default class Entity extends cc.Component 
+export default class Entity extends cc.Node
 {
 
    
@@ -18,6 +18,8 @@ export default class Entity extends cc.Component
 
     _entity_components:{}; //对象组件
     _entityStateMachine:EntityStateMachine; //对象状态机
+
+    _timerID:number;
 
     onLoad () 
     {
@@ -38,11 +40,14 @@ export default class Entity extends cc.Component
 
         this._entityStateMachine.runNextState();
 
+        this._timerID = setInterval(this.update.bind(this), 0);
     }
 
     remove()
     {
-        
+        this.removeFromParent();
+        clearInterval(this._timerID);
+        this._timerID = null;
     }
     
     spawnStateMachine()
@@ -61,7 +66,7 @@ export default class Entity extends cc.Component
     }
 
     getEntityNode(){
-        return this.node;
+        return this;
     }
 
     setClientProp(type,value)
@@ -122,11 +127,11 @@ export default class Entity extends cc.Component
         return this._entityStateMachine;
     }
 
-    update (dt) 
+    update () 
     {
         if(this._entityStateMachine)
         {
-            this._entityStateMachine.update(dt);
+            this._entityStateMachine.update();
         }
     }
 }

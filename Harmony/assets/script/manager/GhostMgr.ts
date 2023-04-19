@@ -16,7 +16,8 @@ export default class GhostMgr extends ParentMgr {
     layer: cc.Node = null; //ui显示层
     entitys:Entity[];
     spawnEntityId:number = 0; //用来生成对象id
-
+    private _timerID: number;
+    
     static getInstance()
     {
         return GhostMgr.Instance;
@@ -39,10 +40,11 @@ export default class GhostMgr extends ParentMgr {
         this.layer.height = cc.winSize.height;
         this.layer.parent = canvas;
 
-        this.layer.runAction(cc.repeatForever(cc.sequence(cc.delayTime(1),cc.callFunc(this.update, this))));
+        // this.layer.runAction(cc.repeatForever(cc.sequence(cc.delayTime(1),cc.callFunc(this.update, this))));
+        this._timerID = setInterval(this.update.bind(this), 1000);
     }
 
-    update (dt) {
+    private update (dt) {
 
     }
 
@@ -53,9 +55,11 @@ export default class GhostMgr extends ParentMgr {
      */
     spawnEntity(entityType)
     {
-        var entity:Entity = this.layer.addComponent(Entity);
+        var entity:Entity = new Entity();
+        entity.onLoad();
         entity.setClientProp(ClientDef.ENTITY_PROP_TYPE,entityType);
-        
+
+        this.layer.addChild(entity);
         this.addEntity(entity)
         return entity;
     }
@@ -64,9 +68,10 @@ export default class GhostMgr extends ParentMgr {
      * 放入对象池
      * @param entity 对象
      */
-    addEntity(entity)
+    private addEntity(entity)
     {
         this.spawnEntityId++;
+        entity.name = "entity"+this.spawnEntityId;
         entity.setClientProp(ClientDef.ENTITY_PROP_ID,this.spawnEntityId); //设置它的ID
         this.entitys.push(entity);
     }

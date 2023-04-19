@@ -3,6 +3,7 @@
  */
 import ClientDef from "../common/ClientDef";
 import UIName from "../common/UIName";
+import CommonGamePlay from "../gameplay/CommonGamePlay";
 import Hero from "../ghost/Hero";
 import DictMgr from "./DictMgr";
 import GhostMgr from "./GhostMgr";
@@ -17,6 +18,7 @@ export default class SceneMgr extends ParentMgr {
 
     public static readonly Instance : SceneMgr = new SceneMgr();
     layer: cc.Node = null; //显示层
+    gameplay : CommonGamePlay;
 
     static getInstance()
     {
@@ -44,8 +46,12 @@ export default class SceneMgr extends ParentMgr {
 
     }
 
-    update (dt) {
-
+    update (dt) 
+    {
+        if(this.gameplay)
+        {
+            this.gameplay.update();
+        }
     }
 
     enterScene(sceneid)
@@ -56,8 +62,13 @@ export default class SceneMgr extends ParentMgr {
         UIMgr.Instance.openUI(UIName.ROCKVIEW);
 
         var player = GhostMgr.Instance.spawnEntity(ClientDef.ENTITY_TYPE_PLAYER);
+        player.start();
         Hero.Instance.setEntity(player);
+        
 
+        this.gameplay = new CommonGamePlay();
+        this.gameplay.onLoad();
+        this.gameplay.start();
     }
 
     loadSceneSrc(sceneid)
@@ -72,5 +83,6 @@ export default class SceneMgr extends ParentMgr {
 
     }
 
+    
 
 }

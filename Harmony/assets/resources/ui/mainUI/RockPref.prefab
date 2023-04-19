@@ -312,7 +312,7 @@
       "__id__": 3
     },
     "max_radius": 70,
-    "radius_threshold": 10,
+    "radius_threshold": 50,
     "_id": ""
   },
   {
