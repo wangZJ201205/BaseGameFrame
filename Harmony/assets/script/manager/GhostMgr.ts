@@ -17,7 +17,7 @@ export default class GhostMgr extends ParentMgr {
     entitys:Entity[];
     spawnEntityId:number = 0; //用来生成对象id
     private _timerID: number;
-    
+
     static getInstance()
     {
         return GhostMgr.Instance;
@@ -40,7 +40,6 @@ export default class GhostMgr extends ParentMgr {
         this.layer.height = cc.winSize.height;
         this.layer.parent = canvas;
 
-        // this.layer.runAction(cc.repeatForever(cc.sequence(cc.delayTime(1),cc.callFunc(this.update, this))));
         this._timerID = setInterval(this.update.bind(this), 1000);
     }
 

@@ -18,20 +18,20 @@ export default class CommonGamePlay {
 
     start () 
     {
-        this.delta = 10;
+        this.delta = 1;
     }
 
     update () 
     {
-        this.delta -= 1;
-        if(this.delta <= 0)
-        {
-            this.delta = 10;
-        }
-        else
-        {
-            return;
-        }
+        // this.delta -= 1;
+        // if(this.delta <= 0)
+        // {
+        //     this.delta = 1;
+        // }
+        // else
+        // {
+        //     return;
+        // }
         var entity = GhostMgr.Instance.spawnEntity(ClientDef.ENTITY_TYPE_MONSTER);
         entity.start();
         entity.getEntityNode().setPosition(Math.random()*1280  - 640,Math.random()*720  - 360);
