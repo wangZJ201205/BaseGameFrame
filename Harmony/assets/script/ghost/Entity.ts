@@ -40,14 +40,11 @@ export default class Entity extends cc.Node
 
         this._entityStateMachine.runNextState();
 
-        this._timerID = setInterval(this.update.bind(this), 0);
     }
 
     remove()
     {
         this.removeFromParent();
-        clearInterval(this._timerID);
-        this._timerID = null;
     }
     
     spawnStateMachine()
@@ -127,11 +124,11 @@ export default class Entity extends cc.Node
         return this._entityStateMachine;
     }
 
-    update () 
+    update (dt) 
     {
         if(this._entityStateMachine)
         {
-            this._entityStateMachine.update();
+            this._entityStateMachine.update(dt);
         }
     }
 }

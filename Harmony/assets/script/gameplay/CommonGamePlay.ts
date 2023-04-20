@@ -1,4 +1,5 @@
 import ClientDef from "../common/ClientDef";
+import GameData from "../common/GameData";
 import GhostMgr from "../manager/GhostMgr";
 
 /**
@@ -9,8 +10,7 @@ const {ccclass, property} = cc._decorator;
 @ccclass
 export default class CommonGamePlay {
 
-   delta: number = 0;
-
+    delta: number = 0;
     onLoad () 
     {
 
@@ -21,19 +21,21 @@ export default class CommonGamePlay {
         this.delta = 1;
     }
 
-    update () 
+    update (dt) 
     {
-        // this.delta -= 1;
-        // if(this.delta <= 0)
-        // {
-        //     this.delta = 1;
-        // }
-        // else
-        // {
-        //     return;
-        // }
+        this.delta -= 1;
+        if(this.delta <= 0)
+        {
+            this.delta = 100;
+        }
+        else
+        {
+            return;
+        }
         var entity = GhostMgr.Instance.spawnEntity(ClientDef.ENTITY_TYPE_MONSTER);
         entity.start();
-        entity.getEntityNode().setPosition(Math.random()*1280  - 640,Math.random()*720  - 360);
+        var y = Math.random()* GameData.App_Game_Heigth ;
+        entity.getEntityNode().setPosition(Math.random()*GameData.App_Game_Width  - GameData.App_Game_Width/2, y- GameData.App_Game_Heigth/2);
+        entity.getEntityNode().zIndex = GameData.App_Game_Heigth - y;
     }
 }

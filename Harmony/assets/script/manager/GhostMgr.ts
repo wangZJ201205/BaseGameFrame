@@ -40,11 +40,17 @@ export default class GhostMgr extends ParentMgr {
         this.layer.height = cc.winSize.height;
         this.layer.parent = canvas;
 
-        this._timerID = setInterval(this.update.bind(this), 1000);
+        this._timerID = setInterval(this.update.bind(this), 0);
     }
 
     private update (dt) {
+        
+        const delta = cc.director.getDeltaTime();
 
+        for (let index = 0; index < this.entitys.length; index++) {
+            const element = this.entitys[index];
+            element.update(delta);
+        }
     }
 
     /**

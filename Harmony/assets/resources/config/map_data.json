@@ -1,22 +1,42 @@
 {
 	"10001": {
 		"id": 10001,
-		"path": "map/scene1/scene1",
-		"subs": {"id": 1,"boo": true,"path": "123"}
+		"monsters": [
+			{"id": 1,"delay": 100},
+			{"id": 2,"delay": 500},
+			{"id": 3,"delay": 500},
+			{"id": 4,"delay": 500}
+		],
+		"path": "map/scene1/scene1"
 	},
 	"10002": {
 		"id": 10002,
-		"path": "map/scene1/scene1",
-		"subs": {"id": 1,"boo": true,"path": "123"}
+		"monsters": [
+			{"id": 4,"delay": 500},
+			{"id": 4,"delay": 500},
+			{"id": 4,"delay": 500},
+			{"id": 5,"delay": 700}
+		],
+		"path": "map/scene1/scene2"
 	},
 	"10003": {
 		"id": 10003,
-		"path": "map/scene1/scene1",
-		"subs": {"id": 1,"boo": true,"path": "123"}
+		"monsters": [
+			{"id": 5,"delay": 700},
+			{"id": 5,"delay": 700},
+			{"id": 5,"delay": 700},
+			{"id": 6,"delay": 700}
+		],
+		"path": "map/scene1/scene3"
 	},
 	"10004": {
 		"id": 10004,
-		"path": "map/scene1/scene1",
-		"subs": {"id": 1,"boo": true,"path": "123"}
+		"monsters": [
+			{"id": 6,"delay": 700},
+			{"id": 6,"delay": 700},
+			{"id": 6,"delay": 700},
+			{"id": 7,"delay": 700}
+		],
+		"path": "map/scene1/scene4"
 	}
 }

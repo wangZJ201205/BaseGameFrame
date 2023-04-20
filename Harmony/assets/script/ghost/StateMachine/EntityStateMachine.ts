@@ -86,11 +86,11 @@ export default class EntityStateMachine{
         this._state_list.push(state);
     }
 
-    update () 
+    update (dt) 
     {
         if(this._curState)
         {
-            this._curState.update();
+            this._curState.update(dt);
         }
     }
 }

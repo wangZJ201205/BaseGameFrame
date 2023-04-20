@@ -25,13 +25,13 @@ export default class EntityWalk extends StateParent {
 
     }
 
-    update () 
+    update (dt) 
     {
         
         if( this.getHost().getClientProp(ClientDef.ENTITY_PROP_MOVE_X) == 0 &&
         this.getHost().getClientProp(ClientDef.ENTITY_PROP_MOVE_Y) == 0 )
         {
-            super.update();
+            super.update(dt);
             return;
         }
 
@@ -41,9 +41,9 @@ export default class EntityWalk extends StateParent {
 
         // 移动人物节点        
         var entityNode = this.getHost().getEntityNode();
-        var velocity = dir.mul(GameData.PayerMoveSpeed);
+        var velocity = dir.mul(GameData.PayerMoveSpeed*dt);
         entityNode.setPosition(entityNode.position.add(velocity));
 
-        super.update();
+        super.update(dt);
     }
 }

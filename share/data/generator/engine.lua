@@ -197,8 +197,15 @@ function output_table_json(t, f, tabs, comma, w_tbl,isend)
 		
 		local tv = type(v)
 		if tv=="table" then
+			local noarray = false
+			for tt,_ in pairs(v) do
+				if "string"== type(tt) then
+					noarray = true
+				end
+			end
+
 			f:write(tabs, k )
-			output_table_json(v, f, tabs .. "", true,nil,_==#k_tbl)
+			output_table_json(v, f, tabs .. "", noarray,nil,_==#k_tbl)
 		elseif tv=="string" then
 			if v:sub(1,1)=="\"" and v:sub(-1)=="\"" then
 				f:write(tabs, k,  v, lastCon)
@@ -222,7 +229,11 @@ function output_table_json(t, f, tabs, comma, w_tbl,isend)
 			f:write(tabs .. "},\n")
 		end
 	else
-		f:write(tabs .. "]\n")
+		if isend then
+			f:write(tabs .. "]\n")
+		else
+			f:write(tabs .. "],\n")
+		end
 	end
 end
 

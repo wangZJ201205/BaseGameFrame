@@ -27,7 +27,7 @@ export default class StateParent {
 
     }
 
-    update () 
+    update (dt) 
     {
         this.getHost().getStateMachine().runNextState();
     }

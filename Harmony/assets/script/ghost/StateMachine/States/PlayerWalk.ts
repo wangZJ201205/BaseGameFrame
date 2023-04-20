@@ -26,13 +26,13 @@ export default class PlayerWalk extends StateParent {
 
     }
 
-    update () 
+    update (dt) 
     {
 
         if( this.getHost().getClientProp(ClientDef.ENTITY_PROP_MOVE_X) == 0 &&
         this.getHost().getClientProp(ClientDef.ENTITY_PROP_MOVE_Y) == 0 )
         {
-            super.update();
+            super.update(dt);
             return;
         }
 
@@ -42,13 +42,14 @@ export default class PlayerWalk extends StateParent {
 
         // 移动人物节点        
         var entityNode = this.getHost().getEntityNode();
-        var velocity = dir.mul(GameData.PayerMoveSpeed);
+        var velocity = dir.mul(GameData.PayerMoveSpeed*dt);
         entityNode.setPosition(entityNode.position.add(velocity));
-        // console.info(entityNode.position.x,entityNode.position.y,velocity.x,velocity.y,dir.x,dir.y);
+        entityNode.zIndex = GameData.App_Game_Heigth -(GameData.App_Game_Heigth/2 + entityNode.getPosition().y);
+        console.info(entityNode.zIndex);
 
         this.getHost().setClientProp(ClientDef.ENTITY_PROP_MOVE_X,0);
         this.getHost().setClientProp(ClientDef.ENTITY_PROP_MOVE_Y,0);
         
-        super.update();
+        super.update(dt);
     }
 }

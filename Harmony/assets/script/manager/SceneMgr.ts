@@ -19,6 +19,7 @@ export default class SceneMgr extends ParentMgr {
     public static readonly Instance : SceneMgr = new SceneMgr();
     layer: cc.Node = null; //显示层
     gameplay : CommonGamePlay;
+    _timerID: number;
 
     static getInstance()
     {
@@ -41,16 +42,15 @@ export default class SceneMgr extends ParentMgr {
         this.layer.height = cc.winSize.height;
         this.layer.parent = canvas;
 
-        this.layer.runAction(cc.repeatForever(cc.sequence(cc.delayTime(1),cc.callFunc(this.update, this))));
-
-
+        this._timerID = setInterval(this.update.bind(this), 0);
     }
 
-    update (dt) 
+    update () 
     {
+        const delta = cc.director.getDeltaTime();
         if(this.gameplay)
         {
-            this.gameplay.update();
+            this.gameplay.update(delta);
         }
     }
 
@@ -60,6 +60,7 @@ export default class SceneMgr extends ParentMgr {
         this.loadSceneSrc(sceneid);
 
         UIMgr.Instance.openUI(UIName.ROCKVIEW);
+        UIMgr.Instance.openUI(UIName.TESTVIEW);
 
         var player = GhostMgr.Instance.spawnEntity(ClientDef.ENTITY_TYPE_PLAYER);
         player.start();

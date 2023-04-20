@@ -10,7 +10,8 @@ export default class GameData{
     public static NeedWaitModules : number = 0; //需要加载等待的模块数
     public static CurrLoadModules : number = 0; //当前已经加载的模块数
 
-    public static PayerMoveSpeed : number = 2; //人物移动速度
+    public static PayerMoveSpeed : number = 100; //人物移动速度
 
-
+    public static App_Game_Width : number = 1280; //游戏宽度
+    public static App_Game_Heigth : number = 720; //游戏高度
 }

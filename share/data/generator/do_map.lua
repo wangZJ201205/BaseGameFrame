@@ -15,27 +15,29 @@ end
 local gdmap = {}
 
 function handle_map(o)
-	local d = {}
-
-	d.id = tonumber(o.a) or 0
-	if d.id == 0 then
+	local id = tonumber(o[1].a)
+	if not id or id == 0 then
 		return
 	end
 
-	d.path = o.b
+	local d = {}
 
-	--测试
-	d.subs = {}
-	d.subs.id = 1
-	d.subs.path = "123"
-	d.subs.boo = true
+	d.id = id
+	d.path = o[1].b
+	d.monsters = {}
+	for i=1,4 do
+		local monsters= {}
+		monsters.id = tonumber(o[i].c)
+		monsters.delay = tonumber(o[i].d)
+		table.insert(d.monsters, monsters)
+	end
 
 	gdmap[tostring(d.id)] = d
 end
 
 
 export_csv("..\\design\\地图信息.xlsx")
-handle_file("tmp\\地图.csv", handle_map)
+handle_file_ex("tmp\\地图.csv", handle_map,2, 4)
 clear_csv()
 
 output_table_json(gdmap, of_file, nil, true, weight_tbl,true)
