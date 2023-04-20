@@ -25,7 +25,7 @@ export default class EntityStateMachine{
     }
 
     start () {
-
+        this.runNextState();
     }
 
     getHost()
@@ -76,8 +76,7 @@ export default class EntityStateMachine{
     //生成状态
     spawnState(state)
     {
-        if(state == ClientDef.ENTITY_STATE_IDLE){return new EntityIdle(); }
-        else if(state == ClientDef.ENTITY_STATE_WALK){return new EntityWalk(); }
+        
         return null;
     }
 

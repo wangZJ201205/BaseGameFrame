@@ -1,6 +1,7 @@
 import ClientDef from "../common/ClientDef";
 import ClothComponent from "./Component/ClothComponent";
 import EntityStateMachine from "./StateMachine/EntityStateMachine";
+import MonsterStateMachine from "./StateMachine/MonsterStateMachine";
 import PlayerStateMachine from "./StateMachine/PlayerStateMachine";
 
 /**
@@ -26,10 +27,13 @@ export default class Entity extends cc.Node
         this._client_prop_map = {};
         this._server_prop_map = {};
         this._entity_components = {};
+
+        
     }
 
     start () {
-
+        
+        this.setClientProp(ClientDef.ENTITY_PROP_ACTIVE_STATE,ClientDef.ENTITY_ACTIVE_STATE_RUN);
         this._entityStateMachine = this.spawnStateMachine();
         this._entityStateMachine.onLoad(this);
 
@@ -37,8 +41,7 @@ export default class Entity extends cc.Node
         cloth.onLoad(this);
         this.addEntityComponent(ClientDef.ENTITY_COMP_CLOTH,cloth); //添加衣服组件
 
-
-        this._entityStateMachine.runNextState();
+        this._entityStateMachine.start();
 
     }
 
@@ -57,7 +60,7 @@ export default class Entity extends cc.Node
         }
         else if(entityType == ClientDef.ENTITY_TYPE_MONSTER)
         {
-            machine = new EntityStateMachine();
+            machine = new MonsterStateMachine();
         }
         return machine;
     }

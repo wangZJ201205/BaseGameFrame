@@ -24,6 +24,10 @@ export default class ClientDef{
     public static readonly ENTITY_STATE_IDLE: number = 1; //站立
     public static readonly ENTITY_STATE_WALK: number = 2; //移动
 
+    //对象运行状态
+    public static readonly ENTITY_ACTIVE_STATE_RUN : number = 1;//运行
+    public static readonly ENTITY_ACTIVE_STATE_FREE : number = 2;//闲置
+
     //控制玩家的类型
     public static readonly PLAYER_CONTROL_TYPE_ROCK:number = 1; //玩家控制类型-遥感
 
@@ -34,5 +38,6 @@ export default class ClientDef{
     public static readonly ENTITY_PROP_CONTROL_STATE:number = 4; //对象控制类型
     public static readonly ENTITY_PROP_MOVE_X : number = 5; //移动x轴
     public static readonly ENTITY_PROP_MOVE_Y : number = 6; //移动y轴
+    public static readonly ENTITY_PROP_ACTIVE_STATE : number = 7; //运行状态
 
 }

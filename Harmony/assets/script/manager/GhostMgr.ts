@@ -46,11 +46,34 @@ export default class GhostMgr extends ParentMgr {
     private update (dt) {
         
         const delta = cc.director.getDeltaTime();
-
+        var needRemoveEntity = [];
         for (let index = 0; index < this.entitys.length; index++) {
             const element = this.entitys[index];
-            element.update(delta);
+            if( element.getClientProp(ClientDef.ENTITY_PROP_ACTIVE_STATE) == ClientDef.ENTITY_ACTIVE_STATE_RUN )
+            {
+                element.update(delta);
+            }
+            else
+            {
+                needRemoveEntity.push(element);
+            }
         }
+
+        for (let index = 0; index < needRemoveEntity.length; index++) {
+            const element = needRemoveEntity[index];
+            var findIndex = 0;
+            for (let i = 0; i < this.entitys.length; i++) {
+                const ele = this.entitys[i];
+                if( ele == element )
+                {
+                    ele.remove();
+                    findIndex = i;
+                    break;
+                }
+            }
+            this.entitys.splice(findIndex,1);
+        }
+        
     }
 
     /**

@@ -11,6 +11,7 @@ const {ccclass, property} = cc._decorator;
 export default class CommonGamePlay {
 
     delta: number = 0;
+    count:number = 0;
     onLoad () 
     {
 
@@ -26,12 +27,15 @@ export default class CommonGamePlay {
         this.delta -= 1;
         if(this.delta <= 0)
         {
-            this.delta = 100;
+            this.delta = 300;
         }
         else
         {
             return;
         }
+        var count = GhostMgr.Instance.entitys.length;
+        if(count > 1)return;
+        // this.count++;
         var entity = GhostMgr.Instance.spawnEntity(ClientDef.ENTITY_TYPE_MONSTER);
         entity.start();
         var y = Math.random()* GameData.App_Game_Heigth ;

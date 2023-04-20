@@ -21,7 +21,7 @@ export default class PlayerStateMachine extends EntityStateMachine {
 
     start () 
     {
-
+        super.start();
     }
 
     getNextState()
