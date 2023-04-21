@@ -10,6 +10,7 @@ const {ccclass, property} = cc._decorator;
 @ccclass
 export default class EntityWalk extends StateParent {
 
+    speed:number;
     onLoad (id,host) 
     {
         super.onLoad(id,host);
@@ -18,6 +19,7 @@ export default class EntityWalk extends StateParent {
     start () 
     {
         super.start();
+        this.speed = Math.random() * 10 + GameData.MonsterMoveSpeed/2;
     }
 
     stop()
@@ -42,7 +44,7 @@ export default class EntityWalk extends StateParent {
           this.getHost().setClientProp(ClientDef.ENTITY_PROP_ACTIVE_STATE, ClientDef.ENTITY_ACTIVE_STATE_FREE);
         } else {
           // 沿着移动方向移动
-          const velocity = direction.mul(GameData.MonsterMoveSpeed * dt);
+          const velocity = direction.mul(this.speed * dt);
           console.info(velocity.x,velocity.y);
           currentPosition = currentPosition.add(velocity);
           myNode.position = currentPosition.add(velocity);

@@ -27,20 +27,23 @@ export default class CommonGamePlay {
         this.delta -= 1;
         if(this.delta <= 0)
         {
-            this.delta = 30;
+            this.delta = 10;
         }
         else
         {
             return;
         }
         var count = GhostMgr.Instance.entitys.length;
-        if(count > 100)return;
+        if(count > 1000)return;
         // this.count++;
-        var entity = GhostMgr.Instance.spawnEntity(ClientDef.ENTITY_TYPE_MONSTER);
-        entity.setClientProp(ClientDef.ENTITY_PROP_STATICID,"1");
-        entity.start();
-        var y = Math.random()* GameData.App_Game_Heigth ;
-        entity.getEntityNode().setPosition(Math.random()*GameData.App_Game_Width  - GameData.App_Game_Width/2, y- GameData.App_Game_Heigth/2);
-        entity.getEntityNode().zIndex = GameData.App_Game_Heigth - y;
+        // for (let index = 0; index < 5; index++) {
+            var entity = GhostMgr.Instance.spawnEntity(ClientDef.ENTITY_TYPE_MONSTER);
+            entity.setClientProp(ClientDef.ENTITY_PROP_STATICID,"1");
+            entity.start();
+            var y = Math.random()* GameData.App_Game_Heigth ;
+            entity.getEntityNode().setPosition(Math.random()*GameData.App_Game_Width  - GameData.App_Game_Width/2, y- GameData.App_Game_Heigth/2);
+            entity.getEntityNode().zIndex = GameData.App_Game_Heigth - y;
+        // }
+        
     }
 }
