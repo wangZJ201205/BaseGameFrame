@@ -17,7 +17,6 @@ export default class PlayerWalk extends StateParent {
 
     start () 
     {
-        console.info(">>>>>>>>>>PlayerWalk:start");
         super.start();
     }
 

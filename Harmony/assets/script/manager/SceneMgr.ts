@@ -63,6 +63,7 @@ export default class SceneMgr extends ParentMgr {
         UIMgr.Instance.openUI(UIName.TESTVIEW);
 
         var player = GhostMgr.Instance.spawnEntity(ClientDef.ENTITY_TYPE_PLAYER);
+        player.setClientProp(ClientDef.ENTITY_PROP_STATICID,"100001");
         player.start();
         Hero.Instance.setEntity(player);
         

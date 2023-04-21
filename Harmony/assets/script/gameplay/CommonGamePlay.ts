@@ -27,16 +27,17 @@ export default class CommonGamePlay {
         this.delta -= 1;
         if(this.delta <= 0)
         {
-            this.delta = 300;
+            this.delta = 30;
         }
         else
         {
             return;
         }
         var count = GhostMgr.Instance.entitys.length;
-        if(count > 1)return;
+        if(count > 100)return;
         // this.count++;
         var entity = GhostMgr.Instance.spawnEntity(ClientDef.ENTITY_TYPE_MONSTER);
+        entity.setClientProp(ClientDef.ENTITY_PROP_STATICID,"1");
         entity.start();
         var y = Math.random()* GameData.App_Game_Heigth ;
         entity.getEntityNode().setPosition(Math.random()*GameData.App_Game_Width  - GameData.App_Game_Width/2, y- GameData.App_Game_Heigth/2);

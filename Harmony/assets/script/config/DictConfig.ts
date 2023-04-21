@@ -24,8 +24,7 @@ export default class DictConfig{
 
         DictConfig.registerDict("map_data");
         DictConfig.registerDict("language_data");
-        DictConfig.registerDict("equip_data");
-        DictConfig.registerDict("monster_data");
+        DictConfig.registerDict("entity_data");
 
     }
 

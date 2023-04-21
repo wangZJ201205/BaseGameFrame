@@ -962,14 +962,15 @@
       "__id__": 1
     },
     "_enabled": true,
-    "_defaultClip": null,
+    "_defaultClip": {
+      "__uuid__": "cadeb8a3-8e7f-4ad4-870d-2569fbc07f46"
+    },
     "_clips": [
-      null,
       {
         "__uuid__": "cadeb8a3-8e7f-4ad4-870d-2569fbc07f46"
       }
     ],
-    "playOnLoad": false,
+    "playOnLoad": true,
     "_id": ""
   },
   {

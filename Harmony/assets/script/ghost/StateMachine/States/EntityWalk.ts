@@ -1,6 +1,7 @@
 
 import ClientDef from "../../../common/ClientDef";
 import GameData from "../../../common/GameData";
+import GameMath from "../../../utils/GameMath";
 import Hero from "../../Hero";
 import StateParent from "../StateParent";
 
@@ -9,12 +10,6 @@ const {ccclass, property} = cc._decorator;
 @ccclass
 export default class EntityWalk extends StateParent {
 
-     // 当前对象的位置信息
-    protected currentPosition: cc.Vec3;
-
-    // 移动方向
-    protected direction: cc.Vec3;
-
     onLoad (id,host) 
     {
         super.onLoad(id,host);
@@ -22,20 +17,11 @@ export default class EntityWalk extends StateParent {
 
     start () 
     {
-        console.info(">>>>>>>>>>EntityWalk:start");
         super.start();
-        var y = Math.random()* GameData.App_Game_Heigth ;
-        this.getHost().getEntityNode().setPosition(Math.random()*GameData.App_Game_Width  - GameData.App_Game_Width/2, y- GameData.App_Game_Heigth/2);
-        this.currentPosition = this.getHost().getEntityNode().position;
-
-        var heroNode = Hero.Instance.getEntity().getEntityNode();
-        this.direction = heroNode.position.sub(this.currentPosition);
-        this.direction.normalize();
     }
 
     stop()
     {
-
     }
 
     update (dt) 
@@ -43,29 +29,37 @@ export default class EntityWalk extends StateParent {
 
         var heroNode = Hero.Instance.getEntity().getEntityNode();
         var myNode = this.getHost().getEntityNode();
-        // var currentPosition:cc.Vec3 = cc.v3(myNode.position.x,
-        //                                     myNode.position.y,0);
-
-        // var direction = heroNode.position.sub(currentPosition);
-        // direction.normalize();
-        // entityNode.zIndex = GameData.App_Game_Heigth -(GameData.App_Game_Heigth/2 + entityNode.getPosition().y);
-
+        var currentPosition = this.getHost().getEntityNode().position;
+        var direction = heroNode.position.sub(currentPosition);
+        direction = direction.normalize();
         
+        const distance = heroNode.position.sub(currentPosition).mag();
+        if (distance <= 50)
+        {
+          // 到达目标节点
+          super.update(dt);
+          this.getHost().getEntityNode().active = false;
+          this.getHost().setClientProp(ClientDef.ENTITY_PROP_ACTIVE_STATE, ClientDef.ENTITY_ACTIVE_STATE_FREE);
+        } else {
+          // 沿着移动方向移动
+          const velocity = direction.mul(GameData.MonsterMoveSpeed * dt);
+          console.info(velocity.x,velocity.y);
+          currentPosition = currentPosition.add(velocity);
+          myNode.position = currentPosition.add(velocity);
+          myNode.zIndex = GameData.App_Game_Heigth -(GameData.App_Game_Heigth/2 + myNode.position.y);
+        }
 
-        const distance = heroNode.position.sub(this.currentPosition).mag();
-        console.info(">>>"+distance)
-        if (distance <= 50) {
-            // 到达目标节点
-            this.getHost().getEntityNode().active = false;
-            this.getHost().setClientProp(ClientDef.ENTITY_PROP_ACTIVE_STATE, ClientDef.ENTITY_ACTIVE_STATE_FREE);
-          } else {
-            // 沿着移动方向移动
-            const velocity = this.direction.mul(0.05 * dt);
-            console.info(velocity.x,velocity.y,GameData.PayerMoveSpeed * 0.0005 * dt);
-            this.currentPosition = this.currentPosition.add(velocity);
-            myNode.position = this.currentPosition.add(velocity);
-          }
-
-        // super.update(dt);
+        this.changePlayerDirection(direction);
+    }
+    /**
+     * 改变方向
+     * @param direction 方向
+     */
+    changePlayerDirection(direction)
+    {
+        let angleRadian = Math.atan2(direction.y, direction.x);
+        let degree = angleRadian * 180 / Math.PI; // 转换为角度制
+        let dir = GameMath.degreeToEntityDirection(degree);
+        this.getHost().setClientProp(ClientDef.ENTITY_PROP_DIR,dir);
     }
 }

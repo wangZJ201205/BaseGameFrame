@@ -2,6 +2,7 @@
 import ClientDef from "../../common/ClientDef";
 import UIName from "../../common/UIName";
 import Hero from "../../ghost/Hero";
+import GameMath from "../../utils/GameMath";
 import UIParent from "../UIParent";
 
 const {ccclass, property} = cc._decorator;
@@ -46,7 +47,6 @@ export default class RockView extends UIParent {
 
     close()
     {
-
     }
 
     onJoyStickTouchStart(event)
@@ -70,13 +70,9 @@ export default class RockView extends UIParent {
         var movePos = this.joyStickDir.mul(Math.floor(this.joyStickDistance));
         centerPos.x += Math.floor(movePos.x);
         centerPos.y += Math.floor(movePos.y);
-        let angleRadian = Math.atan2(joyStickPos.y, joyStickPos.x);
-        let degree = angleRadian * 180 / Math.PI; // 转换为角度制
-        let dir = this.degreeToEntityDirection(degree);
+        this.changePlayerDirection(joyStickPos);
         // 更新虚拟摇杆的位置
         this.joyStickNode.node.setPosition(centerPos);
-
-        Hero.Instance.getEntity().setClientProp(ClientDef.ENTITY_PROP_DIR,dir);
     }
 
     onJoyStickTouchEnd(event,param)
@@ -102,28 +98,13 @@ export default class RockView extends UIParent {
         Hero.Instance.getEntity().setClientProp(ClientDef.ENTITY_PROP_MOVE_Y,this.joyStickDir.y);
     }
 
-    degreeToEntityDirection(angle)
+    changePlayerDirection(joyStickPos)
     {
-        var index= 0;
-        if( angle >= 60 && angle < 120){
-            index = 1
-        }
-        else if( angle >= 30 && angle < 60){
-            index = 2
-        }else if( angle >= -30 && angle < 30){
-            index = 3
-        }else if( angle >= -60 && angle < -30 ){
-            index = 4
-        }else if( angle >= 120 && angle < 150 ){
-            index = 8
-        }else if( angle <= -150 || angle > 150 ){
-            index = 7
-        }else if( angle >= -150 && angle < -120 ){
-            index = 6
-        }else if( angle < -60 && angle > -120 ){
-            index = 5
-        }
-        return index;
+        let angleRadian = Math.atan2(joyStickPos.y, joyStickPos.x);
+        let degree = angleRadian * 180 / Math.PI; // 转换为角度制
+        let dir = GameMath.degreeToEntityDirection(degree);
+        Hero.Instance.getEntity().setClientProp(ClientDef.ENTITY_PROP_DIR,dir);
     }
+    
 
 }

@@ -138,8 +138,8 @@ export default class ClothComponent extends ComponentParent {
     {
         var animationName = STATE_NAME[state];
         this._animations_state[animationName] = ANIMATION_STATE.LOADING;
-        var clothId = this.getHost().getServerProp(Definition.ENTITY_PROP_CLOTH) || 0;
-        var clothResource = DictMgr.Instance.getDictByName("equip_data")[clothId].resource;
+        var clothId = this.getHost().getClientProp(ClientDef.ENTITY_PROP_STATICID) || 0;
+        var clothResource = DictMgr.Instance.getDictByName("entity_data")[clothId].path;
         var loadPath = 'animation/' +  clothResource +"/"+ animationName ;
         LoadMgr.Instance.LoadAsset(loadPath,(asset)=>
             {

@@ -39,5 +39,6 @@ export default class ClientDef{
     public static readonly ENTITY_PROP_MOVE_X : number = 5; //移动x轴
     public static readonly ENTITY_PROP_MOVE_Y : number = 6; //移动y轴
     public static readonly ENTITY_PROP_ACTIVE_STATE : number = 7; //运行状态
+    public static readonly ENTITY_PROP_STATICID : number = 8; //配置ID
 
 }
