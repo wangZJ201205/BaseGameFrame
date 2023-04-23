@@ -61,17 +61,25 @@ export default class GhostMgr extends ParentMgr {
 
         for (let index = 0; index < needRemoveEntity.length; index++) {
             const element = needRemoveEntity[index];
-            var findIndex = 0;
+            var findIndex = -1;
             for (let i = 0; i < this.entitys.length; i++) {
                 const ele = this.entitys[i];
                 if( ele == element )
                 {
-                    ele.remove();
-                    findIndex = i;
+                    var time = ele.getClientProp(ClientDef.ENTITY_PROP_WAIT_DESTROY_TIME) || 0;
+                    ele.setClientProp(ClientDef.ENTITY_PROP_WAIT_DESTROY_TIME, time + 1);
+                    if(time >= 100) //设定时间，10秒倒计时
+                    {
+                        ele.remove();
+                        findIndex = i;
+                    }
                     break;
                 }
             }
-            this.entitys.splice(findIndex,1);
+            if(findIndex >= 0)
+            {
+                this.entitys.splice(findIndex,1);
+            }
         }
         
     }
@@ -83,12 +91,28 @@ export default class GhostMgr extends ParentMgr {
      */
     spawnEntity(entityType)
     {
-        var entity:Entity = new Entity();
-        entity.onLoad();
-        entity.setClientProp(ClientDef.ENTITY_PROP_TYPE,entityType);
+        var entity:Entity = null;
+        
+        //对象池中寻找闲置对象
+        for (let index = 0; index < this.entitys.length; index++) {
+            const element = this.entitys[index];
+            if( element.getClientProp(ClientDef.ENTITY_PROP_ACTIVE_STATE) == ClientDef.ENTITY_ACTIVE_STATE_FREE  && 
+                element.getClientProp(ClientDef.ENTITY_PROP_TYPE) == entityType) //判断状态和对象类型
+            {
+                entity = element;
+                break;
+            }
+        }
 
-        this.layer.addChild(entity);
-        this.addEntity(entity)
+        if (entity == null)
+        {
+            entity = new Entity();
+            entity.onLoad();
+            entity.setClientProp(ClientDef.ENTITY_PROP_TYPE,entityType);
+            this.layer.addChild(entity);
+            this.addEntity(entity)
+        }
+        
         return entity;
     }
 

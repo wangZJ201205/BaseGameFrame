@@ -28,21 +28,16 @@ export default class Entity extends cc.Node
         this._server_prop_map = {};
         this._entity_components = {};
 
-        
-    }
-
-    start () {
-        
-        this.setClientProp(ClientDef.ENTITY_PROP_ACTIVE_STATE,ClientDef.ENTITY_ACTIVE_STATE_RUN);
-        this._entityStateMachine = this.spawnStateMachine();
-        this._entityStateMachine.onLoad(this);
-
         var cloth = new ClothComponent();
         cloth.onLoad(this);
         this.addEntityComponent(ClientDef.ENTITY_COMP_CLOTH,cloth); //添加衣服组件
-
+    }
+    //可能是重载
+    start () {
+        this.setClientProp(ClientDef.ENTITY_PROP_ACTIVE_STATE,ClientDef.ENTITY_ACTIVE_STATE_RUN);
+        this._entityStateMachine = this.spawnStateMachine();
+        this._entityStateMachine.onLoad(this);
         this._entityStateMachine.start();
-
     }
 
     remove()
@@ -52,6 +47,11 @@ export default class Entity extends cc.Node
     
     spawnStateMachine()
     {
+        if(this._entityStateMachine)
+        {
+            return this._entityStateMachine;
+        }
+
         var entityType = this._client_prop_map[ClientDef.ENTITY_PROP_TYPE];
         var machine = null;
         if(entityType == ClientDef.ENTITY_TYPE_PLAYER)

@@ -15,6 +15,7 @@ export default class ClientDef{
 
     //对象组件
     public static readonly ENTITY_COMP_CLOTH : number = 1; //对象组件 - 衣服
+    public static readonly ENTITY_COMP_BLOOM : number = 2; //对象组件 - 血条
 
     //对象类型
     public static readonly ENTITY_TYPE_PLAYER : number = 1; //对象id
@@ -40,5 +41,6 @@ export default class ClientDef{
     public static readonly ENTITY_PROP_MOVE_Y : number = 6; //移动y轴
     public static readonly ENTITY_PROP_ACTIVE_STATE : number = 7; //运行状态
     public static readonly ENTITY_PROP_STATICID : number = 8; //配置ID
+    public static readonly ENTITY_PROP_WAIT_DESTROY_TIME : number = 9; //等待被销毁时间
 
 }
