@@ -1,4 +1,6 @@
 import ClientDef from "../common/ClientDef";
+import Skill from "../skill/Skill";
+import BloomComponent from "./Component/BloomComponent";
 import ClothComponent from "./Component/ClothComponent";
 import EntityStateMachine from "./StateMachine/EntityStateMachine";
 import MonsterStateMachine from "./StateMachine/MonsterStateMachine";
@@ -19,6 +21,7 @@ export default class Entity extends cc.Node
 
     _entity_components:{}; //对象组件
     _entityStateMachine:EntityStateMachine; //对象状态机
+    _skill:Skill; //技能
 
     _timerID:number;
 
@@ -28,21 +31,39 @@ export default class Entity extends cc.Node
         this._server_prop_map = {};
         this._entity_components = {};
 
+        this._skill = new Skill();
+        this._skill.onLoad(this);
+
         var cloth = new ClothComponent();
         cloth.onLoad(this);
         this.addEntityComponent(ClientDef.ENTITY_COMP_CLOTH,cloth); //添加衣服组件
+
+        // var bloom = new BloomComponent();
+        // bloom.onLoad(this);
+        // this.addEntityComponent(ClientDef.ENTITY_COMP_BLOOM,bloom);
     }
     //可能是重载
     start () {
+        
         this.setClientProp(ClientDef.ENTITY_PROP_ACTIVE_STATE,ClientDef.ENTITY_ACTIVE_STATE_RUN);
+
+        this._skill.start();
+        this.getEntityComponent(ClientDef.ENTITY_COMP_CLOTH).start();
+
         this._entityStateMachine = this.spawnStateMachine();
         this._entityStateMachine.onLoad(this);
         this._entityStateMachine.start();
+
     }
 
     remove()
     {
         this.removeFromParent();
+    }
+
+    getSkill()
+    {
+        return this._skill;
     }
     
     spawnStateMachine()
@@ -132,6 +153,10 @@ export default class Entity extends cc.Node
         if(this._entityStateMachine)
         {
             this._entityStateMachine.update(dt);
+        }
+        if(this._skill)
+        {
+            this._skill.update(dt);
         }
     }
 }

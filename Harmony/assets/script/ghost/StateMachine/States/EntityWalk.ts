@@ -45,7 +45,6 @@ export default class EntityWalk extends StateParent {
         } else {
           // 沿着移动方向移动
           const velocity = direction.mul(this.speed * dt);
-          console.info(velocity.x,velocity.y);
           currentPosition = currentPosition.add(velocity);
           myNode.position = currentPosition.add(velocity);
           myNode.zIndex = GameData.App_Game_Heigth -(GameData.App_Game_Heigth/2 + myNode.position.y);

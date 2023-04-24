@@ -29,6 +29,7 @@ export default class ClientDef{
     public static readonly ENTITY_ACTIVE_STATE_RUN : number = 1;//运行
     public static readonly ENTITY_ACTIVE_STATE_FREE : number = 2;//闲置
 
+
     //控制玩家的类型
     public static readonly PLAYER_CONTROL_TYPE_ROCK:number = 1; //玩家控制类型-遥感
 
@@ -42,5 +43,9 @@ export default class ClientDef{
     public static readonly ENTITY_PROP_ACTIVE_STATE : number = 7; //运行状态
     public static readonly ENTITY_PROP_STATICID : number = 8; //配置ID
     public static readonly ENTITY_PROP_WAIT_DESTROY_TIME : number = 9; //等待被销毁时间
+
+
+    //bullet子弹类型
+    public static readonly BULLET_TYPE_FIREBALL: number = 1; //火球
 
 }

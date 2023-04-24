@@ -27,14 +27,14 @@ export default class CommonGamePlay {
         this.delta -= 1;
         if(this.delta <= 0)
         {
-            this.delta = 1;
+            this.delta = 5;
         }
         else
         {
             return;
         }
         var count = GhostMgr.Instance.entitys.length;
-        if(count > 100)return;
+        if(count > 1)return;
         // this.count++;
         // for (let index = 0; index < 5; index++) {
             var entity = GhostMgr.Instance.spawnEntity(ClientDef.ENTITY_TYPE_MONSTER);

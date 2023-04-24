@@ -141,5 +141,9 @@ export default class GhostMgr extends ParentMgr {
         this.entitys = [];
     }
 
+    getLayer()
+    {
+        return this.layer;
+    }
 
 }

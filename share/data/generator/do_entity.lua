@@ -25,6 +25,9 @@ function handle_entity(o)
 	d.name = o.b
 	d.path = o.c
 
+	d.skillid = tonumber(o.d) or 0
+	d.bloom = tonumber(o.e) or 0
+
 	gdentity[tostring(d.id)] = d
 end
 

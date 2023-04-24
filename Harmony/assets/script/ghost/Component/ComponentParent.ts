@@ -16,7 +16,6 @@ export default class ComponentParent{
         this._host = host;
         this._node = new cc.Node();
         host.getEntityNode().addChild(this._node);
-        this.start();
     }
 
     start () {
