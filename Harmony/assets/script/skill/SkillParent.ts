@@ -5,26 +5,29 @@
 import Entity from "../ghost/Entity";
 import DictMgr from "../manager/DictMgr";
 import GhostMgr from "../manager/GhostMgr";
-import SkillParent from "./SkillParent";
 
 const {ccclass, property} = cc._decorator;
 
 @ccclass
-export default class BulletParent {
+export default class SkillParent {
 
     // _node : cc.Node;
-    _host:SkillParent;
+    _host:Entity;
     _staticId:number;
-    _prop:{};
+    _skillInfo:{};
+    _curDelay:number;
 
     onLoad (host) 
     {
         this._host = host;
-        this._prop = {};
     }
 
     start () 
     {
+        // this._node = new cc.Node();
+        // GhostMgr.Instance.getLayer().addChild(this._node);
+        this._skillInfo = DictMgr.Instance.getDictByName('skill_data')[this._staticId+""];
+        this._curDelay = 0;
     }
 
     update (dt) 
@@ -37,13 +40,13 @@ export default class BulletParent {
         return this._host;
     }
 
-    setProp(type,value)
+    setStaticId(staticid)
     {
-        this._prop[type] = value;
+        this._staticId = staticid;
     }
 
-    getProp(type)
+    findEnemy()
     {
-        return this._prop[type] || 0;
+
     }
 }

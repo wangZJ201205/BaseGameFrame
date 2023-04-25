@@ -159,4 +159,6 @@ export default class Entity extends cc.Node
             this._skill.update(dt);
         }
     }
+
+
 }

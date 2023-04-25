@@ -6,18 +6,19 @@ import ClientDef from "../common/ClientDef";
 import Entity from "../ghost/Entity";
 import DictMgr from "../manager/DictMgr";
 import BulletParent from "./BulletParent";
-import FireBallBullet from "./bullet/FireBallBullet";
+import SkillParent from "./SkillParent";
+import FireBallSkill from "./bullet/fireball/FireBallSkill";
 
 const {ccclass, property} = cc._decorator;
 
 @ccclass
 export default class Skill {
 
-    _bullets:BulletParent[];
+    _skills:SkillParent[];
     _host:Entity;
     onLoad (host) 
     {
-        this._bullets = [];
+        this._skills = [];
         this._host = host;
     }
 
@@ -27,44 +28,44 @@ export default class Skill {
         var skillid = DictMgr.Instance.getDictByName('entity_data')[entityStatic+""].skillid
         if(skillid != 0)
         {
-            this.addBullet(skillid);
+            this.addSkill(skillid);
         }
 
     }
 
     update (dt) 
     {
-        for (let i = 0; i < this._bullets.length; i++) {
-            const element = this._bullets[i];
+        for (let i = 0; i < this._skills.length; i++) {
+            const element = this._skills[i];
             element.update(dt);
         }
     }
 
-    addBullet(skillid)
+    addSkill(skillid)
     {
         var type = Math.floor(skillid / 10000); //去整型
-        var bullet = this.spawnBullet(type);
-        if(!bullet)
+        var skill = this.spawnSkill(type);
+        if(!skill)
         {
             console.info("没有这种类型的子弹对象 :" + type);
             return;
         }
-        bullet.onLoad(this._host);
-        bullet.setStaticId(skillid);
-        bullet.start();
-        this._bullets.push(bullet);
+        skill.onLoad(this._host);
+        skill.setStaticId(skillid);
+        skill.start();
+        this._skills.push(skill);
     }
 
-    spawnBullet(type)
+    spawnSkill(type)
     {
-        var bullet = null;
+        var skill = null;
         switch(type)
         {
-            case ClientDef.BULLET_TYPE_FIREBALL: //火球
-                bullet = new FireBallBullet();
+            case ClientDef.SKILL_TYPE_FIREBALL: //火球
+            skill = new FireBallSkill();
             break;
         }
-        return bullet;
+        return skill;
     }
 
 }

@@ -146,4 +146,16 @@ export default class GhostMgr extends ParentMgr {
         return this.layer;
     }
 
+    foreachEntity(callback)
+    {
+        for (let i = 0; i < this.entitys.length; i++) {
+            const element = this.entitys[i];
+            var notcontinue = callback(element);
+            if(notcontinue)
+            {
+                break;
+            }
+        }
+    }
+
 }

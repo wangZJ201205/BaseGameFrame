@@ -46,5 +46,21 @@ export default class LoadMgr extends ParentMgr {
         });
     }
 
+    /*====================================================================================================*/
+    /**
+     * 根据类型异步加载
+     */
+    /*====================================================================================================*/
+    LoadAssetWithType(relative_path, asset_type, complete_callback) {
+        cc.resources.load(relative_path, asset_type, (error, asset) => {
+            if (error) {
+                cc.error("xf.LoadAssetByType failed ... and path = " + relative_path);
+                return;
+            }
+            else {
+                complete_callback && complete_callback(asset);
+            }
+        });
+    }
     
 }

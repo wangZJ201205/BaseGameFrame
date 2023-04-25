@@ -45,7 +45,10 @@ export default class ClientDef{
     public static readonly ENTITY_PROP_WAIT_DESTROY_TIME : number = 9; //等待被销毁时间
 
 
-    //bullet子弹类型
-    public static readonly BULLET_TYPE_FIREBALL: number = 1; //火球
+    //技能类型
+    public static readonly SKILL_TYPE_FIREBALL: number = 1; //火球
 
+
+    //子弹属性
+    public static readonly BULLET_TYPE_DIRECTION : number = 1; //方向
 }
