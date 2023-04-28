@@ -1,0 +1,12 @@
+以下是在WIN7上面的亲测步骤，成功破解。
+
+1、先安装TexturePacker-3.1.2-x86.msi，安装完毕启动TexturePackerGUI，先点使用lite版，再退出。
+
+2、找到安装后的CodeAndWeb\TexturePacker\bin目录，把Texture.Packer.3.0.3-patch.exe复制进去。
+
+3、点击Patch，等待Patch成功完成。
+
+4、启动TexturePackerGUI，3.1.2版本先安装成功了。
+
+
+

@@ -7,6 +7,8 @@ import UIName from "./common/UIName";
 import DictConfig from "./config/DictConfig";
 import UIConfig from "./config/UIConfig";
 import Hero from "./ghost/Hero";
+import EntityProxy from "./ghost/Proxy/EntityProxy";
+import HeroProxy from "./ghost/Proxy/HeroProxy";
 import DictMgr from "./manager/DictMgr";
 import EventMgr from "./manager/EventMgr";
 import GhostMgr from "./manager/GhostMgr";
@@ -15,6 +17,7 @@ import NetMgr from "./manager/NetMgr";
 import SceneMgr from "./manager/SceneMgr";
 import UIMgr from "./manager/UIMgr";
 import SocketRegister from "./socket/SocketRegister";
+import LoginProxy from "./ui/login/LoginProxy";
 
 const {ccclass, property} = cc._decorator;
 
@@ -54,7 +57,14 @@ export default class GameStart extends cc.Component {
         DictMgr.Instance.start();
         Hero.Instance.start();
 
+        //注册所有的消息
         SocketRegister.start();
+
+        //注册消息
+        LoginProxy.register();
+        HeroProxy.register();
+        EntityProxy.register();
+
 
         // LoadMgr.Instance.loadResources(()=>{
             // EventMgr.Instance.Emit(EventName.UI_OPEN_PANEL,{name:EventName.UI_LOGIN});
@@ -72,6 +82,7 @@ export default class GameStart extends cc.Component {
     update (dt) 
     {
         NetMgr.Instance.update(dt);
+        
     }
 
     onLoaded(data)

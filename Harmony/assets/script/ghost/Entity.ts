@@ -38,9 +38,11 @@ export default class Entity extends cc.Node
         cloth.onLoad(this);
         this.addEntityComponent(ClientDef.ENTITY_COMP_CLOTH,cloth); //添加衣服组件
 
-        // var bloom = new BloomComponent();
-        // bloom.onLoad(this);
-        // this.addEntityComponent(ClientDef.ENTITY_COMP_BLOOM,bloom);
+        var bloom = new BloomComponent();
+        bloom.onLoad(this);
+        this.addEntityComponent(ClientDef.ENTITY_COMP_BLOOM,bloom); //添加衣服组件
+
+        this.setClientProp(ClientDef.ENTITY_PROP_ACTIVE_STATE,ClientDef.ENTITY_ACTIVE_STATE_INIT);
     }
     //可能是重载
     start () {
@@ -49,6 +51,7 @@ export default class Entity extends cc.Node
 
         this._skill.start();
         this.getEntityComponent(ClientDef.ENTITY_COMP_CLOTH).start();
+        this.getEntityComponent(ClientDef.ENTITY_COMP_BLOOM).start();
 
         this._entityStateMachine = this.spawnStateMachine();
         this._entityStateMachine.onLoad(this);

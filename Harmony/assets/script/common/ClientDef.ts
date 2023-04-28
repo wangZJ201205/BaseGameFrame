@@ -26,8 +26,9 @@ export default class ClientDef{
     public static readonly ENTITY_STATE_WALK: number = 2; //移动
 
     //对象运行状态
-    public static readonly ENTITY_ACTIVE_STATE_RUN : number = 1;//运行
-    public static readonly ENTITY_ACTIVE_STATE_FREE : number = 2;//闲置
+    public static readonly ENTITY_ACTIVE_STATE_INIT : number = 1;//初始化
+    public static readonly ENTITY_ACTIVE_STATE_RUN : number = 2;//运行
+    public static readonly ENTITY_ACTIVE_STATE_FREE : number = 3;//闲置
 
 
     //控制玩家的类型

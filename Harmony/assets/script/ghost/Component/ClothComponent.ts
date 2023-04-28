@@ -40,13 +40,13 @@ export default class ClothComponent extends ComponentParent {
     onLoad (host) 
     {    
         super.onLoad(host);
-    }
-
-    start () {
         this._curState = 0;
         this._curDir = 5; //正面
         this._animations = {};
         this._animations_state = {};
+    }
+
+    start () {
         super.start();
     }
 
