@@ -5,8 +5,10 @@ export default class ClientDef{
 
     //游戏大容器深度
     public static readonly GAME_INDEX_SCENE :number = 1;
-    public static readonly GAME_INDEX_GHOST : number = 2;
-    public static readonly GAME_INDEX_UI : number = 3;
+    public static readonly GAME_INDEX_UI : number = 2;
+    public static readonly SCENE_INDEX_GHOST : number = 1;
+    public static readonly SCENE_INDEX_LABEL : number = 2;
+    
 
     //界面深度
     public static readonly UI_INDEX_COMMON :number = 0;

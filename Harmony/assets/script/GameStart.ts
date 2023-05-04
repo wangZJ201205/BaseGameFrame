@@ -12,6 +12,7 @@ import HeroProxy from "./ghost/Proxy/HeroProxy";
 import DictMgr from "./manager/DictMgr";
 import EventMgr from "./manager/EventMgr";
 import GhostMgr from "./manager/GhostMgr";
+import LabelMgr from "./manager/LabelMgr";
 import LoadMgr from "./manager/LoadMgr";
 import NetMgr from "./manager/NetMgr";
 import SceneMgr from "./manager/SceneMgr";
@@ -43,7 +44,6 @@ export default class GameStart extends cc.Component {
         DictConfig.init();
 
         UIMgr.Instance.onLoad();
-        GhostMgr.Instance.onLoad();
         SceneMgr.Instance.onLoad();
         DictMgr.Instance.onLoad();
         Hero.Instance.onLoad();
@@ -52,7 +52,6 @@ export default class GameStart extends cc.Component {
         EventMgr.Instance.start();
         NetMgr.Instance.start();
         UIMgr.Instance.start();
-        GhostMgr.Instance.start();
         SceneMgr.Instance.start();
         DictMgr.Instance.start();
         Hero.Instance.start();

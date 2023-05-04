@@ -8,8 +8,8 @@ const {ccclass, property} = cc._decorator;
 @ccclass
 export default class ComponentParent{
 
-    private _host:Entity;
-    private _node:cc.Node;
+    protected _host:Entity;
+    protected _node:cc.Node;
 
     onLoad (host) 
     {

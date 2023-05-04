@@ -5,6 +5,7 @@ import ClientDef from "../common/ClientDef";
 import Entity from "../ghost/Entity";
 import Player from "../ghost/Hero";
 import ParentMgr from "./ParentMgr";
+import SceneMgr from "./SceneMgr";
 
 const {ccclass, property} = cc._decorator;
 
@@ -33,12 +34,12 @@ export default class GhostMgr extends ParentMgr {
     start () {
         console.info("start GhostMgr");
 
-        var canvas = cc.director.getScene().getChildByName('Canvas');
+        // var canvas = cc.director.getScene().getChildByName('Canvas');
         this.layer = new cc.Node();
-        this.layer.zIndex = ClientDef.GAME_INDEX_GHOST;
+        this.layer.zIndex = ClientDef.SCENE_INDEX_GHOST;
         this.layer.width = cc.winSize.width;
         this.layer.height = cc.winSize.height;
-        this.layer.parent = canvas;
+        this.layer.parent = SceneMgr.Instance.getLayer();
 
         this._timerID = setInterval(this.update.bind(this), 0);
     }

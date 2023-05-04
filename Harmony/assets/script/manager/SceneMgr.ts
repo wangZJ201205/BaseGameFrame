@@ -7,6 +7,7 @@ import CommonGamePlay from "../gameplay/CommonGamePlay";
 import Hero from "../ghost/Hero";
 import DictMgr from "./DictMgr";
 import GhostMgr from "./GhostMgr";
+import LabelMgr from "./LabelMgr";
 import LoadMgr from "./LoadMgr";
 import ParentMgr from "./ParentMgr";
 import UIMgr from "./UIMgr";
@@ -30,6 +31,9 @@ export default class SceneMgr extends ParentMgr {
     {
         super.onLoad();
         console.info("load SceneMgr");
+        
+        GhostMgr.Instance.onLoad();
+        LabelMgr.Instance.onLoad();
     }
 
     start() {
@@ -41,6 +45,9 @@ export default class SceneMgr extends ParentMgr {
         this.layer.width = cc.winSize.width;
         this.layer.height = cc.winSize.height;
         this.layer.parent = canvas;
+
+        GhostMgr.Instance.start();
+        LabelMgr.Instance.start();
 
         this._timerID = setInterval(this.update.bind(this), 0);
     }
@@ -83,6 +90,11 @@ export default class SceneMgr extends ParentMgr {
             tilemap.tmxAsset = asset;
         });
 
+    }
+
+    getLayer()
+    {
+        return this.layer;
     }
 
     
