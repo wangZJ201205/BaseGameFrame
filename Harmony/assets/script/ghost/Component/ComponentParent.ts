@@ -1,3 +1,4 @@
+import ClientDef from "../../common/ClientDef";
 import Entity from "../Entity";
 
 /**
@@ -10,21 +11,23 @@ export default class ComponentParent{
 
     protected _host:Entity;
     protected _node:cc.Node;
+    protected _state :number;
 
     onLoad (host) 
     {
+        this._state = ClientDef.COMP_STATE_LOAD;
         this._host = host;
         this._node = new cc.Node();
         host.getEntityNode().addChild(this._node);
     }
 
     start () {
-
+        this._state = ClientDef.COMP_STATE_START;
     }
 
     remove()
     {
-
+        this._state = ClientDef.COMP_STATE_REMOVE;
     }
 
     getHost()
@@ -35,6 +38,11 @@ export default class ComponentParent{
     getNode()
     {
         return this._node;
+    }
+
+    getState()
+    {
+        return this._state;
     }
 
     update (dt) 

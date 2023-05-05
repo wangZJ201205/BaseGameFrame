@@ -10,6 +10,13 @@ import SceneMgr from "./SceneMgr";
 
 const {ccclass, property} = cc._decorator;
 
+//输出字符类型
+interface DictLabel {
+    type: number;
+    data:number;
+    pos:cc.Vec2;
+  }
+
 @ccclass
 export default class LabelMgr extends ParentMgr {
 
@@ -17,6 +24,8 @@ export default class LabelMgr extends ParentMgr {
 
     private layer: cc.Node = null; //label显示层
     private _timerID: number;
+    private _labelList:DictLabel[];
+
     // LIFE-CYCLE CALLBACKS:
 
     static getInstance()
@@ -27,6 +36,7 @@ export default class LabelMgr extends ParentMgr {
     onLoad () 
     {
         super.onLoad();
+        this._labelList = [];
         console.info("load GhostMgr");
     }
 
@@ -45,87 +55,113 @@ export default class LabelMgr extends ParentMgr {
 
     private update (dt) 
     {
-        // this.testLabel(1);
-        // this.testLabel(2);
-        // this.testLabel(3);
-        // this.testLabel(4);
-        // this.testLabel(5);
-    }
-
-    private testLabel(mode)
-    {
-        if(mode == 1)
-        {
-            LoadMgr.Instance.LoadAssetWithType('fonts/bifen',cc.BitmapFont,(font)=>{
-                var node = new cc.Node();
-                var bloomLab = node.addComponent(cc.Label);
-                bloomLab.font = font;
-                bloomLab.string = "120120";
-                // bloomLab.cacheMode = cc.Label.CacheMode.CHAR;
-                var y = Math.random()* GameData.App_Game_Heigth ;
-                node.setPosition(Math.random()*GameData.App_Game_Width  - GameData.App_Game_Width/2, y- GameData.App_Game_Heigth/2)
-                this.layer.addChild(node);
-                
-            })
+        for (let index = 0; index < this._labelList.length; index++) {
+            const element = this._labelList[index];
+            this.createLabel(element);
         }
-        else if(mode == 2)
-        {
-            var node = new cc.Node();
-            var bloomLab = node.addComponent(cc.Label);
-            // bloomLab.font = font;
-            bloomLab.string = "120120";
-            bloomLab.cacheMode = cc.Label.CacheMode.CHAR;
-            var y = Math.random()* GameData.App_Game_Heigth ;
-            node.setPosition(Math.random()*GameData.App_Game_Width  - GameData.App_Game_Width/2, y- GameData.App_Game_Heigth/2)
-            this.layer.addChild(node);
-        }
-        else if(mode == 3)
-        {
-            LoadMgr.Instance.LoadAssetWithType('fonts/baoji',cc.BitmapFont,(font)=>{
-                var node = new cc.Node();
-                var bloomLab = node.addComponent(cc.Label);
-                bloomLab.font = font;
-                bloomLab.string = "120120";
-                // bloomLab.cacheMode = cc.Label.CacheMode.CHAR;
-                var y = Math.random()* GameData.App_Game_Heigth ;
-                node.setPosition(Math.random()*GameData.App_Game_Width  - GameData.App_Game_Width/2, y- GameData.App_Game_Heigth/2)
-                this.layer.addChild(node);
-                
-            })
-        }
-        else if(mode == 4)
-        {
-            LoadMgr.Instance.LoadAssetWithType('fonts/blood_red',cc.BitmapFont,(font)=>{
-                var node = new cc.Node();
-                var bloomLab = node.addComponent(cc.Label);
-                bloomLab.font = font;
-                bloomLab.string = "120120";
-                // bloomLab.cacheMode = cc.Label.CacheMode.CHAR;
-                var y = Math.random()* GameData.App_Game_Heigth ;
-                node.setPosition(Math.random()*GameData.App_Game_Width  - GameData.App_Game_Width/2, y- GameData.App_Game_Heigth/2)
-                this.layer.addChild(node);
-                
-            })
-        }
-        else if(mode == 5)
-        {
-            LoadMgr.Instance.LoadAssetWithType('fonts/duanzao',cc.BitmapFont,(font)=>{
-                var node = new cc.Node();
-                var bloomLab = node.addComponent(cc.Label);
-                bloomLab.font = font;
-                bloomLab.string = "120120";
-                // bloomLab.cacheMode = cc.Label.CacheMode.CHAR;
-                var y = Math.random()* GameData.App_Game_Heigth ;
-                node.setPosition(Math.random()*GameData.App_Game_Width  - GameData.App_Game_Width/2, y- GameData.App_Game_Heigth/2)
-                this.layer.addChild(node);
-                
-            })
-        }
+        this._labelList = [];
     }
 
     getLayer()
     {
         return this.layer;
     }
+
+    addLabel(type:number,data:number,pos:cc.Vec2)
+    {
+        var dl :DictLabel = {type:type,data:data,pos:pos};
+        this._labelList.push(dl);
+    }
+
+    private createLabel(info)
+    {
+        if(info.type == 1)
+        {
+            LoadMgr.Instance.LoadAssetWithType('fonts/bifen',cc.BitmapFont,(font)=>{
+                var node = new cc.Node();
+                var bloomLab = node.addComponent(cc.Label);
+                bloomLab.font = font;
+                bloomLab.string = info.data;
+                node.setPosition(info.pos.x, info.pos.y);
+                this.layer.addChild(node);
+
+
+                cc.tween(node).by(0.2,{y:50}).delay(1).call(function () {
+                    node.active = false;
+                    node.removeFromParent();
+                }).start();
+            })
+        }
+        else if(info.type == 2)
+        {
+            // var node = new cc.Node();
+            // var bloomLab = node.addComponent(cc.Label);
+            // // bloomLab.font = font;
+            // bloomLab.string = info.data;
+            // bloomLab.cacheMode = cc.Label.CacheMode.CHAR;
+            // var y = Math.random()* GameData.App_Game_Heigth ;
+            // node.setPosition(info.pos.x, info.pos.y);
+            // this.layer.addChild(node);
+
+            // cc.tween(node).by(0.2,{y:50}).delay(1).call(function () {
+            //     node.active = false;
+            //     node.removeFromParent();
+            // }).start();
+        }
+        else if(info.type == 3)
+        {
+            LoadMgr.Instance.LoadAssetWithType('fonts/baoji',cc.BitmapFont,(font)=>{
+                var node = new cc.Node();
+                var bloomLab = node.addComponent(cc.Label);
+                bloomLab.font = font;
+                bloomLab.string = info.data;
+                // bloomLab.cacheMode = cc.Label.CacheMode.CHAR;
+                var y = Math.random()* GameData.App_Game_Heigth ;
+                node.setPosition(info.pos.x, info.pos.y);
+                this.layer.addChild(node);
+                
+                cc.tween(node).by(0.2,{y:50}).delay(1).call(function () {
+                    node.active = false;
+                    node.removeFromParent();
+                }).start();
+            })
+        }
+        else if(info.type == 4)
+        {
+            LoadMgr.Instance.LoadAssetWithType('fonts/blood_red',cc.BitmapFont,(font)=>{
+                var node = new cc.Node();
+                var bloomLab = node.addComponent(cc.Label);
+                bloomLab.font = font;
+                bloomLab.string = info.data;
+                // bloomLab.cacheMode = cc.Label.CacheMode.CHAR;
+                node.setPosition(info.pos.x, info.pos.y);
+                this.layer.addChild(node);
+                
+                cc.tween(node).by(0.2,{y:50}).delay(1).call(function () {
+                    node.active = false;
+                    node.removeFromParent();
+                }).start();
+            })
+        }
+        else if(info.type == 5)
+        {
+            LoadMgr.Instance.LoadAssetWithType('fonts/duanzao',cc.BitmapFont,(font)=>{
+                var node = new cc.Node();
+                var bloomLab = node.addComponent(cc.Label);
+                bloomLab.font = font;
+                bloomLab.string = info.data;
+                // bloomLab.cacheMode = cc.Label.CacheMode.CHAR;
+                node.setPosition(info.pos.x, info.pos.y);
+                this.layer.addChild(node);
+                
+                cc.tween(node).by(0.2,{y:50}).delay(1).call(function () {
+                    node.active = false;
+                    node.removeFromParent();
+                }).start();
+            })
+        }
+    }
+
+    
 
 }

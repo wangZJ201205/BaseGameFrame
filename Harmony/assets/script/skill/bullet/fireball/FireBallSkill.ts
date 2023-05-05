@@ -14,8 +14,10 @@ export default class FireBallSkill extends SkillParent {
 
     // enemy:Entity;
     // direction:cc.Vec2;
+    _bullets:FireBallBullet[];
     onLoad (host) 
     {
+        this._bullets = [];
         super.onLoad(host);
     }
 
@@ -33,7 +35,7 @@ export default class FireBallSkill extends SkillParent {
 
         
 
-        if( this._curDelay >= this._skillInfo['delay'] )
+        if( this._curDelay >= 500 )
         {
             this._curDelay = 0;
             //可以释放技能
@@ -47,7 +49,13 @@ export default class FireBallSkill extends SkillParent {
             bullet.onLoad(this);
             bullet.setProp(ClientDef.BULLET_TYPE_DIRECTION , direction);
             bullet.start();
+            this._bullets.push(bullet);
             // }
+        }
+        // console.info(">>>>>>>bullet num:"+ this._bullets.length);
+        for (let index = 0; index < this._bullets.length; index++) {
+            const element = this._bullets[index];
+            element.update(dt);
         }
     }
 

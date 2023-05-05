@@ -10,11 +10,11 @@
 
  */
 
-import ClientDef from "../../common/ClientDef";
-import DictMgr from "../../manager/DictMgr";
-import LoadMgr from "../../manager/LoadMgr";
-import ComponentParent from "./ComponentParent";
-import Definition from "../../common/Definition";
+import ClientDef from "../../../common/ClientDef";
+import DictMgr from "../../../manager/DictMgr";
+import LoadMgr from "../../../manager/LoadMgr";
+import ComponentParent from "../ComponentParent";
+
 
 const {ccclass, property} = cc._decorator;
 
@@ -143,6 +143,10 @@ export default class ClothComponent extends ComponentParent {
         var loadPath = 'animation/' +  clothResource +"/"+ animationName ;
         LoadMgr.Instance.LoadAsset(loadPath,(asset)=>
             {
+                if(this.getState() == ClientDef.COMP_STATE_REMOVE)
+                {
+                    return;
+                }
                 var aniPref = cc.instantiate(asset);
                 aniPref.parent = this.getNode();
                 for (let index = 1; index <= aniPref.childrenCount; index++) {

@@ -34,7 +34,7 @@ export default class CommonGamePlay {
             return;
         }
         var count = GhostMgr.Instance.entitys.length;
-        if(count > 50)return;
+        if(count > 1)return;
         // this.count++;
         // for (let index = 0; index < 5; index++) {
             var entity = GhostMgr.Instance.spawnEntity(ClientDef.ENTITY_TYPE_MONSTER);
