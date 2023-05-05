@@ -26,6 +26,8 @@ export default class FireBallBullet extends BulletParent {
         LoadMgr.Instance.LoadAssetWithType("animation/skill_fireball/skill_fashi_huoqiu_3_02",cc.SpriteFrame,(sp)=>{
             var sprite = this._node.addComponent(cc.Sprite);
             sprite.spriteFrame = sp;
+            sprite.node.anchorX = 0.5;
+            sprite.node.anchorY = 0;
         })
 
     }
@@ -59,7 +61,8 @@ export default class FireBallBullet extends BulletParent {
     changePlayerDirection(direction)
     {
         let angleRadian = Math.atan2(direction.y, direction.x);
-        let degree = angleRadian * 180 / Math.PI + 90; // 转换为角度制
+        let degree = angleRadian * 180 / Math.PI ; // 转换为角度制
+        degree = (degree + 360) % 360 + 90; // 转换为0到360度的范围
         console.info(">>>>>>>>degree>"+degree);
         this._node.angle = -degree;
     }
