@@ -35,6 +35,5 @@ export default class GameMath {
         let degree = angleRadian * 180 / Math.PI ; // 转换为角度制
         degree = (degree + 360) % 360  ; // 转换为0到360度的范围
         return degree;
-        // this.getNode().angle = degree;
     }
 }

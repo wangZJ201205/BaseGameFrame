@@ -1,12 +1,36 @@
 {
   "start-scene": "723f66dc-d985-4a79-a5ab-1f17ab4b0fc9",
   "group-list": [
-    "default"
+    "default",
+    "player",
+    "bullet",
+    "monster"
   ],
   "last-module-event-record-time": 1680605743730,
   "collision-matrix": [
     [
+      true,
+      true,
+      true,
       true
+    ],
+    [
+      true,
+      false,
+      false,
+      true
+    ],
+    [
+      true,
+      false,
+      false,
+      true
+    ],
+    [
+      true,
+      true,
+      true,
+      false
     ]
   ],
   "excluded-modules": [

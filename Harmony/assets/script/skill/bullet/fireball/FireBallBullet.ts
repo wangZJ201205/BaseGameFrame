@@ -1,6 +1,7 @@
 /**
  * 火球
  */
+import CollisionComponent from "../../../Component/CollisionComponent";
 import ClientDef from "../../../common/ClientDef";
 import GameData from "../../../common/GameData";
 import GhostMgr from "../../../manager/GhostMgr";
@@ -29,6 +30,26 @@ export default class FireBallBullet extends BulletParent {
             this.setProp(ClientDef.BULLET_PROP_STATE,ClientDef.BULLET_STATE_RUN);
         })
 
+        var circle = this.getNode().addComponent(cc.CircleCollider);
+        circle.radius = 20;
+        circle.offset.x = 20;
+        circle.offset.y = 2;
+        circle.name = 'bullet';
+        this.getNode().group = 'bullet';
+
+        var collCmp = this.getNode().addComponent(CollisionComponent);
+        collCmp.setCollisionEnterCallBack(this);
+    }
+
+    collisionEnter(other, self)
+    {
+        // console.info(">>>>>>>>>>>>>22222");
+        this.getNode().active = false;
+        this.setProp(ClientDef.BULLET_PROP_STATE,ClientDef.BULLET_STATE_FREE);
+
+        other.node.active = false;
+        other.node.setClientProp(ClientDef.ENTITY_PROP_ACTIVE_STATE, ClientDef.ENTITY_ACTIVE_STATE_FREE);
+        other.node.getEntityComponent(ClientDef.ENTITY_COMP_BLOOM).addDamage();
     }
 
     update (dt) 

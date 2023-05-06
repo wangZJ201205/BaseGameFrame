@@ -14,7 +14,7 @@ export default class EntityWalk extends StateParent {
     start () 
     {
         super.start();
-        this.speed = Math.random() * 10 + GameData.MonsterMoveSpeed/2;
+        this.speed = Math.random() * 5 + GameData.MonsterMoveSpeed/2;
     }
 
     update (dt) 

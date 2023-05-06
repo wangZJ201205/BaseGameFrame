@@ -11,9 +11,6 @@ import EntityProxy from "./ghost/Proxy/EntityProxy";
 import HeroProxy from "./ghost/Proxy/HeroProxy";
 import DictMgr from "./manager/DictMgr";
 import EventMgr from "./manager/EventMgr";
-import GhostMgr from "./manager/GhostMgr";
-import LabelMgr from "./manager/LabelMgr";
-import LoadMgr from "./manager/LoadMgr";
 import NetMgr from "./manager/NetMgr";
 import SceneMgr from "./manager/SceneMgr";
 import UIMgr from "./manager/UIMgr";
@@ -31,7 +28,14 @@ export default class GameStart extends cc.Component {
     @property({displayName:'测试模式:'})
     isDebug:boolean = false;
     
-    onLoad () {}
+    onLoad () 
+    {
+        let manager = cc.director.getCollisionManager();
+        manager.enabled = true;     //开启碰撞检测
+        if (this.isDebug) {
+            manager.enabledDebugDraw = true;   //显示碰撞检测区域
+        }
+    }
 
     start () {
         console.info("Harmony GameStart");
@@ -39,6 +43,7 @@ export default class GameStart extends cc.Component {
         GameData.IpPort = this.ipPort;
         GameData.IsDebug = this.isDebug;
 
+        
         //加载配置文件
         UIConfig.init();
         DictConfig.init();
@@ -63,12 +68,6 @@ export default class GameStart extends cc.Component {
         LoginProxy.register();
         HeroProxy.register();
         EntityProxy.register();
-
-
-        // LoadMgr.Instance.loadResources(()=>{
-            // EventMgr.Instance.Emit(EventName.UI_OPEN_PANEL,{name:EventName.UI_LOGIN});
-            // UIMgr.Instance.openUI(EventName.UI_LOGIN);
-        // });
 
         this.register();
     }

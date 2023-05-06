@@ -37,12 +37,17 @@ export default class BloomComponent extends ComponentParent {
 
     update (dt) 
     {
-        this._delay ++;
-        if(this._delay <= 500)
-        {
-            return; 
-        }
-        this._delay = 0;
+        // this._delay ++;
+        // if(this._delay <= 500)
+        // {
+        //     return; 
+        // }
+        // this._delay = 0;
+        
+    }
+
+    addDamage()
+    {
         var y = Math.random()* GameData.App_Game_Heigth ;
         LabelMgr.Instance.addLabel(Math.floor(Math.random()*5),Math.floor(y),this._host.getPosition());
     }

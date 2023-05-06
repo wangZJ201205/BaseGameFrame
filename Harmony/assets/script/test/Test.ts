@@ -17,10 +17,18 @@ export default class NewClass extends cc.Component {
     // onLoad () {}
 
     start () {
-        let self = this;
-        cc.resources.load("test/123",cc.SpriteFrame,(err,sp)=>{
-            self.getComponent(cc.Sprite).spriteFrame = sp;
-        })
+        let manager = cc.director.getCollisionManager();
+        manager.enabled = true;     //开启碰撞检测
+        // if (this.isDebug) {
+            manager.enabledDebugDraw = true;   //显示碰撞检测区域
+        // }
+
+
+    }
+
+    onCollisionEnter(other, self){
+        // 进入碰撞状态时调用的函数
+        console.info(">>>>>>>>>>>>>11111");
     }
 
     // update (dt) {}

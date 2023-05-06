@@ -43,7 +43,7 @@ export default class SkillParent {
     {
         this._curDelay ++;
 
-        if( this._curDelay >= 20 )
+        if( this._curDelay >= 30 )
         {
             this._curDelay = 0;
             this.shootBullet();

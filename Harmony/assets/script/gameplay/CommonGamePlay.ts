@@ -33,17 +33,25 @@ export default class CommonGamePlay {
         {
             return;
         }
+        
         var count = GhostMgr.Instance.entitys.length;
-        if(count > 60)return;
-        // this.count++;
-        // for (let index = 0; index < 5; index++) {
-            var entity = GhostMgr.Instance.spawnEntity(ClientDef.ENTITY_TYPE_MONSTER);
-            entity.setClientProp(ClientDef.ENTITY_PROP_STATICID,"1");
-            entity.start();
-            var y = Math.random()* GameData.App_Game_Heigth ;
-            entity.getEntityNode().setPosition(Math.random()*GameData.App_Game_Width  - GameData.App_Game_Width/2, y- GameData.App_Game_Heigth/2);
-            entity.getEntityNode().zIndex = GameData.App_Game_Heigth - y;
+        // var liveCnt = 0;
+        // for (let index = 0; index < count; index++) {
+        //     const element = GhostMgr.Instance.entitys[index];
+        //     if( element.getClientProp(ClientDef.ENTITY_PROP_ACTIVE_STATE) == ClientDef.ENTITY_ACTIVE_STATE_RUN)
+        //     {
+        //         liveCnt++;
+        //     }
         // }
+
+        if(count > 100)return;
+        var entity = GhostMgr.Instance.spawnEntity(ClientDef.ENTITY_TYPE_MONSTER);
+        entity.setClientProp(ClientDef.ENTITY_PROP_STATICID,"1");
+        entity.start();
+        var y = Math.random()* GameData.App_Game_Heigth ;
+        entity.getEntityNode().setPosition(Math.random()*GameData.App_Game_Width  - GameData.App_Game_Width/2, y- GameData.App_Game_Heigth/2);
+        entity.getEntityNode().zIndex = GameData.App_Game_Heigth - y;
+        
         
     }
 }

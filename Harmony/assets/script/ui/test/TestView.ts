@@ -14,7 +14,7 @@ export default class TestView extends cc.Component {
     // onLoad () {}
 
     start () {
-
+        
     }
 
     update (dt) 

@@ -106,5 +106,6 @@ export default class RockView extends UIParent {
         Hero.Instance.getEntity().setClientProp(ClientDef.ENTITY_PROP_DIR,dir);
     }
     
+    
 
 }
