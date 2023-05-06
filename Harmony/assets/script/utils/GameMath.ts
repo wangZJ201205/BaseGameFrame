@@ -27,4 +27,14 @@ export default class GameMath {
         }
         return index;
     }
+
+    //方向转成角度
+    public static directionToAngle(direction)
+    {
+        let angleRadian = Math.atan2(direction.y, direction.x);
+        let degree = angleRadian * 180 / Math.PI ; // 转换为角度制
+        degree = (degree + 360) % 360  ; // 转换为0到360度的范围
+        return degree;
+        // this.getNode().angle = degree;
+    }
 }

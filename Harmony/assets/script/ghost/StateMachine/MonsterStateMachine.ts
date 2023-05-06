@@ -28,8 +28,8 @@ export default class MonsterStateMachine extends EntityStateMachine {
 
     getNextState()
     {
-        
         return ClientDef.ENTITY_STATE_WALK;
+        // return ClientDef.ENTITY_STATE_IDLE;
     }
 
     //生成状态

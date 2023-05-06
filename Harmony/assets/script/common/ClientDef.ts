@@ -59,5 +59,11 @@ export default class ClientDef{
 
 
     //子弹属性
-    public static readonly BULLET_TYPE_DIRECTION : number = 1; //方向
+    public static readonly BULLET_PROP_DIRECTION : number = 1; //方向
+    public static readonly BULLET_PROP_STATE : number = 2; //状态
+
+    //子弹的状态
+    public static readonly BULLET_STATE_FREE : number = 1; //休闲状态
+    public static readonly BULLET_STATE_LOADSRC : number = 2; //加载资源中
+    public static readonly BULLET_STATE_RUN : number = 3; //运行中
 }

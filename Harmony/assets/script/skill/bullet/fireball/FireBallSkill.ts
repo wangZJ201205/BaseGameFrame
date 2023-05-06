@@ -4,6 +4,8 @@
 
 import ClientDef from "../../../common/ClientDef";
 import GhostMgr from "../../../manager/GhostMgr";
+import LoadMgr from "../../../manager/LoadMgr";
+import GameMath from "../../../utils/GameMath";
 import SkillParent from "../../SkillParent";
 import FireBallBullet from "./FireBallBullet";
 
@@ -12,51 +14,34 @@ const {ccclass, property} = cc._decorator;
 @ccclass
 export default class FireBallSkill extends SkillParent {
 
-    // enemy:Entity;
-    // direction:cc.Vec2;
-    _bullets:FireBallBullet[];
-    onLoad (host) 
+    //发射子弹
+    shootBullet()
     {
-        this._bullets = [];
-        super.onLoad(host);
-    }
-
-    start () 
-    {
-        super.start();
-        // this.direction = null;
-        // this.enemy = this.findEnemy();
-    }
-
-    update (dt) 
-    {
-        super.update(dt);
-        this._curDelay ++;
-
-        
-
-        if( this._curDelay >= 500 )
+        var enemy = this.findEnemy();
+        if(enemy)
         {
-            this._curDelay = 0;
-            //可以释放技能
-            console.info(">>>>>>>释放技能！");
-
-            // if(!this.direction )
-            // {
-            var enemy = this.findEnemy();
             var direction = enemy.position.sub(this.getHost().position);
-            var bullet = new FireBallBullet()
-            bullet.onLoad(this);
-            bullet.setProp(ClientDef.BULLET_TYPE_DIRECTION , direction);
-            bullet.start();
-            this._bullets.push(bullet);
-            // }
+            var bullet = this.spawnBullet();
+            bullet.getNode().active = true;
+            bullet.getNode().position = this.getHost().position;
+            bullet.getNode().angle = GameMath.directionToAngle(direction);
+            bullet.setProp(ClientDef.BULLET_PROP_DIRECTION , direction);
         }
-        // console.info(">>>>>>>bullet num:"+ this._bullets.length);
-        for (let index = 0; index < this._bullets.length; index++) {
-            const element = this._bullets[index];
-            element.update(dt);
+    }
+
+    spawnBullet()
+    {
+        var bullet = super.spawnBullet(); //寻找闲置的子弹
+        if(bullet)
+        {
+            return bullet;
         }
+        
+        bullet = new FireBallBullet();
+        bullet.onLoad(this);
+        bullet.start();
+        this._bullets.push(bullet);
+        return bullet;
     }
 
     //寻找最近的敌人

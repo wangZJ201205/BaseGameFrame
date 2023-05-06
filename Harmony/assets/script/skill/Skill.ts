@@ -41,6 +41,14 @@ export default class Skill {
         }
     }
 
+    remove()
+    {
+        for (let i = 0; i < this._skills.length; i++) {
+            const element = this._skills[i];
+            element.remove();
+        }
+    }
+
     addSkill(skillid)
     {
         var type = Math.floor(skillid / 10000); //去整型

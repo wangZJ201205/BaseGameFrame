@@ -34,6 +34,8 @@ export default class Entity extends cc.Node
         this._entityComponents = new ComponentMgr();
         this._entityComponents.onLoad(this);
 
+        
+
         this.setClientProp(ClientDef.ENTITY_PROP_ACTIVE_STATE,ClientDef.ENTITY_ACTIVE_STATE_INIT);
     }
 
@@ -45,7 +47,7 @@ export default class Entity extends cc.Node
         this._skill.start();
         this._entityComponents.start();
 
-        this._entityStateMachine = this.spawnStateMachine();
+        this._entityStateMachine = this.spawnStateMachine(); //此时才知道对象类型是什么
         this._entityStateMachine.onLoad(this);
         this._entityStateMachine.start();
 
@@ -56,6 +58,10 @@ export default class Entity extends cc.Node
         if(this._entityComponents)
         {
             this._entityComponents.remove();
+        }
+        if(this._skill)
+        {
+            this._skill.remove();
         }
         this.removeFromParent();
     }

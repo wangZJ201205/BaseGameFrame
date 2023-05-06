@@ -11,19 +11,10 @@ const {ccclass, property} = cc._decorator;
 export default class EntityWalk extends StateParent {
 
     speed:number;
-    onLoad (id,host) 
-    {
-        super.onLoad(id,host);
-    }
-
     start () 
     {
         super.start();
         this.speed = Math.random() * 10 + GameData.MonsterMoveSpeed/2;
-    }
-
-    stop()
-    {
     }
 
     update (dt) 
