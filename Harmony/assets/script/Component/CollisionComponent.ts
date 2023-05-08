@@ -1,24 +1,26 @@
 /**
  * 碰撞组件
+ * 碰撞对象中需要三个函数
+ * 代码改线重新实现
+ * collisionEnter
+ * collisionStay
+ * collisionExit
  */
-
-import FireBallBullet from "../skill/bullet/fireball/FireBallBullet";
 
 const {ccclass, property} = cc._decorator;
 
 @ccclass
 export default class CollisionComponent extends cc.Component {
 
-    _Collisioner:FireBallBullet; //可以想想实现一个接口类
-    setCollisionEnterCallBack(bullet)
+    _Collisioner:any; //定义一个模板对象
+    setCollisioner(bullet)
     {
         this._Collisioner = bullet;
     }
 
     onCollisionEnter(other, self){
         // 进入碰撞状态时调用的函数
-        // console.info(">>>>>>>>>>>>>CollisionComponent");
-        if(this._Collisioner)
+        if(this._Collisioner && this._Collisioner["collisionEnter"])
         {
             this._Collisioner["collisionEnter"](other, self);
         }
@@ -26,11 +28,17 @@ export default class CollisionComponent extends cc.Component {
 
     onCollisionStay(other, self){
         // 进入碰撞状态时调用的函数
-        // console.info(">>>>>>>>>>>>>onCollisionStay");
+        if(this._Collisioner && this._Collisioner["collisionStay"])
+        {
+            this._Collisioner["collisionStay"](other, self);
+        }
     }
 
     onCollisionExit(other, self){
         // 进入碰撞状态时调用的函数
-        // console.info(">>>>>>>>>>>>>onCollisionExit");
+        if(this._Collisioner && this._Collisioner["collisionExit"])
+        {
+            this._Collisioner["collisionExit"](other, self);
+        }
     }
 }

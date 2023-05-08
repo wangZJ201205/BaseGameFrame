@@ -7,21 +7,24 @@ import GhostMgr from "../../../manager/GhostMgr";
 import LoadMgr from "../../../manager/LoadMgr";
 import GameMath from "../../../utils/GameMath";
 import SkillParent from "../../SkillParent";
-import FireBallBullet from "./FireBallBullet";
+import IceBallBullet from "./IceBallBullet";
 
 const {ccclass, property} = cc._decorator;
 
 @ccclass
-export default class FireBallSkill extends SkillParent {
+export default class IceBallSkill extends SkillParent {
 
     _index : number = 0;
 
     //发射子弹
     shootBullet()
     {
+        this._index += 10;
+        this._index = this._index >= 360 ? 0 : this._index;
         var bullet = this.spawnBullet();
         bullet.getNode().active = true;
         bullet.getNode().position = this.getHost().position;
+        bullet.setProp(ClientDef.BULLET_PROP_ANGLE,this._index);
         bullet.restart();
     }
 
@@ -33,7 +36,7 @@ export default class FireBallSkill extends SkillParent {
             return bullet;
         }
         
-        bullet = new FireBallBullet();
+        bullet = new IceBallBullet();
         bullet.onLoad(this);
         bullet.setProp(ClientDef.BULLET_PROP_STATICID , this.getStaticId());
         bullet.start();

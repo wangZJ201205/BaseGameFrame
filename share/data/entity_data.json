@@ -1,15 +1,15 @@
 {
-	"1": {"id": 1,"name": "飞蛾","bloom": 8,"path": "1002","skillid": 0},
-	"10": {"id": 10,"name": "飞蛾","bloom": 8,"path": "1002","skillid": 0},
+	"1": {"id": 1,"name": "飞蛾","bloom": 25,"path": "1002","skillid": 0},
+	"10": {"id": 10,"name": "飞蛾","bloom": 25,"path": "1002","skillid": 0},
 	"100001": {"id": 100001,"name": "新手装","bloom": 30,"path": "1001","skillid": 10001},
-	"11": {"id": 11,"name": "飞蛾","bloom": 8,"path": "1002","skillid": 0},
-	"12": {"id": 12,"name": "飞蛾","bloom": 8,"path": "1002","skillid": 0},
-	"2": {"id": 2,"name": "飞蛾","bloom": 8,"path": "1002","skillid": 0},
-	"3": {"id": 3,"name": "飞蛾","bloom": 8,"path": "1002","skillid": 0},
-	"4": {"id": 4,"name": "飞蛾","bloom": 8,"path": "1002","skillid": 0},
-	"5": {"id": 5,"name": "飞蛾","bloom": 8,"path": "1002","skillid": 0},
-	"6": {"id": 6,"name": "飞蛾","bloom": 8,"path": "1002","skillid": 0},
-	"7": {"id": 7,"name": "飞蛾","bloom": 8,"path": "1002","skillid": 0},
-	"8": {"id": 8,"name": "飞蛾","bloom": 8,"path": "1002","skillid": 0},
-	"9": {"id": 9,"name": "飞蛾","bloom": 8,"path": "1002","skillid": 0}
+	"11": {"id": 11,"name": "飞蛾","bloom": 25,"path": "1002","skillid": 0},
+	"12": {"id": 12,"name": "飞蛾","bloom": 25,"path": "1002","skillid": 0},
+	"2": {"id": 2,"name": "飞蛾","bloom": 25,"path": "1002","skillid": 0},
+	"3": {"id": 3,"name": "飞蛾","bloom": 25,"path": "1002","skillid": 0},
+	"4": {"id": 4,"name": "飞蛾","bloom": 25,"path": "1002","skillid": 0},
+	"5": {"id": 5,"name": "飞蛾","bloom": 25,"path": "1002","skillid": 0},
+	"6": {"id": 6,"name": "飞蛾","bloom": 25,"path": "1002","skillid": 0},
+	"7": {"id": 7,"name": "飞蛾","bloom": 25,"path": "1002","skillid": 0},
+	"8": {"id": 8,"name": "飞蛾","bloom": 25,"path": "1002","skillid": 0},
+	"9": {"id": 9,"name": "飞蛾","bloom": 25,"path": "1002","skillid": 0}
 }

@@ -13,11 +13,11 @@ const {ccclass, property} = cc._decorator;
 @ccclass
 export default class SkillParent {
 
-    _host:Entity;
-    _staticId:number;
-    _skillInfo:{};
-    _curDelay:number;
-    _bullets:BulletParent[];
+    protected _host:Entity;
+    protected _staticId:number;
+    protected _skillInfo:{};
+    protected _curDelay:number;
+    protected _bullets:BulletParent[];
 
     onLoad (host) 
     {
@@ -39,11 +39,16 @@ export default class SkillParent {
         }
     }
 
+    getStaticId()
+    {
+        return this._staticId;
+    }
+
     update (dt) 
     {
         this._curDelay ++;
 
-        if( this._curDelay >= 30 )
+        if( this._curDelay >= 10 )
         {
             this._curDelay = 0;
             this.shootBullet();
@@ -75,6 +80,7 @@ export default class SkillParent {
     //寻找闲置的子弹
     spawnBullet()
     {
+        console.info(">>>>>>"+this._bullets.length)
         for (let index = 0; index < this._bullets.length; index++) {
             const element = this._bullets[index];
             if( element.getProp(ClientDef.BULLET_PROP_STATE) == ClientDef.BULLET_STATE_FREE )

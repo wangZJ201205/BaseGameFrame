@@ -1,4 +1,5 @@
 import ClientDef from "../common/ClientDef";
+import DictMgr from "../manager/DictMgr";
 import Skill from "../skill/Skill";
 import ComponentMgr from "./Component/ComponentMgr";
 import ClothComponent from "./Component/children/ClothComponent";
@@ -51,27 +52,30 @@ export default class Entity extends cc.Node
         this._entityStateMachine.onLoad(this);
         this._entityStateMachine.start();
 
+        this.active = true;
+
+        
+
         //测试碰撞检测
         var boxColl = this.addComponent(cc.BoxCollider);
-        // this.addComponent(CollisionComponent);
+
         var entityType = this._client_prop_map[ClientDef.ENTITY_PROP_TYPE];
         if(entityType == ClientDef.ENTITY_TYPE_PLAYER)
         {
-            this.group = 'player';
+            this.group = ClientDef.COLLISION_GROUP_PLAYER;
             boxColl.size.width = 48;
             boxColl.size.height = 111;
             boxColl.offset.x = -2;
             boxColl.offset.y = 60;
-            boxColl.name = 'player';
+            this._skill.addSkill(20001);
         }
         else if(entityType == ClientDef.ENTITY_TYPE_MONSTER)
         {
-            this.group = 'monster';
+            this.group = ClientDef.COLLISION_GROUP_MONSTER;
             boxColl.size.width = 50;
             boxColl.size.height = 50;
             // boxColl.offset.x = -2;
             boxColl.offset.y = 25;
-            boxColl.name = 'monster';
         }
     }
 
@@ -177,6 +181,14 @@ export default class Entity extends cc.Node
         {
             this._entityComponents.update(dt);
         }
+    }
+
+    //获取对象配置信息
+    getEntityDict()
+    {
+        var entityInfo = DictMgr.Instance.getDictByName('entity_data');
+        entityInfo = entityInfo[this.getClientProp(ClientDef.ENTITY_PROP_STATICID)];
+        return entityInfo;
     }
 
 

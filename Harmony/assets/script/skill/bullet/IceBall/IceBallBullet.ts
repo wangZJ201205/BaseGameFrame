@@ -1,5 +1,5 @@
 /**
- * 火球
+ * 冰球
  */
 import ClientDef from "../../../common/ClientDef";
 import GameData from "../../../common/GameData";
@@ -10,13 +10,14 @@ import BulletParent from "../../BulletParent";
 const {ccclass, property} = cc._decorator;
 
 @ccclass
-export default class FireBallBullet extends BulletParent {
+export default class IceBallBullet extends BulletParent {
 
     
     restart()
     {
-        var minEntity = BulletHelp.FindEnemyByMinDistance(this.getHost().getHost())
-        var direction = minEntity.position.sub(this.getHost().getHost().position);
+        // var minEntity = BulletHelp.FindEnemyByMinDistance(this.getHost().getHost())
+        var angle = this.getProp(ClientDef.BULLET_PROP_ANGLE);
+        var direction = BulletHelp.AngleConvertDirection(angle);
         this.getNode().angle = GameMath.directionToAngle(direction);
         this.setProp(ClientDef.BULLET_PROP_DIRECTION , direction);
     }

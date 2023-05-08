@@ -7,7 +7,8 @@ import Entity from "../ghost/Entity";
 import DictMgr from "../manager/DictMgr";
 import BulletParent from "./BulletParent";
 import SkillParent from "./SkillParent";
-import FireBallSkill from "./bullet/fireball/FireBallSkill";
+import FireBallSkill from "./bullet/FireBall/FireBallSkill";
+import IceBallSkill from "./bullet/IceBall/IceBallSkill";
 
 const {ccclass, property} = cc._decorator;
 
@@ -70,7 +71,10 @@ export default class Skill {
         switch(type)
         {
             case ClientDef.SKILL_TYPE_FIREBALL: //火球
-            skill = new FireBallSkill();
+                skill = new FireBallSkill();
+            break;
+            case ClientDef.SKILL_TYPE_ICEBALL:
+                skill = new IceBallSkill();
             break;
         }
         return skill;

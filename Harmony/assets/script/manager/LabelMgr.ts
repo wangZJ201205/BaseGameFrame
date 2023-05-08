@@ -69,7 +69,10 @@ export default class LabelMgr extends ParentMgr {
 
     addLabel(type:number,data:number,pos:cc.Vec2)
     {
-        var dl :DictLabel = {type:type,data:data,pos:pos};
+        var newPos:cc.Vec2 = new cc.Vec2;
+        newPos.x = pos.x;
+        newPos.y = pos.y;
+        var dl :DictLabel = {type:type,data:data,pos:newPos};
         this._labelList.push(dl);
     }
 
@@ -86,7 +89,7 @@ export default class LabelMgr extends ParentMgr {
                 this.layer.addChild(node);
 
 
-                cc.tween(node).by(0.2,{y:50}).delay(1).call(function () {
+                cc.tween(node).by(0.2,{x:50*Math.random() ,y:50*Math.random()}).delay(1).call(function () {
                     node.active = false;
                     node.removeFromParent();
                 }).start();
@@ -107,6 +110,22 @@ export default class LabelMgr extends ParentMgr {
             //     node.active = false;
             //     node.removeFromParent();
             // }).start();
+
+            LoadMgr.Instance.LoadAssetWithType('fonts/baoji',cc.BitmapFont,(font)=>{
+                var node = new cc.Node();
+                var bloomLab = node.addComponent(cc.Label);
+                bloomLab.font = font;
+                bloomLab.string = info.data;
+                // bloomLab.cacheMode = cc.Label.CacheMode.CHAR;
+                var y = Math.random()* GameData.App_Game_Heigth ;
+                node.setPosition(info.pos.x, info.pos.y);
+                this.layer.addChild(node);
+                
+                cc.tween(node).by(0.2,{x:50*Math.random() ,y:50*Math.random()}).delay(1).call(function () {
+                    node.active = false;
+                    node.removeFromParent();
+                }).start();
+            })
         }
         else if(info.type == 3)
         {
@@ -120,7 +139,7 @@ export default class LabelMgr extends ParentMgr {
                 node.setPosition(info.pos.x, info.pos.y);
                 this.layer.addChild(node);
                 
-                cc.tween(node).by(0.2,{y:50}).delay(1).call(function () {
+                cc.tween(node).by(0.2,{x:50*Math.random() ,y:50*Math.random()}).delay(1).call(function () {
                     node.active = false;
                     node.removeFromParent();
                 }).start();
@@ -137,7 +156,7 @@ export default class LabelMgr extends ParentMgr {
                 node.setPosition(info.pos.x, info.pos.y);
                 this.layer.addChild(node);
                 
-                cc.tween(node).by(0.2,{y:50}).delay(1).call(function () {
+                cc.tween(node).by(0.2,{x:50*Math.random() ,y:50*Math.random()}).delay(1).call(function () {
                     node.active = false;
                     node.removeFromParent();
                 }).start();
@@ -154,7 +173,7 @@ export default class LabelMgr extends ParentMgr {
                 node.setPosition(info.pos.x, info.pos.y);
                 this.layer.addChild(node);
                 
-                cc.tween(node).by(0.2,{y:50}).delay(1).call(function () {
+                cc.tween(node).by(0.2,{x:50*Math.random() ,y:50*Math.random()}).delay(1).call(function () {
                     node.active = false;
                     node.removeFromParent();
                 }).start();

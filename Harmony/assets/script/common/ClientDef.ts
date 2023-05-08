@@ -56,14 +56,24 @@ export default class ClientDef{
 
     //技能类型
     public static readonly SKILL_TYPE_FIREBALL: number = 1; //火球
+    public static readonly SKILL_TYPE_ICEBALL: number = 2; //冰球
 
 
     //子弹属性
     public static readonly BULLET_PROP_DIRECTION : number = 1; //方向
     public static readonly BULLET_PROP_STATE : number = 2; //状态
+    public static readonly BULLET_PROP_STATICID : number = 3;// 配置id
+    public static readonly BULLET_PROP_SPEED : number = 4;// 速度
+    public static readonly BULLET_PROP_ANGLE : number = 5;// 角度
+
 
     //子弹的状态
     public static readonly BULLET_STATE_FREE : number = 1; //休闲状态
     public static readonly BULLET_STATE_LOADSRC : number = 2; //加载资源中
     public static readonly BULLET_STATE_RUN : number = 3; //运行中
+
+    //碰撞组分类
+    public static readonly COLLISION_GROUP_PLAYER : string = 'player'; //玩家
+    public static readonly COLLISION_GROUP_MONSTER : string = 'monster'; //怪物
+    public static readonly COLLISION_GROUP_BULLET : string = 'bullet'; //子弹
 }

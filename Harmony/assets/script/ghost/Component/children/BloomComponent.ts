@@ -1,7 +1,5 @@
 import ClientDef from "../../../common/ClientDef";
-import GameData from "../../../common/GameData";
 import LabelMgr from "../../../manager/LabelMgr";
-import LoadMgr from "../../../manager/LoadMgr";
 import ComponentParent from "../ComponentParent";
 
 
@@ -14,21 +12,17 @@ const {ccclass, property} = cc._decorator;
 export default class BloomComponent extends ComponentParent {
 
     bloomLab : cc.Label;
-    _delay:number;
+    _curBloom:number;
     onLoad (host) 
     {    
-        this._delay = 10000;
         super.onLoad(host);
-        // this._host = host;
-        // this._node = new cc.Node();
-        // var y = Math.random()* GameData.App_Game_Heigth ;
-        // this._node.setPosition(Math.random()*GameData.App_Game_Width  - GameData.App_Game_Width/2, y- GameData.App_Game_Heigth/2)
-        // LabelMgr.Instance.getLayer().addChild(this._node);
     }
 
     start () {
         super.start();
 
+        var entityInfo = this.getHost().getEntityDict();
+        this._curBloom = entityInfo["bloom"];
     }
 
     remove(): void {
@@ -37,18 +31,29 @@ export default class BloomComponent extends ComponentParent {
 
     update (dt) 
     {
-        // this._delay ++;
-        // if(this._delay <= 500)
-        // {
-        //     return; 
-        // }
-        // this._delay = 0;
+        //检测死亡
+        if( this._curBloom <= 0 )
+        {
+            this.getHost().active = false;
+            this.getHost().setClientProp(ClientDef.ENTITY_PROP_ACTIVE_STATE, ClientDef.ENTITY_ACTIVE_STATE_FREE);
+        }
         
     }
 
-    addDamage()
+
+    addDamage(damageValue)
     {
-        var y = Math.random()* GameData.App_Game_Heigth ;
-        LabelMgr.Instance.addLabel(Math.floor(Math.random()*5),Math.floor(y),this._host.getPosition());
+        if( this._curBloom <= 0 )
+        {
+            return;
+        }
+        //伤害弹跳
+        var showDamageValue = this._curBloom > damageValue ? damageValue : this._curBloom;
+        var type = Math.floor(Math.random()*5)+1;
+        LabelMgr.Instance.addLabel(type,showDamageValue,this._host.getPosition());
+
+        this._curBloom -= damageValue;
     }
+
+
 }

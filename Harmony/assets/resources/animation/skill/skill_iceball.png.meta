@@ -1,6 +1,6 @@
 {
   "ver": "2.3.7",
-  "uuid": "bab8f83b-a780-4c1c-a660-de410d05d6d0",
+  "uuid": "1e4bb2c3-48e5-43fa-bec9-39a1d03f3963",
   "importer": "texture",
   "type": "sprite",
   "wrapMode": "clamp",
@@ -8,15 +8,15 @@
   "premultiplyAlpha": false,
   "genMipmaps": false,
   "packable": true,
-  "width": 48,
-  "height": 103,
+  "width": 103,
+  "height": 48,
   "platformSettings": {},
   "subMetas": {
-    "skill_fashi_huoqiu_3_02": {
+    "skill_iceball": {
       "ver": "1.0.6",
-      "uuid": "48ef4e96-897a-40ee-bfd6-938241fe52d3",
+      "uuid": "054ef855-33fa-4a03-a126-9c4648b1d982",
       "importer": "sprite-frame",
-      "rawTextureUuid": "bab8f83b-a780-4c1c-a660-de410d05d6d0",
+      "rawTextureUuid": "1e4bb2c3-48e5-43fa-bec9-39a1d03f3963",
       "trimType": "auto",
       "trimThreshold": 1,
       "rotated": false,

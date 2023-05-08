@@ -26,6 +26,9 @@ function handle_skill(o)
 	d.attackValue = tonumber(o.c)
 	d.src = o.d
 	d.delay = tonumber(o.e)
+	d.collision = tonumber(o.f)
+	d.collRect = o.g
+	d.speed = tonumber(o.h)
 	gdskill[tostring(d.id)] = d
 end
 
