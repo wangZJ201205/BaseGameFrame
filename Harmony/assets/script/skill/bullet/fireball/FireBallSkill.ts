@@ -36,6 +36,7 @@ export default class FireBallSkill extends SkillParent {
         bullet = new FireBallBullet();
         bullet.onLoad(this);
         bullet.setProp(ClientDef.BULLET_PROP_STATICID , this.getStaticId());
+        bullet.setProp(ClientDef.BULLET_PROP_ID , this._bullets.length);
         bullet.start();
         this._bullets.push(bullet);
         return bullet;

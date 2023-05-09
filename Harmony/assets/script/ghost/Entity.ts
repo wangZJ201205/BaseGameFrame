@@ -35,12 +35,10 @@ export default class Entity extends cc.Node
         this._entityComponents = new ComponentMgr();
         this._entityComponents.onLoad(this);
 
-        
-
         this.setClientProp(ClientDef.ENTITY_PROP_ACTIVE_STATE,ClientDef.ENTITY_ACTIVE_STATE_INIT);
     }
 
-    //可能是重载
+    //可以用于延迟加载
     start () {
         
         this.setClientProp(ClientDef.ENTITY_PROP_ACTIVE_STATE,ClientDef.ENTITY_ACTIVE_STATE_RUN);
@@ -77,6 +75,13 @@ export default class Entity extends cc.Node
             // boxColl.offset.x = -2;
             boxColl.offset.y = 25;
         }
+    }
+
+    restart()
+    {
+        this.setClientProp(ClientDef.ENTITY_PROP_ACTIVE_STATE,ClientDef.ENTITY_ACTIVE_STATE_RUN);
+        this.active = true;
+        this._entityComponents.restart();
     }
 
 

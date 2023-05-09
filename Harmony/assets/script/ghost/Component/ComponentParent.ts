@@ -25,6 +25,10 @@ export default class ComponentParent{
         this._state = ClientDef.COMP_STATE_START;
     }
 
+    restart () {
+        this._state = ClientDef.COMP_STATE_START;
+    }
+
     remove()
     {
         this._state = ClientDef.COMP_STATE_REMOVE;

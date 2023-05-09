@@ -14,17 +14,17 @@ const {ccclass, property} = cc._decorator;
 @ccclass
 export default class IceBallSkill extends SkillParent {
 
-    _index : number = 0;
+    _angle : number = 0;
 
     //发射子弹
     shootBullet()
     {
-        this._index += 10;
-        this._index = this._index >= 360 ? 0 : this._index;
+        this._angle += 10;
+        this._angle = this._angle >= 360 ? 0 : this._angle;
         var bullet = this.spawnBullet();
         bullet.getNode().active = true;
         bullet.getNode().position = this.getHost().position;
-        bullet.setProp(ClientDef.BULLET_PROP_ANGLE,this._index);
+        bullet.setProp(ClientDef.BULLET_PROP_ANGLE,this._angle);
         bullet.restart();
     }
 

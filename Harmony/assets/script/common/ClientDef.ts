@@ -60,11 +60,13 @@ export default class ClientDef{
 
 
     //子弹属性
-    public static readonly BULLET_PROP_DIRECTION : number = 1; //方向
-    public static readonly BULLET_PROP_STATE : number = 2; //状态
-    public static readonly BULLET_PROP_STATICID : number = 3;// 配置id
-    public static readonly BULLET_PROP_SPEED : number = 4;// 速度
-    public static readonly BULLET_PROP_ANGLE : number = 5;// 角度
+    public static readonly BULLET_PROP_ID : number = 1;// id
+    public static readonly BULLET_PROP_DIRECTION : number = 2; //方向
+    public static readonly BULLET_PROP_STATE : number = 3; //状态
+    public static readonly BULLET_PROP_STATICID : number = 4;// 配置id
+    public static readonly BULLET_PROP_SPEED : number = 5;// 速度
+    public static readonly BULLET_PROP_ANGLE : number = 6;// 角度
+    
 
 
     //子弹的状态

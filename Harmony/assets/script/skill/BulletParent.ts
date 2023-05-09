@@ -59,7 +59,7 @@ export default class BulletParent {
 
     restart()
     {
-        
+
     }
 
     remove()
@@ -115,11 +115,13 @@ export default class BulletParent {
         box.offset.y = Number(cr[1]);
         box.size.width = Number(cr[2]);
         box.size.height = Number(cr[3]);
+        box.name = "bullet" + this.getProp(ClientDef.BULLET_PROP_ID);
         this.getNode().group = ClientDef.COLLISION_GROUP_BULLET;
 
         //添加碰撞组件
         var collCmp = this.getNode().addComponent(CollisionComponent);
         collCmp.setCollisioner(this);
+        
     }
 
     //碰撞开始

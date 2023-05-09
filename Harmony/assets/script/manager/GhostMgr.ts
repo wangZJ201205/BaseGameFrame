@@ -87,13 +87,13 @@ export default class GhostMgr extends ParentMgr {
 
     /**
      * 生成对象
-     * @param entityType  对象类型
+     * @param entityStaticID  对象配置ID
      * @returns entity对象
      */
-    spawnEntity(entityType)
+    spawnEntity(entityStaticID)
     {
         var entity:Entity = null;
-        
+        var entityType = Math.floor(entityStaticID / 100000)
         //对象池中寻找闲置对象
         for (let index = 0; index < this.entitys.length; index++) {
             const element = this.entitys[index];
@@ -110,6 +110,8 @@ export default class GhostMgr extends ParentMgr {
             entity = new Entity();
             entity.onLoad();
             entity.setClientProp(ClientDef.ENTITY_PROP_TYPE,entityType);
+            entity.setClientProp(ClientDef.ENTITY_PROP_STATICID,"" + entityStaticID);
+            entity.start();
             this.layer.addChild(entity);
             this.addEntity(entity)
         }

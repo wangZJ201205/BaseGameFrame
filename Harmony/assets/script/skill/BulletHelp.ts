@@ -41,7 +41,8 @@ export default class BulletHelp{
 
     //周围循环攻击
     static AngleConvertDirection(angle)
-    {
+    {   
+        
         var direction = new cc.Vec2();
         var ag = angle * (Math.PI / 180); // 将角度转换为弧度
         direction.x = Math.cos(ag);

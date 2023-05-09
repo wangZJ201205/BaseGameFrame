@@ -46,17 +46,7 @@ export default class ClothComponent extends ComponentParent {
         this._animations_state = {};
     }
 
-    start () {
-        super.start();
-    }
-
-    remove(): void {
-        super.remove();
-    }
-
-    update (dt) 
-    {
-    }
+    
 
     getAnimationState(state)
     {

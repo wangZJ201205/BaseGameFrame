@@ -13,20 +13,12 @@ export default class BloomComponent extends ComponentParent {
 
     bloomLab : cc.Label;
     _curBloom:number;
-    onLoad (host) 
-    {    
-        super.onLoad(host);
-    }
-
-    start () {
-        super.start();
+   
+    restart () {
+        super.restart();
 
         var entityInfo = this.getHost().getEntityDict();
         this._curBloom = entityInfo["bloom"];
-    }
-
-    remove(): void {
-        super.remove();
     }
 
     update (dt) 

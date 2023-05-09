@@ -10,12 +10,6 @@ const {ccclass, property} = cc._decorator;
 export default class TitleComponent extends ComponentParent {
 
     
-
-    onLoad (host) 
-    {
-        super.onLoad(host);
-    }
-
     start () {
 
        

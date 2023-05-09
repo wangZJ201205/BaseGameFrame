@@ -43,6 +43,11 @@ export default class ComponentMgr{
         this.getEntityComponent(ClientDef.ENTITY_COMP_TITLE).start();
     }
 
+    restart () 
+    {
+        this.getEntityComponent(ClientDef.ENTITY_COMP_BLOOM).restart();
+    }
+
     update (dt) 
     {
         for (const key in this._entity_components) {

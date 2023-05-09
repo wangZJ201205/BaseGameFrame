@@ -12,21 +12,29 @@ const {ccclass, property} = cc._decorator;
 @ccclass
 export default class FireBallBullet extends BulletParent {
 
-    
     restart()
-    {
+    {   
+        // const startTime = cc.director.getTotalTime();
         var minEntity = BulletHelp.FindEnemyByMinDistance(this.getHost().getHost())
         var direction = minEntity.position.sub(this.getHost().getHost().position);
         this.getNode().angle = GameMath.directionToAngle(direction);
         this.setProp(ClientDef.BULLET_PROP_DIRECTION , direction);
+
+
+        // 计算函数执行时间
+        // const costTime = cc.director.getTotalTime() - startTime;
+
+        // console.log(`函数执行时间为1：${costTime} 毫秒`);
     }
 
     collisionEnter(other, self)
-    {
+    {   
+        
         this.getNode().active = false;
         this.setProp(ClientDef.BULLET_PROP_STATE,ClientDef.BULLET_STATE_FREE);
 
         other.node.getEntityComponent(ClientDef.ENTITY_COMP_BLOOM).addDamage( this.getSkillDict().attackValue );
+        
     }
 
     update (dt) 
