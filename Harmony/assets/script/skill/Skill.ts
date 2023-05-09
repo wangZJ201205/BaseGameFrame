@@ -3,6 +3,7 @@
  */
 
 import ClientDef from "../common/ClientDef";
+import GameData from "../common/GameData";
 import Entity from "../ghost/Entity";
 import DictMgr from "../manager/DictMgr";
 import BulletParent from "./BulletParent";
@@ -52,6 +53,13 @@ export default class Skill {
 
     addSkill(skillid)
     {
+
+        if(GameData.Shield_Skill)
+        {
+            console.info("屏蔽技能!");
+            return;
+        }
+
         var type = Math.floor(skillid / 10000); //去整型
         var skill = this.spawnSkill(type);
         if(!skill)

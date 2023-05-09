@@ -1,11 +1,6 @@
 import ClientDef from "../../common/ClientDef";
 import Entity from "../Entity";
 import StateParent from "./StateParent";
-import EntityIdle from "./States/EntityIdle";
-import EntityWalk from "./States/EntityWalk";
-import PlayerIdle from "./States/PlayerIdle";
-import PlayerWalk from "./States/PlayerWalk";
-
 /**
  * 对象状态机
  */
@@ -25,6 +20,11 @@ export default class EntityStateMachine{
     }
 
     start () {
+        
+    }
+
+    restart()
+    {
         this.runNextState();
     }
 

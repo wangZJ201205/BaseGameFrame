@@ -7,7 +7,7 @@ const {ccclass, property} = cc._decorator;
 export default class Hero{
     public static readonly Instance : Hero = new Hero();
 
-    _entity:Entity;
+    private _entity:Entity;
 
     onLoad () 
     {
@@ -15,7 +15,7 @@ export default class Hero{
     }
 
     start () {
-
+        this._entity._skill.addSkill(20001);
     }
 
     setEntity(entity)

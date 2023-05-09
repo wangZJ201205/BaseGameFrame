@@ -41,8 +41,6 @@ export default class Entity extends cc.Node
     //可以用于延迟加载
     start () {
         
-        this.setClientProp(ClientDef.ENTITY_PROP_ACTIVE_STATE,ClientDef.ENTITY_ACTIVE_STATE_RUN);
-
         this._skill.start();
         this._entityComponents.start();
 
@@ -50,31 +48,6 @@ export default class Entity extends cc.Node
         this._entityStateMachine.onLoad(this);
         this._entityStateMachine.start();
 
-        this.active = true;
-
-        
-
-        //测试碰撞检测
-        var boxColl = this.addComponent(cc.BoxCollider);
-
-        var entityType = this._client_prop_map[ClientDef.ENTITY_PROP_TYPE];
-        if(entityType == ClientDef.ENTITY_TYPE_PLAYER)
-        {
-            this.group = ClientDef.COLLISION_GROUP_PLAYER;
-            boxColl.size.width = 48;
-            boxColl.size.height = 111;
-            boxColl.offset.x = -2;
-            boxColl.offset.y = 60;
-            this._skill.addSkill(20001);
-        }
-        else if(entityType == ClientDef.ENTITY_TYPE_MONSTER)
-        {
-            this.group = ClientDef.COLLISION_GROUP_MONSTER;
-            boxColl.size.width = 50;
-            boxColl.size.height = 50;
-            // boxColl.offset.x = -2;
-            boxColl.offset.y = 25;
-        }
     }
 
     restart()
@@ -82,6 +55,7 @@ export default class Entity extends cc.Node
         this.setClientProp(ClientDef.ENTITY_PROP_ACTIVE_STATE,ClientDef.ENTITY_ACTIVE_STATE_RUN);
         this.active = true;
         this._entityComponents.restart();
+        this._entityStateMachine.restart();
     }
 
 

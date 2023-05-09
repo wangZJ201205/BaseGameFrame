@@ -1,5 +1,6 @@
 import Definition from "../../common/Definition";
 import EventName from "../../common/EventName";
+import GameData from "../../common/GameData";
 import MessageName from "../../common/MessageDefine";
 import UIName from "../../common/UIName";
 import EventMgr from "../../manager/EventMgr";
@@ -72,7 +73,7 @@ export default class LoginView extends UIParent {
             return;
         }
         
-        SceneMgr.Instance.enterScene(10001);
+        SceneMgr.Instance.enterScene(GameData.Map_Current_Id);
         EventMgr.Instance.Emit(EventName.UI_CLOSE_PANEL + this.getUIName(),null);
     }
 

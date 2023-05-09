@@ -2,6 +2,7 @@ import ClientDef from "../../common/ClientDef";
 import Entity from "../Entity";
 import BloomComponent from "./children/BloomComponent";
 import ClothComponent from "./children/ClothComponent";
+import CollComponent from "./children/CollComponent";
 import TitleComponent from "./children/TitleComponent";
 
 /**
@@ -34,6 +35,10 @@ export default class ComponentMgr{
         title.onLoad(host);
         this.addEntityComponent(ClientDef.ENTITY_COMP_TITLE,title);
 
+        var coll = new CollComponent();
+        coll.onLoad(host);
+        this.addEntityComponent(ClientDef.ENTITY_COMP_COLL,coll);
+
     }
 
     start () 
@@ -41,6 +46,7 @@ export default class ComponentMgr{
         this.getEntityComponent(ClientDef.ENTITY_COMP_CLOTH).start();
         this.getEntityComponent(ClientDef.ENTITY_COMP_BLOOM).start();
         this.getEntityComponent(ClientDef.ENTITY_COMP_TITLE).start();
+        this.getEntityComponent(ClientDef.ENTITY_COMP_COLL).start();
     }
 
     restart () 

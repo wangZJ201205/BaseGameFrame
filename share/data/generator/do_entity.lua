@@ -27,7 +27,9 @@ function handle_entity(o)
 
 	d.skillid = tonumber(o.d) or 0
 	d.bloom = tonumber(o.e) or 0
-
+	d.collision = tonumber(o.f)
+	d.collRect = o.g
+	d.collGroup = o.h
 	gdentity[tostring(d.id)] = d
 end
 

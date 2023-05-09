@@ -19,6 +19,7 @@ export default class ClientDef{
     public static readonly ENTITY_COMP_CLOTH : number = 1; //对象组件 - 衣服
     public static readonly ENTITY_COMP_BLOOM : number = 2; //对象组件 - 血条
     public static readonly ENTITY_COMP_TITLE : number = 3; //对象组件 - 称号
+    public static readonly ENTITY_COMP_COLL : number = 4; //对象组件 - 碰撞
 
     //对象组件运行状态
     public static readonly COMP_STATE_LOAD : number = 1; //组件状态--加载

@@ -44,11 +44,10 @@ export default class CommonGamePlay {
             }
         }
 
-        if(liveCnt > 200)return;
+        if( liveCnt > GameData.Monster_Show_Amount )return;
         var entity = GhostMgr.Instance.spawnEntity(200001); // 200001怪物id
-        // entity.setClientProp(ClientDef.ENTITY_PROP_STATICID,"1");
         entity.restart();
-        var y = Math.random()* GameData.App_Game_Heigth ;
+        var y = Math.random() * GameData.App_Game_Heigth ;
         entity.getEntityNode().setPosition(Math.random()*GameData.App_Game_Width  - GameData.App_Game_Width/2, y- GameData.App_Game_Heigth/2);
         entity.getEntityNode().zIndex = GameData.App_Game_Heigth - y;
         

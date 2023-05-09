@@ -14,16 +14,7 @@ const {ccclass, property} = cc._decorator;
 @ccclass
 export default class PlayerStateMachine extends EntityStateMachine {
 
-    onLoad (host) 
-    {
-        super.onLoad(host);
-    }
-
-    start () 
-    {
-        super.start();
-    }
-
+    
     getNextState()
     {
         var controlType = this.getHost().getClientProp(ClientDef.ENTITY_PROP_CONTROL_STATE);

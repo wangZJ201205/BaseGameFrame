@@ -59,7 +59,6 @@ export default class GameStart extends cc.Component {
         UIMgr.Instance.start();
         SceneMgr.Instance.start();
         DictMgr.Instance.start();
-        Hero.Instance.start();
 
         //注册所有的消息
         SocketRegister.start();

@@ -22,6 +22,9 @@ export default class SceneMgr extends ParentMgr {
     gameplay : CommonGamePlay;
     _timerID: number;
 
+    _posx:number;
+    _posy:number;
+
     static getInstance()
     {
         return SceneMgr.Instance;
@@ -34,6 +37,9 @@ export default class SceneMgr extends ParentMgr {
         
         GhostMgr.Instance.onLoad();
         LabelMgr.Instance.onLoad();
+
+        this._posx = 0;
+        this._posy = 0;
     }
 
     start() {
@@ -59,6 +65,20 @@ export default class SceneMgr extends ParentMgr {
         {
             this.gameplay.update(delta);
         }
+
+        var hero = Hero.Instance.getEntity();
+        if(!hero)return;
+        var heroPos = hero.position;
+        if( heroPos.x != this._posx || heroPos.y != this._posy )
+        {
+            var offsetx = heroPos.x - this._posx;
+            var offsety = heroPos.y - this._posy;
+            this.layer.setPosition(this.layer.position.x - offsetx,
+                this.layer.position.y - offsety);
+                this._posx = heroPos.x;
+                this._posy = heroPos.y;
+        }
+
     }
 
     enterScene(sceneid)
@@ -70,9 +90,9 @@ export default class SceneMgr extends ParentMgr {
         UIMgr.Instance.openUI(UIName.TESTVIEW);
 
         var player = GhostMgr.Instance.spawnEntity(100001);
-        player.start();
+        player.restart();
         Hero.Instance.setEntity(player);
-        
+        Hero.Instance.start();
 
         this.gameplay = new CommonGamePlay();
         this.gameplay.onLoad();
@@ -87,6 +107,10 @@ export default class SceneMgr extends ParentMgr {
         LoadMgr.Instance.LoadAsset(sceneInfo[sceneid].path,(asset)=>{
             var tilemap : cc.TiledMap = this.layer.addComponent(cc.TiledMap);
             tilemap.tmxAsset = asset;
+            var ground = tilemap.getLayer("ground");
+            let tileGid = 1;
+            let x = 7, y = 7;
+            ground.addTileByGid(tileGid, cc.v2(x, y));
         });
 
     }
