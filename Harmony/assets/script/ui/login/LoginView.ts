@@ -73,7 +73,7 @@ export default class LoginView extends UIParent {
             return;
         }
         
-        SceneMgr.Instance.enterScene(GameData.Map_Current_Id);
+        SceneMgr.Instance.enterScene();
         EventMgr.Instance.Emit(EventName.UI_CLOSE_PANEL + this.getUIName(),null);
     }
 

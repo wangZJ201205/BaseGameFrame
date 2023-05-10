@@ -1,28 +1,30 @@
+/**
+ * 玩法中
+ * 怪物组
+ */
+
 import ClientDef from "../common/ClientDef";
 import GameData from "../common/GameData";
 import GhostMgr from "../manager/GhostMgr";
 
-/**
- * 普通玩法
- */
 const {ccclass, property} = cc._decorator;
 
 @ccclass
-export default class CommonGamePlay {
+export default class GPMonster {
 
-    delta: number = 0;
-    count:number = 0;
+    private delta: number = 0;
+    private count:number = 0;
+
     onLoad () 
     {
 
     }
 
-    start () 
-    {
+    start () {
         this.delta = 1;
     }
 
-    update (dt) 
+    update () 
     {
         this.delta -= 1;
         if(this.delta <= 0)
@@ -50,6 +52,6 @@ export default class CommonGamePlay {
         var y = Math.random() * GameData.App_Game_Heigth ;
         entity.getEntityNode().setPosition(Math.random()*GameData.App_Game_Width  - GameData.App_Game_Width/2, y- GameData.App_Game_Heigth/2);
         entity.getEntityNode().zIndex = GameData.App_Game_Heigth - y;
-        
+
     }
 }

@@ -39,6 +39,7 @@ export default class Entity extends cc.Node
     }
 
     //可以用于延迟加载
+    //初始化一次
     start () {
         
         this._skill.start();
@@ -50,6 +51,7 @@ export default class Entity extends cc.Node
 
     }
 
+    //反复初始化
     restart()
     {
         this.setClientProp(ClientDef.ENTITY_PROP_ACTIVE_STATE,ClientDef.ENTITY_ACTIVE_STATE_RUN);
