@@ -2,6 +2,7 @@
 //游戏入口
 
 import EventName from "./common/EventName";
+import GM from "./common/GM";
 import GameData from "./common/GameData";
 import UIName from "./common/UIName";
 import DictConfig from "./config/DictConfig";
@@ -47,6 +48,11 @@ export default class GameStart extends cc.Component {
         //加载配置文件
         UIConfig.init();
         DictConfig.init();
+
+        if(this.isDebug)
+        {
+            GM.init();
+        }
 
         UIMgr.Instance.onLoad();
         SceneMgr.Instance.onLoad();

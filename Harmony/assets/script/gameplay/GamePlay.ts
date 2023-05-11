@@ -22,15 +22,15 @@ export default class GamePlay {
 
     private _timerID: number;
 
-    private _hero_old_posx:number;  //人物的之前的位置
-    private _hero_old_posy:number;
+    private _heroPos:cc.Vec3;  //人物的之前的位置
 
     private _gpMonster : GPMonster;
     private _tmxList : cc.TiledMap[];
+    private _tileWidth : number = 72;
+    private _tileHeight : number = 36;
     onLoad () 
     {
-        this._hero_old_posx = 0;
-        this._hero_old_posy = 0;
+        this._heroPos = cc.Vec3.ZERO;
     }
 
     start () 
@@ -42,8 +42,11 @@ export default class GamePlay {
         this.layer.parent = SceneMgr.Instance.getLayer();
 
         UIMgr.Instance.openUI(UIName.ROCKVIEW);
-        UIMgr.Instance.openUI(UIName.TESTVIEW);
-
+        if(GameData.IsDebug)
+        {
+            UIMgr.Instance.openUI(UIName.TESTVIEW);
+        }
+        
         var player = GhostMgr.Instance.spawnEntity(100001);
         player.restart();
         Hero.Instance.setEntity(player);
@@ -60,117 +63,107 @@ export default class GamePlay {
     
     update () 
     {
-        this.adjustScenePos();
         this._gpMonster.update();
+        this.refreshScenePos();
     }
 
     //实时检测人物的位置
     refreshScenePos()
     {
-        // var hero = Hero.Instance.getEntity();
-        // if(!hero)return;
-        // var heroPos = hero.position;
-        // if( heroPos.x != this._hero_old_posx || heroPos.y != this._hero_old_posy )
-        // {
-        //     var offsetx = heroPos.x - this._hero_old_posx;
-        //     var offsety = heroPos.y - this._hero_old_posy;
-        //     SceneMgr.Instance.getLayer().setPosition(SceneMgr.Instance.getLayer().position.x - offsetx,
-        //         SceneMgr.Instance.getLayer().position.y - offsety);
-        //         this._hero_old_posx = heroPos.x;
-        //         this._hero_old_posy = heroPos.y;
-        // }
-        this.adjustScenePos();
+        var hero = Hero.Instance.getEntity();
+        if(!hero)return;
+        var heroPos = hero.position;
+        if( heroPos.x != this._heroPos.x || heroPos.y != this._heroPos.y )
+        {
+            var offsetx = heroPos.x - this._heroPos.x;
+            var offsety = heroPos.y - this._heroPos.y;
+            SceneMgr.Instance.getLayer().setPosition(
+                SceneMgr.Instance.getLayer().position.x - offsetx,
+                SceneMgr.Instance.getLayer().position.y - offsety);
+            this._heroPos.x = heroPos.x;
+            this._heroPos.y = heroPos.y;
+            this.adjustScenePos();
+        }
+        
     }
 
     adjustScenePos() {
-        // 获取人物的位置
         const heroPos = cc.Vec2.ZERO;
         heroPos.x = Hero.Instance.getEntity().position.x;
         heroPos.y = Hero.Instance.getEntity().position.y;
-        // 计算人物所在的区域和距离
         let regionIndex = -1;
         let left = 0, right = 0, bottom = 0, top = 0;
+
+        //判断所在的区域
         for (let i = 0; i < this._tmxList.length; i++) {
             const tileMap = this._tmxList[i];
+            const { width: mapWidth, height: mapHeight } = tileMap.node.getContentSize();
+            const { x: mapX, y: mapY } = tileMap.node.position;
             const tileSize = tileMap.getTileSize();
             const mapSize = tileMap.getMapSize();
-            const layerSize = tileMap.node.getContentSize();
-
-            const region = cc.rect(
-                tileMap.node.position.x,
-                tileMap.node.position.y,
-                layerSize.width,
-                layerSize.height
-            );
+    
+            const region = cc.rect(mapX, mapY, mapWidth, mapHeight);
             if (region.contains(heroPos)) {
                 regionIndex = i;
-                left = heroPos.x - region.x;
-                right = region.x + layerSize.width - heroPos.x;
-                bottom = heroPos.y - region.y;
-                top = region.y + layerSize.height - heroPos.y;
+                left = Math.abs(heroPos.x - mapX);
+                right = Math.abs(mapWidth);
+                bottom = Math.abs(heroPos.y - mapY);
+                top = Math.abs(mapHeight);
                 break;
             }
         }
-
-        // 如果人物不在任何一个区域，直接返回
+        
+        //如果不在任何区域中，重置地块位置
         if (regionIndex == -1) {
+            for (let index = 0; index < this._tmxList.length; index++) {
+                var tilemap : cc.TiledMap = this._tmxList[index];
+                var x = -(index%2)*tilemap.getMapSize().width * this._tileWidth + heroPos.x;
+                var y = -Math.floor(index/2)*tilemap.getMapSize().height * this._tileHeight + heroPos.y;
+                tilemap.node.setPosition(x,y);
+            }
             return;
         }
-
-        // 计算地图需要滚动的距离
-        const offset = cc.Vec2.ZERO;
-        if (left < 100) {
-            offset.x = -(100 - left);
+    
+        //移动地块
+        //   3  | 4
+        //-------------
+        //   1  | 2
+        const currReg = this._tmxList[regionIndex];
+        let xDir = 0, yDir = 0;
+        if (left <= right / 2 && bottom <= top / 2) {
+            xDir = -1;
+            yDir = -1;
+        } else if (left <= right && bottom <= top / 2) {
+            xDir = 1;
+            yDir = -1;
+        } else if (left <= right / 2 && bottom <= top) {
+            xDir = -1;
+            yDir = 1;
+        } else if (left <= right && bottom <= top) {
+            xDir = 1;
+            yDir = 1;
         }
-        else if (right < 100) {
-            offset.x = (100 - right);
-        }
-        if (bottom < 100) {
-            offset.y = -(100 - bottom);
-        }
-        else if (top < 100) {
-            offset.y = (100 - top);
-        }
 
-        // 调整地图位置
-        for (let i = 0; i < this._tmxList.length; i++) {
-            const tileMap = this._tmxList[i];
+        const region = {
+            x: currReg.node.width ,
+            y: currReg.node.height ,
+            xDir,
+            yDir,
+        };
 
-            // 如果不是当前区域，直接跳过
-            if (i != regionIndex) {
-                continue;
-            }
-
-            // 向左滚动地图
-            if (offset.x < 0 && tileMap.node.x < 0) {
-                const dx = Math.max(offset.x, tileMap.node.x);
-                tileMap.node.x += dx;
-                offset.x -= dx;
-            }
-
-            // 向右滚动地图
-            if (offset.x > 0 && tileMap.node.x > -(tileMap.node.width - 1280)) {
-                const dx = Math.min(offset.x, tileMap.node.x + tileMap.node.width - 1280);
-                tileMap.node.x -= dx;
-                offset.x -= dx;
-            }
-
-            // 向下滚动地图
-            if (offset.y < 0 && tileMap.node.y < 0) {
-                const dy = Math.max(offset.y, tileMap.node.y);
-                tileMap.node.y += dy;
-                offset.y -= dy;
-            }
-
-            // 向上滚动地图
-            if (offset.y > 0 && tileMap.node.y > -(tileMap.node.height - 640)) {
-                const dy = Math.min(offset.y, tileMap.node.y + tileMap.node.height - 640);
-                tileMap.node.y -= dy;
-                offset.y -= dy;
+        for (let index = 0; index < this._tmxList.length; index++) {
+            const tiled = this._tmxList[index];
+            if (index == regionIndex) continue;
+            if (currReg.node.x == tiled.node.x) {
+                tiled.node.y = currReg.node.y + region.y * region.yDir;
+            } else if (currReg.node.y == tiled.node.y) {
+                tiled.node.x = currReg.node.x + region.x * region.xDir;
+            } else {
+                tiled.node.y = currReg.node.y + region.y * region.yDir;
+                tiled.node.x = currReg.node.x + region.x * region.xDir;
             }
         }
     }
-
 
 
     loadSceneSrc(sceneid)
@@ -180,9 +173,15 @@ export default class GamePlay {
         var sceneInfo = DictMgr.Instance.getDictByName("map_data");
         LoadMgr.Instance.LoadAsset(sceneInfo[sceneid].path,(asset)=>{
             for (let index = 0; index < 4; index++) {
-                var tilemap : cc.TiledMap = this.layer.addComponent(cc.TiledMap);
+                var node:cc.Node = new cc.Node();
+                this.layer.addChild(node);
+                var tilemap : cc.TiledMap = node.addComponent(cc.TiledMap);
                 tilemap.tmxAsset = asset;
                 tilemap.node.setAnchorPoint(0,0);
+                var x = -(index%2)*tilemap.getMapSize().width * this._tileWidth;
+                var y = -Math.floor(index/2)*tilemap.getMapSize().height * this._tileHeight;
+                tilemap.node.setPosition(x,y);
+                
                 this._tmxList.push(tilemap);
             }
         });

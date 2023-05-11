@@ -28,7 +28,7 @@ export default class PlayerWalk extends StateParent {
         var velocity = dir.mul(GameData.PayerMoveSpeed*dt);
         entityNode.setPosition(entityNode.position.add(velocity));
         entityNode.zIndex = GameData.App_Game_Heigth -(GameData.App_Game_Heigth/2 + entityNode.getPosition().y);
-        console.info(entityNode.zIndex);
+        // console.info(entityNode.zIndex);
 
         this.getHost().setClientProp(ClientDef.ENTITY_PROP_MOVE_X,0);
         this.getHost().setClientProp(ClientDef.ENTITY_PROP_MOVE_Y,0);

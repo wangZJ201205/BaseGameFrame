@@ -172,5 +172,10 @@ export default class Entity extends cc.Node
         return entityInfo;
     }
 
+    //是否在运行
+    isRun()
+    {
+        return this.getClientProp(ClientDef.ENTITY_PROP_ACTIVE_STATE) == ClientDef.ENTITY_ACTIVE_STATE_RUN;
+    }
 
 }

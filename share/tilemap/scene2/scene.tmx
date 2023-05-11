@@ -16,4 +16,9 @@
    eJzt2EdLA0EYgOH5a/Zu7L3E3ntvkKhgA/WqXqIX9aJe7L39L19yEF3IspmdgjIvPJeFzX6XZeeLEOZaxJLB56XbClZtD+HTJrYk793DPg7UjSPVJa5w7bmewCGOTA/k6QGPePJcP8YJTo1P9Lt3fODTc/0M57gI+DtzmMeCutGUFkMcy5bnSNUa1rFhe5AUbWMHu7YHcblc38mcgTKQiSxkIwe5yFM7WjKZM1A+ClCIIhSjBKVqR0smcwaKoAzlqEAlqlCtdjTpalCLOtSjAY1o8rnnBre4w73m+ZrRglZE0YZ2dPjc84wXvOJN73iiE13oRg960Yd+zc8N2gAGMYRhjGAUYzaH+tE4JjCJKUxjBrM2h3K5FKd75wm7Y8eE3p0nIcLt2Lp3nrA7dtCdR/bbme6OLZvJb6fLZSqTZ1aZPcvke/ef/2v+S30BxERRsQ==
   </data>
  </layer>
+ <layer name="sign" width="40" height="40">
+  <data encoding="base64" compression="zlib">
+   eJzt1LEJACAMRUHXzP6LiK3YhWACd6WNaf6L1Vf8PgCasxGYy36BKvoCc9kvUEVfgCp3X169ybxl/jg2UhMFOA==
+  </data>
+ </layer>
 </map>

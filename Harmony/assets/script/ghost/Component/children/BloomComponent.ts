@@ -13,6 +13,15 @@ export default class BloomComponent extends ComponentParent {
 
     bloomLab : cc.Label;
     _curBloom:number;
+
+    start () {
+        super.start();
+        if(this._host.getClientProp(ClientDef.ENTITY_PROP_TYPE) == ClientDef.ENTITY_TYPE_PLAYER)
+        {
+            this.bloomLab = this._host.addComponent(cc.Label);
+            this.bloomLab.string = "100/100";
+        }
+    }
    
     restart () {
         super.restart();

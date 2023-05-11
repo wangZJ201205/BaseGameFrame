@@ -1,7 +1,9 @@
+/**
+ * 工具辅助界面
+ */
 
-
+import GM from "../../common/GM";
 import GameData from "../../common/GameData";
-import CommonGamePlay from "../../gameplay/CommonGamePlay";
 import Hero from "../../ghost/Hero";
 import GhostMgr from "../../manager/GhostMgr";
 
@@ -18,6 +20,13 @@ export default class TestView extends cc.Component {
 
     @property(cc.EditBox)
     monsterTotalEB:cc.EditBox = null;
+
+    @property(cc.EditBox)
+    gmEditBox:cc.EditBox = null;
+
+    @property(cc.Button)
+    gmButton:cc.Button = null;
+
     // onLoad () {}
 
     start () 
@@ -30,6 +39,7 @@ export default class TestView extends cc.Component {
     register()
     {
         this.monsterTotalEB.node.on('editing-return', this.onEditBoxEvent, this)
+        this.gmButton.node.on(cc.Node.EventType.TOUCH_END,this.onGmOrderHandle,this); //添加监听
     }
 
     update (dt) 
@@ -44,6 +54,13 @@ export default class TestView extends cc.Component {
     {
         var text = this.monsterTotalEB.string;
         GameData.Monster_Show_Amount = Number(text);
+    }
+
+    onGmOrderHandle(event,param)
+    {
+        var order : string = this.gmEditBox.string;
+        var orders :string[] = order.split(" ");
+        GM.useGm(orders);
     }
 
 }

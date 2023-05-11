@@ -27,13 +27,14 @@ export default class EntityWalk extends StateParent {
         direction = direction.normalize();
         
         const distance = heroNode.position.sub(currentPosition).mag();
-        if (distance <= 50)
+        //超出范围移除
+        if (distance <= GameData.Monster_And_Hero_Min_Distance || distance >= GameData.Monster_And_Hero_Max_Distance)
         {
           // 到达目标节点
-          super.update(dt);
           this.getHost().getEntityNode().active = false;
           this.getHost().setClientProp(ClientDef.ENTITY_PROP_ACTIVE_STATE, ClientDef.ENTITY_ACTIVE_STATE_FREE);
-        } else {
+        } 
+        else {
           // 沿着移动方向移动
           const velocity = direction.mul(this.speed * dt);
           currentPosition = currentPosition.add(velocity);
