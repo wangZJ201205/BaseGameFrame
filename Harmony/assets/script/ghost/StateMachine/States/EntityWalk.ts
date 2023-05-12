@@ -34,7 +34,8 @@ export default class EntityWalk extends StateParent {
           this.getHost().getEntityNode().active = false;
           this.getHost().setClientProp(ClientDef.ENTITY_PROP_ACTIVE_STATE, ClientDef.ENTITY_ACTIVE_STATE_FREE);
         } 
-        else {
+        else 
+        {
           // 沿着移动方向移动
           const velocity = direction.mul(this.speed * dt);
           currentPosition = currentPosition.add(velocity);

@@ -31,10 +31,11 @@ export default class GameStart extends cc.Component {
     
     onLoad () 
     {
-        let manager = cc.director.getCollisionManager();
-        manager.enabled = true;     //开启碰撞检测
+        cc.director.getCollisionManager().enabled = true;//开启碰撞检测
+        cc.director.getPhysicsManager().enabled = true;  //开启物理属性
+        cc.director.getPhysicsManager().gravity = cc.v2(0, 0);
         if (this.isDebug) {
-            manager.enabledDebugDraw = true;   //显示碰撞检测区域
+            cc.director.getCollisionManager().enabledDebugDraw = true;   //显示碰撞检测区域
         }
     }
 
@@ -85,7 +86,6 @@ export default class GameStart extends cc.Component {
     update (dt) 
     {
         NetMgr.Instance.update(dt);
-        
     }
 
     onLoaded(data)

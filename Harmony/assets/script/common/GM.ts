@@ -10,7 +10,8 @@ export default class GM {
 
     static init()
     {
-        this.GMTable['test'] = this.testFunc;
+        this.GMTable['db_phy'] = this.dbPhyFunc; //关闭物理引擎
+        this.GMTable['eb_phy'] = this.ebPhyFunc; //开启物理引擎
     }
 
     static useGm(data)
@@ -21,9 +22,18 @@ export default class GM {
         }
     }
 
-    static testFunc(data)
+    static dbPhyFunc(data)
     {
         console.info(">>>>>test gm" + data[1]);
+        cc.director.getPhysicsManager().enabled = false;  //关闭物理属性
+        cc.director.getCollisionManager().enabled = false;//开启碰撞检测
+    }
+
+    static ebPhyFunc(data)
+    {
+        console.info(">>>>>test gm" + data[1]);
+        cc.director.getPhysicsManager().enabled = true;  //开启物理属性
+        cc.director.getCollisionManager().enabled = true;//开启碰撞检测
     }
 
     

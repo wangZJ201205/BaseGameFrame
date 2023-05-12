@@ -178,4 +178,14 @@ export default class Entity extends cc.Node
         return this.getClientProp(ClientDef.ENTITY_PROP_ACTIVE_STATE) == ClientDef.ENTITY_ACTIVE_STATE_RUN;
     }
 
+    isHero()
+    {
+        return this.getClientProp(ClientDef.ENTITY_PROP_TYPE) == ClientDef.ENTITY_TYPE_PLAYER;
+    }
+
+    isMonster()
+    {
+        return this.getClientProp(ClientDef.ENTITY_PROP_TYPE) == ClientDef.ENTITY_TYPE_MONSTER;
+    }
+
 }

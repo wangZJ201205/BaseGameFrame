@@ -35,10 +35,6 @@ export default class ComponentMgr{
         title.onLoad(host);
         this.addEntityComponent(ClientDef.ENTITY_COMP_TITLE,title);
 
-        var coll = new CollComponent();
-        coll.onLoad(host);
-        this.addEntityComponent(ClientDef.ENTITY_COMP_COLL,coll);
-
     }
 
     start () 
@@ -46,7 +42,7 @@ export default class ComponentMgr{
         this.getEntityComponent(ClientDef.ENTITY_COMP_CLOTH).start();
         this.getEntityComponent(ClientDef.ENTITY_COMP_BLOOM).start();
         this.getEntityComponent(ClientDef.ENTITY_COMP_TITLE).start();
-        this.getEntityComponent(ClientDef.ENTITY_COMP_COLL).start();
+        this.addCollision();
     }
 
     restart () 
@@ -67,6 +63,22 @@ export default class ComponentMgr{
         for (const key in this._entity_components) {
             const element = this._entity_components[key];
             element.remove();
+        }
+    }
+
+    //添加碰撞
+    addCollision()
+    {
+        var coll = null;
+        if(this._host.isMonster())
+        {
+            coll = new CollComponent();
+        }
+        if(coll)
+        {
+            coll.onLoad(this._host);
+            this.addEntityComponent(ClientDef.ENTITY_COMP_COLL,coll);
+            coll.start();
         }
     }
 
