@@ -1,13 +1,13 @@
 {
-	"10001": {"id": 10001,"attackValue": 10,"collRect": "2,2,40,40","collision": 1,"delay": 100,"movement": "linemovement","speed": 100,"src": "skill_fireball"},
-	"10002": {"id": 10002,"attackValue": 10,"collRect": "2,2,40,40","collision": 1,"delay": 90,"movement": "linemovement","speed": 100,"src": "skill_fireball"},
-	"10003": {"id": 10003,"attackValue": 10,"collRect": "2,2,40,40","collision": 1,"delay": 80,"movement": "linemovement","speed": 100,"src": "skill_fireball"},
-	"10004": {"id": 10004,"attackValue": 10,"collRect": "2,2,40,40","collision": 1,"delay": 70,"movement": "linemovement","speed": 100,"src": "skill_fireball"},
-	"10005": {"id": 10005,"attackValue": 10,"collRect": "2,2,40,40","collision": 1,"delay": 60,"movement": "linemovement","speed": 100,"src": "skill_fireball"},
-	"10006": {"id": 10006,"attackValue": 10,"collRect": "2,2,40,40","collision": 1,"delay": 50,"movement": "linemovement","speed": 100,"src": "skill_fireball"},
-	"10007": {"id": 10007,"attackValue": 10,"collRect": "2,2,40,40","collision": 1,"delay": 40,"movement": "linemovement","speed": 100,"src": "skill_fireball"},
-	"10008": {"id": 10008,"attackValue": 10,"collRect": "2,2,40,40","collision": 1,"delay": 30,"movement": "linemovement","speed": 100,"src": "skill_fireball"},
-	"10009": {"id": 10009,"attackValue": 10,"collRect": "2,2,40,40","collision": 1,"delay": 20,"movement": "linemovement","speed": 100,"src": "skill_fireball"},
-	"10010": {"id": 10010,"attackValue": 10,"collRect": "2,2,40,40","collision": 1,"delay": 10,"movement": "linemovement","speed": 100,"src": "skill_fireball"},
-	"20001": {"id": 20001,"attackValue": 10,"collRect": "2,2,40,40","collision": 1,"delay": 10,"movement": "linemovement","speed": 100,"src": "skill_iceball"}
+	"10001": {"id": 10001,"attackValue": "5-15","collRect": "2,2,40,40","collision": 1,"count": 1,"delay": 135,"movement": "linemovement","range": 0,"speed": 100,"src": "skill_fireball"},
+	"10002": {"id": 10002,"attackValue": "5-15","collRect": "2,2,40,40","collision": 1,"count": 1,"delay": 400,"movement": "linemovement","range": 0,"speed": 100,"src": "skill_fireball"},
+	"10003": {"id": 10003,"attackValue": "5-15","collRect": "2,2,40,40","collision": 1,"count": 2,"delay": 400,"movement": "linemovement","range": 0,"speed": 100,"src": "skill_fireball"},
+	"10004": {"id": 10004,"attackValue": "5-15","collRect": "2,2,40,40","collision": 1,"count": 2,"delay": 400,"movement": "linemovement","range": 0,"speed": 100,"src": "skill_fireball"},
+	"10005": {"id": 10005,"attackValue": "5-15","collRect": "2,2,40,40","collision": 1,"count": 3,"delay": 400,"movement": "linemovement","range": 0,"speed": 100,"src": "skill_fireball"},
+	"10006": {"id": 10006,"attackValue": "5-15","collRect": "2,2,40,40","collision": 1,"count": 3,"delay": 400,"movement": "linemovement","range": 0,"speed": 100,"src": "skill_fireball"},
+	"10007": {"id": 10007,"attackValue": "5-15","collRect": "2,2,40,40","collision": 1,"count": 4,"delay": 400,"movement": "linemovement","range": 0,"speed": 100,"src": "skill_fireball"},
+	"10008": {"id": 10008,"attackValue": "5-15","collRect": "2,2,40,40","collision": 1,"count": 4,"delay": 400,"movement": "linemovement","range": 0,"speed": 100,"src": "skill_fireball"},
+	"10009": {"id": 10009,"attackValue": "5-15","collRect": "2,2,40,40","collision": 1,"count": 5,"delay": 400,"movement": "linemovement","range": 0,"speed": 100,"src": "skill_fireball"},
+	"10010": {"id": 10010,"attackValue": "5-15","collRect": "2,2,40,40","collision": 1,"count": 5,"delay": 400,"movement": "linemovement","range": 0,"speed": 100,"src": "skill_fireball"},
+	"20001": {"id": 20001,"attackValue": "5-15","collRect": "2,2,40,40","collision": 1,"count": 1,"delay": 120,"movement": "linemovement","range": 0,"speed": 100,"src": "skill_iceball"}
 }

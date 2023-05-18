@@ -30,8 +30,9 @@ export default class ClientDef{
     public static readonly COMP_STATE_REMOVE : number = 3; //组件状态--移除
 
     //对象类型
-    public static readonly ENTITY_TYPE_PLAYER : number = 1; //对象id
-    public static readonly ENTITY_TYPE_MONSTER : number = 2; //怪物
+    public static readonly ENTITY_TYPE_PLAYER : number = 1;     //对象id
+    public static readonly ENTITY_TYPE_MONSTER : number = 2;    //怪物
+    public static readonly ENTITY_TYPE_ITEM : number = 3;       //物品
 
     //对象状态
     public static readonly ENTITY_STATE_IDLE: number = 1; //站立
@@ -70,6 +71,8 @@ export default class ClientDef{
     public static readonly BULLET_PROP_STATICID : number = 4;// 配置id
     public static readonly BULLET_PROP_SPEED : number = 5;// 速度
     public static readonly BULLET_PROP_ANGLE : number = 6;// 角度
+    public static readonly BULLET_PROP_ATK_MIN : number = 7;// 攻击力 小
+    public static readonly BULLET_PROP_ATK_MAX : number = 8;// 攻击力 大
     
 
 

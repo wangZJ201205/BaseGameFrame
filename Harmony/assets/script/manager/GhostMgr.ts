@@ -4,6 +4,7 @@
 import ClientDef from "../common/ClientDef";
 import Entity from "../ghost/Entity";
 import Player from "../ghost/Hero";
+import Item from "../ghost/Item";
 import ParentMgr from "./ParentMgr";
 import SceneMgr from "./SceneMgr";
 
@@ -18,6 +19,7 @@ export default class GhostMgr extends ParentMgr {
     entitys:Entity[];
     spawnEntityId:number = 0; //用来生成对象id
     private _timerID: number;
+    private _typeClass : {};
 
     static getInstance()
     {
@@ -28,6 +30,7 @@ export default class GhostMgr extends ParentMgr {
     {
         super.onLoad();
         this.entitys = [];
+        this._typeClass = {};
         console.info("load GhostMgr");
     }
 
@@ -42,6 +45,10 @@ export default class GhostMgr extends ParentMgr {
         this.layer.parent = SceneMgr.Instance.getLayer();
 
         this._timerID = setInterval(this.update.bind(this), 0);
+
+        this._typeClass[ClientDef.ENTITY_TYPE_PLAYER ] = Entity;
+        this._typeClass[ClientDef.ENTITY_TYPE_MONSTER ] = Entity;
+        this._typeClass[ClientDef.ENTITY_TYPE_ITEM ] = Item;
     }
 
     private update (dt) {
@@ -107,7 +114,7 @@ export default class GhostMgr extends ParentMgr {
 
         if (entity == null)
         {
-            entity = new Entity();
+            entity = new (this._typeClass[entityType ])();
             entity.onLoad();
             entity.setClientProp(ClientDef.ENTITY_PROP_TYPE,entityType);
             entity.setClientProp(ClientDef.ENTITY_PROP_STATICID,"" + entityStaticID);
@@ -130,6 +137,8 @@ export default class GhostMgr extends ParentMgr {
         entity.setClientProp(ClientDef.ENTITY_PROP_ID,this.spawnEntityId); //设置它的ID
         this.entitys.push(entity);
     }
+
+   
 
     /**
      * 删除所有对象

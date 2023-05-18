@@ -46,7 +46,7 @@ export default class GPMonster {
         var liveCnt = 0;
         for (let index = 0; index < count; index++) {
             const element = GhostMgr.Instance.entitys[index];
-            if( element.isRun())
+            if( element.isRun() && element.isMonster())
             {
                 liveCnt++;
             }

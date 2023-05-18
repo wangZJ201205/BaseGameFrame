@@ -34,6 +34,11 @@ export default class BulletParent {
         var sid = this._prop[ClientDef.BULLET_PROP_STATICID];
         var skillInfo = DictMgr.Instance.getDictByName("skill_data")[sid];
 
+        var damageValue = skillInfo["attackValue"].split("-");
+
+        this.setProp(ClientDef.BULLET_PROP_ATK_MIN, Number(damageValue[0]));
+        this.setProp(ClientDef.BULLET_PROP_ATK_MAX, Number(damageValue[1]));
+
         this.setProp(ClientDef.BULLET_PROP_STATE,ClientDef.BULLET_STATE_LOADSRC);
         //子弹就是以一张图片的形式出现
         LoadMgr.Instance.LoadAssetWithType("animation/skill/"+ skillInfo.src ,cc.SpriteFrame,(sp)=>{
@@ -93,6 +98,14 @@ export default class BulletParent {
     getProp(type)
     {
         return this._prop[type] || 0;
+    }
+
+    getDamageValue()
+    {
+        var min = this.getProp(ClientDef.BULLET_PROP_ATK_MIN);
+        var max = this.getProp(ClientDef.BULLET_PROP_ATK_MAX);
+        var value = Math.floor(min + Math.random() * (max-min));
+        return value;
     }
 
     getSkillDict()

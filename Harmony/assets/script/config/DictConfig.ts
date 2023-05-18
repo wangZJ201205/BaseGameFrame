@@ -23,9 +23,12 @@ export default class DictConfig{
         //注册配置文件
 
         DictConfig.registerDict("map_data");
+        DictConfig.registerDict("map_rule_data");
         DictConfig.registerDict("language_data");
         DictConfig.registerDict("entity_data");
         DictConfig.registerDict("skill_data");
+        DictConfig.registerDict("exp_data");
+        DictConfig.registerDict("item_data");
 
     }
 

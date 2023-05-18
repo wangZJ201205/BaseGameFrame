@@ -36,7 +36,8 @@ export default class FireBallBullet extends BulletParent {
         this.getNode().active = false;
         this.setProp(ClientDef.BULLET_PROP_STATE,ClientDef.BULLET_STATE_FREE);
 
-        other.node.getEntityComponent(ClientDef.ENTITY_COMP_BLOOM).addDamage( this.getSkillDict().attackValue );
+        var damageValue = this.getDamageValue();
+        other.node.getEntityComponent(ClientDef.ENTITY_COMP_BLOOM).addDamage( damageValue );
     }
 
     update (dt) 
