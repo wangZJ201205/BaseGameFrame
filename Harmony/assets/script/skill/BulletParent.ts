@@ -41,18 +41,35 @@ export default class BulletParent {
 
         this.setProp(ClientDef.BULLET_PROP_STATE,ClientDef.BULLET_STATE_LOADSRC);
         //子弹就是以一张图片的形式出现
-        LoadMgr.Instance.LoadAssetWithType("animation/skill/"+ skillInfo.src ,cc.SpriteFrame,(sp)=>{
-            //检查人物状态
-            if(this._host.getHost().getClientProp(ClientDef.ENTITY_PROP_ACTIVE_STATE) != ClientDef.ENTITY_ACTIVE_STATE_RUN)
-            {
-                return;
-            }
-            var sprite = this.getNode().addComponent(cc.Sprite);
-            sprite.spriteFrame = sp;
-            sprite.node.anchorX = 0.5;
-            sprite.node.anchorY = 0.5;
-            this.setProp(ClientDef.BULLET_PROP_STATE,ClientDef.BULLET_STATE_RUN);
-        })
+        if(skillInfo.animation == 0)
+        {
+            LoadMgr.Instance.LoadAssetWithType("animation/skill/"+ skillInfo.src ,cc.SpriteFrame,(sp)=>{
+                //检查人物状态
+                if(this._host.getHost().getClientProp(ClientDef.ENTITY_PROP_ACTIVE_STATE) != ClientDef.ENTITY_ACTIVE_STATE_RUN)
+                {
+                    return;
+                }
+                var sprite = this.getNode().addComponent(cc.Sprite);
+                sprite.spriteFrame = sp;
+                sprite.node.anchorX = 0.5;
+                sprite.node.anchorY = 0.5;
+                this.setProp(ClientDef.BULLET_PROP_STATE,ClientDef.BULLET_STATE_RUN);
+            })
+        }
+        else
+        {
+            var loadPath = 'animation/skill/' +  skillInfo.src +"/"+ skillInfo.src ;
+            LoadMgr.Instance.LoadAssetWithType(loadPath,cc.Prefab,(asset)=>
+                {
+                    if(this._host.getHost().getClientProp(ClientDef.ENTITY_PROP_ACTIVE_STATE) != ClientDef.ENTITY_ACTIVE_STATE_RUN)
+                    {
+                        return;
+                    }
+                    var aniPref = cc.instantiate(asset);
+                    aniPref.parent = this.getNode();
+                    this.setProp(ClientDef.BULLET_PROP_STATE,ClientDef.BULLET_STATE_RUN);
+                });
+        }
 
         //是否产生碰撞
         if(skillInfo.collision == 1)

@@ -21,11 +21,6 @@ export default class GhostMgr extends ParentMgr {
     private _timerID: number;
     private _typeClass : {};
 
-    static getInstance()
-    {
-        return GhostMgr.Instance;
-    }
-
     onLoad () 
     {
         super.onLoad();

@@ -1,4 +1,6 @@
 
+import ClientDef from "../common/ClientDef";
+import DictMgr from "../manager/DictMgr";
 import Entity from "./Entity";
 
 const {ccclass, property} = cc._decorator;
@@ -16,6 +18,11 @@ export default class Hero{
 
     start () {
         this._entity._skill.addSkill(20001);
+        this._entity._skill.addSkill(30001);
+        var info = this._entity.getEntityDict();
+        this._entity.setClientProp(ClientDef.ENTITY_PROP_PICKUP_RANGE,info.pickRange);
+        
+        this.setLevel(1);
     }
 
     setEntity(entity)
@@ -30,5 +37,28 @@ export default class Hero{
 
     // update (dt) {}
 
-    
+    //增加经验
+    addExp(exp)
+    {
+        var value = this._entity.getClientProp(ClientDef.ENTITY_PROP_CUR_EXP);
+        value += exp;
+        if( value >= this._entity.getClientProp(ClientDef.ENTITY_PROP_MAX_EXP) )
+        {
+            this.setLevel(this._entity.getClientProp(ClientDef.ENTITY_PROP_LV) + 1);
+            this._entity.setClientProp(ClientDef.ENTITY_PROP_CUR_EXP, value- this._entity.getClientProp(ClientDef.ENTITY_PROP_MAX_EXP));
+        }
+        else
+        {
+            this._entity.setClientProp(ClientDef.ENTITY_PROP_CUR_EXP, value);
+        }
+    }
+
+    //设置等级
+    setLevel(lv)
+    {
+        var lvInfo = DictMgr.Instance.getDictByName("exp_data");
+        this._entity.setClientProp(ClientDef.ENTITY_PROP_LV, lv);
+        this._entity.setClientProp(ClientDef.ENTITY_PROP_MAX_EXP, lvInfo[lv+""].exp);
+    }
+
 }

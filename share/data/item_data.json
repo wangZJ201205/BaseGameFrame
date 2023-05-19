@@ -1,5 +1,5 @@
 {
-	"300001": {"id": 300001,"name": "经验球","datau": 0,"datax": 1,"datay": 0,"dataz": 0,"src": "i_b__053","type": 1},
-	"300002": {"id": 300002,"name": "经验球","datau": 0,"datax": 1,"datay": 0,"dataz": 0,"src": "i_b__052","type": 1},
-	"300003": {"id": 300003,"name": "经验球","datau": 0,"datax": 1,"datay": 0,"dataz": 0,"src": "i_b__054","type": 1}
+	"1001": {"id": 1001,"name": "经验球","datau": 0,"datax": 1,"datay": 0,"dataz": 0,"src": "i_b__053","type": 1},
+	"1002": {"id": 1002,"name": "经验球","datau": 0,"datax": 1,"datay": 0,"dataz": 0,"src": "i_b__052","type": 1},
+	"1003": {"id": 1003,"name": "经验球","datau": 0,"datax": 1,"datay": 0,"dataz": 0,"src": "i_b__054","type": 1}
 }

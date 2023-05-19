@@ -1,0 +1,55 @@
+{
+  "__type__": "cc.AnimationClip",
+  "_name": "skill_cp_zhaoleipi",
+  "_objFlags": 0,
+  "_native": "",
+  "_duration": 0.11666666666666667,
+  "sample": 60,
+  "speed": 1,
+  "wrapMode": 2,
+  "curveData": {
+    "comps": {
+      "cc.Sprite": {
+        "spriteFrame": [
+          {
+            "frame": 0,
+            "value": {
+              "__uuid__": "dc713873-acd0-47aa-a8c4-950efe18ae9b"
+            }
+          },
+          {
+            "frame": 0.03333333333333333,
+            "value": {
+              "__uuid__": "34fa1fa5-44fa-40db-87a3-7dd947cf84b4"
+            }
+          },
+          {
+            "frame": 0.06666666666666667,
+            "value": {
+              "__uuid__": "e4830667-916d-4592-93bb-7e0cacdae66a"
+            }
+          },
+          {
+            "frame": 0.1,
+            "value": {
+              "__uuid__": "6630a488-169f-4c9f-8fa4-6697379ebb7c"
+            }
+          }
+        ]
+      }
+    },
+    "props": {
+      "position": [
+        {
+          "frame": 0,
+          "value": [
+            0,
+            191.579,
+            0
+          ]
+        }
+      ]
+    }
+  },
+  "events": []
+}

@@ -10,6 +10,7 @@ import BulletParent from "./BulletParent";
 import SkillParent from "./SkillParent";
 import FireBallSkill from "./bullet/FireBall/FireBallSkill";
 import IceBallSkill from "./bullet/IceBall/IceBallSkill";
+import ThunderBallSkill from "./bullet/thunder/ThunderBallSkill";
 
 const {ccclass, property} = cc._decorator;
 
@@ -83,6 +84,9 @@ export default class Skill {
             break;
             case ClientDef.SKILL_TYPE_ICEBALL:
                 skill = new IceBallSkill();
+            break;
+            case ClientDef.SKILL_TYPE_THUNDER:
+                skill = new ThunderBallSkill();
             break;
         }
         return skill;

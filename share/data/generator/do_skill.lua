@@ -31,6 +31,8 @@ function handle_skill(o)
 	d.speed = tonumber(o.h)
 	d.range = tonumber(o.i)
 	d.count = tonumber(o.j)
+	d.name = o.k
+	d.animation = tonumber(o.l)
 	gdskill[tostring(d.id)] = d
 end
 

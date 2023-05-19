@@ -18,7 +18,7 @@ export default class SkillParent {
     protected _skillInfo:{};
     protected _curDelay:number;
     protected _bullets:BulletParent[];
-
+    protected _shootTime:number = 10;
     onLoad (host) 
     {
         this._host = host;
@@ -48,7 +48,7 @@ export default class SkillParent {
     {
         this._curDelay ++;
 
-        if( this._curDelay >= 10 )
+        if( this._curDelay >= this._shootTime )
         {
             this._curDelay = 0;
             this.shootBullet();

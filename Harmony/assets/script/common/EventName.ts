@@ -12,5 +12,7 @@ export default class EventName {
 
     public static readonly EVENT_MSGBOX_ERROR : string = 'EVENT_MSGBOX_ERROR';//错误码
 
+    public static readonly EVENT_PLAYER_EXP_CHANGE : string = 'EVENT_PLAYER_EXP_CHANGE';//人物经验变化
+
 }
 

@@ -57,12 +57,15 @@ export default class ClientDef{
     public static readonly ENTITY_PROP_ACTIVE_STATE : number = 7; //运行状态
     public static readonly ENTITY_PROP_STATICID : number = 8; //配置ID
     public static readonly ENTITY_PROP_WAIT_DESTROY_TIME : number = 9; //等待被销毁时间
-
+    public static readonly ENTITY_PROP_PICKUP_RANGE : number = 10; //拾取范围
+    public static readonly ENTITY_PROP_CUR_EXP : number = 11; //当前经验
+    public static readonly ENTITY_PROP_MAX_EXP : number = 12; //最大经验
+    public static readonly ENTITY_PROP_LV : number = 13; //等级
 
     //技能类型
     public static readonly SKILL_TYPE_FIREBALL: number = 1; //火球
     public static readonly SKILL_TYPE_ICEBALL: number = 2; //冰球
-
+    public static readonly SKILL_TYPE_THUNDER: number = 3; //雷劈
 
     //子弹属性
     public static readonly BULLET_PROP_ID : number = 1;// id

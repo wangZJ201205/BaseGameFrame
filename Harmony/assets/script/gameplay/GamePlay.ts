@@ -42,6 +42,7 @@ export default class GamePlay {
         this.layer.parent = SceneMgr.Instance.getLayer();
 
         UIMgr.Instance.openUI(UIName.ROCKVIEW);
+        UIMgr.Instance.openUI(UIName.PLAYER_PGB_VIEW);
         if(GameData.IsDebug)
         {
             UIMgr.Instance.openUI(UIName.TESTVIEW);

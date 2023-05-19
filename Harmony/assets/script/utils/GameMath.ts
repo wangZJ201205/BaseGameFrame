@@ -36,4 +36,12 @@ export default class GameMath {
         degree = (degree + 360) % 360  ; // 转换为0到360度的范围
         return degree;
     }
+
+    public static convertToTimeFormat(number) {
+        var minutes = Math.floor(number / 60); // 获取分钟数，使用 Math.floor 函数取整
+        var seconds = number % 60; // 获取秒数
+    
+        // 通过字符串拼接方式，拼接出时间格式
+        return ('0' + minutes).slice(-2) + ':' + ('0' + seconds).slice(-2);
+    }
 }

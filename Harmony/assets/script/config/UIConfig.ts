@@ -22,7 +22,7 @@ export default class UIConfig{
         this.UIReg[UIName.MSGBOX] = { path: this.PreGame + 'MsgBoxPref',index:ClientDef.UI_INDEX_TOP }; 
         this.UIReg[UIName.ROCKVIEW] = { path: this.PreGame + 'RockPref',index:ClientDef.UI_INDEX_COMMON }; 
         this.UIReg[UIName.TESTVIEW] = { path: this.PreGame + 'TestPref',index:ClientDef.UI_INDEX_COMMON }; 
-
+        this.UIReg[UIName.PLAYER_PGB_VIEW] = { path: this.PreGame + 'HeroExpPref',index:ClientDef.UI_INDEX_COMMON }; 
 
 
     }

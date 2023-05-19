@@ -1,5 +1,7 @@
 import ClientDef from "../../../common/ClientDef";
 import GhostMgr from "../../../manager/GhostMgr";
+// import GhostMgr from "../../../manager/GhostMgr";
+import ItemMgr from "../../../manager/ItemMgr";
 import LabelMgr from "../../../manager/LabelMgr";
 import ComponentParent from "../ComponentParent";
 
@@ -73,7 +75,7 @@ export default class BloomComponent extends ComponentParent {
             return;
         }
 
-        var item = GhostMgr.Instance.spawnEntity(Number(dropItem));
+        var item = ItemMgr.Instance.spawnItem(Number(dropItem));
         item.restart();
         item.getEntityNode().setPosition(this.getHost().getEntityNode().position);
     }

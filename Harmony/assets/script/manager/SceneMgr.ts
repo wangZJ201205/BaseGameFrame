@@ -1,6 +1,7 @@
 /**
  * 场景
  */
+import ItemMgr from "./ItemMgr";
 import ClientDef from "../common/ClientDef";
 import GamePlay from "../gameplay/GamePlay";
 import Hero from "../ghost/Hero";
@@ -26,9 +27,11 @@ export default class SceneMgr extends ParentMgr {
         super.onLoad();
         console.info("load SceneMgr");
         
+        
         GhostMgr.Instance.onLoad();
         LabelMgr.Instance.onLoad();
         GamePlay.Instance.onLoad();
+        ItemMgr.Instance.onLoad();
 
     }
 
@@ -44,7 +47,7 @@ export default class SceneMgr extends ParentMgr {
 
         GhostMgr.Instance.start();
         LabelMgr.Instance.start();
-        
+        ItemMgr.Instance.start();
 
     }
 

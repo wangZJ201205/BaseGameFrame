@@ -51,6 +51,7 @@ function handle_player(o)
 	d.collRect = o.g
 	d.collGroup = o.h
 	d.defense = tonumber(o.i)
+	d.pickRange = tonumber(o.j)
 	gdentity[tostring(d.id)] = d
 end
 

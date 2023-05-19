@@ -1,15 +1,15 @@
 {
-	"100001": {"id": 100001,"name": "新手装","bloom": 16,"collGroup": "player","collRect": "0,60,48,111","collision": 0,"defense": 1,"path": "1001","skillid": 10001},
-	"200001": {"id": 200001,"name": "飞蛾","bloom": 10,"collGroup": "monster","collRect": "0,25,25","collision": 1,"dropItem": "300001","path": "1002","skillid": 0},
-	"200002": {"id": 200002,"name": "飞蛾","bloom": 10,"collGroup": "monster","collRect": "0,25,25","collision": 1,"dropItem": "300001","path": "1002","skillid": 0},
-	"200003": {"id": 200003,"name": "飞蛾","bloom": 10,"collGroup": "monster","collRect": "0,25,25","collision": 1,"dropItem": "300001","path": "1002","skillid": 0},
-	"200004": {"id": 200004,"name": "飞蛾","bloom": 10,"collGroup": "monster","collRect": "0,25,25","collision": 1,"dropItem": "300001","path": "1002","skillid": 0},
-	"200005": {"id": 200005,"name": "飞蛾","bloom": 10,"collGroup": "monster","collRect": "0,25,25","collision": 1,"dropItem": "300001","path": "1002","skillid": 0},
-	"200006": {"id": 200006,"name": "飞蛾","bloom": 10,"collGroup": "monster","collRect": "0,25,25","collision": 1,"dropItem": "300001","path": "1002","skillid": 0},
-	"200007": {"id": 200007,"name": "飞蛾","bloom": 10,"collGroup": "monster","collRect": "0,25,25","collision": 1,"dropItem": "300001","path": "1002","skillid": 0},
-	"200008": {"id": 200008,"name": "飞蛾","bloom": 10,"collGroup": "monster","collRect": "0,25,25","collision": 1,"dropItem": "300001","path": "1002","skillid": 0},
-	"200009": {"id": 200009,"name": "飞蛾","bloom": 10,"collGroup": "monster","collRect": "0,25,25","collision": 1,"dropItem": "300001","path": "1002","skillid": 0},
-	"200010": {"id": 200010,"name": "飞蛾","bloom": 10,"collGroup": "monster","collRect": "0,25,25","collision": 1,"dropItem": "300001","path": "1002","skillid": 0},
-	"200011": {"id": 200011,"name": "飞蛾","bloom": 10,"collGroup": "monster","collRect": "0,25,25","collision": 1,"dropItem": "300001","path": "1002","skillid": 0},
-	"200012": {"id": 200012,"name": "飞蛾","bloom": 10,"collGroup": "monster","collRect": "0,25,25","collision": 1,"dropItem": "300001","path": "1002","skillid": 0}
+	"100001": {"id": 100001,"name": "新手装","bloom": 16,"collGroup": "player","collRect": "0,60,48,111","collision": 0,"defense": 1,"path": "1001","pickRange": 120,"skillid": 10001},
+	"200001": {"id": 200001,"name": "飞蛾","bloom": 10,"collGroup": "monster","collRect": "0,25,25","collision": 1,"dropItem": "1001","path": "1002","skillid": 0},
+	"200002": {"id": 200002,"name": "飞蛾","bloom": 10,"collGroup": "monster","collRect": "0,25,25","collision": 1,"dropItem": "1002","path": "1002","skillid": 0},
+	"200003": {"id": 200003,"name": "飞蛾","bloom": 10,"collGroup": "monster","collRect": "0,25,25","collision": 1,"dropItem": "1001","path": "1002","skillid": 0},
+	"200004": {"id": 200004,"name": "飞蛾","bloom": 10,"collGroup": "monster","collRect": "0,25,25","collision": 1,"dropItem": "1002","path": "1002","skillid": 0},
+	"200005": {"id": 200005,"name": "飞蛾","bloom": 10,"collGroup": "monster","collRect": "0,25,25","collision": 1,"dropItem": "1001","path": "1002","skillid": 0},
+	"200006": {"id": 200006,"name": "飞蛾","bloom": 10,"collGroup": "monster","collRect": "0,25,25","collision": 1,"dropItem": "1001","path": "1002","skillid": 0},
+	"200007": {"id": 200007,"name": "飞蛾","bloom": 10,"collGroup": "monster","collRect": "0,25,25","collision": 1,"dropItem": "1002","path": "1002","skillid": 0},
+	"200008": {"id": 200008,"name": "飞蛾","bloom": 10,"collGroup": "monster","collRect": "0,25,25","collision": 1,"dropItem": "1001","path": "1002","skillid": 0},
+	"200009": {"id": 200009,"name": "飞蛾","bloom": 10,"collGroup": "monster","collRect": "0,25,25","collision": 1,"dropItem": "1002","path": "1002","skillid": 0},
+	"200010": {"id": 200010,"name": "飞蛾","bloom": 10,"collGroup": "monster","collRect": "0,25,25","collision": 1,"dropItem": "1002","path": "1002","skillid": 0},
+	"200011": {"id": 200011,"name": "飞蛾","bloom": 10,"collGroup": "monster","collRect": "0,25,25","collision": 1,"dropItem": "1001","path": "1002","skillid": 0},
+	"200012": {"id": 200012,"name": "飞蛾","bloom": 10,"collGroup": "monster","collRect": "0,25,25","collision": 1,"dropItem": "1002","path": "1002","skillid": 0}
 }

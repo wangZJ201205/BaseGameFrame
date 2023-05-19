@@ -25,4 +25,9 @@ export default class GameData{
     public static Monster_And_Hero_Max_Distance : number = GameData.App_Game_Width / 2 + 200; //怪物和人物之间最短距离
 
     public static Game_Play_Monster_Time_Delay : number = 3; //游戏玩法中怪物的时间间隔
+
+    public static Item_Recycle_Time : number = 60000; //物品回收倒计时
+    // public static Item_Min_Range : number = 120; //进入拾取范围
+    public static Item_Max_Range : number = 1280; //最大范围后移除对象
+
 }

@@ -22,8 +22,9 @@ export default class ItemSkinComponent extends ComponentParent {
                     return;
                 }
                 let sprite = this.getNode().addComponent(cc.Sprite);
-                let spriteFrame = asset.getSpriteFrame('i_b__053');
+                let spriteFrame = asset.getSpriteFrame(entityInfo.src);
                 sprite.spriteFrame = spriteFrame;
+                this.getNode().setScale(0.5);
             });
 
     }

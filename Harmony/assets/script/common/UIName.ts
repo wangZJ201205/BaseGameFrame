@@ -6,4 +6,5 @@ export default class UIName {
     public static readonly MSGBOX : string = 'MSGBOX';
     public static readonly ROCKVIEW : string = 'ROCKVIEW';
     public static readonly TESTVIEW : string = 'TESTVIEW';
+    public static readonly PLAYER_PGB_VIEW : string = 'PLAYER_PGB_VIEW';
 }

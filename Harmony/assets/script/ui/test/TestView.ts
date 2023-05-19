@@ -6,6 +6,7 @@ import GM from "../../common/GM";
 import GameData from "../../common/GameData";
 import Hero from "../../ghost/Hero";
 import GhostMgr from "../../manager/GhostMgr";
+import GameMath from "../../utils/GameMath";
 
 const {ccclass, property} = cc._decorator;
 
@@ -27,12 +28,16 @@ export default class TestView extends cc.Component {
     @property(cc.Button)
     gmButton:cc.Button = null;
 
+    @property(cc.Label)
+    timeLabel:cc.Label = null;
+
     // onLoad () {}
+    _runTime : number;
 
     start () 
     {
         this.monsterTotalEB.string = "" + GameData.Monster_Show_Amount;
-
+        this._runTime = 0;
         this.register();
     }
 
@@ -40,6 +45,7 @@ export default class TestView extends cc.Component {
     {
         this.monsterTotalEB.node.on('editing-return', this.onEditBoxEvent, this)
         this.gmButton.node.on(cc.Node.EventType.TOUCH_END,this.onGmOrderHandle,this); //添加监听
+        this.schedule(this.updateTimer, 1.0); 
     }
 
     update (dt) 
@@ -61,6 +67,12 @@ export default class TestView extends cc.Component {
         var order : string = this.gmEditBox.string;
         var orders :string[] = order.split(" ");
         GM.useGm(orders);
+    }
+
+    updateTimer()
+    {
+        this._runTime++;
+        this.timeLabel.string = GameMath.convertToTimeFormat(this._runTime);
     }
 
 }

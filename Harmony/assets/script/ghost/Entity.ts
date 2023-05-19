@@ -74,6 +74,13 @@ export default class Entity extends cc.Node
         this.removeFromParent();
     }
 
+    //进入休息状态，等待被召唤
+    restEntity()
+    {
+        this.active = false;
+        this.setClientProp(ClientDef.ENTITY_PROP_ACTIVE_STATE, ClientDef.ENTITY_ACTIVE_STATE_FREE);
+    }
+
     getSkill()
     {
         return this._skill;
@@ -187,5 +194,7 @@ export default class Entity extends cc.Node
     {
         return this.getClientProp(ClientDef.ENTITY_PROP_TYPE) == ClientDef.ENTITY_TYPE_MONSTER;
     }
+
+    
 
 }
