@@ -10,6 +10,7 @@ import BulletParent from "./BulletParent";
 import SkillParent from "./SkillParent";
 import FireBallSkill from "./bullet/FireBall/FireBallSkill";
 import IceBallSkill from "./bullet/IceBall/IceBallSkill";
+import RevolutionBallSkill from "./bullet/RevolutionBall/RevolutionBallSkill";
 import ThunderBallSkill from "./bullet/thunder/ThunderBallSkill";
 
 const {ccclass, property} = cc._decorator;
@@ -17,12 +18,19 @@ const {ccclass, property} = cc._decorator;
 @ccclass
 export default class Skill {
 
-    _skills:SkillParent[];
-    _host:Entity;
+    private _skills:SkillParent[];
+    private _host:Entity;
+    private _typeClass : {};
     onLoad (host) 
     {
         this._skills = [];
+        this._typeClass = {};
         this._host = host;
+
+        this._typeClass[ClientDef.SKILL_TYPE_FIREBALL] = FireBallSkill;     //注册火球术
+        this._typeClass[ClientDef.SKILL_TYPE_ICEBALL] = IceBallSkill;       //冰弹
+        this._typeClass[ClientDef.SKILL_TYPE_THUNDER] = ThunderBallSkill;   //雷劈
+        this._typeClass[ClientDef.SKILL_TYPE_REVOLUTION] = RevolutionBallSkill;   //雷劈
     }
 
     start () 
@@ -31,7 +39,7 @@ export default class Skill {
         var skillid = DictMgr.Instance.getDictByName('entity_data')[entityStatic+""].skillid
         if(skillid != 0)
         {
-            this.addSkill(skillid);
+            // this.addSkill(skillid);
         }
 
     }
@@ -62,7 +70,14 @@ export default class Skill {
         }
 
         var type = Math.floor(skillid / 10000); //去整型
-        var skill = this.spawnSkill(type);
+
+        if( !this._typeClass[type ] )
+        {
+            console.info("没有这种类型的子弹对象 :" + type);
+            return;
+        }
+
+        var skill = new (this._typeClass[type ])();
         if(!skill)
         {
             console.info("没有这种类型的子弹对象 :" + type);
@@ -72,24 +87,6 @@ export default class Skill {
         skill.setStaticId(skillid);
         skill.start();
         this._skills.push(skill);
-    }
-
-    spawnSkill(type)
-    {
-        var skill = null;
-        switch(type)
-        {
-            case ClientDef.SKILL_TYPE_FIREBALL: //火球
-                skill = new FireBallSkill();
-            break;
-            case ClientDef.SKILL_TYPE_ICEBALL:
-                skill = new IceBallSkill();
-            break;
-            case ClientDef.SKILL_TYPE_THUNDER:
-                skill = new ThunderBallSkill();
-            break;
-        }
-        return skill;
     }
 
 }

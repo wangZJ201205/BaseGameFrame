@@ -19,16 +19,22 @@ export default class SkillParent {
     protected _curDelay:number;
     protected _bullets:BulletParent[];
     protected _shootTime:number = 10;
+    protected _prop: { [key: string]: any } = {};
+    protected _bulletClass : typeof BulletParent ; //类型赋值
+
     onLoad (host) 
     {
         this._host = host;
         this._bullets = [];
+        this._prop = {};
     }
 
     start () 
     {
         this._skillInfo = DictMgr.Instance.getDictByName('skill_data')[this._staticId+""];
-        this._curDelay = 0;
+        this._curDelay = cc.director.getTotalTime();
+        this._shootTime = this._skillInfo['delay'];
+        this.setProp(ClientDef.SKILL_PROP_COUNT, this._skillInfo['count']);
     }
 
     remove()
@@ -44,13 +50,37 @@ export default class SkillParent {
         return this._staticId;
     }
 
+    getHost()
+    {
+        return this._host;
+    }
+
+    setStaticId(staticid)
+    {
+        this._staticId = staticid;
+    }
+
+    getBullets()
+    {
+        return this._bullets;
+    }
+
+    setProp(type,value)
+    {
+        this._prop[type] = value;
+    }
+
+    getProp(type)
+    {
+        return this._prop[type] || 0;
+    }
+
     update (dt) 
     {
-        this._curDelay ++;
-
-        if( this._curDelay >= this._shootTime )
+        var delay = cc.director.getTotalTime() - this._curDelay;
+        if( delay >= this._shootTime )
         {
-            this._curDelay = 0;
+            this._curDelay = cc.director.getTotalTime();
             this.shootBullet();
         }
 
@@ -63,18 +93,9 @@ export default class SkillParent {
         }
     }
 
-    getHost()
-    {
-        return this._host;
-    }
-
-    setStaticId(staticid)
-    {
-        this._staticId = staticid;
-    }
-
     shootBullet()
-    {
+    {   
+    
     }
 
     //寻找闲置的子弹
@@ -88,7 +109,21 @@ export default class SkillParent {
                 return element;
             }
         }
-        return null;
+        return this.createBullet();
     }
+
+    //创建一个新的子弹
+    createBullet()
+    { 
+        var bullet = new (this._bulletClass)();
+        bullet.onLoad(this);
+        bullet.setProp(ClientDef.BULLET_PROP_ID , this._bullets.length + 1);
+        bullet.setProp(ClientDef.BULLET_PROP_STATICID , this.getStaticId());
+        bullet.start();
+        this._bullets.push(bullet);
+        return bullet;
+    }
+
+    
 
 }

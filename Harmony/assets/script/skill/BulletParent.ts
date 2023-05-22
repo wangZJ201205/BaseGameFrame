@@ -15,9 +15,11 @@ const {ccclass, property} = cc._decorator;
 @ccclass
 export default class BulletParent {
 
-    private _node : cc.Node;
-    protected _host:SkillParent;
-    private _prop:{};
+    protected _node: cc.Node = null;
+    protected _host: SkillParent = null;
+    protected _prop: { [key: string]: any } = {};
+
+    protected _skillInfo: any = null;
 
     onLoad (host) 
     {
@@ -31,52 +33,16 @@ export default class BulletParent {
 
     start () 
     {
-        var sid = this._prop[ClientDef.BULLET_PROP_STATICID];
-        var skillInfo = DictMgr.Instance.getDictByName("skill_data")[sid];
-
-        var damageValue = skillInfo["attackValue"].split("-");
-
+        this._skillInfo =  this.getSkillInfo();
+        var damageValue = this._skillInfo["attackValue"].split("-");
         this.setProp(ClientDef.BULLET_PROP_ATK_MIN, Number(damageValue[0]));
         this.setProp(ClientDef.BULLET_PROP_ATK_MAX, Number(damageValue[1]));
-
         this.setProp(ClientDef.BULLET_PROP_STATE,ClientDef.BULLET_STATE_LOADSRC);
-        //子弹就是以一张图片的形式出现
-        if(skillInfo.animation == 0)
-        {
-            LoadMgr.Instance.LoadAssetWithType("animation/skill/"+ skillInfo.src ,cc.SpriteFrame,(sp)=>{
-                //检查人物状态
-                if(this._host.getHost().getClientProp(ClientDef.ENTITY_PROP_ACTIVE_STATE) != ClientDef.ENTITY_ACTIVE_STATE_RUN)
-                {
-                    return;
-                }
-                var sprite = this.getNode().addComponent(cc.Sprite);
-                sprite.spriteFrame = sp;
-                sprite.node.anchorX = 0.5;
-                sprite.node.anchorY = 0.5;
-                this.setProp(ClientDef.BULLET_PROP_STATE,ClientDef.BULLET_STATE_RUN);
-            })
-        }
-        else
-        {
-            var loadPath = 'animation/skill/' +  skillInfo.src +"/"+ skillInfo.src ;
-            LoadMgr.Instance.LoadAssetWithType(loadPath,cc.Prefab,(asset)=>
-                {
-                    if(this._host.getHost().getClientProp(ClientDef.ENTITY_PROP_ACTIVE_STATE) != ClientDef.ENTITY_ACTIVE_STATE_RUN)
-                    {
-                        return;
-                    }
-                    var aniPref = cc.instantiate(asset);
-                    aniPref.parent = this.getNode();
-                    this.setProp(ClientDef.BULLET_PROP_STATE,ClientDef.BULLET_STATE_RUN);
-                });
-        }
-
-        //是否产生碰撞
-        if(skillInfo.collision == 1)
-        {
+        this.addBulletSkin();
+        if(this._skillInfo.collision == 1)  //是否产生碰撞
+        { 
             this.addCollisionComponent();
         }
-
     }
 
     restart()
@@ -125,18 +91,62 @@ export default class BulletParent {
         return value;
     }
 
-    getSkillDict()
+    getSkillInfo()
     {
         var sid = this._prop[ClientDef.BULLET_PROP_STATICID];
         var skillInfo = DictMgr.Instance.getDictByName("skill_data")[sid];
         return skillInfo;
     }
 
+    addBulletSkin()
+    {
+        var skillInfo = this._skillInfo;
+
+        //子弹就是以一张图片的形式出现
+        if(skillInfo.animation == 0)
+        {
+            this.loadSprite();
+        }
+        else
+        {
+            this.loadPrefab();
+        }
+    }
+
+    loadSprite()
+    {
+        LoadMgr.Instance.LoadAssetWithType("animation/skill/"+ this._skillInfo.src ,cc.SpriteFrame,(sp)=>{
+            //检查人物状态
+            if(this._host.getHost().getClientProp(ClientDef.ENTITY_PROP_ACTIVE_STATE) != ClientDef.ENTITY_ACTIVE_STATE_RUN)
+            {
+                return;
+            }
+            var sprite = this.getNode().addComponent(cc.Sprite);
+            sprite.spriteFrame = sp;
+            sprite.node.anchorX = 0.5;
+            sprite.node.anchorY = 0.5;
+            this.setProp(ClientDef.BULLET_PROP_STATE,ClientDef.BULLET_STATE_RUN);
+        })
+    }
+
+    loadPrefab()
+    {
+        var loadPath = 'animation/skill/' +  this._skillInfo.src +"/"+ this._skillInfo.src ;
+        LoadMgr.Instance.LoadAssetWithType(loadPath,cc.Prefab,(asset)=>{
+            if(this._host.getHost().getClientProp(ClientDef.ENTITY_PROP_ACTIVE_STATE) != ClientDef.ENTITY_ACTIVE_STATE_RUN)
+            {
+                return;
+            }
+            var aniPref = cc.instantiate(asset);
+            aniPref.parent = this.getNode();
+            this.setProp(ClientDef.BULLET_PROP_STATE,ClientDef.BULLET_STATE_RUN);
+        });
+    }
+
     //添加碰撞组件
     addCollisionComponent()
     {
-        var skillInfo = this.getSkillDict();
-        var collrect: string = skillInfo.collRect;
+        var collrect: string = this._skillInfo.collRect;
         var cr : string[] = collrect.split(",");
 
         //添加碰撞外框
@@ -150,14 +160,19 @@ export default class BulletParent {
 
         //添加碰撞组件
         var collCmp = this.getNode().addComponent(CollisionComponent);
-        collCmp.setCollisioner(this);
-        
+        collCmp.setCollisioner(this);   
     }
 
     //碰撞开始
     collisionEnter(other, self)
-    {
+    {   
+        this.getNode().active = false;
+        this.setProp(ClientDef.BULLET_PROP_STATE,ClientDef.BULLET_STATE_FREE);
+
+        var damageValue = this.getDamageValue();
+        other.node.getEntityComponent(ClientDef.ENTITY_COMP_BLOOM).addDamage( damageValue );
     }
+
     //碰撞中
     collisionStay(other, self)
     {

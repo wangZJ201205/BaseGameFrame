@@ -31,18 +31,9 @@ export default class FireBallBullet extends BulletParent {
         // console.log(`函数执行时间为1：${costTime} 毫秒`);
     }
 
-    collisionEnter(other, self)
-    {   
-        this.getNode().active = false;
-        this.setProp(ClientDef.BULLET_PROP_STATE,ClientDef.BULLET_STATE_FREE);
-
-        var damageValue = this.getDamageValue();
-        other.node.getEntityComponent(ClientDef.ENTITY_COMP_BLOOM).addDamage( damageValue );
-    }
-
     update (dt) 
     {
-        var skillInfo = this.getSkillDict();
+        var skillInfo = this._skillInfo;
 
         var heroNode = this._host.getHost().getEntityNode();
         var currentPosition = this.getNode().position;

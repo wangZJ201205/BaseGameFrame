@@ -1,3 +1,6 @@
+import Hero from "../ghost/Hero";
+import GameData from "./GameData";
+
 /**
  * gm命令处理文件
  */
@@ -12,6 +15,8 @@ export default class GM {
     {
         this.GMTable['db_phy'] = this.dbPhyFunc; //关闭物理引擎
         this.GMTable['eb_phy'] = this.ebPhyFunc; //开启物理引擎
+        this.GMTable['addSkill'] = this.addSkill; //添加技能
+        this.GMTable['addMonster'] = this.addMonster; //添加怪物
     }
 
     static useGm(data)
@@ -35,6 +40,17 @@ export default class GM {
         cc.director.getPhysicsManager().enabled = true;  //开启物理属性
         cc.director.getCollisionManager().enabled = true;//开启碰撞检测
     }
+
+    static addSkill(data)
+    {
+        Hero.Instance.addSkill(Number(data[1]));
+    }
+
+    static addMonster(data)
+    {
+        GameData.Monster_Show_Amount += Number(data[1]);
+    }
+
 
     
     

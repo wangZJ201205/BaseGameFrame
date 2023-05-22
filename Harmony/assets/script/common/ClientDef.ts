@@ -66,6 +66,7 @@ export default class ClientDef{
     public static readonly SKILL_TYPE_FIREBALL: number = 1; //火球
     public static readonly SKILL_TYPE_ICEBALL: number = 2; //冰球
     public static readonly SKILL_TYPE_THUNDER: number = 3; //雷劈
+    public static readonly SKILL_TYPE_REVOLUTION: number = 4; //公转球
 
     //子弹属性
     public static readonly BULLET_PROP_ID : number = 1;// id
@@ -77,7 +78,8 @@ export default class ClientDef{
     public static readonly BULLET_PROP_ATK_MIN : number = 7;// 攻击力 小
     public static readonly BULLET_PROP_ATK_MAX : number = 8;// 攻击力 大
     
-
+    //技能属性
+    public static readonly SKILL_PROP_COUNT : number = 1;// 技能中子弹的数量
 
     //子弹的状态
     public static readonly BULLET_STATE_FREE : number = 1; //休闲状态
