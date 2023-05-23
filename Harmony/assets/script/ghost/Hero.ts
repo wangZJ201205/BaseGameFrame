@@ -21,7 +21,7 @@ export default class Hero{
         this._entity._skill.addSkill(20001);
         this._entity._skill.addSkill(30001);
         this._entity._skill.addSkill(40001);
-
+        this._entity._skill.addSkill(50001);
         var info = this._entity.getEntityDict();
         this._entity.setClientProp(ClientDef.ENTITY_PROP_PICKUP_RANGE,info.pickRange);
         

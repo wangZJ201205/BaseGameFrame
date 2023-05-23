@@ -4,6 +4,7 @@
 
 import CollisionComponent from "../Component/CollisionComponent";
 import ClientDef from "../common/ClientDef";
+import GameData from "../common/GameData";
 import Entity from "../ghost/Entity";
 import DictMgr from "../manager/DictMgr";
 import GhostMgr from "../manager/GhostMgr";
@@ -60,7 +61,8 @@ export default class BulletParent {
 
     update (dt) 
     {
-
+        GhostMgr.Instance.setEntityZOrder(this._node);
+        
     }
 
     getNode()

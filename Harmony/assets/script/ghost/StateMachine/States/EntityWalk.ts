@@ -25,6 +25,12 @@ export default class EntityWalk extends StateParent {
         var currentPosition = this.getHost().getEntityNode().position;
         var direction = heroNode.position.sub(currentPosition);
         direction = direction.normalize();
+
+        // 沿着移动方向移动
+        const velocity = direction.mul(this.speed * dt);
+        currentPosition = currentPosition.add(velocity);
+        myNode.position = currentPosition.add(velocity);
+        myNode.zIndex = GameData.App_Game_Heigth -(GameData.App_Game_Heigth/2 + myNode.position.y);
         
         const distance = heroNode.position.sub(currentPosition).mag();
         //超出范围移除
@@ -34,15 +40,7 @@ export default class EntityWalk extends StateParent {
           this.getHost().getEntityNode().active = false;
           this.getHost().setClientProp(ClientDef.ENTITY_PROP_ACTIVE_STATE, ClientDef.ENTITY_ACTIVE_STATE_FREE);
         } 
-        else 
-        {
-          // 沿着移动方向移动
-          const velocity = direction.mul(this.speed * dt);
-          currentPosition = currentPosition.add(velocity);
-          myNode.position = currentPosition.add(velocity);
-          myNode.zIndex = GameData.App_Game_Heigth -(GameData.App_Game_Heigth/2 + myNode.position.y);
-        }
-
+        
         this.changePlayerDirection(direction);
     }
     /**

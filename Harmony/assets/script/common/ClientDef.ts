@@ -67,6 +67,7 @@ export default class ClientDef{
     public static readonly SKILL_TYPE_ICEBALL: number = 2; //冰球
     public static readonly SKILL_TYPE_THUNDER: number = 3; //雷劈
     public static readonly SKILL_TYPE_REVOLUTION: number = 4; //公转球
+    public static readonly SKILL_TYPE_SWORD_AIR: number = 5; //剑气
 
     //子弹属性
     public static readonly BULLET_PROP_ID : number = 1;// id

@@ -39,18 +39,19 @@ export default class FireBallBullet extends BulletParent {
         var currentPosition = this.getNode().position;
         var direction = this.getProp(ClientDef.BULLET_PROP_DIRECTION);
         direction = direction.normalize();
+
+        // 沿着固定方向移动
+        const velocity = direction.mul(skillInfo.speed * dt);
+        currentPosition = currentPosition.add(velocity);
+        this.getNode().position = currentPosition.add(velocity);
         
         const distance = heroNode.position.sub(currentPosition).mag();
         if (distance > GameData.App_Game_Width/2) //超出边界
         {
             this.getNode().active = false;
             this.setProp(ClientDef.BULLET_PROP_STATE,ClientDef.BULLET_STATE_FREE);
-        } else {
-          // 沿着固定方向移动
-          const velocity = direction.mul(skillInfo.speed * dt);
-          currentPosition = currentPosition.add(velocity);
-          this.getNode().position = currentPosition.add(velocity);
-        }
+        } 
+        super.update(dt);
     }
 
     

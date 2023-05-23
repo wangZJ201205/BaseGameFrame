@@ -10,13 +10,19 @@ import BulletParent from "../../BulletParent";
 const {ccclass, property} = cc._decorator;
 
 @ccclass
-export default class ThunderBallBullet extends BulletParent {
+export default class SwordBallBullet extends BulletParent {
 
     private _delta:number = 0;
 
     restart()
     {   
         this._delta = 50;
+        var aniNode= this._node.children[0];
+        if(aniNode)
+        {
+            aniNode.getComponent(cc.Animation).play();
+        }
+        
     }
 
     update (dt) 
@@ -30,5 +36,14 @@ export default class ThunderBallBullet extends BulletParent {
         super.update(dt);
     }
 
+    //碰撞开始
+    collisionEnter(other, self)
+    {   
+        // this.getNode().active = false;
+        // this.setProp(ClientDef.BULLET_PROP_STATE,ClientDef.BULLET_STATE_FREE);
+
+        var damageValue = this.getDamageValue();
+        other.node.getEntityComponent(ClientDef.ENTITY_COMP_BLOOM).addDamage( damageValue );
+    }
     
 }

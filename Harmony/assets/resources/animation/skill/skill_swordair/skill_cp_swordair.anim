@@ -1,0 +1,90 @@
+{
+  "__type__": "cc.AnimationClip",
+  "_name": "skill_cp_swordair",
+  "_objFlags": 0,
+  "_native": "",
+  "_duration": 0.4666666666666667,
+  "sample": 60,
+  "speed": 1,
+  "wrapMode": 0,
+  "curveData": {
+    "comps": {
+      "cc.Sprite": {
+        "spriteFrame": [
+          {
+            "frame": 0,
+            "value": {
+              "__uuid__": "5f90b0fa-b85a-4051-b65e-6b176af2bc50"
+            }
+          },
+          {
+            "frame": 0.1,
+            "value": {
+              "__uuid__": "fd315eff-c621-4d17-83cb-29451b1a4e33"
+            }
+          },
+          {
+            "frame": 0.2,
+            "value": {
+              "__uuid__": "d33122ae-acf4-4275-bc73-162d02cb1017"
+            }
+          },
+          {
+            "frame": 0.31666666666666665,
+            "value": {
+              "__uuid__": "0cbdda54-ea3b-465e-a69e-2f4bb2829391"
+            }
+          },
+          {
+            "frame": 0.45,
+            "value": {
+              "__uuid__": "0cbdda54-ea3b-465e-a69e-2f4bb2829391"
+            }
+          }
+        ]
+      }
+    },
+    "props": {
+      "scale": [
+        {
+          "frame": 0.016666666666666666,
+          "value": {
+            "__type__": "cc.Vec3",
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        }
+      ],
+      "x": [
+        {
+          "frame": 0,
+          "value": 1
+        },
+        {
+          "frame": 0.23333333333333334,
+          "value": 130
+        },
+        {
+          "frame": 0.43333333333333335,
+          "value": 130
+        }
+      ],
+      "y": [
+        {
+          "frame": 0,
+          "value": 66
+        },
+        {
+          "frame": 0.23333333333333334,
+          "value": 83
+        },
+        {
+          "frame": 0.43333333333333335,
+          "value": 83
+        }
+      ]
+    }
+  },
+  "events": []
+}

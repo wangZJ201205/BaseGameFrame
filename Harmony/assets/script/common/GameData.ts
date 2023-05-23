@@ -17,7 +17,7 @@ export default class GameData{
     public static App_Game_Width : number = 1280; //游戏宽度
     public static App_Game_Heigth : number = 720; //游戏高度
 
-    public static Monster_Show_Amount : number = 6; //游戏中展示的怪物数量
+    public static Monster_Show_Amount : number = 40; //游戏中展示的怪物数量
 
     public static Map_Current_Id : number = 10002; //当前地图id
 

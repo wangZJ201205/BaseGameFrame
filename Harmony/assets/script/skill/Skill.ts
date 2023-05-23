@@ -11,6 +11,8 @@ import SkillParent from "./SkillParent";
 import FireBallSkill from "./bullet/FireBall/FireBallSkill";
 import IceBallSkill from "./bullet/IceBall/IceBallSkill";
 import RevolutionBallSkill from "./bullet/RevolutionBall/RevolutionBallSkill";
+import SwordBallBullet from "./bullet/SwordBall/SwordBallBullet";
+import SwordBallSkill from "./bullet/SwordBall/SwordBallSkill";
 import ThunderBallSkill from "./bullet/thunder/ThunderBallSkill";
 
 const {ccclass, property} = cc._decorator;
@@ -31,6 +33,7 @@ export default class Skill {
         this._typeClass[ClientDef.SKILL_TYPE_ICEBALL] = IceBallSkill;       //冰弹
         this._typeClass[ClientDef.SKILL_TYPE_THUNDER] = ThunderBallSkill;   //雷劈
         this._typeClass[ClientDef.SKILL_TYPE_REVOLUTION] = RevolutionBallSkill;   //雷劈
+        this._typeClass[ClientDef.SKILL_TYPE_SWORD_AIR] = SwordBallSkill; //剑气
     }
 
     start () 

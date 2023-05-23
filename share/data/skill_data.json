@@ -147,7 +147,7 @@
 		"collRect": "2,2,40,40",
 		"collision": 1,
 		"count": 9,
-		"delay": 300,
+		"delay": 2000,
 		"movement": "linemovement",
 		"range": 0,
 		"speed": 100,
@@ -180,5 +180,19 @@
 		"range": 0,
 		"speed": 100,
 		"src": "skill_trump"
+	},
+	"50001": {
+		"id": 50001,
+		"name": "斩击",
+		"animation": 1,
+		"attackValue": "5-15",
+		"collRect": "2,2,150,200",
+		"collision": 1,
+		"count": 1,
+		"delay": 3000,
+		"movement": "linemovement",
+		"range": 0,
+		"speed": 100,
+		"src": "skill_swordair"
 	}
 }

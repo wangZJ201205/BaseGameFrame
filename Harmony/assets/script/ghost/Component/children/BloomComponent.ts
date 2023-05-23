@@ -78,6 +78,7 @@ export default class BloomComponent extends ComponentParent {
         var item = ItemMgr.Instance.spawnItem(Number(dropItem));
         item.restart();
         item.getEntityNode().setPosition(this.getHost().getEntityNode().position);
+        GhostMgr.Instance.setEntityZOrder(item.getEntityNode());
     }
 
 

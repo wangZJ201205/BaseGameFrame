@@ -53,6 +53,7 @@ export default class IceBallBullet extends BulletParent {
           currentPosition = currentPosition.add(velocity);
           this.getNode().position = currentPosition.add(velocity);
         }
+        super.update(dt);
     }
 
     

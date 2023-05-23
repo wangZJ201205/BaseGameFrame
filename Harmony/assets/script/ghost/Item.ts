@@ -21,11 +21,14 @@ export default class Item extends Entity {
     private _recycleTime : number;
     private _createTime :number;
     private _isMove = false;
+    private _delta : number;
+
     onLoad () 
     {
         this._client_prop_map = {};
         this._server_prop_map = {};
         this._recycleTime = GameData.Item_Recycle_Time;
+        this._delta = cc.director.getTotalTime();
         
         this.setClientProp(ClientDef.ENTITY_PROP_ACTIVE_STATE,ClientDef.ENTITY_ACTIVE_STATE_INIT);
     }
@@ -68,6 +71,16 @@ export default class Item extends Entity {
             this.restEntity();
         }
 
+        var delta = cc.director.getTotalTime() - this._delta;
+
+        var curHeroState = Hero.Instance.getEntity().getStateMachine().getStateID();
+        if(curHeroState == ClientDef.ENTITY_STATE_IDLE && delta < 10000) //性能保护 如果人物未移动下不检查item距离
+        {
+            return;
+        }
+
+        this._delta = cc.director.getTotalTime();
+        //  const startTime = cc.director.getTotalTime();
         var distance = this.calculateDistance(this,Hero.Instance.getEntity());
         var pickUpRange = Hero.Instance.getEntity().getClientProp(ClientDef.ENTITY_PROP_PICKUP_RANGE);
         if(distance <= pickUpRange ) //是否进入拾取范围
@@ -78,7 +91,9 @@ export default class Item extends Entity {
         {
             this.restEntity();
         }
+        //  const costTime = cc.director.getTotalTime() - startTime;
 
+        //  console.log(`函数执行时间为2：${costTime} 毫秒`);
     }
 
     private pickUp()

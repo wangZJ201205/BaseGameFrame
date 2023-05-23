@@ -17,12 +17,12 @@ export default class Entity extends cc.Node
 {
 
    
-    _client_prop_map:{}; //对象客户端属性
-    _server_prop_map:{}; //对象服务器属性
+    protected _client_prop_map:{}; //对象客户端属性
+    protected _server_prop_map:{}; //对象服务器属性
 
-    _entityStateMachine:EntityStateMachine; //对象状态机
-    _entityComponents:ComponentMgr;
-    _skill:Skill; //技能
+    private _entityStateMachine:EntityStateMachine; //对象状态机
+    private _entityComponents:ComponentMgr;
+    private _skill:Skill; //技能
 
     onLoad () 
     {

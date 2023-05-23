@@ -2,6 +2,7 @@
  * 对象管理
  */
 import ClientDef from "../common/ClientDef";
+import GameData from "../common/GameData";
 import Entity from "../ghost/Entity";
 import Player from "../ghost/Hero";
 import Item from "../ghost/Item";
@@ -165,4 +166,9 @@ export default class GhostMgr extends ParentMgr {
         }
     }
 
+    setEntityZOrder(node)
+    {
+        if(!node)return;
+        node.zIndex = GameData.App_Game_Heigth -(GameData.App_Game_Heigth/2 + node.position.y);//更新对象的深度
+    }
 }

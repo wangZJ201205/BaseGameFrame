@@ -15,10 +15,22 @@ export default class RevolutionBallSkill extends SkillParent {
 
     private _angle:number;
     private _delta : number;
+
+    private _cosCache = {};
+    private _sinCache = {};
+
     start () 
     {
         super.start();
         this._bulletClass = RevolutionBallBullet;
+        this._angle = 0;
+        // 缓存常用计算式
+        var radius:number = 200; // 子弹的半径
+        for (var i = 0; i <= 360; i++) {
+            var radian = i / 180 * Math.PI;
+            this._cosCache[i] = radius*Number((Math.cos(radian)).toFixed(2));
+            this._sinCache[i] = radius*Number((Math.sin(radian)).toFixed(2));
+        }
     }
     
     //发射子弹
@@ -44,10 +56,6 @@ export default class RevolutionBallSkill extends SkillParent {
         }
 
         for (let index = 0; index < createCount; index++) {
-            var i = index + 1;
-            var angle = 360 / bulletCount;
-            angle *= i;
-
             var bullet = this.spawnBullet();
             bullet.getNode().active = true;
             bullet.restart();
@@ -59,28 +67,33 @@ export default class RevolutionBallSkill extends SkillParent {
         super.update(dt);
 
         this._delta++;
-        if( this._delta < 4 )
+        if( this._delta < 6 )
         {
             return;
         }
         this._delta = 0;
 
-        this._angle ++;
-        this._angle = this._angle + 1 < 360 ? this._angle + 1 : 0; 
+        // const startTime = cc.director.getTotalTime();
+
+        this._angle = (this._angle + 3) % 360; // 取模运算可以避免判断
         var bulletCount = this.getProp(ClientDef.SKILL_PROP_COUNT);
+        var heroNode = this.getHost().getEntityNode();
+        
+        var offsetY = 40; // 子弹的高度偏移
         for (let index = 0; index < this._bullets.length; index++) {
             const bullet = this._bullets[index];
             var i = index + 1;
-            var angle = 360 / bulletCount;
-            angle *= i;
-            angle += this._angle;
-
-            var heroNode = this.getHost().getEntityNode();
-            var x = heroNode.position.x +      200 * Math.cos(angle / 180 * Math.PI);
-            var y = heroNode.position.y + 40 + 200 * Math.sin(angle / 180 * Math.PI);
+            var angle = (360 / bulletCount) * index + this._angle; // 直接使用角度公式计算子弹的角度
+            angle %= 360;
+            var x = heroNode.position.x +            this._cosCache[angle] ;
+            var y = heroNode.position.y + offsetY +  this._sinCache[angle] ;
             
-            bullet.getNode().setPosition(x,y);
+            bullet.getNode().setPosition(x,y,0);
         }
+
+        // const costTime = cc.director.getTotalTime() - startTime;
+
+        // console.log(`函数执行时间为2：${costTime} 毫秒`);
     }
 
 
