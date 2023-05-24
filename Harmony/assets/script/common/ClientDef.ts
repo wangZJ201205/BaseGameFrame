@@ -9,8 +9,10 @@ export default class ClientDef{
     
     //场景中的管理深度
     public static readonly SCENE_INDEX_GAMEPLAY : number = 1;
-    public static readonly SCENE_INDEX_GHOST : number = 2;
-    public static readonly SCENE_INDEX_LABEL : number = 3;
+    public static readonly SCENE_INDEX_ITEM : number = 2;
+    public static readonly SCENE_INDEX_GHOST : number = 3;
+    public static readonly SCENE_INDEX_SKILL : number = 4;
+    public static readonly SCENE_INDEX_LABEL : number = 5;
     
 
     //界面深度

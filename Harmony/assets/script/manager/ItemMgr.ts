@@ -5,6 +5,7 @@ import ClientDef from "../common/ClientDef";
 import Item from "../ghost/Item";
 import GhostMgr from "./GhostMgr";
 import ParentMgr from "./ParentMgr";
+import SceneMgr from "./SceneMgr";
 
 const {ccclass, property} = cc._decorator;
 
@@ -28,7 +29,11 @@ export default class ItemMgr extends ParentMgr {
     start () {
         console.info("start ItemMgr");
 
-        this._layer = GhostMgr.Instance.getLayer();
+        this._layer = new cc.Node();
+        this._layer.zIndex = ClientDef.SCENE_INDEX_ITEM;
+        this._layer.width = cc.winSize.width;
+        this._layer.height = cc.winSize.height;
+        this._layer.parent = SceneMgr.Instance.getLayer();
 
         this._timerID = setInterval(this.update.bind(this), 0);
     }

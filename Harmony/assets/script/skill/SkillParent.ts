@@ -18,7 +18,7 @@ export default class SkillParent {
     protected _skillInfo:{};
     protected _curDelay:number;
     protected _bullets:BulletParent[];
-    protected _shootTime:number = 10;
+    protected _shootTime:number = 60;
     protected _prop: { [key: string]: any } = {};
     protected _bulletClass : typeof BulletParent ; //类型赋值
 

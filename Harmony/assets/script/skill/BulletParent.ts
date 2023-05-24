@@ -9,6 +9,8 @@ import Entity from "../ghost/Entity";
 import DictMgr from "../manager/DictMgr";
 import GhostMgr from "../manager/GhostMgr";
 import LoadMgr from "../manager/LoadMgr";
+import SceneMgr from "../manager/SceneMgr";
+import SkillMgr from "../manager/SkillMgr";
 import SkillParent from "./SkillParent";
 
 const {ccclass, property} = cc._decorator;
@@ -28,7 +30,8 @@ export default class BulletParent {
         this._prop = {};
 
         this._node = new cc.Node();
-        GhostMgr.Instance.getLayer().addChild(this._node);
+        SkillMgr.Instance.getLayer().addChild(this._node);
+
         this.setProp(ClientDef.BULLET_PROP_STATE,ClientDef.BULLET_STATE_FREE);
     }
 
@@ -117,14 +120,15 @@ export default class BulletParent {
 
     loadSprite()
     {
-        LoadMgr.Instance.LoadAssetWithType("animation/skill/"+ this._skillInfo.src ,cc.SpriteFrame,(sp)=>{
+        LoadMgr.Instance.LoadAssetWithType("animation/skill/skill_res" ,cc.SpriteAtlas,(sp)=>{
             //检查人物状态
             if(this._host.getHost().getClientProp(ClientDef.ENTITY_PROP_ACTIVE_STATE) != ClientDef.ENTITY_ACTIVE_STATE_RUN)
             {
                 return;
             }
             var sprite = this.getNode().addComponent(cc.Sprite);
-            sprite.spriteFrame = sp;
+            let spriteFrame = sp.getSpriteFrame(this._skillInfo.src);
+            sprite.spriteFrame = spriteFrame;
             sprite.node.anchorX = 0.5;
             sprite.node.anchorY = 0.5;
             this.setProp(ClientDef.BULLET_PROP_STATE,ClientDef.BULLET_STATE_RUN);

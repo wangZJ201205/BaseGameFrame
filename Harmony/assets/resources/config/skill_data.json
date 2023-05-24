@@ -2,7 +2,7 @@
 	"10001": {
 		"id": 10001,
 		"name": "火球术",
-		"animation": 0,
+		"animation": 1,
 		"attackValue": "5-15",
 		"collRect": "2,2,40,40",
 		"collision": 1,
@@ -147,7 +147,7 @@
 		"collRect": "2,2,40,40",
 		"collision": 1,
 		"count": 9,
-		"delay": 2000,
+		"delay": 1000,
 		"movement": "linemovement",
 		"range": 0,
 		"speed": 100,
@@ -161,7 +161,7 @@
 		"collRect": "2,2,40,40",
 		"collision": 1,
 		"count": 1,
-		"delay": 600,
+		"delay": 100,
 		"movement": "linemovement",
 		"range": 0,
 		"speed": 100,
@@ -175,7 +175,7 @@
 		"collRect": "2,2,40,40",
 		"collision": 1,
 		"count": 3,
-		"delay": 6000,
+		"delay": 300,
 		"movement": "linemovement",
 		"range": 0,
 		"speed": 100,
@@ -189,10 +189,10 @@
 		"collRect": "100,83,200,150",
 		"collision": 1,
 		"count": 2,
-		"delay": 3000,
+		"delay": 300,
 		"movement": "linemovement",
 		"range": 0,
-		"speed": 100,
+		"speed": 1000,
 		"src": "skill_swordair"
 	}
 }

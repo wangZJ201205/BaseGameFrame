@@ -3,7 +3,7 @@
   "_name": "skill_cp_zhaoleipi",
   "_objFlags": 0,
   "_native": "",
-  "_duration": 0.11666666666666667,
+  "_duration": 0.2833333333333333,
   "sample": 60,
   "speed": 1,
   "wrapMode": 2,
@@ -14,25 +14,37 @@
           {
             "frame": 0,
             "value": {
-              "__uuid__": "dc713873-acd0-47aa-a8c4-950efe18ae9b"
+              "__uuid__": "6789933c-9c10-48b5-9c55-94a50daa95ae"
             }
           },
           {
-            "frame": 0.03333333333333333,
+            "frame": 0.05,
             "value": {
-              "__uuid__": "34fa1fa5-44fa-40db-87a3-7dd947cf84b4"
-            }
-          },
-          {
-            "frame": 0.06666666666666667,
-            "value": {
-              "__uuid__": "e4830667-916d-4592-93bb-7e0cacdae66a"
+              "__uuid__": "a70f76cd-f70b-496b-9516-ec0a03962bd2"
             }
           },
           {
             "frame": 0.1,
             "value": {
-              "__uuid__": "6630a488-169f-4c9f-8fa4-6697379ebb7c"
+              "__uuid__": "8dc4c065-d815-4d39-ab45-07b7418cfc06"
+            }
+          },
+          {
+            "frame": 0.16666666666666666,
+            "value": {
+              "__uuid__": "cbfa3315-cd67-4af8-9d22-133221fc19ea"
+            }
+          },
+          {
+            "frame": 0.21666666666666667,
+            "value": {
+              "__uuid__": "01e63483-7f46-4d48-a550-cad7808b8cab"
+            }
+          },
+          {
+            "frame": 0.26666666666666666,
+            "value": {
+              "__uuid__": "8f5717f4-c419-43ff-87bf-639aa27b6a78"
             }
           }
         ]

@@ -17,11 +17,11 @@ export default class Hero{
     }
 
     start () {
-        this._entity._skill.addSkill(10001);
-        this._entity._skill.addSkill(20001);
-        this._entity._skill.addSkill(30001);
-        this._entity._skill.addSkill(40001);
-        this._entity._skill.addSkill(50001);
+        this._entity.getSkill().addSkill(10001);
+        this._entity.getSkill().addSkill(20001);
+        this._entity.getSkill().addSkill(30001);
+        this._entity.getSkill().addSkill(40001);
+        this._entity.getSkill().addSkill(50001);
         var info = this._entity.getEntityDict();
         this._entity.setClientProp(ClientDef.ENTITY_PROP_PICKUP_RANGE,info.pickRange);
         
@@ -66,7 +66,7 @@ export default class Hero{
 
     addSkill(skillid)
     {
-        this._entity._skill.addSkill(skillid);
+        this._entity.getSkill().addSkill(skillid);
     }
 
 }

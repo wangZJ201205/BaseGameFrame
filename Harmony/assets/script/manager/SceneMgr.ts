@@ -8,6 +8,7 @@ import Hero from "../ghost/Hero";
 import GhostMgr from "./GhostMgr";
 import LabelMgr from "./LabelMgr";
 import ParentMgr from "./ParentMgr";
+import SkillMgr from "./SkillMgr";
 
 const {ccclass, property} = cc._decorator;
 
@@ -17,6 +18,8 @@ export default class SceneMgr extends ParentMgr {
     public static readonly Instance : SceneMgr = new SceneMgr();
     layer: cc.Node = null; //显示层
     
+    skillLayer : cc.Node = null
+
     getLayer()
     {
         return this.layer;
@@ -32,6 +35,7 @@ export default class SceneMgr extends ParentMgr {
         LabelMgr.Instance.onLoad();
         GamePlay.Instance.onLoad();
         ItemMgr.Instance.onLoad();
+        SkillMgr.Instance.onLoad();
 
     }
 
@@ -48,7 +52,8 @@ export default class SceneMgr extends ParentMgr {
         GhostMgr.Instance.start();
         LabelMgr.Instance.start();
         ItemMgr.Instance.start();
-
+        SkillMgr.Instance.start();
+        
     }
 
     update () 
