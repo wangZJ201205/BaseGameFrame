@@ -48,8 +48,7 @@ export default class FireBallBullet extends BulletParent {
         const distance = heroNode.position.sub(currentPosition).mag();
         if (distance > GameData.App_Game_Width/2) //超出边界
         {
-            this.getNode().active = false;
-            this.setProp(ClientDef.BULLET_PROP_STATE,ClientDef.BULLET_STATE_FREE);
+            this.stop();
         } 
         super.update(dt);
     }

@@ -4,10 +4,49 @@
     <dict>
         <key>frames</key>
         <dict>
+            <key>i_jpql_01.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{420,558},{70,70}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{70,70}}</string>
+                <key>sourceSize</key>
+                <string>{70,70}</string>
+            </dict>
+            <key>i_jpql_02.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{414,486},{70,70}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{70,70}}</string>
+                <key>sourceSize</key>
+                <string>{70,70}</string>
+            </dict>
+            <key>i_jpql_03.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{342,486},{70,70}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{70,70}}</string>
+                <key>sourceSize</key>
+                <string>{70,70}</string>
+            </dict>
             <key>skill_fireball.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{342,432},{103,46}}</string>
+                <string>{{2,1334},{103,46}}</string>
                 <key>offset</key>
                 <string>{0,-1}</string>
                 <key>rotated</key>
@@ -111,7 +150,7 @@
             <key>skill_trump.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{342,480},{64,64}}</string>
+                <string>{{420,630},{64,64}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -121,6 +160,19 @@
                 <key>sourceSize</key>
                 <string>{64,64}</string>
             </dict>
+            <key>sword_176.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{342,432},{90,52}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{90,52}}</string>
+                <key>sourceSize</key>
+                <string>{90,52}</string>
+            </dict>
         </dict>
         <key>metadata</key>
         <dict>
@@ -129,9 +181,9 @@
             <key>realTextureFileName</key>
             <string>skill_res.png</string>
             <key>size</key>
-            <string>{490,1390}</string>
+            <string>{492,1391}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:056a1df67313a707abd93fd97f98b7bc:1/1$</string>
+            <string>$TexturePacker:SmartUpdate:6be6da5a43f5cbc66e90bf6543fa0859:1/1$</string>
             <key>textureFileName</key>
             <string>skill_res.png</string>
         </dict>

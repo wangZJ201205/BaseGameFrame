@@ -41,21 +41,8 @@ export default class GamePlay {
         this.layer.zIndex = ClientDef.SCENE_INDEX_GAMEPLAY;
         this.layer.parent = SceneMgr.Instance.getLayer();
 
-        UIMgr.Instance.openUI(UIName.ROCKVIEW);
-        UIMgr.Instance.openUI(UIName.PLAYER_PGB_VIEW);
-        if(GameData.IsDebug)
-        {
-            UIMgr.Instance.openUI(UIName.TESTVIEW);
-        }
-        
-        var player = GhostMgr.Instance.spawnEntity(100001);
-        player.restart();
-        Hero.Instance.setEntity(player);
-        Hero.Instance.start();
-
-        this._gpMonster = new GPMonster();
-        this._gpMonster.onLoad();
-        this._gpMonster.start();
+        this.openUI();
+        this.createEntity();
 
         this._timerID = setInterval(this.update.bind(this), 0);
 
@@ -66,6 +53,31 @@ export default class GamePlay {
     {
         this._gpMonster.update();
         this.refreshScenePos();
+    }
+
+    //打开所有的界面
+    openUI()
+    {
+        UIMgr.Instance.openUI(UIName.ROCKVIEW);
+        UIMgr.Instance.openUI(UIName.PLAYER_PGB_VIEW);
+        UIMgr.Instance.openUI(UIName.ADVERTISEMENT_VIEW);
+        if(GameData.IsDebug)
+        {
+            UIMgr.Instance.openUI(UIName.TESTVIEW);
+        }
+    }
+
+    //创建角色
+    createEntity()
+    {
+        var player = GhostMgr.Instance.spawnEntity(100001);
+        player.restart();
+        Hero.Instance.setEntity(player);
+        Hero.Instance.start();
+
+        this._gpMonster = new GPMonster();
+        this._gpMonster.onLoad();
+        this._gpMonster.start();
     }
 
     //实时检测人物的位置

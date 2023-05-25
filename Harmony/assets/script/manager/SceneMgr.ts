@@ -9,6 +9,7 @@ import GhostMgr from "./GhostMgr";
 import LabelMgr from "./LabelMgr";
 import ParentMgr from "./ParentMgr";
 import SkillMgr from "./SkillMgr";
+import GameData from "../common/GameData";
 
 const {ccclass, property} = cc._decorator;
 
@@ -58,6 +59,10 @@ export default class SceneMgr extends ParentMgr {
 
     update () 
     {
+        if(GameData.Game_Pause_State)
+        {
+            return;
+        }
         GamePlay.Instance.update();
         
     }

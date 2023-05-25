@@ -23,8 +23,8 @@ export default class UIConfig{
         this.UIReg[UIName.ROCKVIEW] = { path: this.PreGame + 'RockPref',index:ClientDef.UI_INDEX_COMMON }; 
         this.UIReg[UIName.TESTVIEW] = { path: this.PreGame + 'TestPref',index:ClientDef.UI_INDEX_COMMON }; 
         this.UIReg[UIName.PLAYER_PGB_VIEW] = { path: this.PreGame + 'HeroExpPref',index:ClientDef.UI_INDEX_COMMON }; 
-
-
+        this.UIReg[UIName.ADVERTISEMENT_VIEW] = { path: this.PreGame + 'AdvertisePref',index:ClientDef.UI_INDEX_COMMON }; 
+        this.UIReg[UIName.SELECTSKILL_VIEW] = { path: this.PreGame + 'SelectSkillPref',index:ClientDef.UI_INDEX_COMMON }; 
     }
 
     static getUIPath(uiName)

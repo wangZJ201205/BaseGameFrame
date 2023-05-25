@@ -65,11 +65,12 @@ export default class ClientDef{
     public static readonly ENTITY_PROP_LV : number = 13; //等级
 
     //技能类型
-    public static readonly SKILL_TYPE_FIREBALL: number = 1; //火球
-    public static readonly SKILL_TYPE_ICEBALL: number = 2; //冰球
-    public static readonly SKILL_TYPE_THUNDER: number = 3; //雷劈
-    public static readonly SKILL_TYPE_REVOLUTION: number = 4; //公转球
-    public static readonly SKILL_TYPE_SWORD_AIR: number = 5; //剑气
+    public static readonly SKILL_TYPE_FIREBALL: number      = 101; //火球
+    public static readonly SKILL_TYPE_ICEBALL: number       = 102; //冰球
+    public static readonly SKILL_TYPE_THUNDER: number       = 103; //雷劈
+    public static readonly SKILL_TYPE_REVOLUTION: number    = 104; //公转球
+    public static readonly SKILL_TYPE_SWORD_AIR: number     = 105; //剑气
+    public static readonly SKILL_TYPE_TAIJI: number         = 106; //太极
 
     //子弹属性
     public static readonly BULLET_PROP_ID : number = 1;// id
@@ -80,6 +81,8 @@ export default class ClientDef{
     public static readonly BULLET_PROP_ANGLE : number = 6;// 角度
     public static readonly BULLET_PROP_ATK_MIN : number = 7;// 攻击力 小
     public static readonly BULLET_PROP_ATK_MAX : number = 8;// 攻击力 大
+    public static readonly BULLET_PROP_CHANG_RANGE : number = 9;// 变化的范围
+    public static readonly BULLET_PROP_CHANG_DIR : number = 10;// 变化的方向
     
     //技能属性
     public static readonly SKILL_PROP_COUNT : number = 1;// 技能中子弹的数量

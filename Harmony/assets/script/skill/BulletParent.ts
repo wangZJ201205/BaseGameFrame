@@ -23,6 +23,7 @@ export default class BulletParent {
     protected _prop: { [key: string]: any } = {};
 
     protected _skillInfo: any = null;
+    protected _staticId : number;
 
     onLoad (host) 
     {
@@ -51,7 +52,13 @@ export default class BulletParent {
 
     restart()
     {
+        
+    }
 
+    stop()
+    {
+        this.getNode().active = false;
+        this.setProp(ClientDef.BULLET_PROP_STATE,ClientDef.BULLET_STATE_FREE);
     }
 
     remove()
@@ -172,9 +179,8 @@ export default class BulletParent {
     //碰撞开始
     collisionEnter(other, self)
     {   
-        this.getNode().active = false;
-        this.setProp(ClientDef.BULLET_PROP_STATE,ClientDef.BULLET_STATE_FREE);
-
+        
+        this.stop();
         var damageValue = this.getDamageValue();
         other.node.getEntityComponent(ClientDef.ENTITY_COMP_BLOOM).addDamage( damageValue );
     }

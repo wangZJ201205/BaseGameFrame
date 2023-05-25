@@ -24,8 +24,7 @@ export default class ThunderBallBullet extends BulletParent {
         this._delta--;
         if(this._delta <= 0)
         {
-            this.getNode().active = false;
-            this.setProp(ClientDef.BULLET_PROP_STATE,ClientDef.BULLET_STATE_FREE);
+            this.stop();
         }
         super.update(dt);
     }

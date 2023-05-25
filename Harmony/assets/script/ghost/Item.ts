@@ -43,6 +43,7 @@ export default class Item extends Entity {
     restart()
     {
         this.setClientProp(ClientDef.ENTITY_PROP_ACTIVE_STATE,ClientDef.ENTITY_ACTIVE_STATE_RUN);
+        this.setClientProp(ClientDef.ENTITY_PROP_WAIT_DESTROY_TIME, 0);
         this.active = true;
         this._isMove = false;
         this._createTime = cc.director.getTotalTime();
@@ -83,6 +84,7 @@ export default class Item extends Entity {
         //  const startTime = cc.director.getTotalTime();
         var distance = this.calculateDistance(this,Hero.Instance.getEntity());
         var pickUpRange = Hero.Instance.getEntity().getClientProp(ClientDef.ENTITY_PROP_PICKUP_RANGE);
+        pickUpRange = pickUpRange * GameData.Player_PickItem_Range; //拾取范围检测
         if(distance <= pickUpRange ) //是否进入拾取范围
         {
             this.pickUp();

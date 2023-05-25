@@ -30,8 +30,7 @@ export default class SwordBallBullet extends BulletParent {
         this._delta--;
         if(this._delta <= 0)
         {
-            this.getNode().active = false;
-            this.setProp(ClientDef.BULLET_PROP_STATE,ClientDef.BULLET_STATE_FREE);
+            this.stop();
         }
         super.update(dt);
     }
@@ -39,9 +38,6 @@ export default class SwordBallBullet extends BulletParent {
     //碰撞开始
     collisionEnter(other, self)
     {   
-        // this.getNode().active = false;
-        // this.setProp(ClientDef.BULLET_PROP_STATE,ClientDef.BULLET_STATE_FREE);
-
         var damageValue = this.getDamageValue();
         other.node.getEntityComponent(ClientDef.ENTITY_COMP_BLOOM).addDamage( damageValue );
     }

@@ -348,7 +348,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 97.89,
+      "width": 58.73,
       "height": 50.4
     },
     "_anchorPoint": {
@@ -361,7 +361,7 @@
       "ctor": "Float64Array",
       "array": [
         1276.869,
-        45.715,
+        29.358,
         0,
         0,
         0,
@@ -402,7 +402,7 @@
     "_dstBlendFactor": 771,
     "_string": "LV.75",
     "_N$string": "LV.75",
-    "_fontSize": 40,
+    "_fontSize": 24,
     "_lineHeight": 40,
     "_enableWrapText": true,
     "_N$file": null,

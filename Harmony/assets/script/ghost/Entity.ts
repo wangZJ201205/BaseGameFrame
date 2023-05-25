@@ -55,6 +55,7 @@ export default class Entity extends cc.Node
     restart()
     {
         this.setClientProp(ClientDef.ENTITY_PROP_ACTIVE_STATE,ClientDef.ENTITY_ACTIVE_STATE_RUN);
+        this.setClientProp(ClientDef.ENTITY_PROP_WAIT_DESTROY_TIME, 0);
         this.active = true;
         this._entityComponents.restart();
         this._entityStateMachine.restart();

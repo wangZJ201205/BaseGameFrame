@@ -3,6 +3,7 @@
  */
 
 import ClientDef from "../common/ClientDef";
+import GameData from "../common/GameData";
 import Entity from "../ghost/Entity";
 import DictMgr from "../manager/DictMgr";
 import GhostMgr from "../manager/GhostMgr";
@@ -18,7 +19,7 @@ export default class SkillParent {
     protected _skillInfo:{};
     protected _curDelay:number;
     protected _bullets:BulletParent[];
-    protected _shootTime:number = 60;
+    protected _shootTime:number = 60; //设计时间
     protected _prop: { [key: string]: any } = {};
     protected _bulletClass : typeof BulletParent ; //类型赋值
 
@@ -78,7 +79,8 @@ export default class SkillParent {
     update (dt) 
     {
         var delay = cc.director.getTotalTime() - this._curDelay;
-        if( delay >= this._shootTime )
+        var shootTime = this._shootTime * GameData.Skill_Shoot_Accelerate; //是否全局加速
+        if( delay >= shootTime )
         {
             this._curDelay = cc.director.getTotalTime();
             this.shootBullet();
@@ -103,7 +105,8 @@ export default class SkillParent {
     {
         for (let index = 0; index < this._bullets.length; index++) {
             const element = this._bullets[index];
-            if( element.getProp(ClientDef.BULLET_PROP_STATE) == ClientDef.BULLET_STATE_FREE )
+            var bulletId = element.getProp(ClientDef.BULLET_PROP_STATICID);
+            if( element.getProp(ClientDef.BULLET_PROP_STATE) == ClientDef.BULLET_STATE_FREE && bulletId == this._staticId)
             {
                 element.setProp(ClientDef.BULLET_PROP_STATE,ClientDef.BULLET_STATE_RUN);
                 return element;

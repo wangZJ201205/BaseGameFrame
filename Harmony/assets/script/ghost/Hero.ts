@@ -17,11 +17,12 @@ export default class Hero{
     }
 
     start () {
-        this._entity.getSkill().addSkill(10001);
-        this._entity.getSkill().addSkill(20001);
-        this._entity.getSkill().addSkill(30001);
-        this._entity.getSkill().addSkill(40001);
-        this._entity.getSkill().addSkill(50001);
+        // this._entity.getSkill().addSkill(10101);
+        // this._entity.getSkill().addSkill(10201);
+        // this._entity.getSkill().addSkill(10301);
+        // this._entity.getSkill().addSkill(10401);
+        // this._entity.getSkill().addSkill(10501);
+        // this._entity.getSkill().addSkill(10601);
         var info = this._entity.getEntityDict();
         this._entity.setClientProp(ClientDef.ENTITY_PROP_PICKUP_RANGE,info.pickRange);
         

@@ -13,6 +13,7 @@ import IceBallSkill from "./bullet/IceBall/IceBallSkill";
 import RevolutionBallSkill from "./bullet/RevolutionBall/RevolutionBallSkill";
 import SwordBallBullet from "./bullet/SwordBall/SwordBallBullet";
 import SwordBallSkill from "./bullet/SwordBall/SwordBallSkill";
+import TaijiBallSkill from "./bullet/TaijiBall/TaijiBallSkill";
 import ThunderBallSkill from "./bullet/thunder/ThunderBallSkill";
 
 const {ccclass, property} = cc._decorator;
@@ -28,12 +29,13 @@ export default class Skill {
         this._skills = [];
         this._typeClass = {};
         this._host = host;
-
+        
         this._typeClass[ClientDef.SKILL_TYPE_FIREBALL] = FireBallSkill;     //注册火球术
         this._typeClass[ClientDef.SKILL_TYPE_ICEBALL] = IceBallSkill;       //冰弹
         this._typeClass[ClientDef.SKILL_TYPE_THUNDER] = ThunderBallSkill;   //雷劈
         this._typeClass[ClientDef.SKILL_TYPE_REVOLUTION] = RevolutionBallSkill;   //雷劈
         this._typeClass[ClientDef.SKILL_TYPE_SWORD_AIR] = SwordBallSkill; //剑气
+        this._typeClass[ClientDef.SKILL_TYPE_TAIJI] = TaijiBallSkill; //太极
     }
 
     start () 
@@ -72,7 +74,7 @@ export default class Skill {
             return;
         }
 
-        var type = Math.floor(skillid / 10000); //去整型
+        var type = Math.floor(skillid / 100); //去整型
 
         if( !this._typeClass[type ] )
         {
@@ -80,16 +82,43 @@ export default class Skill {
             return;
         }
 
-        var skill = new (this._typeClass[type ])();
-        if(!skill)
+        var skill = this.findSkill(skillid,type);
+        if( !skill )
         {
-            console.info("没有这种类型的子弹对象 :" + type);
-            return;
+            skill = this.spawnSkill(type);
         }
-        skill.onLoad(this._host);
         skill.setStaticId(skillid);
         skill.start();
+    }
+
+    //原有的基础上升级
+    findSkill(skillid,type)
+    {
+        //已经有了改技能就升级
+        for (let index = 0; index < this._skills.length; index++) {
+            const skill = this._skills[index];
+            if(Math.floor(skill.getStaticId() / 100) == type)
+            {
+                skill.setStaticId(skillid);
+                skill.start();
+                return skill;
+            }
+        }
+        return null;
+    }
+
+    //生成一个新技能
+    spawnSkill(type)
+    {
+        var skill = new (this._typeClass[type])();
+        skill.onLoad(this._host);
         this._skills.push(skill);
+        return skill;
+    }
+
+    getSkills()
+    {
+        return this._skills;
     }
 
 }

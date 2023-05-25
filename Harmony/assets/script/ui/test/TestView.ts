@@ -71,6 +71,10 @@ export default class TestView extends cc.Component {
 
     updateTimer()
     {
+        if(GameData.Game_Pause_State)
+        {
+            return;
+        }
         this._runTime++;
         this.timeLabel.string = GameMath.convertToTimeFormat(this._runTime);
     }

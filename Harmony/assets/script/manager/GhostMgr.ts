@@ -33,7 +33,6 @@ export default class GhostMgr extends ParentMgr {
     start () {
         console.info("start GhostMgr");
 
-        // var canvas = cc.director.getScene().getChildByName('Canvas');
         this.layer = new cc.Node();
         this.layer.zIndex = ClientDef.SCENE_INDEX_GHOST;
         this.layer.width = cc.winSize.width;
@@ -44,11 +43,16 @@ export default class GhostMgr extends ParentMgr {
 
         this._typeClass[ClientDef.ENTITY_TYPE_PLAYER ] = Entity;
         this._typeClass[ClientDef.ENTITY_TYPE_MONSTER ] = Entity;
-        this._typeClass[ClientDef.ENTITY_TYPE_ITEM ] = Item;
+        // this._typeClass[ClientDef.ENTITY_TYPE_ITEM ] = Item;
     }
 
     private update (dt) {
         
+        if(GameData.Game_Pause_State)
+        {
+            return;
+        }
+
         const delta = cc.director.getDeltaTime();
         var needRemoveEntity = [];
         for (let index = 0; index < this.entitys.length; index++) {
@@ -134,7 +138,6 @@ export default class GhostMgr extends ParentMgr {
         this.entitys.push(entity);
     }
 
-   
 
     /**
      * 删除所有对象
