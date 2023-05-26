@@ -99,4 +99,7 @@ export default class ClientDef{
     public static readonly COLLISION_GROUP_PLAYER : string = 'player'; //玩家
     public static readonly COLLISION_GROUP_MONSTER : string = 'monster'; //怪物
     public static readonly COLLISION_GROUP_BULLET : string = 'bullet'; //子弹
+
+    //基因类型
+    public static readonly GENE_TYPE_SPEED : number = 1; //速度
 }

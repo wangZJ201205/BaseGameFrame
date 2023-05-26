@@ -6,6 +6,7 @@ import ClothComponent from "./Component/children/ClothComponent";
 import EntityStateMachine from "./StateMachine/EntityStateMachine";
 import MonsterStateMachine from "./StateMachine/MonsterStateMachine";
 import PlayerStateMachine from "./StateMachine/PlayerStateMachine";
+import GeneMgr from "./gene/GeneMgr";
 
 /**
  * 对象类
@@ -23,6 +24,7 @@ export default class Entity extends cc.Node
     private _entityStateMachine:EntityStateMachine; //对象状态机
     private _entityComponents:ComponentMgr;
     private _skill:Skill; //技能
+    private _gene:GeneMgr; //基因管理
 
     onLoad () 
     {
@@ -35,6 +37,9 @@ export default class Entity extends cc.Node
         this._entityComponents = new ComponentMgr();
         this._entityComponents.onLoad(this);
 
+        this._gene = new GeneMgr();
+        this._gene.onLoad(this);
+
         this.setClientProp(ClientDef.ENTITY_PROP_ACTIVE_STATE,ClientDef.ENTITY_ACTIVE_STATE_INIT);
     }
 
@@ -44,6 +49,7 @@ export default class Entity extends cc.Node
         
         this._skill.start();
         this._entityComponents.start();
+        this._gene.start();
 
         this._entityStateMachine = this.spawnStateMachine(); //此时才知道对象类型是什么
         this._entityStateMachine.onLoad(this);
@@ -71,6 +77,10 @@ export default class Entity extends cc.Node
         if(this._skill)
         {
             this._skill.remove();
+        }
+        if(this._gene)
+        {
+            this._gene.remove();
         }
         this.removeFromParent();
     }
@@ -169,6 +179,10 @@ export default class Entity extends cc.Node
         if(this._entityComponents)
         {
             this._entityComponents.update(dt);
+        }
+        if(this._gene)
+        {
+            this._gene.update(dt);
         }
     }
 
