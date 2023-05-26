@@ -1,0 +1,74 @@
+/**
+ * 放毒
+ */
+import ClientDef from "../../../common/ClientDef";
+import GameData from "../../../common/GameData";
+import Hero from "../../../ghost/Hero";
+import SkillMgr from "../../../manager/SkillMgr";
+import GameMath from "../../../utils/GameMath";
+import BulletHelp from "../../BulletHelp";
+import BulletParent from "../../BulletParent";
+
+const {ccclass, property} = cc._decorator;
+
+@ccclass
+export default class posionBallBullet extends BulletParent {
+
+    private _delta:number = 0;
+    private _damagePlayers : number = 0;
+    private _bufferTime :  number = 50;
+
+    onLoad (host) 
+    {
+        this._host = host;
+        this._prop = {};
+
+        this._node = new cc.Node();
+        SkillMgr.Instance.getLayerLow().addChild(this._node);
+
+        this.setProp(ClientDef.BULLET_PROP_STATE,ClientDef.BULLET_STATE_FREE);
+    }
+
+    restart()
+    {   
+        this._delta = cc.director.getTotalTime();
+    }
+
+    update (dt) 
+    {
+        var delay = cc.director.getTotalTime() - this._delta;
+        if(delay > this._skillInfo["sustaintime"])
+        {
+            this.stop();
+        }
+    }
+
+    //碰撞开始
+    collisionEnter(other, self)
+    {  
+    }
+
+    //碰撞中
+    collisionStay(other, self)
+    {
+        // var delay = cc.director.getTotalTime() - this._delta;
+        // var damageTime = this._skillInfo['delay'] * GameData.Skill_Shoot_Accelerate; //是否全局加速
+        // if( damageTime < delay ) //是否在攻击范围之内
+        // {
+        //     this._damagePlayers++;
+        //     if(this._damagePlayers > this._skillInfo["count"] || damageTime + this._bufferTime < delay) //如果大于伤害人数或超过伤害缓冲时间，就重置
+        //     {
+        //         this._delta = cc.director.getTotalTime();
+        //         this._damagePlayers = 0;
+        //         return;
+        //     }
+        // }
+        // else
+        // {
+        //     return;
+        // }
+        // var damageValue = this.getDamageValue();
+        // other.node.getEntityComponent(ClientDef.ENTITY_COMP_BLOOM).addDamage( damageValue );
+    }
+    
+}

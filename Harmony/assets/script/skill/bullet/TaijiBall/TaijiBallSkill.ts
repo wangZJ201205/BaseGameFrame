@@ -38,6 +38,12 @@ export default class TaijiBallSkill extends SkillParent {
         this._angle = 0;
         var bulletCount = this.getProp(ClientDef.SKILL_PROP_COUNT);
         
+        for (let index = 0; index < this._bullets.length; index++) //先停止所有的正在运行的子弹
+        {
+            const bullet = this._bullets[index];
+            bullet.stop();
+        }
+
         for (let index = 0; index < bulletCount; index++) {
             var bullet = this.spawnBullet();
             bullet.getNode().active = true;

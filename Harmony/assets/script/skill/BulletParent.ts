@@ -44,10 +44,9 @@ export default class BulletParent {
         this.setProp(ClientDef.BULLET_PROP_ATK_MAX, Number(damageValue[1]));
         this.setProp(ClientDef.BULLET_PROP_STATE,ClientDef.BULLET_STATE_LOADSRC);
         this.addBulletSkin();
-        if(this._skillInfo.collision == 1)  //是否产生碰撞
-        { 
-            this.addCollisionComponent();
-        }
+        this.addCollision();
+        
+
     }
 
     restart()
@@ -156,8 +155,20 @@ export default class BulletParent {
         });
     }
 
+    addCollision()
+    {
+        if(this._skillInfo.collision == 1)  //是否产生碰撞
+        { 
+            this.addCollisionRectComponent();
+        }
+        else if(this._skillInfo.collision == 2) //是否产生碰撞 圆形
+        {
+            this.addCollisionCircleComponent();
+        }
+    }
+
     //添加碰撞组件
-    addCollisionComponent()
+    addCollisionRectComponent()
     {
         var collrect: string = this._skillInfo.collRect;
         var cr : string[] = collrect.split(",");
@@ -169,6 +180,25 @@ export default class BulletParent {
         box.size.width = Number(cr[2]);
         box.size.height = Number(cr[3]);
         box.name = "bullet" + this.getProp(ClientDef.BULLET_PROP_ID);
+        this.getNode().group = ClientDef.COLLISION_GROUP_BULLET;
+
+        //添加碰撞组件
+        var collCmp = this.getNode().addComponent(CollisionComponent);
+        collCmp.setCollisioner(this);   
+    }
+
+    //添加圆形碰撞组件
+    addCollisionCircleComponent()
+    {
+        var collrect: string = this._skillInfo.collRect;
+        var cr : string[] = collrect.split(",");
+
+        //添加碰撞外框
+        var circle = this.getNode().addComponent(cc.CircleCollider);
+        circle.offset.x = Number(cr[0]);
+        circle.offset.y = Number(cr[1]);
+        circle.radius = Number(cr[2]);
+        circle.name = "bullet" + this.getProp(ClientDef.BULLET_PROP_ID);
         this.getNode().group = ClientDef.COLLISION_GROUP_BULLET;
 
         //添加碰撞组件

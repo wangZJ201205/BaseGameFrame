@@ -33,6 +33,8 @@ function handle_skill(o)
 	d.count = tonumber(o.j)
 	d.animation = tonumber(o.k)
 	d.icon = o.l
+	d.desc = o.m 
+	d.sustaintime = tonumber(o.n)
 	gdskill[tostring(d.id)] = d
 end
 

@@ -3,7 +3,7 @@
   "_name": "skill_cp_zhaoleipi",
   "_objFlags": 0,
   "_native": "",
-  "_duration": 0.3333333333333333,
+  "_duration": 0.25,
   "sample": 60,
   "speed": 1,
   "wrapMode": 2,
@@ -34,18 +34,6 @@
             "value": {
               "__uuid__": "cbfa3315-cd67-4af8-9d22-133221fc19ea"
             }
-          },
-          {
-            "frame": 0.26666666666666666,
-            "value": {
-              "__uuid__": "01e63483-7f46-4d48-a550-cad7808b8cab"
-            }
-          },
-          {
-            "frame": 0.31666666666666665,
-            "value": {
-              "__uuid__": "8f5717f4-c419-43ff-87bf-639aa27b6a78"
-            }
           }
         ]
       }
@@ -65,14 +53,6 @@
           "value": [
             0,
             214,
-            0
-          ]
-        },
-        {
-          "frame": 0.26666666666666666,
-          "value": [
-            0,
-            2,
             0
           ]
         }

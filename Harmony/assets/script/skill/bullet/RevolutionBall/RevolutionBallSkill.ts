@@ -73,8 +73,6 @@ export default class RevolutionBallSkill extends SkillParent {
         }
         this._delta = 0;
 
-        // const startTime = cc.director.getTotalTime();
-
         this._angle = (this._angle + 3) % 360; // 取模运算可以避免判断
         var bulletCount = this.getProp(ClientDef.SKILL_PROP_COUNT);
         var heroNode = this.getHost().getEntityNode();
@@ -95,9 +93,6 @@ export default class RevolutionBallSkill extends SkillParent {
             bullet.getNode().setPosition(x,y,0);
         }
 
-        // const costTime = cc.director.getTotalTime() - startTime;
-
-        // console.log(`函数执行时间为2：${costTime} 毫秒`);
     }
 
 

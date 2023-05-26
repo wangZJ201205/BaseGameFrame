@@ -1,6 +1,8 @@
 
 import ClientDef from "../common/ClientDef";
+import UIName from "../common/UIName";
 import DictMgr from "../manager/DictMgr";
+import UIMgr from "../manager/UIMgr";
 import Entity from "./Entity";
 
 const {ccclass, property} = cc._decorator;
@@ -48,6 +50,7 @@ export default class Hero{
         value += exp;
         if( value >= this._entity.getClientProp(ClientDef.ENTITY_PROP_MAX_EXP) )
         {
+            UIMgr.Instance.openUI(UIName.SELECTSKILL_VIEW);
             this.setLevel(this._entity.getClientProp(ClientDef.ENTITY_PROP_LV) + 1);
             this._entity.setClientProp(ClientDef.ENTITY_PROP_CUR_EXP, value- this._entity.getClientProp(ClientDef.ENTITY_PROP_MAX_EXP));
         }
@@ -62,7 +65,7 @@ export default class Hero{
     {
         var lvInfo = DictMgr.Instance.getDictByName("exp_data");
         this._entity.setClientProp(ClientDef.ENTITY_PROP_LV, lv);
-        this._entity.setClientProp(ClientDef.ENTITY_PROP_MAX_EXP, lvInfo[lv+""].exp);
+        this._entity.setClientProp(ClientDef.ENTITY_PROP_MAX_EXP, lvInfo[lv].exp);
     }
 
     addSkill(skillid)

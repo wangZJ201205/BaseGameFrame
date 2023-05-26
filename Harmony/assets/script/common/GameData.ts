@@ -30,8 +30,13 @@ export default class GameData{
     public static Item_Recycle_Time : number = 60000; //物品回收倒计时
     public static Item_Max_Range : number = 1280; //最大范围后移除对象
 
-    public static Skill_Shoot_Accelerate : number = 0.2; //所有技能射击加速  > 1减速 | <1 加速
+    public static Skill_Shoot_Accelerate : number = 1; //所有技能射击加速  > 1减速 | <1 加速
 
     public static Player_PickItem_Range : number = 1; //玩家拾取范围
     public static Player_Height : number = 40;  //人物的高度
+
+    public static Player_Skill_Max : number = 6; //技能最多个数
+    public static Player_Skill_UpLevel_Count : number = 4; //技能升级最多显示个数
+
+
 }

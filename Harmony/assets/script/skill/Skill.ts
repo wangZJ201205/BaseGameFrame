@@ -6,14 +6,14 @@ import ClientDef from "../common/ClientDef";
 import GameData from "../common/GameData";
 import Entity from "../ghost/Entity";
 import DictMgr from "../manager/DictMgr";
-import BulletParent from "./BulletParent";
 import SkillParent from "./SkillParent";
 import FireBallSkill from "./bullet/FireBall/FireBallSkill";
 import IceBallSkill from "./bullet/IceBall/IceBallSkill";
 import RevolutionBallSkill from "./bullet/RevolutionBall/RevolutionBallSkill";
-import SwordBallBullet from "./bullet/SwordBall/SwordBallBullet";
 import SwordBallSkill from "./bullet/SwordBall/SwordBallSkill";
 import TaijiBallSkill from "./bullet/TaijiBall/TaijiBallSkill";
+import posionBallSkill from "./bullet/poisonBall/posionBallSkill";
+import ShieldBallSkill from "./bullet/shieldBall/ShieldBallSkill";
 import ThunderBallSkill from "./bullet/thunder/ThunderBallSkill";
 
 const {ccclass, property} = cc._decorator;
@@ -30,12 +30,15 @@ export default class Skill {
         this._typeClass = {};
         this._host = host;
         
-        this._typeClass[ClientDef.SKILL_TYPE_FIREBALL] = FireBallSkill;     //注册火球术
-        this._typeClass[ClientDef.SKILL_TYPE_ICEBALL] = IceBallSkill;       //冰弹
-        this._typeClass[ClientDef.SKILL_TYPE_THUNDER] = ThunderBallSkill;   //雷劈
-        this._typeClass[ClientDef.SKILL_TYPE_REVOLUTION] = RevolutionBallSkill;   //雷劈
-        this._typeClass[ClientDef.SKILL_TYPE_SWORD_AIR] = SwordBallSkill; //剑气
-        this._typeClass[ClientDef.SKILL_TYPE_TAIJI] = TaijiBallSkill; //太极
+        this._typeClass[ClientDef.SKILL_TYPE_FIREBALL] = FireBallSkill;             //注册火球术
+        this._typeClass[ClientDef.SKILL_TYPE_ICEBALL] = IceBallSkill;               //冰弹
+        this._typeClass[ClientDef.SKILL_TYPE_THUNDER] = ThunderBallSkill;           //雷劈
+        this._typeClass[ClientDef.SKILL_TYPE_REVOLUTION] = RevolutionBallSkill;     //公转球
+        this._typeClass[ClientDef.SKILL_TYPE_SWORD_AIR] = SwordBallSkill;           //剑气
+        this._typeClass[ClientDef.SKILL_TYPE_TAIJI] = TaijiBallSkill;               //太极
+        this._typeClass[ClientDef.SKILL_TYPE_SHIELD] = ShieldBallSkill;             //护盾
+        this._typeClass[ClientDef.SKILL_TYPE_POISON] = posionBallSkill;             //放毒
+
     }
 
     start () 
@@ -46,7 +49,6 @@ export default class Skill {
         {
             // this.addSkill(skillid);
         }
-
     }
 
     update (dt) 
@@ -99,8 +101,6 @@ export default class Skill {
             const skill = this._skills[index];
             if(Math.floor(skill.getStaticId() / 100) == type)
             {
-                skill.setStaticId(skillid);
-                skill.start();
                 return skill;
             }
         }

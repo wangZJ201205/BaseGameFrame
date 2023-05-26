@@ -14,7 +14,8 @@ export default class SkillMgr extends ParentMgr {
 
     public static readonly Instance : SkillMgr = new SkillMgr();
 
-    private _layer: cc.Node = null; //引用的ghostMgr对象层级
+    private _layerHigh: cc.Node = null; //引用的ghostMgr对象层级 高层
+    private _layerLow: cc.Node = null; //引用的ghostMgr对象层级 底层
 
     onLoad () 
     {
@@ -23,11 +24,17 @@ export default class SkillMgr extends ParentMgr {
 
     start () 
     {
-        this._layer = new cc.Node();
-        this._layer.zIndex = ClientDef.SCENE_INDEX_SKILL;
-        this._layer.width = cc.winSize.width;
-        this._layer.height = cc.winSize.height;
-        this._layer.parent = SceneMgr.Instance.layer;
+        this._layerHigh = new cc.Node();
+        this._layerHigh.zIndex = ClientDef.SCENE_INDEX_SKILL_HIGH;
+        this._layerHigh.width = cc.winSize.width;
+        this._layerHigh.height = cc.winSize.height;
+        this._layerHigh.parent = SceneMgr.Instance.layer;
+
+        this._layerLow = new cc.Node();
+        this._layerLow.zIndex = ClientDef.SCENE_INDEX_SKILL_LOW;
+        this._layerLow.width = cc.winSize.width;
+        this._layerLow.height = cc.winSize.height;
+        this._layerLow.parent = SceneMgr.Instance.layer;
     }
 
     private update (dt) {
@@ -36,9 +43,13 @@ export default class SkillMgr extends ParentMgr {
 
     getLayer()
     {
-        return this._layer;
+        return this._layerHigh;
     }
 
+    getLayerLow()
+    {
+        return this._layerLow;
+    }
 
 
 }

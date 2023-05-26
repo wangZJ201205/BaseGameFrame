@@ -31,11 +31,13 @@ export default class SelectSkillView extends UIParent {
 
         this._learnList = [];
         this._learnList.push(10101);
-        // this._learnList.push(10201);
-        // this._learnList.push(10301);
-        // this._learnList.push(10401);
-        // this._learnList.push(10501);
-        // this._learnList.push(10601);
+        this._learnList.push(10201);
+        this._learnList.push(10301);
+        this._learnList.push(10401);
+        this._learnList.push(10501);
+        this._learnList.push(10601);
+        this._learnList.push(10701);
+        this._learnList.push(10801);
     }
 
     start () 
@@ -63,30 +65,31 @@ export default class SelectSkillView extends UIParent {
     {
         var canLearnSkill = [];
         var skills = Hero.Instance.getEntity().getSkill().getSkills();
-        var skillCount = skills.length;
-        if( skillCount == 6 )
-        {
-            this.pushInfoIntoList(canLearnSkill);
-            return;
-        }
+        // var skillCount = skills.length;
+        // if( skillCount == GameData.Player_Skill_Max )
+        // {
+        //     this.pushInfoIntoList(canLearnSkill);
+        //     return;
+        // }
 
         const skillDict = DictMgr.Instance.getDictByName('skill_data');
-        skills.forEach(skill => {
-            const sid = skill.getStaticId();
-            if (skillDict[sid + 1]) {
-                canLearnSkill.push(sid + 1);
-            }
-        });
-
+        
         this._learnList.forEach(skillId => { //踢出重复的元素
             var canLearn : boolean = true;
-            for (let i = 0; i < canLearnSkill.length; i++) {
-                const ele = canLearnSkill[i];
-                if(Math.floor(ele / 100) == Math.floor(skillId/100))
+            for (let index = 0; index < skills.length; index++) {
+                const skill = skills[index];
+                const sid = skill.getStaticId();
+                if ( Math.floor(sid / 100) == Math.floor(skillId/100) ) //如果人物技能列表中有且可以升级，就可以加入升级列表中
                 {
+                    if ( skillDict[sid + 1]) 
+                    {
+                        canLearnSkill.push(sid + 1);
+                    }
                     canLearn = false;
-                }
+                    break;
+                }    
             }
+
             if(canLearn)
             {
                 canLearnSkill.push(skillId);
@@ -96,6 +99,7 @@ export default class SelectSkillView extends UIParent {
         this.pushInfoIntoList(canLearnSkill);
     }
 
+    //随机获取数组中的数值
     getRandomValues(arr: number[], count: number): number[] {
         const result = [];
         while (result.length < count) {
@@ -111,8 +115,7 @@ export default class SelectSkillView extends UIParent {
     //数据填入list
     pushInfoIntoList(data) 
     {
-
-        var len = data.length >= 3 ? 3 : data.length;
+        var len = data.length >= GameData.Player_Skill_UpLevel_Count ? GameData.Player_Skill_UpLevel_Count : data.length;
         const randomValues = this.getRandomValues(data,len);
        
     	for (let i = 0; i < randomValues.length; ++i) { // spawn items, we only need to do this once

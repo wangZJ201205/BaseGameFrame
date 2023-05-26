@@ -155,12 +155,12 @@
             <filename>遭雷劈/skill_tianleishu_3_02.png</filename>
             <filename>遭雷劈/skill_tianleishu_3_03.png</filename>
             <filename>遭雷劈/skill_tianleishu_3_04.png</filename>
-            <filename>遭雷劈/skill_tianleishu_3_05.png</filename>
-            <filename>遭雷劈/skill_tianleishu_3_06.png</filename>
             <filename>i_jpql_01.png</filename>
             <filename>i_jpql_02.png</filename>
             <filename>i_jpql_03.png</filename>
             <filename>sword_176.png</filename>
+            <filename>qifu_qiu_zb.png</filename>
+            <filename>skill_youlanaoyi_05.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>

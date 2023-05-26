@@ -47,7 +47,14 @@ export default class AdvertiseMentView extends UIParent {
 
     UpLevelHandle(event,param)
     {
-        UIMgr.Instance.openUI(UIName.SELECTSKILL_VIEW);
+        if(!UIMgr.Instance.getUI(UIName.SELECTSKILL_VIEW))
+        {
+            UIMgr.Instance.openUI(UIName.SELECTSKILL_VIEW);
+        }
+        else
+        {
+            EventMgr.Instance.Emit(EventName.UI_CLOSE_PANEL + UIName.SELECTSKILL_VIEW,null);
+        }
     }
 
     openBoxHandle(event,param)
