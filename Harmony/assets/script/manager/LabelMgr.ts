@@ -53,6 +53,11 @@ export default class LabelMgr extends ParentMgr {
         this._timerID = setInterval(this.update.bind(this), 100);
     }
 
+    clear()
+    {
+        this._labelList = [];
+    }
+
     private update (dt) 
     {
         for (let index = 0; index < this._labelList.length; index++) {

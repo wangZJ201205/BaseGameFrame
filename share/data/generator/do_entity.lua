@@ -31,6 +31,7 @@ function handle_entity(o)
 	d.collRect = o.g
 	d.collGroup = o.h
 	d.dropItem = o.i
+	d.moveSpeed = tonumber(o.j)
 	gdentity[tostring(d.id)] = d
 end
 
@@ -52,6 +53,7 @@ function handle_player(o)
 	d.collGroup = o.h
 	d.defense = tonumber(o.i)
 	d.pickRange = tonumber(o.j)
+	d.moveSpeed = tonumber(o.k)
 	gdentity[tostring(d.id)] = d
 end
 

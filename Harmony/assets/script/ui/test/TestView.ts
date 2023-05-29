@@ -5,6 +5,7 @@
 import GM from "../../common/GM";
 import GameData from "../../common/GameData";
 import Hero from "../../ghost/Hero";
+import GameHelp from "../../help/GameHelp";
 import GhostMgr from "../../manager/GhostMgr";
 import GameMath from "../../utils/GameMath";
 
@@ -50,6 +51,10 @@ export default class TestView extends cc.Component {
 
     update (dt) 
     {
+        if(!Hero.Instance.getEntity())
+        {
+            return;
+        }
         this.entityCountLab.string = GhostMgr.Instance.entitys.length + "";
 
         var pos = Hero.Instance.getEntity().position;
@@ -71,7 +76,7 @@ export default class TestView extends cc.Component {
 
     updateTimer()
     {
-        if(GameData.Game_Pause_State)
+        if(GameHelp.GetGamePauseState())
         {
             return;
         }

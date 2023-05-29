@@ -23,7 +23,7 @@ export default class LoginView extends UIParent {
 
     start () 
     {
-        
+        super.start();
     }
 
     register(): void 

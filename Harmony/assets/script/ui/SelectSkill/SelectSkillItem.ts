@@ -41,14 +41,38 @@ export default class SelectSkillItem extends cc.Component {
     selectItemHandle(event,param)
     {
         Hero.Instance.getEntity().getSkill().addSkill(this._skillId);
-        EventMgr.Instance.Emit(EventName.UI_CLOSE_PANEL + UIName.SELECTSKILL_VIEW,null);
+        EventMgr.Instance.Emit(EventName.UI_CLOSE_PANEL + UIName.VIEW_SELECTSKILL,null);
     }
 
-    initItem(id)
+    initItem(data)
     {
-        this._skillId = id;
+        if(data.type == 1)
+        {
+            this.pushSkill(data);
+        }
+        else if(data.type == 2)
+        {
+            this.pushGene(data);
+        }
+    }
+
+    pushSkill(data)
+    {
+        this._skillId = data.id;
         const skillDict = DictMgr.Instance.getDictByName('skill_data')[this._skillId];
-        this.skillDescRT.string = skillDict.name + " Lv." + (id%100) + "\n" + skillDict.desc;
+        this.skillDescRT.string = skillDict.name + " Lv." + (this._skillId%100) + "\n" + skillDict.desc;
+        LoadMgr.Instance.LoadAssetWithType("ui/ui_img" ,cc.SpriteAtlas,(sp)=>{
+            //检查人物状态
+            let spriteFrame = sp.getSpriteFrame(skillDict.icon);
+            this.skillIcon.spriteFrame = spriteFrame;
+        })
+    }
+
+    pushGene(data)
+    {
+        this._skillId = data.id;
+        const skillDict = DictMgr.Instance.getDictByName('gene_data')[this._skillId];
+        this.skillDescRT.string = skillDict.name + " Lv." + (this._skillId%100) + "\n" + skillDict.desc;
         LoadMgr.Instance.LoadAssetWithType("ui/ui_img" ,cc.SpriteAtlas,(sp)=>{
             //检查人物状态
             let spriteFrame = sp.getSpriteFrame(skillDict.icon);

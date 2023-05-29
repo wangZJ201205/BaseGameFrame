@@ -14,7 +14,8 @@ export default class EntityWalk extends StateParent {
     start () 
     {
         super.start();
-        this.speed = Math.random() * 5 + GameData.MonsterMoveSpeed/2;
+        var moveSpeed = this.getHost().getClientProp(ClientDef.ENTITY_PROP_MOVE_SPEED);
+        this.speed = (moveSpeed+GameData.MonsterMoveSpeed) ;
     }
 
     update (dt) 

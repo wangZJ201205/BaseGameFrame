@@ -7,13 +7,13 @@ export default class GameData{
     public static IpPort : string  = ''; //游戏端口
     public static IsDebug: boolean = false; //是否是测试模式
     public static Shield_Skill : boolean = false; //释放屏蔽技能
-    public static Game_Pause_State : boolean = false; //游戏是否停止状态
+    public static Game_Pause_FLAG : number = 0; //游戏是否停止状态
 
     public static NeedWaitModules : number = 0; //需要加载等待的模块数
     public static CurrLoadModules : number = 0; //当前已经加载的模块数
 
-    public static PayerMoveSpeed : number = 200; //人物移动速度
-    public static MonsterMoveSpeed : number = 5; //怪物移动速度
+    public static PayerMoveSpeed : number = 0; //人物移动速度       测试用
+    public static MonsterMoveSpeed : number = 0; //怪物移动速度     测试用
 
     public static App_Game_Width : number = 1280; //游戏宽度
     public static App_Game_Heigth : number = 720; //游戏高度

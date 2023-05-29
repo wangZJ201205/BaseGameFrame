@@ -25,10 +25,16 @@ export default class Hero{
         // this._entity.getSkill().addSkill(10401);
         // this._entity.getSkill().addSkill(10501);
         // this._entity.getSkill().addSkill(10601);
+        this._entity.getGene().addGene(1001,this._entity);
         var info = this._entity.getEntityDict();
         this._entity.setClientProp(ClientDef.ENTITY_PROP_PICKUP_RANGE,info.pickRange);
         
         this.setLevel(1);
+    }
+
+    clear()
+    {
+        this._entity = null;
     }
 
     setEntity(entity)
@@ -50,7 +56,7 @@ export default class Hero{
         value += exp;
         if( value >= this._entity.getClientProp(ClientDef.ENTITY_PROP_MAX_EXP) )
         {
-            UIMgr.Instance.openUI(UIName.SELECTSKILL_VIEW);
+            UIMgr.Instance.openUI(UIName.VIEW_SELECTSKILL);
             this.setLevel(this._entity.getClientProp(ClientDef.ENTITY_PROP_LV) + 1);
             this._entity.setClientProp(ClientDef.ENTITY_PROP_CUR_EXP, value- this._entity.getClientProp(ClientDef.ENTITY_PROP_MAX_EXP));
         }

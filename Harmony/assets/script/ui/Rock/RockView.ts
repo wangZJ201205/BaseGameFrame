@@ -86,6 +86,11 @@ export default class RockView extends UIParent {
     update(deltaTime: number) 
     {
         
+        if(!Hero.Instance.getEntity())
+        {
+            return;
+        }
+        
         // 如果没有人物节点或者遥感半径过小，则不移动人物
         if ( this.joyStickDistance < this.radius_threshold) 
         {

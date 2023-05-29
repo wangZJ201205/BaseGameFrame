@@ -64,6 +64,7 @@ export default class ClientDef{
     public static readonly ENTITY_PROP_CUR_EXP : number = 11; //当前经验
     public static readonly ENTITY_PROP_MAX_EXP : number = 12; //最大经验
     public static readonly ENTITY_PROP_LV : number = 13; //等级
+    public static readonly ENTITY_PROP_MOVE_SPEED : number = 14; //移动速度
 
     //技能类型
     public static readonly SKILL_TYPE_FIREBALL: number      = 101; //火球
@@ -102,4 +103,9 @@ export default class ClientDef{
 
     //基因类型
     public static readonly GENE_TYPE_SPEED : number = 1; //速度
+
+    //游戏暂停列表
+    public static readonly GAME_PAUSE_UPGRADE : number  = 1 << 1; //升级界面
+    public static readonly GAME_PAUSE_SET : number      = 1 << 2;     //设置界面
+
 }

@@ -2,7 +2,9 @@
  * 对象管理
  */
 import ClientDef from "../common/ClientDef";
+import GameData from "../common/GameData";
 import Item from "../ghost/Item";
+import GameHelp from "../help/GameHelp";
 import GhostMgr from "./GhostMgr";
 import ParentMgr from "./ParentMgr";
 import SceneMgr from "./SceneMgr";
@@ -38,8 +40,22 @@ export default class ItemMgr extends ParentMgr {
         this._timerID = setInterval(this.update.bind(this), 0);
     }
 
+    clear()
+    {
+        for (let index = 0; index < this._items.length; index++) {
+            const element = this._items[index];
+            element.restEntity();
+        }
+        this.spawnItemId = 0;
+    }
+
     private update (dt) {
         
+        if(GameHelp.GetGamePauseState())
+        {
+            return;
+        }
+
         const delta = cc.director.getDeltaTime();
         var needRemoveItem = [];
         for (let index = 0; index < this._items.length; index++) {

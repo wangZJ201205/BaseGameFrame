@@ -1,8 +1,10 @@
 import ClientDef from "../common/ClientDef";
+import EventName from "../common/EventName";
 import GameData from "../common/GameData";
 import UIName from "../common/UIName";
 import Hero from "../ghost/Hero";
 import DictMgr from "../manager/DictMgr";
+import EventMgr from "../manager/EventMgr";
 import GhostMgr from "../manager/GhostMgr";
 import LoadMgr from "../manager/LoadMgr";
 import SceneMgr from "../manager/SceneMgr";
@@ -48,6 +50,26 @@ export default class GamePlay {
 
         this.loadSceneSrc(GameData.Map_Current_Id);
     }
+
+    clear()
+    {
+
+        clearInterval(this._timerID);
+
+        this.layer.removeFromParent();
+        this.layer = null;
+
+        Hero.Instance.clear();
+        EventMgr.Instance.Emit(EventName.UI_CLOSE_PANEL + UIName.ROCKVIEW,null);
+        EventMgr.Instance.Emit(EventName.UI_CLOSE_PANEL + UIName.VIEW_PLAYER_PGB,null);
+        EventMgr.Instance.Emit(EventName.UI_CLOSE_PANEL + UIName.VIEW_ADVERTISEMENT,null);
+        EventMgr.Instance.Emit(EventName.UI_CLOSE_PANEL + UIName.VIEW_SELECTSKILL,null);
+        
+        if(GameData.IsDebug)
+        {
+            EventMgr.Instance.Emit(EventName.UI_CLOSE_PANEL + UIName.TESTVIEW,null);
+        }
+    }
     
     update () 
     {
@@ -59,8 +81,8 @@ export default class GamePlay {
     openUI()
     {
         UIMgr.Instance.openUI(UIName.ROCKVIEW);
-        UIMgr.Instance.openUI(UIName.PLAYER_PGB_VIEW);
-        UIMgr.Instance.openUI(UIName.ADVERTISEMENT_VIEW);
+        UIMgr.Instance.openUI(UIName.VIEW_PLAYER_PGB);
+        UIMgr.Instance.openUI(UIName.VIEW_ADVERTISEMENT);
         if(GameData.IsDebug)
         {
             UIMgr.Instance.openUI(UIName.TESTVIEW);

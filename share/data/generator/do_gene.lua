@@ -29,7 +29,8 @@ function handle_gene(o)
 	d.datay = tonumber(o.f)
 	d.dataz = tonumber(o.g)
 	d.datau = tonumber(o.h)
-	d.desc = o.i
+	d.icon = o.i 
+	d.desc = o.j
 	gdgene[tostring(d.id)] = d
 end
 

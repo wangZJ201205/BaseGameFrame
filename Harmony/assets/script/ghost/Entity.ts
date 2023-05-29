@@ -55,6 +55,9 @@ export default class Entity extends cc.Node
         this._entityStateMachine.onLoad(this);
         this._entityStateMachine.start();
 
+        var entityInfo = this.getEntityDict();
+
+        this.setClientProp(ClientDef.ENTITY_PROP_MOVE_SPEED, entityInfo.moveSpeed);
     }
 
     //反复初始化
@@ -62,9 +65,12 @@ export default class Entity extends cc.Node
     {
         this.setClientProp(ClientDef.ENTITY_PROP_ACTIVE_STATE,ClientDef.ENTITY_ACTIVE_STATE_RUN);
         this.setClientProp(ClientDef.ENTITY_PROP_WAIT_DESTROY_TIME, 0);
+
         this.active = true;
         this._entityComponents.restart();
         this._entityStateMachine.restart();
+        this._gene.restart();
+        
     }
 
 
@@ -95,6 +101,11 @@ export default class Entity extends cc.Node
     getSkill()
     {
         return this._skill;
+    }
+
+    getGene()
+    {
+        return this._gene;
     }
     
     spawnStateMachine()
@@ -134,6 +145,12 @@ export default class Entity extends cc.Node
             }
         }
 
+    }
+
+    addClientProp(type,value)
+    {
+        var curValue = this._client_prop_map[type];
+        this.setClientProp(type,value + curValue)
     }
 
     getClientProp(type)

@@ -46,8 +46,6 @@ export default class BloomComponent extends ComponentParent {
             this.getHost().active = false;
             this.getHost().setClientProp(ClientDef.ENTITY_PROP_ACTIVE_STATE, ClientDef.ENTITY_ACTIVE_STATE_FREE);
         }
-        
-        
     }
 
 

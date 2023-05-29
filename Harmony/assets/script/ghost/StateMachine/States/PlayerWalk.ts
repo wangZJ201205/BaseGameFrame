@@ -25,7 +25,8 @@ export default class PlayerWalk extends StateParent {
 
         // 移动人物节点        
         var entityNode = this.getHost().getEntityNode();
-        var velocity = dir.mul(GameData.PayerMoveSpeed*dt);
+        var playerMoveSpeed = this.getHost().getClientProp(ClientDef.ENTITY_PROP_MOVE_SPEED);
+        var velocity = dir.mul( ( playerMoveSpeed+GameData.PayerMoveSpeed ) * dt );
         entityNode.setPosition(entityNode.position.add(velocity));
         entityNode.zIndex = GameData.App_Game_Heigth -(GameData.App_Game_Heigth/2 + entityNode.getPosition().y);
         // console.info(entityNode.zIndex);

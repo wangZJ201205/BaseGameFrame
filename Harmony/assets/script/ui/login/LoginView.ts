@@ -3,6 +3,7 @@ import EventName from "../../common/EventName";
 import GameData from "../../common/GameData";
 import MessageName from "../../common/MessageDefine";
 import UIName from "../../common/UIName";
+import AudioMgr from "../../manager/AudioMgr";
 import EventMgr from "../../manager/EventMgr";
 import NetMgr from "../../manager/NetMgr";
 import SceneMgr from "../../manager/SceneMgr";
@@ -35,6 +36,7 @@ export default class LoginView extends UIParent {
         this.accountEB.string = cc.sys.localStorage.getItem("user_name") || "";
         this.passwordEB.string = cc.sys.localStorage.getItem("user_password") || "";
         super.start();
+
     }
 
     register(): void 
@@ -73,8 +75,9 @@ export default class LoginView extends UIParent {
             return;
         }
         
-        SceneMgr.Instance.enterScene();
         EventMgr.Instance.Emit(EventName.UI_CLOSE_PANEL + this.getUIName(),null);
+        UIMgr.Instance.openUI(UIName.VIEW_START);
+
     }
 
 }

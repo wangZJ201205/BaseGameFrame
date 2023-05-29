@@ -6,6 +6,7 @@ import GameData from "../common/GameData";
 import Entity from "../ghost/Entity";
 import Player from "../ghost/Hero";
 import Item from "../ghost/Item";
+import GameHelp from "../help/GameHelp";
 import ParentMgr from "./ParentMgr";
 import SceneMgr from "./SceneMgr";
 
@@ -46,9 +47,18 @@ export default class GhostMgr extends ParentMgr {
         // this._typeClass[ClientDef.ENTITY_TYPE_ITEM ] = Item;
     }
 
+    clear(): void 
+    {
+        for (let index = 0; index < this.entitys.length; index++) {
+            const entity = this.entitys[index];
+            entity.restEntity();
+        }    
+        this.spawnEntityId = 0;
+    }
+
     private update (dt) {
         
-        if(GameData.Game_Pause_State)
+        if(GameHelp.GetGamePauseState())
         {
             return;
         }

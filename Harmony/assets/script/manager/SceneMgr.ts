@@ -10,6 +10,7 @@ import LabelMgr from "./LabelMgr";
 import ParentMgr from "./ParentMgr";
 import SkillMgr from "./SkillMgr";
 import GameData from "../common/GameData";
+import GameHelp from "../help/GameHelp";
 
 const {ccclass, property} = cc._decorator;
 
@@ -59,7 +60,7 @@ export default class SceneMgr extends ParentMgr {
 
     update () 
     {
-        if(GameData.Game_Pause_State)
+        if(GameHelp.GetGamePauseState())
         {
             return;
         }
@@ -73,5 +74,13 @@ export default class SceneMgr extends ParentMgr {
 
     }
 
+    exitScene()
+    {
+        GhostMgr.Instance.clear();
+        LabelMgr.Instance.clear();
+        ItemMgr.Instance.clear();
+        SkillMgr.Instance.clear();
+        GamePlay.Instance.clear();
+    }
 
 }

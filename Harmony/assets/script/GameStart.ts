@@ -10,6 +10,7 @@ import UIConfig from "./config/UIConfig";
 import Hero from "./ghost/Hero";
 import EntityProxy from "./ghost/Proxy/EntityProxy";
 import HeroProxy from "./ghost/Proxy/HeroProxy";
+import AudioMgr from "./manager/AudioMgr";
 import DictMgr from "./manager/DictMgr";
 import EventMgr from "./manager/EventMgr";
 import NetMgr from "./manager/NetMgr";
@@ -60,6 +61,7 @@ export default class GameStart extends cc.Component {
         SceneMgr.Instance.onLoad();
         DictMgr.Instance.onLoad();
         Hero.Instance.onLoad();
+        AudioMgr.Instance.onLoad();
 
         //加载管理类
         EventMgr.Instance.start();
@@ -67,6 +69,7 @@ export default class GameStart extends cc.Component {
         UIMgr.Instance.start();
         SceneMgr.Instance.start();
         DictMgr.Instance.start();
+        AudioMgr.Instance.start();
 
         //注册所有的消息
         SocketRegister.start();

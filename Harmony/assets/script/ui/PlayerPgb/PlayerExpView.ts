@@ -23,7 +23,7 @@ export default class PlayerExpView extends UIParent {
 
     onLoad () 
     {
-        this.setUIName(UIName.PLAYER_PGB_VIEW);
+        this.setUIName(UIName.VIEW_PLAYER_PGB);
         super.onLoad();
     }
 

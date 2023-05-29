@@ -17,5 +17,7 @@ export default class ParentMgr{
 
     register(){}
 
+    clear(){}
+
 
 }

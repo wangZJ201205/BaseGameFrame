@@ -23,10 +23,11 @@ export default class SelectSkillView extends UIParent {
     skillItem: cc.Prefab = null;
 
     _learnList : any[]; //可学习列表
+    _learnGeneList : any[]; //可学习基因列表
 
     onLoad () 
     {
-        this.setUIName(UIName.SELECTSKILL_VIEW);
+        this.setUIName(UIName.VIEW_SELECTSKILL);
         super.onLoad();
 
         this._learnList = [];
@@ -38,12 +39,16 @@ export default class SelectSkillView extends UIParent {
         this._learnList.push(10601);
         this._learnList.push(10701);
         this._learnList.push(10801);
+
+        this._learnGeneList = [];
+        this._learnGeneList.push(1001);
     }
 
     start () 
     {
         super.start();
-        GameData.Game_Pause_State = true;
+        GameData.Game_Pause_FLAG |= ClientDef.GAME_PAUSE_UPGRADE;
+
         this.scrollView.content.height = 460; // get total content height
         this.prepareSkillInfo();
 
@@ -57,7 +62,7 @@ export default class SelectSkillView extends UIParent {
     close()
     {
         super.close();
-        GameData.Game_Pause_State = false;
+        GameData.Game_Pause_FLAG &= ~ClientDef.GAME_PAUSE_UPGRADE;
     }
 
     //准备数据
@@ -83,7 +88,7 @@ export default class SelectSkillView extends UIParent {
                 {
                     if ( skillDict[sid + 1]) 
                     {
-                        canLearnSkill.push(sid + 1);
+                        canLearnSkill.push({id:sid + 1,type:1});
                     }
                     canLearn = false;
                     break;
@@ -92,7 +97,39 @@ export default class SelectSkillView extends UIParent {
 
             if(canLearn)
             {
-                canLearnSkill.push(skillId);
+                canLearnSkill.push({id:skillId,type:1});
+            }
+        });
+
+        this.prepareGeneInfo(canLearnSkill);
+    }
+
+    //准备基因数据
+    prepareGeneInfo(canLearnSkill)
+    {
+        var genes = Hero.Instance.getEntity().getGene().getGenes();
+
+        const geneDict = DictMgr.Instance.getDictByName('gene_data');
+        
+        this._learnGeneList.forEach(geneId => { //踢出重复的元素
+            var canLearn : boolean = true;
+            for (let index = 0; index < genes.length; index++) {
+                const gene = genes[index];
+                const gid = gene.getStaticId();
+                if ( Math.floor(gid / 100) == Math.floor(geneId/100) ) //如果人物技能列表中有且可以升级，就可以加入升级列表中
+                {
+                    if ( geneDict[gid + 1]) 
+                    {
+                        canLearnSkill.push({id:gid + 1,type:2});
+                    }
+                    canLearn = false;
+                    break;
+                }    
+            }
+
+            if(canLearn)
+            {
+                canLearnSkill.push({id:geneId,type:2});
             }
         });
 

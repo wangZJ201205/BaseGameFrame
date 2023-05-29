@@ -24,7 +24,7 @@ export default class AdvertiseMentView extends UIParent {
 
     onLoad () 
     {
-        this.setUIName(UIName.ADVERTISEMENT_VIEW);
+        this.setUIName(UIName.VIEW_ADVERTISEMENT);
         super.onLoad();
     }
 
@@ -47,19 +47,19 @@ export default class AdvertiseMentView extends UIParent {
 
     UpLevelHandle(event,param)
     {
-        if(!UIMgr.Instance.getUI(UIName.SELECTSKILL_VIEW))
+        if(!UIMgr.Instance.getUI(UIName.VIEW_SELECTSKILL))
         {
-            UIMgr.Instance.openUI(UIName.SELECTSKILL_VIEW);
+            UIMgr.Instance.openUI(UIName.VIEW_SELECTSKILL);
         }
         else
         {
-            EventMgr.Instance.Emit(EventName.UI_CLOSE_PANEL + UIName.SELECTSKILL_VIEW,null);
+            EventMgr.Instance.Emit(EventName.UI_CLOSE_PANEL + UIName.VIEW_SELECTSKILL,null);
         }
     }
 
     openBoxHandle(event,param)
     {
-        
+        UIMgr.Instance.openUI(UIName.VIEW_SET);
     }
 
 }

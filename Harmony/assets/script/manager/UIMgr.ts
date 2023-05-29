@@ -87,6 +87,7 @@ export default class UIMgr extends ParentMgr {
             if(uiInf.state == UIState.Close)
             {
                 uiInf.uiContainer.parent = this.uiLayer; //重新打开
+                uiInf.uiContainer.active = true;
                 uiInf.state = UIState.Open;
             }
             else{
@@ -119,6 +120,7 @@ export default class UIMgr extends ParentMgr {
         {
             return;
         }
+        uiInf.uiContainer.active = false;
         uiInf.state = UIState.Close;
     }
 
