@@ -1,12 +1,12 @@
 import ClientDef from "../common/ClientDef";
 import DictMgr from "../manager/DictMgr";
 import Skill from "../skill/Skill";
-import ComponentMgr from "./Component/ComponentMgr";
-import ClothComponent from "./Component/children/ClothComponent";
-import EntityStateMachine from "./StateMachine/EntityStateMachine";
-import MonsterStateMachine from "./StateMachine/MonsterStateMachine";
-import PlayerStateMachine from "./StateMachine/PlayerStateMachine";
+import ClothComponent from "./component/children/ClothComponent";
+import ComponentMgr from "./component/ComponentMgr";
 import GeneMgr from "./gene/GeneMgr";
+import EntityStateMachine from "./stateMachine/EntityStateMachine";
+import MonsterStateMachine from "./stateMachine/MonsterStateMachine";
+import PlayerStateMachine from "./stateMachine/PlayerStateMachine";
 
 /**
  * 对象类

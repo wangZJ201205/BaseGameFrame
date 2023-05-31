@@ -3,7 +3,6 @@
  */
 
 import ClientDef from "../../common/ClientDef";
-import Entity from "../Entity";
 import EntityStateMachine from "./EntityStateMachine";
 import StateParent from "./StateParent";
 import PlayerIdle from "./states/PlayerIdle";

@@ -6,7 +6,6 @@ import ClientDef from "../../common/ClientDef";
 import EntityStateMachine from "./EntityStateMachine";
 import EntityIdle from "./states/EntityIdle";
 import EntityWalk from "./states/EntityWalk";
-
 const {ccclass, property} = cc._decorator;
 
 @ccclass
