@@ -2,7 +2,7 @@
  * 子弹父类
  */
 
-import CollisionComponent from "../Component/CollisionComponent";
+import CollisionComponent from "../component/CollisionComponent";
 import ClientDef from "../common/ClientDef";
 import GameData from "../common/GameData";
 import Entity from "../ghost/Entity";

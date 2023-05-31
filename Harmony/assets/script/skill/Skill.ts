@@ -7,13 +7,13 @@ import GameData from "../common/GameData";
 import Entity from "../ghost/Entity";
 import DictMgr from "../manager/DictMgr";
 import SkillParent from "./SkillParent";
-import FireBallSkill from "./bullet/FireBall/FireBallSkill";
-import IceBallSkill from "./bullet/IceBall/IceBallSkill";
-import RevolutionBallSkill from "./bullet/RevolutionBall/RevolutionBallSkill";
-import SwordBallSkill from "./bullet/SwordBall/SwordBallSkill";
-import TaijiBallSkill from "./bullet/TaijiBall/TaijiBallSkill";
+import FireBallSkill from "./bullet/fireball/FireBallSkill";
+import IceBallSkill from "./bullet/iceBall/IceBallSkill";
 import posionBallSkill from "./bullet/poisonBall/posionBallSkill";
+import RevolutionBallSkill from "./bullet/revolutionBall/RevolutionBallSkill";
 import ShieldBallSkill from "./bullet/shieldBall/ShieldBallSkill";
+import SwordBallSkill from "./bullet/swordBall/SwordBallSkill";
+import TaijiBallSkill from "./bullet/taijiBall/TaijiBallSkill";
 import ThunderBallSkill from "./bullet/thunder/ThunderBallSkill";
 
 const {ccclass, property} = cc._decorator;

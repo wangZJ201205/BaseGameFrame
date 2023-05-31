@@ -5,7 +5,7 @@
  * 只是用来监听碰撞事件
  */
 
-import CollisionComponent from "../../../Component/CollisionComponent";
+import CollisionComponent from "../../../component/CollisionComponent";
 import ClientDef from "../../../common/ClientDef";
 import ComponentParent from "../ComponentParent";
 

@@ -6,8 +6,8 @@ import ClientDef from "../../common/ClientDef";
 import Entity from "../Entity";
 import EntityStateMachine from "./EntityStateMachine";
 import StateParent from "./StateParent";
-import PlayerIdle from "./States/PlayerIdle";
-import PlayerWalk from "./States/PlayerWalk";
+import PlayerIdle from "./states/PlayerIdle";
+import PlayerWalk from "./states/PlayerWalk";
 
 const {ccclass, property} = cc._decorator;
 
