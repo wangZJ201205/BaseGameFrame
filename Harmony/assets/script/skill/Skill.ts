@@ -9,6 +9,7 @@ import DictMgr from "../manager/DictMgr";
 import SkillParent from "./SkillParent";
 import FireBallSkill from "./bullet/fireball/FireBallSkill";
 import IceBallSkill from "./bullet/iceBall/IceBallSkill";
+import MiZongQuanSkill from "./bullet/mizongquan/MiZongQuanSkill";
 import posionBallSkill from "./bullet/poisonBall/posionBallSkill";
 import RevolutionBallSkill from "./bullet/revolutionBall/RevolutionBallSkill";
 import ShieldBallSkill from "./bullet/shieldBall/ShieldBallSkill";
@@ -38,7 +39,7 @@ export default class Skill {
         this._typeClass[ClientDef.SKILL_TYPE_TAIJI] = TaijiBallSkill;               //太极
         this._typeClass[ClientDef.SKILL_TYPE_SHIELD] = ShieldBallSkill;             //护盾
         this._typeClass[ClientDef.SKILL_TYPE_POISON] = posionBallSkill;             //放毒
-
+        this._typeClass[ClientDef.SKILL_TYPE_MIZONGQUAN] = MiZongQuanSkill;         //迷踪拳
     }
 
     start () 

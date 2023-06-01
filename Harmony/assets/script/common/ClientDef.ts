@@ -75,6 +75,7 @@ export default class ClientDef{
     public static readonly SKILL_TYPE_TAIJI: number         = 106; //太极
     public static readonly SKILL_TYPE_SHIELD: number        = 107; //护盾
     public static readonly SKILL_TYPE_POISON: number        = 108; //放毒
+    public static readonly SKILL_TYPE_MIZONGQUAN: number    = 109; //迷踪拳
 
     //子弹属性
     public static readonly BULLET_PROP_ID : number = 1;// id

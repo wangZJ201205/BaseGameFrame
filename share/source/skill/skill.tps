@@ -161,6 +161,8 @@
             <filename>sword_176.png</filename>
             <filename>qifu_qiu_zb.png</filename>
             <filename>skill_youlanaoyi_05.png</filename>
+            <filename>skill_zhanshi_banyue_13.png</filename>
+            <filename>fire_bunch.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>

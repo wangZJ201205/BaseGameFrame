@@ -25,16 +25,20 @@ function handle_skill(o)
 	d.name = o.b
 	d.attackValue = o.c
 	d.src = o.d
-	d.delay = tonumber(o.e)
-	d.collision = tonumber(o.f)
-	d.collRect = o.g
-	d.speed = tonumber(o.h)
-	d.range = tonumber(o.i)
-	d.count = tonumber(o.j)
-	d.animation = tonumber(o.k)
-	d.icon = o.l
-	d.desc = o.m 
-	d.sustaintime = tonumber(o.n)
+	d.mid = o.e
+	d.over = o.f
+	d.cooldown = tonumber(o.g)
+	d.delaytime = tonumber(o.h)
+	d.collision = tonumber(o.i)
+	d.collRect = o.j
+	d.speed = tonumber(o.k)
+	d.range = tonumber(o.l)
+	d.count = tonumber(o.m)
+	d.animation = tonumber(o.n)
+	d.buffer = tonumber(o.o)
+	d.icon = o.p
+	d.sustaintime = tonumber(o.q)
+	d.desc = o.r 
 	gdskill[tostring(d.id)] = d
 end
 

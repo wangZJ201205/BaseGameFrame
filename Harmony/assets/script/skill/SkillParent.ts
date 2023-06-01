@@ -34,7 +34,7 @@ export default class SkillParent {
     {
         this._skillInfo = DictMgr.Instance.getDictByName('skill_data')[this._staticId+""];
         this._curDelay = cc.director.getTotalTime();
-        this._shootTime = this._skillInfo['delay'];
+        this._shootTime = this._skillInfo['cooldown'];
         this.setProp(ClientDef.SKILL_PROP_COUNT, this._skillInfo['count']);
     }
 
