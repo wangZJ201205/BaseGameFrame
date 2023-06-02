@@ -41,6 +41,7 @@ export default class SelectSkillItem extends cc.Component {
     selectItemHandle(event,param)
     {
         Hero.Instance.getEntity().getSkill().addSkill(this._skillId);
+        console.info(">>>>>>>>>>>>close ui 1 VIEW_SELECTSKILL");
         EventMgr.Instance.Emit(EventName.UI_CLOSE_PANEL + UIName.VIEW_SELECTSKILL,null);
     }
 

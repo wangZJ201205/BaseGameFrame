@@ -31,6 +31,7 @@ export default class UIParent extends cc.Component {
     close()
     {
         EventMgr.Instance.Off(EventName.UI_CLOSE_PANEL + this._uiName, this.close, this); //关闭界面
+        console.info(">>>>>>>>>>>>close ui 2 " + this._uiName);
         UIMgr.Instance.closeUI(this._uiName);
     }
 

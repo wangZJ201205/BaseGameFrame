@@ -25,12 +25,12 @@ export default class UIMgr extends ParentMgr {
 
 
     uiLayer: cc.Node = null; //ui显示层
-    uiList:Map<string,{}>;
+    uiList:Array<any>;
 
     onLoad () 
     {
         super.onLoad();
-        this.uiList = new Map();
+        this.uiList = [];
     }
 
     start () 
@@ -47,15 +47,14 @@ export default class UIMgr extends ParentMgr {
 
     update (dt) 
     {
-        for (const key in this.uiList) {
-            if (Object.prototype.hasOwnProperty.call(this.uiList, key)) {
-                const element = this.uiList[key];
-                if(element.state == UIState.Close)
-                {
-                    element.uiContainer.parent = null;
-                    delete this.uiList[key];
-                    return;
-                }
+        for (let index = 0; index < this.uiList.length; index++) 
+        {
+            const uiInfo = this.uiList[index];
+            if(uiInfo.state == UIState.Close)
+            {
+                uiInfo.uiContainer.parent = null;
+                this.uiList.splice(index , 1);
+                return;
             }
         }
     }
@@ -80,20 +79,15 @@ export default class UIMgr extends ParentMgr {
             console.info(">>>>>>open uiname:" + uiname+" | uipath:"+uiConfig.path);
         }
         
-        var uiInf = this.getUI(uiname);
-
-        if( uiInf )
+    
+        for (let index = 0; index < this.uiList.length; index++) 
         {
-            if(uiInf.state == UIState.Close)
+            const uiInfo = this.uiList[index];
+            if(uiname == uiInfo.name && (uiInfo.state == UIState.Loading || uiInfo.state == UIState.Open))
             {
-                uiInf.uiContainer.parent = this.uiLayer; //重新打开
-                uiInf.uiContainer.active = true;
-                uiInf.state = UIState.Open;
-            }
-            else{
                 console.info(">>>有该对象! = "+ uiname);
+                return;
             }
-            return;
         }
 
         this.addUI(uiname, UIState.Loading);
@@ -105,23 +99,31 @@ export default class UIMgr extends ParentMgr {
             uiPref.parent = this.uiLayer;
             uiPref.zIndex = uiConfig.index + this.uiLayer.childrenCount; //界面深度 配置的深度值+ 当前显示界面的数量
             
-            var uiInf = this.getUI(uiname);
-            if( uiInf ){
-                uiInf.uiContainer = uiPref;
-                uiInf.state = UIState.Open;
+            for (let index = 0; index < this.uiList.length; index++) 
+            {
+                const uiInfo = this.uiList[index];
+                if(uiname == uiInfo.name && uiInfo.state == UIState.Loading )
+                {
+                    uiInfo.uiContainer = uiPref;
+                    uiInfo.state = UIState.Open;
+                    break;
+                }
             }
         });
     }
 
     closeUI(uiname)
     {
-        var uiInf = this.getUI(uiname);
-        if(!uiInf)
+        for (let index = 0; index < this.uiList.length; index++) 
         {
-            return;
+            const uiInfo = this.uiList[index];
+            if(uiname == uiInfo.name && uiInfo.state == UIState.Open)
+            {
+                uiInfo.uiContainer.active = false;
+                uiInfo.state = UIState.Close;
+                break;
+            }
         }
-        uiInf.uiContainer.active = false;
-        uiInf.state = UIState.Close;
     }
 
     /**
@@ -131,13 +133,22 @@ export default class UIMgr extends ParentMgr {
      */
     addUI(uiName,state)
     {
-        this.uiList[uiName] = {name:uiName,state:state};
-        
+        this.uiList.push({name:uiName,state:state});
     }
 
     getUI(uiName)
     {
-        return this.uiList[uiName] || null;
+        var ui = null;
+        for (let index = 0; index < this.uiList.length; index++) 
+        {
+            const uiInfo = this.uiList[index];
+            if(uiName == uiInfo.name)
+            {
+                ui = uiInfo;
+                break;
+            }
+        }
+        return ui;
     }
 
     /**
@@ -147,11 +158,12 @@ export default class UIMgr extends ParentMgr {
      */
     getUIState(uiname)
     {
-        if(!this.getUI(uiname))
+        var ui = this.getUI(uiname);
+        if(!ui)
         {
             return UIState.Close;
         }
-        return this.getUI(uiname).state;
+        return ui.state;
     }
 
 }

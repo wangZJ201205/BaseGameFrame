@@ -7,20 +7,33 @@
             <key>fire_bunch.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{135,648},{48,62}}</string>
+                <string>{{203,899},{48,62}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
                 <string>{{0,0},{48,62}}</string>
                 <key>sourceSize</key>
                 <string>{48,62}</string>
             </dict>
+            <key>fire_mizongquan.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{135,594},{116,94}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{116,94}}</string>
+                <key>sourceSize</key>
+                <string>{116,94}</string>
+            </dict>
             <key>i_jpql_01.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{168,1085},{70,70}}</string>
+                <string>{{168,1043},{70,70}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -33,7 +46,7 @@
             <key>i_jpql_02.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{168,1013},{70,70}}</string>
+                <string>{{168,971},{70,70}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -46,7 +59,7 @@
             <key>i_jpql_03.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{131,941},{70,70}}</string>
+                <string>{{131,899},{70,70}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -63,7 +76,7 @@
                 <key>offset</key>
                 <string>{-2,2}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
                 <string>{{10,9},{210,227}}</string>
                 <key>sourceSize</key>
@@ -72,7 +85,7 @@
             <key>skill_fireball.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{131,893},{103,46}}</string>
+                <string>{{107,1544},{103,46}}</string>
                 <key>offset</key>
                 <string>{0,-1}</string>
                 <key>rotated</key>
@@ -85,7 +98,7 @@
             <key>skill_iceball.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{131,845},{103,46}}</string>
+                <string>{{2,1544},{103,46}}</string>
                 <key>offset</key>
                 <string>{0,-1}</string>
                 <key>rotated</key>
@@ -150,7 +163,7 @@
             <key>skill_trump.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{168,1157},{64,64}}</string>
+                <string>{{168,1115},{64,64}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -189,7 +202,7 @@
             <key>sword_176.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{135,594},{90,52}}</string>
+                <string>{{131,845},{90,52}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -207,9 +220,9 @@
             <key>realTextureFileName</key>
             <string>skill_res.png</string>
             <key>size</key>
-            <string>{253,1527}</string>
+            <string>{253,1592}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:f116782f805bee0d29f68f191b92c20f:1/1$</string>
+            <string>$TexturePacker:SmartUpdate:70a8c959212ab2f022d01768a9a8f0ca:1/1$</string>
             <key>textureFileName</key>
             <string>skill_res.png</string>
         </dict>

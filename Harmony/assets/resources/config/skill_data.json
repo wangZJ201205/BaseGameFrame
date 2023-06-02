@@ -1225,8 +1225,8 @@
 		"icon": "skill-reduce_cisha",
 		"mid": "0",
 		"over": "0",
-		"range": 100,
-		"speed": 50,
+		"range": 300,
+		"speed": 20,
 		"src": "skill_firebunch",
 		"sustaintime": 0
 	},
@@ -1245,8 +1245,8 @@
 		"icon": "skill-reduce_cisha",
 		"mid": "0",
 		"over": "0",
-		"range": 100,
-		"speed": 100,
+		"range": 300,
+		"speed": 20,
 		"src": "skill_firebunch",
 		"sustaintime": 0
 	},
@@ -1265,8 +1265,8 @@
 		"icon": "skill-reduce_cisha",
 		"mid": "0",
 		"over": "0",
-		"range": 120,
-		"speed": 100,
+		"range": 300,
+		"speed": 20,
 		"src": "skill_firebunch",
 		"sustaintime": 0
 	},
@@ -1285,8 +1285,8 @@
 		"icon": "skill-reduce_cisha",
 		"mid": "0",
 		"over": "100",
-		"range": 120,
-		"speed": 100,
+		"range": 300,
+		"speed": 20,
 		"src": "skill_firebunch",
 		"sustaintime": 0
 	},
@@ -1305,8 +1305,8 @@
 		"icon": "skill-reduce_cisha",
 		"mid": "0",
 		"over": "100",
-		"range": 120,
-		"speed": 100,
+		"range": 300,
+		"speed": 20,
 		"src": "skill_firebunch",
 		"sustaintime": 0
 	},
@@ -1325,8 +1325,8 @@
 		"icon": "skill-reduce_cisha",
 		"mid": "0",
 		"over": "100",
-		"range": 144,
-		"speed": 100,
+		"range": 300,
+		"speed": 20,
 		"src": "skill_firebunch",
 		"sustaintime": 0
 	},
@@ -1345,8 +1345,8 @@
 		"icon": "skill-reduce_cisha",
 		"mid": "0",
 		"over": "100",
-		"range": 144,
-		"speed": 100,
+		"range": 300,
+		"speed": 20,
 		"src": "skill_firebunch",
 		"sustaintime": 0
 	},
@@ -1365,8 +1365,8 @@
 		"icon": "skill-reduce_cisha",
 		"mid": "0",
 		"over": "100",
-		"range": 144,
-		"speed": 100,
+		"range": 300,
+		"speed": 20,
 		"src": "skill_firebunch",
 		"sustaintime": 0
 	}

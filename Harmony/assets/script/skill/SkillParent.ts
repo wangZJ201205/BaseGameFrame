@@ -85,7 +85,7 @@ export default class SkillParent {
             this._curDelay = cc.director.getTotalTime();
             this.shootBullet();
         }
-
+        
         for (let index = 0; index < this._bullets.length; index++) {
             const element = this._bullets[index];
             if( element.getProp(ClientDef.BULLET_PROP_STATE) == ClientDef.BULLET_STATE_RUN )
