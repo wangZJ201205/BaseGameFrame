@@ -51,6 +51,11 @@ export default class GamePlay {
         this.loadSceneSrc(GameData.Map_Current_Id);
     }
 
+    getMonsters()
+    {
+        return this._gpMonster;
+    }
+
     clear()
     {
 

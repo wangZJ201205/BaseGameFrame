@@ -36,7 +36,9 @@ export default class GameData{
     public static Player_Height : number = 40;  //人物的高度
 
     public static Player_Skill_Max : number = 6; //技能最多个数
-    public static Player_Skill_UpLevel_Count : number = 4; //技能升级最多显示个数
+    public static Player_Skill_UpLevel_Count : number = 20; //技能升级最多显示个数
 
+
+    public static Game_Mode : number = 1; //游戏运行模式 0 正常模式 1测试技能模式
 
 }

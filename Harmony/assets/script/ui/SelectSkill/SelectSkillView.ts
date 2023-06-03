@@ -31,14 +31,14 @@ export default class SelectSkillView extends UIParent {
         super.onLoad();
 
         this._learnList = [];
-        // this._learnList.push(10101);
-        // this._learnList.push(10201);
-        // this._learnList.push(10301);
-        // this._learnList.push(10401);
-        // this._learnList.push(10501);
-        // this._learnList.push(10601);
-        // this._learnList.push(10701);
-        // this._learnList.push(10801);
+        this._learnList.push(10101);
+        this._learnList.push(10201);
+        this._learnList.push(10301);
+        this._learnList.push(10401);
+        this._learnList.push(10501);
+        this._learnList.push(10601);
+        this._learnList.push(10701);
+        this._learnList.push(10801);
         this._learnList.push(10901);
 
         this._learnGeneList = [];
@@ -155,7 +155,7 @@ export default class SelectSkillView extends UIParent {
     {
         var len = data.length >= GameData.Player_Skill_UpLevel_Count ? GameData.Player_Skill_UpLevel_Count : data.length;
         const randomValues = this.getRandomValues(data,len);
-       
+        this.scrollView.content.height = GameData.Player_Skill_UpLevel_Count * 100 + 50; // get total content height
     	for (let i = 0; i < randomValues.length; ++i) { // spawn items, we only need to do this once
     		let item = cc.instantiate(this.skillItem);
     		this.scrollView.content.addChild(item);

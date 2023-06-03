@@ -144,7 +144,7 @@ export default class ClothComponent extends ComponentParent {
                     element.active = false;
                 }
                 aniPref.active = false;
-                this.getNode().scale = 0.65;
+                this.getNode().scale = 0.85;
                 this._animations[aniPref.name] = aniPref;
                 this._animations_state[aniPref.name] = ANIMATION_STATE.UNUSE;
                 var animationName = STATE_NAME[this._curState];

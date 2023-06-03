@@ -27,6 +27,12 @@ export default class GPMonster {
 
     update () 
     {
+
+        if(GameData.Game_Mode == ClientDef.GAME_MODE_TEST_FIGHT)
+        {
+            return;
+        }
+
         this.delta -= 1;
         if(this.delta <= 0)
         {
@@ -54,7 +60,7 @@ export default class GPMonster {
 
         if( liveCnt > GameData.Monster_Show_Amount )return;
 
-        var entity = GhostMgr.Instance.spawnEntity(200001); // 200001怪物id 怪物的释放规则还没有实现
+        var entity = GhostMgr.Instance.spawnEntity(200002); // 200001怪物id 怪物的释放规则还没有实现
         entity.restart();
 
         var direction = this.calculateRandomDirection();
@@ -86,5 +92,13 @@ export default class GPMonster {
         }
     
         return new cc.Vec2(x, y);
+    }
+
+    addMonster(position)
+    {
+        var entity = GhostMgr.Instance.spawnEntity(200001); // 200001怪物id 怪物的释放规则还没有实现
+        entity.restart();
+        entity.getEntityNode().setPosition(position.x - 640, position.y - 360);
+        entity.getEntityNode().zIndex = GameData.App_Game_Heigth - position.y;
     }
 }

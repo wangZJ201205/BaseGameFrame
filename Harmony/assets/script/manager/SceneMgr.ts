@@ -56,6 +56,10 @@ export default class SceneMgr extends ParentMgr {
         ItemMgr.Instance.start();
         SkillMgr.Instance.start();
         
+        if( GameData.Game_Mode == ClientDef.GAME_MODE_TEST_FIGHT )
+        {
+            this.layer.on(cc.Node.EventType.TOUCH_END, this.onLayerTouchEnd, this);
+        }
     }
 
     update () 
@@ -81,6 +85,11 @@ export default class SceneMgr extends ParentMgr {
         ItemMgr.Instance.clear();
         SkillMgr.Instance.clear();
         GamePlay.Instance.clear();
+    }
+
+    onLayerTouchEnd(event) {
+        let touchPos = event.getLocation();
+        GamePlay.Instance.getMonsters().addMonster(touchPos);
     }
 
 }

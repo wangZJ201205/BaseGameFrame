@@ -3,6 +3,7 @@
  */
 import ClientDef from "../../../common/ClientDef";
 import GameData from "../../../common/GameData";
+import LoadMgr from "../../../manager/LoadMgr";
 import GameMath from "../../../utils/GameMath";
 import BulletHelp from "../../BulletHelp";
 import BulletParent from "../../BulletParent";
@@ -23,14 +24,15 @@ export default class MiZongQuanBullet extends BulletParent {
         var heroNode = this._host.getHost().getEntityNode();
         this._startPos = new cc.Vec3();
         this._startPos = this._startPos.add(heroNode.position);
+
     }
 
     update (dt) 
     {
         var skillInfo = this._skillInfo;
 
-        
         var currentPosition = this.getNode().position;
+        
         var direction = this.getProp(ClientDef.BULLET_PROP_DIRECTION);
         direction = direction.normalize();
         

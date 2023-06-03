@@ -3,6 +3,7 @@
  */
 import ClientDef from "../../../common/ClientDef";
 import GameData from "../../../common/GameData";
+import LoadMgr from "../../../manager/LoadMgr";
 import GameMath from "../../../utils/GameMath";
 import BulletHelp from "../../BulletHelp";
 import BulletParent from "../../BulletParent";
@@ -25,10 +26,7 @@ export default class FireBallBullet extends BulletParent {
         this.setProp(ClientDef.BULLET_PROP_DIRECTION , direction);
 
 
-        // 计算函数执行时间
-        // const costTime = cc.director.getTotalTime() - startTime;
-
-        // console.log(`函数执行时间为1：${costTime} 毫秒`);
+        
     }
 
     update (dt) 
@@ -36,6 +34,14 @@ export default class FireBallBullet extends BulletParent {
         var skillInfo = this._skillInfo;
 
         var heroNode = this._host.getHost().getEntityNode();
+
+        let motionStreak = this.getNode().getComponent(cc.MotionStreak);
+        if(motionStreak)
+        {
+            // motionStreak.node.position = cc.v3(currentPosition.x, currentPosition.y,0);
+            // motionStreak.reset();
+        }
+
         var currentPosition = this.getNode().position;
         var direction = this.getProp(ClientDef.BULLET_PROP_DIRECTION);
         direction = direction.normalize();

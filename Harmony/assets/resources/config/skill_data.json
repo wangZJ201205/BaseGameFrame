@@ -488,7 +488,7 @@
 		"collRect": "2,2,40,40",
 		"collision": 1,
 		"cooldown": 6000,
-		"count": 3,
+		"count": 1,
 		"delaytime": 0,
 		"desc": "机械精灵非常好玩1",
 		"icon": "skill_shouhuzhiyi",
@@ -1213,7 +1213,7 @@
 	"10901": {
 		"id": 10901,
 		"name": "迷踪拳",
-		"animation": 1,
+		"animation": 0,
 		"attackValue": "5-15",
 		"buffer": 0,
 		"collRect": "2,2,50,50",
@@ -1227,13 +1227,13 @@
 		"over": "0",
 		"range": 300,
 		"speed": 20,
-		"src": "skill_firebunch",
+		"src": "fire_mizongquan",
 		"sustaintime": 0
 	},
 	"10902": {
 		"id": 10902,
 		"name": "迷踪拳",
-		"animation": 1,
+		"animation": 0,
 		"attackValue": "5-15",
 		"buffer": 0,
 		"collRect": "2,2,50,50",
@@ -1247,13 +1247,13 @@
 		"over": "0",
 		"range": 300,
 		"speed": 20,
-		"src": "skill_firebunch",
+		"src": "fire_mizongquan",
 		"sustaintime": 0
 	},
 	"10903": {
 		"id": 10903,
 		"name": "迷踪拳",
-		"animation": 1,
+		"animation": 0,
 		"attackValue": "5-15",
 		"buffer": 0,
 		"collRect": "2,2,50,50",
@@ -1267,13 +1267,13 @@
 		"over": "0",
 		"range": 300,
 		"speed": 20,
-		"src": "skill_firebunch",
+		"src": "fire_mizongquan",
 		"sustaintime": 0
 	},
 	"10904": {
 		"id": 10904,
 		"name": "迷踪拳",
-		"animation": 1,
+		"animation": 0,
 		"attackValue": "5-15",
 		"buffer": 0,
 		"collRect": "2,2,50,50",
@@ -1287,13 +1287,13 @@
 		"over": "100",
 		"range": 300,
 		"speed": 20,
-		"src": "skill_firebunch",
+		"src": "fire_mizongquan",
 		"sustaintime": 0
 	},
 	"10905": {
 		"id": 10905,
 		"name": "迷踪拳",
-		"animation": 1,
+		"animation": 0,
 		"attackValue": "5-15",
 		"buffer": 0,
 		"collRect": "2,2,50,50",
@@ -1307,13 +1307,13 @@
 		"over": "100",
 		"range": 300,
 		"speed": 20,
-		"src": "skill_firebunch",
+		"src": "fire_mizongquan",
 		"sustaintime": 0
 	},
 	"10906": {
 		"id": 10906,
 		"name": "迷踪拳",
-		"animation": 1,
+		"animation": 0,
 		"attackValue": "5-15",
 		"buffer": 0,
 		"collRect": "2,2,50,50",
@@ -1327,13 +1327,13 @@
 		"over": "100",
 		"range": 300,
 		"speed": 20,
-		"src": "skill_firebunch",
+		"src": "fire_mizongquan",
 		"sustaintime": 0
 	},
 	"10907": {
 		"id": 10907,
 		"name": "迷踪拳",
-		"animation": 1,
+		"animation": 0,
 		"attackValue": "5-15",
 		"buffer": 0,
 		"collRect": "2,2,50,50",
@@ -1347,13 +1347,13 @@
 		"over": "100",
 		"range": 300,
 		"speed": 20,
-		"src": "skill_firebunch",
+		"src": "fire_mizongquan",
 		"sustaintime": 0
 	},
 	"10908": {
 		"id": 10908,
 		"name": "迷踪拳",
-		"animation": 1,
+		"animation": 0,
 		"attackValue": "5-15",
 		"buffer": 0,
 		"collRect": "2,2,50,50",
@@ -1367,7 +1367,7 @@
 		"over": "100",
 		"range": 300,
 		"speed": 20,
-		"src": "skill_firebunch",
+		"src": "fire_mizongquan",
 		"sustaintime": 0
 	}
 }

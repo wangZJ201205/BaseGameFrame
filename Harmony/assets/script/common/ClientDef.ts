@@ -6,6 +6,10 @@ export default class ClientDef{
     //游戏大容器深度
     public static readonly GAME_INDEX_SCENE :number = 1;
     public static readonly GAME_INDEX_UI : number = 2;
+
+    //游戏运行模式
+    public static readonly GAME_MODE_NORMAL : number = 0;
+    public static readonly GAME_MODE_TEST_FIGHT : number = 1; //战斗测试模式
     
     //场景中的管理深度
     public static readonly SCENE_INDEX_GAMEPLAY : number = 1;
