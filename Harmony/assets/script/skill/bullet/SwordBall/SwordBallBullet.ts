@@ -22,7 +22,7 @@ export default class SwordBallBullet extends BulletParent {
         {
             aniNode.getComponent(cc.Animation).play();
         }
-        
+        super.restart();
     }
 
     update (dt) 

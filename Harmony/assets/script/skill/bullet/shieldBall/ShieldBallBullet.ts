@@ -33,6 +33,7 @@ export default class ShieldBallBullet extends BulletParent {
     {   
         this._delta = cc.director.getTotalTime();
         this._node.opacity = 125;
+        super.restart();
     }
 
     update (dt) 

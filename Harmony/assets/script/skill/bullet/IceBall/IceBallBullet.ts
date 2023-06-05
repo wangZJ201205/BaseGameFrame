@@ -26,7 +26,7 @@ export default class IceBallBullet extends BulletParent {
         this.getNode().angle = GameMath.directionToAngle(direction);
         this.setProp(ClientDef.BULLET_PROP_DIRECTION , direction);
 
-
+        super.restart();
         // 计算函数执行时间
         // const costTime = cc.director.getTotalTime() - startTime;
 

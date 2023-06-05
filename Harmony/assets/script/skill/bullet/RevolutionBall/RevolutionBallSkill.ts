@@ -39,22 +39,18 @@ export default class RevolutionBallSkill extends SkillParent {
 
         var bulletCount = this.getProp(ClientDef.SKILL_PROP_COUNT);
         var createCount = 0;
-        if(this._bullets.length >= bulletCount)
+        const sameTypeCount = this._bullets.filter(bullet => bullet.getProp(ClientDef.BULLET_PROP_STATICID) === this._staticId).length;
+
+        if(sameTypeCount >= bulletCount)
         {
-            for (let index = 0; index < this._bullets.length; index++) 
-            {
-                const element = this._bullets[index];
-                if( element.getProp(ClientDef.BULLET_PROP_STATE) == ClientDef.BULLET_STATE_FREE )
-                {
-                    createCount++;
-                }
-            }
+            createCount = this._bullets.filter(bullet => bullet.getProp(ClientDef.BULLET_PROP_STATE) == ClientDef.BULLET_STATE_FREE && 
+            bullet.getProp(ClientDef.BULLET_PROP_STATICID) === this._staticId).length;
         }
         else
         {
             createCount = bulletCount;   
         }
-
+        
         for (let index = 0; index < createCount; index++) {
             var bullet = this.spawnBullet();
             bullet.getNode().active = true;

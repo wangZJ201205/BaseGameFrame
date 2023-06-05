@@ -17,6 +17,7 @@ export default class ThunderBallBullet extends BulletParent {
     restart()
     {   
         this._delta = 50;
+        super.restart();
     }
 
     update (dt) 

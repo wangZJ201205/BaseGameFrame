@@ -89,7 +89,12 @@ export default class SceneMgr extends ParentMgr {
 
     onLayerTouchEnd(event) {
         let touchPos = event.getLocation();
-        GamePlay.Instance.getMonsters().addMonster(touchPos);
+        var gpMonster = GamePlay.Instance.getMonsters();
+        if(!gpMonster)
+        {
+            return;
+        }
+        gpMonster.addMonster(touchPos);
     }
 
 }

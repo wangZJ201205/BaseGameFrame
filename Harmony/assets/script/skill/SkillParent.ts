@@ -86,13 +86,26 @@ export default class SkillParent {
             this.shootBullet();
         }
         
-        for (let index = 0; index < this._bullets.length; index++) {
-            const element = this._bullets[index];
-            if( element.getProp(ClientDef.BULLET_PROP_STATE) == ClientDef.BULLET_STATE_RUN )
-            {
-                element.update(dt);
+        this._bullets.forEach(bullet => {
+            if (bullet.getProp(ClientDef.BULLET_PROP_STATE) === ClientDef.BULLET_STATE_RUN) {
+              bullet.update(dt);
             }
-        }
+        });
+
+        this.checkOldBullet();
+    }
+
+    //将旧等级的子弹移除
+    checkOldBullet()
+    {
+        this._bullets = this._bullets.filter(bullet => {
+            const bid = bullet.getProp(ClientDef.BULLET_PROP_STATICID);
+            if (bullet.getProp(ClientDef.BULLET_PROP_STATE) === ClientDef.BULLET_STATE_FREE && bid !== this._staticId) {
+              bullet.remove();
+              return false;
+            }
+            return true;
+        });
     }
 
     shootBullet()

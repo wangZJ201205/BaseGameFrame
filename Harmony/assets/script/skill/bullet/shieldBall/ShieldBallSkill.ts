@@ -38,6 +38,7 @@ export default class ShieldBallSkill extends SkillParent {
                 element.update(dt);
             }
         }
+        this.checkOldBullet();
     }
 
     //发射子弹

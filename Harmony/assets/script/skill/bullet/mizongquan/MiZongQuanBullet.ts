@@ -24,7 +24,7 @@ export default class MiZongQuanBullet extends BulletParent {
         var heroNode = this._host.getHost().getEntityNode();
         this._startPos = new cc.Vec3();
         this._startPos = this._startPos.add(heroNode.position);
-
+        super.restart();
     }
 
     update (dt) 

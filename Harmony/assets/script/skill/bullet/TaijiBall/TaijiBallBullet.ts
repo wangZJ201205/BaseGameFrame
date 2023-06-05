@@ -3,6 +3,7 @@
  */
 import ClientDef from "../../../common/ClientDef";
 import GameData from "../../../common/GameData";
+import LoadMgr from "../../../manager/LoadMgr";
 import GameMath from "../../../utils/GameMath";
 import BulletHelp from "../../BulletHelp";
 import BulletParent from "../../BulletParent";
@@ -14,13 +15,22 @@ export default class TaijiBallBullet extends BulletParent {
 
     private _maxRadus:number = 0;
     private _speed : number = 0;
+
+    start () 
+    {
+        super.start();
+    }
+    
+
     restart()
     {
+
         this.setProp(ClientDef.BULLET_PROP_CHANG_DIR, 1); //变化的方向  
         this.setProp(ClientDef.BULLET_PROP_CHANG_RANGE, 0);
         this._maxRadus = this._skillInfo["range"] ; // 子弹的半径
         this._speed = this._skillInfo["speed"] ; // 子弹的速度
         this.getNode().setPosition(0,0,0);
+        super.restart();
     }
 
     getRadius()

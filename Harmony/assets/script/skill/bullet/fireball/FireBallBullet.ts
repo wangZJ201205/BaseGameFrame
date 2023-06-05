@@ -25,7 +25,7 @@ export default class FireBallBullet extends BulletParent {
         this.getNode().angle = GameMath.directionToAngle(direction);
         this.setProp(ClientDef.BULLET_PROP_DIRECTION , direction);
 
-
+        super.restart();
         
     }
 

@@ -16,8 +16,9 @@ export default class ClientDef{
     public static readonly SCENE_INDEX_SKILL_LOW : number = 2;
     public static readonly SCENE_INDEX_ITEM : number = 3;
     public static readonly SCENE_INDEX_GHOST : number = 4;
-    public static readonly SCENE_INDEX_SKILL_HIGH : number = 5;
-    public static readonly SCENE_INDEX_LABEL : number = 6;
+    public static readonly SCENE_INDEX_PARTICLE : number = 5;
+    public static readonly SCENE_INDEX_SKILL_HIGH : number = 6;
+    public static readonly SCENE_INDEX_LABEL : number = 7;
     
 
     //界面深度
@@ -112,5 +113,11 @@ export default class ClientDef{
     //游戏暂停列表
     public static readonly GAME_PAUSE_UPGRADE : number  = 1 << 1; //升级界面
     public static readonly GAME_PAUSE_SET : number      = 1 << 2;     //设置界面
+
+    //粒子状态
+    public static readonly PARTICLE_STATE_LOADING : number     = 1;     //加载状态
+    public static readonly PARTICLE_STATE_RUN : number     = 2;         //运行状态
+    public static readonly PARTICLE_STATE_STOP : number     = 3;        //停止状态
+    public static readonly PARTICLE_STATE_IDLE : number     = 4;        //休息状态
 
 }

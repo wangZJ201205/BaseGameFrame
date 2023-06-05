@@ -32,6 +32,7 @@ export default class posionBallBullet extends BulletParent {
     restart()
     {   
         this._delta = cc.director.getTotalTime();
+        super.restart();
     }
 
     update (dt) 
