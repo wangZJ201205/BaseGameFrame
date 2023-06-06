@@ -4,16 +4,13 @@
 
 import CollisionComponent from "../component/CollisionComponent";
 import ClientDef from "../common/ClientDef";
-import GameData from "../common/GameData";
-import Entity from "../ghost/Entity";
 import DictMgr from "../manager/DictMgr";
 import GhostMgr from "../manager/GhostMgr";
 import LoadMgr from "../manager/LoadMgr";
-import SceneMgr from "../manager/SceneMgr";
 import SkillMgr from "../manager/SkillMgr";
 import SkillParent from "./SkillParent";
-import ParticleComponent from "../component/ParticleComponent";
 import ParticleMgr from "../manager/ParticleMgr";
+import EffectParent from "../effect/EffectParent";
 
 const {ccclass, property} = cc._decorator;
 
@@ -26,7 +23,7 @@ export default class BulletParent {
 
     protected _skillInfo: any = null;
     protected _staticId : number;
-
+    protected _effect:EffectParent;
 
     onLoad (host) 
     {
@@ -48,8 +45,7 @@ export default class BulletParent {
         this.setProp(ClientDef.BULLET_PROP_STATE,ClientDef.BULLET_STATE_LOADSRC);
         this.addBulletSkin();
         this.addCollision();
-        
-        this.addParticle();
+        this.addEffect();
     }
 
     restart()
@@ -69,18 +65,19 @@ export default class BulletParent {
         {
             this._node.removeFromParent();
         }
-        if(this._particle)
+        
+        if(this._effect)
         {
-            this._particle.setState(ClientDef.PARTICLE_STATE_IDLE);
+            this._effect.setState(ClientDef.PARTICLE_STATE_FREE);
         }
     }
 
     update (dt) 
     {
         GhostMgr.Instance.setEntityZOrder(this._node);
-        if(this._particle)
+        if(this._effect)
         {
-            this._particle.setPosition(this._node.position.x,this._node.position.y);
+            this._effect.setPosition(this._node.position.x,this._node.position.y);
         }
     }
 
@@ -98,24 +95,30 @@ export default class BulletParent {
     {
         this._prop[type] = value;
 
-        if(ClientDef.BULLET_PROP_STATE == type)
+        if (ClientDef.BULLET_PROP_STATE === type) //状态改变
         {
-            if(value == ClientDef.BULLET_STATE_RUN)
-            {
-                if(this._particle)
-                {
-                    this._particle.setState(ClientDef.PARTICLE_STATE_RUN);
-                }
-            }
-            else if(value == ClientDef.BULLET_STATE_FREE || value == ClientDef.BULLET_STATE_LOADSRC)
-            {
-                if(this._particle)
-                {
-                    this._particle.setState(ClientDef.PARTICLE_STATE_STOP);
-                }
-            }
+            this._changeBulletState(value);    
         }
+    }
 
+    _changeBulletState(value)
+    {
+        switch (value) 
+        {
+          case ClientDef.BULLET_STATE_RUN:
+            this.setEffectState(ClientDef.PARTICLE_STATE_RUN);
+            break;
+          case ClientDef.BULLET_STATE_FREE:
+          case ClientDef.BULLET_STATE_LOADSRC:
+            this.setEffectState(ClientDef.PARTICLE_STATE_STOP);
+            break;
+        }
+    }
+
+    setEffectState(state) {
+        if (this._effect) {
+            this._effect.setState(state);
+        }
     }
 
     getProp(type)
@@ -143,7 +146,7 @@ export default class BulletParent {
         var skillInfo = this._skillInfo;
 
         //子弹就是以一张图片的形式出现
-        if(skillInfo.animation == 0)
+        if(!skillInfo.animation)
         {
             this.loadSprite();
         }
@@ -253,45 +256,17 @@ export default class BulletParent {
     {
     }
 
-    _particle:ParticleComponent;
-
-    addParticle()
+    addEffect()
     {
-        this._particle = ParticleMgr.Instance.addParticle();
-        // var node =  new cc.Node();
-        // this.getNode().addChild(node);
-        // var particleSystem = node.addComponent(cc.ParticleSystem); // 添加粒子组件到 Node 上
-        // LoadMgr.Instance.LoadAssetWithType('particle/test_pt', cc.ParticleAsset, function ( particleAsset) {
-        //     // if (err) {
-        //     //     cc.error(err.message || err);
-        //     //     return;
-        //     // }
-        //     particleSystem.file = particleAsset;
-        // });
+        if(this._skillInfo.particle)
+        {
+            this._effect = ParticleMgr.Instance.addParticle(this._skillInfo.particle);
+        }
+        else if(this._skillInfo.motionStreak)
+        {
+            this._effect = ParticleMgr.Instance.addMotionStreak(this._skillInfo.motionStreak);
+        } 
     }
 
-    addMotionStreak()
-    {
-        // 获取MotionStreak组件对象
-        LoadMgr.Instance.LoadAsset("animation/skill/i_jpql_02" ,(sp)=>{
-            //检查人物状态
-            if(this._host.getHost().getClientProp(ClientDef.ENTITY_PROP_ACTIVE_STATE) != ClientDef.ENTITY_ACTIVE_STATE_RUN)
-            {
-                return;
-            }
-            var node =  new cc.Node();
-            this.getNode().addChild(node);
-            let motionStreak = node.addComponent(cc.MotionStreak);
-            let texture = sp;
-            motionStreak.texture = texture;
-            // motionStreak.minSeg = 0.2; // 拖尾长度
-            motionStreak.fadeTime = 3; // 拖尾渐隐时间
-            motionStreak.stroke = 10
-            // motionStreak.width = 20;  // 拖尾宽度
-            // motionStreak.color = cc.Color.BLUE;  // 拖尾颜色
-            // motionStreak.spacing = 10; // 拖尾间隔
-            // motionStreak.fastMode = true; // 使用快速模式来渲染纹理
-        })
-    }
 
 }

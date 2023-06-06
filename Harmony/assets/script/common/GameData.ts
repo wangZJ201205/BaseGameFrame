@@ -41,4 +41,6 @@ export default class GameData{
 
     public static Game_Mode : number = 0; //游戏运行模式 0 正常模式 1测试技能模式
 
+    public static Particle_Delay_Time : number = 10; //粒子延迟回收和等待时间
+
 }

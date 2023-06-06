@@ -15,22 +15,12 @@ export default class IceBallBullet extends BulletParent {
     
     restart()
     {   
-        // const startTime = cc.director.getTotalTime();
-
-        // if( typeof(this.getProp(ClientDef.BULLET_PROP_DIRECTION)) != "number" )
-        // {
-        //     // return;
-        // }
         var angle = this.getProp(ClientDef.BULLET_PROP_ANGLE);
         var direction = BulletHelp.AngleConvertDirection(angle);
         this.getNode().angle = GameMath.directionToAngle(direction);
         this.setProp(ClientDef.BULLET_PROP_DIRECTION , direction);
 
         super.restart();
-        // 计算函数执行时间
-        // const costTime = cc.director.getTotalTime() - startTime;
-
-        // console.log(`函数执行时间为2：${costTime} 毫秒`);
     }
 
     update (dt) 

@@ -115,9 +115,11 @@ export default class ClientDef{
     public static readonly GAME_PAUSE_SET : number      = 1 << 2;     //设置界面
 
     //粒子状态
-    public static readonly PARTICLE_STATE_LOADING : number     = 1;     //加载状态
-    public static readonly PARTICLE_STATE_RUN : number     = 2;         //运行状态
+    public static readonly PARTICLE_STATE_LOADING : number  = 1;         //加载状态
+    public static readonly PARTICLE_STATE_RUN : number      = 2;         //运行状态
     public static readonly PARTICLE_STATE_STOP : number     = 3;        //停止状态
-    public static readonly PARTICLE_STATE_IDLE : number     = 4;        //休息状态
+    public static readonly PARTICLE_STATE_FREE : number     = 4;        //闲置状态
+
+    
 
 }

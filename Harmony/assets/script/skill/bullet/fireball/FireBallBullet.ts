@@ -32,16 +32,7 @@ export default class FireBallBullet extends BulletParent {
     update (dt) 
     {
         var skillInfo = this._skillInfo;
-
         var heroNode = this._host.getHost().getEntityNode();
-
-        let motionStreak = this.getNode().getComponent(cc.MotionStreak);
-        if(motionStreak)
-        {
-            // motionStreak.node.position = cc.v3(currentPosition.x, currentPosition.y,0);
-            // motionStreak.reset();
-        }
-
         var currentPosition = this.getNode().position;
         var direction = this.getProp(ClientDef.BULLET_PROP_DIRECTION);
         direction = direction.normalize();

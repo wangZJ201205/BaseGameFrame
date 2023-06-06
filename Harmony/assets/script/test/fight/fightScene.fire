@@ -364,8 +364,8 @@
       "__type__": "TypedArray",
       "ctor": "Float64Array",
       "array": [
-        262.978,
-        60.414,
+        119.116,
+        -34.564,
         0,
         0,
         0,
@@ -417,9 +417,9 @@
     "_stopped": true,
     "playOnLoad": true,
     "autoRemoveOnFinish": false,
-    "totalParticles": 50,
+    "totalParticles": 10,
     "duration": -1,
-    "emissionRate": 50,
+    "emissionRate": 10,
     "life": 1,
     "lifeVar": 0,
     "_startColor": {

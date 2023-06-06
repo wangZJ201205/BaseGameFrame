@@ -7,8 +7,9 @@
  */
 
 import ClientDef from "../common/ClientDef";
-import ParticleComponent from "../component/ParticleComponent";
-import LoadMgr from "./LoadMgr";
+import EffectParent from "../effect/EffectParent";
+import MotionSteakEffect from "../effect/children/MotionStreakEffect";
+import ParticleEffect from "../effect/children/ParticleEffect";
 import ParentMgr from "./ParentMgr";
 import SceneMgr from "./SceneMgr";
 
@@ -21,7 +22,7 @@ export default class ParticleMgr extends ParentMgr {
 
     private _layer: cc.Node = null; //显示容器
 
-    private _particleArray:ParticleComponent[];
+    private _particleArray:EffectParent[];
 
     private _timerID:number;
 
@@ -34,8 +35,6 @@ export default class ParticleMgr extends ParentMgr {
     {
         this._layer = new cc.Node();
         this._layer.zIndex = ClientDef.SCENE_INDEX_PARTICLE;
-        // this._layer.width = cc.winSize.width;
-        // this._layer.height = cc.winSize.height;
         this._layer.parent = SceneMgr.Instance.layer;
 
         this._timerID = setInterval(this.update.bind(this), 1000);
@@ -43,46 +42,41 @@ export default class ParticleMgr extends ParentMgr {
 
     update()
     {
-        let stopCount = 0;
-        let runCount = 0;
         this._particleArray = this._particleArray.filter(particle => {
             const state = particle.getState();
             let delayRecycle = particle.getDelayRecycle();
-            if (delayRecycle <= 0) {
-                particle.getParticle().node.removeFromParent();
+            if (delayRecycle <= 0) 
+            {
+                particle.remove();
                 return false;
             }
-            if (state === ClientDef.PARTICLE_STATE_IDLE) {
-                stopCount++;
-                delayRecycle--;
-                particle.setDelayRecycle(delayRecycle);
-            } else if (state === ClientDef.PARTICLE_STATE_RUN) {
-                runCount++;
-            }
+            particle.updata();
             return true;
         });
-        console.info(`>>>>>>>>particle total: ${this._particleArray.length}, stop count: ${stopCount}, run count: ${runCount}`);
+        
+        console.info(`>>>>>particle count : ${this._particleArray.length}`);
     }
 
-    addParticle()
+    //添加子弹粒子
+    addParticle(config)
     {
-        var particleComponent = new ParticleComponent(); // 添加粒子组件到 Node 上
+        var particleComponent = new ParticleEffect(); // 添加粒子组件到 Node 上
         this._particleArray.push(particleComponent);
-        particleComponent.onload(this._layer);
+        particleComponent.onLoad();
+        particleComponent.start(this._layer,config);
 
-        // var node =  new cc.Node();
-        // this._layer.addChild(node);
-        // var particleSystem = node.addComponent(cc.ParticleSystem); // 添加粒子组件到 Node 上
-        // LoadMgr.Instance.LoadAssetWithType('particle/test_pt', cc.ParticleAsset, function(particleAsset) {
-        //     // if (err) {
-        //     //     cc.error(err.message || err);
-        //     //     return;
-        //     // }
-        //     particleSystem.file = particleAsset;
-        // });
-        
         return particleComponent;
     }
 
+    //添加拖尾特效
+    addMotionStreak(config)
+    {
+        var motionStreakComponent = new MotionSteakEffect(); // 添加特效组件到 Node 上
+        this._particleArray.push(motionStreakComponent);
+        motionStreakComponent.onLoad();
+        motionStreakComponent.start(this._layer,config);
+
+        return motionStreakComponent;
+    }
 
 }
