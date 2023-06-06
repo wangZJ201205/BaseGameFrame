@@ -4,7 +4,6 @@
 import ItemMgr from "./ItemMgr";
 import ClientDef from "../common/ClientDef";
 import GamePlay from "../gameplay/GamePlay";
-import Hero from "../ghost/Hero";
 import GhostMgr from "./GhostMgr";
 import LabelMgr from "./LabelMgr";
 import ParentMgr from "./ParentMgr";

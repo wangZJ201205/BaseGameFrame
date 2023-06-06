@@ -2,7 +2,6 @@
  * 放毒
  */
 
-import ClientDef from "../../../common/ClientDef";
 import GameData from "../../../common/GameData";
 import Hero from "../../../ghost/Hero";
 import SkillParent from "../../SkillParent";
@@ -22,14 +21,14 @@ export default class posionBallSkill extends SkillParent {
     //发射子弹
     shootBullet()
     {
-        for (let index = 0; index < 4; index++) {
-            var heroPosition = Hero.Instance.getEntity().position;
-            var x = Math.random() * GameData.App_Game_Width + heroPosition.x - GameData.App_Game_Width / 2;
-            var y = Math.random() * GameData.App_Game_Heigth + heroPosition.y - GameData.App_Game_Heigth / 2;
+        for (let index = 0; index < 1; index++) {
+            // var heroPosition = Hero.Instance.getEntity().position;
+            // var x = Math.random() * GameData.App_Game_Width + heroPosition.x - GameData.App_Game_Width / 2;
+            // var y = Math.random() * GameData.App_Game_Heigth + heroPosition.y - GameData.App_Game_Heigth / 2;
         
             var bullet = this.spawnBullet();
             bullet.getNode().active = true;
-            bullet.getNode().position = cc.v3(x,y,0);
+            // bullet.getNode().position = cc.v3(x,y,0);
             bullet.restart();
         }
         

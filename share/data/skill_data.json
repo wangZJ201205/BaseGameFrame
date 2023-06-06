@@ -624,7 +624,7 @@
 		"icon": "skill_xukongfalidun",
 		"range": 350,
 		"speed": 3,
-		"src": "qifu_qiu_zb"
+		"src": "i_jpql_03"
 	},
 	"10702": {
 		"id": 10702,
@@ -638,7 +638,7 @@
 		"icon": "skill_xukongfalidun",
 		"range": 350,
 		"speed": 3,
-		"src": "qifu_qiu_zb"
+		"src": "i_jpql_03"
 	},
 	"10703": {
 		"id": 10703,
@@ -752,7 +752,7 @@
 		"range": 150,
 		"sceneSkill": "20101",
 		"speed": 3,
-		"src": "skill_youlanaoyi_05",
+		"src": "i_jpql_03",
 		"sustaintime": 2000
 	},
 	"10802": {
@@ -769,7 +769,7 @@
 		"range": 150,
 		"sceneSkill": "20101",
 		"speed": 3,
-		"src": "skill_youlanaoyi_05",
+		"src": "i_jpql_01",
 		"sustaintime": 2000
 	},
 	"10803": {

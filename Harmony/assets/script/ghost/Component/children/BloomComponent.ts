@@ -1,6 +1,5 @@
 import ClientDef from "../../../common/ClientDef";
 import GhostMgr from "../../../manager/GhostMgr";
-// import GhostMgr from "../../../manager/GhostMgr";
 import ItemMgr from "../../../manager/ItemMgr";
 import LabelMgr from "../../../manager/LabelMgr";
 import ComponentParent from "../ComponentParent";
@@ -43,6 +42,7 @@ export default class BloomComponent extends ComponentParent {
         if( this._curBloom <= 0 )
         {
             this.dropItem();
+            this.getHost().stopAllActions();
             this.getHost().active = false;
             this.getHost().setClientProp(ClientDef.ENTITY_PROP_ACTIVE_STATE, ClientDef.ENTITY_ACTIVE_STATE_FREE);
         }
@@ -62,6 +62,27 @@ export default class BloomComponent extends ComponentParent {
         LabelMgr.Instance.addLabel(type,showDamageValue,this._host.getPosition());
 
         this._curBloom -= damageValue;
+
+        this.shakeBody();
+    }
+
+    //添加抖动效果
+    shakeBody()
+    {
+        if(this._curBloom <= 0 )
+        {
+            return;
+        }
+        cc.tween(this._host)
+        .to(0.05, { position: cc.v3(this._host.position.x - 5, this._host.position.y) })
+        .to(0.05, { position: cc.v3(this._host.position.x + 5, this._host.position.y) })
+        .to(0.05, { position: cc.v3(this._host.position.x - 5, this._host.position.y) })
+        .to(0.05, { position: cc.v3(this._host.position.x + 5, this._host.position.y) })
+        .to(0.05, { position: cc.v3(this._host.position.x - 5, this._host.position.y) })
+        .to(0.05, { position: cc.v3(this._host.position.x + 5, this._host.position.y) })
+        .to(0.05, { position: cc.v3(this._host.position.x - 5, this._host.position.y) })
+        .to(0.05, { position: cc.v3(this._host.position.x,     this._host.position.y) })
+        .start();
     }
 
     //掉落物品

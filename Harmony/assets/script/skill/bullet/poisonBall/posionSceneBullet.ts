@@ -1,5 +1,5 @@
 /**
- * 放毒
+ * 放毒-场景
  */
 import ClientDef from "../../../common/ClientDef";
 import GameData from "../../../common/GameData";
@@ -10,7 +10,7 @@ import BulletParent from "../../BulletParent";
 const {ccclass, property} = cc._decorator;
 
 @ccclass
-export default class posionBallBullet extends BulletParent {
+export default class posionSceneBullet extends BulletParent {
 
     private _delta:number = 0;
     private _damagePlayers : number = 0;
@@ -22,7 +22,6 @@ export default class posionBallBullet extends BulletParent {
         this._host = host;
         this._prop = {};
 
-        this._phase = 1;
         this._node = new cc.Node();
         SkillMgr.Instance.getLayerLow().addChild(this._node);
 
@@ -35,20 +34,14 @@ export default class posionBallBullet extends BulletParent {
 
     }
 
-
     update (dt) 
     {
         var delay = cc.director.getTotalTime() - this._delta;
-        if(this._phase == 1)
+       
+        if(delay > this._skillInfo["sustaintime"])
         {
-           
-        }
-        else
-        {
-            if(delay > this._skillInfo["sustaintime"])
-            {
-                this.stop();
-            }
+            this.stop();
+            this.remove(); //直接销毁
         }
     }
 
