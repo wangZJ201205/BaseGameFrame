@@ -375,8 +375,8 @@
       "__type__": "TypedArray",
       "ctor": "Float64Array",
       "array": [
-        466.813,
-        -150.106,
+        517.948,
+        -227.633,
         0,
         0,
         0,
@@ -965,7 +965,6 @@
     "reStartBtn": {
       "__id__": 17
     },
-    "moveTime": 2,
     "_id": "4cSGGKhUxHJr0hsBl32K0r"
   }
 ]

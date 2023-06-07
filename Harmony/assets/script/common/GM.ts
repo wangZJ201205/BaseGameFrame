@@ -17,6 +17,7 @@ export default class GM {
         this.GMTable['eb_phy'] = this.ebPhyFunc; //开启物理引擎
         this.GMTable['addSkill'] = this.addSkill; //添加技能
         this.GMTable['addMonster'] = this.addMonster; //添加怪物
+        this.GMTable['switchGameMode'] = this.switchGameMode; //切换游戏模式
     }
 
     static useGm(data)
@@ -49,6 +50,11 @@ export default class GM {
     static addMonster(data)
     {
         GameData.Monster_Show_Amount += Number(data[1]);
+    }
+
+    static switchGameMode(data)
+    {
+        GameData.Game_Mode = Number(data[1]);
     }
 
 

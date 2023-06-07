@@ -3,6 +3,30 @@
  */
 export default class GameMath {
 
+    private static _cosCache = {};
+    private static _sinCache = {};
+
+    public static start()
+    {
+        // 缓存常用计算式
+        for (var i = -360; i <= 360; i++) {
+            var radian = i / 180 * Math.PI;
+            GameMath._cosCache[i] = Number((Math.cos(radian)).toFixed(3));
+            GameMath._sinCache[i] = Number((Math.sin(radian)).toFixed(3));
+        }
+    }
+
+    public static getCosCache(angle)
+    {
+        return GameMath._cosCache[Math.floor(angle)];
+    }
+
+    public static getSinCache(angle)
+    {
+        return GameMath._sinCache[Math.floor(angle)];
+    }
+
+
     //角度转化为方向
     public static degreeToEntityDirection(angle)
     {
@@ -44,4 +68,7 @@ export default class GameMath {
         // 通过字符串拼接方式，拼接出时间格式
         return ('0' + minutes).slice(-2) + ':' + ('0' + seconds).slice(-2);
     }
+
+
+
 }

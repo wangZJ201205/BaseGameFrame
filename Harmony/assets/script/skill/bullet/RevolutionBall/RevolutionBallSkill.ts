@@ -5,6 +5,7 @@
 import ClientDef from "../../../common/ClientDef";
 import GameData from "../../../common/GameData";
 import Hero from "../../../ghost/Hero";
+import GameMath from "../../../utils/GameMath";
 import SkillParent from "../../SkillParent";
 import RevolutionBallBullet from "./RevolutionBallBullet";
 
@@ -83,8 +84,8 @@ export default class RevolutionBallSkill extends SkillParent {
             }
             var angle = ((360 / bulletCount) * index + this._angle)%360; // 直接使用角度公式计算子弹的角度
             
-            var x = heroNode.position.x +           radius * this._cosCache[angle];
-            var y = heroNode.position.y + offsetY + radius * this._sinCache[angle];
+            var x = heroNode.position.x +           radius * GameMath.getCosCache(angle);
+            var y = heroNode.position.y + offsetY + radius * GameMath.getSinCache(angle);
             
             bullet.getNode().setPosition(x,y,0);
         }

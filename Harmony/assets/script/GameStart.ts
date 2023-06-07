@@ -19,6 +19,7 @@ import SceneMgr from "./manager/SceneMgr";
 import UIMgr from "./manager/UIMgr";
 import SocketRegister from "./socket/SocketRegister";
 import LoginProxy from "./ui/login/LoginProxy";
+import GameMath from "./utils/GameMath";
 
 const {ccclass, property} = cc._decorator;
 
@@ -76,6 +77,8 @@ export default class GameStart extends cc.Component {
 
         //注册所有的消息
         SocketRegister.start();
+
+        GameMath.start();
 
         //注册消息
         LoginProxy.register();
