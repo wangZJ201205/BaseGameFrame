@@ -48,6 +48,7 @@ export default class PosionStartBallBullet extends BulletParent {
             speed: 1,
             completeCallBack :this.completeCallBack,
             target :this,
+            direction:null,
           };
 
         this._halfCircleMovement.start(info);

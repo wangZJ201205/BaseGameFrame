@@ -11,6 +11,7 @@ export interface MoveNodeConfig {
   speed: number; // 速度
   completeCallBack?: Function; // 完成时的回调函数，可选
   target?: any;
+  direction:cc.Vec3;
 }
 
 @ccclass
@@ -22,6 +23,7 @@ export default class MovementParent {
     protected _targetPos : cc.Vec3; //结束点
     protected _speed : number; //速度
     protected _target : any; //速度
+    protected _direction:cc.Vec3;
 
     protected _completeCallBack : Function;
 
@@ -31,11 +33,10 @@ export default class MovementParent {
         this._startPos  = data.startPos;
         this._targetPos = data.targetPos;
         this._speed     = data.speed;
+        this._direction     = data.direction;
         this._completeCallBack = data.completeCallBack;
         this._target = data.target;
     }
-
-    
 
     update (dt) 
     {

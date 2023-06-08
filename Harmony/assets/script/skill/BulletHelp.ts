@@ -43,7 +43,7 @@ export default class BulletHelp{
     static AngleConvertDirection(angle)
     {   
         
-        var direction = new cc.Vec2();
+        var direction = new cc.Vec3();
         var ag = angle * (Math.PI / 180); // 将角度转换为弧度
         direction.x = Math.cos(ag);
         direction.y = Math.sin(ag);
