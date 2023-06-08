@@ -70,6 +70,7 @@ export default class ClientDef{
     public static readonly ENTITY_PROP_MAX_EXP : number = 12; //最大经验
     public static readonly ENTITY_PROP_LV : number = 13; //等级
     public static readonly ENTITY_PROP_MOVE_SPEED : number = 14; //移动速度
+    public static readonly ENTITY_PROP_POSION_TIME : number = 15; //毒的时间
 
     //技能类型
     public static readonly SKILL_TYPE_FIREBALL: number      = 101; //火球
@@ -93,7 +94,14 @@ export default class ClientDef{
     public static readonly BULLET_PROP_ATK_MAX : number = 8;// 攻击力 大
     public static readonly BULLET_PROP_CHANG_RANGE : number = 9;// 变化的范围
     public static readonly BULLET_PROP_CHANG_DIR : number = 10;// 变化的方向
-    
+    public static readonly BULLET_PROP_PHASE : number = 11;// 阶段
+    public static readonly BULLET_PROP_STRIKE : number = 12;// 穿透
+
+    //子弹阶段
+    public static readonly BULLET_PHASE_1 : number = 1;// 开始阶段
+    public static readonly BULLET_PHASE_2 : number = 2;// 中间阶段
+    public static readonly BULLET_PHASE_3 : number = 3;// 结束阶段
+
     //技能属性
     public static readonly SKILL_PROP_COUNT : number = 1;// 技能中子弹的数量
 

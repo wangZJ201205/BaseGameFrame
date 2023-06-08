@@ -5,7 +5,6 @@ import ClientDef from "../common/ClientDef";
 import GameData from "../common/GameData";
 import Item from "../ghost/Item";
 import GameHelp from "../help/GameHelp";
-import GhostMgr from "./GhostMgr";
 import ParentMgr from "./ParentMgr";
 import SceneMgr from "./SceneMgr";
 
@@ -37,7 +36,7 @@ export default class ItemMgr extends ParentMgr {
         this._layer.height = cc.winSize.height;
         this._layer.parent = SceneMgr.Instance.getLayer();
 
-        this._timerID = setInterval(this.update.bind(this), 0);
+        this._timerID = setInterval(this.update.bind(this), 1000);
     }
 
     clear()
@@ -57,41 +56,21 @@ export default class ItemMgr extends ParentMgr {
         }
 
         const delta = cc.director.getDeltaTime();
-        var needRemoveItem = [];
-        for (let index = 0; index < this._items.length; index++) {
-            const element = this._items[index];
-            if( element.getClientProp(ClientDef.ENTITY_PROP_ACTIVE_STATE) == ClientDef.ENTITY_ACTIVE_STATE_RUN )
+        this._items = this._items.filter((element) => {
+            if (element.getClientProp(ClientDef.ENTITY_PROP_ACTIVE_STATE) === ClientDef.ENTITY_ACTIVE_STATE_RUN) 
             {
-                element.update(delta);
+              element.update(delta);
+              return true;
+            } else {
+              var time = element.getClientProp(ClientDef.ENTITY_PROP_WAIT_DESTROY_TIME) || 0;
+              element.setClientProp(ClientDef.ENTITY_PROP_WAIT_DESTROY_TIME, time + 1);
+              if (time >= 10) { // 设定时间，10秒倒计时
+                element.remove();
+                return false;
+              }
+              return true;
             }
-            else
-            {
-                needRemoveItem.push(element);
-            }
-        }
-
-        for (let index = 0; index < needRemoveItem.length; index++) {
-            const element = needRemoveItem[index];
-            var findIndex = -1;
-            for (let i = 0; i < this._items.length; i++) {
-                const ele = this._items[i];
-                if( ele == element )
-                {
-                    var time = ele.getClientProp(ClientDef.ENTITY_PROP_WAIT_DESTROY_TIME) || 0;
-                    ele.setClientProp(ClientDef.ENTITY_PROP_WAIT_DESTROY_TIME, time + 1);
-                    if(time >= 100) //设定时间，10秒倒计时
-                    {
-                        ele.remove();
-                        findIndex = i;
-                    }
-                    break;
-                }
-            }
-            if(findIndex >= 0)
-            {
-                this._items.splice(findIndex,1);
-            }
-        }
+        });
         // console.info(">>>>>>>item count : " + this._items.length + "  >>time = " + cc.director.getTotalTime());
     }
 
@@ -104,6 +83,7 @@ export default class ItemMgr extends ParentMgr {
     {
         var item:Item = null;
         var itemType = ClientDef.ENTITY_TYPE_ITEM;
+        
         //对象池中寻找闲置对象
         for (let index = 0; index < this._items.length; index++) {
             const element = this._items[index];
@@ -112,6 +92,11 @@ export default class ItemMgr extends ParentMgr {
                 item = element;
                 break;
             }
+        }
+
+        if(this._items.length > GameData.Item_Max_Count ) //当达到最大物品数量时不在生成物品
+        {
+            return null;
         }
 
         if (item == null)

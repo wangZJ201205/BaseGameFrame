@@ -30,6 +30,7 @@ export default class GamePlay {
     private _tmxList : cc.TiledMap[];
     private _tileWidth : number = 72;
     private _tileHeight : number = 36;
+    private _curCamera : cc.Camera;
     onLoad () 
     {
         this._heroPos = cc.Vec3.ZERO;
@@ -42,6 +43,10 @@ export default class GamePlay {
         this.layer = new cc.Node();
         this.layer.zIndex = ClientDef.SCENE_INDEX_GAMEPLAY;
         this.layer.parent = SceneMgr.Instance.getLayer();
+        
+        const mainCameraNode = cc.find('Canvas/Main Camera');
+        this._curCamera = mainCameraNode.getComponent(cc.Camera);
+        
 
         this.openUI();
         this.createEntity();
@@ -115,11 +120,13 @@ export default class GamePlay {
         var heroPos = hero.position;
         if( heroPos.x != this._heroPos.x || heroPos.y != this._heroPos.y )
         {
-            var offsetx = heroPos.x - this._heroPos.x;
-            var offsety = heroPos.y - this._heroPos.y;
-            SceneMgr.Instance.getLayer().setPosition(
-                SceneMgr.Instance.getLayer().position.x - offsetx,
-                SceneMgr.Instance.getLayer().position.y - offsety);
+            // var offsetx = heroPos.x - this._heroPos.x;
+            // var offsety = heroPos.y - this._heroPos.y;
+            // SceneMgr.Instance.getLayer().setPosition(
+            //     SceneMgr.Instance.getLayer().position.x - offsetx,
+            //     SceneMgr.Instance.getLayer().position.y - offsety);
+            // var camerPos = this._curCamera.node.position; //移动相机和移动地图区别在于做粒子特效的时候回抖动
+            this._curCamera.node.setPosition(heroPos);
             this._heroPos.x = heroPos.x;
             this._heroPos.y = heroPos.y;
             this.adjustScenePos();

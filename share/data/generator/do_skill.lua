@@ -24,7 +24,7 @@ function handle_skill(o)
 
 	d.name = o.b
 	d.attackValue = o.c
-	d.src = o.d
+	d.src = o.d ~= "0" and o.d or nil
 	d.mid = o.e ~= "0" and o.e or nil
 	d.over = o.f ~= "0" and o.f or nil
 	d.cooldown = o.g ~= "0" and tonumber(o.g) or nil
@@ -38,10 +38,13 @@ function handle_skill(o)
 	d.buffer = o.o ~= "0" and tonumber(o.o) or nil
 	d.icon = o.p
 	d.sustaintime = o.q ~= "0" and tonumber(o.q) or nil
-	d.particle = o.r ~= "0" and o.r or nil
-    d.motionStreak = o.s ~= "0" and o.s or nil
-	d.sceneSkill = o.t ~= "0" and o.t or nil
-	d.desc = o.u
+	d.delayDamage = o.r ~= "0" and tonumber(o.r) or nil
+	d.particle = o.s ~= "0" and o.s or nil
+    d.motionStreak = o.t ~= "0" and o.t or nil
+	d.sceneSkill = o.u ~= "0" and o.u or nil
+	d.strike = o.v ~= "0" and tonumber(o.v) or nil
+	d.sound = o.w
+	d.desc = o.x
 	gdskill[tostring(d.id)] = d
 end
 
@@ -78,7 +81,7 @@ end
 
 export_csv("..\\design\\技能.xlsx")
 handle_file("tmp\\技能.csv", handle_skill)
-handle_file("tmp\\场景技能.csv", handle_scene_skill)
+-- handle_file("tmp\\场景技能.csv", handle_scene_skill)
 clear_csv()
 
 output_table_json(gdskill, of_file, nil, true, weight_tbl,true)

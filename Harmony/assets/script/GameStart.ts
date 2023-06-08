@@ -35,7 +35,7 @@ export default class GameStart extends cc.Component {
     onLoad () 
     {
         cc.director.getCollisionManager().enabled = true;//开启碰撞检测
-        cc.director.getPhysicsManager().enabled = true;  //开启物理属性
+        cc.director.getPhysicsManager().enabled = false;  //开启物理属性
 
         cc.director.getPhysicsManager().gravity = cc.v2(0, 0);
         if (this.isDebug) {

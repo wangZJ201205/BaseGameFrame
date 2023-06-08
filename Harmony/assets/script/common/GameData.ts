@@ -43,4 +43,8 @@ export default class GameData{
 
     public static Particle_Delay_Time : number = 10; //粒子延迟回收和等待时间
 
+    public static Item_Max_Count:number = 200; //场景中最大的物品数量
+
+    public static Switch_Audio:boolean = false; //音效开关
+
 }

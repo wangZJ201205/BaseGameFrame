@@ -40,6 +40,13 @@ export default class ParticleMgr extends ParentMgr {
         this._timerID = setInterval(this.update.bind(this), 1000);
     }
 
+    clear(): void {
+        this._particleArray = this._particleArray.filter(particle => {
+            particle.remove();
+            return false;
+        });
+    }
+
     update()
     {
         this._particleArray = this._particleArray.filter(particle => {

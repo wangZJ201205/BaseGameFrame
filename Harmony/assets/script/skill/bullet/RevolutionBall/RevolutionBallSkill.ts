@@ -23,7 +23,7 @@ export default class RevolutionBallSkill extends SkillParent {
     start () 
     {
         super.start();
-        this._bulletClass = RevolutionBallBullet;
+        this._startBulletClass = RevolutionBallBullet;
         this._angle = 0;
 
         // 缓存常用计算式
@@ -33,30 +33,40 @@ export default class RevolutionBallSkill extends SkillParent {
             this._sinCache[i] = Number((Math.sin(radian)).toFixed(2));
         }
     }
+
+    //准备发射子弹
+    perpareShootBullet()
+    {   
+        this._angle = 0;
+        super.perpareShootBullet();
+        for (let index = 0; index < this._bullets.length; index++) //先停止所有的正在运行的子弹
+        {
+            const bullet = this._bullets[index];
+            bullet.stop();
+        }
+
+
+        //创建需要的子弹
+        // var createCount = 0;
+        // const sameTypeCount = this._bullets.filter(bullet => bullet.getProp(ClientDef.BULLET_PROP_STATICID) === this._staticId).length;
+
+        // if(sameTypeCount >= bulletCount)
+        // {
+        //     createCount = this._bullets.filter(bullet => bullet.getProp(ClientDef.BULLET_PROP_STATE) == ClientDef.BULLET_STATE_FREE && 
+        //     bullet.getProp(ClientDef.BULLET_PROP_STATICID) === this._staticId).length;
+        // }
+        // else
+        // {
+        //     createCount = bulletCount;   
+        // }
+    }
     
     //发射子弹
     shootBullet()
     {
-
-        var bulletCount = this.getProp(ClientDef.SKILL_PROP_COUNT);
-        var createCount = 0;
-        const sameTypeCount = this._bullets.filter(bullet => bullet.getProp(ClientDef.BULLET_PROP_STATICID) === this._staticId).length;
-
-        if(sameTypeCount >= bulletCount)
-        {
-            createCount = this._bullets.filter(bullet => bullet.getProp(ClientDef.BULLET_PROP_STATE) == ClientDef.BULLET_STATE_FREE && 
-            bullet.getProp(ClientDef.BULLET_PROP_STATICID) === this._staticId).length;
-        }
-        else
-        {
-            createCount = bulletCount;   
-        }
-        
-        for (let index = 0; index < createCount; index++) {
-            var bullet = this.spawnBullet();
-            bullet.getNode().active = true;
-            bullet.restart();
-        }
+        var bullet = this.spawnBullet(ClientDef.BULLET_PHASE_1);
+        bullet.getNode().active = true;
+        bullet.restart();
     }
 
     update (dt) 

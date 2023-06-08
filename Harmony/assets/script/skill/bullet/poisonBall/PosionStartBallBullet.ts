@@ -1,5 +1,5 @@
 /**
- * 放毒
+ * 放毒 前期
  */
 import ClientDef from "../../../common/ClientDef";
 import Hero from "../../../ghost/Hero";
@@ -12,20 +12,16 @@ import BulletParent from "../../BulletParent";
 const {ccclass, property} = cc._decorator;
 
 @ccclass
-export default class posionBallBullet extends BulletParent {
+export default class PosionStartBallBullet extends BulletParent {
 
-    private _delta:number = 0;
-    private _damagePlayers : number = 0;
-    private _bufferTime :  number = 50;
-    private _phase : number = 0;
     private _halfCircleMovement:MovementParent;
+    private _targetPos : cc.Vec3;
 
     onLoad (host) 
     {
         this._host = host;
         this._prop = {};
 
-        this._phase = 1;
         this._node = new cc.Node();
         SkillMgr.Instance.getLayerLow().addChild(this._node);
 
@@ -37,19 +33,18 @@ export default class posionBallBullet extends BulletParent {
 
     restart()
     {   
-        this._delta = cc.director.getTotalTime();
         super.restart();
         var heroNode = Hero.Instance.getEntity();
         const angle = Math.random() * 360;
         // 计算点的x和y坐标
         var x = GameMath.getCosCache(angle) * 330 + heroNode.position.x;
         var y = GameMath.getSinCache(angle) * 330 + heroNode.position.y;
-        var targetPoint = cc.v3(x,y);
-        
+        this._targetPos = cc.v3(x,y);
+    
         const info: MoveNodeConfig = {
             moveNode: this.getNode(),
             startPos: this.getNode().position,
-            targetPos: targetPoint,
+            targetPos: this._targetPos,
             speed: 1,
             completeCallBack :this.completeCallBack,
             target :this,
@@ -62,23 +57,23 @@ export default class posionBallBullet extends BulletParent {
     completeCallBack()
     {
         this.stop();
+        var heroPosition = Hero.Instance.getEntity().position;
+        
+        var bullet = this._host.spawnBullet(ClientDef.BULLET_PHASE_3);
+        bullet.getNode().active = true;
+        bullet.getNode().position = this._targetPos;
+        bullet.restart();
     }
 
     update (dt) 
     {
         super.update(dt);
-        var delay = cc.director.getTotalTime() - this._delta;
-        if(this._phase == 1)
-        {
-           this._halfCircleMovement.update(dt);
-        }
-        else
-        {
-            if(delay > this._skillInfo["sustaintime"])
-            {
-                this.stop();
-            }
-        }
+        this._halfCircleMovement.update(dt);
+    }
+
+    //碰撞关闭
+    addCollision()
+    {
     }
 
 }

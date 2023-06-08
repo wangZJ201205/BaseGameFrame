@@ -22,7 +22,7 @@ export default class TaijiBallSkill extends SkillParent {
     start () 
     {
         super.start();
-        this._bulletClass = TaijiBallBullet;
+        this._startBulletClass = TaijiBallBullet;
         this._angle = 0;
 
         // 缓存常用计算式
@@ -32,23 +32,25 @@ export default class TaijiBallSkill extends SkillParent {
             this._sinCache[i] = Number((Math.sin(radian)).toFixed(2));
         }
     }
-    //发射子弹
-    shootBullet()
-    {
+
+    //准备发射子弹
+    perpareShootBullet()
+    {   
         this._angle = 0;
-        var bulletCount = this.getProp(ClientDef.SKILL_PROP_COUNT);
-        
+        super.perpareShootBullet();
         for (let index = 0; index < this._bullets.length; index++) //先停止所有的正在运行的子弹
         {
             const bullet = this._bullets[index];
             bullet.stop();
         }
+    }
 
-        for (let index = 0; index < bulletCount; index++) {
-            var bullet = this.spawnBullet();
-            bullet.getNode().active = true;
-            bullet.restart();
-        }
+    //发射子弹
+    shootBullet()
+    {
+        var bullet = this.spawnBullet(ClientDef.BULLET_PHASE_1);
+        bullet.getNode().active = true;
+        bullet.restart();
     }
 
     update (dt) 

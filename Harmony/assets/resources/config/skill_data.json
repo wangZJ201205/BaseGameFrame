@@ -11,8 +11,10 @@
 		"desc": "火球术厉害1",
 		"icon": "skill_huimiehuoyu",
 		"particle": "test_pt",
+		"sound": "effect_skill_lhh",
 		"speed": 100,
-		"src": "skill_fireball"
+		"src": "skill_fireball",
+		"strike": 1
 	},
 	"10102": {
 		"id": 10102,
@@ -25,8 +27,10 @@
 		"desc": "火球术厉害2",
 		"icon": "skill_huimiehuoyu",
 		"particle": "test_pt",
+		"sound": "effect_skill_lhh",
 		"speed": 100,
-		"src": "sword_176"
+		"src": "sword_176",
+		"strike": 1
 	},
 	"10103": {
 		"id": 10103,
@@ -39,8 +43,10 @@
 		"desc": "火球术厉害3",
 		"icon": "skill_huimiehuoyu",
 		"particle": "test_pt",
+		"sound": "effect_skill_lhh",
 		"speed": 100,
-		"src": "skill_fireball"
+		"src": "skill_fireball",
+		"strike": 1
 	},
 	"10104": {
 		"id": 10104,
@@ -53,8 +59,10 @@
 		"desc": "火球术厉害4",
 		"icon": "skill_huimiehuoyu",
 		"particle": "test_pt",
+		"sound": "effect_skill_lhh",
 		"speed": 100,
-		"src": "sword_176"
+		"src": "sword_176",
+		"strike": 1
 	},
 	"10105": {
 		"id": 10105,
@@ -67,8 +75,10 @@
 		"desc": "火球术厉害5",
 		"icon": "skill_huimiehuoyu",
 		"particle": "test_pt",
+		"sound": "effect_skill_lhh",
 		"speed": 100,
-		"src": "skill_fireball"
+		"src": "skill_fireball",
+		"strike": 1
 	},
 	"10106": {
 		"id": 10106,
@@ -81,8 +91,10 @@
 		"desc": "火球术厉害6",
 		"icon": "skill_huimiehuoyu",
 		"particle": "test_pt",
+		"sound": "effect_skill_lhh",
 		"speed": 100,
-		"src": "sword_176"
+		"src": "sword_176",
+		"strike": 1
 	},
 	"10107": {
 		"id": 10107,
@@ -95,8 +107,10 @@
 		"desc": "火球术厉害7",
 		"icon": "skill_huimiehuoyu",
 		"particle": "test_pt",
+		"sound": "effect_skill_lhh",
 		"speed": 100,
-		"src": "skill_fireball"
+		"src": "skill_fireball",
+		"strike": 1
 	},
 	"10108": {
 		"id": 10108,
@@ -109,8 +123,10 @@
 		"desc": "火球术厉害8",
 		"icon": "skill_huimiehuoyu",
 		"particle": "test_pt",
+		"sound": "effect_skill_lhh",
 		"speed": 100,
-		"src": "sword_176"
+		"src": "sword_176",
+		"strike": 1
 	},
 	"10109": {
 		"id": 10109,
@@ -123,8 +139,10 @@
 		"desc": "火球术厉害9",
 		"icon": "skill_huimiehuoyu",
 		"particle": "test_pt",
+		"sound": "effect_skill_lhh",
 		"speed": 100,
-		"src": "skill_fireball"
+		"src": "skill_fireball",
+		"strike": 1
 	},
 	"10110": {
 		"id": 10110,
@@ -137,8 +155,10 @@
 		"desc": "火球术厉害10",
 		"icon": "skill_huimiehuoyu",
 		"particle": "test_pt",
+		"sound": "effect_skill_lhh",
 		"speed": 100,
-		"src": "sword_176"
+		"src": "sword_176",
+		"strike": 1
 	},
 	"10201": {
 		"id": 10201,
@@ -151,8 +171,10 @@
 		"desc": "冰弹球厉害1",
 		"icon": "skill_kuanglongzidian",
 		"particle": "test_pt",
+		"sound": "effect_skill_hbj",
 		"speed": 100,
-		"src": "skill_iceball"
+		"src": "skill_iceball",
+		"strike": 2
 	},
 	"10202": {
 		"id": 10202,
@@ -165,8 +187,10 @@
 		"desc": "冰弹球厉害2",
 		"icon": "skill_kuanglongzidian",
 		"particle": "test_pt",
+		"sound": "effect_skill_hbj",
 		"speed": 100,
-		"src": "skill_iceball"
+		"src": "skill_iceball",
+		"strike": 2
 	},
 	"10203": {
 		"id": 10203,
@@ -179,8 +203,10 @@
 		"desc": "冰弹球厉害3",
 		"icon": "skill_kuanglongzidian",
 		"particle": "test_pt",
+		"sound": "effect_skill_hbj",
 		"speed": 100,
-		"src": "skill_iceball"
+		"src": "skill_iceball",
+		"strike": 2
 	},
 	"10204": {
 		"id": 10204,
@@ -193,8 +219,10 @@
 		"desc": "冰弹球厉害4",
 		"icon": "skill_kuanglongzidian",
 		"particle": "test_pt",
+		"sound": "effect_skill_hbj",
 		"speed": 100,
-		"src": "skill_iceball"
+		"src": "skill_iceball",
+		"strike": 2
 	},
 	"10205": {
 		"id": 10205,
@@ -207,8 +235,10 @@
 		"desc": "冰弹球厉害5",
 		"icon": "skill_kuanglongzidian",
 		"particle": "test_pt",
+		"sound": "effect_skill_hbj",
 		"speed": 100,
-		"src": "skill_iceball"
+		"src": "skill_iceball",
+		"strike": 2
 	},
 	"10206": {
 		"id": 10206,
@@ -221,8 +251,10 @@
 		"desc": "冰弹球厉害6",
 		"icon": "skill_kuanglongzidian",
 		"particle": "test_pt",
+		"sound": "effect_skill_hbj",
 		"speed": 100,
-		"src": "skill_iceball"
+		"src": "skill_iceball",
+		"strike": 2
 	},
 	"10207": {
 		"id": 10207,
@@ -235,8 +267,10 @@
 		"desc": "冰弹球厉害7",
 		"icon": "skill_kuanglongzidian",
 		"particle": "test_pt",
+		"sound": "effect_skill_hbj",
 		"speed": 100,
-		"src": "skill_iceball"
+		"src": "skill_iceball",
+		"strike": 2
 	},
 	"10301": {
 		"id": 10301,
@@ -249,8 +283,10 @@
 		"count": 1,
 		"desc": "遭雷劈真厉害1",
 		"icon": "skill_qiancheng1",
+		"sound": "effect_skill_lls",
 		"speed": 100,
-		"src": "skill_zhaoleipi"
+		"src": "skill_zhaoleipi",
+		"strike": 99
 	},
 	"10302": {
 		"id": 10302,
@@ -263,8 +299,10 @@
 		"count": 2,
 		"desc": "遭雷劈真厉害2",
 		"icon": "skill_qiancheng1",
+		"sound": "effect_skill_lls",
 		"speed": 100,
-		"src": "skill_zhaoleipi"
+		"src": "skill_zhaoleipi",
+		"strike": 99
 	},
 	"10303": {
 		"id": 10303,
@@ -277,8 +315,10 @@
 		"count": 3,
 		"desc": "遭雷劈真厉害3",
 		"icon": "skill_qiancheng1",
+		"sound": "effect_skill_lls",
 		"speed": 100,
-		"src": "skill_zhaoleipi"
+		"src": "skill_zhaoleipi",
+		"strike": 99
 	},
 	"10304": {
 		"id": 10304,
@@ -291,8 +331,10 @@
 		"count": 4,
 		"desc": "遭雷劈真厉害4",
 		"icon": "skill_qiancheng1",
+		"sound": "effect_skill_lls",
 		"speed": 100,
-		"src": "skill_zhaoleipi"
+		"src": "skill_zhaoleipi",
+		"strike": 99
 	},
 	"10305": {
 		"id": 10305,
@@ -305,8 +347,10 @@
 		"count": 5,
 		"desc": "遭雷劈真厉害5",
 		"icon": "skill_qiancheng1",
+		"sound": "effect_skill_lls",
 		"speed": 100,
-		"src": "skill_zhaoleipi"
+		"src": "skill_zhaoleipi",
+		"strike": 99
 	},
 	"10306": {
 		"id": 10306,
@@ -319,8 +363,10 @@
 		"count": 6,
 		"desc": "遭雷劈真厉害6",
 		"icon": "skill_qiancheng1",
+		"sound": "effect_skill_lls",
 		"speed": 100,
-		"src": "skill_zhaoleipi"
+		"src": "skill_zhaoleipi",
+		"strike": 99
 	},
 	"10307": {
 		"id": 10307,
@@ -333,8 +379,10 @@
 		"count": 7,
 		"desc": "遭雷劈真厉害7",
 		"icon": "skill_qiancheng1",
+		"sound": "effect_skill_lls",
 		"speed": 100,
-		"src": "skill_zhaoleipi"
+		"src": "skill_zhaoleipi",
+		"strike": 99
 	},
 	"10401": {
 		"id": 10401,
@@ -348,8 +396,10 @@
 		"icon": "skill_shouhuzhiyi",
 		"particle": "test_pt",
 		"range": 200,
+		"sound": "effect_skill_sy",
 		"speed": 100,
-		"src": "skill_trump"
+		"src": "skill_trump",
+		"strike": 99
 	},
 	"10402": {
 		"id": 10402,
@@ -363,8 +413,10 @@
 		"icon": "skill_shouhuzhiyi",
 		"particle": "test_pt",
 		"range": 200,
+		"sound": "effect_skill_sy",
 		"speed": 100,
-		"src": "skill_trump"
+		"src": "skill_trump",
+		"strike": 99
 	},
 	"10403": {
 		"id": 10403,
@@ -378,8 +430,10 @@
 		"icon": "skill_shouhuzhiyi",
 		"particle": "test_pt",
 		"range": 200,
+		"sound": "effect_skill_sy",
 		"speed": 100,
-		"src": "skill_trump"
+		"src": "skill_trump",
+		"strike": 99
 	},
 	"10404": {
 		"id": 10404,
@@ -393,8 +447,10 @@
 		"icon": "skill_shouhuzhiyi",
 		"particle": "test_pt",
 		"range": 200,
+		"sound": "effect_skill_sy",
 		"speed": 100,
-		"src": "skill_trump"
+		"src": "skill_trump",
+		"strike": 99
 	},
 	"10405": {
 		"id": 10405,
@@ -408,8 +464,10 @@
 		"icon": "skill_shouhuzhiyi",
 		"particle": "test_pt",
 		"range": 200,
+		"sound": "effect_skill_sy",
 		"speed": 100,
-		"src": "skill_trump"
+		"src": "skill_trump",
+		"strike": 99
 	},
 	"10406": {
 		"id": 10406,
@@ -423,8 +481,10 @@
 		"icon": "skill_shouhuzhiyi",
 		"particle": "test_pt",
 		"range": 200,
+		"sound": "effect_skill_sy",
 		"speed": 100,
-		"src": "skill_trump"
+		"src": "skill_trump",
+		"strike": 99
 	},
 	"10407": {
 		"id": 10407,
@@ -438,8 +498,10 @@
 		"icon": "skill_shouhuzhiyi",
 		"particle": "test_pt",
 		"range": 200,
+		"sound": "effect_skill_sy",
 		"speed": 100,
-		"src": "skill_trump"
+		"src": "skill_trump",
+		"strike": 99
 	},
 	"10501": {
 		"id": 10501,
@@ -452,8 +514,10 @@
 		"count": 1,
 		"desc": "斩击厉害1",
 		"icon": "skill_youlanaoyi1",
+		"sound": "0",
 		"speed": 100,
-		"src": "skill_xuanfengzhan"
+		"src": "skill_xuanfengzhan",
+		"strike": 99
 	},
 	"10502": {
 		"id": 10502,
@@ -466,8 +530,10 @@
 		"count": 1,
 		"desc": "斩击厉害2",
 		"icon": "skill_youlanaoyi1",
+		"sound": "0",
 		"speed": 100,
-		"src": "skill_xuanfengzhan"
+		"src": "skill_xuanfengzhan",
+		"strike": 99
 	},
 	"10503": {
 		"id": 10503,
@@ -480,8 +546,10 @@
 		"count": 1,
 		"desc": "斩击厉害3",
 		"icon": "skill_youlanaoyi1",
+		"sound": "0",
 		"speed": 100,
-		"src": "skill_xuanfengzhan"
+		"src": "skill_xuanfengzhan",
+		"strike": 99
 	},
 	"10504": {
 		"id": 10504,
@@ -494,8 +562,10 @@
 		"count": 1,
 		"desc": "斩击厉害4",
 		"icon": "skill_youlanaoyi1",
+		"sound": "0",
 		"speed": 100,
-		"src": "skill_xuanfengzhan"
+		"src": "skill_xuanfengzhan",
+		"strike": 99
 	},
 	"10505": {
 		"id": 10505,
@@ -508,8 +578,10 @@
 		"count": 1,
 		"desc": "斩击厉害5",
 		"icon": "skill_youlanaoyi1",
+		"sound": "0",
 		"speed": 100,
-		"src": "skill_xuanfengzhan"
+		"src": "skill_xuanfengzhan",
+		"strike": 99
 	},
 	"10506": {
 		"id": 10506,
@@ -522,8 +594,10 @@
 		"count": 1,
 		"desc": "斩击厉害6",
 		"icon": "skill_youlanaoyi1",
+		"sound": "0",
 		"speed": 100,
-		"src": "skill_xuanfengzhan"
+		"src": "skill_xuanfengzhan",
+		"strike": 99
 	},
 	"10507": {
 		"id": 10507,
@@ -536,8 +610,10 @@
 		"count": 1,
 		"desc": "斩击厉害7",
 		"icon": "skill_youlanaoyi1",
+		"sound": "0",
 		"speed": 100,
-		"src": "skill_xuanfengzhan"
+		"src": "skill_xuanfengzhan",
+		"strike": 99
 	},
 	"10508": {
 		"id": 10508,
@@ -550,8 +626,10 @@
 		"count": 1,
 		"desc": "斩击厉害8",
 		"icon": "skill_youlanaoyi1",
+		"sound": "0",
 		"speed": 100,
-		"src": "skill_xuanfengzhan"
+		"src": "skill_xuanfengzhan",
+		"strike": 99
 	},
 	"10509": {
 		"id": 10509,
@@ -564,8 +642,10 @@
 		"count": 1,
 		"desc": "斩击厉害9",
 		"icon": "skill_youlanaoyi1",
+		"sound": "0",
 		"speed": 100,
-		"src": "skill_xuanfengzhan"
+		"src": "skill_xuanfengzhan",
+		"strike": 99
 	},
 	"10601": {
 		"id": 10601,
@@ -579,8 +659,10 @@
 		"icon": "skill-reduce_luolei",
 		"particle": "test_pt",
 		"range": 150,
+		"sound": "effect_skill_xkfld",
 		"speed": 3,
-		"src": "i_jpql_03"
+		"src": "i_jpql_03",
+		"strike": 99
 	},
 	"10602": {
 		"id": 10602,
@@ -594,8 +676,10 @@
 		"icon": "skill-reduce_luolei",
 		"particle": "test_pt",
 		"range": 250,
+		"sound": "effect_skill_xkfld",
 		"speed": 3,
-		"src": "i_jpql_02"
+		"src": "i_jpql_02",
+		"strike": 99
 	},
 	"10603": {
 		"id": 10603,
@@ -609,8 +693,10 @@
 		"icon": "skill-reduce_luolei",
 		"particle": "test_pt",
 		"range": 350,
+		"sound": "effect_skill_xkfld",
 		"speed": 3,
-		"src": "i_jpql_01"
+		"src": "i_jpql_01",
+		"strike": 99
 	},
 	"10701": {
 		"id": 10701,
@@ -623,8 +709,10 @@
 		"desc": "护盾1",
 		"icon": "skill_xukongfalidun",
 		"range": 350,
+		"sound": "effect_action_transfer",
 		"speed": 3,
-		"src": "i_jpql_03"
+		"src": "i_jpql_03",
+		"strike": 99
 	},
 	"10702": {
 		"id": 10702,
@@ -637,8 +725,10 @@
 		"desc": "护盾2",
 		"icon": "skill_xukongfalidun",
 		"range": 350,
+		"sound": "effect_action_transfer",
 		"speed": 3,
-		"src": "i_jpql_03"
+		"src": "i_jpql_03",
+		"strike": 99
 	},
 	"10703": {
 		"id": 10703,
@@ -651,8 +741,10 @@
 		"desc": "护盾3",
 		"icon": "skill_xukongfalidun",
 		"range": 350,
+		"sound": "effect_action_transfer",
 		"speed": 3,
-		"src": "qifu_qiu_zb"
+		"src": "qifu_qiu_zb",
+		"strike": 99
 	},
 	"10704": {
 		"id": 10704,
@@ -665,8 +757,10 @@
 		"desc": "护盾4",
 		"icon": "skill_xukongfalidun",
 		"range": 350,
+		"sound": "effect_action_transfer",
 		"speed": 3,
-		"src": "qifu_qiu_zb"
+		"src": "qifu_qiu_zb",
+		"strike": 99
 	},
 	"10705": {
 		"id": 10705,
@@ -679,8 +773,10 @@
 		"desc": "护盾5",
 		"icon": "skill_xukongfalidun",
 		"range": 350,
+		"sound": "effect_action_transfer",
 		"speed": 3,
-		"src": "qifu_qiu_zb"
+		"src": "qifu_qiu_zb",
+		"strike": 99
 	},
 	"10706": {
 		"id": 10706,
@@ -693,8 +789,10 @@
 		"desc": "护盾6",
 		"icon": "skill_xukongfalidun",
 		"range": 350,
+		"sound": "effect_action_transfer",
 		"speed": 3,
-		"src": "qifu_qiu_zb"
+		"src": "qifu_qiu_zb",
+		"strike": 99
 	},
 	"10707": {
 		"id": 10707,
@@ -707,8 +805,10 @@
 		"desc": "护盾7",
 		"icon": "skill_xukongfalidun",
 		"range": 350,
+		"sound": "effect_action_transfer",
 		"speed": 3,
-		"src": "qifu_qiu_zb"
+		"src": "qifu_qiu_zb",
+		"strike": 99
 	},
 	"10708": {
 		"id": 10708,
@@ -721,8 +821,10 @@
 		"desc": "护盾8",
 		"icon": "skill_xukongfalidun",
 		"range": 350,
+		"sound": "effect_action_transfer",
 		"speed": 3,
-		"src": "qifu_qiu_zb"
+		"src": "qifu_qiu_zb",
+		"strike": 99
 	},
 	"10709": {
 		"id": 10709,
@@ -735,161 +837,199 @@
 		"desc": "护盾9",
 		"icon": "skill_xukongfalidun",
 		"range": 350,
+		"sound": "effect_action_transfer",
 		"speed": 3,
-		"src": "qifu_qiu_zb"
+		"src": "qifu_qiu_zb",
+		"strike": 99
 	},
 	"10801": {
 		"id": 10801,
 		"name": "放毒",
 		"attackValue": "2-6",
-		"collRect": "2,2,100,50",
+		"collRect": "2,2,200,100",
 		"collision": 1,
 		"cooldown": 4000,
 		"count": 4,
+		"delayDamage": 1200,
+		"delaytime": 100,
 		"desc": "放毒1",
 		"icon": "skill_shixueshu1",
 		"motionStreak": "skill_siwangmaichong1",
+		"over": "skill_youlanaoyi_05",
 		"range": 150,
 		"sceneSkill": "20101",
+		"sound": "effect_skill_fss",
 		"speed": 3,
-		"src": "i_jpql_03",
-		"sustaintime": 2000
+		"strike": 99,
+		"sustaintime": 3000
 	},
 	"10802": {
 		"id": 10802,
 		"name": "放毒",
 		"attackValue": "2-6",
-		"collRect": "2,2,100,50",
+		"collRect": "2,2,200,100",
 		"collision": 1,
 		"cooldown": 4000,
 		"count": 4,
+		"delayDamage": 1200,
+		"delaytime": 100,
 		"desc": "放毒2",
 		"icon": "skill_shixueshu1",
 		"motionStreak": "skill_siwangmaichong1",
+		"over": "skill_youlanaoyi_05",
 		"range": 150,
 		"sceneSkill": "20101",
+		"sound": "effect_skill_fss",
 		"speed": 3,
-		"src": "i_jpql_01",
-		"sustaintime": 2000
+		"strike": 99,
+		"sustaintime": 3000
 	},
 	"10803": {
 		"id": 10803,
 		"name": "放毒",
 		"attackValue": "2-6",
-		"collRect": "2,2,100,50",
+		"collRect": "2,2,200,100",
 		"collision": 1,
 		"cooldown": 4000,
 		"count": 4,
+		"delayDamage": 1000,
+		"delaytime": 100,
 		"desc": "放毒3",
 		"icon": "skill_shixueshu1",
 		"motionStreak": "skill_siwangmaichong1",
+		"over": "skill_youlanaoyi_05",
 		"range": 150,
 		"sceneSkill": "20101",
+		"sound": "effect_skill_fss",
 		"speed": 3,
-		"src": "skill_youlanaoyi_05",
-		"sustaintime": 2000
+		"strike": 99,
+		"sustaintime": 3000
 	},
 	"10804": {
 		"id": 10804,
 		"name": "放毒",
 		"attackValue": "2-6",
-		"collRect": "2,2,100,50",
+		"collRect": "2,2,200,100",
 		"collision": 1,
 		"cooldown": 4000,
 		"count": 4,
+		"delayDamage": 1000,
+		"delaytime": 100,
 		"desc": "放毒4",
 		"icon": "skill_shixueshu1",
 		"motionStreak": "skill_siwangmaichong1",
+		"over": "skill_youlanaoyi_05",
 		"range": 150,
 		"sceneSkill": "20101",
+		"sound": "effect_skill_fss",
 		"speed": 3,
-		"src": "skill_youlanaoyi_05",
-		"sustaintime": 2000
+		"strike": 99,
+		"sustaintime": 3000
 	},
 	"10805": {
 		"id": 10805,
 		"name": "放毒",
 		"attackValue": "2-6",
-		"collRect": "2,2,100,50",
+		"collRect": "2,2,200,100",
 		"collision": 1,
 		"cooldown": 4000,
 		"count": 4,
+		"delayDamage": 1000,
+		"delaytime": 100,
 		"desc": "放毒5",
 		"icon": "skill_shixueshu1",
 		"motionStreak": "skill_siwangmaichong1",
+		"over": "skill_youlanaoyi_05",
 		"range": 350,
 		"sceneSkill": "20101",
+		"sound": "effect_skill_fss",
 		"speed": 3,
-		"src": "skill_youlanaoyi_05",
-		"sustaintime": 2000
+		"strike": 99,
+		"sustaintime": 3000
 	},
 	"10806": {
 		"id": 10806,
 		"name": "放毒",
 		"attackValue": "2-6",
-		"collRect": "2,2,100,50",
+		"collRect": "2,2,200,100",
 		"collision": 1,
 		"cooldown": 4000,
 		"count": 4,
+		"delayDamage": 1000,
+		"delaytime": 100,
 		"desc": "放毒6",
 		"icon": "skill_shixueshu1",
 		"motionStreak": "skill_siwangmaichong1",
+		"over": "skill_youlanaoyi_05",
 		"range": 350,
 		"sceneSkill": "20101",
+		"sound": "effect_skill_fss",
 		"speed": 3,
-		"src": "skill_youlanaoyi_05",
-		"sustaintime": 2000
+		"strike": 99,
+		"sustaintime": 3000
 	},
 	"10807": {
 		"id": 10807,
 		"name": "放毒",
 		"attackValue": "2-6",
-		"collRect": "2,2,100,50",
+		"collRect": "2,2,200,100",
 		"collision": 1,
 		"cooldown": 4000,
 		"count": 4,
+		"delayDamage": 1000,
+		"delaytime": 100,
 		"desc": "放毒7",
 		"icon": "skill_shixueshu1",
 		"motionStreak": "skill_siwangmaichong1",
+		"over": "skill_youlanaoyi_05",
 		"range": 350,
 		"sceneSkill": "20101",
+		"sound": "effect_skill_fss",
 		"speed": 3,
-		"src": "skill_youlanaoyi_05",
-		"sustaintime": 2000
+		"strike": 99,
+		"sustaintime": 3000
 	},
 	"10808": {
 		"id": 10808,
 		"name": "放毒",
 		"attackValue": "2-6",
-		"collRect": "2,2,100,50",
+		"collRect": "2,2,200,100",
 		"collision": 1,
 		"cooldown": 4000,
 		"count": 4,
+		"delayDamage": 1000,
+		"delaytime": 100,
 		"desc": "放毒8",
 		"icon": "skill_shixueshu1",
 		"motionStreak": "skill_siwangmaichong1",
+		"over": "skill_youlanaoyi_05",
 		"range": 350,
 		"sceneSkill": "20101",
+		"sound": "effect_skill_fss",
 		"speed": 3,
-		"src": "skill_youlanaoyi_05",
-		"sustaintime": 2000
+		"strike": 99,
+		"sustaintime": 3000
 	},
 	"10809": {
 		"id": 10809,
 		"name": "放毒",
 		"attackValue": "2-6",
-		"collRect": "2,2,100,50",
+		"collRect": "2,2,200,100",
 		"collision": 1,
 		"cooldown": 4000,
 		"count": 4,
+		"delayDamage": 1000,
+		"delaytime": 100,
 		"desc": "放毒9",
 		"icon": "skill_shixueshu1",
 		"motionStreak": "skill_siwangmaichong1",
+		"over": "skill_youlanaoyi_05",
 		"range": 350,
 		"sceneSkill": "20101",
+		"sound": "effect_skill_fss",
 		"speed": 3,
-		"src": "skill_youlanaoyi_05",
-		"sustaintime": 2000
+		"strike": 99,
+		"sustaintime": 3000
 	},
 	"10901": {
 		"id": 10901,
@@ -903,8 +1043,10 @@
 		"icon": "skill-reduce_cisha",
 		"particle": "test_pt",
 		"range": 300,
+		"sound": "effect_skill_ccjf",
 		"speed": 20,
-		"src": "fire_mizongquan"
+		"src": "fire_mizongquan",
+		"strike": 99
 	},
 	"10902": {
 		"id": 10902,
@@ -918,8 +1060,10 @@
 		"icon": "skill-reduce_cisha",
 		"particle": "test_pt",
 		"range": 300,
+		"sound": "effect_skill_ccjf",
 		"speed": 20,
-		"src": "fire_mizongquan"
+		"src": "fire_mizongquan",
+		"strike": 99
 	},
 	"10903": {
 		"id": 10903,
@@ -933,8 +1077,10 @@
 		"icon": "skill-reduce_cisha",
 		"particle": "test_pt",
 		"range": 300,
+		"sound": "effect_skill_ccjf",
 		"speed": 20,
-		"src": "fire_mizongquan"
+		"src": "fire_mizongquan",
+		"strike": 99
 	},
 	"10904": {
 		"id": 10904,
@@ -949,8 +1095,10 @@
 		"over": "100",
 		"particle": "test_pt",
 		"range": 300,
+		"sound": "effect_skill_ccjf",
 		"speed": 20,
-		"src": "fire_mizongquan"
+		"src": "fire_mizongquan",
+		"strike": 99
 	},
 	"10905": {
 		"id": 10905,
@@ -965,8 +1113,10 @@
 		"over": "100",
 		"particle": "test_pt",
 		"range": 300,
+		"sound": "effect_skill_ccjf",
 		"speed": 20,
-		"src": "fire_mizongquan"
+		"src": "fire_mizongquan",
+		"strike": 99
 	},
 	"10906": {
 		"id": 10906,
@@ -981,8 +1131,10 @@
 		"over": "100",
 		"particle": "test_pt",
 		"range": 300,
+		"sound": "effect_skill_ccjf",
 		"speed": 20,
-		"src": "fire_mizongquan"
+		"src": "fire_mizongquan",
+		"strike": 99
 	},
 	"10907": {
 		"id": 10907,
@@ -997,8 +1149,10 @@
 		"over": "100",
 		"particle": "test_pt",
 		"range": 300,
+		"sound": "effect_skill_ccjf",
 		"speed": 20,
-		"src": "fire_mizongquan"
+		"src": "fire_mizongquan",
+		"strike": 99
 	},
 	"10908": {
 		"id": 10908,
@@ -1013,12 +1167,9 @@
 		"over": "100",
 		"particle": "test_pt",
 		"range": 300,
+		"sound": "effect_skill_ccjf",
 		"speed": 20,
-		"src": "fire_mizongquan"
-	},
-	"20101": {"id": 20101,"name": "毒","attackValue": "5-15","collRect": "2,2,100,50","collision": 1,"count": 1,"desc": "放毒1","icon": "skill_shixueshu1","range": 150,"src": "skill_youlanaoyi_05","sustaintime": 2000},
-	"20102": {"id": 20102,"name": "毒","attackValue": "5-15","collRect": "2,2,100,50","collision": 1,"count": 1,"desc": "放毒1","icon": "skill_shixueshu1","range": 150,"src": "skill_youlanaoyi_05","sustaintime": 2000},
-	"20103": {"id": 20103,"name": "毒","attackValue": "5-15","collRect": "2,2,100,50","collision": 1,"count": 1,"desc": "放毒1","icon": "skill_shixueshu1","range": 150,"src": "skill_youlanaoyi_05","sustaintime": 2000},
-	"20104": {"id": 20104,"name": "毒","attackValue": "5-15","collRect": "2,2,100,50","collision": 1,"count": 1,"desc": "放毒1","icon": "skill_shixueshu1","range": 150,"src": "skill_youlanaoyi_05","sustaintime": 2000},
-	"20105": {"id": 20105,"name": "毒","attackValue": "5-15","collRect": "2,2,100,50","collision": 1,"count": 1,"desc": "放毒1","icon": "skill_shixueshu1","range": 150,"src": "skill_youlanaoyi_05","sustaintime": 2000}
+		"src": "fire_mizongquan",
+		"strike": 99
+	}
 }

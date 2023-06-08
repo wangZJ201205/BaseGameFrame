@@ -10,7 +10,7 @@ import SkillParent from "./SkillParent";
 import FireBallSkill from "./bullet/fireball/FireBallSkill";
 import IceBallSkill from "./bullet/iceBall/IceBallSkill";
 import MiZongQuanSkill from "./bullet/mizongquan/MiZongQuanSkill";
-import posionBallSkill from "./bullet/poisonBall/posionBallSkill";
+import PosionBallSkill from "./bullet/poisonBall/PosionBallSkill";
 import RevolutionBallSkill from "./bullet/revolutionBall/RevolutionBallSkill";
 import ShieldBallSkill from "./bullet/shieldBall/ShieldBallSkill";
 import SwordBallSkill from "./bullet/swordBall/SwordBallSkill";
@@ -38,7 +38,7 @@ export default class Skill {
         this._typeClass[ClientDef.SKILL_TYPE_SWORD_AIR] = SwordBallSkill;           //剑气
         this._typeClass[ClientDef.SKILL_TYPE_TAIJI] = TaijiBallSkill;               //太极
         this._typeClass[ClientDef.SKILL_TYPE_SHIELD] = ShieldBallSkill;             //护盾
-        this._typeClass[ClientDef.SKILL_TYPE_POISON] = posionBallSkill;             //放毒
+        this._typeClass[ClientDef.SKILL_TYPE_POISON] = PosionBallSkill;             //放毒
         this._typeClass[ClientDef.SKILL_TYPE_MIZONGQUAN] = MiZongQuanSkill;         //迷踪拳
     }
 

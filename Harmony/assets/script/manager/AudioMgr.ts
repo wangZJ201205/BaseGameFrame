@@ -2,6 +2,7 @@
  * 音频播放管理器
  */
 
+import GameData from "../common/GameData";
 import LoadMgr from "./LoadMgr";
 import ParentMgr from "./ParentMgr";
 
@@ -80,6 +81,18 @@ export default class AudioMgr extends ParentMgr {
         });
     }
 
+    SetEffectVolume(volume) {
+        if (typeof volume != 'number') return;
+    
+        if (volume < 0 || volume > 1) {
+          cc.error('volume must be in 0.0 ~ 1.0');
+          return;
+        }
+    
+        this._effect_volume = volume;
+        cc.audioEngine.setEffectsVolume(this._effect_volume);
+    }
+
     /*====================================================================================================*/
     /**
      * 外部接口
@@ -94,8 +107,13 @@ export default class AudioMgr extends ParentMgr {
     playEffect(audio_key, id_cb)
     {
         // let id = cc.audioEngine.playEffect(audio, is_loop);
-        // this.SetEffectVolume(this._effect_volume);
-        var path = "audio/effect_ui_success";
+        if(!GameData.Switch_Audio)
+        {
+            return;
+        }
+        
+        this.SetEffectVolume(this._effect_volume);
+        var path = "audio/"+audio_key;
         LoadMgr.Instance.LoadAssetWithType(path, cc.AudioClip, (audio) => {
             let id = this._PlayEffect(audio);
             id_cb && id_cb({id: id});
@@ -112,7 +130,7 @@ export default class AudioMgr extends ParentMgr {
      */
     /*====================================================================================================*/
     _PlayEffect(audio) {
-        let id = cc.audioEngine.playEffect(audio, true);
+        let id = cc.audioEngine.playEffect(audio, false);
         return id;
     }
 

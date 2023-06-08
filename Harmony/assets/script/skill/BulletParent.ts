@@ -11,6 +11,7 @@ import SkillMgr from "../manager/SkillMgr";
 import SkillParent from "./SkillParent";
 import ParticleMgr from "../manager/ParticleMgr";
 import EffectParent from "../effect/EffectParent";
+import AudioMgr from "../manager/AudioMgr";
 
 const {ccclass, property} = cc._decorator;
 
@@ -50,7 +51,9 @@ export default class BulletParent {
 
     restart()
     {
-        
+        this.setProp(ClientDef.BULLET_PROP_STRIKE,this._skillInfo["strike"]);
+        var sound = this._skillInfo["sound"];
+        AudioMgr.Instance.playEffect(sound,null);
     }
 
     stop()
@@ -145,18 +148,30 @@ export default class BulletParent {
     {
         var skillInfo = this._skillInfo;
 
+        const phaseName = [];
+        phaseName[ClientDef.BULLET_PHASE_1] = "src";
+        phaseName[ClientDef.BULLET_PHASE_2] = "mid";
+        phaseName[ClientDef.BULLET_PHASE_3] = "over";
+        var curPhase = this.getProp(ClientDef.BULLET_PROP_PHASE);
+        var pname = phaseName[curPhase];
+        if(!this._skillInfo[ pname ])
+        {
+            this.setProp(ClientDef.BULLET_PROP_STATE,ClientDef.BULLET_STATE_RUN);
+            return;
+        }
+
         //子弹就是以一张图片的形式出现
         if(!skillInfo.animation)
         {
-            this.loadSprite();
+            this.loadSprite(pname);
         }
         else
         {
-            this.loadPrefab();
+            this.loadPrefab(pname);
         }
     }
 
-    loadSprite()
+    loadSprite(pname)
     {
         LoadMgr.Instance.LoadAssetWithType("animation/skill/skill_res" ,cc.SpriteAtlas,(sp)=>{
             //检查人物状态
@@ -165,7 +180,7 @@ export default class BulletParent {
                 return;
             }
             var sprite = this.getNode().addComponent(cc.Sprite);
-            let spriteFrame = sp.getSpriteFrame(this._skillInfo.src);
+            let spriteFrame = sp.getSpriteFrame(this._skillInfo[ pname ]);
             sprite.spriteFrame = spriteFrame;
             sprite.node.anchorX = 0.5;
             sprite.node.anchorY = 0.5;
@@ -173,9 +188,9 @@ export default class BulletParent {
         })
     }
 
-    loadPrefab()
+    loadPrefab(pname)
     {
-        var loadPath = 'animation/skill/' +  this._skillInfo.src +"/"+ this._skillInfo.src ;
+        var loadPath = 'animation/skill/' +  this._skillInfo[pname] +"/"+ this._skillInfo[pname] ;
         LoadMgr.Instance.LoadAssetWithType(loadPath,cc.Prefab,(asset)=>{
             if(this._host.getHost().getClientProp(ClientDef.ENTITY_PROP_ACTIVE_STATE) != ClientDef.ENTITY_ACTIVE_STATE_RUN)
             {
@@ -241,10 +256,15 @@ export default class BulletParent {
     //碰撞开始
     collisionEnter(other, self)
     {   
-        
-        this.stop();
         var damageValue = this.getDamageValue();
         other.node.getEntityComponent(ClientDef.ENTITY_COMP_BLOOM).addDamage( damageValue );
+        var strike = this.getProp(ClientDef.BULLET_PROP_STRIKE);
+        strike --;
+        this.setProp(ClientDef.BULLET_PROP_STRIKE,strike);
+        if(strike == 0)
+        {
+            this.stop();
+        }
     }
 
     //碰撞中

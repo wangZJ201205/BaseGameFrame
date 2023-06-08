@@ -17,7 +17,7 @@ export default class ShieldBallSkill extends SkillParent {
     start () 
     {
         super.start();
-        this._bulletClass = ShieldBallBullet;
+        this._startBulletClass = ShieldBallBullet;
 
         //暂停所有已经存在的护盾
         for (let index = 0; index < this._bullets.length; index++) {
@@ -48,7 +48,7 @@ export default class ShieldBallSkill extends SkillParent {
         var x =  heroPosition.x;
         var y =  heroPosition.y + GameData.Player_Height;
     
-        var bullet = this.spawnBullet();
+        var bullet = this.spawnBullet(ClientDef.BULLET_PHASE_1);
         bullet.getNode().active = true;
         bullet.getNode().position = cc.v3(x,y,0);
         bullet.restart();

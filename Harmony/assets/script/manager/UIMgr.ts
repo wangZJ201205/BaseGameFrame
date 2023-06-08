@@ -41,6 +41,7 @@ export default class UIMgr extends ParentMgr {
         this.uiLayer.width = cc.winSize.width;
         this.uiLayer.height = cc.winSize.height;
         this.uiLayer.parent = canvas;
+        this.uiLayer.group = "ui";
 
         this.uiLayer.runAction(cc.repeatForever(cc.sequence(cc.delayTime(1),cc.callFunc(this.update, this))));
     }

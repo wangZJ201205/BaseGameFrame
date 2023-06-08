@@ -10,6 +10,7 @@ import ParentMgr from "./ParentMgr";
 import SkillMgr from "./SkillMgr";
 import GameData from "../common/GameData";
 import GameHelp from "../help/GameHelp";
+import ParticleMgr from "./ParticleMgr";
 
 const {ccclass, property} = cc._decorator;
 
@@ -84,6 +85,7 @@ export default class SceneMgr extends ParentMgr {
         ItemMgr.Instance.clear();
         SkillMgr.Instance.clear();
         GamePlay.Instance.clear();
+        ParticleMgr.Instance.clear();
     }
 
     onLayerTouchEnd(event) {
