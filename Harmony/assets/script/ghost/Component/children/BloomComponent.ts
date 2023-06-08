@@ -96,6 +96,7 @@ export default class BloomComponent extends ComponentParent {
         }
 
         var item = ItemMgr.Instance.spawnItem(Number(dropItem));
+        // var item = GhostMgr.Instance.spawnItem(Number(dropItem));
         if(item)
         {
             item.restart();
