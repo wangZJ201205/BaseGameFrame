@@ -60,7 +60,10 @@ export default class GPMonster {
 
         if( liveCnt > GameData.Monster_Show_Amount )return;
 
-        var entity = GhostMgr.Instance.spawnEntity(200002); // 200001怪物id 怪物的释放规则还没有实现
+        var rand = Math.random()*100;
+        var id = rand > 50 ? 200003 : 200002;
+
+        var entity = GhostMgr.Instance.spawnEntity(id); // 200001怪物id 怪物的释放规则还没有实现
         entity.restart();
 
         var direction = this.calculateRandomDirection();
