@@ -31,23 +31,14 @@ export default class GameMath {
     public static degreeToEntityDirection(angle)
     {
         var index= 0;
-        if( angle >= 60 && angle < 120){
+        if( angle >= 45 && angle < 135){
             index = 1
-        }
-        else if( angle >= 30 && angle < 60){
+        }else if( angle >= -45 && angle < 45){
             index = 2
-        }else if( angle >= -30 && angle < 30){
+        }else if( angle >= -135 && angle < -45 ){
             index = 3
-        }else if( angle >= -60 && angle < -30 ){
+        }else{
             index = 4
-        }else if( angle >= 120 && angle < 150 ){
-            index = 8
-        }else if( angle <= -150 || angle > 150 ){
-            index = 7
-        }else if( angle >= -150 && angle < -120 ){
-            index = 6
-        }else if( angle < -60 && angle > -120 ){
-            index = 5
         }
         return index;
     }

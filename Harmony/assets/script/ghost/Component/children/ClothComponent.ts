@@ -41,7 +41,7 @@ export default class ClothComponent extends ComponentParent {
     {    
         super.onLoad(host);
         this._curState = 0;
-        this._curDir = 5; //正面
+        this._curDir = 3; //正面
         this._animations = {};
         this._animations_state = {};
     }
@@ -131,7 +131,7 @@ export default class ClothComponent extends ComponentParent {
         var clothId = this.getHost().getClientProp(ClientDef.ENTITY_PROP_STATICID) || 0;
         var clothResource = DictMgr.Instance.getDictByName("entity_data")[clothId].path;
         var loadPath = 'animation/' +  clothResource +"/"+ animationName ;
-        LoadMgr.Instance.LoadAsset(loadPath,(asset)=>
+        LoadMgr.Instance.LoadAssetWithType(loadPath, cc.Prefab ,(asset)=>
             {
                 if(this.getState() == ClientDef.COMP_STATE_REMOVE)
                 {
