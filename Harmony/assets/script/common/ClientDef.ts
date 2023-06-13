@@ -45,11 +45,18 @@ export default class ClientDef{
     //对象状态
     public static readonly ENTITY_STATE_IDLE: number = 1; //站立
     public static readonly ENTITY_STATE_WALK: number = 2; //移动
+    public static readonly ENTITY_STATE_DIE: number = 3; //死亡
 
     //对象运行状态
     public static readonly ENTITY_ACTIVE_STATE_INIT : number = 1;//初始化
     public static readonly ENTITY_ACTIVE_STATE_RUN : number = 2;//运行
     public static readonly ENTITY_ACTIVE_STATE_FREE : number = 3;//闲置
+
+    //人物方向类型
+    public static readonly ENTITY_DIRECTION_TYPE_1 : number = 1; //两个方向的类型
+    public static readonly ENTITY_DIRECTION_TYPE_2 : number = 2; //两个方向的类型
+    public static readonly ENTITY_DIRECTION_TYPE_4 : number = 4; //两个方向的类型
+    public static readonly ENTITY_DIRECTION_TYPE_8 : number = 8; //两个方向的类型
 
 
     //控制玩家的类型
@@ -71,6 +78,8 @@ export default class ClientDef{
     public static readonly ENTITY_PROP_LV : number = 13; //等级
     public static readonly ENTITY_PROP_MOVE_SPEED : number = 14; //移动速度
     public static readonly ENTITY_PROP_POSION_TIME : number = 15; //毒的时间
+    public static readonly ENTITY_PROP_DEGREE : number = 16; //当前角度
+    public static readonly ENTITY_PROP_CUR_BLOOM : number = 17; //当前血量
 
     //技能类型
     public static readonly SKILL_TYPE_FIREBALL: number      = 101; //火球

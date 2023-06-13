@@ -1,8 +1,8 @@
 
 import ClientDef from "../../../common/ClientDef";
 import GameData from "../../../common/GameData";
-import GameMath from "../../../utils/GameMath";
 import Hero from "../../Hero";
+import ClothComponent from "../../component/children/ClothComponent";
 import StateParent from "../StateParent";
 
 const {ccclass, property} = cc._decorator;
@@ -52,7 +52,11 @@ export default class EntityWalk extends StateParent {
     {
         let angleRadian = Math.atan2(direction.y, direction.x);
         let degree = angleRadian * 180 / Math.PI; // 转换为角度制
-        let dir = GameMath.degreeToEntityDirection(degree);
-        this.getHost().setClientProp(ClientDef.ENTITY_PROP_DIR,dir);
+        this.getHost().setClientProp(ClientDef.ENTITY_PROP_DEGREE,degree);
+        var cloth:ClothComponent = this.getHost().getEntityComponent(ClientDef.ENTITY_COMP_CLOTH);
+        if(cloth)
+        {
+            cloth.changeDir();
+        }
     }
 }

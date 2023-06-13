@@ -61,7 +61,7 @@ export default class ParticleMgr extends ParentMgr {
             return true;
         });
         
-        console.info(`>>>>>particle count : ${this._particleArray.length}`);
+        // console.info(`>>>>>particle count : ${this._particleArray.length}`);
     }
 
     //添加子弹粒子

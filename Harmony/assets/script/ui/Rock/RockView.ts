@@ -2,6 +2,7 @@
 import ClientDef from "../../common/ClientDef";
 import UIName from "../../common/UIName";
 import Hero from "../../ghost/Hero";
+import ClothComponent from "../../ghost/component/children/ClothComponent";
 import GameMath from "../../utils/GameMath";
 import UIParent from "../UIParent";
 
@@ -107,8 +108,12 @@ export default class RockView extends UIParent {
     {
         let angleRadian = Math.atan2(joyStickPos.y, joyStickPos.x);
         let degree = angleRadian * 180 / Math.PI; // 转换为角度制
-        let dir = GameMath.degreeToEntityDirection(degree);
-        Hero.Instance.getEntity().setClientProp(ClientDef.ENTITY_PROP_DIR,dir);
+        Hero.Instance.getEntity().setClientProp(ClientDef.ENTITY_PROP_DEGREE,degree);
+        var cloth:ClothComponent = Hero.Instance.getEntity().getEntityComponent(ClientDef.ENTITY_COMP_CLOTH);
+        if(cloth)
+        {
+            cloth.changeDir();
+        }
     }
     
     

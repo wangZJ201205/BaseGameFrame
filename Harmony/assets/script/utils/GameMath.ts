@@ -1,3 +1,5 @@
+import ClientDef from "../common/ClientDef";
+
 /**
  * 游戏中用到的数学公式
  */
@@ -26,11 +28,43 @@ export default class GameMath {
         return GameMath._sinCache[Math.floor(angle)];
     }
 
+    //角度转化为方向
+    public static degreeToEntityDirection(dirType,angle)
+    {
+        if(dirType == ClientDef.ENTITY_DIRECTION_TYPE_1)
+        {
+            return 1;
+        }
+        else if(dirType == ClientDef.ENTITY_DIRECTION_TYPE_2)
+        {
+            return GameMath.degreeToEntityDirection2(angle);
+        }
+        else if(dirType == ClientDef.ENTITY_DIRECTION_TYPE_4)
+        {
+            return GameMath.degreeToEntityDirection4(angle);
+        }
+        if(dirType == ClientDef.ENTITY_DIRECTION_TYPE_8)
+        {
+            return GameMath.degreeToEntityDirection8(angle);
+        }
+        return 1;
+    }
 
     //角度转化为方向
-    public static degreeToEntityDirection(angle)
+    public static degreeToEntityDirection2(angle)
     {
-        var index= 0;
+        var index= 1;
+        if( angle >= -90 && angle < 90){
+            index = 1
+        }else{
+            index = 2
+        }
+        return index;
+    }
+
+    public static degreeToEntityDirection4(angle)
+    {
+        var index= 2;
         if( angle >= 45 && angle < 135){
             index = 1
         }else if( angle >= -45 && angle < 45){
@@ -39,6 +73,29 @@ export default class GameMath {
             index = 3
         }else{
             index = 4
+        }
+        return index;
+    }
+
+    public static degreeToEntityDirection8(angle)
+    {
+        var index= 3;
+        if( angle >= 60 && angle < 120){
+            index = 1
+        }else if( angle >= 30 && angle < 60){
+            index = 2
+        }else if( angle >= -30 && angle < 30){
+            index = 3
+        }else if( angle >= -60 && angle < -30 ){
+            index = 4
+        }else if( angle >= 120 && angle < 150 ){
+            index = 8
+        }else if( angle <= -150 || angle > 150 ){
+            index = 7
+        }else if( angle >= -150 && angle < -120 ){
+            index = 6
+        }else if( angle < -60 && angle > -120 ){
+            index = 5
         }
         return index;
     }
@@ -59,7 +116,5 @@ export default class GameMath {
         // 通过字符串拼接方式，拼接出时间格式
         return ('0' + minutes).slice(-2) + ':' + ('0' + seconds).slice(-2);
     }
-
-
 
 }

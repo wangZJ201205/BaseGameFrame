@@ -55,7 +55,7 @@ export default class SceneMgr extends ParentMgr {
         LabelMgr.Instance.start();
         ItemMgr.Instance.start();
         SkillMgr.Instance.start();
-        
+
         if( GameData.Game_Mode == ClientDef.GAME_MODE_TEST_FIGHT )
         {
             this.layer.on(cc.Node.EventType.TOUCH_END, this.onLayerTouchEnd, this);

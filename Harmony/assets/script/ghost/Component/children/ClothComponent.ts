@@ -13,13 +13,14 @@
 import ClientDef from "../../../common/ClientDef";
 import DictMgr from "../../../manager/DictMgr";
 import LoadMgr from "../../../manager/LoadMgr";
+import GameMath from "../../../utils/GameMath";
 import ComponentParent from "../ComponentParent";
 
 
 const {ccclass, property} = cc._decorator;
 
 declare var STATE_NAME : string[];
-STATE_NAME=["","idle","walk"];
+STATE_NAME=["","idle","walk","die"];
 
 //动画状态
 enum ANIMATION_STATE {
@@ -41,12 +42,10 @@ export default class ClothComponent extends ComponentParent {
     {    
         super.onLoad(host);
         this._curState = 0;
-        this._curDir = 3; //正面
+        this._curDir = 1; //正面
         this._animations = {};
         this._animations_state = {};
     }
-
-    
 
     getAnimationState(state)
     {
@@ -55,12 +54,23 @@ export default class ClothComponent extends ComponentParent {
         return animationState;
     }
 
-    changeDir(dir)
+    changeDir()
     {
-        if(this._curDir == dir)
+        var animationName = STATE_NAME[this._curState];
+        var animation = this._animations[animationName];
+
+        if(!animation) //没有这个资源
         {
             return;
         }
+
+        var degree = this._host.getClientProp(ClientDef.ENTITY_PROP_DEGREE)
+        let dir = GameMath.degreeToEntityDirection(animation.childrenCount,degree);
+        if( dir == this._curDir )
+        {
+            return;
+        }
+
         this._curDir = dir;
         this.play();
     }
@@ -110,6 +120,14 @@ export default class ClothComponent extends ComponentParent {
         {
             return;
         }
+
+        var degree = this._host.getClientProp(ClientDef.ENTITY_PROP_DEGREE)
+        let dir = GameMath.degreeToEntityDirection(animation.childrenCount,degree);
+        this._curDir = dir;
+        
+        let anim = animation.getComponent(cc.Animation);
+        anim.play(anim.getClips()[0].name);
+
         for (let index = 1; index <= animation.childrenCount; index++) 
         {
             const element = animation.getChildByName(index+"");
@@ -122,6 +140,8 @@ export default class ClothComponent extends ComponentParent {
                 element.active = false;
             }
         } 
+
+        
     }
 
     download(state)
@@ -130,7 +150,7 @@ export default class ClothComponent extends ComponentParent {
         this._animations_state[animationName] = ANIMATION_STATE.LOADING;
         var clothId = this.getHost().getClientProp(ClientDef.ENTITY_PROP_STATICID) || 0;
         var clothResource = DictMgr.Instance.getDictByName("entity_data")[clothId].path;
-        var loadPath = 'animation/' +  clothResource +"/"+ animationName ;
+        var loadPath = 'animation/entity/' +  clothResource +"/"+ animationName ;
         LoadMgr.Instance.LoadAssetWithType(loadPath, cc.Prefab ,(asset)=>
             {
                 if(this.getState() == ClientDef.COMP_STATE_REMOVE)

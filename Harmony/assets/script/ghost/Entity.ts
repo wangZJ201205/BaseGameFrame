@@ -135,16 +135,6 @@ export default class Entity extends cc.Node
     setClientProp(type,value)
     {
         this._client_prop_map[type] = value;
-
-        if(type == ClientDef.ENTITY_PROP_DIR)
-        {
-            var cloth:ClothComponent = this.getEntityComponent(ClientDef.ENTITY_COMP_CLOTH);
-            if(cloth)
-            {
-                cloth.changeDir(value);
-            }
-        }
-
     }
 
     addClientProp(type,value)
@@ -227,6 +217,13 @@ export default class Entity extends cc.Node
         return this.getClientProp(ClientDef.ENTITY_PROP_TYPE) == ClientDef.ENTITY_TYPE_MONSTER;
     }
 
-    
+    //更新下一个状态
+    refreshEntityState()
+    {
+        if(this._entityStateMachine)
+        {
+            this._entityStateMachine.runNextState();
+        }
+    }
 
 }

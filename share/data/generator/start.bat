@@ -10,3 +10,8 @@
 @cd ..
 @cd generator
 
+@echo off
+xcopy /s /y /f F:\freeGame\BaseGameFrame\share\data\*.json F:\freeGame\BaseGameFrame\Harmony\assets\resources\config\
+echo Copy completed.
+pause
+

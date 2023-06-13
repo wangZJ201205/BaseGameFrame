@@ -1,6 +1,8 @@
 /**
  * 游戏内的数据
  */
+
+
 export default class GameData{
 
     //游戏基础配置
@@ -46,5 +48,8 @@ export default class GameData{
     public static Item_Max_Count:number = 200; //场景中最大的物品数量
 
     public static Switch_Audio:boolean = false; //音效开关
+
+    public static Entity_Dead_Time:number = 3000; //对象死亡时间
+
 
 }

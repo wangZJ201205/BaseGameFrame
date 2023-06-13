@@ -1,6 +1,4 @@
 import ClientDef from "../../../common/ClientDef";
-import GhostMgr from "../../../manager/GhostMgr";
-import ItemMgr from "../../../manager/ItemMgr";
 import LabelMgr from "../../../manager/LabelMgr";
 import ComponentParent from "../ComponentParent";
 
@@ -30,6 +28,7 @@ export default class BloomComponent extends ComponentParent {
 
         var entityInfo = this.getHost().getEntityDict();
         this._curBloom = entityInfo["bloom"];
+        this._host.setClientProp(ClientDef.ENTITY_PROP_CUR_BLOOM, this._curBloom);
         if(this.bloomLab)
         {
             this.bloomLab.string = this._curBloom + "/" + this._curBloom;
@@ -37,17 +36,8 @@ export default class BloomComponent extends ComponentParent {
     }
 
     update (dt) 
-    {
-        //检测死亡
-        if( this._curBloom <= 0 )
-        {
-            this.dropItem();
-            this.getHost().stopAllActions();
-            this.getHost().active = false;
-            this.getHost().setClientProp(ClientDef.ENTITY_PROP_ACTIVE_STATE, ClientDef.ENTITY_ACTIVE_STATE_FREE);
-        }
+    {        
     }
-
 
     addDamage(damageValue)
     {
@@ -62,8 +52,17 @@ export default class BloomComponent extends ComponentParent {
         LabelMgr.Instance.addLabel(type,showDamageValue,this._host.getPosition());
 
         this._curBloom -= damageValue;
+        this._host.setClientProp(ClientDef.ENTITY_PROP_CUR_BLOOM, this._curBloom);
 
-        this.shakeBody();
+        //进入死亡状态
+        if( this._curBloom <= 0 )
+        {
+            this._host.refreshEntityState();
+        }
+        else
+        {
+            this.shakeBody();
+        }
     }
 
     //添加抖动效果
@@ -84,26 +83,5 @@ export default class BloomComponent extends ComponentParent {
         .to(0.05, { position: cc.v3(this._host.position.x,     this._host.position.y) })
         .start();
     }
-
-    //掉落物品
-    dropItem()
-    {
-        var entityInfo = this.getHost().getEntityDict();
-        var dropItem = entityInfo['dropItem'];
-        if( dropItem == null )
-        {
-            return;
-        }
-
-        var item = ItemMgr.Instance.spawnItem(Number(dropItem));
-        // var item = GhostMgr.Instance.spawnItem(Number(dropItem));
-        if(item)
-        {
-            item.restart();
-            item.getEntityNode().setPosition(this.getHost().getEntityNode().position);
-            GhostMgr.Instance.setEntityZOrder(item.getEntityNode());
-        }
-    }
-
 
 }
