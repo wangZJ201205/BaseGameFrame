@@ -140,8 +140,6 @@ export default class ClothComponent extends ComponentParent {
                 element.active = false;
             }
         } 
-
-        
     }
 
     download(state)
@@ -150,7 +148,7 @@ export default class ClothComponent extends ComponentParent {
         this._animations_state[animationName] = ANIMATION_STATE.LOADING;
         var clothId = this.getHost().getClientProp(ClientDef.ENTITY_PROP_STATICID) || 0;
         var clothResource = DictMgr.Instance.getDictByName("entity_data")[clothId].path;
-        var loadPath = 'animation/entity/' +  clothResource +"/"+ animationName ;
+        var loadPath = 'animation/entity/' +  clothResource +"/"+ clothResource ;
         LoadMgr.Instance.LoadAssetWithType(loadPath, cc.Prefab ,(asset)=>
             {
                 if(this.getState() == ClientDef.COMP_STATE_REMOVE)
@@ -167,11 +165,11 @@ export default class ClothComponent extends ComponentParent {
                 this.getNode().scale = 0.85;
                 this._animations[aniPref.name] = aniPref;
                 this._animations_state[aniPref.name] = ANIMATION_STATE.UNUSE;
-                var animationName = STATE_NAME[this._curState];
-                if( animationName == aniPref.name )
-                {
-                    this.runState(this._curState);
-                }
+                // var animationName = STATE_NAME[this._curState];
+                // if( animationName == aniPref.name )
+                // {
+                this.runState(this._curState);
+                // }
             });
     }
 

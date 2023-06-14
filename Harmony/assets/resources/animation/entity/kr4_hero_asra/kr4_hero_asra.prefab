@@ -13,7 +13,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "idle",
+    "_name": "kr4_hero_asra",
     "_objFlags": 0,
     "_parent": null,
     "_children": [
@@ -184,7 +184,7 @@
     "asset": {
       "__id__": 0
     },
-    "fileId": "316Qd7pJVOBbqn0BdSdL0f",
+    "fileId": "3flmw7oshCf7skbXra6PlX",
     "sync": false
   },
   {
@@ -291,7 +291,7 @@
     "asset": {
       "__id__": 0
     },
-    "fileId": "11IGQupsBH+pEjQIv8nAej",
+    "fileId": "761UxsdplN+rC9ujDgbPWL",
     "sync": false
   },
   {
@@ -303,11 +303,14 @@
     },
     "_enabled": true,
     "_defaultClip": {
-      "__uuid__": "4525a33a-7dac-49c6-81d4-7e79673478cf"
+      "__uuid__": "cbd96b19-13c4-4d63-b61c-8e0a9a5c342b"
     },
     "_clips": [
       {
-        "__uuid__": "4525a33a-7dac-49c6-81d4-7e79673478cf"
+        "__uuid__": "cbd96b19-13c4-4d63-b61c-8e0a9a5c342b"
+      },
+      {
+        "__uuid__": "1db16bb8-eb99-4500-9193-af6af84425bf"
       }
     ],
     "playOnLoad": true,
