@@ -20,7 +20,7 @@ import ComponentParent from "../ComponentParent";
 const {ccclass, property} = cc._decorator;
 
 declare var STATE_NAME : string[];
-STATE_NAME=["","idle","walk","die"];
+STATE_NAME=["idle","walk","die"];
 
 //动画状态
 enum ANIMATION_STATE {

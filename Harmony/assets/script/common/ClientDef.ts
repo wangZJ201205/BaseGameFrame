@@ -43,9 +43,9 @@ export default class ClientDef{
     public static readonly ENTITY_TYPE_ITEM : number = 3;       //物品
 
     //对象状态
-    public static readonly ENTITY_STATE_IDLE: number = 1; //站立
-    public static readonly ENTITY_STATE_WALK: number = 2; //移动
-    public static readonly ENTITY_STATE_DIE: number = 3; //死亡
+    public static readonly ENTITY_STATE_IDLE: number    = 0; //站立
+    public static readonly ENTITY_STATE_WALK: number    = 1; //移动
+    public static readonly ENTITY_STATE_DIE: number     = 2; //死亡
 
     //对象运行状态
     public static readonly ENTITY_ACTIVE_STATE_INIT : number = 1;//初始化
