@@ -1,6 +1,7 @@
+/**
+ * 人物的静止状态
+ */
 
-
-import ClientDef from "../../../common/ClientDef";
 import StateParent from "../StateParent";
 
 const {ccclass, property} = cc._decorator;

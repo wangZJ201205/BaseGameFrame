@@ -7,6 +7,7 @@ import GameData from "../common/GameData";
 import Entity from "../ghost/Entity";
 import DictMgr from "../manager/DictMgr";
 import SkillParent from "./SkillParent";
+import ArcherySkill from "./bullet/archery/ArcherySkill";
 import FireBallSkill from "./bullet/fireball/FireBallSkill";
 import IceBallSkill from "./bullet/iceBall/IceBallSkill";
 import MiZongQuanSkill from "./bullet/mizongquan/MiZongQuanSkill";
@@ -40,6 +41,7 @@ export default class Skill {
         this._typeClass[ClientDef.SKILL_TYPE_SHIELD] = ShieldBallSkill;             //护盾
         this._typeClass[ClientDef.SKILL_TYPE_POISON] = PosionBallSkill;             //放毒
         this._typeClass[ClientDef.SKILL_TYPE_MIZONGQUAN] = MiZongQuanSkill;         //迷踪拳
+        this._typeClass[ClientDef.SKILL_TYPE_ARCHERY] = ArcherySkill;         //迷踪拳
     }
 
     start () 
@@ -48,7 +50,7 @@ export default class Skill {
         var skillid = DictMgr.Instance.getDictByName('entity_data')[entityStatic+""].skillid
         if(skillid != 0)
         {
-            // this.addSkill(skillid);
+            this.addSkill(skillid);
         }
     }
 

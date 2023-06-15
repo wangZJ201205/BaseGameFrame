@@ -48,7 +48,7 @@ export default class BloomComponent extends ComponentParent {
 
         //伤害弹跳
         var showDamageValue = this._curBloom > damageValue ? damageValue : this._curBloom;
-        var type = Math.floor(Math.random()*5)+1;
+        var type = 1;
         LabelMgr.Instance.addLabel(type,showDamageValue,this._host.getPosition());
 
         this._curBloom -= damageValue;

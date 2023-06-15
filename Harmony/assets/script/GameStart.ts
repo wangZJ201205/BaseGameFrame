@@ -31,6 +31,9 @@ export default class GameStart extends cc.Component {
 
     @property({displayName:'测试模式:'})
     isDebug:boolean = false;
+
+    @property({displayName:'游戏模式:'})
+    gameMode:number = 0;
     
     onLoad () 
     {
@@ -41,6 +44,8 @@ export default class GameStart extends cc.Component {
         if (this.isDebug) {
             cc.director.getCollisionManager().enabledDebugDraw = true;   //显示碰撞检测区域
         }
+
+        GameData.Game_Mode = this.gameMode; //游戏模式
     }
 
     start () {

@@ -163,6 +163,7 @@
             <filename>skill_youlanaoyi_05.png</filename>
             <filename>skill_zhanshi_banyue_13.png</filename>
             <filename>fire_bunch.png</filename>
+            <filename>darkarmy_archer_arrow_lvl4.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>

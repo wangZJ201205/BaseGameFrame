@@ -8,8 +8,9 @@ export default class ClientDef{
     public static readonly GAME_INDEX_UI : number = 2;
 
     //游戏运行模式
-    public static readonly GAME_MODE_NORMAL : number = 0;
+    public static readonly GAME_MODE_NORMAL : number = 0; //正常模式
     public static readonly GAME_MODE_TEST_FIGHT : number = 1; //战斗测试模式
+    public static readonly GAME_MODE_TEST_CALL_MONSTER : number = 2; //战斗测试刷怪模式
     
     //场景中的管理深度
     public static readonly SCENE_INDEX_GAMEPLAY : number = 1;
@@ -80,6 +81,7 @@ export default class ClientDef{
     public static readonly ENTITY_PROP_POSION_TIME : number = 15; //毒的时间
     public static readonly ENTITY_PROP_DEGREE : number = 16; //当前角度
     public static readonly ENTITY_PROP_CUR_BLOOM : number = 17; //当前血量
+    public static readonly ENTITY_PROP_STATE : number = 18; //当前状态
 
     //技能类型
     public static readonly SKILL_TYPE_FIREBALL: number      = 101; //火球
@@ -91,6 +93,7 @@ export default class ClientDef{
     public static readonly SKILL_TYPE_SHIELD: number        = 107; //护盾
     public static readonly SKILL_TYPE_POISON: number        = 108; //放毒
     public static readonly SKILL_TYPE_MIZONGQUAN: number    = 109; //迷踪拳
+    public static readonly SKILL_TYPE_ARCHERY: number       = 110; //射箭
 
     //子弹属性
     public static readonly BULLET_PROP_ID : number = 1;// id

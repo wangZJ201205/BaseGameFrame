@@ -26,6 +26,7 @@ STATE_NAME=["idle","walk","die"];
 enum ANIMATION_STATE {
     NORESOURCE,
     LOADING,
+    LOAD_COMPLETE,
     UNUSE,
     USING,
 }
@@ -35,42 +36,66 @@ export default class ClothComponent extends ComponentParent {
 
     _curState : number; //当前状态
     _curDir : number; //当前方向
-    _animations:{};   //动画
-    _animations_state:{};   //动画状态
+    _animation: any;   //动画
+    _animations_state:number;   //动画状态
 
     onLoad (host) 
     {    
         super.onLoad(host);
-        this._curState = 0;
+        this._curState = -1;
         this._curDir = 1; //正面
-        this._animations = {};
-        this._animations_state = {};
+        this._animations_state = ANIMATION_STATE.NORESOURCE;
     }
 
+    //获取当前动画状态
+    //是否正在加载
+    //是否正在使用中
     getAnimationState(state)
     {
-        var animationName = STATE_NAME[state];
-        var animationState = this._animations_state[animationName] || 0;
-        return animationState;
+        if(this._animations_state <= ANIMATION_STATE.LOADING)
+        {
+            return this._animations_state;
+        }
+        if(state == this._curState)
+        {
+            if(this._animation)
+            {
+                var anim = this._animation;
+                let stateClip = anim.getClips()[state];
+                let curClip = anim.currentClip;
+                if(stateClip == curClip)
+                {
+                    return ANIMATION_STATE.USING;
+                }
+            }
+        }
+        return ANIMATION_STATE.UNUSE;
+    }
+
+    //获取当前动画状态有几个路径长度
+    getAnimationCurStatePathLength()
+    {
+        var anim = this._animation;
+        var clips = anim.getClips();
+        var curStateClip = clips[this._curState];
+        var paths = curStateClip.curveData.paths;
+        return Object.keys(paths).length
     }
 
     changeDir()
     {
-        var animationName = STATE_NAME[this._curState];
-        var animation = this._animations[animationName];
-
+        var animation = this._animation;
         if(!animation) //没有这个资源
         {
             return;
         }
-
         var degree = this._host.getClientProp(ClientDef.ENTITY_PROP_DEGREE)
-        let dir = GameMath.degreeToEntityDirection(animation.childrenCount,degree);
+        var childrenCnt = this.getAnimationCurStatePathLength();
+        let dir = GameMath.degreeToEntityDirection(childrenCnt, degree);
         if( dir == this._curDir )
         {
             return;
         }
-
         this._curDir = dir;
         this.play();
     }
@@ -78,59 +103,44 @@ export default class ClothComponent extends ComponentParent {
     //运行状态
     runState(state)
     {
-        if(state == this._curState)
+        
+        var animationState = this.getAnimationState(state);
+        if(animationState == ANIMATION_STATE.LOADING || animationState == ANIMATION_STATE.USING) //如果在加载和使用中就return
         {
-            var animationState = this.getAnimationState(state);
-            if(animationState == ANIMATION_STATE.LOADING || animationState == ANIMATION_STATE.USING) //如果在加载和使用中就return
-            {
-                return;
-            }
+            return;
         }
 
         this._curState = state;
-        var animationName = STATE_NAME[state];
-        var animation = this._animations[animationName];
-        if(!animation) //资源池中没有该对象，开始下载该资源
+        if(animationState == ANIMATION_STATE.NORESOURCE ) //资源池中没有该对象，开始下载该资源
         {
-            this.download(state);
+            this.download();
             return; 
         }
-        
-        for (const key in this._animations_state) { //寻找上一个正在运行的动画并且停止掉
-            const element = this._animations_state[key];
-            if(element == ANIMATION_STATE.USING)
-            {
-                this._animations_state[key] = ANIMATION_STATE.UNUSE;
-                var oldAnimation = this._animations[key];
-                oldAnimation.active = false;
-            }
-        }
-        
-        animation.active = true;
-        this._animations_state[animationName] = ANIMATION_STATE.USING;
+
         this.play();
     }
 
     play()
     {
-        var animationName = STATE_NAME[this._curState];
-        var animation = this._animations[animationName];
-
-        if(!animation) //没有这个资源
+        if(this._animations_state <= ANIMATION_STATE.LOADING || !this._animation) //没有资源
         {
             return;
         }
 
         var degree = this._host.getClientProp(ClientDef.ENTITY_PROP_DEGREE)
-        let dir = GameMath.degreeToEntityDirection(animation.childrenCount,degree);
+        var childrenCnt = this.getAnimationCurStatePathLength();
+        let dir = GameMath.degreeToEntityDirection(childrenCnt, degree);
         this._curDir = dir;
         
-        let anim = animation.getComponent(cc.Animation);
-        anim.play(anim.getClips()[0].name);
+        let anim = this._animation;
+        let curClip = anim.getClips()[this._curState];
+        anim.pause();
+        anim.resume(curClip.name);
+        anim.play(curClip.name);
 
-        for (let index = 1; index <= animation.childrenCount; index++) 
+        for (let index = 1; index <= this._animation.node.childrenCount; index++) 
         {
-            const element = animation.getChildByName(index+"");
+            const element = this._animation.node.getChildByName(index+"");
             if(index == this._curDir)
             {
                 element.active = true;
@@ -142,10 +152,9 @@ export default class ClothComponent extends ComponentParent {
         } 
     }
 
-    download(state)
+    download()
     {
-        var animationName = STATE_NAME[state];
-        this._animations_state[animationName] = ANIMATION_STATE.LOADING;
+        this._animations_state = ANIMATION_STATE.LOADING;
         var clothId = this.getHost().getClientProp(ClientDef.ENTITY_PROP_STATICID) || 0;
         var clothResource = DictMgr.Instance.getDictByName("entity_data")[clothId].path;
         var loadPath = 'animation/entity/' +  clothResource +"/"+ clothResource ;
@@ -161,15 +170,10 @@ export default class ClothComponent extends ComponentParent {
                     const element = aniPref.getChildByName(index+"");
                     element.active = false;
                 }
-                aniPref.active = false;
-                this.getNode().scale = 0.85;
-                this._animations[aniPref.name] = aniPref;
-                this._animations_state[aniPref.name] = ANIMATION_STATE.UNUSE;
-                // var animationName = STATE_NAME[this._curState];
-                // if( animationName == aniPref.name )
-                // {
+                // this.getNode().scale = 0.85;
+                this._animation = aniPref.getComponent(cc.Animation);
+                this._animations_state = ANIMATION_STATE.LOAD_COMPLETE;
                 this.runState(this._curState);
-                // }
             });
     }
 

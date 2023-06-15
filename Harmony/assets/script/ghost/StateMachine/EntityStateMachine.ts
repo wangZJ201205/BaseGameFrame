@@ -66,6 +66,7 @@ export default class EntityStateMachine{
             this._curState = null;
         }
         this._curState = this.spawnState(state);
+        this._host.setClientProp(ClientDef.ENTITY_PROP_STATE,state); //对象状态
         if(this._curState)
         {
             this._curState.onLoad(state,this._host);

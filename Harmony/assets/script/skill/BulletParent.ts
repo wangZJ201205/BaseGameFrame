@@ -256,8 +256,13 @@ export default class BulletParent {
     //碰撞开始
     collisionEnter(other, self)
     {   
+        var tgt = other.node;
+        if(tgt.getClientProp(ClientDef.ENTITY_PROP_STATE) == ClientDef.ENTITY_STATE_DIE) //死亡状态不触发响应
+        {
+            return;
+        }
         var damageValue = this.getDamageValue();
-        other.node.getEntityComponent(ClientDef.ENTITY_COMP_BLOOM).addDamage( damageValue );
+        tgt.getEntityComponent(ClientDef.ENTITY_COMP_BLOOM).addDamage( damageValue );
         var strike = this.getProp(ClientDef.BULLET_PROP_STRIKE);
         strike --;
         this.setProp(ClientDef.BULLET_PROP_STRIKE,strike);

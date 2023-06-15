@@ -10,6 +10,8 @@ import LoadMgr from "../manager/LoadMgr";
 import SceneMgr from "../manager/SceneMgr";
 import UIMgr from "../manager/UIMgr";
 import GPMonster from "./GPMonster";
+import GPMonsterTestCallMonster from "./GPMonsterTestCallMonster";
+import GPMonsterTestFight from "./GPMonsterTestFight";
 
 /**
  * 游戏玩法管理
@@ -27,6 +29,8 @@ export default class GamePlay {
     private _heroPos:cc.Vec3;  //人物的之前的位置
 
     private _gpMonster : GPMonster;
+    private _gpMonsterFight : GPMonsterTestFight;
+    private _gpMonsterCallMonster : GPMonsterTestCallMonster;
     private _tmxList : cc.TiledMap[];
     private _tileWidth : number = 72;
     private _tileHeight : number = 36;
@@ -56,9 +60,9 @@ export default class GamePlay {
         this.loadSceneSrc(GameData.Map_Current_Id);
     }
 
-    getMonsters()
+    getMonstersFight()
     {
-        return this._gpMonster;
+        return this._gpMonsterFight;
     }
 
     clear()
@@ -83,7 +87,19 @@ export default class GamePlay {
     
     update () 
     {
-        this._gpMonster.update();
+        if(GameData.Game_Mode == ClientDef.GAME_MODE_NORMAL)
+        {
+            this._gpMonster.update();
+        }
+        else if(GameData.Game_Mode == ClientDef.GAME_MODE_TEST_FIGHT)
+        {
+            this._gpMonsterFight.update();
+        }
+        else if(GameData.Game_Mode == ClientDef.GAME_MODE_TEST_CALL_MONSTER)
+        {
+            this._gpMonsterCallMonster.update();
+        }
+
         this.refreshScenePos();
     }
 
@@ -110,6 +126,14 @@ export default class GamePlay {
         this._gpMonster = new GPMonster();
         this._gpMonster.onLoad();
         this._gpMonster.start();
+
+        this._gpMonsterFight = new GPMonsterTestFight();
+        this._gpMonsterFight.onLoad();
+        this._gpMonsterFight.start();
+
+        this._gpMonsterCallMonster = new GPMonsterTestCallMonster();
+        this._gpMonsterCallMonster.onLoad();
+        this._gpMonsterCallMonster.start();
     }
 
     //实时检测人物的位置

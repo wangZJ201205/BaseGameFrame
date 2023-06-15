@@ -13,34 +13,32 @@ end
 
 -- 数据
 local gdmapRule = {}
-gdmapRule["10001"] = {}
-function handle_map_10001(o)
-	local time = tonumber(o[1].a)
-	if not time or time == 0 then
+function handle_map_rule(o)
+	local d = {}
+
+	d.sceneid = tonumber(o.a) or 0
+	if d.sceneid == 0 then
 		return
 	end
 
-	local d = {}
+	d.timeEvent = tonumber(o.b)
+	d.group = tonumber(o.c)
+	d.monster = tonumber(o.d)
+	d.delay = tonumber(o.e)
+	d.createCount = tonumber(o.f) -- -1无限 >1 一次以上  控制怪物数量
 
-	for i=1,100 do
-		local info= {}
-		info.time = tonumber(o[i].a)
-		info.monsters = {}
-		table.insert(info.monsters, o[i].b)
-		table.insert(info.monsters, o[i].c)
-		table.insert(info.monsters, o[i].d)
-		table.insert(info.monsters, o[i].e)
-		table.insert(info.monsters, o[i].f)
-		table.insert(info.monsters, o[i].g)
-		gdmapRule["10001"][tostring(info.time)] = info
+	if not gdmapRule[d.sceneid..""] then
+		gdmapRule[d.sceneid..""] = {}
 	end
 
-	
+	table.insert(gdmapRule[d.sceneid..""] , d)
+
 end
 
 
 export_csv("..\\design\\地图规则.xlsx")
-handle_file_ex("tmp\\10001.csv", handle_map_10001,2, 100)
+handle_file("tmp\\规则1.csv", handle_map_rule)
+handle_file("tmp\\规则2.csv", handle_map_rule)
 clear_csv()
 
 output_table_json(gdmapRule, of_file, nil, true, weight_tbl,true)

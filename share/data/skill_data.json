@@ -1171,5 +1171,20 @@
 		"speed": 20,
 		"src": "fire_mizongquan",
 		"strike": 99
+	},
+	"11001": {
+		"id": 11001,
+		"name": "射箭",
+		"attackValue": "5-15",
+		"collRect": "2,2,50,50",
+		"collision": 1,
+		"cooldown": 1000,
+		"count": 1,
+		"desc": "射箭",
+		"icon": "special_icons_0020",
+		"sound": "effect_skill_ccjf",
+		"speed": 70,
+		"src": "darkarmy_archer_arrow_lvl4",
+		"strike": 1
 	}
 }

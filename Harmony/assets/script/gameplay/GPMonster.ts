@@ -3,9 +3,9 @@
  * 怪物组
  */
 
-import ClientDef from "../common/ClientDef";
 import GameData from "../common/GameData";
 import Hero from "../ghost/Hero";
+import DictMgr from "../manager/DictMgr";
 import GhostMgr from "../manager/GhostMgr";
 
 const {ccclass, property} = cc._decorator;
@@ -13,57 +13,80 @@ const {ccclass, property} = cc._decorator;
 @ccclass
 export default class GPMonster {
 
-    private delta: number = 0;
-    private count:number = 0;
-
+    _eventArray : any[];
+    _startTime : number; //记录开始时间
+    _curSceneRule : any;
     onLoad () 
     {
-
+        this._eventArray = [];
     }
 
-    start () {
-        this.delta = 1;
+    start () 
+    {
+        this._startTime = cc.director.getTotalTime();
+        var rules = DictMgr.Instance.getDictByName("map_rule_data")[GameData.Map_Current_Id];
+
+        rules.forEach(rule => {
+            var info:any = {};
+            info.timeEvent = rule.timeEvent;
+            info.monster = rule.monster;
+            // info.group = rule.group;
+            info.delay = rule.delay;
+            info.createCount = rule.createCount;
+            info.progress = 0; //进度
+            info.delayStart = this._startTime;
+            this._eventArray.push(info);
+        });
+
     }
 
     update () 
     {
+        var durTime : number = cc.director.getTotalTime() - this._startTime;
+        const eventsToBeRemoved = [];
 
-        if(GameData.Game_Mode == ClientDef.GAME_MODE_TEST_FIGHT)
+        for (let i = 0; i < this._eventArray.length; i++) 
         {
-            return;
-        }
+            var event = this._eventArray[i];
+            if (durTime < event.timeEvent) {
+                // 尚未到事件时间
+                break;
+            }
 
-        this.delta -= 1;
-        if(this.delta <= 0)
-        {
-            this.delta = GameData.Game_Play_Monster_Time_Delay;
-        }
-        else
-        {
-            return;
-        }
-        
-        this.checkMonsterCount();
-    }
+            const dtime = cc.director.getTotalTime() - event.delayStart;
+            if (dtime < event.delay) {
+                // 尚未到延迟时间
+                continue;
+            }
 
-    private checkMonsterCount()
-    {
-        var count = GhostMgr.Instance.entitys.length;
-        var liveCnt = 0;
-        for (let index = 0; index < count; index++) {
-            const element = GhostMgr.Instance.entitys[index];
-            if( element.isRun() && element.isMonster())
+            //放怪
+            this.callMonster(event.monster);
+
+            event.delayStart = cc.director.getTotalTime();
+            if(event.createCount > 0)
             {
-                liveCnt++;
+                event.progress++;
+            }
+
+             // 事件已全部触发完毕
+            if (event.progress >= event.createCount && event.createCount > 0) {
+                eventsToBeRemoved.push(event);
             }
         }
 
-        if( liveCnt >= GameData.Monster_Show_Amount )return;
+         // 删除已触发完毕的事件
+        for (const event of eventsToBeRemoved) {
+            const index = this._eventArray.indexOf(event);
+            if (index >= 0) {
+                this._eventArray.splice(index, 1);
+            }
+        }
 
-        var rand = Math.random()*100;
-        var id = rand > 50 ? 200002 : 200002;
+    }
 
-        var entity = GhostMgr.Instance.spawnEntity(id); // 200001怪物id 怪物的释放规则还没有实现
+    callMonster(monsterId)
+    {
+        var entity = GhostMgr.Instance.spawnEntity(monsterId); // 200001怪物id 怪物的释放规则还没有实现
         entity.restart();
 
         var direction = this.calculateRandomDirection();
@@ -73,13 +96,15 @@ export default class GPMonster {
         entity.getEntityNode().zIndex = GameData.App_Game_Heigth - position.y;
     }
 
-    private calculateRandomDirection() {
+    private calculateRandomDirection() 
+    {
         var randX = Math.random() * 2 - 1;
         var randY = Math.random() * 2 - 1;
         return new cc.Vec2(randX, randY);
     }
     
-    private calculateSpawnPosition(direction) {
+    private calculateSpawnPosition(direction) 
+    {
         var heroPosition = Hero.Instance.getEntity().position;
         var x = 0;
         var y = 0;
@@ -96,12 +121,5 @@ export default class GPMonster {
     
         return new cc.Vec2(x, y);
     }
-
-    addMonster(position)
-    {
-        var entity = GhostMgr.Instance.spawnEntity(200001); // 200001怪物id 怪物的释放规则还没有实现
-        entity.restart();
-        entity.getEntityNode().setPosition(position.x - 640, position.y - 360);
-        entity.getEntityNode().zIndex = GameData.App_Game_Heigth - position.y;
-    }
+    
 }

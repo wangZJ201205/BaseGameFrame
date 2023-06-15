@@ -189,6 +189,7 @@
             <filename>skill_youlanaoyi1.png</filename>
             <filename>xunzhangtubiao.png</filename>
             <filename>jineng.png</filename>
+            <filename>special_icons_0020.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>

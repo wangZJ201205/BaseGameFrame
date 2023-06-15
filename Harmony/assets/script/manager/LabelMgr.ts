@@ -85,15 +85,15 @@ export default class LabelMgr extends ParentMgr {
     {
         if(info.type == 1)
         {
-            LoadMgr.Instance.LoadAssetWithType('fonts/bifen',cc.BitmapFont,(font)=>{
+            LoadMgr.Instance.LoadAssetWithType('fonts/blood_red',cc.BitmapFont,(font)=>{
                 var node = new cc.Node();
                 var bloomLab = node.addComponent(cc.Label);
                 bloomLab.font = font;
                 bloomLab.string = info.data;
+                // bloomLab.cacheMode = cc.Label.CacheMode.CHAR;
                 node.setPosition(info.pos.x, info.pos.y);
                 this.layer.addChild(node);
-
-
+                
                 cc.tween(node).by(0.2,{x:50*Math.random() ,y:50*Math.random()}).delay(1).call(function () {
                     node.active = false;
                     node.removeFromParent();
@@ -150,22 +150,9 @@ export default class LabelMgr extends ParentMgr {
                 }).start();
             })
         }
-        else if(info.type == 4)
+        else if(info.type == 1)
         {
-            LoadMgr.Instance.LoadAssetWithType('fonts/blood_red',cc.BitmapFont,(font)=>{
-                var node = new cc.Node();
-                var bloomLab = node.addComponent(cc.Label);
-                bloomLab.font = font;
-                bloomLab.string = info.data;
-                // bloomLab.cacheMode = cc.Label.CacheMode.CHAR;
-                node.setPosition(info.pos.x, info.pos.y);
-                this.layer.addChild(node);
-                
-                cc.tween(node).by(0.2,{x:50*Math.random() ,y:50*Math.random()}).delay(1).call(function () {
-                    node.active = false;
-                    node.removeFromParent();
-                }).start();
-            })
+            
         }
         else if(info.type == 5)
         {
