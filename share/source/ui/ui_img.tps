@@ -190,6 +190,13 @@
             <filename>xunzhangtubiao.png</filename>
             <filename>jineng.png</filename>
             <filename>special_icons_0020.png</filename>
+            <filename>power_reinforcement_portrait_0018.png</filename>
+            <filename>ui_common_background.png</filename>
+            <filename>map_levelselect_playbutton.png</filename>
+            <filename>MainMenu_slots_bg.png</filename>
+            <filename>menu_options_common_button_0003.png</filename>
+            <filename>menu_options_socialmedia_bg.png</filename>
+            <filename>MainMenu_slot_button_0001.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>

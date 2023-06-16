@@ -77,6 +77,7 @@ export default class LoginView extends UIParent {
         
         EventMgr.Instance.Emit(EventName.UI_CLOSE_PANEL + this.getUIName(),null);
         UIMgr.Instance.openUI(UIName.VIEW_START);
+        UIMgr.Instance.openUI(UIName.VIEW_SEL_HERO);
 
     }
 

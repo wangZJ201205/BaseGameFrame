@@ -9,6 +9,7 @@ import DictMgr from "../manager/DictMgr";
 import SkillParent from "./SkillParent";
 import ArcherySkill from "./bullet/archery/ArcherySkill";
 import FireBallSkill from "./bullet/fireball/FireBallSkill";
+import FireHorseSkill from "./bullet/firehorse/FireHorseSkill";
 import IceBallSkill from "./bullet/iceBall/IceBallSkill";
 import MiZongQuanSkill from "./bullet/mizongquan/MiZongQuanSkill";
 import PosionBallSkill from "./bullet/poisonBall/PosionBallSkill";
@@ -41,7 +42,8 @@ export default class Skill {
         this._typeClass[ClientDef.SKILL_TYPE_SHIELD] = ShieldBallSkill;             //护盾
         this._typeClass[ClientDef.SKILL_TYPE_POISON] = PosionBallSkill;             //放毒
         this._typeClass[ClientDef.SKILL_TYPE_MIZONGQUAN] = MiZongQuanSkill;         //迷踪拳
-        this._typeClass[ClientDef.SKILL_TYPE_ARCHERY] = ArcherySkill;         //迷踪拳
+        this._typeClass[ClientDef.SKILL_TYPE_ARCHERY] = ArcherySkill;               //射箭
+        this._typeClass[ClientDef.SKILL_TYPE_FIREHORSE] = FireHorseSkill;           //烈火马
     }
 
     start () 

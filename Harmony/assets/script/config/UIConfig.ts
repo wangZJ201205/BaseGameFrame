@@ -27,7 +27,7 @@ export default class UIConfig{
         this.UIReg[UIName.VIEW_SELECTSKILL] = { path: this.PreGame + 'SelectSkillPref',index:ClientDef.UI_INDEX_COMMON }; 
         this.UIReg[UIName.VIEW_START] = { path: this.PreGame + 'StartPref',index:ClientDef.UI_INDEX_COMMON }; 
         this.UIReg[UIName.VIEW_SET] = { path: this.PreGame + 'SetPref',index:ClientDef.UI_INDEX_COMMON }; 
-
+        this.UIReg[UIName.VIEW_SEL_HERO] = { path: this.PreGame + 'SelectHeroPref',index:ClientDef.UI_INDEX_COMMON }; 
 
     }
 

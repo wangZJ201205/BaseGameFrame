@@ -1,5 +1,5 @@
 /**
- * 冰球
+ * 射箭
  */
 import ClientDef from "../../../common/ClientDef";
 import GameData from "../../../common/GameData";
@@ -16,7 +16,7 @@ const {ccclass, property} = cc._decorator;
 export default class ArcheryBullet extends BulletParent {
 
     private _lineMovement:MovementParent;
-
+    private _startPos : cc.Vec3;
     onLoad (host) 
     {
         super.onLoad(host);
@@ -51,14 +51,13 @@ export default class ArcheryBullet extends BulletParent {
 
         this._lineMovement.start(info);
         
+        this._startPos = this._host.getHost().getEntityNode().position;
     }
 
     update (dt) 
     {
-        var heroNode = this._host.getHost().getEntityNode();
         var currentPosition = this.getNode().position;
-        
-        const distance = heroNode.position.sub(currentPosition).mag();
+        const distance = this._startPos.sub(currentPosition).mag();
         if (distance > GameData.App_Game_Width/2) //超出边界
         {
             this.getNode().active = false;

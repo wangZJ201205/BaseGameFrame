@@ -118,7 +118,7 @@ export default class GamePlay {
     //创建角色
     createEntity()
     {
-        var player = GhostMgr.Instance.spawnEntity(100001);
+        var player = GhostMgr.Instance.spawnEntity(GameData.Hero_Current_ID);
         player.restart();
         Hero.Instance.setEntity(player);
         Hero.Instance.start();

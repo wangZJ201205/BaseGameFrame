@@ -11,4 +11,5 @@ export default class UIName {
     public static readonly VIEW_SELECTSKILL : string = 'VIEW_SELECTSKILL'; //选择技能界面
     public static readonly VIEW_START : string = 'VIEW_START';  //开始界面
     public static readonly VIEW_SET : string = 'VIEW_SET';      //设置界面
+    public static readonly VIEW_SEL_HERO : string = 'VIEW_SEL_HERO';      //选择英雄
 }

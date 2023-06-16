@@ -1,6 +1,6 @@
 {
 	"100001": {"id": 100001,"name": "暗夜精灵","bloom": 16,"collGroup": "player","collRect": "0,60,48,111","collision": 0,"defense": 1,"moveSpeed": 150,"path": "kr4_hero_asra","pickRange": 120,"skillid": 11001},
-	"100002": {"id": 100002,"name": "暗夜精灵","bloom": 16,"collGroup": "player","collRect": "0,60,48,111","collision": 0,"defense": 1,"moveSpeed": 150,"path": "kr4_hero_asra","pickRange": 120,"skillid": 11001},
+	"100002": {"id": 100002,"name": "灯笼骑士","bloom": 16,"collGroup": "player","collRect": "0,60,48,111","collision": 0,"defense": 1,"moveSpeed": 250,"path": "kr4_hero_jack_o_lantern","pickRange": 120,"skillid": 11101},
 	"100003": {"id": 100003,"name": "暗夜精灵","bloom": 16,"collGroup": "player","collRect": "0,60,48,111","collision": 0,"defense": 1,"moveSpeed": 150,"path": "kr4_hero_asra","pickRange": 120,"skillid": 11001},
 	"100004": {"id": 100004,"name": "暗夜精灵","bloom": 16,"collGroup": "player","collRect": "0,60,48,111","collision": 0,"defense": 1,"moveSpeed": 150,"path": "kr4_hero_asra","pickRange": 120,"skillid": 11001},
 	"100005": {"id": 100005,"name": "暗夜精灵","bloom": 16,"collGroup": "player","collRect": "0,60,48,111","collision": 0,"defense": 1,"moveSpeed": 150,"path": "kr4_hero_asra","pickRange": 120,"skillid": 11001},

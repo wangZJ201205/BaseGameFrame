@@ -12,7 +12,7 @@ export default class GameData{
 
     public static Game_Pause_FLAG : number = 0; //游戏是否停止状态
     public static Game_Play_Monster_Time_Delay : number = 3; //游戏玩法中怪物的时间间隔
-    public static Game_Mode : number = 0; //游戏运行模式 0 正常模式 1测试技能模式
+    public static Game_Mode : number = 0; //游戏运行模式 0 正常模式 1测试技能模式 2战斗测试刷怪模式
 
     public static NeedWaitModules : number = 0; //需要加载等待的模块数
     public static CurrLoadModules : number = 0; //当前已经加载的模块数
@@ -25,6 +25,8 @@ export default class GameData{
 
 
     public static Map_Current_Id : number = 10001; //当前地图id
+
+    public static Hero_Current_ID : number = 100002; //当前英雄id
 
     public static Monster_Show_Amount : number = 0; //游戏中展示的怪物数量
     public static Monster_And_Hero_Min_Distance : number = 50; //怪物和人物之间最短距离
