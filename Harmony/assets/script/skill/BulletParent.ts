@@ -160,8 +160,25 @@ export default class BulletParent {
             return;
         }
 
+        var animationState : number = 0;
+        if(skillInfo.animation) 
+        {
+            switch(curPhase)
+            {
+                case ClientDef.BULLET_PHASE_1: // 获取个位上的数值
+                    animationState = skillInfo.animation % 10; 
+                    break;
+                case ClientDef.BULLET_PHASE_2: // 获取十位上的数值
+                    animationState = Math.floor(skillInfo.animation / 10) % 10; 
+                    break;
+                case ClientDef.BULLET_PHASE_3: //确定百位上是否有值
+                    animationState = Math.floor(skillInfo.animation / 100) % 10; 
+                    break;
+            }
+        }
+
         //子弹就是以一张图片的形式出现
-        if(!skillInfo.animation)
+        if( animationState == 0)
         {
             this.loadSprite(pname);
         }
@@ -191,6 +208,7 @@ export default class BulletParent {
     loadPrefab(pname)
     {
         var loadPath = 'animation/skill/' +  this._skillInfo[pname] +"/"+ this._skillInfo[pname] ;
+        var self = this
         LoadMgr.Instance.LoadAssetWithType(loadPath,cc.Prefab,(asset)=>{
             if(this._host.getHost().getClientProp(ClientDef.ENTITY_PROP_ACTIVE_STATE) != ClientDef.ENTITY_ACTIVE_STATE_RUN)
             {

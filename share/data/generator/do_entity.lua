@@ -54,6 +54,8 @@ function handle_player(o)
 	d.defense = tonumber(o.i)
 	d.pickRange = tonumber(o.j)
 	d.moveSpeed = tonumber(o.k)
+	d.headIcon = o.l
+	d.desc = o.m
 	gdentity[tostring(d.id)] = d
 end
 

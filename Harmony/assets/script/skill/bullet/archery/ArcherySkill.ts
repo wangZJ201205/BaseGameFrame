@@ -4,6 +4,7 @@
 
 import ClientDef from "../../../common/ClientDef";
 import SkillParent from "../../SkillParent";
+import ArcheryBoomBullet from "./ArcheryBoomBullet";
 import ArcheryBullet from "./ArcheryBullet";
 
 const {ccclass, property} = cc._decorator;
@@ -17,6 +18,7 @@ export default class ArcherySkill extends SkillParent {
     {
         super.start();
         this._startBulletClass = ArcheryBullet;
+        this._endBulletClass = ArcheryBoomBullet;
         
         var bulletCount = this.getProp(ClientDef.SKILL_PROP_COUNT);
         this._offsetY = -20 * (bulletCount) / 2;

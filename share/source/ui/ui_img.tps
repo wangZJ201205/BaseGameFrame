@@ -197,6 +197,24 @@
             <filename>menu_options_common_button_0003.png</filename>
             <filename>menu_options_socialmedia_bg.png</filename>
             <filename>MainMenu_slot_button_0001.png</filename>
+            <filename>map_mainbuttons_heroes_PC_0001.png</filename>
+            <filename>map_mainbuttons_heroes_PC_0002.png</filename>
+            <filename>map_mainbuttons_heroes_PC_0003.png</filename>
+            <filename>map_mainbuttons_heroes_PC_0004.png</filename>
+            <filename>map_mainbuttons_heroes_PC_0005.png</filename>
+            <filename>map_mainbuttons_heroes_PC_0006.png</filename>
+            <filename>map_mainbuttons_heroes_PC_0007.png</filename>
+            <filename>map_mainbuttons_heroes_PC_0008.png</filename>
+            <filename>map_mainbuttons_heroes_PC_0009.png</filename>
+            <filename>map_mainbuttons_heroes_PC_0010.png</filename>
+            <filename>map_mainbuttons_heroes_PC_0011.png</filename>
+            <filename>map_mainbuttons_heroes_PC_0012.png</filename>
+            <filename>map_mainbuttons_heroes_PC_0014.png</filename>
+            <filename>hero_item_sel.png</filename>
+            <filename>hero_sel_bg.png</filename>
+            <filename>hero_list_frame.png</filename>
+            <filename>main_menues_bg_closeButton.png</filename>
+            <filename>main_menues_bg_closeButton_over.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>

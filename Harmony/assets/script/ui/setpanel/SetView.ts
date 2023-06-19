@@ -55,7 +55,6 @@ export default class SetView extends UIParent {
         SceneMgr.Instance.exitScene();
         EventMgr.Instance.Emit(EventName.UI_CLOSE_PANEL + this.getUIName(),null);
         UIMgr.Instance.openUI(UIName.VIEW_START);
-        UIMgr.Instance.openUI(UIName.VIEW_SEL_HERO);
     }
 
     goonGame(event,param)

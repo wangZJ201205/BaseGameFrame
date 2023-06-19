@@ -2,13 +2,9 @@
  * 开始界面
  */
 
-import ClientDef from "../../common/ClientDef";
-import EventName from "../../common/EventName";
 import UIName from "../../common/UIName";
-import Hero from "../../ghost/Hero";
-import EventMgr from "../../manager/EventMgr";
 import LoadMgr from "../../manager/LoadMgr";
-import SceneMgr from "../../manager/SceneMgr";
+import UIMgr from "../../manager/UIMgr";
 import UIParent from "../UIParent";
 
 const {ccclass, property} = cc._decorator;
@@ -52,8 +48,8 @@ export default class StartView extends UIParent {
 
     openGame(event,param)
     {
-        SceneMgr.Instance.enterScene();
-        EventMgr.Instance.Emit(EventName.UI_CLOSE_PANEL + this.getUIName(),null);
+        UIMgr.Instance.openUI(UIName.VIEW_SEL_HERO);
+
     }
 
 }

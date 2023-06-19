@@ -225,6 +225,28 @@
             <filename>fire_horse/hero_jack_o_lantern_ultimate_smoke_0019.png</filename>
             <filename>fire_horse/hero_jack_o_lantern_ultimate_smoke_0020.png</filename>
             <filename>fire_horse/hero_jack_o_lantern_ultimate_smoke_0021.png</filename>
+            <filename>shooter_lvl4_proyectile.png</filename>
+            <filename>alleria_arrow_multishoot.png</filename>
+            <filename>stage13_elf_arrow.png</filename>
+            <filename>alleria_arrow.png</filename>
+            <filename>boom/warmongers_rocket_tower_lvl4_blue_explosion_0001.png</filename>
+            <filename>boom/warmongers_rocket_tower_lvl4_blue_explosion_0002.png</filename>
+            <filename>boom/warmongers_rocket_tower_lvl4_blue_explosion_0003.png</filename>
+            <filename>boom/warmongers_rocket_tower_lvl4_blue_explosion_0004.png</filename>
+            <filename>boom/warmongers_rocket_tower_lvl4_blue_explosion_0005.png</filename>
+            <filename>boom/warmongers_rocket_tower_lvl4_blue_explosion_0006.png</filename>
+            <filename>boom/warmongers_rocket_tower_lvl4_blue_explosion_0007.png</filename>
+            <filename>boom/warmongers_rocket_tower_lvl4_blue_explosion_0008.png</filename>
+            <filename>boom/warmongers_rocket_tower_lvl4_blue_explosion_0009.png</filename>
+            <filename>boom/warmongers_rocket_tower_lvl4_blue_explosion_0010.png</filename>
+            <filename>boom/warmongers_rocket_tower_lvl4_blue_explosion_0011.png</filename>
+            <filename>boom/warmongers_rocket_tower_lvl4_blue_explosion_0012.png</filename>
+            <filename>boom/warmongers_rocket_tower_lvl4_blue_explosion_0013.png</filename>
+            <filename>boom/warmongers_rocket_tower_lvl4_blue_explosion_0014.png</filename>
+            <filename>boom/warmongers_rocket_tower_lvl4_blue_explosion_0015.png</filename>
+            <filename>boom/warmongers_rocket_tower_lvl4_blue_explosion_0016.png</filename>
+            <filename>boom/warmongers_rocket_tower_lvl4_blue_explosion_0017.png</filename>
+            <filename>boom/warmongers_rocket_tower_lvl4_blue_explosion_0018.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>

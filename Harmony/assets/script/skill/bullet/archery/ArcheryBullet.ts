@@ -60,13 +60,29 @@ export default class ArcheryBullet extends BulletParent {
         const distance = this._startPos.sub(currentPosition).mag();
         if (distance > GameData.App_Game_Width/2) //超出边界
         {
-            this.getNode().active = false;
-            this.setProp(ClientDef.BULLET_PROP_STATE,ClientDef.BULLET_STATE_FREE);
+            this.stop();
         } 
 
         this._lineMovement.update(dt);
         super.update(dt);
     }
 
+    //碰撞开始
+    collisionEnter(other, self)
+    {   
+        var tgt = other.node;
+        if(tgt.getClientProp(ClientDef.ENTITY_PROP_STATE) == ClientDef.ENTITY_STATE_DIE) //死亡状态不触发响应
+        {
+            return;
+        }
+        super.collisionEnter(other, self);
+        if( this._skillInfo.animation && this._skillInfo.animation == 100)
+        {
+            var bullet = this._host.spawnBullet(ClientDef.BULLET_PHASE_3);
+            bullet.getNode().active = true;
+            bullet.getNode().position = this.getNode().position;
+            bullet.restart();
+        }
+    }
     
 }

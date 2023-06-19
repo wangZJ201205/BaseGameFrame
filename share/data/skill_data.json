@@ -1184,7 +1184,7 @@
 		"icon": "special_icons_0020",
 		"sound": "effect_skill_ccjf",
 		"speed": 72,
-		"src": "darkarmy_archer_arrow_lvl4",
+		"src": "alleria_arrow",
 		"strike": 1
 	},
 	"11002": {
@@ -1199,7 +1199,7 @@
 		"icon": "special_icons_0020",
 		"sound": "effect_skill_ccjf",
 		"speed": 72,
-		"src": "darkarmy_archer_arrow_lvl4",
+		"src": "alleria_arrow",
 		"strike": 1
 	},
 	"11003": {
@@ -1244,7 +1244,7 @@
 		"icon": "special_icons_0020",
 		"sound": "effect_skill_ccjf",
 		"speed": 72,
-		"src": "darkarmy_archer_arrow_lvl4",
+		"src": "stage13_elf_arrow",
 		"strike": 1
 	},
 	"11006": {
@@ -1260,7 +1260,7 @@
 		"icon": "special_icons_0020",
 		"sound": "effect_skill_ccjf",
 		"speed": 72,
-		"src": "darkarmy_archer_arrow_lvl4",
+		"src": "stage13_elf_arrow",
 		"strike": 1
 	},
 	"11007": {
@@ -1276,7 +1276,7 @@
 		"icon": "special_icons_0020",
 		"sound": "effect_skill_ccjf",
 		"speed": 72,
-		"src": "darkarmy_archer_arrow_lvl4",
+		"src": "alleria_arrow_multishoot",
 		"strike": 1
 	},
 	"11008": {
@@ -1292,12 +1292,13 @@
 		"icon": "special_icons_0020",
 		"sound": "effect_skill_ccjf",
 		"speed": 72,
-		"src": "darkarmy_archer_arrow_lvl4",
+		"src": "alleria_arrow_multishoot",
 		"strike": 1
 	},
 	"11009": {
 		"id": 11009,
 		"name": "射箭",
+		"animation": 100,
 		"attackValue": "20-30",
 		"collRect": "2,2,50,20",
 		"collision": 1,
@@ -1306,9 +1307,10 @@
 		"delaytime": 20,
 		"desc": "射箭",
 		"icon": "special_icons_0020",
+		"over": "skill_archery_boom",
 		"sound": "effect_skill_ccjf",
 		"speed": 72,
-		"src": "darkarmy_archer_arrow_lvl4",
+		"src": "shooter_lvl4_proyectile",
 		"strike": 1
 	},
 	"11101": {
