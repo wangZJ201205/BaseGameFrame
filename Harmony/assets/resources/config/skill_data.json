@@ -2,1459 +2,1104 @@
 	"10101": {
 		"id": 10101,
 		"name": "火球术",
-		"animation": 1,
 		"attackValue": "5-15",
-		"collRect": "2,2,40,40",
-		"collision": 1,
+		"bullets": {
+			"1": {"id": 1,"collRect": "2,2,40,40","collision": 1,"particle": "test_pt","sound": "effect_skill_lhh","speed": 100,"src": "skill_fireball","strike": 1}
+		},
 		"cooldown": 300,
 		"count": 1,
 		"desc": "火球术厉害1",
-		"icon": "skill_huimiehuoyu",
-		"particle": "test_pt",
-		"sound": "effect_skill_lhh",
-		"speed": 100,
-		"src": "skill_fireball",
-		"strike": 1
+		"icon": "skill_huimiehuoyu"
 	},
 	"10102": {
 		"id": 10102,
 		"name": "火球术",
 		"attackValue": "5-15",
-		"collRect": "2,2,40,40",
-		"collision": 1,
+		"bullets": {
+			"1": {"id": 2,"collRect": "2,2,40,40","collision": 1,"particle": "test_pt","sound": "effect_skill_lhh","speed": 100,"src": "sword_176","strike": 1}
+		},
 		"cooldown": 300,
 		"count": 2,
 		"desc": "火球术厉害2",
-		"icon": "skill_huimiehuoyu",
-		"particle": "test_pt",
-		"sound": "effect_skill_lhh",
-		"speed": 100,
-		"src": "sword_176",
-		"strike": 1
+		"icon": "skill_huimiehuoyu"
 	},
 	"10103": {
 		"id": 10103,
 		"name": "火球术",
 		"attackValue": "5-15",
-		"collRect": "2,2,40,40",
-		"collision": 1,
+		"bullets": {
+			"1": {"id": 1,"collRect": "2,2,40,40","collision": 1,"particle": "test_pt","sound": "effect_skill_lhh","speed": 100,"src": "skill_fireball","strike": 1}
+		},
 		"cooldown": 300,
 		"count": 3,
 		"desc": "火球术厉害3",
-		"icon": "skill_huimiehuoyu",
-		"particle": "test_pt",
-		"sound": "effect_skill_lhh",
-		"speed": 100,
-		"src": "skill_fireball",
-		"strike": 1
+		"icon": "skill_huimiehuoyu"
 	},
 	"10104": {
 		"id": 10104,
 		"name": "火球术",
 		"attackValue": "5-15",
-		"collRect": "2,2,40,40",
-		"collision": 1,
+		"bullets": {
+			"1": {"id": 2,"collRect": "2,2,40,40","collision": 1,"particle": "test_pt","sound": "effect_skill_lhh","speed": 100,"src": "sword_176","strike": 1}
+		},
 		"cooldown": 300,
 		"count": 4,
 		"desc": "火球术厉害4",
-		"icon": "skill_huimiehuoyu",
-		"particle": "test_pt",
-		"sound": "effect_skill_lhh",
-		"speed": 100,
-		"src": "sword_176",
-		"strike": 1
+		"icon": "skill_huimiehuoyu"
 	},
 	"10105": {
 		"id": 10105,
 		"name": "火球术",
 		"attackValue": "5-15",
-		"collRect": "2,2,40,40",
-		"collision": 1,
+		"bullets": {
+			"1": {"id": 1,"collRect": "2,2,40,40","collision": 1,"particle": "test_pt","sound": "effect_skill_lhh","speed": 100,"src": "skill_fireball","strike": 1}
+		},
 		"cooldown": 300,
 		"count": 5,
 		"desc": "火球术厉害5",
-		"icon": "skill_huimiehuoyu",
-		"particle": "test_pt",
-		"sound": "effect_skill_lhh",
-		"speed": 100,
-		"src": "skill_fireball",
-		"strike": 1
+		"icon": "skill_huimiehuoyu"
 	},
 	"10106": {
 		"id": 10106,
 		"name": "火球术",
 		"attackValue": "5-15",
-		"collRect": "2,2,40,40",
-		"collision": 1,
+		"bullets": {
+			"1": {"id": 2,"collRect": "2,2,40,40","collision": 1,"particle": "test_pt","sound": "effect_skill_lhh","speed": 100,"src": "sword_176","strike": 1}
+		},
 		"cooldown": 300,
 		"count": 6,
 		"desc": "火球术厉害6",
-		"icon": "skill_huimiehuoyu",
-		"particle": "test_pt",
-		"sound": "effect_skill_lhh",
-		"speed": 100,
-		"src": "sword_176",
-		"strike": 1
+		"icon": "skill_huimiehuoyu"
 	},
 	"10107": {
 		"id": 10107,
 		"name": "火球术",
 		"attackValue": "5-15",
-		"collRect": "2,2,40,40",
-		"collision": 1,
+		"bullets": {
+			"1": {"id": 1,"collRect": "2,2,40,40","collision": 1,"particle": "test_pt","sound": "effect_skill_lhh","speed": 100,"src": "skill_fireball","strike": 1}
+		},
 		"cooldown": 300,
 		"count": 7,
 		"desc": "火球术厉害7",
-		"icon": "skill_huimiehuoyu",
-		"particle": "test_pt",
-		"sound": "effect_skill_lhh",
-		"speed": 100,
-		"src": "skill_fireball",
-		"strike": 1
+		"icon": "skill_huimiehuoyu"
 	},
 	"10108": {
 		"id": 10108,
 		"name": "火球术",
 		"attackValue": "5-15",
-		"collRect": "2,2,40,40",
-		"collision": 1,
+		"bullets": {
+			"1": {"id": 2,"collRect": "2,2,40,40","collision": 1,"particle": "test_pt","sound": "effect_skill_lhh","speed": 100,"src": "sword_176","strike": 1}
+		},
 		"cooldown": 300,
 		"count": 8,
 		"desc": "火球术厉害8",
-		"icon": "skill_huimiehuoyu",
-		"particle": "test_pt",
-		"sound": "effect_skill_lhh",
-		"speed": 100,
-		"src": "sword_176",
-		"strike": 1
+		"icon": "skill_huimiehuoyu"
 	},
 	"10109": {
 		"id": 10109,
 		"name": "火球术",
 		"attackValue": "5-15",
-		"collRect": "2,2,40,40",
-		"collision": 1,
+		"bullets": {
+			"1": {"id": 1,"collRect": "2,2,40,40","collision": 1,"particle": "test_pt","sound": "effect_skill_lhh","speed": 100,"src": "skill_fireball","strike": 1}
+		},
 		"cooldown": 300,
 		"count": 9,
 		"desc": "火球术厉害9",
-		"icon": "skill_huimiehuoyu",
-		"particle": "test_pt",
-		"sound": "effect_skill_lhh",
-		"speed": 100,
-		"src": "skill_fireball",
-		"strike": 1
+		"icon": "skill_huimiehuoyu"
 	},
 	"10110": {
 		"id": 10110,
 		"name": "火球术",
 		"attackValue": "5-15",
-		"collRect": "2,2,40,40",
-		"collision": 1,
+		"bullets": {
+			"1": {"id": 2,"collRect": "2,2,40,40","collision": 1,"particle": "test_pt","sound": "effect_skill_lhh","speed": 100,"src": "sword_176","strike": 1}
+		},
 		"cooldown": 300,
 		"count": 10,
 		"desc": "火球术厉害10",
-		"icon": "skill_huimiehuoyu",
-		"particle": "test_pt",
-		"sound": "effect_skill_lhh",
-		"speed": 100,
-		"src": "sword_176",
-		"strike": 1
+		"icon": "skill_huimiehuoyu"
 	},
 	"10201": {
 		"id": 10201,
 		"name": "冰弹球",
 		"attackValue": "5-15",
-		"collRect": "2,2,40,40",
-		"collision": 1,
+		"bullets": {
+			"1": {"id": 3,"collRect": "2,2,40,40","collision": 1,"particle": "test_pt","sound": "effect_skill_hbj","speed": 100,"src": "skill_iceball","strike": 2}
+		},
 		"cooldown": 2000,
 		"count": 3,
 		"desc": "冰弹球厉害1",
-		"icon": "skill_kuanglongzidian",
-		"particle": "test_pt",
-		"sound": "effect_skill_hbj",
-		"speed": 100,
-		"src": "skill_iceball",
-		"strike": 2
+		"icon": "skill_kuanglongzidian"
 	},
 	"10202": {
 		"id": 10202,
 		"name": "冰弹球",
 		"attackValue": "5-15",
-		"collRect": "2,2,40,40",
-		"collision": 1,
+		"bullets": {
+			"1": {"id": 3,"collRect": "2,2,40,40","collision": 1,"particle": "test_pt","sound": "effect_skill_hbj","speed": 100,"src": "skill_iceball","strike": 2}
+		},
 		"cooldown": 2000,
 		"count": 4,
 		"desc": "冰弹球厉害2",
-		"icon": "skill_kuanglongzidian",
-		"particle": "test_pt",
-		"sound": "effect_skill_hbj",
-		"speed": 100,
-		"src": "skill_iceball",
-		"strike": 2
+		"icon": "skill_kuanglongzidian"
 	},
 	"10203": {
 		"id": 10203,
 		"name": "冰弹球",
 		"attackValue": "5-15",
-		"collRect": "2,2,40,40",
-		"collision": 1,
+		"bullets": {
+			"1": {"id": 3,"collRect": "2,2,40,40","collision": 1,"particle": "test_pt","sound": "effect_skill_hbj","speed": 100,"src": "skill_iceball","strike": 2}
+		},
 		"cooldown": 2000,
 		"count": 5,
 		"desc": "冰弹球厉害3",
-		"icon": "skill_kuanglongzidian",
-		"particle": "test_pt",
-		"sound": "effect_skill_hbj",
-		"speed": 100,
-		"src": "skill_iceball",
-		"strike": 2
+		"icon": "skill_kuanglongzidian"
 	},
 	"10204": {
 		"id": 10204,
 		"name": "冰弹球",
 		"attackValue": "5-15",
-		"collRect": "2,2,40,40",
-		"collision": 1,
+		"bullets": {
+			"1": {"id": 3,"collRect": "2,2,40,40","collision": 1,"particle": "test_pt","sound": "effect_skill_hbj","speed": 100,"src": "skill_iceball","strike": 2}
+		},
 		"cooldown": 2000,
 		"count": 6,
 		"desc": "冰弹球厉害4",
-		"icon": "skill_kuanglongzidian",
-		"particle": "test_pt",
-		"sound": "effect_skill_hbj",
-		"speed": 100,
-		"src": "skill_iceball",
-		"strike": 2
+		"icon": "skill_kuanglongzidian"
 	},
 	"10205": {
 		"id": 10205,
 		"name": "冰弹球",
 		"attackValue": "5-15",
-		"collRect": "2,2,40,40",
-		"collision": 1,
+		"bullets": {
+			"1": {"id": 3,"collRect": "2,2,40,40","collision": 1,"particle": "test_pt","sound": "effect_skill_hbj","speed": 100,"src": "skill_iceball","strike": 2}
+		},
 		"cooldown": 2000,
 		"count": 7,
 		"desc": "冰弹球厉害5",
-		"icon": "skill_kuanglongzidian",
-		"particle": "test_pt",
-		"sound": "effect_skill_hbj",
-		"speed": 100,
-		"src": "skill_iceball",
-		"strike": 2
+		"icon": "skill_kuanglongzidian"
 	},
 	"10206": {
 		"id": 10206,
 		"name": "冰弹球",
 		"attackValue": "5-15",
-		"collRect": "2,2,40,40",
-		"collision": 1,
+		"bullets": {
+			"1": {"id": 3,"collRect": "2,2,40,40","collision": 1,"particle": "test_pt","sound": "effect_skill_hbj","speed": 100,"src": "skill_iceball","strike": 2}
+		},
 		"cooldown": 2000,
 		"count": 8,
 		"desc": "冰弹球厉害6",
-		"icon": "skill_kuanglongzidian",
-		"particle": "test_pt",
-		"sound": "effect_skill_hbj",
-		"speed": 100,
-		"src": "skill_iceball",
-		"strike": 2
+		"icon": "skill_kuanglongzidian"
 	},
 	"10207": {
 		"id": 10207,
 		"name": "冰弹球",
 		"attackValue": "5-15",
-		"collRect": "2,2,40,40",
-		"collision": 1,
+		"bullets": {
+			"1": {"id": 3,"collRect": "2,2,40,40","collision": 1,"particle": "test_pt","sound": "effect_skill_hbj","speed": 100,"src": "skill_iceball","strike": 2}
+		},
 		"cooldown": 2000,
 		"count": 9,
 		"desc": "冰弹球厉害7",
-		"icon": "skill_kuanglongzidian",
-		"particle": "test_pt",
-		"sound": "effect_skill_hbj",
-		"speed": 100,
-		"src": "skill_iceball",
-		"strike": 2
+		"icon": "skill_kuanglongzidian"
 	},
 	"10301": {
 		"id": 10301,
 		"name": "遭雷劈",
-		"animation": 1,
 		"attackValue": "5-15",
-		"collRect": "2,2,40,40",
-		"collision": 1,
+		"bullets": {
+			"1": {"id": 4,"animation": 1,"collRect": "2,2,40,40","collision": 1,"sound": "effect_skill_lls","src": "skill_zhaoleipi","strike": 99}
+		},
 		"cooldown": 600,
 		"count": 1,
 		"desc": "遭雷劈真厉害1",
-		"icon": "skill_qiancheng1",
-		"sound": "effect_skill_lls",
-		"speed": 100,
-		"src": "skill_zhaoleipi",
-		"strike": 99
+		"icon": "skill_qiancheng1"
 	},
 	"10302": {
 		"id": 10302,
 		"name": "遭雷劈",
-		"animation": 1,
 		"attackValue": "5-15",
-		"collRect": "2,2,40,40",
-		"collision": 1,
+		"bullets": {
+			"1": {"id": 4,"animation": 1,"collRect": "2,2,40,40","collision": 1,"sound": "effect_skill_lls","src": "skill_zhaoleipi","strike": 99}
+		},
 		"cooldown": 600,
 		"count": 2,
 		"desc": "遭雷劈真厉害2",
-		"icon": "skill_qiancheng1",
-		"sound": "effect_skill_lls",
-		"speed": 100,
-		"src": "skill_zhaoleipi",
-		"strike": 99
+		"icon": "skill_qiancheng1"
 	},
 	"10303": {
 		"id": 10303,
 		"name": "遭雷劈",
-		"animation": 1,
 		"attackValue": "5-15",
-		"collRect": "2,2,40,40",
-		"collision": 1,
+		"bullets": {
+			"1": {"id": 4,"animation": 1,"collRect": "2,2,40,40","collision": 1,"sound": "effect_skill_lls","src": "skill_zhaoleipi","strike": 99}
+		},
 		"cooldown": 600,
 		"count": 3,
 		"desc": "遭雷劈真厉害3",
-		"icon": "skill_qiancheng1",
-		"sound": "effect_skill_lls",
-		"speed": 100,
-		"src": "skill_zhaoleipi",
-		"strike": 99
+		"icon": "skill_qiancheng1"
 	},
 	"10304": {
 		"id": 10304,
 		"name": "遭雷劈",
-		"animation": 1,
 		"attackValue": "5-15",
-		"collRect": "2,2,40,40",
-		"collision": 1,
+		"bullets": {
+			"1": {"id": 4,"animation": 1,"collRect": "2,2,40,40","collision": 1,"sound": "effect_skill_lls","src": "skill_zhaoleipi","strike": 99}
+		},
 		"cooldown": 600,
 		"count": 4,
 		"desc": "遭雷劈真厉害4",
-		"icon": "skill_qiancheng1",
-		"sound": "effect_skill_lls",
-		"speed": 100,
-		"src": "skill_zhaoleipi",
-		"strike": 99
+		"icon": "skill_qiancheng1"
 	},
 	"10305": {
 		"id": 10305,
 		"name": "遭雷劈",
-		"animation": 1,
 		"attackValue": "5-15",
-		"collRect": "2,2,40,40",
-		"collision": 1,
+		"bullets": {
+			"1": {"id": 4,"animation": 1,"collRect": "2,2,40,40","collision": 1,"sound": "effect_skill_lls","src": "skill_zhaoleipi","strike": 99}
+		},
 		"cooldown": 600,
 		"count": 5,
 		"desc": "遭雷劈真厉害5",
-		"icon": "skill_qiancheng1",
-		"sound": "effect_skill_lls",
-		"speed": 100,
-		"src": "skill_zhaoleipi",
-		"strike": 99
+		"icon": "skill_qiancheng1"
 	},
 	"10306": {
 		"id": 10306,
 		"name": "遭雷劈",
-		"animation": 1,
 		"attackValue": "5-15",
-		"collRect": "2,2,40,40",
-		"collision": 1,
+		"bullets": {
+			"1": {"id": 4,"animation": 1,"collRect": "2,2,40,40","collision": 1,"sound": "effect_skill_lls","src": "skill_zhaoleipi","strike": 99}
+		},
 		"cooldown": 600,
 		"count": 6,
 		"desc": "遭雷劈真厉害6",
-		"icon": "skill_qiancheng1",
-		"sound": "effect_skill_lls",
-		"speed": 100,
-		"src": "skill_zhaoleipi",
-		"strike": 99
+		"icon": "skill_qiancheng1"
 	},
 	"10307": {
 		"id": 10307,
 		"name": "遭雷劈",
-		"animation": 1,
 		"attackValue": "5-15",
-		"collRect": "2,2,40,40",
-		"collision": 1,
+		"bullets": {
+			"1": {"id": 4,"animation": 1,"collRect": "2,2,40,40","collision": 1,"sound": "effect_skill_lls","src": "skill_zhaoleipi","strike": 99}
+		},
 		"cooldown": 600,
 		"count": 7,
 		"desc": "遭雷劈真厉害7",
-		"icon": "skill_qiancheng1",
-		"sound": "effect_skill_lls",
-		"speed": 100,
-		"src": "skill_zhaoleipi",
-		"strike": 99
+		"icon": "skill_qiancheng1"
 	},
 	"10401": {
 		"id": 10401,
 		"name": "机械精灵",
 		"attackValue": "5-15",
-		"collRect": "2,2,40,40",
-		"collision": 1,
+		"bullets": {
+			"1": {"id": 5,"collRect": "2,2,20","collision": 2,"particle": "test_pt","sound": "effect_skill_sy","speed": 100,"src": "skill_trump","strike": 99}
+		},
 		"cooldown": 6000,
 		"count": 1,
 		"desc": "机械精灵非常好玩1",
 		"icon": "skill_shouhuzhiyi",
-		"particle": "test_pt",
-		"range": 200,
-		"sound": "effect_skill_sy",
-		"speed": 100,
-		"src": "skill_trump",
-		"strike": 99
+		"range": 200
 	},
 	"10402": {
 		"id": 10402,
 		"name": "机械精灵",
 		"attackValue": "5-15",
-		"collRect": "2,2,40,40",
-		"collision": 1,
+		"bullets": {
+			"1": {"id": 5,"collRect": "2,2,20","collision": 2,"particle": "test_pt","sound": "effect_skill_sy","speed": 100,"src": "skill_trump","strike": 99}
+		},
 		"cooldown": 6000,
 		"count": 2,
 		"desc": "机械精灵非常好玩2",
 		"icon": "skill_shouhuzhiyi",
-		"particle": "test_pt",
-		"range": 200,
-		"sound": "effect_skill_sy",
-		"speed": 100,
-		"src": "skill_trump",
-		"strike": 99
+		"range": 200
 	},
 	"10403": {
 		"id": 10403,
 		"name": "机械精灵",
 		"attackValue": "5-15",
-		"collRect": "2,2,40,40",
-		"collision": 1,
+		"bullets": {
+			"1": {"id": 5,"collRect": "2,2,20","collision": 2,"particle": "test_pt","sound": "effect_skill_sy","speed": 100,"src": "skill_trump","strike": 99}
+		},
 		"cooldown": 6000,
 		"count": 3,
 		"desc": "机械精灵非常好玩3",
 		"icon": "skill_shouhuzhiyi",
-		"particle": "test_pt",
-		"range": 200,
-		"sound": "effect_skill_sy",
-		"speed": 100,
-		"src": "skill_trump",
-		"strike": 99
+		"range": 200
 	},
 	"10404": {
 		"id": 10404,
 		"name": "机械精灵",
 		"attackValue": "5-15",
-		"collRect": "2,2,40,40",
-		"collision": 1,
+		"bullets": {
+			"1": {"id": 5,"collRect": "2,2,20","collision": 2,"particle": "test_pt","sound": "effect_skill_sy","speed": 100,"src": "skill_trump","strike": 99}
+		},
 		"cooldown": 6000,
 		"count": 4,
 		"desc": "机械精灵非常好玩4",
 		"icon": "skill_shouhuzhiyi",
-		"particle": "test_pt",
-		"range": 200,
-		"sound": "effect_skill_sy",
-		"speed": 100,
-		"src": "skill_trump",
-		"strike": 99
+		"range": 200
 	},
 	"10405": {
 		"id": 10405,
 		"name": "机械精灵",
 		"attackValue": "5-15",
-		"collRect": "2,2,40,40",
-		"collision": 1,
+		"bullets": {
+			"1": {"id": 5,"collRect": "2,2,20","collision": 2,"particle": "test_pt","sound": "effect_skill_sy","speed": 100,"src": "skill_trump","strike": 99}
+		},
 		"cooldown": 6000,
 		"count": 5,
 		"desc": "机械精灵非常好玩5",
 		"icon": "skill_shouhuzhiyi",
-		"particle": "test_pt",
-		"range": 200,
-		"sound": "effect_skill_sy",
-		"speed": 100,
-		"src": "skill_trump",
-		"strike": 99
+		"range": 200
 	},
 	"10406": {
 		"id": 10406,
 		"name": "机械精灵",
 		"attackValue": "5-15",
-		"collRect": "2,2,40,40",
-		"collision": 1,
+		"bullets": {
+			"1": {"id": 5,"collRect": "2,2,20","collision": 2,"particle": "test_pt","sound": "effect_skill_sy","speed": 100,"src": "skill_trump","strike": 99}
+		},
 		"cooldown": 6000,
 		"count": 6,
 		"desc": "机械精灵非常好玩6",
 		"icon": "skill_shouhuzhiyi",
-		"particle": "test_pt",
-		"range": 200,
-		"sound": "effect_skill_sy",
-		"speed": 100,
-		"src": "skill_trump",
-		"strike": 99
+		"range": 200
 	},
 	"10407": {
 		"id": 10407,
 		"name": "机械精灵",
 		"attackValue": "5-15",
-		"collRect": "2,2,40,40",
-		"collision": 1,
+		"bullets": {
+			"1": {"id": 5,"collRect": "2,2,20","collision": 2,"particle": "test_pt","sound": "effect_skill_sy","speed": 100,"src": "skill_trump","strike": 99}
+		},
 		"cooldown": 6000,
 		"count": 7,
 		"desc": "机械精灵非常好玩7",
 		"icon": "skill_shouhuzhiyi",
-		"particle": "test_pt",
-		"range": 200,
-		"sound": "effect_skill_sy",
-		"speed": 100,
-		"src": "skill_trump",
-		"strike": 99
+		"range": 200
 	},
 	"10501": {
 		"id": 10501,
 		"name": "旋风扫叶腿",
-		"animation": 1,
 		"attackValue": "5-15",
-		"collRect": "130,83,200,150",
-		"collision": 1,
+		"bullets": {
+			"1": {"id": 6,"animation": 1,"collRect": "130,83,200,150","collision": 1,"sound": "","speed": 100,"src": "skill_xuanfengzhan","strike": 99}
+		},
 		"cooldown": 1500,
 		"count": 1,
 		"desc": "斩击厉害1",
-		"icon": "skill_youlanaoyi1",
-		"sound": "0",
-		"speed": 100,
-		"src": "skill_xuanfengzhan",
-		"strike": 99
+		"icon": "skill_youlanaoyi1"
 	},
 	"10502": {
 		"id": 10502,
 		"name": "旋风扫叶腿",
-		"animation": 1,
 		"attackValue": "5-15",
-		"collRect": "130,83,200,150",
-		"collision": 1,
+		"bullets": {
+			"1": {"id": 6,"animation": 1,"collRect": "130,83,200,150","collision": 1,"sound": "","speed": 100,"src": "skill_xuanfengzhan","strike": 99}
+		},
 		"cooldown": 3000,
 		"count": 1,
 		"desc": "斩击厉害2",
-		"icon": "skill_youlanaoyi1",
-		"sound": "0",
-		"speed": 100,
-		"src": "skill_xuanfengzhan",
-		"strike": 99
+		"icon": "skill_youlanaoyi1"
 	},
 	"10503": {
 		"id": 10503,
 		"name": "旋风扫叶腿",
-		"animation": 1,
 		"attackValue": "5-15",
-		"collRect": "130,83,200,150",
-		"collision": 1,
+		"bullets": {
+			"1": {"id": 6,"animation": 1,"collRect": "130,83,200,150","collision": 1,"sound": "","speed": 100,"src": "skill_xuanfengzhan","strike": 99}
+		},
 		"cooldown": 3000,
 		"count": 1,
 		"desc": "斩击厉害3",
-		"icon": "skill_youlanaoyi1",
-		"sound": "0",
-		"speed": 100,
-		"src": "skill_xuanfengzhan",
-		"strike": 99
+		"icon": "skill_youlanaoyi1"
 	},
 	"10504": {
 		"id": 10504,
 		"name": "旋风扫叶腿",
-		"animation": 1,
 		"attackValue": "5-15",
-		"collRect": "130,83,200,150",
-		"collision": 1,
+		"bullets": {
+			"1": {"id": 6,"animation": 1,"collRect": "130,83,200,150","collision": 1,"sound": "","speed": 100,"src": "skill_xuanfengzhan","strike": 99}
+		},
 		"cooldown": 3000,
 		"count": 1,
 		"desc": "斩击厉害4",
-		"icon": "skill_youlanaoyi1",
-		"sound": "0",
-		"speed": 100,
-		"src": "skill_xuanfengzhan",
-		"strike": 99
+		"icon": "skill_youlanaoyi1"
 	},
 	"10505": {
 		"id": 10505,
 		"name": "旋风扫叶腿",
-		"animation": 1,
 		"attackValue": "5-15",
-		"collRect": "130,83,200,150",
-		"collision": 1,
+		"bullets": {
+			"1": {"id": 6,"animation": 1,"collRect": "130,83,200,150","collision": 1,"sound": "","speed": 100,"src": "skill_xuanfengzhan","strike": 99}
+		},
 		"cooldown": 3000,
 		"count": 1,
 		"desc": "斩击厉害5",
-		"icon": "skill_youlanaoyi1",
-		"sound": "0",
-		"speed": 100,
-		"src": "skill_xuanfengzhan",
-		"strike": 99
+		"icon": "skill_youlanaoyi1"
 	},
 	"10506": {
 		"id": 10506,
 		"name": "旋风扫叶腿",
-		"animation": 1,
 		"attackValue": "5-15",
-		"collRect": "130,83,200,150",
-		"collision": 1,
+		"bullets": {
+			"1": {"id": 6,"animation": 1,"collRect": "130,83,200,150","collision": 1,"sound": "","speed": 100,"src": "skill_xuanfengzhan","strike": 99}
+		},
 		"cooldown": 3000,
 		"count": 1,
 		"desc": "斩击厉害6",
-		"icon": "skill_youlanaoyi1",
-		"sound": "0",
-		"speed": 100,
-		"src": "skill_xuanfengzhan",
-		"strike": 99
+		"icon": "skill_youlanaoyi1"
 	},
 	"10507": {
 		"id": 10507,
 		"name": "旋风扫叶腿",
-		"animation": 1,
 		"attackValue": "5-15",
-		"collRect": "130,83,200,150",
-		"collision": 1,
+		"bullets": {
+			"1": {"id": 6,"animation": 1,"collRect": "130,83,200,150","collision": 1,"sound": "","speed": 100,"src": "skill_xuanfengzhan","strike": 99}
+		},
 		"cooldown": 3000,
 		"count": 1,
 		"desc": "斩击厉害7",
-		"icon": "skill_youlanaoyi1",
-		"sound": "0",
-		"speed": 100,
-		"src": "skill_xuanfengzhan",
-		"strike": 99
+		"icon": "skill_youlanaoyi1"
 	},
 	"10508": {
 		"id": 10508,
 		"name": "旋风扫叶腿",
-		"animation": 1,
 		"attackValue": "5-15",
-		"collRect": "130,83,200,150",
-		"collision": 1,
+		"bullets": {
+			"1": {"id": 6,"animation": 1,"collRect": "130,83,200,150","collision": 1,"sound": "","speed": 100,"src": "skill_xuanfengzhan","strike": 99}
+		},
 		"cooldown": 3000,
 		"count": 1,
 		"desc": "斩击厉害8",
-		"icon": "skill_youlanaoyi1",
-		"sound": "0",
-		"speed": 100,
-		"src": "skill_xuanfengzhan",
-		"strike": 99
+		"icon": "skill_youlanaoyi1"
 	},
 	"10509": {
 		"id": 10509,
 		"name": "旋风扫叶腿",
-		"animation": 1,
 		"attackValue": "5-15",
-		"collRect": "130,83,200,150",
-		"collision": 1,
+		"bullets": {
+			"1": {"id": 6,"animation": 1,"collRect": "130,83,200,150","collision": 1,"sound": "","speed": 100,"src": "skill_xuanfengzhan","strike": 99}
+		},
 		"cooldown": 3000,
 		"count": 1,
 		"desc": "斩击厉害9",
-		"icon": "skill_youlanaoyi1",
-		"sound": "0",
-		"speed": 100,
-		"src": "skill_xuanfengzhan",
-		"strike": 99
+		"icon": "skill_youlanaoyi1"
 	},
 	"10601": {
 		"id": 10601,
 		"name": "太极",
 		"attackValue": "5-15",
-		"collRect": "2,2,40,40",
-		"collision": 1,
+		"bullets": {
+			"1": {"id": 7,"collRect": "2,2,20","collision": 2,"particle": "test_pt","sound": "effect_skill_xkfld","speed": 3,"src": "i_jpql_03","strike": 99}
+		},
 		"cooldown": 3000,
 		"count": 3,
 		"desc": "太极1",
 		"icon": "skill-reduce_luolei",
-		"particle": "test_pt",
-		"range": 150,
-		"sound": "effect_skill_xkfld",
-		"speed": 3,
-		"src": "i_jpql_03",
-		"strike": 99
+		"range": 150
 	},
 	"10602": {
 		"id": 10602,
 		"name": "太极",
 		"attackValue": "5-15",
-		"collRect": "2,2,40,40",
-		"collision": 1,
+		"bullets": {
+			"1": {"id": 8,"collRect": "2,2,20","collision": 2,"particle": "test_pt","sound": "effect_skill_xkfld","speed": 3,"src": "i_jpql_02","strike": 99}
+		},
 		"cooldown": 3000,
 		"count": 4,
 		"desc": "太极2",
 		"icon": "skill-reduce_luolei",
-		"particle": "test_pt",
-		"range": 250,
-		"sound": "effect_skill_xkfld",
-		"speed": 3,
-		"src": "i_jpql_02",
-		"strike": 99
+		"range": 250
 	},
 	"10603": {
 		"id": 10603,
 		"name": "太极",
 		"attackValue": "5-15",
-		"collRect": "2,2,40,40",
-		"collision": 1,
+		"bullets": {
+			"1": {"id": 9,"collRect": "2,2,20","collision": 2,"particle": "test_pt","sound": "effect_skill_xkfld","speed": 3,"src": "i_jpql_01","strike": 99}
+		},
 		"cooldown": 3000,
 		"count": 5,
 		"desc": "太极3",
 		"icon": "skill-reduce_luolei",
-		"particle": "test_pt",
-		"range": 350,
-		"sound": "effect_skill_xkfld",
-		"speed": 3,
-		"src": "i_jpql_01",
-		"strike": 99
+		"range": 350
 	},
 	"10701": {
 		"id": 10701,
 		"name": "护盾",
 		"attackValue": "2-6",
-		"collRect": "2,2,100",
-		"collision": 2,
+		"bullets": {
+			"1": {"id": 10,"collRect": "2,2,100","collision": 2,"sound": "effect_action_transfer","speed": 3,"src": "qifu_qiu_zb","strike": 99}
+		},
 		"cooldown": 500,
 		"count": 3,
 		"desc": "护盾1",
 		"icon": "skill_xukongfalidun",
-		"range": 350,
-		"sound": "effect_action_transfer",
-		"speed": 3,
-		"src": "i_jpql_03",
-		"strike": 99
+		"range": 350
 	},
 	"10702": {
 		"id": 10702,
 		"name": "护盾",
 		"attackValue": "2-6",
-		"collRect": "2,2,120",
-		"collision": 2,
+		"bullets": {
+			"1": {"id": 10,"collRect": "2,2,100","collision": 2,"sound": "effect_action_transfer","speed": 3,"src": "qifu_qiu_zb","strike": 99}
+		},
 		"cooldown": 500,
 		"count": 3,
 		"desc": "护盾2",
 		"icon": "skill_xukongfalidun",
-		"range": 350,
-		"sound": "effect_action_transfer",
-		"speed": 3,
-		"src": "i_jpql_03",
-		"strike": 99
+		"range": 350
 	},
 	"10703": {
 		"id": 10703,
 		"name": "护盾",
 		"attackValue": "2-6",
-		"collRect": "2,2,140",
-		"collision": 2,
+		"bullets": {
+			"1": {"id": 10,"collRect": "2,2,100","collision": 2,"sound": "effect_action_transfer","speed": 3,"src": "qifu_qiu_zb","strike": 99}
+		},
 		"cooldown": 500,
 		"count": 4,
 		"desc": "护盾3",
 		"icon": "skill_xukongfalidun",
-		"range": 350,
-		"sound": "effect_action_transfer",
-		"speed": 3,
-		"src": "qifu_qiu_zb",
-		"strike": 99
+		"range": 350
 	},
 	"10704": {
 		"id": 10704,
 		"name": "护盾",
 		"attackValue": "2-6",
-		"collRect": "2,2,160",
-		"collision": 2,
+		"bullets": {
+			"1": {"id": 10,"collRect": "2,2,100","collision": 2,"sound": "effect_action_transfer","speed": 3,"src": "qifu_qiu_zb","strike": 99}
+		},
 		"cooldown": 500,
 		"count": 4,
 		"desc": "护盾4",
 		"icon": "skill_xukongfalidun",
-		"range": 350,
-		"sound": "effect_action_transfer",
-		"speed": 3,
-		"src": "qifu_qiu_zb",
-		"strike": 99
+		"range": 350
 	},
 	"10705": {
 		"id": 10705,
 		"name": "护盾",
 		"attackValue": "2-6",
-		"collRect": "2,2,160",
-		"collision": 2,
+		"bullets": {
+			"1": {"id": 10,"collRect": "2,2,100","collision": 2,"sound": "effect_action_transfer","speed": 3,"src": "qifu_qiu_zb","strike": 99}
+		},
 		"cooldown": 500,
 		"count": 4,
 		"desc": "护盾5",
 		"icon": "skill_xukongfalidun",
-		"range": 350,
-		"sound": "effect_action_transfer",
-		"speed": 3,
-		"src": "qifu_qiu_zb",
-		"strike": 99
+		"range": 350
 	},
 	"10706": {
 		"id": 10706,
 		"name": "护盾",
 		"attackValue": "2-6",
-		"collRect": "2,2,160",
-		"collision": 2,
+		"bullets": {
+			"1": {"id": 10,"collRect": "2,2,100","collision": 2,"sound": "effect_action_transfer","speed": 3,"src": "qifu_qiu_zb","strike": 99}
+		},
 		"cooldown": 500,
 		"count": 4,
 		"desc": "护盾6",
 		"icon": "skill_xukongfalidun",
-		"range": 350,
-		"sound": "effect_action_transfer",
-		"speed": 3,
-		"src": "qifu_qiu_zb",
-		"strike": 99
+		"range": 350
 	},
 	"10707": {
 		"id": 10707,
 		"name": "护盾",
 		"attackValue": "2-6",
-		"collRect": "2,2,160",
-		"collision": 2,
+		"bullets": {
+			"1": {"id": 10,"collRect": "2,2,100","collision": 2,"sound": "effect_action_transfer","speed": 3,"src": "qifu_qiu_zb","strike": 99}
+		},
 		"cooldown": 500,
 		"count": 4,
 		"desc": "护盾7",
 		"icon": "skill_xukongfalidun",
-		"range": 350,
-		"sound": "effect_action_transfer",
-		"speed": 3,
-		"src": "qifu_qiu_zb",
-		"strike": 99
+		"range": 350
 	},
 	"10708": {
 		"id": 10708,
 		"name": "护盾",
 		"attackValue": "2-6",
-		"collRect": "2,2,160",
-		"collision": 2,
+		"bullets": {
+			"1": {"id": 10,"collRect": "2,2,100","collision": 2,"sound": "effect_action_transfer","speed": 3,"src": "qifu_qiu_zb","strike": 99}
+		},
 		"cooldown": 500,
 		"count": 4,
 		"desc": "护盾8",
 		"icon": "skill_xukongfalidun",
-		"range": 350,
-		"sound": "effect_action_transfer",
-		"speed": 3,
-		"src": "qifu_qiu_zb",
-		"strike": 99
+		"range": 350
 	},
 	"10709": {
 		"id": 10709,
 		"name": "护盾",
 		"attackValue": "2-6",
-		"collRect": "2,2,160",
-		"collision": 2,
+		"bullets": {
+			"1": {"id": 10,"collRect": "2,2,100","collision": 2,"sound": "effect_action_transfer","speed": 3,"src": "qifu_qiu_zb","strike": 99}
+		},
 		"cooldown": 500,
 		"count": 4,
 		"desc": "护盾9",
 		"icon": "skill_xukongfalidun",
-		"range": 350,
-		"sound": "effect_action_transfer",
-		"speed": 3,
-		"src": "qifu_qiu_zb",
-		"strike": 99
+		"range": 350
 	},
 	"10801": {
 		"id": 10801,
 		"name": "放毒",
 		"attackValue": "2-6",
-		"collRect": "2,2,200,100",
-		"collision": 1,
+		"bullets": {
+			"1": {"id": 11,"collRect": "0","collision": 0,"sound": "effect_skill_fss","speed": 3,"src": "0"},
+			"3": {"id": 12,"collRect": "2,2,200,100","collision": 1,"delayDamage": 3000,"sound": "effect_skill_fss","speed": 3,"src": "skill_youlanaoyi_05","strike": 99,"sustaintime": 3000}
+		},
 		"cooldown": 4000,
 		"count": 4,
-		"delayDamage": 1200,
 		"delaytime": 100,
 		"desc": "放毒1",
 		"icon": "skill_shixueshu1",
-		"motionStreak": "skill_siwangmaichong1",
-		"over": "skill_youlanaoyi_05",
-		"range": 150,
-		"sceneSkill": "20101",
-		"sound": "effect_skill_fss",
-		"speed": 3,
-		"strike": 99,
-		"sustaintime": 3000
+		"range": 150
 	},
 	"10802": {
 		"id": 10802,
 		"name": "放毒",
 		"attackValue": "2-6",
-		"collRect": "2,2,200,100",
-		"collision": 1,
+		"bullets": {
+			"1": {"id": 11,"collRect": "0","collision": 0,"sound": "effect_skill_fss","speed": 3,"src": "0"},
+			"3": {"id": 12,"collRect": "2,2,200,100","collision": 1,"delayDamage": 3000,"sound": "effect_skill_fss","speed": 3,"src": "skill_youlanaoyi_05","strike": 99,"sustaintime": 3000}
+		},
 		"cooldown": 4000,
 		"count": 4,
-		"delayDamage": 1200,
 		"delaytime": 100,
 		"desc": "放毒2",
 		"icon": "skill_shixueshu1",
-		"motionStreak": "skill_siwangmaichong1",
-		"over": "skill_youlanaoyi_05",
-		"range": 150,
-		"sceneSkill": "20101",
-		"sound": "effect_skill_fss",
-		"speed": 3,
-		"strike": 99,
-		"sustaintime": 3000
+		"range": 150
 	},
 	"10803": {
 		"id": 10803,
 		"name": "放毒",
 		"attackValue": "2-6",
-		"collRect": "2,2,200,100",
-		"collision": 1,
+		"bullets": {
+			"1": {"id": 11,"collRect": "0","collision": 0,"sound": "effect_skill_fss","speed": 3,"src": "0"},
+			"3": {"id": 12,"collRect": "2,2,200,100","collision": 1,"delayDamage": 3000,"sound": "effect_skill_fss","speed": 3,"src": "skill_youlanaoyi_05","strike": 99,"sustaintime": 3000}
+		},
 		"cooldown": 4000,
 		"count": 4,
-		"delayDamage": 1000,
 		"delaytime": 100,
 		"desc": "放毒3",
 		"icon": "skill_shixueshu1",
-		"motionStreak": "skill_siwangmaichong1",
-		"over": "skill_youlanaoyi_05",
-		"range": 150,
-		"sceneSkill": "20101",
-		"sound": "effect_skill_fss",
-		"speed": 3,
-		"strike": 99,
-		"sustaintime": 3000
+		"range": 150
 	},
 	"10804": {
 		"id": 10804,
 		"name": "放毒",
 		"attackValue": "2-6",
-		"collRect": "2,2,200,100",
-		"collision": 1,
+		"bullets": {
+			"1": {"id": 11,"collRect": "0","collision": 0,"sound": "effect_skill_fss","speed": 3,"src": "0"},
+			"3": {"id": 12,"collRect": "2,2,200,100","collision": 1,"delayDamage": 3000,"sound": "effect_skill_fss","speed": 3,"src": "skill_youlanaoyi_05","strike": 99,"sustaintime": 3000}
+		},
 		"cooldown": 4000,
 		"count": 4,
-		"delayDamage": 1000,
 		"delaytime": 100,
 		"desc": "放毒4",
 		"icon": "skill_shixueshu1",
-		"motionStreak": "skill_siwangmaichong1",
-		"over": "skill_youlanaoyi_05",
-		"range": 150,
-		"sceneSkill": "20101",
-		"sound": "effect_skill_fss",
-		"speed": 3,
-		"strike": 99,
-		"sustaintime": 3000
+		"range": 150
 	},
 	"10805": {
 		"id": 10805,
 		"name": "放毒",
 		"attackValue": "2-6",
-		"collRect": "2,2,200,100",
-		"collision": 1,
+		"bullets": {
+			"1": {"id": 11,"collRect": "0","collision": 0,"sound": "effect_skill_fss","speed": 3,"src": "0"},
+			"3": {"id": 12,"collRect": "2,2,200,100","collision": 1,"delayDamage": 3000,"sound": "effect_skill_fss","speed": 3,"src": "skill_youlanaoyi_05","strike": 99,"sustaintime": 3000}
+		},
 		"cooldown": 4000,
 		"count": 4,
-		"delayDamage": 1000,
 		"delaytime": 100,
 		"desc": "放毒5",
 		"icon": "skill_shixueshu1",
-		"motionStreak": "skill_siwangmaichong1",
-		"over": "skill_youlanaoyi_05",
-		"range": 350,
-		"sceneSkill": "20101",
-		"sound": "effect_skill_fss",
-		"speed": 3,
-		"strike": 99,
-		"sustaintime": 3000
+		"range": 350
 	},
 	"10806": {
 		"id": 10806,
 		"name": "放毒",
 		"attackValue": "2-6",
-		"collRect": "2,2,200,100",
-		"collision": 1,
+		"bullets": {
+			"1": {"id": 11,"collRect": "0","collision": 0,"sound": "effect_skill_fss","speed": 3,"src": "0"},
+			"3": {"id": 12,"collRect": "2,2,200,100","collision": 1,"delayDamage": 3000,"sound": "effect_skill_fss","speed": 3,"src": "skill_youlanaoyi_05","strike": 99,"sustaintime": 3000}
+		},
 		"cooldown": 4000,
 		"count": 4,
-		"delayDamage": 1000,
 		"delaytime": 100,
 		"desc": "放毒6",
 		"icon": "skill_shixueshu1",
-		"motionStreak": "skill_siwangmaichong1",
-		"over": "skill_youlanaoyi_05",
-		"range": 350,
-		"sceneSkill": "20101",
-		"sound": "effect_skill_fss",
-		"speed": 3,
-		"strike": 99,
-		"sustaintime": 3000
+		"range": 350
 	},
 	"10807": {
 		"id": 10807,
 		"name": "放毒",
 		"attackValue": "2-6",
-		"collRect": "2,2,200,100",
-		"collision": 1,
+		"bullets": {
+			"1": {"id": 11,"collRect": "0","collision": 0,"sound": "effect_skill_fss","speed": 3,"src": "0"},
+			"3": {"id": 12,"collRect": "2,2,200,100","collision": 1,"delayDamage": 3000,"sound": "effect_skill_fss","speed": 3,"src": "skill_youlanaoyi_05","strike": 99,"sustaintime": 3000}
+		},
 		"cooldown": 4000,
 		"count": 4,
-		"delayDamage": 1000,
 		"delaytime": 100,
 		"desc": "放毒7",
 		"icon": "skill_shixueshu1",
-		"motionStreak": "skill_siwangmaichong1",
-		"over": "skill_youlanaoyi_05",
-		"range": 350,
-		"sceneSkill": "20101",
-		"sound": "effect_skill_fss",
-		"speed": 3,
-		"strike": 99,
-		"sustaintime": 3000
+		"range": 350
 	},
 	"10808": {
 		"id": 10808,
 		"name": "放毒",
 		"attackValue": "2-6",
-		"collRect": "2,2,200,100",
-		"collision": 1,
+		"bullets": {
+			"1": {"id": 11,"collRect": "0","collision": 0,"sound": "effect_skill_fss","speed": 3,"src": "0"},
+			"3": {"id": 12,"collRect": "2,2,200,100","collision": 1,"delayDamage": 3000,"sound": "effect_skill_fss","speed": 3,"src": "skill_youlanaoyi_05","strike": 99,"sustaintime": 3000}
+		},
 		"cooldown": 4000,
 		"count": 4,
-		"delayDamage": 1000,
 		"delaytime": 100,
 		"desc": "放毒8",
 		"icon": "skill_shixueshu1",
-		"motionStreak": "skill_siwangmaichong1",
-		"over": "skill_youlanaoyi_05",
-		"range": 350,
-		"sceneSkill": "20101",
-		"sound": "effect_skill_fss",
-		"speed": 3,
-		"strike": 99,
-		"sustaintime": 3000
+		"range": 350
 	},
 	"10809": {
 		"id": 10809,
 		"name": "放毒",
 		"attackValue": "2-6",
-		"collRect": "2,2,200,100",
-		"collision": 1,
+		"bullets": {
+			"1": {"id": 11,"collRect": "0","collision": 0,"sound": "effect_skill_fss","speed": 3,"src": "0"},
+			"3": {"id": 12,"collRect": "2,2,200,100","collision": 1,"delayDamage": 3000,"sound": "effect_skill_fss","speed": 3,"src": "skill_youlanaoyi_05","strike": 99,"sustaintime": 3000}
+		},
 		"cooldown": 4000,
 		"count": 4,
-		"delayDamage": 1000,
 		"delaytime": 100,
 		"desc": "放毒9",
 		"icon": "skill_shixueshu1",
-		"motionStreak": "skill_siwangmaichong1",
-		"over": "skill_youlanaoyi_05",
-		"range": 350,
-		"sceneSkill": "20101",
-		"sound": "effect_skill_fss",
-		"speed": 3,
-		"strike": 99,
-		"sustaintime": 3000
+		"range": 350
 	},
 	"10901": {
 		"id": 10901,
 		"name": "迷踪拳",
 		"attackValue": "5-15",
-		"collRect": "2,2,50,50",
-		"collision": 1,
+		"bullets": {
+			"1": {"id": 13,"collRect": "2,2,50,50","collision": 1,"particle": "test_pt","sound": "effect_skill_ccjf","speed": 20,"src": "fire_mizongquan","strike": 99}
+		},
 		"cooldown": 1500,
 		"count": 1,
 		"desc": "近战攻击，可快速击杀敌人",
 		"icon": "skill-reduce_cisha",
-		"particle": "test_pt",
-		"range": 300,
-		"sound": "effect_skill_ccjf",
-		"speed": 20,
-		"src": "fire_mizongquan",
-		"strike": 99
+		"range": 300
 	},
 	"10902": {
 		"id": 10902,
 		"name": "迷踪拳",
 		"attackValue": "5-15",
-		"collRect": "2,2,50,50",
-		"collision": 1,
+		"bullets": {
+			"1": {"id": 13,"collRect": "2,2,50,50","collision": 1,"particle": "test_pt","sound": "effect_skill_ccjf","speed": 20,"src": "fire_mizongquan","strike": 99}
+		},
 		"cooldown": 1400,
 		"count": 1,
 		"desc": "近战攻击，可快速击杀敌人,冷却时间近战攻击，可快速击杀敌人,减少0.1秒",
 		"icon": "skill-reduce_cisha",
-		"particle": "test_pt",
-		"range": 300,
-		"sound": "effect_skill_ccjf",
-		"speed": 20,
-		"src": "fire_mizongquan",
-		"strike": 99
+		"range": 300
 	},
 	"10903": {
 		"id": 10903,
 		"name": "迷踪拳",
 		"attackValue": "5-15",
-		"collRect": "2,2,50,50",
-		"collision": 1,
+		"bullets": {
+			"1": {"id": 13,"collRect": "2,2,50,50","collision": 1,"particle": "test_pt","sound": "effect_skill_ccjf","speed": 20,"src": "fire_mizongquan","strike": 99}
+		},
 		"cooldown": 1400,
 		"count": 1,
 		"desc": "近战攻击，可快速击杀敌人,范围剧增加20%",
 		"icon": "skill-reduce_cisha",
-		"particle": "test_pt",
-		"range": 300,
-		"sound": "effect_skill_ccjf",
-		"speed": 20,
-		"src": "fire_mizongquan",
-		"strike": 99
+		"range": 300
 	},
 	"10904": {
 		"id": 10904,
 		"name": "迷踪拳",
 		"attackValue": "5-15",
-		"collRect": "2,2,50,50",
-		"collision": 1,
+		"bullets": {
+			"1": {"id": 13,"collRect": "2,2,50,50","collision": 1,"particle": "test_pt","sound": "effect_skill_ccjf","speed": 20,"src": "fire_mizongquan","strike": 99}
+		},
 		"cooldown": 1400,
 		"count": 2,
 		"desc": "近战攻击，可快速击杀敌人,增加一个攻击",
 		"icon": "skill-reduce_cisha",
-		"over": "100",
-		"particle": "test_pt",
-		"range": 300,
-		"sound": "effect_skill_ccjf",
-		"speed": 20,
-		"src": "fire_mizongquan",
-		"strike": 99
+		"range": 300
 	},
 	"10905": {
 		"id": 10905,
 		"name": "迷踪拳",
 		"attackValue": "5-15",
-		"collRect": "2,2,50,50",
-		"collision": 1,
+		"bullets": {
+			"1": {"id": 13,"collRect": "2,2,50,50","collision": 1,"particle": "test_pt","sound": "effect_skill_ccjf","speed": 20,"src": "fire_mizongquan","strike": 99}
+		},
 		"cooldown": 1300,
 		"count": 2,
 		"desc": "近战攻击，可快速击杀敌人,冷却时间减少0.1秒",
 		"icon": "skill-reduce_cisha",
-		"over": "100",
-		"particle": "test_pt",
-		"range": 300,
-		"sound": "effect_skill_ccjf",
-		"speed": 20,
-		"src": "fire_mizongquan",
-		"strike": 99
+		"range": 300
 	},
 	"10906": {
 		"id": 10906,
 		"name": "迷踪拳",
 		"attackValue": "5-15",
-		"collRect": "2,2,50,50",
-		"collision": 1,
+		"bullets": {
+			"1": {"id": 13,"collRect": "2,2,50,50","collision": 1,"particle": "test_pt","sound": "effect_skill_ccjf","speed": 20,"src": "fire_mizongquan","strike": 99}
+		},
 		"cooldown": 1300,
 		"count": 2,
 		"desc": "近战攻击，可快速击杀敌人,范围剧增加20%",
 		"icon": "skill-reduce_cisha",
-		"over": "100",
-		"particle": "test_pt",
-		"range": 300,
-		"sound": "effect_skill_ccjf",
-		"speed": 20,
-		"src": "fire_mizongquan",
-		"strike": 99
+		"range": 300
 	},
 	"10907": {
 		"id": 10907,
 		"name": "迷踪拳",
 		"attackValue": "5-15",
-		"collRect": "2,2,50,50",
-		"collision": 1,
+		"bullets": {
+			"1": {"id": 13,"collRect": "2,2,50,50","collision": 1,"particle": "test_pt","sound": "effect_skill_ccjf","speed": 20,"src": "fire_mizongquan","strike": 99}
+		},
 		"cooldown": 1200,
 		"count": 2,
 		"desc": "近战攻击，可快速击杀敌人,冷却时间减少0.1秒",
 		"icon": "skill-reduce_cisha",
-		"over": "100",
-		"particle": "test_pt",
-		"range": 300,
-		"sound": "effect_skill_ccjf",
-		"speed": 20,
-		"src": "fire_mizongquan",
-		"strike": 99
+		"range": 300
 	},
 	"10908": {
 		"id": 10908,
 		"name": "迷踪拳",
 		"attackValue": "5-15",
-		"collRect": "2,2,50,50",
-		"collision": 1,
+		"bullets": {
+			"1": {"id": 13,"collRect": "2,2,50,50","collision": 1,"particle": "test_pt","sound": "effect_skill_ccjf","speed": 20,"src": "fire_mizongquan","strike": 99}
+		},
 		"cooldown": 1100,
 		"count": 2,
 		"desc": "近战攻击，可快速击杀敌人,冷却时间减少0.1秒",
 		"icon": "skill-reduce_cisha",
-		"over": "100",
-		"particle": "test_pt",
-		"range": 300,
-		"sound": "effect_skill_ccjf",
-		"speed": 20,
-		"src": "fire_mizongquan",
-		"strike": 99
+		"range": 300
 	},
 	"11001": {
 		"id": 11001,
 		"name": "射箭",
 		"attackValue": "5-15",
-		"collRect": "2,2,50,20",
-		"collision": 1,
+		"bullets": {
+			"1": {"id": 14,"collRect": "2,2,50,20","collision": 1,"sound": "effect_skill_ccjf","speed": 72,"src": "alleria_arrow","strike": 1}
+		},
 		"cooldown": 1000,
 		"count": 1,
 		"desc": "射箭",
-		"icon": "special_icons_0020",
-		"sound": "effect_skill_ccjf",
-		"speed": 72,
-		"src": "alleria_arrow",
-		"strike": 1
+		"icon": "special_icons_0020"
 	},
 	"11002": {
 		"id": 11002,
 		"name": "射箭",
 		"attackValue": "5-15",
-		"collRect": "2,2,50,20",
-		"collision": 1,
+		"bullets": {
+			"1": {"id": 14,"collRect": "2,2,50,20","collision": 1,"sound": "effect_skill_ccjf","speed": 72,"src": "alleria_arrow","strike": 1}
+		},
 		"cooldown": 1000,
 		"count": 2,
 		"desc": "射箭",
-		"icon": "special_icons_0020",
-		"sound": "effect_skill_ccjf",
-		"speed": 72,
-		"src": "alleria_arrow",
-		"strike": 1
+		"icon": "special_icons_0020"
 	},
 	"11003": {
 		"id": 11003,
 		"name": "射箭",
 		"attackValue": "5-15",
-		"collRect": "2,2,50,20",
-		"collision": 1,
+		"bullets": {
+			"1": {"id": 15,"collRect": "2,2,50,20","collision": 1,"sound": "effect_skill_ccjf","speed": 72,"src": "darkarmy_archer_arrow_lvl4","strike": 1}
+		},
 		"cooldown": 900,
 		"count": 2,
 		"desc": "射箭",
-		"icon": "special_icons_0020",
-		"sound": "effect_skill_ccjf",
-		"speed": 72,
-		"src": "darkarmy_archer_arrow_lvl4",
-		"strike": 1
+		"icon": "special_icons_0020"
 	},
 	"11004": {
 		"id": 11004,
 		"name": "射箭",
 		"attackValue": "10-20",
-		"collRect": "2,2,50,20",
-		"collision": 1,
+		"bullets": {
+			"1": {"id": 15,"collRect": "2,2,50,20","collision": 1,"sound": "effect_skill_ccjf","speed": 72,"src": "darkarmy_archer_arrow_lvl4","strike": 1}
+		},
 		"cooldown": 900,
 		"count": 3,
 		"desc": "射箭",
-		"icon": "special_icons_0020",
-		"sound": "effect_skill_ccjf",
-		"speed": 72,
-		"src": "darkarmy_archer_arrow_lvl4",
-		"strike": 1
+		"icon": "special_icons_0020"
 	},
 	"11005": {
 		"id": 11005,
 		"name": "射箭",
 		"attackValue": "10-20",
-		"collRect": "2,2,50,20",
-		"collision": 1,
+		"bullets": {
+			"1": {"id": 16,"collRect": "2,2,50,20","collision": 1,"sound": "effect_skill_ccjf","speed": 72,"src": "stage13_elf_arrow","strike": 1}
+		},
 		"cooldown": 800,
 		"count": 3,
 		"desc": "射箭",
-		"icon": "special_icons_0020",
-		"sound": "effect_skill_ccjf",
-		"speed": 72,
-		"src": "stage13_elf_arrow",
-		"strike": 1
+		"icon": "special_icons_0020"
 	},
 	"11006": {
 		"id": 11006,
 		"name": "射箭",
 		"attackValue": "10-20",
-		"collRect": "2,2,50,20",
-		"collision": 1,
+		"bullets": {
+			"1": {"id": 16,"collRect": "2,2,50,20","collision": 1,"sound": "effect_skill_ccjf","speed": 72,"src": "stage13_elf_arrow","strike": 1}
+		},
 		"cooldown": 800,
 		"count": 4,
 		"delaytime": 20,
 		"desc": "射箭",
-		"icon": "special_icons_0020",
-		"sound": "effect_skill_ccjf",
-		"speed": 72,
-		"src": "stage13_elf_arrow",
-		"strike": 1
+		"icon": "special_icons_0020"
 	},
 	"11007": {
 		"id": 11007,
 		"name": "射箭",
 		"attackValue": "20-30",
-		"collRect": "2,2,50,20",
-		"collision": 1,
+		"bullets": {
+			"1": {"id": 17,"collRect": "2,2,50,20","collision": 1,"sound": "effect_skill_ccjf","speed": 72,"src": "alleria_arrow_multishoot","strike": 1}
+		},
 		"cooldown": 700,
 		"count": 4,
 		"delaytime": 20,
 		"desc": "射箭",
-		"icon": "special_icons_0020",
-		"sound": "effect_skill_ccjf",
-		"speed": 72,
-		"src": "alleria_arrow_multishoot",
-		"strike": 1
+		"icon": "special_icons_0020"
 	},
 	"11008": {
 		"id": 11008,
 		"name": "射箭",
 		"attackValue": "20-30",
-		"collRect": "2,2,50,20",
-		"collision": 1,
+		"bullets": {
+			"1": {"id": 17,"collRect": "2,2,50,20","collision": 1,"sound": "effect_skill_ccjf","speed": 72,"src": "alleria_arrow_multishoot","strike": 1}
+		},
 		"cooldown": 700,
 		"count": 5,
 		"delaytime": 20,
 		"desc": "射箭",
-		"icon": "special_icons_0020",
-		"sound": "effect_skill_ccjf",
-		"speed": 72,
-		"src": "alleria_arrow_multishoot",
-		"strike": 1
+		"icon": "special_icons_0020"
 	},
 	"11009": {
 		"id": 11009,
 		"name": "射箭",
-		"animation": 100,
 		"attackValue": "20-30",
-		"collRect": "2,2,50,20",
-		"collision": 1,
+		"bullets": {
+			"1": {"id": 18,"collRect": "2,2,50,20","collision": 1,"sound": "effect_skill_ccjf","speed": 72,"src": "shooter_lvl4_proyectile","strike": 1},
+			"3": {"id": 19,"animation": 1,"collRect": "0","collision": 0,"sound": "effect_skill_ccjf","speed": 72,"src": "skill_archery_boom"}
+		},
 		"cooldown": 600,
 		"count": 5,
 		"delaytime": 20,
 		"desc": "射箭",
-		"icon": "special_icons_0020",
-		"over": "skill_archery_boom",
-		"sound": "effect_skill_ccjf",
-		"speed": 72,
-		"src": "shooter_lvl4_proyectile",
-		"strike": 1
+		"icon": "special_icons_0020"
 	},
 	"11101": {
 		"id": 11101,
 		"name": "烈火马",
-		"animation": 1,
 		"attackValue": "10-20",
-		"collRect": "2,2,200,100",
-		"collision": 1,
+		"bullets": {
+			"1": {"id": 20,"animation": 1,"collRect": "2,2,200,100","collision": 1,"sound": "effect_skill_lls","speed": 100,"src": "skill_firehorse","strike": 99}
+		},
 		"cooldown": 2000,
 		"count": 1,
 		"desc": "遭雷劈真厉害1",
-		"icon": "power_reinforcement_portrait_0018",
-		"sound": "effect_skill_lls",
-		"speed": 100,
-		"src": "skill_firehorse",
-		"strike": 99
+		"icon": "power_reinforcement_portrait_0018"
 	},
 	"11102": {
 		"id": 11102,
 		"name": "烈火马",
-		"animation": 1,
 		"attackValue": "10-20",
-		"collRect": "2,2,200,100",
-		"collision": 1,
+		"bullets": {
+			"1": {"id": 20,"animation": 1,"collRect": "2,2,200,100","collision": 1,"sound": "effect_skill_lls","speed": 100,"src": "skill_firehorse","strike": 99}
+		},
 		"cooldown": 2000,
 		"count": 2,
 		"desc": "遭雷劈真厉害1",
-		"icon": "power_reinforcement_portrait_0018",
-		"sound": "effect_skill_lls",
-		"speed": 100,
-		"src": "skill_firehorse",
-		"strike": 99
+		"icon": "power_reinforcement_portrait_0018"
 	},
 	"11103": {
 		"id": 11103,
 		"name": "烈火马",
-		"animation": 1,
 		"attackValue": "10-20",
-		"collRect": "2,2,200,100",
-		"collision": 1,
+		"bullets": {
+			"1": {"id": 20,"animation": 1,"collRect": "2,2,200,100","collision": 1,"sound": "effect_skill_lls","speed": 100,"src": "skill_firehorse","strike": 99}
+		},
 		"cooldown": 2000,
 		"count": 3,
 		"desc": "遭雷劈真厉害1",
-		"icon": "power_reinforcement_portrait_0018",
-		"sound": "effect_skill_lls",
-		"speed": 100,
-		"src": "skill_firehorse",
-		"strike": 99
+		"icon": "power_reinforcement_portrait_0018"
 	},
 	"11104": {
 		"id": 11104,
 		"name": "烈火马",
-		"animation": 1,
 		"attackValue": "10-20",
-		"collRect": "2,2,200,100",
-		"collision": 1,
+		"bullets": {
+			"1": {"id": 20,"animation": 1,"collRect": "2,2,200,100","collision": 1,"sound": "effect_skill_lls","speed": 100,"src": "skill_firehorse","strike": 99}
+		},
 		"cooldown": 2000,
 		"count": 4,
 		"desc": "遭雷劈真厉害1",
-		"icon": "power_reinforcement_portrait_0018",
-		"sound": "effect_skill_lls",
-		"speed": 100,
-		"src": "skill_firehorse",
-		"strike": 99
+		"icon": "power_reinforcement_portrait_0018"
 	},
 	"11105": {
 		"id": 11105,
 		"name": "烈火马",
-		"animation": 1,
 		"attackValue": "10-20",
-		"collRect": "2,2,200,100",
-		"collision": 1,
+		"bullets": {
+			"1": {"id": 20,"animation": 1,"collRect": "2,2,200,100","collision": 1,"sound": "effect_skill_lls","speed": 100,"src": "skill_firehorse","strike": 99}
+		},
 		"cooldown": 2000,
 		"count": 5,
 		"desc": "遭雷劈真厉害1",
-		"icon": "power_reinforcement_portrait_0018",
-		"sound": "effect_skill_lls",
-		"speed": 100,
-		"src": "skill_firehorse",
-		"strike": 99
+		"icon": "power_reinforcement_portrait_0018"
 	},
 	"11106": {
 		"id": 11106,
 		"name": "烈火马",
-		"animation": 1,
 		"attackValue": "10-20",
-		"collRect": "2,2,200,100",
-		"collision": 1,
+		"bullets": {
+			"1": {"id": 20,"animation": 1,"collRect": "2,2,200,100","collision": 1,"sound": "effect_skill_lls","speed": 100,"src": "skill_firehorse","strike": 99}
+		},
 		"cooldown": 2000,
 		"count": 6,
 		"desc": "遭雷劈真厉害1",
-		"icon": "power_reinforcement_portrait_0018",
-		"sound": "effect_skill_lls",
-		"speed": 100,
-		"src": "skill_firehorse",
-		"strike": 99
+		"icon": "power_reinforcement_portrait_0018"
 	},
 	"11107": {
 		"id": 11107,
 		"name": "烈火马",
-		"animation": 1,
 		"attackValue": "10-20",
-		"collRect": "2,2,200,100",
-		"collision": 1,
+		"bullets": {
+			"1": {"id": 20,"animation": 1,"collRect": "2,2,200,100","collision": 1,"sound": "effect_skill_lls","speed": 100,"src": "skill_firehorse","strike": 99}
+		},
 		"cooldown": 2000,
 		"count": 7,
 		"desc": "遭雷劈真厉害1",
-		"icon": "power_reinforcement_portrait_0018",
-		"sound": "effect_skill_lls",
-		"speed": 100,
-		"src": "skill_firehorse",
-		"strike": 99
+		"icon": "power_reinforcement_portrait_0018"
 	},
 	"11108": {
 		"id": 11108,
 		"name": "烈火马",
-		"animation": 1,
 		"attackValue": "10-20",
-		"collRect": "2,2,200,100",
-		"collision": 1,
+		"bullets": {
+			"1": {"id": 20,"animation": 1,"collRect": "2,2,200,100","collision": 1,"sound": "effect_skill_lls","speed": 100,"src": "skill_firehorse","strike": 99}
+		},
 		"cooldown": 2000,
 		"count": 8,
 		"desc": "遭雷劈真厉害1",
-		"icon": "power_reinforcement_portrait_0018",
-		"sound": "effect_skill_lls",
-		"speed": 100,
-		"src": "skill_firehorse",
-		"strike": 99
+		"icon": "power_reinforcement_portrait_0018"
 	},
 	"11109": {
 		"id": 11109,
 		"name": "烈火马",
-		"animation": 1,
 		"attackValue": "10-20",
-		"collRect": "2,2,200,100",
-		"collision": 1,
+		"bullets": {
+			"1": {"id": 20,"animation": 1,"collRect": "2,2,200,100","collision": 1,"sound": "effect_skill_lls","speed": 100,"src": "skill_firehorse","strike": 99}
+		},
 		"cooldown": 2000,
 		"count": 9,
 		"desc": "遭雷劈真厉害1",
-		"icon": "power_reinforcement_portrait_0018",
-		"sound": "effect_skill_lls",
-		"speed": 100,
-		"src": "skill_firehorse",
-		"strike": 99
+		"icon": "power_reinforcement_portrait_0018"
 	}
 }

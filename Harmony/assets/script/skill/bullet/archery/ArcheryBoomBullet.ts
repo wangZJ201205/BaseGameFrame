@@ -34,8 +34,24 @@ export default class ArcheryBoomBullet extends BulletParent {
             let curClip = anim.getClips()[0];
             anim.resume(curClip.name);
             anim.play(curClip.name);
+            // anim.on('finished',  this.onFinished,    this);
         }
     }
+
+    // stop()
+    // {
+    //     super.stop();
+    //     if(this.getNode().children[0])
+    //     {
+    //         var anim = this.getNode().children[0].getComponent(cc.Animation);
+    //         anim.off('finished',  this.onFinished,    this);
+    //     }
+    // }
+
+    // onFinished()
+    // {
+    //     this.stop();
+    // }
 
     update (dt) 
     {
@@ -46,5 +62,5 @@ export default class ArcheryBoomBullet extends BulletParent {
             this.stop();
         }
     }
-    
+
 }

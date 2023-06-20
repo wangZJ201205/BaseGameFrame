@@ -29,7 +29,7 @@ export default class MiZongQuanBullet extends BulletParent {
 
     update (dt) 
     {
-        var skillInfo = this._skillInfo;
+        var bulletInfo = this._bulletInfo;
 
         var currentPosition = this.getNode().position;
         
@@ -44,7 +44,7 @@ export default class MiZongQuanBullet extends BulletParent {
             this.setProp(ClientDef.BULLET_PROP_STATE,ClientDef.BULLET_STATE_FREE);
         } else {
           // 沿着固定方向移动
-          const velocity = direction.mul(skillInfo.speed * dt);
+          const velocity = direction.mul(bulletInfo.speed * dt);
           currentPosition = currentPosition.add(velocity);
           this.getNode().position = currentPosition.add(velocity);
         }

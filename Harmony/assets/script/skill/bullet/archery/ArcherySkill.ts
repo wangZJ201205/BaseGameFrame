@@ -44,6 +44,8 @@ export default class ArcherySkill extends SkillParent {
             this._offsetY = -20 * (bulletCount) / 2;
             this._curBulletIndex = 0;
         }
+
+        console.info(">>>>>>>cur bullets lenght : " + this._bullets.length);
     }
 
 }

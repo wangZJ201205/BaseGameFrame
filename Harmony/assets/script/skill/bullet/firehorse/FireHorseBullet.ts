@@ -31,13 +31,13 @@ export default class FireHorseBullet extends BulletParent {
         this.setProp(ClientDef.BULLET_PROP_DIRECTION , direction);
         
         super.restart();
-        var skillInfo = this._skillInfo;
+        var bulletInfo = this._bulletInfo;
 
         const info: MoveNodeConfig = {
             moveNode: this.getNode(),
             startPos: this.getNode().position,
             targetPos: null,
-            speed: skillInfo.speed,
+            speed: bulletInfo.speed,
             completeCallBack :null,
             target :this,
             direction:direction,

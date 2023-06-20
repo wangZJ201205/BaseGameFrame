@@ -23,8 +23,10 @@ export default class BulletParent {
     protected _prop: { [key: string]: any } = {};
 
     protected _skillInfo: any = null;
+    protected _bulletInfo: any = null;
     protected _staticId : number;
     protected _effect:EffectParent;
+    protected _phase : number;
 
     onLoad (host) 
     {
@@ -39,7 +41,9 @@ export default class BulletParent {
 
     start () 
     {
+        this._phase = this.getProp(ClientDef.BULLET_PROP_PHASE);
         this._skillInfo =  this.getSkillInfo();
+        this._bulletInfo = this._skillInfo["bullets"][this._phase];
         var damageValue = this._skillInfo["attackValue"].split("-");
         this.setProp(ClientDef.BULLET_PROP_ATK_MIN, Number(damageValue[0]));
         this.setProp(ClientDef.BULLET_PROP_ATK_MAX, Number(damageValue[1]));
@@ -51,8 +55,8 @@ export default class BulletParent {
 
     restart()
     {
-        this.setProp(ClientDef.BULLET_PROP_STRIKE,this._skillInfo["strike"]);
-        var sound = this._skillInfo["sound"];
+        this.setProp(ClientDef.BULLET_PROP_STRIKE,this._bulletInfo["strike"]);
+        var sound = this._bulletInfo["sound"];
         AudioMgr.Instance.playEffect(sound,null);
     }
 
@@ -148,47 +152,24 @@ export default class BulletParent {
     {
         var skillInfo = this._skillInfo;
 
-        const phaseName = [];
-        phaseName[ClientDef.BULLET_PHASE_1] = "src";
-        phaseName[ClientDef.BULLET_PHASE_2] = "mid";
-        phaseName[ClientDef.BULLET_PHASE_3] = "over";
-        var curPhase = this.getProp(ClientDef.BULLET_PROP_PHASE);
-        var pname = phaseName[curPhase];
-        if(!this._skillInfo[ pname ])
+        if(!this._bulletInfo.src)
         {
             this.setProp(ClientDef.BULLET_PROP_STATE,ClientDef.BULLET_STATE_RUN);
             return;
         }
 
-        var animationState : number = 0;
-        if(skillInfo.animation) 
-        {
-            switch(curPhase)
-            {
-                case ClientDef.BULLET_PHASE_1: // 获取个位上的数值
-                    animationState = skillInfo.animation % 10; 
-                    break;
-                case ClientDef.BULLET_PHASE_2: // 获取十位上的数值
-                    animationState = Math.floor(skillInfo.animation / 10) % 10; 
-                    break;
-                case ClientDef.BULLET_PHASE_3: //确定百位上是否有值
-                    animationState = Math.floor(skillInfo.animation / 100) % 10; 
-                    break;
-            }
-        }
-
         //子弹就是以一张图片的形式出现
-        if( animationState == 0)
+        if(!this._bulletInfo.animation)
         {
-            this.loadSprite(pname);
+            this.loadSprite();
         }
         else
         {
-            this.loadPrefab(pname);
+            this.loadPrefab();
         }
     }
 
-    loadSprite(pname)
+    loadSprite()
     {
         LoadMgr.Instance.LoadAssetWithType("animation/skill/skill_res" ,cc.SpriteAtlas,(sp)=>{
             //检查人物状态
@@ -197,7 +178,7 @@ export default class BulletParent {
                 return;
             }
             var sprite = this.getNode().addComponent(cc.Sprite);
-            let spriteFrame = sp.getSpriteFrame(this._skillInfo[ pname ]);
+            let spriteFrame = sp.getSpriteFrame(this._bulletInfo.src);
             sprite.spriteFrame = spriteFrame;
             sprite.node.anchorX = 0.5;
             sprite.node.anchorY = 0.5;
@@ -205,9 +186,9 @@ export default class BulletParent {
         })
     }
 
-    loadPrefab(pname)
+    loadPrefab()
     {
-        var loadPath = 'animation/skill/' +  this._skillInfo[pname] +"/"+ this._skillInfo[pname] ;
+        var loadPath = 'animation/skill/' +  this._bulletInfo.src +"/"+ this._bulletInfo.src ;
         var self = this
         LoadMgr.Instance.LoadAssetWithType(loadPath,cc.Prefab,(asset)=>{
             if(this._host.getHost().getClientProp(ClientDef.ENTITY_PROP_ACTIVE_STATE) != ClientDef.ENTITY_ACTIVE_STATE_RUN)
@@ -222,11 +203,11 @@ export default class BulletParent {
 
     addCollision()
     {
-        if(this._skillInfo.collision == 1)  //是否产生碰撞
+        if(this._bulletInfo.collision == 1)  //是否产生碰撞
         { 
             this.addCollisionRectComponent();
         }
-        else if(this._skillInfo.collision == 2) //是否产生碰撞 圆形
+        else if(this._bulletInfo.collision == 2) //是否产生碰撞 圆形
         {
             this.addCollisionCircleComponent();
         }
@@ -235,7 +216,7 @@ export default class BulletParent {
     //添加碰撞组件
     addCollisionRectComponent()
     {
-        var collrect: string = this._skillInfo.collRect;
+        var collrect: string = this._bulletInfo.collRect;
         var cr : string[] = collrect.split(",");
 
         //添加碰撞外框
@@ -255,7 +236,7 @@ export default class BulletParent {
     //添加圆形碰撞组件
     addCollisionCircleComponent()
     {
-        var collrect: string = this._skillInfo.collRect;
+        var collrect: string = this._bulletInfo.collRect;
         var cr : string[] = collrect.split(",");
 
         //添加碰撞外框
@@ -301,13 +282,13 @@ export default class BulletParent {
 
     addEffect()
     {
-        if(this._skillInfo.particle)
+        if(this._bulletInfo.particle)
         {
-            this._effect = ParticleMgr.Instance.addParticle(this._skillInfo.particle);
+            this._effect = ParticleMgr.Instance.addParticle(this._bulletInfo.particle);
         }
-        else if(this._skillInfo.motionStreak)
+        else if(this._bulletInfo.motionStreak)
         {
-            this._effect = ParticleMgr.Instance.addMotionStreak(this._skillInfo.motionStreak);
+            this._effect = ParticleMgr.Instance.addMotionStreak(this._bulletInfo.motionStreak);
         } 
     }
 

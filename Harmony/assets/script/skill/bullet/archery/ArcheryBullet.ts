@@ -37,13 +37,13 @@ export default class ArcheryBullet extends BulletParent {
         this.setProp(ClientDef.BULLET_PROP_DIRECTION , direction);
         
         super.restart();
-        var skillInfo = this._skillInfo;
+        var bulletInfo = this._bulletInfo;
 
         const info: MoveNodeConfig = {
             moveNode: this.getNode(),
             startPos: this.getNode().position,
             targetPos: null,
-            speed: skillInfo.speed,
+            speed: bulletInfo.speed,
             completeCallBack :null,
             target :this,
             direction:direction,
@@ -76,7 +76,7 @@ export default class ArcheryBullet extends BulletParent {
             return;
         }
         super.collisionEnter(other, self);
-        if( this._skillInfo.animation && this._skillInfo.animation == 100)
+        if( this._skillInfo.id == 11009 )
         {
             var bullet = this._host.spawnBullet(ClientDef.BULLET_PHASE_3);
             bullet.getNode().active = true;

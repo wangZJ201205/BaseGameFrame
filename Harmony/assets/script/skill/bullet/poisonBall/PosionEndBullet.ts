@@ -34,7 +34,7 @@ export default class PosionEndBullet extends BulletParent {
         super.update(dt);
         var delay = cc.director.getTotalTime() - this._delta;
         
-        if(delay > this._skillInfo["sustaintime"])
+        if(delay > this._bulletInfo["sustaintime"])
         {
             this.stop();
         }
@@ -52,7 +52,7 @@ export default class PosionEndBullet extends BulletParent {
     collisionStay(other, self)
     {
         var delay = cc.director.getTotalTime() - other.node.getClientProp(ClientDef.ENTITY_PROP_POSION_TIME);
-        if(delay >= this._skillInfo["delayDamage"])
+        if(delay >= this._bulletInfo["delayDamage"])
         {
             var damageValue = this.getDamageValue();
             other.node.getEntityComponent(ClientDef.ENTITY_COMP_BLOOM).addDamage( damageValue );

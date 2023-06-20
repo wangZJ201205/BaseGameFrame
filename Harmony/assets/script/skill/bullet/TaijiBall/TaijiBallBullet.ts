@@ -28,7 +28,7 @@ export default class TaijiBallBullet extends BulletParent {
         this.setProp(ClientDef.BULLET_PROP_CHANG_DIR, 1); //变化的方向  
         this.setProp(ClientDef.BULLET_PROP_CHANG_RANGE, 0);
         this._maxRadus = this._skillInfo["range"] ; // 子弹的半径
-        this._speed = this._skillInfo["speed"] ; // 子弹的速度
+        this._speed = this._bulletInfo["speed"] ; // 子弹的速度
         this.getNode().setPosition(0,0,0);
         super.restart();
     }
