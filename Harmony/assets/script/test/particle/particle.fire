@@ -311,8 +311,8 @@
       "__type__": "TypedArray",
       "ctor": "Float64Array",
       "array": [
-        651.138,
-        352.517,
+        556.138,
+        457.517,
         0,
         0,
         0,
@@ -351,26 +351,28 @@
     ],
     "_srcBlendFactor": 770,
     "_dstBlendFactor": 1,
-    "_custom": true,
+    "_custom": {
+      "custom": false
+    },
     "_file": {
-      "__uuid__": "b2687ac4-099e-403c-a192-ff477686f4f5"
+      "__uuid__": "2e6ba930-d3dd-4a60-be95-3cf62788e00b"
     },
     "_spriteFrame": {
-      "__uuid__": "472df5d3-35e7-4184-9e6c-7f41bee65ee3"
+      "__uuid__": "5a88f5d5-2e14-47f1-87ca-c85f106ddeae"
     },
     "_texture": null,
     "_stopped": true,
     "playOnLoad": true,
     "autoRemoveOnFinish": false,
-    "totalParticles": 200,
+    "totalParticles": 30,
     "duration": -1,
-    "emissionRate": 999.999985098839,
+    "emissionRate": 30,
     "life": 0.20000000298023224,
-    "lifeVar": 0.5,
+    "lifeVar": 0.3,
     "_startColor": {
       "__type__": "cc.Color",
-      "r": 202,
-      "g": 200,
+      "r": 100,
+      "g": 202,
       "b": 86,
       "a": 163
     },
@@ -383,9 +385,9 @@
     },
     "_endColor": {
       "__type__": "cc.Color",
-      "r": 173,
-      "g": 161,
-      "b": 19,
+      "r": 165,
+      "g": 255,
+      "b": 161,
       "a": 214
     },
     "_endColorVar": {
@@ -395,16 +397,16 @@
       "b": 249,
       "a": 188
     },
-    "angle": 360,
-    "angleVar": 360,
+    "angle": 0,
+    "angleVar": 0,
     "startSize": 3.369999885559082,
     "startSizeVar": 50,
     "endSize": 30.31999969482422,
     "endSizeVar": 0,
-    "startSpin": -47.369998931884766,
+    "startSpin": 0,
     "startSpinVar": 0,
-    "endSpin": -47.369998931884766,
-    "endSpinVar": -142.11000061035156,
+    "endSpin": 0,
+    "endSpinVar": 0,
     "sourcePos": {
       "__type__": "cc.Vec2",
       "x": 0,
@@ -417,7 +419,7 @@
     },
     "_positionType": 1,
     "positionType": 1,
-    "emitterMode": 0,
+    "emitterMode": 1,
     "gravity": {
       "__type__": "cc.Vec2",
       "x": 0.25,

@@ -13,6 +13,7 @@ import FireHorseSkill from "./bullet/firehorse/FireHorseSkill";
 import IceBallSkill from "./bullet/iceBall/IceBallSkill";
 import MiZongQuanSkill from "./bullet/mizongquan/MiZongQuanSkill";
 import PosionBallSkill from "./bullet/poisonBall/PosionBallSkill";
+import PosionTimboSkill from "./bullet/posionTimbo/PosionTimboSkill";
 import RevolutionBallSkill from "./bullet/revolutionBall/RevolutionBallSkill";
 import ShieldBallSkill from "./bullet/shieldBall/ShieldBallSkill";
 import SwordBallSkill from "./bullet/swordBall/SwordBallSkill";
@@ -44,6 +45,7 @@ export default class Skill {
         this._typeClass[ClientDef.SKILL_TYPE_MIZONGQUAN] = MiZongQuanSkill;         //迷踪拳
         this._typeClass[ClientDef.SKILL_TYPE_ARCHERY] = ArcherySkill;               //射箭
         this._typeClass[ClientDef.SKILL_TYPE_FIREHORSE] = FireHorseSkill;           //烈火马
+        this._typeClass[ClientDef.SKILL_TYPE_POSION_TIMBO] = PosionTimboSkill;      //毒树藤
     }
 
     start () 

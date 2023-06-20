@@ -171,7 +171,8 @@ export default class BulletParent {
 
     loadSprite()
     {
-        LoadMgr.Instance.LoadAssetWithType("animation/skill/skill_res" ,cc.SpriteAtlas,(sp)=>{
+        let atlas = this._bulletInfo.atlas;
+        LoadMgr.Instance.LoadAssetWithType("animation/skill/"+atlas, cc.SpriteAtlas,(sp)=>{
             //检查人物状态
             if(this._host.getHost().getClientProp(ClientDef.ENTITY_PROP_ACTIVE_STATE) != ClientDef.ENTITY_ACTIVE_STATE_RUN)
             {

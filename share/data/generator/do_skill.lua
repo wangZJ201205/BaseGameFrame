@@ -35,6 +35,7 @@ function handle_skill_effect(o)
 	d.motionStreak = o.j ~= "0" and tonumber(o.j) or nil
 	d.strike = o.k ~= "0" and tonumber(o.k) or nil
 	d.sound = o.l
+	d.atlas = o.m
 
 	gdSkillEffect[d.id] = d
 end

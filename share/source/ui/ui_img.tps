@@ -215,6 +215,7 @@
             <filename>hero_list_frame.png</filename>
             <filename>main_menues_bg_closeButton.png</filename>
             <filename>main_menues_bg_closeButton_over.png</filename>
+            <filename>towerselect_powers_0031.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>
