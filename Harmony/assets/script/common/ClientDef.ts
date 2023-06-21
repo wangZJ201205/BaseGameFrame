@@ -129,8 +129,19 @@ export default class ClientDef{
     public static readonly COLLISION_GROUP_MONSTER : string = 'monster'; //怪物
     public static readonly COLLISION_GROUP_BULLET : string = 'bullet'; //子弹
 
+    //基因规则 -- 相同类型相同组的基因叠加规则
+    public static readonly GENE_RULE_NULL : number = 1; //没有规则
+    public static readonly GENE_RULE_REPLACE : number = 2; //替换
+    public static readonly GENE_RULE_CANNOT_REPLACE : number = 3; //不能替换
+    public static readonly GENE_RULE_ADD_DURATION : number = 4; //延长持续时间
+
+    //基因状态
+    public static readonly GENE_STATE_RUN : number = 1; //运行
+    public static readonly GENE_STATE_REMOVE : number = 2; //移除
+
     //基因类型
     public static readonly GENE_TYPE_SPEED : number = 1; //速度
+    public static readonly GENE_TYPE_POSION : number = 2; //毒
 
     //游戏暂停列表
     public static readonly GAME_PAUSE_UPGRADE : number  = 1 << 1; //升级界面

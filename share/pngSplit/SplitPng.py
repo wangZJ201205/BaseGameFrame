@@ -46,8 +46,8 @@ def gen_png_from_plist(filename, outPath):
     root = ElementTree.fromstring(open(plist_filename, 'r').read())
     plist_dict = tree_to_dict(root[0])
     to_list = lambda x: x.replace('{','').replace('}','').split(',')
-    to_int = lambda x:int(x)
-	
+    to_int = lambda x: int(round(float(x), 0))
+    
     for k,v in plist_dict['frames'].items():
         if 'textureRect' in v:      
             textureRect = to_list(v['textureRect'])
@@ -71,11 +71,21 @@ def gen_png_from_plist(filename, outPath):
         spriteSize = list(spriteSize)
         result_box = textureRect
         
+        spriteSourceSize = v['spriteSourceSize']
+        spriteSourceSize = to_list(spriteSourceSize)
+        spriteSourceSize = map(to_int, spriteSourceSize) 
+        spriteSourceSize = list(spriteSourceSize)
+        
+        spriteOffset = v['spriteOffset']
+        spriteOffset = to_list(spriteOffset)
+        spriteOffset = map(to_int, spriteOffset) 
+        spriteOffset = list(spriteOffset)
+        
         #防止宽高小于0导致错误
         if spriteSize[0] <= 0 or spriteSize[1]<0 :
             print("< 0")
             continue
-        result_image = Image.new('RGBA', spriteSize, (0,0,0,0))
+        result_image = Image.new('RGBA', spriteSourceSize, (0,0,0,0))
         
         if (('textureRotated' in v) and v['textureRotated']) or (('rotated'in v) and v['rotated']): 
             result_box[0] = int(textureRect[0])
@@ -95,8 +105,18 @@ def gen_png_from_plist(filename, outPath):
         if (('textureRotated' in v) and v['textureRotated']) or (('rotated' in v) and v['rotated']):
             rect_on_big = rect_on_big.transpose(Image.ROTATE_90)
             
-        result_image.paste(rect_on_big) 
+        
+        left = (-spriteSize[0] + spriteSourceSize[0]) // 2 + spriteOffset[0]
+        upper = (-spriteSize[1] + spriteSourceSize[1]) // 2 - spriteOffset[1]
+        right = left + spriteSourceSize[0] 
+        lower = upper + spriteSourceSize[1] 
+        
+        result_image1 = Image.new('RGBA', spriteSourceSize, (0,0,0,0))
+        result_image1.paste(rect_on_big) 
+        
+        result_image.paste(result_image1,(left, upper, right, lower)) 
 		
+        
 		 
         if not os.path.isdir(outPath):
             os.mkdir(outPath)

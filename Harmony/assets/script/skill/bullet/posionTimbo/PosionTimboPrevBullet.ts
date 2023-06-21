@@ -45,7 +45,7 @@ export default class PosionTimboPrevBullet extends BulletParent {
             moveNode: this.getNode(),
             startPos: this.getNode().position,
             targetPos: this._targetPos,
-            speed: 1,
+            speed: this._bulletInfo.speed,
             completeCallBack :this.completeCallBack,
             target :this,
             direction:null,
@@ -58,7 +58,6 @@ export default class PosionTimboPrevBullet extends BulletParent {
     completeCallBack()
     {
         this.stop();
-        var heroPosition = Hero.Instance.getEntity().position;
         
         var bullet = this._host.spawnBullet(ClientDef.BULLET_PHASE_3);
         bullet.getNode().active = true;

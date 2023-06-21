@@ -16,6 +16,10 @@ collision_type["方形"] = 1
 collision_type["圆形"] = 2
 collision_type["无"] = 0
 
+local attackMoveType = {}
+attackMoveType["走路"] = 1
+attackMoveType["全攻击"] = 2
+
 local gdSkillEffect = {}
 function handle_skill_effect(o)
 	local d = {}
@@ -30,12 +34,13 @@ function handle_skill_effect(o)
 	d.speed = o.e ~= "0" and tonumber(o.e) or nil
 	d.animation = o.f ~= "0" and tonumber(o.f) or nil
 	d.sustaintime = o.g ~= "0" and tonumber(o.g) or nil
-	d.delayDamage = o.h ~= "0" and tonumber(o.g) or nil
+	d.delayDamage = o.h ~= "0" and tonumber(o.h) or nil
 	d.particle = o.i ~= "0" and o.i or nil
 	d.motionStreak = o.j ~= "0" and tonumber(o.j) or nil
 	d.strike = o.k ~= "0" and tonumber(o.k) or nil
 	d.sound = o.l
 	d.atlas = o.m
+	d.attackMoveType = attackMoveType[o.n]
 
 	gdSkillEffect[d.id] = d
 end

@@ -38,7 +38,8 @@ export default class SwordBallBullet extends BulletParent {
     //碰撞开始
     collisionEnter(other, self)
     {   
-        var damageValue = this.getDamageValue();
+        var damageValue = this.getDamageValue(other);
+        if(damageValue == 0)return;
         other.node.getEntityComponent(ClientDef.ENTITY_COMP_BLOOM).addDamage( damageValue );
     }
     

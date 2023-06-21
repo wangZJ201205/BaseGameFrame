@@ -42,10 +42,17 @@ export default class GeneMgr
 
     update (dt) 
     {
-        // for (const key in this._genes) {
-        //     const gene = this._genes[key];
-        //     gene.update(dt);
-        // }
+        
+        this._genes = this._genes.filter((gene) => {
+            if( gene.getState() == ClientDef.GENE_STATE_REMOVE )
+            {
+                return false;
+            }
+            gene.update(dt);
+            return true;
+        });
+
+        // console.info(" >>> geneMgr lenght : " + this._genes.length);
     }
 
     remove()
@@ -74,20 +81,32 @@ export default class GeneMgr
         }
 
         var geneType = geneInfo.type;
-        var delIndex = -1;
         for (let index = 0; index < this._genes.length; index++) {
             const gene = this._genes[index];
             var gInfo = DictMgr.Instance.getDictByName("gene_data")[ gene.getStaticId() ];
             var gType = gInfo.type;
-            if(gType == geneType)
+            if(gType == geneType && gene.getState() == ClientDef.GENE_STATE_RUN)
             {
-                gene.remove();
-                delIndex = index;
-                break;
+                var rule = gene.getRule();
+                if(rule == ClientDef.GENE_RULE_NULL)
+                {
+                    return;
+                }
+                else if(rule == ClientDef.GENE_RULE_REPLACE)
+                {
+                    gene.remove();
+                    break;
+                }
+                else if(rule == ClientDef.GENE_RULE_CANNOT_REPLACE)
+                {
+                    return;
+                }
+                else if(rule == ClientDef.GENE_RULE_ADD_DURATION)
+                {
+                    gene.addDuring(gInfo.time);
+                }
             }
         }
-
-        this._genes.splice(delIndex,1); //删除同类型的基因
 
         var gene = new (this._typeClass[geneType])();
         gene.onLoad();

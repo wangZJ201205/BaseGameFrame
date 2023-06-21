@@ -11,6 +11,11 @@ const {ccclass, property} = cc._decorator;
 export default class SpeedGene extends GeneParent {
 
     
+    onLoad () 
+    {
+        this._rule = ClientDef.GENE_RULE_REPLACE;
+    }
+    
     start () 
     {
         super.start();

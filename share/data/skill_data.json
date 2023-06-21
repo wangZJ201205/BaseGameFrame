@@ -4,7 +4,7 @@
 		"name": "火球术",
 		"attackValue": "5-15",
 		"bullets": {
-			"1": {"id": 1,"atlas": "skill_res","collRect": "2,2,40,40","collision": 1,"particle": "test_pt","sound": "effect_skill_lhh","speed": 100,"src": "skill_fireball","strike": 1}
+			"1": {"id": 1,"atlas": "skill_res","attackMoveType": 2,"collRect": "2,2,40,40","collision": 1,"particle": "test_pt","sound": "effect_skill_lhh","speed": 100,"src": "skill_fireball","strike": 1}
 		},
 		"cooldown": 300,
 		"count": 1,
@@ -16,7 +16,7 @@
 		"name": "火球术",
 		"attackValue": "5-15",
 		"bullets": {
-			"1": {"id": 2,"atlas": "skill_res","collRect": "2,2,40,40","collision": 1,"particle": "test_pt","sound": "effect_skill_lhh","speed": 100,"src": "sword_176","strike": 1}
+			"1": {"id": 2,"atlas": "skill_res","attackMoveType": 2,"collRect": "2,2,40,40","collision": 1,"particle": "test_pt","sound": "effect_skill_lhh","speed": 100,"src": "sword_176","strike": 1}
 		},
 		"cooldown": 300,
 		"count": 2,
@@ -28,7 +28,7 @@
 		"name": "火球术",
 		"attackValue": "5-15",
 		"bullets": {
-			"1": {"id": 1,"atlas": "skill_res","collRect": "2,2,40,40","collision": 1,"particle": "test_pt","sound": "effect_skill_lhh","speed": 100,"src": "skill_fireball","strike": 1}
+			"1": {"id": 1,"atlas": "skill_res","attackMoveType": 2,"collRect": "2,2,40,40","collision": 1,"particle": "test_pt","sound": "effect_skill_lhh","speed": 100,"src": "skill_fireball","strike": 1}
 		},
 		"cooldown": 300,
 		"count": 3,
@@ -40,7 +40,7 @@
 		"name": "火球术",
 		"attackValue": "5-15",
 		"bullets": {
-			"1": {"id": 2,"atlas": "skill_res","collRect": "2,2,40,40","collision": 1,"particle": "test_pt","sound": "effect_skill_lhh","speed": 100,"src": "sword_176","strike": 1}
+			"1": {"id": 2,"atlas": "skill_res","attackMoveType": 2,"collRect": "2,2,40,40","collision": 1,"particle": "test_pt","sound": "effect_skill_lhh","speed": 100,"src": "sword_176","strike": 1}
 		},
 		"cooldown": 300,
 		"count": 4,
@@ -52,7 +52,7 @@
 		"name": "火球术",
 		"attackValue": "5-15",
 		"bullets": {
-			"1": {"id": 1,"atlas": "skill_res","collRect": "2,2,40,40","collision": 1,"particle": "test_pt","sound": "effect_skill_lhh","speed": 100,"src": "skill_fireball","strike": 1}
+			"1": {"id": 1,"atlas": "skill_res","attackMoveType": 2,"collRect": "2,2,40,40","collision": 1,"particle": "test_pt","sound": "effect_skill_lhh","speed": 100,"src": "skill_fireball","strike": 1}
 		},
 		"cooldown": 300,
 		"count": 5,
@@ -64,7 +64,7 @@
 		"name": "火球术",
 		"attackValue": "5-15",
 		"bullets": {
-			"1": {"id": 2,"atlas": "skill_res","collRect": "2,2,40,40","collision": 1,"particle": "test_pt","sound": "effect_skill_lhh","speed": 100,"src": "sword_176","strike": 1}
+			"1": {"id": 2,"atlas": "skill_res","attackMoveType": 2,"collRect": "2,2,40,40","collision": 1,"particle": "test_pt","sound": "effect_skill_lhh","speed": 100,"src": "sword_176","strike": 1}
 		},
 		"cooldown": 300,
 		"count": 6,
@@ -76,7 +76,7 @@
 		"name": "火球术",
 		"attackValue": "5-15",
 		"bullets": {
-			"1": {"id": 1,"atlas": "skill_res","collRect": "2,2,40,40","collision": 1,"particle": "test_pt","sound": "effect_skill_lhh","speed": 100,"src": "skill_fireball","strike": 1}
+			"1": {"id": 1,"atlas": "skill_res","attackMoveType": 2,"collRect": "2,2,40,40","collision": 1,"particle": "test_pt","sound": "effect_skill_lhh","speed": 100,"src": "skill_fireball","strike": 1}
 		},
 		"cooldown": 300,
 		"count": 7,
@@ -88,7 +88,7 @@
 		"name": "火球术",
 		"attackValue": "5-15",
 		"bullets": {
-			"1": {"id": 2,"atlas": "skill_res","collRect": "2,2,40,40","collision": 1,"particle": "test_pt","sound": "effect_skill_lhh","speed": 100,"src": "sword_176","strike": 1}
+			"1": {"id": 2,"atlas": "skill_res","attackMoveType": 2,"collRect": "2,2,40,40","collision": 1,"particle": "test_pt","sound": "effect_skill_lhh","speed": 100,"src": "sword_176","strike": 1}
 		},
 		"cooldown": 300,
 		"count": 8,
@@ -100,7 +100,7 @@
 		"name": "火球术",
 		"attackValue": "5-15",
 		"bullets": {
-			"1": {"id": 1,"atlas": "skill_res","collRect": "2,2,40,40","collision": 1,"particle": "test_pt","sound": "effect_skill_lhh","speed": 100,"src": "skill_fireball","strike": 1}
+			"1": {"id": 1,"atlas": "skill_res","attackMoveType": 2,"collRect": "2,2,40,40","collision": 1,"particle": "test_pt","sound": "effect_skill_lhh","speed": 100,"src": "skill_fireball","strike": 1}
 		},
 		"cooldown": 300,
 		"count": 9,
@@ -112,7 +112,7 @@
 		"name": "火球术",
 		"attackValue": "5-15",
 		"bullets": {
-			"1": {"id": 2,"atlas": "skill_res","collRect": "2,2,40,40","collision": 1,"particle": "test_pt","sound": "effect_skill_lhh","speed": 100,"src": "sword_176","strike": 1}
+			"1": {"id": 2,"atlas": "skill_res","attackMoveType": 2,"collRect": "2,2,40,40","collision": 1,"particle": "test_pt","sound": "effect_skill_lhh","speed": 100,"src": "sword_176","strike": 1}
 		},
 		"cooldown": 300,
 		"count": 10,
@@ -124,7 +124,7 @@
 		"name": "冰弹球",
 		"attackValue": "5-15",
 		"bullets": {
-			"1": {"id": 3,"atlas": "skill_res","collRect": "2,2,40,40","collision": 1,"particle": "test_pt","sound": "effect_skill_hbj","speed": 100,"src": "skill_iceball","strike": 2}
+			"1": {"id": 3,"atlas": "skill_res","attackMoveType": 2,"collRect": "2,2,40,40","collision": 1,"particle": "test_pt","sound": "effect_skill_hbj","speed": 100,"src": "skill_iceball","strike": 2}
 		},
 		"cooldown": 2000,
 		"count": 3,
@@ -136,7 +136,7 @@
 		"name": "冰弹球",
 		"attackValue": "5-15",
 		"bullets": {
-			"1": {"id": 3,"atlas": "skill_res","collRect": "2,2,40,40","collision": 1,"particle": "test_pt","sound": "effect_skill_hbj","speed": 100,"src": "skill_iceball","strike": 2}
+			"1": {"id": 3,"atlas": "skill_res","attackMoveType": 2,"collRect": "2,2,40,40","collision": 1,"particle": "test_pt","sound": "effect_skill_hbj","speed": 100,"src": "skill_iceball","strike": 2}
 		},
 		"cooldown": 2000,
 		"count": 4,
@@ -148,7 +148,7 @@
 		"name": "冰弹球",
 		"attackValue": "5-15",
 		"bullets": {
-			"1": {"id": 3,"atlas": "skill_res","collRect": "2,2,40,40","collision": 1,"particle": "test_pt","sound": "effect_skill_hbj","speed": 100,"src": "skill_iceball","strike": 2}
+			"1": {"id": 3,"atlas": "skill_res","attackMoveType": 2,"collRect": "2,2,40,40","collision": 1,"particle": "test_pt","sound": "effect_skill_hbj","speed": 100,"src": "skill_iceball","strike": 2}
 		},
 		"cooldown": 2000,
 		"count": 5,
@@ -160,7 +160,7 @@
 		"name": "冰弹球",
 		"attackValue": "5-15",
 		"bullets": {
-			"1": {"id": 3,"atlas": "skill_res","collRect": "2,2,40,40","collision": 1,"particle": "test_pt","sound": "effect_skill_hbj","speed": 100,"src": "skill_iceball","strike": 2}
+			"1": {"id": 3,"atlas": "skill_res","attackMoveType": 2,"collRect": "2,2,40,40","collision": 1,"particle": "test_pt","sound": "effect_skill_hbj","speed": 100,"src": "skill_iceball","strike": 2}
 		},
 		"cooldown": 2000,
 		"count": 6,
@@ -172,7 +172,7 @@
 		"name": "冰弹球",
 		"attackValue": "5-15",
 		"bullets": {
-			"1": {"id": 3,"atlas": "skill_res","collRect": "2,2,40,40","collision": 1,"particle": "test_pt","sound": "effect_skill_hbj","speed": 100,"src": "skill_iceball","strike": 2}
+			"1": {"id": 3,"atlas": "skill_res","attackMoveType": 2,"collRect": "2,2,40,40","collision": 1,"particle": "test_pt","sound": "effect_skill_hbj","speed": 100,"src": "skill_iceball","strike": 2}
 		},
 		"cooldown": 2000,
 		"count": 7,
@@ -184,7 +184,7 @@
 		"name": "冰弹球",
 		"attackValue": "5-15",
 		"bullets": {
-			"1": {"id": 3,"atlas": "skill_res","collRect": "2,2,40,40","collision": 1,"particle": "test_pt","sound": "effect_skill_hbj","speed": 100,"src": "skill_iceball","strike": 2}
+			"1": {"id": 3,"atlas": "skill_res","attackMoveType": 2,"collRect": "2,2,40,40","collision": 1,"particle": "test_pt","sound": "effect_skill_hbj","speed": 100,"src": "skill_iceball","strike": 2}
 		},
 		"cooldown": 2000,
 		"count": 8,
@@ -196,7 +196,7 @@
 		"name": "冰弹球",
 		"attackValue": "5-15",
 		"bullets": {
-			"1": {"id": 3,"atlas": "skill_res","collRect": "2,2,40,40","collision": 1,"particle": "test_pt","sound": "effect_skill_hbj","speed": 100,"src": "skill_iceball","strike": 2}
+			"1": {"id": 3,"atlas": "skill_res","attackMoveType": 2,"collRect": "2,2,40,40","collision": 1,"particle": "test_pt","sound": "effect_skill_hbj","speed": 100,"src": "skill_iceball","strike": 2}
 		},
 		"cooldown": 2000,
 		"count": 9,
@@ -208,7 +208,7 @@
 		"name": "遭雷劈",
 		"attackValue": "5-15",
 		"bullets": {
-			"1": {"id": 4,"animation": 1,"atlas": "skill_res","collRect": "2,2,40,40","collision": 1,"sound": "effect_skill_lls","src": "skill_zhaoleipi","strike": 99}
+			"1": {"id": 4,"animation": 1,"atlas": "skill_res","attackMoveType": 1,"collRect": "2,2,40,40","collision": 1,"sound": "effect_skill_lls","src": "skill_zhaoleipi","strike": 99}
 		},
 		"cooldown": 600,
 		"count": 1,
@@ -220,7 +220,7 @@
 		"name": "遭雷劈",
 		"attackValue": "5-15",
 		"bullets": {
-			"1": {"id": 4,"animation": 1,"atlas": "skill_res","collRect": "2,2,40,40","collision": 1,"sound": "effect_skill_lls","src": "skill_zhaoleipi","strike": 99}
+			"1": {"id": 4,"animation": 1,"atlas": "skill_res","attackMoveType": 1,"collRect": "2,2,40,40","collision": 1,"sound": "effect_skill_lls","src": "skill_zhaoleipi","strike": 99}
 		},
 		"cooldown": 600,
 		"count": 2,
@@ -232,7 +232,7 @@
 		"name": "遭雷劈",
 		"attackValue": "5-15",
 		"bullets": {
-			"1": {"id": 4,"animation": 1,"atlas": "skill_res","collRect": "2,2,40,40","collision": 1,"sound": "effect_skill_lls","src": "skill_zhaoleipi","strike": 99}
+			"1": {"id": 4,"animation": 1,"atlas": "skill_res","attackMoveType": 1,"collRect": "2,2,40,40","collision": 1,"sound": "effect_skill_lls","src": "skill_zhaoleipi","strike": 99}
 		},
 		"cooldown": 600,
 		"count": 3,
@@ -244,7 +244,7 @@
 		"name": "遭雷劈",
 		"attackValue": "5-15",
 		"bullets": {
-			"1": {"id": 4,"animation": 1,"atlas": "skill_res","collRect": "2,2,40,40","collision": 1,"sound": "effect_skill_lls","src": "skill_zhaoleipi","strike": 99}
+			"1": {"id": 4,"animation": 1,"atlas": "skill_res","attackMoveType": 1,"collRect": "2,2,40,40","collision": 1,"sound": "effect_skill_lls","src": "skill_zhaoleipi","strike": 99}
 		},
 		"cooldown": 600,
 		"count": 4,
@@ -256,7 +256,7 @@
 		"name": "遭雷劈",
 		"attackValue": "5-15",
 		"bullets": {
-			"1": {"id": 4,"animation": 1,"atlas": "skill_res","collRect": "2,2,40,40","collision": 1,"sound": "effect_skill_lls","src": "skill_zhaoleipi","strike": 99}
+			"1": {"id": 4,"animation": 1,"atlas": "skill_res","attackMoveType": 1,"collRect": "2,2,40,40","collision": 1,"sound": "effect_skill_lls","src": "skill_zhaoleipi","strike": 99}
 		},
 		"cooldown": 600,
 		"count": 5,
@@ -268,7 +268,7 @@
 		"name": "遭雷劈",
 		"attackValue": "5-15",
 		"bullets": {
-			"1": {"id": 4,"animation": 1,"atlas": "skill_res","collRect": "2,2,40,40","collision": 1,"sound": "effect_skill_lls","src": "skill_zhaoleipi","strike": 99}
+			"1": {"id": 4,"animation": 1,"atlas": "skill_res","attackMoveType": 1,"collRect": "2,2,40,40","collision": 1,"sound": "effect_skill_lls","src": "skill_zhaoleipi","strike": 99}
 		},
 		"cooldown": 600,
 		"count": 6,
@@ -280,7 +280,7 @@
 		"name": "遭雷劈",
 		"attackValue": "5-15",
 		"bullets": {
-			"1": {"id": 4,"animation": 1,"atlas": "skill_res","collRect": "2,2,40,40","collision": 1,"sound": "effect_skill_lls","src": "skill_zhaoleipi","strike": 99}
+			"1": {"id": 4,"animation": 1,"atlas": "skill_res","attackMoveType": 1,"collRect": "2,2,40,40","collision": 1,"sound": "effect_skill_lls","src": "skill_zhaoleipi","strike": 99}
 		},
 		"cooldown": 600,
 		"count": 7,
@@ -292,7 +292,7 @@
 		"name": "机械精灵",
 		"attackValue": "5-15",
 		"bullets": {
-			"1": {"id": 5,"atlas": "skill_res","collRect": "2,2,20","collision": 2,"particle": "test_pt","sound": "effect_skill_sy","speed": 100,"src": "skill_trump","strike": 99}
+			"1": {"id": 5,"atlas": "skill_res","attackMoveType": 2,"collRect": "2,2,20","collision": 2,"particle": "test_pt","sound": "effect_skill_sy","speed": 100,"src": "skill_trump","strike": 99}
 		},
 		"cooldown": 6000,
 		"count": 1,
@@ -305,7 +305,7 @@
 		"name": "机械精灵",
 		"attackValue": "5-15",
 		"bullets": {
-			"1": {"id": 5,"atlas": "skill_res","collRect": "2,2,20","collision": 2,"particle": "test_pt","sound": "effect_skill_sy","speed": 100,"src": "skill_trump","strike": 99}
+			"1": {"id": 5,"atlas": "skill_res","attackMoveType": 2,"collRect": "2,2,20","collision": 2,"particle": "test_pt","sound": "effect_skill_sy","speed": 100,"src": "skill_trump","strike": 99}
 		},
 		"cooldown": 6000,
 		"count": 2,
@@ -318,7 +318,7 @@
 		"name": "机械精灵",
 		"attackValue": "5-15",
 		"bullets": {
-			"1": {"id": 5,"atlas": "skill_res","collRect": "2,2,20","collision": 2,"particle": "test_pt","sound": "effect_skill_sy","speed": 100,"src": "skill_trump","strike": 99}
+			"1": {"id": 5,"atlas": "skill_res","attackMoveType": 2,"collRect": "2,2,20","collision": 2,"particle": "test_pt","sound": "effect_skill_sy","speed": 100,"src": "skill_trump","strike": 99}
 		},
 		"cooldown": 6000,
 		"count": 3,
@@ -331,7 +331,7 @@
 		"name": "机械精灵",
 		"attackValue": "5-15",
 		"bullets": {
-			"1": {"id": 5,"atlas": "skill_res","collRect": "2,2,20","collision": 2,"particle": "test_pt","sound": "effect_skill_sy","speed": 100,"src": "skill_trump","strike": 99}
+			"1": {"id": 5,"atlas": "skill_res","attackMoveType": 2,"collRect": "2,2,20","collision": 2,"particle": "test_pt","sound": "effect_skill_sy","speed": 100,"src": "skill_trump","strike": 99}
 		},
 		"cooldown": 6000,
 		"count": 4,
@@ -344,7 +344,7 @@
 		"name": "机械精灵",
 		"attackValue": "5-15",
 		"bullets": {
-			"1": {"id": 5,"atlas": "skill_res","collRect": "2,2,20","collision": 2,"particle": "test_pt","sound": "effect_skill_sy","speed": 100,"src": "skill_trump","strike": 99}
+			"1": {"id": 5,"atlas": "skill_res","attackMoveType": 2,"collRect": "2,2,20","collision": 2,"particle": "test_pt","sound": "effect_skill_sy","speed": 100,"src": "skill_trump","strike": 99}
 		},
 		"cooldown": 6000,
 		"count": 5,
@@ -357,7 +357,7 @@
 		"name": "机械精灵",
 		"attackValue": "5-15",
 		"bullets": {
-			"1": {"id": 5,"atlas": "skill_res","collRect": "2,2,20","collision": 2,"particle": "test_pt","sound": "effect_skill_sy","speed": 100,"src": "skill_trump","strike": 99}
+			"1": {"id": 5,"atlas": "skill_res","attackMoveType": 2,"collRect": "2,2,20","collision": 2,"particle": "test_pt","sound": "effect_skill_sy","speed": 100,"src": "skill_trump","strike": 99}
 		},
 		"cooldown": 6000,
 		"count": 6,
@@ -370,7 +370,7 @@
 		"name": "机械精灵",
 		"attackValue": "5-15",
 		"bullets": {
-			"1": {"id": 5,"atlas": "skill_res","collRect": "2,2,20","collision": 2,"particle": "test_pt","sound": "effect_skill_sy","speed": 100,"src": "skill_trump","strike": 99}
+			"1": {"id": 5,"atlas": "skill_res","attackMoveType": 2,"collRect": "2,2,20","collision": 2,"particle": "test_pt","sound": "effect_skill_sy","speed": 100,"src": "skill_trump","strike": 99}
 		},
 		"cooldown": 6000,
 		"count": 7,
@@ -383,7 +383,7 @@
 		"name": "旋风扫叶腿",
 		"attackValue": "5-15",
 		"bullets": {
-			"1": {"id": 6,"animation": 1,"atlas": "skill_res","collRect": "130,83,200,150","collision": 1,"sound": "0","speed": 100,"src": "skill_xuanfengzhan","strike": 99}
+			"1": {"id": 6,"animation": 1,"atlas": "skill_res","attackMoveType": 2,"collRect": "130,83,200,150","collision": 1,"sound": "0","speed": 100,"src": "skill_xuanfengzhan","strike": 99}
 		},
 		"cooldown": 1500,
 		"count": 1,
@@ -395,7 +395,7 @@
 		"name": "旋风扫叶腿",
 		"attackValue": "5-15",
 		"bullets": {
-			"1": {"id": 6,"animation": 1,"atlas": "skill_res","collRect": "130,83,200,150","collision": 1,"sound": "0","speed": 100,"src": "skill_xuanfengzhan","strike": 99}
+			"1": {"id": 6,"animation": 1,"atlas": "skill_res","attackMoveType": 2,"collRect": "130,83,200,150","collision": 1,"sound": "0","speed": 100,"src": "skill_xuanfengzhan","strike": 99}
 		},
 		"cooldown": 3000,
 		"count": 1,
@@ -407,7 +407,7 @@
 		"name": "旋风扫叶腿",
 		"attackValue": "5-15",
 		"bullets": {
-			"1": {"id": 6,"animation": 1,"atlas": "skill_res","collRect": "130,83,200,150","collision": 1,"sound": "0","speed": 100,"src": "skill_xuanfengzhan","strike": 99}
+			"1": {"id": 6,"animation": 1,"atlas": "skill_res","attackMoveType": 2,"collRect": "130,83,200,150","collision": 1,"sound": "0","speed": 100,"src": "skill_xuanfengzhan","strike": 99}
 		},
 		"cooldown": 3000,
 		"count": 1,
@@ -419,7 +419,7 @@
 		"name": "旋风扫叶腿",
 		"attackValue": "5-15",
 		"bullets": {
-			"1": {"id": 6,"animation": 1,"atlas": "skill_res","collRect": "130,83,200,150","collision": 1,"sound": "0","speed": 100,"src": "skill_xuanfengzhan","strike": 99}
+			"1": {"id": 6,"animation": 1,"atlas": "skill_res","attackMoveType": 2,"collRect": "130,83,200,150","collision": 1,"sound": "0","speed": 100,"src": "skill_xuanfengzhan","strike": 99}
 		},
 		"cooldown": 3000,
 		"count": 1,
@@ -431,7 +431,7 @@
 		"name": "旋风扫叶腿",
 		"attackValue": "5-15",
 		"bullets": {
-			"1": {"id": 6,"animation": 1,"atlas": "skill_res","collRect": "130,83,200,150","collision": 1,"sound": "0","speed": 100,"src": "skill_xuanfengzhan","strike": 99}
+			"1": {"id": 6,"animation": 1,"atlas": "skill_res","attackMoveType": 2,"collRect": "130,83,200,150","collision": 1,"sound": "0","speed": 100,"src": "skill_xuanfengzhan","strike": 99}
 		},
 		"cooldown": 3000,
 		"count": 1,
@@ -443,7 +443,7 @@
 		"name": "旋风扫叶腿",
 		"attackValue": "5-15",
 		"bullets": {
-			"1": {"id": 6,"animation": 1,"atlas": "skill_res","collRect": "130,83,200,150","collision": 1,"sound": "0","speed": 100,"src": "skill_xuanfengzhan","strike": 99}
+			"1": {"id": 6,"animation": 1,"atlas": "skill_res","attackMoveType": 2,"collRect": "130,83,200,150","collision": 1,"sound": "0","speed": 100,"src": "skill_xuanfengzhan","strike": 99}
 		},
 		"cooldown": 3000,
 		"count": 1,
@@ -455,7 +455,7 @@
 		"name": "旋风扫叶腿",
 		"attackValue": "5-15",
 		"bullets": {
-			"1": {"id": 6,"animation": 1,"atlas": "skill_res","collRect": "130,83,200,150","collision": 1,"sound": "0","speed": 100,"src": "skill_xuanfengzhan","strike": 99}
+			"1": {"id": 6,"animation": 1,"atlas": "skill_res","attackMoveType": 2,"collRect": "130,83,200,150","collision": 1,"sound": "0","speed": 100,"src": "skill_xuanfengzhan","strike": 99}
 		},
 		"cooldown": 3000,
 		"count": 1,
@@ -467,7 +467,7 @@
 		"name": "旋风扫叶腿",
 		"attackValue": "5-15",
 		"bullets": {
-			"1": {"id": 6,"animation": 1,"atlas": "skill_res","collRect": "130,83,200,150","collision": 1,"sound": "0","speed": 100,"src": "skill_xuanfengzhan","strike": 99}
+			"1": {"id": 6,"animation": 1,"atlas": "skill_res","attackMoveType": 2,"collRect": "130,83,200,150","collision": 1,"sound": "0","speed": 100,"src": "skill_xuanfengzhan","strike": 99}
 		},
 		"cooldown": 3000,
 		"count": 1,
@@ -479,7 +479,7 @@
 		"name": "旋风扫叶腿",
 		"attackValue": "5-15",
 		"bullets": {
-			"1": {"id": 6,"animation": 1,"atlas": "skill_res","collRect": "130,83,200,150","collision": 1,"sound": "0","speed": 100,"src": "skill_xuanfengzhan","strike": 99}
+			"1": {"id": 6,"animation": 1,"atlas": "skill_res","attackMoveType": 2,"collRect": "130,83,200,150","collision": 1,"sound": "0","speed": 100,"src": "skill_xuanfengzhan","strike": 99}
 		},
 		"cooldown": 3000,
 		"count": 1,
@@ -491,7 +491,7 @@
 		"name": "太极",
 		"attackValue": "5-15",
 		"bullets": {
-			"1": {"id": 7,"atlas": "skill_res","collRect": "2,2,20","collision": 2,"particle": "test_pt","sound": "effect_skill_xkfld","speed": 3,"src": "i_jpql_03","strike": 99}
+			"1": {"id": 7,"atlas": "skill_res","attackMoveType": 2,"collRect": "2,2,20","collision": 2,"particle": "test_pt","sound": "effect_skill_xkfld","speed": 3,"src": "i_jpql_03","strike": 99}
 		},
 		"cooldown": 3000,
 		"count": 3,
@@ -504,7 +504,7 @@
 		"name": "太极",
 		"attackValue": "5-15",
 		"bullets": {
-			"1": {"id": 8,"atlas": "skill_res","collRect": "2,2,20","collision": 2,"particle": "test_pt","sound": "effect_skill_xkfld","speed": 3,"src": "i_jpql_02","strike": 99}
+			"1": {"id": 8,"atlas": "skill_res","attackMoveType": 2,"collRect": "2,2,20","collision": 2,"particle": "test_pt","sound": "effect_skill_xkfld","speed": 3,"src": "i_jpql_02","strike": 99}
 		},
 		"cooldown": 3000,
 		"count": 4,
@@ -517,7 +517,7 @@
 		"name": "太极",
 		"attackValue": "5-15",
 		"bullets": {
-			"1": {"id": 9,"atlas": "skill_res","collRect": "2,2,20","collision": 2,"particle": "test_pt","sound": "effect_skill_xkfld","speed": 3,"src": "i_jpql_01","strike": 99}
+			"1": {"id": 9,"atlas": "skill_res","attackMoveType": 2,"collRect": "2,2,20","collision": 2,"particle": "test_pt","sound": "effect_skill_xkfld","speed": 3,"src": "i_jpql_01","strike": 99}
 		},
 		"cooldown": 3000,
 		"count": 5,
@@ -530,7 +530,7 @@
 		"name": "护盾",
 		"attackValue": "2-6",
 		"bullets": {
-			"1": {"id": 10,"atlas": "skill_res","collRect": "2,2,100","collision": 2,"sound": "effect_action_transfer","speed": 3,"src": "qifu_qiu_zb","strike": 99}
+			"1": {"id": 10,"atlas": "skill_res","attackMoveType": 2,"collRect": "2,2,100","collision": 2,"sound": "effect_action_transfer","speed": 3,"src": "qifu_qiu_zb","strike": 99}
 		},
 		"cooldown": 500,
 		"count": 3,
@@ -543,7 +543,7 @@
 		"name": "护盾",
 		"attackValue": "2-6",
 		"bullets": {
-			"1": {"id": 10,"atlas": "skill_res","collRect": "2,2,100","collision": 2,"sound": "effect_action_transfer","speed": 3,"src": "qifu_qiu_zb","strike": 99}
+			"1": {"id": 10,"atlas": "skill_res","attackMoveType": 2,"collRect": "2,2,100","collision": 2,"sound": "effect_action_transfer","speed": 3,"src": "qifu_qiu_zb","strike": 99}
 		},
 		"cooldown": 500,
 		"count": 3,
@@ -556,7 +556,7 @@
 		"name": "护盾",
 		"attackValue": "2-6",
 		"bullets": {
-			"1": {"id": 10,"atlas": "skill_res","collRect": "2,2,100","collision": 2,"sound": "effect_action_transfer","speed": 3,"src": "qifu_qiu_zb","strike": 99}
+			"1": {"id": 10,"atlas": "skill_res","attackMoveType": 2,"collRect": "2,2,100","collision": 2,"sound": "effect_action_transfer","speed": 3,"src": "qifu_qiu_zb","strike": 99}
 		},
 		"cooldown": 500,
 		"count": 4,
@@ -569,7 +569,7 @@
 		"name": "护盾",
 		"attackValue": "2-6",
 		"bullets": {
-			"1": {"id": 10,"atlas": "skill_res","collRect": "2,2,100","collision": 2,"sound": "effect_action_transfer","speed": 3,"src": "qifu_qiu_zb","strike": 99}
+			"1": {"id": 10,"atlas": "skill_res","attackMoveType": 2,"collRect": "2,2,100","collision": 2,"sound": "effect_action_transfer","speed": 3,"src": "qifu_qiu_zb","strike": 99}
 		},
 		"cooldown": 500,
 		"count": 4,
@@ -582,7 +582,7 @@
 		"name": "护盾",
 		"attackValue": "2-6",
 		"bullets": {
-			"1": {"id": 10,"atlas": "skill_res","collRect": "2,2,100","collision": 2,"sound": "effect_action_transfer","speed": 3,"src": "qifu_qiu_zb","strike": 99}
+			"1": {"id": 10,"atlas": "skill_res","attackMoveType": 2,"collRect": "2,2,100","collision": 2,"sound": "effect_action_transfer","speed": 3,"src": "qifu_qiu_zb","strike": 99}
 		},
 		"cooldown": 500,
 		"count": 4,
@@ -595,7 +595,7 @@
 		"name": "护盾",
 		"attackValue": "2-6",
 		"bullets": {
-			"1": {"id": 10,"atlas": "skill_res","collRect": "2,2,100","collision": 2,"sound": "effect_action_transfer","speed": 3,"src": "qifu_qiu_zb","strike": 99}
+			"1": {"id": 10,"atlas": "skill_res","attackMoveType": 2,"collRect": "2,2,100","collision": 2,"sound": "effect_action_transfer","speed": 3,"src": "qifu_qiu_zb","strike": 99}
 		},
 		"cooldown": 500,
 		"count": 4,
@@ -608,7 +608,7 @@
 		"name": "护盾",
 		"attackValue": "2-6",
 		"bullets": {
-			"1": {"id": 10,"atlas": "skill_res","collRect": "2,2,100","collision": 2,"sound": "effect_action_transfer","speed": 3,"src": "qifu_qiu_zb","strike": 99}
+			"1": {"id": 10,"atlas": "skill_res","attackMoveType": 2,"collRect": "2,2,100","collision": 2,"sound": "effect_action_transfer","speed": 3,"src": "qifu_qiu_zb","strike": 99}
 		},
 		"cooldown": 500,
 		"count": 4,
@@ -621,7 +621,7 @@
 		"name": "护盾",
 		"attackValue": "2-6",
 		"bullets": {
-			"1": {"id": 10,"atlas": "skill_res","collRect": "2,2,100","collision": 2,"sound": "effect_action_transfer","speed": 3,"src": "qifu_qiu_zb","strike": 99}
+			"1": {"id": 10,"atlas": "skill_res","attackMoveType": 2,"collRect": "2,2,100","collision": 2,"sound": "effect_action_transfer","speed": 3,"src": "qifu_qiu_zb","strike": 99}
 		},
 		"cooldown": 500,
 		"count": 4,
@@ -634,7 +634,7 @@
 		"name": "护盾",
 		"attackValue": "2-6",
 		"bullets": {
-			"1": {"id": 10,"atlas": "skill_res","collRect": "2,2,100","collision": 2,"sound": "effect_action_transfer","speed": 3,"src": "qifu_qiu_zb","strike": 99}
+			"1": {"id": 10,"atlas": "skill_res","attackMoveType": 2,"collRect": "2,2,100","collision": 2,"sound": "effect_action_transfer","speed": 3,"src": "qifu_qiu_zb","strike": 99}
 		},
 		"cooldown": 500,
 		"count": 4,
@@ -647,8 +647,8 @@
 		"name": "放毒",
 		"attackValue": "2-6",
 		"bullets": {
-			"1": {"id": 11,"atlas": "skill_res","collRect": "0","collision": 0,"sound": "effect_skill_fss","speed": 3,"src": "0"},
-			"3": {"id": 12,"atlas": "skill_res","collRect": "2,2,200,100","collision": 1,"delayDamage": 3000,"sound": "effect_skill_fss","speed": 3,"src": "skill_youlanaoyi_05","strike": 99,"sustaintime": 3000}
+			"1": {"id": 11,"atlas": "skill_res","attackMoveType": 2,"collRect": "0","collision": 0,"sound": "effect_skill_fss","speed": 3,"src": "0"},
+			"3": {"id": 12,"atlas": "skill_res","attackMoveType": 2,"collRect": "2,2,200,100","collision": 1,"delayDamage": 1200,"sound": "effect_skill_fss","speed": 3,"src": "skill_youlanaoyi_05","strike": 99,"sustaintime": 3000}
 		},
 		"cooldown": 4000,
 		"count": 4,
@@ -662,8 +662,8 @@
 		"name": "放毒",
 		"attackValue": "2-6",
 		"bullets": {
-			"1": {"id": 11,"atlas": "skill_res","collRect": "0","collision": 0,"sound": "effect_skill_fss","speed": 3,"src": "0"},
-			"3": {"id": 12,"atlas": "skill_res","collRect": "2,2,200,100","collision": 1,"delayDamage": 3000,"sound": "effect_skill_fss","speed": 3,"src": "skill_youlanaoyi_05","strike": 99,"sustaintime": 3000}
+			"1": {"id": 11,"atlas": "skill_res","attackMoveType": 2,"collRect": "0","collision": 0,"sound": "effect_skill_fss","speed": 3,"src": "0"},
+			"3": {"id": 12,"atlas": "skill_res","attackMoveType": 2,"collRect": "2,2,200,100","collision": 1,"delayDamage": 1200,"sound": "effect_skill_fss","speed": 3,"src": "skill_youlanaoyi_05","strike": 99,"sustaintime": 3000}
 		},
 		"cooldown": 4000,
 		"count": 4,
@@ -677,8 +677,8 @@
 		"name": "放毒",
 		"attackValue": "2-6",
 		"bullets": {
-			"1": {"id": 11,"atlas": "skill_res","collRect": "0","collision": 0,"sound": "effect_skill_fss","speed": 3,"src": "0"},
-			"3": {"id": 12,"atlas": "skill_res","collRect": "2,2,200,100","collision": 1,"delayDamage": 3000,"sound": "effect_skill_fss","speed": 3,"src": "skill_youlanaoyi_05","strike": 99,"sustaintime": 3000}
+			"1": {"id": 11,"atlas": "skill_res","attackMoveType": 2,"collRect": "0","collision": 0,"sound": "effect_skill_fss","speed": 3,"src": "0"},
+			"3": {"id": 12,"atlas": "skill_res","attackMoveType": 2,"collRect": "2,2,200,100","collision": 1,"delayDamage": 1200,"sound": "effect_skill_fss","speed": 3,"src": "skill_youlanaoyi_05","strike": 99,"sustaintime": 3000}
 		},
 		"cooldown": 4000,
 		"count": 4,
@@ -692,8 +692,8 @@
 		"name": "放毒",
 		"attackValue": "2-6",
 		"bullets": {
-			"1": {"id": 11,"atlas": "skill_res","collRect": "0","collision": 0,"sound": "effect_skill_fss","speed": 3,"src": "0"},
-			"3": {"id": 12,"atlas": "skill_res","collRect": "2,2,200,100","collision": 1,"delayDamage": 3000,"sound": "effect_skill_fss","speed": 3,"src": "skill_youlanaoyi_05","strike": 99,"sustaintime": 3000}
+			"1": {"id": 11,"atlas": "skill_res","attackMoveType": 2,"collRect": "0","collision": 0,"sound": "effect_skill_fss","speed": 3,"src": "0"},
+			"3": {"id": 12,"atlas": "skill_res","attackMoveType": 2,"collRect": "2,2,200,100","collision": 1,"delayDamage": 1200,"sound": "effect_skill_fss","speed": 3,"src": "skill_youlanaoyi_05","strike": 99,"sustaintime": 3000}
 		},
 		"cooldown": 4000,
 		"count": 4,
@@ -707,8 +707,8 @@
 		"name": "放毒",
 		"attackValue": "2-6",
 		"bullets": {
-			"1": {"id": 11,"atlas": "skill_res","collRect": "0","collision": 0,"sound": "effect_skill_fss","speed": 3,"src": "0"},
-			"3": {"id": 12,"atlas": "skill_res","collRect": "2,2,200,100","collision": 1,"delayDamage": 3000,"sound": "effect_skill_fss","speed": 3,"src": "skill_youlanaoyi_05","strike": 99,"sustaintime": 3000}
+			"1": {"id": 11,"atlas": "skill_res","attackMoveType": 2,"collRect": "0","collision": 0,"sound": "effect_skill_fss","speed": 3,"src": "0"},
+			"3": {"id": 12,"atlas": "skill_res","attackMoveType": 2,"collRect": "2,2,200,100","collision": 1,"delayDamage": 1200,"sound": "effect_skill_fss","speed": 3,"src": "skill_youlanaoyi_05","strike": 99,"sustaintime": 3000}
 		},
 		"cooldown": 4000,
 		"count": 4,
@@ -722,8 +722,8 @@
 		"name": "放毒",
 		"attackValue": "2-6",
 		"bullets": {
-			"1": {"id": 11,"atlas": "skill_res","collRect": "0","collision": 0,"sound": "effect_skill_fss","speed": 3,"src": "0"},
-			"3": {"id": 12,"atlas": "skill_res","collRect": "2,2,200,100","collision": 1,"delayDamage": 3000,"sound": "effect_skill_fss","speed": 3,"src": "skill_youlanaoyi_05","strike": 99,"sustaintime": 3000}
+			"1": {"id": 11,"atlas": "skill_res","attackMoveType": 2,"collRect": "0","collision": 0,"sound": "effect_skill_fss","speed": 3,"src": "0"},
+			"3": {"id": 12,"atlas": "skill_res","attackMoveType": 2,"collRect": "2,2,200,100","collision": 1,"delayDamage": 1200,"sound": "effect_skill_fss","speed": 3,"src": "skill_youlanaoyi_05","strike": 99,"sustaintime": 3000}
 		},
 		"cooldown": 4000,
 		"count": 4,
@@ -737,8 +737,8 @@
 		"name": "放毒",
 		"attackValue": "2-6",
 		"bullets": {
-			"1": {"id": 11,"atlas": "skill_res","collRect": "0","collision": 0,"sound": "effect_skill_fss","speed": 3,"src": "0"},
-			"3": {"id": 12,"atlas": "skill_res","collRect": "2,2,200,100","collision": 1,"delayDamage": 3000,"sound": "effect_skill_fss","speed": 3,"src": "skill_youlanaoyi_05","strike": 99,"sustaintime": 3000}
+			"1": {"id": 11,"atlas": "skill_res","attackMoveType": 2,"collRect": "0","collision": 0,"sound": "effect_skill_fss","speed": 3,"src": "0"},
+			"3": {"id": 12,"atlas": "skill_res","attackMoveType": 2,"collRect": "2,2,200,100","collision": 1,"delayDamage": 1200,"sound": "effect_skill_fss","speed": 3,"src": "skill_youlanaoyi_05","strike": 99,"sustaintime": 3000}
 		},
 		"cooldown": 4000,
 		"count": 4,
@@ -752,8 +752,8 @@
 		"name": "放毒",
 		"attackValue": "2-6",
 		"bullets": {
-			"1": {"id": 11,"atlas": "skill_res","collRect": "0","collision": 0,"sound": "effect_skill_fss","speed": 3,"src": "0"},
-			"3": {"id": 12,"atlas": "skill_res","collRect": "2,2,200,100","collision": 1,"delayDamage": 3000,"sound": "effect_skill_fss","speed": 3,"src": "skill_youlanaoyi_05","strike": 99,"sustaintime": 3000}
+			"1": {"id": 11,"atlas": "skill_res","attackMoveType": 2,"collRect": "0","collision": 0,"sound": "effect_skill_fss","speed": 3,"src": "0"},
+			"3": {"id": 12,"atlas": "skill_res","attackMoveType": 2,"collRect": "2,2,200,100","collision": 1,"delayDamage": 1200,"sound": "effect_skill_fss","speed": 3,"src": "skill_youlanaoyi_05","strike": 99,"sustaintime": 3000}
 		},
 		"cooldown": 4000,
 		"count": 4,
@@ -767,8 +767,8 @@
 		"name": "放毒",
 		"attackValue": "2-6",
 		"bullets": {
-			"1": {"id": 11,"atlas": "skill_res","collRect": "0","collision": 0,"sound": "effect_skill_fss","speed": 3,"src": "0"},
-			"3": {"id": 12,"atlas": "skill_res","collRect": "2,2,200,100","collision": 1,"delayDamage": 3000,"sound": "effect_skill_fss","speed": 3,"src": "skill_youlanaoyi_05","strike": 99,"sustaintime": 3000}
+			"1": {"id": 11,"atlas": "skill_res","attackMoveType": 2,"collRect": "0","collision": 0,"sound": "effect_skill_fss","speed": 3,"src": "0"},
+			"3": {"id": 12,"atlas": "skill_res","attackMoveType": 2,"collRect": "2,2,200,100","collision": 1,"delayDamage": 1200,"sound": "effect_skill_fss","speed": 3,"src": "skill_youlanaoyi_05","strike": 99,"sustaintime": 3000}
 		},
 		"cooldown": 4000,
 		"count": 4,
@@ -782,7 +782,7 @@
 		"name": "迷踪拳",
 		"attackValue": "5-15",
 		"bullets": {
-			"1": {"id": 13,"atlas": "skill_res","collRect": "2,2,50,50","collision": 1,"particle": "test_pt","sound": "effect_skill_ccjf","speed": 20,"src": "fire_mizongquan","strike": 99}
+			"1": {"id": 13,"atlas": "skill_res","attackMoveType": 1,"collRect": "2,2,50,50","collision": 1,"particle": "test_pt","sound": "effect_skill_ccjf","speed": 20,"src": "fire_mizongquan","strike": 99}
 		},
 		"cooldown": 1500,
 		"count": 1,
@@ -795,7 +795,7 @@
 		"name": "迷踪拳",
 		"attackValue": "5-15",
 		"bullets": {
-			"1": {"id": 13,"atlas": "skill_res","collRect": "2,2,50,50","collision": 1,"particle": "test_pt","sound": "effect_skill_ccjf","speed": 20,"src": "fire_mizongquan","strike": 99}
+			"1": {"id": 13,"atlas": "skill_res","attackMoveType": 1,"collRect": "2,2,50,50","collision": 1,"particle": "test_pt","sound": "effect_skill_ccjf","speed": 20,"src": "fire_mizongquan","strike": 99}
 		},
 		"cooldown": 1400,
 		"count": 1,
@@ -808,7 +808,7 @@
 		"name": "迷踪拳",
 		"attackValue": "5-15",
 		"bullets": {
-			"1": {"id": 13,"atlas": "skill_res","collRect": "2,2,50,50","collision": 1,"particle": "test_pt","sound": "effect_skill_ccjf","speed": 20,"src": "fire_mizongquan","strike": 99}
+			"1": {"id": 13,"atlas": "skill_res","attackMoveType": 1,"collRect": "2,2,50,50","collision": 1,"particle": "test_pt","sound": "effect_skill_ccjf","speed": 20,"src": "fire_mizongquan","strike": 99}
 		},
 		"cooldown": 1400,
 		"count": 1,
@@ -821,7 +821,7 @@
 		"name": "迷踪拳",
 		"attackValue": "5-15",
 		"bullets": {
-			"1": {"id": 13,"atlas": "skill_res","collRect": "2,2,50,50","collision": 1,"particle": "test_pt","sound": "effect_skill_ccjf","speed": 20,"src": "fire_mizongquan","strike": 99}
+			"1": {"id": 13,"atlas": "skill_res","attackMoveType": 1,"collRect": "2,2,50,50","collision": 1,"particle": "test_pt","sound": "effect_skill_ccjf","speed": 20,"src": "fire_mizongquan","strike": 99}
 		},
 		"cooldown": 1400,
 		"count": 2,
@@ -834,7 +834,7 @@
 		"name": "迷踪拳",
 		"attackValue": "5-15",
 		"bullets": {
-			"1": {"id": 13,"atlas": "skill_res","collRect": "2,2,50,50","collision": 1,"particle": "test_pt","sound": "effect_skill_ccjf","speed": 20,"src": "fire_mizongquan","strike": 99}
+			"1": {"id": 13,"atlas": "skill_res","attackMoveType": 1,"collRect": "2,2,50,50","collision": 1,"particle": "test_pt","sound": "effect_skill_ccjf","speed": 20,"src": "fire_mizongquan","strike": 99}
 		},
 		"cooldown": 1300,
 		"count": 2,
@@ -847,7 +847,7 @@
 		"name": "迷踪拳",
 		"attackValue": "5-15",
 		"bullets": {
-			"1": {"id": 13,"atlas": "skill_res","collRect": "2,2,50,50","collision": 1,"particle": "test_pt","sound": "effect_skill_ccjf","speed": 20,"src": "fire_mizongquan","strike": 99}
+			"1": {"id": 13,"atlas": "skill_res","attackMoveType": 1,"collRect": "2,2,50,50","collision": 1,"particle": "test_pt","sound": "effect_skill_ccjf","speed": 20,"src": "fire_mizongquan","strike": 99}
 		},
 		"cooldown": 1300,
 		"count": 2,
@@ -860,7 +860,7 @@
 		"name": "迷踪拳",
 		"attackValue": "5-15",
 		"bullets": {
-			"1": {"id": 13,"atlas": "skill_res","collRect": "2,2,50,50","collision": 1,"particle": "test_pt","sound": "effect_skill_ccjf","speed": 20,"src": "fire_mizongquan","strike": 99}
+			"1": {"id": 13,"atlas": "skill_res","attackMoveType": 1,"collRect": "2,2,50,50","collision": 1,"particle": "test_pt","sound": "effect_skill_ccjf","speed": 20,"src": "fire_mizongquan","strike": 99}
 		},
 		"cooldown": 1200,
 		"count": 2,
@@ -873,7 +873,7 @@
 		"name": "迷踪拳",
 		"attackValue": "5-15",
 		"bullets": {
-			"1": {"id": 13,"atlas": "skill_res","collRect": "2,2,50,50","collision": 1,"particle": "test_pt","sound": "effect_skill_ccjf","speed": 20,"src": "fire_mizongquan","strike": 99}
+			"1": {"id": 13,"atlas": "skill_res","attackMoveType": 1,"collRect": "2,2,50,50","collision": 1,"particle": "test_pt","sound": "effect_skill_ccjf","speed": 20,"src": "fire_mizongquan","strike": 99}
 		},
 		"cooldown": 1100,
 		"count": 2,
@@ -886,7 +886,7 @@
 		"name": "射箭",
 		"attackValue": "5-15",
 		"bullets": {
-			"1": {"id": 14,"atlas": "skill_res","collRect": "2,2,50,20","collision": 1,"sound": "effect_skill_ccjf","speed": 72,"src": "alleria_arrow","strike": 1}
+			"1": {"id": 14,"atlas": "skill_res","attackMoveType": 2,"collRect": "2,2,50,20","collision": 1,"sound": "effect_skill_ccjf","speed": 72,"src": "alleria_arrow","strike": 1}
 		},
 		"cooldown": 1000,
 		"count": 1,
@@ -898,7 +898,7 @@
 		"name": "射箭",
 		"attackValue": "5-15",
 		"bullets": {
-			"1": {"id": 14,"atlas": "skill_res","collRect": "2,2,50,20","collision": 1,"sound": "effect_skill_ccjf","speed": 72,"src": "alleria_arrow","strike": 1}
+			"1": {"id": 14,"atlas": "skill_res","attackMoveType": 2,"collRect": "2,2,50,20","collision": 1,"sound": "effect_skill_ccjf","speed": 72,"src": "alleria_arrow","strike": 1}
 		},
 		"cooldown": 1000,
 		"count": 2,
@@ -910,7 +910,7 @@
 		"name": "射箭",
 		"attackValue": "5-15",
 		"bullets": {
-			"1": {"id": 15,"atlas": "skill_res","collRect": "2,2,50,20","collision": 1,"sound": "effect_skill_ccjf","speed": 72,"src": "darkarmy_archer_arrow_lvl4","strike": 1}
+			"1": {"id": 15,"atlas": "skill_res","attackMoveType": 2,"collRect": "2,2,50,20","collision": 1,"sound": "effect_skill_ccjf","speed": 72,"src": "darkarmy_archer_arrow_lvl4","strike": 1}
 		},
 		"cooldown": 900,
 		"count": 2,
@@ -922,7 +922,7 @@
 		"name": "射箭",
 		"attackValue": "10-20",
 		"bullets": {
-			"1": {"id": 15,"atlas": "skill_res","collRect": "2,2,50,20","collision": 1,"sound": "effect_skill_ccjf","speed": 72,"src": "darkarmy_archer_arrow_lvl4","strike": 1}
+			"1": {"id": 15,"atlas": "skill_res","attackMoveType": 2,"collRect": "2,2,50,20","collision": 1,"sound": "effect_skill_ccjf","speed": 72,"src": "darkarmy_archer_arrow_lvl4","strike": 1}
 		},
 		"cooldown": 900,
 		"count": 3,
@@ -934,7 +934,7 @@
 		"name": "射箭",
 		"attackValue": "10-20",
 		"bullets": {
-			"1": {"id": 16,"atlas": "skill_res","collRect": "2,2,50,20","collision": 1,"sound": "effect_skill_ccjf","speed": 72,"src": "stage13_elf_arrow","strike": 1}
+			"1": {"id": 16,"atlas": "skill_res","attackMoveType": 2,"collRect": "2,2,50,20","collision": 1,"sound": "effect_skill_ccjf","speed": 72,"src": "stage13_elf_arrow","strike": 1}
 		},
 		"cooldown": 800,
 		"count": 3,
@@ -946,7 +946,7 @@
 		"name": "射箭",
 		"attackValue": "10-20",
 		"bullets": {
-			"1": {"id": 16,"atlas": "skill_res","collRect": "2,2,50,20","collision": 1,"sound": "effect_skill_ccjf","speed": 72,"src": "stage13_elf_arrow","strike": 1}
+			"1": {"id": 16,"atlas": "skill_res","attackMoveType": 2,"collRect": "2,2,50,20","collision": 1,"sound": "effect_skill_ccjf","speed": 72,"src": "stage13_elf_arrow","strike": 1}
 		},
 		"cooldown": 800,
 		"count": 4,
@@ -959,7 +959,7 @@
 		"name": "射箭",
 		"attackValue": "20-30",
 		"bullets": {
-			"1": {"id": 17,"atlas": "skill_res","collRect": "2,2,50,20","collision": 1,"sound": "effect_skill_ccjf","speed": 72,"src": "alleria_arrow_multishoot","strike": 1}
+			"1": {"id": 17,"atlas": "skill_res","attackMoveType": 2,"collRect": "2,2,50,20","collision": 1,"sound": "effect_skill_ccjf","speed": 72,"src": "alleria_arrow_multishoot","strike": 1}
 		},
 		"cooldown": 700,
 		"count": 4,
@@ -972,7 +972,7 @@
 		"name": "射箭",
 		"attackValue": "20-30",
 		"bullets": {
-			"1": {"id": 17,"atlas": "skill_res","collRect": "2,2,50,20","collision": 1,"sound": "effect_skill_ccjf","speed": 72,"src": "alleria_arrow_multishoot","strike": 1}
+			"1": {"id": 17,"atlas": "skill_res","attackMoveType": 2,"collRect": "2,2,50,20","collision": 1,"sound": "effect_skill_ccjf","speed": 72,"src": "alleria_arrow_multishoot","strike": 1}
 		},
 		"cooldown": 700,
 		"count": 5,
@@ -985,8 +985,8 @@
 		"name": "射箭",
 		"attackValue": "20-30",
 		"bullets": {
-			"1": {"id": 18,"atlas": "skill_res","collRect": "2,2,50,20","collision": 1,"sound": "effect_skill_ccjf","speed": 72,"src": "shooter_lvl4_proyectile","strike": 1},
-			"3": {"id": 19,"animation": 1,"atlas": "skill_res","collRect": "0","collision": 0,"sound": "effect_skill_ccjf","speed": 72,"src": "skill_archery_boom"}
+			"1": {"id": 18,"atlas": "skill_res","attackMoveType": 2,"collRect": "2,2,50,20","collision": 1,"sound": "effect_skill_ccjf","speed": 72,"src": "shooter_lvl4_proyectile","strike": 1},
+			"3": {"id": 19,"animation": 1,"atlas": "skill_res","attackMoveType": 1,"collRect": "0","collision": 0,"sound": "effect_skill_ccjf","speed": 72,"src": "skill_archery_boom"}
 		},
 		"cooldown": 600,
 		"count": 5,
@@ -999,7 +999,7 @@
 		"name": "烈火马",
 		"attackValue": "10-20",
 		"bullets": {
-			"1": {"id": 20,"animation": 1,"atlas": "skill_res","collRect": "2,2,200,100","collision": 1,"sound": "effect_skill_lls","speed": 100,"src": "skill_firehorse","strike": 99}
+			"1": {"id": 20,"animation": 1,"atlas": "skill_res","attackMoveType": 2,"collRect": "2,2,200,100","collision": 1,"sound": "effect_skill_lls","speed": 100,"src": "skill_firehorse","strike": 99}
 		},
 		"cooldown": 2000,
 		"count": 1,
@@ -1011,7 +1011,7 @@
 		"name": "烈火马",
 		"attackValue": "10-20",
 		"bullets": {
-			"1": {"id": 20,"animation": 1,"atlas": "skill_res","collRect": "2,2,200,100","collision": 1,"sound": "effect_skill_lls","speed": 100,"src": "skill_firehorse","strike": 99}
+			"1": {"id": 20,"animation": 1,"atlas": "skill_res","attackMoveType": 2,"collRect": "2,2,200,100","collision": 1,"sound": "effect_skill_lls","speed": 100,"src": "skill_firehorse","strike": 99}
 		},
 		"cooldown": 2000,
 		"count": 2,
@@ -1023,7 +1023,7 @@
 		"name": "烈火马",
 		"attackValue": "10-20",
 		"bullets": {
-			"1": {"id": 20,"animation": 1,"atlas": "skill_res","collRect": "2,2,200,100","collision": 1,"sound": "effect_skill_lls","speed": 100,"src": "skill_firehorse","strike": 99}
+			"1": {"id": 20,"animation": 1,"atlas": "skill_res","attackMoveType": 2,"collRect": "2,2,200,100","collision": 1,"sound": "effect_skill_lls","speed": 100,"src": "skill_firehorse","strike": 99}
 		},
 		"cooldown": 2000,
 		"count": 3,
@@ -1035,7 +1035,7 @@
 		"name": "烈火马",
 		"attackValue": "10-20",
 		"bullets": {
-			"1": {"id": 20,"animation": 1,"atlas": "skill_res","collRect": "2,2,200,100","collision": 1,"sound": "effect_skill_lls","speed": 100,"src": "skill_firehorse","strike": 99}
+			"1": {"id": 20,"animation": 1,"atlas": "skill_res","attackMoveType": 2,"collRect": "2,2,200,100","collision": 1,"sound": "effect_skill_lls","speed": 100,"src": "skill_firehorse","strike": 99}
 		},
 		"cooldown": 2000,
 		"count": 4,
@@ -1047,7 +1047,7 @@
 		"name": "烈火马",
 		"attackValue": "10-20",
 		"bullets": {
-			"1": {"id": 20,"animation": 1,"atlas": "skill_res","collRect": "2,2,200,100","collision": 1,"sound": "effect_skill_lls","speed": 100,"src": "skill_firehorse","strike": 99}
+			"1": {"id": 20,"animation": 1,"atlas": "skill_res","attackMoveType": 2,"collRect": "2,2,200,100","collision": 1,"sound": "effect_skill_lls","speed": 100,"src": "skill_firehorse","strike": 99}
 		},
 		"cooldown": 2000,
 		"count": 5,
@@ -1059,7 +1059,7 @@
 		"name": "烈火马",
 		"attackValue": "10-20",
 		"bullets": {
-			"1": {"id": 20,"animation": 1,"atlas": "skill_res","collRect": "2,2,200,100","collision": 1,"sound": "effect_skill_lls","speed": 100,"src": "skill_firehorse","strike": 99}
+			"1": {"id": 20,"animation": 1,"atlas": "skill_res","attackMoveType": 2,"collRect": "2,2,200,100","collision": 1,"sound": "effect_skill_lls","speed": 100,"src": "skill_firehorse","strike": 99}
 		},
 		"cooldown": 2000,
 		"count": 6,
@@ -1071,7 +1071,7 @@
 		"name": "烈火马",
 		"attackValue": "10-20",
 		"bullets": {
-			"1": {"id": 20,"animation": 1,"atlas": "skill_res","collRect": "2,2,200,100","collision": 1,"sound": "effect_skill_lls","speed": 100,"src": "skill_firehorse","strike": 99}
+			"1": {"id": 20,"animation": 1,"atlas": "skill_res","attackMoveType": 2,"collRect": "2,2,200,100","collision": 1,"sound": "effect_skill_lls","speed": 100,"src": "skill_firehorse","strike": 99}
 		},
 		"cooldown": 2000,
 		"count": 7,
@@ -1083,7 +1083,7 @@
 		"name": "烈火马",
 		"attackValue": "10-20",
 		"bullets": {
-			"1": {"id": 20,"animation": 1,"atlas": "skill_res","collRect": "2,2,200,100","collision": 1,"sound": "effect_skill_lls","speed": 100,"src": "skill_firehorse","strike": 99}
+			"1": {"id": 20,"animation": 1,"atlas": "skill_res","attackMoveType": 2,"collRect": "2,2,200,100","collision": 1,"sound": "effect_skill_lls","speed": 100,"src": "skill_firehorse","strike": 99}
 		},
 		"cooldown": 2000,
 		"count": 8,
@@ -1095,7 +1095,7 @@
 		"name": "烈火马",
 		"attackValue": "10-20",
 		"bullets": {
-			"1": {"id": 20,"animation": 1,"atlas": "skill_res","collRect": "2,2,200,100","collision": 1,"sound": "effect_skill_lls","speed": 100,"src": "skill_firehorse","strike": 99}
+			"1": {"id": 20,"animation": 1,"atlas": "skill_res","attackMoveType": 2,"collRect": "2,2,200,100","collision": 1,"sound": "effect_skill_lls","speed": 100,"src": "skill_firehorse","strike": 99}
 		},
 		"cooldown": 2000,
 		"count": 9,
@@ -1107,8 +1107,8 @@
 		"name": "毒树藤",
 		"attackValue": "2-6",
 		"bullets": {
-			"1": {"id": 21,"atlas": "skill_posion/posion","collRect": "0","collision": 0,"particle": "posion_timbo_pt","sound": "0","src": "wicked_sisters_proy_green_0001"},
-			"3": {"id": 22,"animation": 1,"atlas": "skill_posion/posion","collRect": "2,2,200,100","collision": 1,"delayDamage": 3000,"sound": "effect_skill_lls","src": "skill_posion","strike": 99,"sustaintime": 3000}
+			"1": {"id": 21,"atlas": "skill_posion/posion","attackMoveType": 1,"collRect": "0","collision": 0,"particle": "posion_timbo_pt","sound": "0","speed": 1,"src": "wicked_sisters_proy_green_0001"},
+			"3": {"id": 22,"animation": 1,"atlas": "skill_posion/posion","attackMoveType": 1,"collRect": "2,2,200,100","collision": 1,"delayDamage": 1200,"sound": "effect_skill_lls","src": "skill_posion","strike": 99,"sustaintime": 3000}
 		},
 		"cooldown": 2000,
 		"count": 1,
@@ -1122,8 +1122,8 @@
 		"name": "毒树藤",
 		"attackValue": "2-6",
 		"bullets": {
-			"1": {"id": 21,"atlas": "skill_posion/posion","collRect": "0","collision": 0,"particle": "posion_timbo_pt","sound": "0","src": "wicked_sisters_proy_green_0001"},
-			"3": {"id": 22,"animation": 1,"atlas": "skill_posion/posion","collRect": "2,2,200,100","collision": 1,"delayDamage": 3000,"sound": "effect_skill_lls","src": "skill_posion","strike": 99,"sustaintime": 3000}
+			"1": {"id": 21,"atlas": "skill_posion/posion","attackMoveType": 1,"collRect": "0","collision": 0,"particle": "posion_timbo_pt","sound": "0","speed": 1,"src": "wicked_sisters_proy_green_0001"},
+			"3": {"id": 22,"animation": 1,"atlas": "skill_posion/posion","attackMoveType": 1,"collRect": "2,2,200,100","collision": 1,"delayDamage": 1200,"sound": "effect_skill_lls","src": "skill_posion","strike": 99,"sustaintime": 3000}
 		},
 		"cooldown": 2000,
 		"count": 1,
@@ -1137,8 +1137,8 @@
 		"name": "毒树藤",
 		"attackValue": "2-6",
 		"bullets": {
-			"1": {"id": 21,"atlas": "skill_posion/posion","collRect": "0","collision": 0,"particle": "posion_timbo_pt","sound": "0","src": "wicked_sisters_proy_green_0001"},
-			"3": {"id": 22,"animation": 1,"atlas": "skill_posion/posion","collRect": "2,2,200,100","collision": 1,"delayDamage": 3000,"sound": "effect_skill_lls","src": "skill_posion","strike": 99,"sustaintime": 3000}
+			"1": {"id": 21,"atlas": "skill_posion/posion","attackMoveType": 1,"collRect": "0","collision": 0,"particle": "posion_timbo_pt","sound": "0","speed": 1,"src": "wicked_sisters_proy_green_0001"},
+			"3": {"id": 22,"animation": 1,"atlas": "skill_posion/posion","attackMoveType": 1,"collRect": "2,2,200,100","collision": 1,"delayDamage": 1200,"sound": "effect_skill_lls","src": "skill_posion","strike": 99,"sustaintime": 3000}
 		},
 		"cooldown": 2000,
 		"count": 2,
@@ -1152,8 +1152,8 @@
 		"name": "毒树藤",
 		"attackValue": "2-6",
 		"bullets": {
-			"1": {"id": 21,"atlas": "skill_posion/posion","collRect": "0","collision": 0,"particle": "posion_timbo_pt","sound": "0","src": "wicked_sisters_proy_green_0001"},
-			"3": {"id": 22,"animation": 1,"atlas": "skill_posion/posion","collRect": "2,2,200,100","collision": 1,"delayDamage": 3000,"sound": "effect_skill_lls","src": "skill_posion","strike": 99,"sustaintime": 3000}
+			"1": {"id": 21,"atlas": "skill_posion/posion","attackMoveType": 1,"collRect": "0","collision": 0,"particle": "posion_timbo_pt","sound": "0","speed": 1,"src": "wicked_sisters_proy_green_0001"},
+			"3": {"id": 22,"animation": 1,"atlas": "skill_posion/posion","attackMoveType": 1,"collRect": "2,2,200,100","collision": 1,"delayDamage": 1200,"sound": "effect_skill_lls","src": "skill_posion","strike": 99,"sustaintime": 3000}
 		},
 		"cooldown": 2000,
 		"count": 2,
@@ -1167,8 +1167,8 @@
 		"name": "毒树藤",
 		"attackValue": "2-6",
 		"bullets": {
-			"1": {"id": 21,"atlas": "skill_posion/posion","collRect": "0","collision": 0,"particle": "posion_timbo_pt","sound": "0","src": "wicked_sisters_proy_green_0001"},
-			"3": {"id": 22,"animation": 1,"atlas": "skill_posion/posion","collRect": "2,2,200,100","collision": 1,"delayDamage": 3000,"sound": "effect_skill_lls","src": "skill_posion","strike": 99,"sustaintime": 3000}
+			"1": {"id": 21,"atlas": "skill_posion/posion","attackMoveType": 1,"collRect": "0","collision": 0,"particle": "posion_timbo_pt","sound": "0","speed": 1,"src": "wicked_sisters_proy_green_0001"},
+			"3": {"id": 22,"animation": 1,"atlas": "skill_posion/posion","attackMoveType": 1,"collRect": "2,2,200,100","collision": 1,"delayDamage": 1200,"sound": "effect_skill_lls","src": "skill_posion","strike": 99,"sustaintime": 3000}
 		},
 		"cooldown": 2000,
 		"count": 3,
@@ -1182,8 +1182,8 @@
 		"name": "毒树藤",
 		"attackValue": "2-6",
 		"bullets": {
-			"1": {"id": 21,"atlas": "skill_posion/posion","collRect": "0","collision": 0,"particle": "posion_timbo_pt","sound": "0","src": "wicked_sisters_proy_green_0001"},
-			"3": {"id": 22,"animation": 1,"atlas": "skill_posion/posion","collRect": "2,2,200,100","collision": 1,"delayDamage": 3000,"sound": "effect_skill_lls","src": "skill_posion","strike": 99,"sustaintime": 3000}
+			"1": {"id": 21,"atlas": "skill_posion/posion","attackMoveType": 1,"collRect": "0","collision": 0,"particle": "posion_timbo_pt","sound": "0","speed": 1,"src": "wicked_sisters_proy_green_0001"},
+			"3": {"id": 22,"animation": 1,"atlas": "skill_posion/posion","attackMoveType": 1,"collRect": "2,2,200,100","collision": 1,"delayDamage": 1200,"sound": "effect_skill_lls","src": "skill_posion","strike": 99,"sustaintime": 3000}
 		},
 		"cooldown": 2000,
 		"count": 3,
@@ -1197,8 +1197,8 @@
 		"name": "毒树藤",
 		"attackValue": "2-6",
 		"bullets": {
-			"1": {"id": 21,"atlas": "skill_posion/posion","collRect": "0","collision": 0,"particle": "posion_timbo_pt","sound": "0","src": "wicked_sisters_proy_green_0001"},
-			"3": {"id": 22,"animation": 1,"atlas": "skill_posion/posion","collRect": "2,2,200,100","collision": 1,"delayDamage": 3000,"sound": "effect_skill_lls","src": "skill_posion","strike": 99,"sustaintime": 3000}
+			"1": {"id": 21,"atlas": "skill_posion/posion","attackMoveType": 1,"collRect": "0","collision": 0,"particle": "posion_timbo_pt","sound": "0","speed": 1,"src": "wicked_sisters_proy_green_0001"},
+			"3": {"id": 22,"animation": 1,"atlas": "skill_posion/posion","attackMoveType": 1,"collRect": "2,2,200,100","collision": 1,"delayDamage": 1200,"sound": "effect_skill_lls","src": "skill_posion","strike": 99,"sustaintime": 3000}
 		},
 		"cooldown": 2000,
 		"count": 4,
@@ -1212,8 +1212,8 @@
 		"name": "毒树藤",
 		"attackValue": "2-6",
 		"bullets": {
-			"1": {"id": 21,"atlas": "skill_posion/posion","collRect": "0","collision": 0,"particle": "posion_timbo_pt","sound": "0","src": "wicked_sisters_proy_green_0001"},
-			"3": {"id": 22,"animation": 1,"atlas": "skill_posion/posion","collRect": "2,2,200,100","collision": 1,"delayDamage": 3000,"sound": "effect_skill_lls","src": "skill_posion","strike": 99,"sustaintime": 3000}
+			"1": {"id": 21,"atlas": "skill_posion/posion","attackMoveType": 1,"collRect": "0","collision": 0,"particle": "posion_timbo_pt","sound": "0","speed": 1,"src": "wicked_sisters_proy_green_0001"},
+			"3": {"id": 22,"animation": 1,"atlas": "skill_posion/posion","attackMoveType": 1,"collRect": "2,2,200,100","collision": 1,"delayDamage": 1200,"sound": "effect_skill_lls","src": "skill_posion","strike": 99,"sustaintime": 3000}
 		},
 		"cooldown": 2000,
 		"count": 5,

@@ -26,7 +26,8 @@ export default class PosionTimboSkill extends SkillParent {
     //发射子弹
     shootBullet()
     {
-        
+        this._angle += 30;
+        this._angle = this._angle > 360 ? this._angle - 360 : this._angle;
         var heroPosition = Hero.Instance.getEntity().position;
         var bullet = this.spawnBullet(ClientDef.BULLET_PHASE_1);
         bullet.getNode().active = true;
@@ -36,11 +37,4 @@ export default class PosionTimboSkill extends SkillParent {
         
     }
 
-    update (dt) 
-    {
-        this._angle += 30;
-        this._angle = this._angle > 360 ? this._angle - 360 : this._angle;
-        super.update(dt);
-    }
-    
 }

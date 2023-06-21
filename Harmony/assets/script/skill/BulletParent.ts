@@ -133,8 +133,16 @@ export default class BulletParent {
         return this._prop[type] || 0;
     }
 
-    getDamageValue()
+    getDamageValue(target)
     {
+        var tgtMoveType = target.node.getEntityDict()["moveType"];
+        var bulletAtkMoveType = this._bulletInfo.attackMoveType;
+
+        if(bulletAtkMoveType < tgtMoveType)
+        {
+            return 0;
+        }
+
         var min = this.getProp(ClientDef.BULLET_PROP_ATK_MIN);
         var max = this.getProp(ClientDef.BULLET_PROP_ATK_MAX);
         var value = Math.floor(min + Math.random() * (max-min));
@@ -261,7 +269,8 @@ export default class BulletParent {
         {
             return;
         }
-        var damageValue = this.getDamageValue();
+        var damageValue = this.getDamageValue(other);
+        if(damageValue == 0)return;
         tgt.getEntityComponent(ClientDef.ENTITY_COMP_BLOOM).addDamage( damageValue );
         var strike = this.getProp(ClientDef.BULLET_PROP_STRIKE);
         strike --;

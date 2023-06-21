@@ -14,6 +14,10 @@ end
 -- 数据
 local gdentity = {}
 
+local MoveType = {}
+MoveType["走路"] = 1
+MoveType["飞行"] = 2
+
 function handle_entity(o)
 	local d = {}
 
@@ -32,6 +36,7 @@ function handle_entity(o)
 	d.collGroup = o.h
 	d.dropItem = o.i
 	d.moveSpeed = tonumber(o.j)
+	d.moveType = MoveType[o.k]
 	gdentity[tostring(d.id)] = d
 end
 

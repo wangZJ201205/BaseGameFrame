@@ -329,7 +329,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 234,
+      "width": 230,
       "height": 56.49999999999999
     },
     "_anchorPoint": {
@@ -376,12 +376,12 @@
     "_enabled": true,
     "_fontFamily": "Arial",
     "_isSystemFontUsed": true,
-    "_N$string": "技能描述技能描述技能描述技\n能描述技能描述技能描述",
+    "_N$string": "技能描述技能描述技能描述技能描述技能描述技能描述",
     "_N$horizontalAlign": 0,
     "_N$fontSize": 18,
     "_N$font": null,
     "_N$cacheMode": 0,
-    "_N$maxWidth": 0,
+    "_N$maxWidth": 230,
     "_N$lineHeight": 25,
     "_N$imageAtlas": null,
     "_N$handleTouchEvent": true,
