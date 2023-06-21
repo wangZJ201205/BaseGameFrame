@@ -1221,5 +1221,131 @@
 		"desc": "毒树藤可以让敌人中毒持续受伤",
 		"icon": "towerselect_powers_0031",
 		"range": 270
+	},
+	"11301": {
+		"id": 11301,
+		"name": "火墙",
+		"attackValue": "2-6",
+		"bullets": {
+			"1": {"id": 23,"animation": 1,"atlas": "skill_fire_wall/firewall","attackMoveType": 1,"collRect": "2,2,200,100","collision": 1,"delayDamage": 1200,"sound": "effect_skill_lls","src": "skill_fire_wall","strike": 99,"sustaintime": 3000}
+		},
+		"cooldown": 2000,
+		"count": 5,
+		"delaytime": 100,
+		"desc": "火墙可以在英雄周围生成一片",
+		"icon": "special_icons_0022",
+		"range": 270
+	},
+	"11302": {
+		"id": 11302,
+		"name": "火墙",
+		"attackValue": "2-6",
+		"bullets": {
+			"1": {"id": 23,"animation": 1,"atlas": "skill_fire_wall/firewall","attackMoveType": 1,"collRect": "2,2,200,100","collision": 1,"delayDamage": 1200,"sound": "effect_skill_lls","src": "skill_fire_wall","strike": 99,"sustaintime": 3000}
+		},
+		"cooldown": 2000,
+		"count": 5,
+		"delaytime": 100,
+		"desc": "火墙可以在英雄周围生成一片",
+		"icon": "special_icons_0022",
+		"range": 270
+	},
+	"11303": {
+		"id": 11303,
+		"name": "火墙",
+		"attackValue": "2-6",
+		"bullets": {
+			"1": {"id": 23,"animation": 1,"atlas": "skill_fire_wall/firewall","attackMoveType": 1,"collRect": "2,2,200,100","collision": 1,"delayDamage": 1200,"sound": "effect_skill_lls","src": "skill_fire_wall","strike": 99,"sustaintime": 3000}
+		},
+		"cooldown": 2000,
+		"count": 5,
+		"delaytime": 100,
+		"desc": "火墙可以在英雄周围生成一片",
+		"icon": "special_icons_0022",
+		"range": 270
+	},
+	"11304": {
+		"id": 11304,
+		"name": "火墙",
+		"attackValue": "2-6",
+		"bullets": {
+			"1": {"id": 23,"animation": 1,"atlas": "skill_fire_wall/firewall","attackMoveType": 1,"collRect": "2,2,200,100","collision": 1,"delayDamage": 1200,"sound": "effect_skill_lls","src": "skill_fire_wall","strike": 99,"sustaintime": 3000}
+		},
+		"cooldown": 2000,
+		"count": 5,
+		"delaytime": 100,
+		"desc": "火墙可以在英雄周围生成一片",
+		"icon": "special_icons_0022",
+		"range": 270
+	},
+	"11305": {
+		"id": 11305,
+		"name": "火墙",
+		"attackValue": "2-6",
+		"bullets": {
+			"1": {"id": 23,"animation": 1,"atlas": "skill_fire_wall/firewall","attackMoveType": 1,"collRect": "2,2,200,100","collision": 1,"delayDamage": 1200,"sound": "effect_skill_lls","src": "skill_fire_wall","strike": 99,"sustaintime": 3000}
+		},
+		"cooldown": 2000,
+		"count": 5,
+		"delaytime": 100,
+		"desc": "火墙可以在英雄周围生成一片",
+		"icon": "special_icons_0022",
+		"range": 270
+	},
+	"11306": {
+		"id": 11306,
+		"name": "火墙",
+		"attackValue": "2-6",
+		"bullets": {
+			"1": {"id": 23,"animation": 1,"atlas": "skill_fire_wall/firewall","attackMoveType": 1,"collRect": "2,2,200,100","collision": 1,"delayDamage": 1200,"sound": "effect_skill_lls","src": "skill_fire_wall","strike": 99,"sustaintime": 3000}
+		},
+		"cooldown": 2000,
+		"count": 5,
+		"delaytime": 100,
+		"desc": "火墙可以在英雄周围生成一片",
+		"icon": "special_icons_0022",
+		"range": 270
+	},
+	"11307": {
+		"id": 11307,
+		"name": "火墙",
+		"attackValue": "2-6",
+		"bullets": {
+			"1": {"id": 23,"animation": 1,"atlas": "skill_fire_wall/firewall","attackMoveType": 1,"collRect": "2,2,200,100","collision": 1,"delayDamage": 1200,"sound": "effect_skill_lls","src": "skill_fire_wall","strike": 99,"sustaintime": 3000}
+		},
+		"cooldown": 2000,
+		"count": 5,
+		"delaytime": 100,
+		"desc": "火墙可以在英雄周围生成一片",
+		"icon": "special_icons_0022",
+		"range": 270
+	},
+	"11308": {
+		"id": 11308,
+		"name": "火墙",
+		"attackValue": "2-6",
+		"bullets": {
+			"1": {"id": 23,"animation": 1,"atlas": "skill_fire_wall/firewall","attackMoveType": 1,"collRect": "2,2,200,100","collision": 1,"delayDamage": 1200,"sound": "effect_skill_lls","src": "skill_fire_wall","strike": 99,"sustaintime": 3000}
+		},
+		"cooldown": 2000,
+		"count": 5,
+		"delaytime": 100,
+		"desc": "火墙可以在英雄周围生成一片",
+		"icon": "special_icons_0022",
+		"range": 270
+	},
+	"11309": {
+		"id": 11309,
+		"name": "火墙",
+		"attackValue": "2-6",
+		"bullets": {
+			"1": {"id": 23,"animation": 1,"atlas": "skill_fire_wall/firewall","attackMoveType": 1,"collRect": "2,2,200,100","collision": 1,"delayDamage": 1200,"sound": "effect_skill_lls","src": "skill_fire_wall","strike": 99,"sustaintime": 3000}
+		},
+		"cooldown": 2000,
+		"count": 5,
+		"delaytime": 100,
+		"desc": "火墙可以在英雄周围生成一片",
+		"icon": "special_icons_0022",
+		"range": 270
 	}
 }

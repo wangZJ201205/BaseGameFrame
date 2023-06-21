@@ -4,863 +4,876 @@
     <dict>
         <key>frames</key>
         <dict>
-            <key>hero_fire_wall_00000001.png</key>
+            <key>hero_tank_ultimate_fire_0001.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{1958,434},{76,74}}</string>
+                <string>{{1030,1925},{114,113}}</string>
                 <key>offset</key>
-                <string>{-5,-40}</string>
+                <string>{3,-47}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{17,89},{76,74}}</string>
+                <string>{{85,139},{114,113}}</string>
                 <key>sourceSize</key>
-                <string>{120,172}</string>
+                <string>{278,297}</string>
             </dict>
-            <key>hero_fire_wall_00000002.png</key>
+            <key>hero_tank_ultimate_fire_0002.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{1876,352},{80,150}}</string>
+                <string>{{727,660},{122,229}}</string>
                 <key>offset</key>
-                <string>{-6,-5}</string>
-                <key>rotated</key>
-                <false/>
-                <key>sourceColorRect</key>
-                <string>{{14,16},{80,150}}</string>
-                <key>sourceSize</key>
-                <string>{120,172}</string>
-            </dict>
-            <key>hero_fire_wall_00000003.png</key>
-            <dict>
-                <key>frame</key>
-                <string>{{1870,2},{86,156}}</string>
-                <key>offset</key>
-                <string>{-4,-4}</string>
+                <string>{1,6}</string>
                 <key>rotated</key>
                 <true/>
                 <key>sourceColorRect</key>
-                <string>{{13,12},{86,156}}</string>
+                <string>{{79,28},{122,229}}</string>
                 <key>sourceSize</key>
-                <string>{120,172}</string>
+                <string>{278,297}</string>
             </dict>
-            <key>hero_fire_wall_00000004.png</key>
+            <key>hero_tank_ultimate_fire_0003.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{1370,352},{90,162}}</string>
+                <string>{{249,502},{130,239}}</string>
                 <key>offset</key>
-                <string>{-4,-3}</string>
+                <string>{3,9}</string>
                 <key>rotated</key>
                 <true/>
                 <key>sourceColorRect</key>
-                <string>{{11,8},{90,162}}</string>
+                <string>{{77,20},{130,239}}</string>
                 <key>sourceSize</key>
-                <string>{120,172}</string>
+                <string>{278,297}</string>
             </dict>
-            <key>hero_fire_wall_00000005.png</key>
+            <key>hero_tank_ultimate_fire_0004.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{880,394},{92,164}}</string>
+                <string>{{514,312},{134,247}}</string>
                 <key>offset</key>
-                <string>{-3,-2}</string>
+                <string>{4,10}</string>
                 <key>rotated</key>
                 <true/>
                 <key>sourceColorRect</key>
-                <string>{{11,6},{92,164}}</string>
+                <string>{{76,15},{134,247}}</string>
                 <key>sourceSize</key>
-                <string>{120,172}</string>
+                <string>{278,297}</string>
             </dict>
-            <key>hero_fire_wall_00000006.png</key>
+            <key>hero_tank_ultimate_fire_0005.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{1774,356},{100,138}}</string>
+                <string>{{526,172},{138,251}}</string>
                 <key>offset</key>
-                <string>{-2,-16}</string>
-                <key>rotated</key>
-                <false/>
-                <key>sourceColorRect</key>
-                <string>{{8,33},{100,138}}</string>
-                <key>sourceSize</key>
-                <string>{120,172}</string>
-            </dict>
-            <key>hero_fire_wall_00000007.png</key>
-            <dict>
-                <key>frame</key>
-                <string>{{1672,356},{100,138}}</string>
-                <key>offset</key>
-                <string>{-3,-16}</string>
-                <key>rotated</key>
-                <false/>
-                <key>sourceColorRect</key>
-                <string>{{7,33},{100,138}}</string>
-                <key>sourceSize</key>
-                <string>{120,172}</string>
-            </dict>
-            <key>hero_fire_wall_00000008.png</key>
-            <dict>
-                <key>frame</key>
-                <string>{{1642,252},{102,138}}</string>
-                <key>offset</key>
-                <string>{-4,-16}</string>
+                <string>{5,11}</string>
                 <key>rotated</key>
                 <true/>
                 <key>sourceColorRect</key>
-                <string>{{5,33},{102,138}}</string>
+                <string>{{75,12},{138,251}}</string>
                 <key>sourceSize</key>
-                <string>{120,172}</string>
+                <string>{278,297}</string>
             </dict>
-            <key>hero_fire_wall_00000009.png</key>
+            <key>hero_tank_ultimate_fire_0006.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{1642,110},{102,140}}</string>
+                <string>{{860,1602},{150,209}}</string>
                 <key>offset</key>
-                <string>{-4,-16}</string>
-                <key>rotated</key>
-                <false/>
-                <key>sourceColorRect</key>
-                <string>{{5,32},{102,140}}</string>
-                <key>sourceSize</key>
-                <string>{120,172}</string>
-            </dict>
-            <key>hero_fire_wall_00000010.png</key>
-            <dict>
-                <key>frame</key>
-                <string>{{1534,386},{106,136}}</string>
-                <key>offset</key>
-                <string>{-4,-18}</string>
+                <string>{7,-11}</string>
                 <key>rotated</key>
                 <true/>
                 <key>sourceColorRect</key>
-                <string>{{3,36},{106,136}}</string>
+                <string>{{71,55},{150,209}}</string>
                 <key>sourceSize</key>
-                <string>{120,172}</string>
+                <string>{278,297}</string>
             </dict>
-            <key>hero_fire_wall_00000011.png</key>
+            <key>hero_tank_ultimate_fire_0007.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{1254,244},{106,140}}</string>
+                <string>{{1004,360},{152,211}}</string>
                 <key>offset</key>
-                <string>{-3,-16}</string>
+                <string>{6,-11}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{69,54},{152,211}}</string>
+                <key>sourceSize</key>
+                <string>{278,297}</string>
+            </dict>
+            <key>hero_tank_ultimate_fire_0008.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{2,1640},{154,209}}</string>
+                <key>offset</key>
+                <string>{5,-13}</string>
                 <key>rotated</key>
                 <true/>
                 <key>sourceColorRect</key>
-                <string>{{4,32},{106,140}}</string>
+                <string>{{67,57},{154,209}}</string>
                 <key>sourceSize</key>
-                <string>{120,172}</string>
+                <string>{278,297}</string>
             </dict>
-            <key>hero_fire_wall_00000012.png</key>
+            <key>hero_tank_ultimate_fire_0009.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{1108,146},{106,142}}</string>
+                <string>{{657,1276},{154,213}}</string>
                 <key>offset</key>
-                <string>{-3,-15}</string>
+                <string>{5,-12}</string>
                 <key>rotated</key>
                 <true/>
                 <key>sourceColorRect</key>
-                <string>{{4,30},{106,142}}</string>
+                <string>{{67,54},{154,213}}</string>
                 <key>sourceSize</key>
-                <string>{120,172}</string>
+                <string>{278,297}</string>
             </dict>
-            <key>hero_fire_wall_00000013.png</key>
+            <key>hero_tank_ultimate_fire_0010.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{1854,110},{106,130}}</string>
+                <string>{{649,1432},{162,211}}</string>
                 <key>offset</key>
-                <string>{-3,-21}</string>
-                <key>rotated</key>
-                <false/>
-                <key>sourceColorRect</key>
-                <string>{{4,42},{106,130}}</string>
-                <key>sourceSize</key>
-                <string>{120,172}</string>
-            </dict>
-            <key>hero_fire_wall_00000014.png</key>
-            <dict>
-                <key>frame</key>
-                <string>{{1746,110},{106,132}}</string>
-                <key>offset</key>
-                <string>{-3,-20}</string>
-                <key>rotated</key>
-                <false/>
-                <key>sourceColorRect</key>
-                <string>{{4,40},{106,132}}</string>
-                <key>sourceSize</key>
-                <string>{120,172}</string>
-            </dict>
-            <key>hero_fire_wall_00000015.png</key>
-            <dict>
-                <key>frame</key>
-                <string>{{1534,248},{106,136}}</string>
-                <key>offset</key>
-                <string>{-3,-18}</string>
-                <key>rotated</key>
-                <false/>
-                <key>sourceColorRect</key>
-                <string>{{4,36},{106,136}}</string>
-                <key>sourceSize</key>
-                <string>{120,172}</string>
-            </dict>
-            <key>hero_fire_wall_00000016.png</key>
-            <dict>
-                <key>frame</key>
-                <string>{{1262,352},{106,138}}</string>
-                <key>offset</key>
-                <string>{-3,-17}</string>
-                <key>rotated</key>
-                <false/>
-                <key>sourceColorRect</key>
-                <string>{{4,34},{106,138}}</string>
-                <key>sourceSize</key>
-                <string>{120,172}</string>
-            </dict>
-            <key>hero_fire_wall_00000017.png</key>
-            <dict>
-                <key>frame</key>
-                <string>{{1090,2},{106,142}}</string>
-                <key>offset</key>
-                <string>{-3,-15}</string>
-                <key>rotated</key>
-                <false/>
-                <key>sourceColorRect</key>
-                <string>{{4,30},{106,142}}</string>
-                <key>sourceSize</key>
-                <string>{120,172}</string>
-            </dict>
-            <key>hero_fire_wall_00000018.png</key>
-            <dict>
-                <key>frame</key>
-                <string>{{1596,2},{106,136}}</string>
-                <key>offset</key>
-                <string>{-4,-18}</string>
+                <string>{4,-15}</string>
                 <key>rotated</key>
                 <true/>
                 <key>sourceColorRect</key>
-                <string>{{3,36},{106,136}}</string>
+                <string>{{62,58},{162,211}}</string>
                 <key>sourceSize</key>
-                <string>{120,172}</string>
+                <string>{278,297}</string>
             </dict>
-            <key>hero_fire_wall_00000019.png</key>
+            <key>hero_tank_ultimate_fire_0011.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{982,2},{106,142}}</string>
+                <string>{{440,1268},{162,215}}</string>
                 <key>offset</key>
-                <string>{-4,-15}</string>
-                <key>rotated</key>
-                <false/>
-                <key>sourceColorRect</key>
-                <string>{{3,30},{106,142}}</string>
-                <key>sourceSize</key>
-                <string>{120,172}</string>
-            </dict>
-            <key>hero_fire_wall_00000020.png</key>
-            <dict>
-                <key>frame</key>
-                <string>{{732,398},{106,146}}</string>
-                <key>offset</key>
-                <string>{-4,-13}</string>
+                <string>{4,-13}</string>
                 <key>rotated</key>
                 <true/>
                 <key>sourceColorRect</key>
-                <string>{{3,26},{106,146}}</string>
+                <string>{{62,54},{162,215}}</string>
                 <key>sourceSize</key>
-                <string>{120,172}</string>
+                <string>{278,297}</string>
             </dict>
-            <key>hero_fire_wall_00000021.png</key>
+            <key>hero_tank_ultimate_fire_0012.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{766,2},{106,148}}</string>
+                <string>{{464,940},{162,219}}</string>
                 <key>offset</key>
-                <string>{-4,-12}</string>
-                <key>rotated</key>
-                <false/>
-                <key>sourceColorRect</key>
-                <string>{{3,24},{106,148}}</string>
-                <key>sourceSize</key>
-                <string>{120,172}</string>
-            </dict>
-            <key>hero_fire_wall_00000022.png</key>
-            <dict>
-                <key>frame</key>
-                <string>{{658,2},{106,150}}</string>
-                <key>offset</key>
-                <string>{-4,-11}</string>
-                <key>rotated</key>
-                <false/>
-                <key>sourceColorRect</key>
-                <string>{{3,22},{106,150}}</string>
-                <key>sourceSize</key>
-                <string>{120,172}</string>
-            </dict>
-            <key>hero_fire_wall_00000023.png</key>
-            <dict>
-                <key>frame</key>
-                <string>{{442,2},{106,152}}</string>
-                <key>offset</key>
-                <string>{-4,-10}</string>
-                <key>rotated</key>
-                <false/>
-                <key>sourceColorRect</key>
-                <string>{{3,20},{106,152}}</string>
-                <key>sourceSize</key>
-                <string>{120,172}</string>
-            </dict>
-            <key>hero_fire_wall_00000024.png</key>
-            <dict>
-                <key>frame</key>
-                <string>{{388,326},{106,156}}</string>
-                <key>offset</key>
-                <string>{-4,-8}</string>
-                <key>rotated</key>
-                <false/>
-                <key>sourceColorRect</key>
-                <string>{{3,16},{106,156}}</string>
-                <key>sourceSize</key>
-                <string>{120,172}</string>
-            </dict>
-            <key>hero_fire_wall_00000025.png</key>
-            <dict>
-                <key>frame</key>
-                <string>{{332,164},{106,160}}</string>
-                <key>offset</key>
-                <string>{-4,-6}</string>
-                <key>rotated</key>
-                <false/>
-                <key>sourceColorRect</key>
-                <string>{{3,12},{106,160}}</string>
-                <key>sourceSize</key>
-                <string>{120,172}</string>
-            </dict>
-            <key>hero_fire_wall_00000026.png</key>
-            <dict>
-                <key>frame</key>
-                <string>{{224,168},{106,162}}</string>
-                <key>offset</key>
-                <string>{-4,-5}</string>
-                <key>rotated</key>
-                <false/>
-                <key>sourceColorRect</key>
-                <string>{{3,10},{106,162}}</string>
-                <key>sourceSize</key>
-                <string>{120,172}</string>
-            </dict>
-            <key>hero_fire_wall_00000027.png</key>
-            <dict>
-                <key>frame</key>
-                <string>{{116,168},{106,166}}</string>
-                <key>offset</key>
-                <string>{-4,-3}</string>
-                <key>rotated</key>
-                <false/>
-                <key>sourceColorRect</key>
-                <string>{{3,6},{106,166}}</string>
-                <key>sourceSize</key>
-                <string>{120,172}</string>
-            </dict>
-            <key>hero_fire_wall_00000028.png</key>
-            <dict>
-                <key>frame</key>
-                <string>{{2,344},{106,168}}</string>
-                <key>offset</key>
-                <string>{-3,-2}</string>
+                <string>{4,-11}</string>
                 <key>rotated</key>
                 <true/>
                 <key>sourceColorRect</key>
-                <string>{{4,4},{106,168}}</string>
+                <string>{{62,50},{162,219}}</string>
                 <key>sourceSize</key>
-                <string>{120,172}</string>
+                <string>{278,297}</string>
             </dict>
-            <key>hero_fire_wall_00000029.png</key>
+            <key>hero_tank_ultimate_fire_0013.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,344},{106,168}}</string>
+                <string>{{866,1754},{162,199}}</string>
                 <key>offset</key>
-                <string>{-3,-2}</string>
+                <string>{4,-21}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{62,70},{162,199}}</string>
+                <key>sourceSize</key>
+                <string>{278,297}</string>
+            </dict>
+            <key>hero_tank_ultimate_fire_0014.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{346,1794},{162,205}}</string>
+                <key>offset</key>
+                <string>{4,-18}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{62,64},{162,205}}</string>
+                <key>sourceSize</key>
+                <string>{278,297}</string>
+            </dict>
+            <key>hero_tank_ultimate_fire_0015.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{215,1630},{162,209}}</string>
+                <key>offset</key>
+                <string>{4,-16}</string>
                 <key>rotated</key>
                 <true/>
                 <key>sourceColorRect</key>
-                <string>{{4,4},{106,168}}</string>
+                <string>{{62,60},{162,209}}</string>
                 <key>sourceSize</key>
-                <string>{120,172}</string>
+                <string>{278,297}</string>
             </dict>
-            <key>hero_fire_wall_00000030.png</key>
+            <key>hero_tank_ultimate_fire_0016.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{1154,362},{106,140}}</string>
+                <string>{{884,1274},{162,213}}</string>
                 <key>offset</key>
-                <string>{-5,-16}</string>
-                <key>rotated</key>
-                <false/>
-                <key>sourceColorRect</key>
-                <string>{{2,32},{106,140}}</string>
-                <key>sourceSize</key>
-                <string>{120,172}</string>
-            </dict>
-            <key>hero_fire_wall_00000031.png</key>
-            <dict>
-                <key>frame</key>
-                <string>{{1046,362},{106,142}}</string>
-                <key>offset</key>
-                <string>{-5,-15}</string>
-                <key>rotated</key>
-                <false/>
-                <key>sourceColorRect</key>
-                <string>{{2,30},{106,142}}</string>
-                <key>sourceSize</key>
-                <string>{120,172}</string>
-            </dict>
-            <key>hero_fire_wall_00000032.png</key>
-            <dict>
-                <key>frame</key>
-                <string>{{1314,2},{106,140}}</string>
-                <key>offset</key>
-                <string>{-5,-16}</string>
+                <string>{4,-14}</string>
                 <key>rotated</key>
                 <true/>
                 <key>sourceColorRect</key>
-                <string>{{2,32},{106,140}}</string>
+                <string>{{62,56},{162,213}}</string>
                 <key>sourceSize</key>
-                <string>{120,172}</string>
+                <string>{278,297}</string>
             </dict>
-            <key>hero_fire_wall_00000033.png</key>
+            <key>hero_tank_ultimate_fire_0017.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{968,254},{106,142}}</string>
+                <string>{{2,1148},{162,217}}</string>
                 <key>offset</key>
-                <string>{-5,-15}</string>
+                <string>{4,-12}</string>
                 <key>rotated</key>
                 <true/>
                 <key>sourceColorRect</key>
-                <string>{{2,30},{106,142}}</string>
+                <string>{{62,52},{162,217}}</string>
                 <key>sourceSize</key>
-                <string>{120,172}</string>
+                <string>{278,297}</string>
             </dict>
-            <key>hero_fire_wall_00000034.png</key>
+            <key>hero_tank_ultimate_fire_0018.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{1534,110},{106,136}}</string>
+                <string>{{430,1608},{162,209}}</string>
                 <key>offset</key>
-                <string>{-5,-18}</string>
-                <key>rotated</key>
-                <false/>
-                <key>sourceColorRect</key>
-                <string>{{2,36},{106,136}}</string>
-                <key>sourceSize</key>
-                <string>{120,172}</string>
-            </dict>
-            <key>hero_fire_wall_00000035.png</key>
-            <dict>
-                <key>frame</key>
-                <string>{{1252,136},{106,140}}</string>
-                <key>offset</key>
-                <string>{-5,-16}</string>
+                <string>{4,-16}</string>
                 <key>rotated</key>
                 <true/>
                 <key>sourceColorRect</key>
-                <string>{{2,32},{106,140}}</string>
+                <string>{{62,60},{162,209}}</string>
                 <key>sourceSize</key>
-                <string>{120,172}</string>
+                <string>{278,297}</string>
             </dict>
-            <key>hero_fire_wall_00000036.png</key>
+            <key>hero_tank_ultimate_fire_0019.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{964,146},{106,142}}</string>
+                <string>{{221,1126},{162,217}}</string>
                 <key>offset</key>
-                <string>{-5,-15}</string>
+                <string>{4,-12}</string>
                 <key>rotated</key>
                 <true/>
                 <key>sourceColorRect</key>
-                <string>{{2,30},{106,142}}</string>
+                <string>{{62,52},{162,217}}</string>
                 <key>sourceSize</key>
-                <string>{120,172}</string>
+                <string>{278,297}</string>
             </dict>
-            <key>hero_fire_wall_00000037.png</key>
+            <key>hero_tank_ultimate_fire_0020.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{1782,244},{106,130}}</string>
+                <string>{{711,784},{162,225}}</string>
                 <key>offset</key>
-                <string>{-5,-21}</string>
+                <string>{4,-8}</string>
                 <key>rotated</key>
                 <true/>
                 <key>sourceColorRect</key>
-                <string>{{2,42},{106,130}}</string>
+                <string>{{62,44},{162,225}}</string>
                 <key>sourceSize</key>
-                <string>{120,172}</string>
+                <string>{278,297}</string>
             </dict>
-            <key>hero_fire_wall_00000038.png</key>
+            <key>hero_tank_ultimate_fire_0021.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{1734,2},{106,134}}</string>
+                <string>{{235,798},{162,227}}</string>
                 <key>offset</key>
-                <string>{-5,-19}</string>
+                <string>{4,-7}</string>
                 <key>rotated</key>
                 <true/>
                 <key>sourceColorRect</key>
-                <string>{{2,38},{106,134}}</string>
+                <string>{{62,42},{162,227}}</string>
                 <key>sourceSize</key>
-                <string>{120,172}</string>
+                <string>{278,297}</string>
             </dict>
-            <key>hero_fire_wall_00000039.png</key>
+            <key>hero_tank_ultimate_fire_0022.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{1396,218},{106,136}}</string>
+                <string>{{2,656},{162,231}}</string>
                 <key>offset</key>
-                <string>{-5,-18}</string>
+                <string>{4,-5}</string>
                 <key>rotated</key>
                 <true/>
                 <key>sourceColorRect</key>
-                <string>{{2,36},{106,136}}</string>
+                <string>{{62,38},{162,231}}</string>
                 <key>sourceSize</key>
-                <string>{120,172}</string>
+                <string>{278,297}</string>
             </dict>
-            <key>hero_fire_wall_00000040.png</key>
+            <key>hero_tank_ultimate_fire_0023.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{1456,2},{106,138}}</string>
+                <string>{{490,612},{162,235}}</string>
                 <key>offset</key>
-                <string>{-2,-17}</string>
+                <string>{4,-3}</string>
                 <key>rotated</key>
                 <true/>
                 <key>sourceColorRect</key>
-                <string>{{5,34},{106,138}}</string>
+                <string>{{62,34},{162,235}}</string>
                 <key>sourceSize</key>
-                <string>{120,172}</string>
+                <string>{278,297}</string>
             </dict>
-            <key>hero_fire_wall_00000041.png</key>
+            <key>hero_tank_ultimate_fire_0024.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{1112,254},{106,140}}</string>
+                <string>{{498,448},{162,239}}</string>
                 <key>offset</key>
-                <string>{-2,-16}</string>
+                <string>{4,-1}</string>
                 <key>rotated</key>
                 <true/>
                 <key>sourceColorRect</key>
-                <string>{{5,32},{106,140}}</string>
+                <string>{{62,30},{162,239}}</string>
                 <key>sourceSize</key>
-                <string>{120,172}</string>
+                <string>{278,297}</string>
             </dict>
-            <key>hero_fire_wall_00000042.png</key>
+            <key>hero_tank_ultimate_fire_0025.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{1394,110},{106,138}}</string>
+                <string>{{2,492},{162,245}}</string>
                 <key>offset</key>
-                <string>{-3,-17}</string>
+                <string>{4,2}</string>
                 <key>rotated</key>
                 <true/>
                 <key>sourceColorRect</key>
-                <string>{{4,34},{106,138}}</string>
+                <string>{{62,24},{162,245}}</string>
                 <key>sourceSize</key>
-                <string>{120,172}</string>
+                <string>{278,297}</string>
             </dict>
-            <key>hero_fire_wall_00000043.png</key>
+            <key>hero_tank_ultimate_fire_0026.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{874,2},{106,142}}</string>
+                <string>{{263,174},{162,249}}</string>
                 <key>offset</key>
-                <string>{-4,-15}</string>
-                <key>rotated</key>
-                <false/>
-                <key>sourceColorRect</key>
-                <string>{{3,30},{106,142}}</string>
-                <key>sourceSize</key>
-                <string>{120,172}</string>
-            </dict>
-            <key>hero_fire_wall_00000044.png</key>
-            <dict>
-                <key>frame</key>
-                <string>{{816,152},{106,146}}</string>
-                <key>offset</key>
-                <string>{-3,-13}</string>
+                <string>{4,4}</string>
                 <key>rotated</key>
                 <true/>
                 <key>sourceColorRect</key>
-                <string>{{4,26},{106,146}}</string>
+                <string>{{62,20},{162,249}}</string>
                 <key>sourceSize</key>
-                <string>{120,172}</string>
+                <string>{278,297}</string>
             </dict>
-            <key>hero_fire_wall_00000045.png</key>
+            <key>hero_tank_ultimate_fire_0027.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{666,154},{106,148}}</string>
+                <string>{{783,2},{162,253}}</string>
                 <key>offset</key>
-                <string>{-4,-12}</string>
+                <string>{4,6}</string>
                 <key>rotated</key>
                 <true/>
                 <key>sourceColorRect</key>
-                <string>{{3,24},{106,148}}</string>
+                <string>{{62,16},{162,253}}</string>
                 <key>sourceSize</key>
-                <string>{120,172}</string>
+                <string>{278,297}</string>
             </dict>
-            <key>hero_fire_wall_00000046.png</key>
+            <key>hero_tank_ultimate_fire_0028.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{550,2},{106,150}}</string>
+                <string>{{2,166},{162,259}}</string>
                 <key>offset</key>
-                <string>{-5,-11}</string>
-                <key>rotated</key>
-                <false/>
-                <key>sourceColorRect</key>
-                <string>{{2,22},{106,150}}</string>
-                <key>sourceSize</key>
-                <string>{120,172}</string>
-            </dict>
-            <key>hero_fire_wall_00000047.png</key>
-            <dict>
-                <key>frame</key>
-                <string>{{440,160},{106,152}}</string>
-                <key>offset</key>
-                <string>{-5,-10}</string>
-                <key>rotated</key>
-                <false/>
-                <key>sourceColorRect</key>
-                <string>{{2,20},{106,152}}</string>
-                <key>sourceSize</key>
-                <string>{120,172}</string>
-            </dict>
-            <key>hero_fire_wall_00000048.png</key>
-            <dict>
-                <key>frame</key>
-                <string>{{334,2},{106,156}}</string>
-                <key>offset</key>
-                <string>{-5,-8}</string>
-                <key>rotated</key>
-                <false/>
-                <key>sourceColorRect</key>
-                <string>{{2,16},{106,156}}</string>
-                <key>sourceSize</key>
-                <string>{120,172}</string>
-            </dict>
-            <key>hero_fire_wall_00000049.png</key>
-            <dict>
-                <key>frame</key>
-                <string>{{280,332},{106,160}}</string>
-                <key>offset</key>
-                <string>{-5,-6}</string>
-                <key>rotated</key>
-                <false/>
-                <key>sourceColorRect</key>
-                <string>{{2,12},{106,160}}</string>
-                <key>sourceSize</key>
-                <string>{120,172}</string>
-            </dict>
-            <key>hero_fire_wall_00000050.png</key>
-            <dict>
-                <key>frame</key>
-                <string>{{226,2},{106,160}}</string>
-                <key>offset</key>
-                <string>{-5,-6}</string>
-                <key>rotated</key>
-                <false/>
-                <key>sourceColorRect</key>
-                <string>{{2,12},{106,160}}</string>
-                <key>sourceSize</key>
-                <string>{120,172}</string>
-            </dict>
-            <key>hero_fire_wall_00000051.png</key>
-            <dict>
-                <key>frame</key>
-                <string>{{172,336},{106,162}}</string>
-                <key>offset</key>
-                <string>{-4,-5}</string>
-                <key>rotated</key>
-                <false/>
-                <key>sourceColorRect</key>
-                <string>{{3,10},{106,162}}</string>
-                <key>sourceSize</key>
-                <string>{120,172}</string>
-            </dict>
-            <key>hero_fire_wall_00000052.png</key>
-            <dict>
-                <key>frame</key>
-                <string>{{116,2},{108,164}}</string>
-                <key>offset</key>
-                <string>{-4,-4}</string>
-                <key>rotated</key>
-                <false/>
-                <key>sourceColorRect</key>
-                <string>{{2,8},{108,164}}</string>
-                <key>sourceSize</key>
-                <string>{120,172}</string>
-            </dict>
-            <key>hero_fire_wall_00000053.png</key>
-            <dict>
-                <key>frame</key>
-                <string>{{2,174},{112,168}}</string>
-                <key>offset</key>
-                <string>{-4,-2}</string>
-                <key>rotated</key>
-                <false/>
-                <key>sourceColorRect</key>
-                <string>{{0,4},{112,168}}</string>
-                <key>sourceSize</key>
-                <string>{120,172}</string>
-            </dict>
-            <key>hero_fire_wall_00000054.png</key>
-            <dict>
-                <key>frame</key>
-                <string>{{2,2},{112,170}}</string>
-                <key>offset</key>
-                <string>{-2,-1}</string>
-                <key>rotated</key>
-                <false/>
-                <key>sourceColorRect</key>
-                <string>{{2,2},{112,170}}</string>
-                <key>sourceSize</key>
-                <string>{120,172}</string>
-            </dict>
-            <key>hero_fire_wall_00000055.png</key>
-            <dict>
-                <key>frame</key>
-                <string>{{616,296},{114,138}}</string>
-                <key>offset</key>
-                <string>{-3,-16}</string>
-                <key>rotated</key>
-                <false/>
-                <key>sourceColorRect</key>
-                <string>{{0,33},{114,138}}</string>
-                <key>sourceSize</key>
-                <string>{120,172}</string>
-            </dict>
-            <key>hero_fire_wall_00000056.png</key>
-            <dict>
-                <key>frame</key>
-                <string>{{548,156},{116,138}}</string>
-                <key>offset</key>
-                <string>{-2,-16}</string>
-                <key>rotated</key>
-                <false/>
-                <key>sourceColorRect</key>
-                <string>{{0,33},{116,138}}</string>
-                <key>sourceSize</key>
-                <string>{120,172}</string>
-            </dict>
-            <key>hero_fire_wall_00000057.png</key>
-            <dict>
-                <key>frame</key>
-                <string>{{732,262},{116,134}}</string>
-                <key>offset</key>
-                <string>{-2,-17}</string>
-                <key>rotated</key>
-                <false/>
-                <key>sourceColorRect</key>
-                <string>{{0,36},{116,134}}</string>
-                <key>sourceSize</key>
-                <string>{120,172}</string>
-            </dict>
-            <key>hero_fire_wall_00000058.png</key>
-            <dict>
-                <key>frame</key>
-                <string>{{496,314},{118,136}}</string>
-                <key>offset</key>
-                <string>{-1,-16}</string>
-                <key>rotated</key>
-                <false/>
-                <key>sourceColorRect</key>
-                <string>{{0,34},{118,136}}</string>
-                <key>sourceSize</key>
-                <string>{120,172}</string>
-            </dict>
-            <key>hero_fire_wall_00000059.png</key>
-            <dict>
-                <key>frame</key>
-                <string>{{850,260},{116,132}}</string>
-                <key>offset</key>
-                <string>{-2,-18}</string>
-                <key>rotated</key>
-                <false/>
-                <key>sourceColorRect</key>
-                <string>{{0,38},{116,132}}</string>
-                <key>sourceSize</key>
-                <string>{120,172}</string>
-            </dict>
-            <key>hero_fire_wall_00000060.png</key>
-            <dict>
-                <key>frame</key>
-                <string>{{1198,2},{114,132}}</string>
-                <key>offset</key>
-                <string>{-3,-16}</string>
-                <key>rotated</key>
-                <false/>
-                <key>sourceColorRect</key>
-                <string>{{0,36},{114,132}}</string>
-                <key>sourceSize</key>
-                <string>{120,172}</string>
-            </dict>
-            <key>hero_fire_wall_00000061.png</key>
-            <dict>
-                <key>frame</key>
-                <string>{{1962,90},{76,116}}</string>
-                <key>offset</key>
-                <string>{-4,-21}</string>
-                <key>rotated</key>
-                <false/>
-                <key>sourceColorRect</key>
-                <string>{{18,49},{76,116}}</string>
-                <key>sourceSize</key>
-                <string>{120,172}</string>
-            </dict>
-            <key>hero_fire_wall_00000062.png</key>
-            <dict>
-                <key>frame</key>
-                <string>{{1914,242},{76,118}}</string>
-                <key>offset</key>
-                <string>{-3,-20}</string>
+                <string>{4,9}</string>
                 <key>rotated</key>
                 <true/>
                 <key>sourceColorRect</key>
-                <string>{{19,47},{76,118}}</string>
+                <string>{{62,10},{162,259}}</string>
                 <key>sourceSize</key>
-                <string>{120,172}</string>
+                <string>{278,297}</string>
             </dict>
-            <key>hero_fire_wall_00000063.png</key>
+            <key>hero_tank_ultimate_fire_0029.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{1958,320},{76,112}}</string>
+                <string>{{2,2},{162,261}}</string>
                 <key>offset</key>
-                <string>{-3,-18}</string>
-                <key>rotated</key>
-                <false/>
-                <key>sourceColorRect</key>
-                <string>{{19,48},{76,112}}</string>
-                <key>sourceSize</key>
-                <string>{120,172}</string>
-            </dict>
-            <key>hero_fire_wall_00000064.png</key>
-            <dict>
-                <key>frame</key>
-                <string>{{2,452},{40,64}}</string>
-                <key>offset</key>
-                <string>{-7,-10}</string>
+                <string>{4,10}</string>
                 <key>rotated</key>
                 <true/>
                 <key>sourceColorRect</key>
-                <string>{{33,64},{40,64}}</string>
+                <string>{{62,8},{162,261}}</string>
                 <key>sourceSize</key>
-                <string>{120,172}</string>
+                <string>{278,297}</string>
             </dict>
-            <key>hero_fire_wall_00000065.png</key>
+            <key>hero_tank_ultimate_fire_0030.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{68,452},{42,56}}</string>
+                <string>{{667,1112},{162,215}}</string>
                 <key>offset</key>
-                <string>{-2,8}</string>
+                <string>{4,-13}</string>
+                <key>rotated</key>
+                <true/>
+                <key>sourceColorRect</key>
+                <string>{{62,54},{162,215}}</string>
+                <key>sourceSize</key>
+                <string>{278,297}</string>
+            </dict>
+            <key>hero_tank_ultimate_fire_0031.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{448,1104},{162,217}}</string>
+                <key>offset</key>
+                <string>{4,-12}</string>
+                <key>rotated</key>
+                <true/>
+                <key>sourceColorRect</key>
+                <string>{{62,52},{162,217}}</string>
+                <key>sourceSize</key>
+                <string>{278,297}</string>
+            </dict>
+            <key>hero_tank_ultimate_fire_0032.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{2,1312},{162,213}}</string>
+                <key>offset</key>
+                <string>{4,-14}</string>
+                <key>rotated</key>
+                <true/>
+                <key>sourceColorRect</key>
+                <string>{{62,56},{162,213}}</string>
+                <key>sourceSize</key>
+                <string>{278,297}</string>
+            </dict>
+            <key>hero_tank_ultimate_fire_0033.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{685,948},{162,217}}</string>
+                <key>offset</key>
+                <string>{4,-12}</string>
+                <key>rotated</key>
+                <true/>
+                <key>sourceColorRect</key>
+                <string>{{62,52},{162,217}}</string>
+                <key>sourceSize</key>
+                <string>{278,297}</string>
+            </dict>
+            <key>hero_tank_ultimate_fire_0034.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{2,1476},{162,211}}</string>
+                <key>offset</key>
+                <string>{4,-15}</string>
+                <key>rotated</key>
+                <true/>
+                <key>sourceColorRect</key>
+                <string>{{62,58},{162,211}}</string>
+                <key>sourceSize</key>
+                <string>{278,297}</string>
+            </dict>
+            <key>hero_tank_ultimate_fire_0035.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{904,1110},{162,215}}</string>
+                <key>offset</key>
+                <string>{4,-13}</string>
+                <key>rotated</key>
+                <true/>
+                <key>sourceColorRect</key>
+                <string>{{62,54},{162,215}}</string>
+                <key>sourceSize</key>
+                <string>{278,297}</string>
+            </dict>
+            <key>hero_tank_ultimate_fire_0036.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{938,946},{162,219}}</string>
+                <key>offset</key>
+                <string>{4,-11}</string>
+                <key>rotated</key>
+                <true/>
+                <key>sourceColorRect</key>
+                <string>{{62,50},{162,219}}</string>
+                <key>sourceSize</key>
+                <string>{278,297}</string>
+            </dict>
+            <key>hero_tank_ultimate_fire_0037.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{958,782},{162,199}}</string>
+                <key>offset</key>
+                <string>{4,-21}</string>
+                <key>rotated</key>
+                <true/>
+                <key>sourceColorRect</key>
+                <string>{{62,70},{162,199}}</string>
+                <key>sourceSize</key>
+                <string>{278,297}</string>
+            </dict>
+            <key>hero_tank_ultimate_fire_0038.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{182,1796},{162,205}}</string>
+                <key>offset</key>
+                <string>{4,-18}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{37,50},{42,56}}</string>
+                <string>{{62,64},{162,205}}</string>
                 <key>sourceSize</key>
-                <string>{120,172}</string>
+                <string>{278,297}</string>
             </dict>
-            <key>hero_fire_wall_00000066.png</key>
+            <key>hero_tank_ultimate_fire_0039.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,494},{10,10}}</string>
+                <string>{{649,1596},{162,209}}</string>
                 <key>offset</key>
-                <string>{20,38}</string>
+                <string>{4,-16}</string>
+                <key>rotated</key>
+                <true/>
+                <key>sourceColorRect</key>
+                <string>{{62,60},{162,209}}</string>
+                <key>sourceSize</key>
+                <string>{278,297}</string>
+            </dict>
+            <key>hero_tank_ultimate_fire_0040.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{221,1290},{162,213}}</string>
+                <key>offset</key>
+                <string>{4,-14}</string>
+                <key>rotated</key>
+                <true/>
+                <key>sourceColorRect</key>
+                <string>{{62,56},{162,213}}</string>
+                <key>sourceSize</key>
+                <string>{278,297}</string>
+            </dict>
+            <key>hero_tank_ultimate_fire_0041.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{2,984},{162,217}}</string>
+                <key>offset</key>
+                <string>{4,-12}</string>
+                <key>rotated</key>
+                <true/>
+                <key>sourceColorRect</key>
+                <string>{{62,52},{162,217}}</string>
+                <key>sourceSize</key>
+                <string>{278,297}</string>
+            </dict>
+            <key>hero_tank_ultimate_fire_0042.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{862,1438},{162,209}}</string>
+                <key>offset</key>
+                <string>{4,-16}</string>
+                <key>rotated</key>
+                <true/>
+                <key>sourceColorRect</key>
+                <string>{{62,60},{162,209}}</string>
+                <key>sourceSize</key>
+                <string>{278,297}</string>
+            </dict>
+            <key>hero_tank_ultimate_fire_0043.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{229,962},{162,217}}</string>
+                <key>offset</key>
+                <string>{4,-12}</string>
+                <key>rotated</key>
+                <true/>
+                <key>sourceColorRect</key>
+                <string>{{62,52},{162,217}}</string>
+                <key>sourceSize</key>
+                <string>{278,297}</string>
+            </dict>
+            <key>hero_tank_ultimate_fire_0044.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{2,820},{162,225}}</string>
+                <key>offset</key>
+                <string>{4,-8}</string>
+                <key>rotated</key>
+                <true/>
+                <key>sourceColorRect</key>
+                <string>{{62,44},{162,225}}</string>
+                <key>sourceSize</key>
+                <string>{278,297}</string>
+            </dict>
+            <key>hero_tank_ultimate_fire_0045.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{482,776},{162,227}}</string>
+                <key>offset</key>
+                <string>{4,-7}</string>
+                <key>rotated</key>
+                <true/>
+                <key>sourceColorRect</key>
+                <string>{{62,42},{162,227}}</string>
+                <key>sourceSize</key>
+                <string>{278,297}</string>
+            </dict>
+            <key>hero_tank_ultimate_fire_0046.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{249,634},{162,231}}</string>
+                <key>offset</key>
+                <string>{4,-5}</string>
+                <key>rotated</key>
+                <true/>
+                <key>sourceColorRect</key>
+                <string>{{62,38},{162,231}}</string>
+                <key>sourceSize</key>
+                <string>{278,297}</string>
+            </dict>
+            <key>hero_tank_ultimate_fire_0047.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{739,496},{162,235}}</string>
+                <key>offset</key>
+                <string>{4,-3}</string>
+                <key>rotated</key>
+                <true/>
+                <key>sourceColorRect</key>
+                <string>{{62,34},{162,235}}</string>
+                <key>sourceSize</key>
+                <string>{278,297}</string>
+            </dict>
+            <key>hero_tank_ultimate_fire_0048.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{763,332},{162,239}}</string>
+                <key>offset</key>
+                <string>{4,-1}</string>
+                <key>rotated</key>
+                <true/>
+                <key>sourceColorRect</key>
+                <string>{{62,30},{162,239}}</string>
+                <key>sourceSize</key>
+                <string>{278,297}</string>
+            </dict>
+            <key>hero_tank_ultimate_fire_0049.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{2,492},{162,245}}</string>
+                <key>offset</key>
+                <string>{4,2}</string>
+                <key>rotated</key>
+                <true/>
+                <key>sourceColorRect</key>
+                <string>{{62,24},{162,245}}</string>
+                <key>sourceSize</key>
+                <string>{278,297}</string>
+            </dict>
+            <key>hero_tank_ultimate_fire_0050.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{251,338},{162,245}}</string>
+                <key>offset</key>
+                <string>{4,2}</string>
+                <key>rotated</key>
+                <true/>
+                <key>sourceColorRect</key>
+                <string>{{62,24},{162,245}}</string>
+                <key>sourceSize</key>
+                <string>{278,297}</string>
+            </dict>
+            <key>hero_tank_ultimate_fire_0051.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{2,330},{160,247}}</string>
+                <key>offset</key>
+                <string>{5,5}</string>
+                <key>rotated</key>
+                <true/>
+                <key>sourceColorRect</key>
+                <string>{{64,20},{160,247}}</string>
+                <key>sourceSize</key>
+                <string>{278,297}</string>
+            </dict>
+            <key>hero_tank_ultimate_fire_0052.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{783,166},{164,251}}</string>
+                <key>offset</key>
+                <string>{5,7}</string>
+                <key>rotated</key>
+                <true/>
+                <key>sourceColorRect</key>
+                <string>{{62,16},{164,251}}</string>
+                <key>sourceSize</key>
+                <string>{278,297}</string>
+            </dict>
+            <key>hero_tank_ultimate_fire_0053.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{526,2},{168,255}}</string>
+                <key>offset</key>
+                <string>{5,9}</string>
+                <key>rotated</key>
+                <true/>
+                <key>sourceColorRect</key>
+                <string>{{60,12},{168,255}}</string>
+                <key>sourceSize</key>
+                <string>{278,297}</string>
+            </dict>
+            <key>hero_tank_ultimate_fire_0054.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{265,2},{170,259}}</string>
+                <key>offset</key>
+                <string>{5,11}</string>
+                <key>rotated</key>
+                <true/>
+                <key>sourceColorRect</key>
+                <string>{{59,8},{170,259}}</string>
+                <key>sourceSize</key>
+                <string>{278,297}</string>
+            </dict>
+            <key>hero_tank_ultimate_fire_0055.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{217,1454},{174,211}}</string>
+                <key>offset</key>
+                <string>{5,-12}</string>
+                <key>rotated</key>
+                <true/>
+                <key>sourceColorRect</key>
+                <string>{{57,55},{174,211}}</string>
+                <key>sourceSize</key>
+                <string>{278,297}</string>
+            </dict>
+            <key>hero_tank_ultimate_fire_0056.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{436,1432},{174,211}}</string>
+                <key>offset</key>
+                <string>{5,-11}</string>
+                <key>rotated</key>
+                <true/>
+                <key>sourceColorRect</key>
+                <string>{{57,54},{174,211}}</string>
+                <key>sourceSize</key>
+                <string>{278,297}</string>
+            </dict>
+            <key>hero_tank_ultimate_fire_0057.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{2,1796},{178,205}}</string>
+                <key>offset</key>
+                <string>{5,-12}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{75,43},{10,10}}</string>
+                <string>{{55,58},{178,205}}</string>
                 <key>sourceSize</key>
-                <string>{120,172}</string>
+                <string>{278,297}</string>
+            </dict>
+            <key>hero_tank_ultimate_fire_0058.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{976,573},{180,207}}</string>
+                <key>offset</key>
+                <string>{4,-11}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{53,56},{180,207}}</string>
+                <key>sourceSize</key>
+                <string>{278,297}</string>
+            </dict>
+            <key>hero_tank_ultimate_fire_0059.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{510,1772},{178,201}}</string>
+                <key>offset</key>
+                <string>{5,-13}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{55,61},{178,201}}</string>
+                <key>sourceSize</key>
+                <string>{278,297}</string>
+            </dict>
+            <key>hero_tank_ultimate_fire_0060.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{690,1760},{174,201}}</string>
+                <key>offset</key>
+                <string>{5,-9}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{57,57},{174,201}}</string>
+                <key>sourceSize</key>
+                <string>{278,297}</string>
+            </dict>
+            <key>hero_tank_ultimate_fire_0061.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{1038,2},{116,177}}</string>
+                <key>offset</key>
+                <string>{4,-17}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{85,77},{116,177}}</string>
+                <key>sourceSize</key>
+                <string>{278,297}</string>
+            </dict>
+            <key>hero_tank_ultimate_fire_0062.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{1036,181},{114,177}}</string>
+                <key>offset</key>
+                <string>{5,-15}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{87,75},{114,177}}</string>
+                <key>sourceSize</key>
+                <string>{278,297}</string>
+            </dict>
+            <key>hero_tank_ultimate_fire_0063.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{1030,1754},{114,169}}</string>
+                <key>offset</key>
+                <string>{5,-12}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{87,76},{114,169}}</string>
+                <key>sourceSize</key>
+                <string>{278,297}</string>
+            </dict>
+            <key>hero_tank_ultimate_fire_0064.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{1073,1438},{62,97}}</string>
+                <key>offset</key>
+                <string>{31,-43}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{139,143},{62,97}}</string>
+                <key>sourceSize</key>
+                <string>{278,297}</string>
+            </dict>
+            <key>hero_tank_ultimate_fire_0065.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{1073,1537},{62,85}}</string>
+                <key>offset</key>
+                <string>{31,-48}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{139,154},{62,85}}</string>
+                <key>sourceSize</key>
+                <string>{278,297}</string>
+            </dict>
+            <key>hero_tank_ultimate_fire_0066.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{763,312},{14,17}}</string>
+                <key>offset</key>
+                <string>{55,-13}</string>
+                <key>rotated</key>
+                <true/>
+                <key>sourceColorRect</key>
+                <string>{{187,153},{14,17}}</string>
+                <key>sourceSize</key>
+                <string>{278,297}</string>
+            </dict>
+            <key>hero_tank_ultimate_fire_0067.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{1156,2},{1,1}}</string>
+                <key>offset</key>
+                <string>{-138.5,148}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{1,1}}</string>
+                <key>sourceSize</key>
+                <string>{278,297}</string>
             </dict>
         </dict>
         <key>metadata</key>
@@ -870,9 +883,9 @@
             <key>realTextureFileName</key>
             <string>firewall.png</string>
             <key>size</key>
-            <string>{2040,510}</string>
+            <string>{1159,2040}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:a677d0dca91c1bdadb1b4d1cdba15444:1/1$</string>
+            <string>$TexturePacker:SmartUpdate:e08f9f383b7bded8f642f8c5e78f63d7:1/1$</string>
             <key>textureFileName</key>
             <string>firewall.png</string>
         </dict>
