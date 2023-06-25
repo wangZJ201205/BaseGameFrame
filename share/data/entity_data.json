@@ -237,16 +237,16 @@
 	},
 	"200005": {
 		"id": 200005,
-		"name": "飞蛾",
-		"bloom": 10,
+		"name": "飞机",
+		"bloom": 100,
 		"boss": 0,
 		"collGroup": "monster",
 		"collRect": "0,25,25",
 		"collision": 1,
 		"dropItem": "1001",
-		"moveSpeed": 4,
+		"moveSpeed": 8,
 		"moveType": 2,
-		"path": "1002",
+		"path": "kr4_dwarven_flyer",
 		"skillid": 0
 	},
 	"200006": {

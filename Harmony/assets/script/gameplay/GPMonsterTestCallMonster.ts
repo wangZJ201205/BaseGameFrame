@@ -60,6 +60,7 @@ export default class GPMonsterTestCallMonster {
         monsters.push(200002);
         monsters.push(200003);
         monsters.push(200004);
+        monsters.push(200005);
 
         var id = Math.random()*monsters.length ;
         id = monsters[ Math.floor(id) ];
