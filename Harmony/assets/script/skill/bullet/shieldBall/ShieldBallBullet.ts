@@ -18,17 +18,7 @@ export default class ShieldBallBullet extends BulletParent {
     private _damagePlayers : number = 0;
     private _bufferTime :  number = 50;
 
-    onLoad (host) 
-    {
-        this._host = host;
-        this._prop = {};
-
-        this._node = new cc.Node();
-        SkillMgr.Instance.getLayerLow().addChild(this._node);
-
-        this.setProp(ClientDef.BULLET_PROP_STATE,ClientDef.BULLET_STATE_FREE);
-    }
-
+   
     restart()
     {   
         this._delta = cc.director.getTotalTime();

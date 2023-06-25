@@ -10,6 +10,7 @@ import SkillParent from "./SkillParent";
 import ArcherySkill from "./bullet/archery/ArcherySkill";
 import FireBallSkill from "./bullet/fireball/FireBallSkill";
 import FireHorseSkill from "./bullet/firehorse/FireHorseSkill";
+import FireWallSkill from "./bullet/firewall/FireWallSkill";
 import IceBallSkill from "./bullet/iceBall/IceBallSkill";
 import MiZongQuanSkill from "./bullet/mizongquan/MiZongQuanSkill";
 import PosionBallSkill from "./bullet/poisonBall/PosionBallSkill";
@@ -46,6 +47,7 @@ export default class Skill {
         this._typeClass[ClientDef.SKILL_TYPE_ARCHERY] = ArcherySkill;               //射箭
         this._typeClass[ClientDef.SKILL_TYPE_FIREHORSE] = FireHorseSkill;           //烈火马
         this._typeClass[ClientDef.SKILL_TYPE_POSION_TIMBO] = PosionTimboSkill;      //毒树藤
+        this._typeClass[ClientDef.SKILL_TYPE_FIREWALL] = FireWallSkill;             //火墙
     }
 
     start () 

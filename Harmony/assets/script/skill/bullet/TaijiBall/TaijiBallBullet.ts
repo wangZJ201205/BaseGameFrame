@@ -16,12 +16,6 @@ export default class TaijiBallBullet extends BulletParent {
     private _maxRadus:number = 0;
     private _speed : number = 0;
 
-    start () 
-    {
-        super.start();
-    }
-    
-
     restart()
     {
 

@@ -1,14 +1,15 @@
 /**
- * 毒树藤 后期
+ * 火墙 后期
  */
 import ClientDef from "../../../common/ClientDef";
+import SkillMgr from "../../../manager/SkillMgr";
 import BulletParent from "../../BulletParent";
 
 const {ccclass, property} = cc._decorator;
 
 @ccclass
-export default class PosionTimboEndBullet extends BulletParent {
-
+export default class FireWallEndBullet extends BulletParent {
+    
     restart(){
         var anipref = this.getNode().children[0];
         if(anipref)
@@ -19,7 +20,7 @@ export default class PosionTimboEndBullet extends BulletParent {
         }
         super.restart();
     }
-    
+
     onFinished()
     {
         //动画结束

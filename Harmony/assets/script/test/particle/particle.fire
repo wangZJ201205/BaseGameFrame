@@ -169,8 +169,8 @@
       "__type__": "TypedArray",
       "ctor": "Float64Array",
       "array": [
-        0,
-        0,
+        38.05,
+        21.506,
         0,
         0,
         0,
@@ -311,8 +311,8 @@
       "__type__": "TypedArray",
       "ctor": "Float64Array",
       "array": [
-        556.138,
-        457.517,
+        576.643,
+        311.282,
         0,
         0,
         0,
@@ -355,10 +355,10 @@
       "custom": false
     },
     "_file": {
-      "__uuid__": "2e6ba930-d3dd-4a60-be95-3cf62788e00b"
+      "__uuid__": "ca02f056-7dc6-4f9d-b2b8-5d2367c860e8"
     },
     "_spriteFrame": {
-      "__uuid__": "5a88f5d5-2e14-47f1-87ca-c85f106ddeae"
+      "__uuid__": "bde29bf7-2e3e-4ede-a11c-f70b8cb881c0"
     },
     "_texture": null,
     "_stopped": true,
@@ -374,28 +374,28 @@
       "r": 100,
       "g": 202,
       "b": 86,
-      "a": 163
+      "a": 72
     },
     "_startColorVar": {
       "__type__": "cc.Color",
       "r": 229,
       "g": 255,
       "b": 173,
-      "a": 198
+      "a": 83
     },
     "_endColor": {
       "__type__": "cc.Color",
       "r": 165,
       "g": 255,
       "b": 161,
-      "a": 214
+      "a": 95
     },
     "_endColorVar": {
       "__type__": "cc.Color",
       "r": 107,
       "g": 249,
       "b": 249,
-      "a": 188
+      "a": 76
     },
     "angle": 0,
     "angleVar": 0,

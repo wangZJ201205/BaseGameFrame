@@ -247,6 +247,7 @@
             <filename>boom/warmongers_rocket_tower_lvl4_blue_explosion_0016.png</filename>
             <filename>boom/warmongers_rocket_tower_lvl4_blue_explosion_0017.png</filename>
             <filename>boom/warmongers_rocket_tower_lvl4_blue_explosion_0018.png</filename>
+            <filename>spirit_mausoleum_bolt_0002.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>

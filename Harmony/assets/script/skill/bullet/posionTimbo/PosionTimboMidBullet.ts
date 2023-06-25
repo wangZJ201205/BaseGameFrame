@@ -1,14 +1,13 @@
 /**
- * 放毒 后期
+ * 毒树藤 后期
  */
 import ClientDef from "../../../common/ClientDef";
-import SkillMgr from "../../../manager/SkillMgr";
 import BulletParent from "../../BulletParent";
 
 const {ccclass, property} = cc._decorator;
 
 @ccclass
-export default class PosionEndBullet extends BulletParent {
+export default class PosionTimboMidBullet extends BulletParent {
 
     private _delta:number = 0;
     
@@ -16,6 +15,13 @@ export default class PosionEndBullet extends BulletParent {
     {   
         this._delta = cc.director.getTotalTime();
         super.restart();
+        if(this.getNode().children[0])
+        {
+            var anim = this.getNode().children[0].getComponent(cc.Animation);
+            let curClip = anim.getClips()[0];
+            anim.resume(curClip.name);
+            anim.play(curClip.name);
+        }
     }
 
     update (dt) 
@@ -23,10 +29,16 @@ export default class PosionEndBullet extends BulletParent {
         super.update(dt);
         var delay = cc.director.getTotalTime() - this._delta;
         
-        if(delay > this._bulletInfo["sustaintime"])
+        if(delay > this._bulletInfo["sustaintime"] ) //播放动画
         {
             this.stop();
+
+            var bullet = this._host.spawnBullet(ClientDef.BULLET_PHASE_3);
+            bullet.getNode().active = true;
+            bullet.getNode().position = this.getNode().position;
+            bullet.restart();
         }
+
     }
 
     //碰撞开始
@@ -34,9 +46,8 @@ export default class PosionEndBullet extends BulletParent {
     {   
         var damageValue = this.getDamageValue(other);
         other.node.setClientProp(ClientDef.ENTITY_PROP_POSION_TIME,cc.director.getTotalTime());
-        if(damageValue == 0)return;
+            if(damageValue == 0)return;
         other.node.getEntityComponent(ClientDef.ENTITY_COMP_BLOOM).addDamage( damageValue );
-        
     }
 
     //碰撞中
@@ -49,7 +60,6 @@ export default class PosionEndBullet extends BulletParent {
             other.node.setClientProp(ClientDef.ENTITY_PROP_POSION_TIME,cc.director.getTotalTime());
             if(damageValue == 0)return;
             other.node.getEntityComponent(ClientDef.ENTITY_COMP_BLOOM).addDamage( damageValue );
-            
         }
     }
 

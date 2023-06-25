@@ -3,10 +3,10 @@
  */
 
 import ClientDef from "../../../common/ClientDef";
-import GameData from "../../../common/GameData";
 import Hero from "../../../ghost/Hero";
 import SkillParent from "../../SkillParent";
 import PosionEndBullet from "./PosionTimboEndBullet";
+import PosionTimboMidBullet from "./PosionTimboMidBullet";
 import PosionStartBallBullet from "./PosionTimboPrevBullet";
 
 const {ccclass, property} = cc._decorator;
@@ -20,6 +20,7 @@ export default class PosionTimboSkill extends SkillParent {
     {
         super.start();
         this._startBulletClass = PosionStartBallBullet;
+        this._midBulletClass = PosionTimboMidBullet;
         this._endBulletClass = PosionEndBullet;
     }
 

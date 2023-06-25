@@ -32,10 +32,6 @@ export default class BulletParent {
     {
         this._host = host;
         this._prop = {};
-
-        this._node = new cc.Node();
-        SkillMgr.Instance.getLayer().addChild(this._node);
-
         this.setProp(ClientDef.BULLET_PROP_STATE,ClientDef.BULLET_STATE_FREE);
     }
 
@@ -48,6 +44,17 @@ export default class BulletParent {
         this.setProp(ClientDef.BULLET_PROP_ATK_MIN, Number(damageValue[0]));
         this.setProp(ClientDef.BULLET_PROP_ATK_MAX, Number(damageValue[1]));
         this.setProp(ClientDef.BULLET_PROP_STATE,ClientDef.BULLET_STATE_LOADSRC);
+
+        this._node = new cc.Node();
+        if(this._bulletInfo.zorder == 1 ) //设置节点所在的深度
+        {
+            SkillMgr.Instance.getLayer().addChild(this._node);
+        }
+        else
+        {
+            SkillMgr.Instance.getLayerLow().addChild(this._node);
+        }
+
         this.addBulletSkin();
         this.addCollision();
         this.addEffect();
@@ -197,7 +204,7 @@ export default class BulletParent {
 
     loadPrefab()
     {
-        var loadPath = 'animation/skill/' +  this._bulletInfo.src +"/"+ this._bulletInfo.src ;
+        var loadPath = 'animation/skill/' +  this._bulletInfo.preftab +"/"+ this._bulletInfo.preftab;
         var self = this
         LoadMgr.Instance.LoadAssetWithType(loadPath,cc.Prefab,(asset)=>{
             if(this._host.getHost().getClientProp(ClientDef.ENTITY_PROP_ACTIVE_STATE) != ClientDef.ENTITY_ACTIVE_STATE_RUN)
@@ -207,7 +214,18 @@ export default class BulletParent {
             var aniPref = cc.instantiate(asset);
             aniPref.parent = this.getNode();
             this.setProp(ClientDef.BULLET_PROP_STATE,ClientDef.BULLET_STATE_RUN);
+
+            var anim = aniPref.getComponent(cc.Animation); //添加自动播放对应的动画
+            anim.resume(this._bulletInfo.src);
+            anim.play(this._bulletInfo.src);
+            anim.on('finished',  this.onFinished,    this);
+
         });
+    }
+
+    onFinished()
+    {
+        //动画结束
     }
 
     addCollision()

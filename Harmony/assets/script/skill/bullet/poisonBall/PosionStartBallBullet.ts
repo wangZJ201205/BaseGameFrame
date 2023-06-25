@@ -17,20 +17,11 @@ export default class PosionStartBallBullet extends BulletParent {
     private _halfCircleMovement:MovementParent;
     private _targetPos : cc.Vec3;
 
-    onLoad (host) 
-    {
-        this._host = host;
-        this._prop = {};
-
-        this._node = new cc.Node();
-        SkillMgr.Instance.getLayerLow().addChild(this._node);
-
-        this.setProp(ClientDef.BULLET_PROP_STATE,ClientDef.BULLET_STATE_FREE);
-
+    start(): void {
+        super.start();
         this._halfCircleMovement = new HalfCircleMovement();
-    
     }
-
+    
     restart()
     {   
         super.restart();

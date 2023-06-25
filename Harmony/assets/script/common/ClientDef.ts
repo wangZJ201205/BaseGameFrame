@@ -96,6 +96,7 @@ export default class ClientDef{
     public static readonly SKILL_TYPE_ARCHERY: number       = 110; //射箭
     public static readonly SKILL_TYPE_FIREHORSE: number     = 111; //烈火马
     public static readonly SKILL_TYPE_POSION_TIMBO: number  = 112; //毒树藤
+    public static readonly SKILL_TYPE_FIREWALL: number      = 113; //火墙
 
     //子弹属性
     public static readonly BULLET_PROP_ID : number = 1;// id

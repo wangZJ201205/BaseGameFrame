@@ -20,6 +20,10 @@ local attackMoveType = {}
 attackMoveType["走路"] = 1
 attackMoveType["全攻击"] = 2
 
+local zorderIndexType = {}
+zorderIndexType["高"] = 1
+zorderIndexType["低"] = 2
+
 local gdSkillEffect = {}
 function handle_skill_effect(o)
 	local d = {}
@@ -39,8 +43,10 @@ function handle_skill_effect(o)
 	d.motionStreak = o.j ~= "0" and tonumber(o.j) or nil
 	d.strike = o.k ~= "0" and tonumber(o.k) or nil
 	d.sound = o.l
-	d.atlas = o.m
-	d.attackMoveType = attackMoveType[o.n]
+	d.preftab = o.m
+	d.atlas = o.n
+	d.attackMoveType = attackMoveType[o.o]
+	d.zorder = zorderIndexType[o.p]
 
 	gdSkillEffect[d.id] = d
 end
