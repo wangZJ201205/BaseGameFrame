@@ -7,7 +7,7 @@
             <key>alleria_arrow.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{1170,352},{42,14}}</string>
+                <string>{{1170,433},{42,14}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -20,11 +20,11 @@
             <key>alleria_arrow_multishoot.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{743,441},{56,30}}</string>
+                <string>{{253,425},{56,30}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
                 <string>{{2,0},{56,30}}</string>
                 <key>sourceSize</key>
@@ -33,24 +33,37 @@
             <key>darkarmy_archer_arrow_lvl4.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{1223,118},{34,12}}</string>
+                <string>{{1179,102},{34,12}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
                 <string>{{1,0},{34,12}}</string>
                 <key>sourceSize</key>
                 <string>{36,12}</string>
             </dict>
+            <key>ember_lords_mage_tower_bolt_lvl4_0001.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{253,483},{28,26}}</string>
+                <key>offset</key>
+                <string>{0,1}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{22,22},{28,26}}</string>
+                <key>sourceSize</key>
+                <string>{72,72}</string>
+            </dict>
             <key>fire_bunch.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{1116,394},{48,62}}</string>
+                <string>{{1170,318},{48,62}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
                 <string>{{0,0},{48,62}}</string>
                 <key>sourceSize</key>
@@ -527,7 +540,7 @@
             <key>hero_jack_o_lantern_ultimate_particle_0001.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{253,474},{31,32}}</string>
+                <string>{{1092,479},{31,32}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -540,7 +553,7 @@
             <key>hero_jack_o_lantern_ultimate_particle_0002.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{253,425},{47,36}}</string>
+                <string>{{1179,53},{47,36}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -553,7 +566,7 @@
             <key>hero_jack_o_lantern_ultimate_particle_0003.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{253,425},{47,36}}</string>
+                <string>{{1179,53},{47,36}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -566,11 +579,11 @@
             <key>hero_jack_o_lantern_ultimate_particle_0004.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{1065,394},{49,42}}</string>
+                <string>{{1179,2},{49,42}}</string>
                 <key>offset</key>
                 <string>{1,0}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
                 <string>{{2,0},{49,42}}</string>
                 <key>sourceSize</key>
@@ -579,11 +592,11 @@
             <key>hero_jack_o_lantern_ultimate_particle_0005.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{1065,394},{49,42}}</string>
+                <string>{{1179,2},{49,42}}</string>
                 <key>offset</key>
                 <string>{1,0}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
                 <string>{{2,0},{49,42}}</string>
                 <key>sourceSize</key>
@@ -592,7 +605,7 @@
             <key>hero_jack_o_lantern_ultimate_particle_0006.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{1162,262},{49,34}}</string>
+                <string>{{1065,394},{49,34}}</string>
                 <key>offset</key>
                 <string>{-1,0}</string>
                 <key>rotated</key>
@@ -605,7 +618,7 @@
             <key>hero_jack_o_lantern_ultimate_particle_0007.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{1162,262},{49,34}}</string>
+                <string>{{1065,394},{49,34}}</string>
                 <key>offset</key>
                 <string>{-1,0}</string>
                 <key>rotated</key>
@@ -618,11 +631,11 @@
             <key>hero_jack_o_lantern_ultimate_particle_0008.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{743,473},{37,30}}</string>
+                <string>{{1092,447},{37,30}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
                 <string>{{2,2},{37,30}}</string>
                 <key>sourceSize</key>
@@ -631,11 +644,11 @@
             <key>hero_jack_o_lantern_ultimate_particle_0009.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{743,473},{37,30}}</string>
+                <string>{{1092,447},{37,30}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
                 <string>{{2,2},{37,30}}</string>
                 <key>sourceSize</key>
@@ -644,7 +657,7 @@
             <key>hero_jack_o_lantern_ultimate_particle_0010.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{1180,368},{25,28}}</string>
+                <string>{{1131,447},{25,28}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -657,7 +670,7 @@
             <key>hero_jack_o_lantern_ultimate_smoke_0001.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{1156,444},{46,49}}</string>
+                <string>{{1170,382},{46,49}}</string>
                 <key>offset</key>
                 <string>{0,1}</string>
                 <key>rotated</key>
@@ -670,11 +683,11 @@
             <key>hero_jack_o_lantern_ultimate_smoke_0002.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{1170,298},{52,51}}</string>
+                <string>{{1116,394},{52,51}}</string>
                 <key>offset</key>
                 <string>{0,2}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
                 <string>{{4,2},{52,51}}</string>
                 <key>sourceSize</key>
@@ -683,11 +696,11 @@
             <key>hero_jack_o_lantern_ultimate_smoke_0003.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{1179,63},{56,53}}</string>
+                <string>{{1170,260},{56,53}}</string>
                 <key>offset</key>
                 <string>{1,2}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
                 <string>{{5,3},{56,53}}</string>
                 <key>sourceSize</key>
@@ -696,11 +709,11 @@
             <key>hero_jack_o_lantern_ultimate_smoke_0004.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{1092,444},{62,57}}</string>
+                <string>{{1162,196},{62,57}}</string>
                 <key>offset</key>
                 <string>{1,2}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
                 <string>{{4,2},{62,57}}</string>
                 <key>sourceSize</key>
@@ -904,7 +917,7 @@
             <key>hero_jack_o_lantern_ultimate_smoke_0020.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{1179,2},{56,59}}</string>
+                <string>{{743,441},{56,59}}</string>
                 <key>offset</key>
                 <string>{-11,-10}</string>
                 <key>rotated</key>
@@ -969,11 +982,11 @@
             <key>shooter_lvl4_proyectile.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{775,473},{36,24}}</string>
+                <string>{{697,318},{36,24}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
                 <string>{{0,0},{36,24}}</string>
                 <key>sourceSize</key>
@@ -1005,19 +1018,6 @@
                 <key>sourceSize</key>
                 <string>{103,48}</string>
             </dict>
-            <key>skill_trump.png</key>
-            <dict>
-                <key>frame</key>
-                <string>{{1162,196},{64,64}}</string>
-                <key>offset</key>
-                <string>{0,0}</string>
-                <key>rotated</key>
-                <false/>
-                <key>sourceColorRect</key>
-                <string>{{0,0},{64,64}}</string>
-                <key>sourceSize</key>
-                <string>{64,64}</string>
-            </dict>
             <key>skill_zhanshi_banyue_13.png</key>
             <dict>
                 <key>frame</key>
@@ -1034,11 +1034,11 @@
             <key>spirit_mausoleum_bolt_0002.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{709,318},{24,26}}</string>
+                <string>{{1158,449},{24,26}}</string>
                 <key>offset</key>
                 <string>{0,-1}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
                 <string>{{14,22},{24,26}}</string>
                 <key>sourceSize</key>
@@ -1047,7 +1047,7 @@
             <key>stage13_elf_arrow.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{671,318},{36,10}}</string>
+                <string>{{2,499},{36,10}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -1312,9 +1312,9 @@
             <key>realTextureFileName</key>
             <string>skill_res.png</string>
             <key>size</key>
-            <string>{1237,512}</string>
+            <string>{1225,512}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:52d46cfdbb0fa2bd18cdb1af0d3e4427:1/1$</string>
+            <string>$TexturePacker:SmartUpdate:3ddacdd28a2dcceb1835235de461d468:1/1$</string>
             <key>textureFileName</key>
             <string>skill_res.png</string>
         </dict>

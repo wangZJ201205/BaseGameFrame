@@ -1,8 +1,6 @@
 /**
  * 火墙 后期
  */
-import ClientDef from "../../../common/ClientDef";
-import SkillMgr from "../../../manager/SkillMgr";
 import BulletParent from "../../BulletParent";
 
 const {ccclass, property} = cc._decorator;

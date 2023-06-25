@@ -384,7 +384,7 @@
     },
     "_enabled": true,
     "ipPort": "http://localhost:9000",
-    "isDebug": false,
+    "isDebug": true,
     "gameMode": 2,
     "_id": "c90XrMYNFGMqTkYwfFmS97"
   }

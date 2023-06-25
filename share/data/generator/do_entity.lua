@@ -37,6 +37,7 @@ function handle_entity(o)
 	d.dropItem = o.i
 	d.moveSpeed = tonumber(o.j)
 	d.moveType = MoveType[o.k]
+	d.boss = tonumber(o.l) or 0
 	gdentity[tostring(d.id)] = d
 end
 

@@ -56,9 +56,13 @@ export default class GPMonsterTestCallMonster {
 
         if( liveCnt >= GameData.Monster_Show_Amount )return;
 
-        var rand = Math.random()*100;
-        var id = rand > 50 ? 200003 : 200002;
+        var monsters = []; //随机数组
+        monsters.push(200002);
+        monsters.push(200003);
+        monsters.push(200004);
 
+        var id = Math.random()*monsters.length ;
+        id = monsters[ Math.floor(id) ];
         var entity = GhostMgr.Instance.spawnEntity(id); // 200001怪物id 怪物的释放规则还没有实现
         entity.restart();
 

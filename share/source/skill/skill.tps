@@ -150,7 +150,6 @@
         <array>
             <filename>skill_fireball.png</filename>
             <filename>skill_iceball.png</filename>
-            <filename>skill_trump.png</filename>
             <filename>i_jpql_01.png</filename>
             <filename>i_jpql_02.png</filename>
             <filename>i_jpql_03.png</filename>
@@ -248,6 +247,7 @@
             <filename>boom/warmongers_rocket_tower_lvl4_blue_explosion_0017.png</filename>
             <filename>boom/warmongers_rocket_tower_lvl4_blue_explosion_0018.png</filename>
             <filename>spirit_mausoleum_bolt_0002.png</filename>
+            <filename>ember_lords_mage_tower_bolt_lvl4_0001.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>

@@ -1,7 +1,6 @@
 /**
  * 毒树藤 后期
  */
-import ClientDef from "../../../common/ClientDef";
 import BulletParent from "../../BulletParent";
 
 const {ccclass, property} = cc._decorator;
@@ -19,7 +18,7 @@ export default class PosionTimboEndBullet extends BulletParent {
         }
         super.restart();
     }
-    
+
     onFinished()
     {
         //动画结束
