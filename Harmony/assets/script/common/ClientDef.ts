@@ -97,6 +97,32 @@ export default class ClientDef{
     public static readonly SKILL_TYPE_FIREHORSE: number     = 111; //烈火马
     public static readonly SKILL_TYPE_POSION_TIMBO: number  = 112; //毒树藤
     public static readonly SKILL_TYPE_FIREWALL: number      = 113; //火墙
+    public static readonly SKILL_TYPE_TIMEBOMB : number     = 114; //定时炸弹
+
+    //子弹脚本ID
+    public static readonly BULLET_SCRIPT_COMMON: number        = 1; //子弹父类
+    public static readonly BULLET_SCRIPT_FIREBALL: number      = 2; //火球
+    public static readonly BULLET_SCRIPT_ICEBALL: number       = 3; //冰球
+    public static readonly BULLET_SCRIPT_LEIPI: number         = 4; //雷劈
+    public static readonly BULLET_SCRIPT_SWORD_AIR: number     = 5; //剑气
+    public static readonly BULLET_SCRIPT_TAIJI: number         = 6; //太极
+    public static readonly BULLET_SCRIPT_SHIELD: number        = 7; //护盾
+    public static readonly BULLET_SCRIPT_POSION_START: number  = 8; //毒开始
+    public static readonly BULLET_SCRIPT_POSION_END: number  = 9; //毒开始
+    public static readonly BULLET_SCRIPT_MIZONGQUAN: number  = 10; //迷踪拳
+    public static readonly BULLET_SCRIPT_ARCHERY: number  = 11; //射箭
+    public static readonly BULLET_SCRIPT_ARCHERY_BOOM: number  = 12; //射箭
+    public static readonly BULLET_SCRIPT_FIRE_HORSE: number  = 13; //烈火马
+    public static readonly BULLET_SCRIPT_POSION_TIMBO1: number  = 14; //毒树藤1
+    public static readonly BULLET_SCRIPT_POSION_TIMBO2: number  = 15; //毒树藤2
+    public static readonly BULLET_SCRIPT_POSION_TIMBO3: number  = 16; //毒树藤3
+    public static readonly BULLET_SCRIPT_FIREWALL1: number  = 17; //火墙1
+    public static readonly BULLET_SCRIPT_FIREWALL2: number  = 18; //火墙2
+    public static readonly BULLET_SCRIPT_FIREWALL3: number  = 19; //火墙3
+    public static readonly BULLET_SCRIPT_TIMEBOMB1: number  = 20; //定时炸弹1
+    public static readonly BULLET_SCRIPT_TIMEBOMB2: number  = 21; //定时炸弹2
+    public static readonly BULLET_SCRIPT_TIMEBOMB3: number  = 22; //定时炸弹3
+
 
     //子弹属性
     public static readonly BULLET_PROP_ID : number = 1;// id
@@ -109,13 +135,13 @@ export default class ClientDef{
     public static readonly BULLET_PROP_ATK_MAX : number = 8;// 攻击力 大
     public static readonly BULLET_PROP_CHANG_RANGE : number = 9;// 变化的范围
     public static readonly BULLET_PROP_CHANG_DIR : number = 10;// 变化的方向
-    public static readonly BULLET_PROP_PHASE : number = 11;// 阶段
+    public static readonly BULLET_PROP_PHASEID : number = 11;// 阶段
     public static readonly BULLET_PROP_STRIKE : number = 12;// 穿透
 
     //子弹阶段
-    public static readonly BULLET_PHASE_1 : number = 1;// 开始阶段
-    public static readonly BULLET_PHASE_2 : number = 2;// 中间阶段
-    public static readonly BULLET_PHASE_3 : number = 3;// 结束阶段
+    // public static readonly BULLET_PHASE_1 : number = 1;// 开始阶段
+    // public static readonly BULLET_PHASE_2 : number = 2;// 中间阶段
+    // public static readonly BULLET_PHASE_3 : number = 3;// 结束阶段
 
     //技能属性
     public static readonly SKILL_PROP_COUNT : number = 1;// 技能中子弹的数量

@@ -7,6 +7,7 @@ import GameData from "../common/GameData";
 import Entity from "../ghost/Entity";
 import DictMgr from "../manager/DictMgr";
 import GhostMgr from "../manager/GhostMgr";
+import SkillMgr from "../manager/SkillMgr";
 import BulletParent from "./BulletParent";
 
 const {ccclass, property} = cc._decorator;
@@ -22,9 +23,6 @@ export default class SkillParent {
     protected _curShootTime: number; //当前cd倒计时
     protected _shootTime:number = 60; //设计时间
     protected _prop: { [key: string]: any } = {};
-    protected _startBulletClass : typeof BulletParent ; //开始阶段
-    protected _midBulletClass : typeof BulletParent ;   //中间阶段
-    protected _endBulletClass : typeof BulletParent ;   //结束阶段
 
     protected _isShootBullet:boolean = false; //是否在发射状态中
     protected _shootDelayTime : number = 0;   //发射延迟时间
@@ -168,36 +166,34 @@ export default class SkillParent {
     {   
     }
 
-    //寻找闲置的子弹
-    spawnBullet(phase)
+    // //寻找闲置的子弹
+    spawnBullet(bulletId)
     {
         // console.info(`>>>>>>length ${this._bullets.length}`);
         for (let index = 0; index < this._bullets.length; index++) {
             const element = this._bullets[index];
-            var bulletId = element.getProp(ClientDef.BULLET_PROP_STATICID);
+            var skillid = element.getProp(ClientDef.BULLET_PROP_STATICID);
             var isFree : boolean = element.getProp(ClientDef.BULLET_PROP_STATE) == ClientDef.BULLET_STATE_FREE; //是否闲置状态
-            var isSamePhase : boolean = element.getProp(ClientDef.BULLET_PROP_PHASE) == phase; //是否相同阶段
-            var isSameLevel : boolean = bulletId == this._staticId; //是否相同等级
+            var isSamePhase : boolean = element.getProp(ClientDef.BULLET_PROP_PHASEID) == bulletId; //是否相同阶段
+            var isSameLevel : boolean = skillid == this._staticId; //是否相同等级
             if( isFree && isSameLevel && isSamePhase)
             {
                 element.setProp(ClientDef.BULLET_PROP_STATE,ClientDef.BULLET_STATE_RUN);
                 return element;
             }
         }
-        return this.createBullet(phase);
+        return this.createBullet(bulletId);
     }
 
-    //创建一个新的子弹
-    createBullet(phase)
+    // //创建一个新的子弹
+    createBullet(bulletID)
     { 
-        var bullet = null;
-        if(phase == ClientDef.BULLET_PHASE_1) bullet = new (this._startBulletClass)();
-        else if(phase == ClientDef.BULLET_PHASE_2)bullet = new (this._midBulletClass)();
-        else if(phase == ClientDef.BULLET_PHASE_3)bullet = new (this._endBulletClass)();
+        var bulletClass = SkillMgr.Instance.getBulletClass(bulletID);
+        var bullet = new bulletClass();
         bullet.onLoad(this);
         bullet.setProp(ClientDef.BULLET_PROP_ID , this._bullets.length + 1);
         bullet.setProp(ClientDef.BULLET_PROP_STATICID , this.getStaticId());
-        bullet.setProp(ClientDef.BULLET_PROP_PHASE , phase);
+        bullet.setProp(ClientDef.BULLET_PROP_PHASEID , bulletID);
         bullet.start();
         this._bullets.push(bullet);
         return bullet;

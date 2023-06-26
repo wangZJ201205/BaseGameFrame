@@ -6,20 +6,8 @@ import ClientDef from "../common/ClientDef";
 import GameData from "../common/GameData";
 import Entity from "../ghost/Entity";
 import DictMgr from "../manager/DictMgr";
+import SkillMgr from "../manager/SkillMgr";
 import SkillParent from "./SkillParent";
-import ArcherySkill from "./bullet/archery/ArcherySkill";
-import FireBallSkill from "./bullet/fireball/FireBallSkill";
-import FireHorseSkill from "./bullet/firehorse/FireHorseSkill";
-import FireWallSkill from "./bullet/firewall/FireWallSkill";
-import IceBallSkill from "./bullet/iceBall/IceBallSkill";
-import MiZongQuanSkill from "./bullet/mizongquan/MiZongQuanSkill";
-import PosionBallSkill from "./bullet/poisonBall/PosionBallSkill";
-import PosionTimboSkill from "./bullet/posionTimbo/PosionTimboSkill";
-import RevolutionBallSkill from "./bullet/revolutionBall/RevolutionBallSkill";
-import ShieldBallSkill from "./bullet/shieldBall/ShieldBallSkill";
-import SwordBallSkill from "./bullet/swordBall/SwordBallSkill";
-import TaijiBallSkill from "./bullet/taijiBall/TaijiBallSkill";
-import ThunderBallSkill from "./bullet/thunder/ThunderBallSkill";
 
 const {ccclass, property} = cc._decorator;
 
@@ -28,26 +16,11 @@ export default class Skill {
 
     private _skills:SkillParent[];
     private _host:Entity;
-    private _typeClass : {};
+    
     onLoad (host) 
     {
         this._skills = [];
-        this._typeClass = {};
         this._host = host;
-        
-        this._typeClass[ClientDef.SKILL_TYPE_FIREBALL] = FireBallSkill;             //注册火球术
-        this._typeClass[ClientDef.SKILL_TYPE_ICEBALL] = IceBallSkill;               //冰弹
-        this._typeClass[ClientDef.SKILL_TYPE_THUNDER] = ThunderBallSkill;           //雷劈
-        this._typeClass[ClientDef.SKILL_TYPE_REVOLUTION] = RevolutionBallSkill;     //公转球
-        this._typeClass[ClientDef.SKILL_TYPE_SWORD_AIR] = SwordBallSkill;           //剑气
-        this._typeClass[ClientDef.SKILL_TYPE_TAIJI] = TaijiBallSkill;               //太极
-        this._typeClass[ClientDef.SKILL_TYPE_SHIELD] = ShieldBallSkill;             //护盾
-        this._typeClass[ClientDef.SKILL_TYPE_POISON] = PosionBallSkill;             //放毒
-        this._typeClass[ClientDef.SKILL_TYPE_MIZONGQUAN] = MiZongQuanSkill;         //迷踪拳
-        this._typeClass[ClientDef.SKILL_TYPE_ARCHERY] = ArcherySkill;               //射箭
-        this._typeClass[ClientDef.SKILL_TYPE_FIREHORSE] = FireHorseSkill;           //烈火马
-        this._typeClass[ClientDef.SKILL_TYPE_POSION_TIMBO] = PosionTimboSkill;      //毒树藤
-        this._typeClass[ClientDef.SKILL_TYPE_FIREWALL] = FireWallSkill;             //火墙
     }
 
     start () 
@@ -86,10 +59,10 @@ export default class Skill {
         }
 
         var type = Math.floor(skillid / 100); //去整型
-
-        if( !this._typeClass[type ] )
+        var classT = SkillMgr.Instance.getSkillClass(type);
+        if( !classT )
         {
-            console.info("没有这种类型的子弹对象 :" + type);
+            console.info("没有这种类型的技能对象 :" + type);
             return;
         }
 
@@ -119,7 +92,8 @@ export default class Skill {
     //生成一个新技能
     spawnSkill(type)
     {
-        var skill = new (this._typeClass[type])();
+        var classT = SkillMgr.Instance.getSkillClass(type);
+        var skill = new classT();
         skill.onLoad(this._host);
         this._skills.push(skill);
         return skill;

@@ -37,9 +37,9 @@ export default class BulletParent {
 
     start () 
     {
-        this._phase = this.getProp(ClientDef.BULLET_PROP_PHASE);
+        this._phase = this.getProp(ClientDef.BULLET_PROP_PHASEID);
         this._skillInfo =  this.getSkillInfo();
-        this._bulletInfo = this._skillInfo["bullets"][this._phase];
+        this._bulletInfo = DictMgr.Instance.getDictByName("bullet_data")[this._phase] ;
         var damageValue = this._skillInfo["attackValue"].split("-");
         this.setProp(ClientDef.BULLET_PROP_ATK_MIN, Number(damageValue[0]));
         this.setProp(ClientDef.BULLET_PROP_ATK_MAX, Number(damageValue[1]));
@@ -318,6 +318,18 @@ export default class BulletParent {
         {
             this._effect = ParticleMgr.Instance.addMotionStreak(this._bulletInfo.motionStreak);
         } 
+    }
+
+    spawnNextBullet()
+    {
+        if(!this._bulletInfo.nextBullet)
+        {
+            console.info(">>>>没有下一阶段:"+this._bulletInfo.id);
+            return;
+        }
+        var bullet = this._host.spawnBullet( this._bulletInfo.nextBullet );
+        return bullet;
+        
     }
 
 

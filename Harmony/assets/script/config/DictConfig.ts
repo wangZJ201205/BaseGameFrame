@@ -27,6 +27,7 @@ export default class DictConfig{
         DictConfig.registerDict("language_data");
         DictConfig.registerDict("entity_data");
         DictConfig.registerDict("skill_data");
+        DictConfig.registerDict("bullet_data");
         DictConfig.registerDict("exp_data");
         DictConfig.registerDict("item_data");
         DictConfig.registerDict("gene_data");
