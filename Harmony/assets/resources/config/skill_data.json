@@ -19,7 +19,7 @@
 				"zorder": 1
 			}
 		},
-		"cooldown": 300,
+		"cooldown": 3000,
 		"count": 1,
 		"desc": "火球术厉害1",
 		"icon": "skill_huimiehuoyu"
@@ -44,7 +44,7 @@
 				"zorder": 1
 			}
 		},
-		"cooldown": 300,
+		"cooldown": 3000,
 		"count": 2,
 		"desc": "火球术厉害2",
 		"icon": "skill_huimiehuoyu"
@@ -69,7 +69,7 @@
 				"zorder": 1
 			}
 		},
-		"cooldown": 300,
+		"cooldown": 3000,
 		"count": 3,
 		"desc": "火球术厉害3",
 		"icon": "skill_huimiehuoyu"
@@ -94,7 +94,7 @@
 				"zorder": 1
 			}
 		},
-		"cooldown": 300,
+		"cooldown": 3000,
 		"count": 4,
 		"desc": "火球术厉害4",
 		"icon": "skill_huimiehuoyu"
@@ -119,7 +119,7 @@
 				"zorder": 1
 			}
 		},
-		"cooldown": 300,
+		"cooldown": 3000,
 		"count": 5,
 		"desc": "火球术厉害5",
 		"icon": "skill_huimiehuoyu"
@@ -144,7 +144,7 @@
 				"zorder": 1
 			}
 		},
-		"cooldown": 300,
+		"cooldown": 3000,
 		"count": 6,
 		"desc": "火球术厉害6",
 		"icon": "skill_huimiehuoyu"
@@ -169,7 +169,7 @@
 				"zorder": 1
 			}
 		},
-		"cooldown": 300,
+		"cooldown": 3000,
 		"count": 7,
 		"desc": "火球术厉害7",
 		"icon": "skill_huimiehuoyu"
@@ -194,7 +194,7 @@
 				"zorder": 1
 			}
 		},
-		"cooldown": 300,
+		"cooldown": 3000,
 		"count": 8,
 		"desc": "火球术厉害8",
 		"icon": "skill_huimiehuoyu"
@@ -219,34 +219,9 @@
 				"zorder": 1
 			}
 		},
-		"cooldown": 300,
+		"cooldown": 3000,
 		"count": 9,
 		"desc": "火球术厉害9",
-		"icon": "skill_huimiehuoyu"
-	},
-	"10110": {
-		"id": 10110,
-		"name": "火球术",
-		"attackValue": "5-15",
-		"bullets": {
-			"1": {
-				"id": 2,
-				"atlas": "skill_res",
-				"attackMoveType": 2,
-				"collRect": "2,2,40,40",
-				"collision": 1,
-				"particle": "test_pt",
-				"preftab": "0",
-				"sound": "effect_skill_lhh",
-				"speed": 100,
-				"src": "sword_176",
-				"strike": 1,
-				"zorder": 1
-			}
-		},
-		"cooldown": 300,
-		"count": 10,
-		"desc": "火球术厉害10",
 		"icon": "skill_huimiehuoyu"
 	},
 	"10201": {

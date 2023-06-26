@@ -11,21 +11,32 @@ const {ccclass, property} = cc._decorator;
 export default class PosionEndBullet extends BulletParent {
 
     private _delta:number = 0;
-    
+    private _runTime:number = 0;
     restart()
     {   
         this._delta = cc.director.getTotalTime();
         super.restart();
+        this._runTime = 0;
     }
 
     update (dt) 
     {
         super.update(dt);
         var delay = cc.director.getTotalTime() - this._delta;
-        
-        if(delay > this._bulletInfo["sustaintime"])
+        if(delay > 100)
+        {
+            this._runTime++;
+            this._delta = cc.director.getTotalTime();
+        }
+        else
+        {
+            return;
+        }
+
+        if( this._runTime*100 > this._bulletInfo["sustaintime"] )
         {
             this.stop();
+            this._runTime = 0;
         }
     }
 

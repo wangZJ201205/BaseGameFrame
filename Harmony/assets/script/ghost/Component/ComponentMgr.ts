@@ -15,13 +15,14 @@ export default class ComponentMgr{
 
     _host:Entity;
     _entity_components:{}; //对象组件
-
+    _delta : number;
 
     onLoad (host) 
     {
 
         this._host = host;
         this._entity_components = {};
+        this._delta = cc.director.getTotalTime();
 
         var cloth = new ClothComponent();
         cloth.onLoad(host);
@@ -52,6 +53,14 @@ export default class ComponentMgr{
 
     update (dt) 
     {
+        var delta = cc.director.getTotalTime() - this._delta;
+        if( delta < 500 ) //组件更新时间限制
+        {
+            return;
+        }
+
+        this._delta = cc.director.getTotalTime();
+
         for (const key in this._entity_components) {
             const element = this._entity_components[key];
             element.update(dt);

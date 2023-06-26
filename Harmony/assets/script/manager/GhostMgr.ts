@@ -4,8 +4,6 @@
 import ClientDef from "../common/ClientDef";
 import GameData from "../common/GameData";
 import Entity from "../ghost/Entity";
-import Player from "../ghost/Hero";
-import Item from "../ghost/Item";
 import GameHelp from "../help/GameHelp";
 import ParentMgr from "./ParentMgr";
 import SceneMgr from "./SceneMgr";
@@ -44,7 +42,6 @@ export default class GhostMgr extends ParentMgr {
 
         this._typeClass[ClientDef.ENTITY_TYPE_PLAYER ] = Entity;
         this._typeClass[ClientDef.ENTITY_TYPE_MONSTER ] = Entity;
-        // this._typeClass[ClientDef.ENTITY_TYPE_ITEM ] = Item;
     }
 
     clear(): void 

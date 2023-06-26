@@ -17,8 +17,9 @@ export default class SkillParent {
     protected _host:Entity;
     protected _staticId:number;
     protected _skillInfo:{};
-    protected _curDelay:number;
     protected _bullets:BulletParent[];
+    protected _curDelay:number;
+    protected _curShootTime: number; //当前cd倒计时
     protected _shootTime:number = 60; //设计时间
     protected _prop: { [key: string]: any } = {};
     protected _startBulletClass : typeof BulletParent ; //开始阶段
@@ -33,6 +34,7 @@ export default class SkillParent {
         this._host = host;
         this._bullets = [];
         this._prop = {};
+        this._curShootTime = 0;
     }
 
     start () 
@@ -92,10 +94,20 @@ export default class SkillParent {
     checkShootCD()
     {
         var delay = cc.director.getTotalTime() - this._curDelay;
-        var shootTime = this._shootTime * GameData.Skill_Shoot_Accelerate; //是否全局加速
-        if( delay >= shootTime )
+        if(delay > 100)
         {
+            this._curShootTime++;
             this._curDelay = cc.director.getTotalTime();
+        }
+        else
+        {
+            return;
+        }
+
+        var shootTime = this._shootTime / 100 * GameData.Skill_Shoot_Accelerate; //是否全局加速
+        if( this._curShootTime >= shootTime )
+        {
+            this._curShootTime = 0;
             this.perpareShootBullet();
         }
     }

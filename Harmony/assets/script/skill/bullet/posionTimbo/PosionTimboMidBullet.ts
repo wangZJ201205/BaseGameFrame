@@ -10,10 +10,12 @@ const {ccclass, property} = cc._decorator;
 export default class PosionTimboMidBullet extends BulletParent {
 
     private _delta:number = 0;
-    
+    private _runTime:number = 0;
+
     restart()
     {   
         this._delta = cc.director.getTotalTime();
+        this._runTime = 0;
         super.restart();
         if(this.getNode().children[0])
         {
@@ -27,9 +29,19 @@ export default class PosionTimboMidBullet extends BulletParent {
     update (dt) 
     {
         super.update(dt);
+        super.update(dt);
         var delay = cc.director.getTotalTime() - this._delta;
+        if(delay > 100)
+        {
+            this._runTime++;
+            this._delta = cc.director.getTotalTime();
+        }
+        else
+        {
+            return;
+        }
         
-        if(delay > this._bulletInfo["sustaintime"] ) //播放动画
+        if( this._runTime*100 > this._bulletInfo["sustaintime"] )
         {
             this.stop();
 
@@ -37,6 +49,7 @@ export default class PosionTimboMidBullet extends BulletParent {
             bullet.getNode().active = true;
             bullet.getNode().position = this.getNode().position;
             bullet.restart();
+            this._runTime = 0;
         }
 
     }
