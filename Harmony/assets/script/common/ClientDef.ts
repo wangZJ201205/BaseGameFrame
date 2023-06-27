@@ -20,6 +20,7 @@ export default class ClientDef{
     public static readonly SCENE_INDEX_PARTICLE : number = 5;
     public static readonly SCENE_INDEX_SKILL_HIGH : number = 6;
     public static readonly SCENE_INDEX_LABEL : number = 7;
+    public static readonly SCENE_INDEX_HEAD_EFFECT : number = 8;
     
 
     //界面深度
@@ -118,10 +119,12 @@ export default class ClientDef{
     public static readonly BULLET_SCRIPT_POSION_TIMBO3: number  = 16; //毒树藤3
     public static readonly BULLET_SCRIPT_FIREWALL1: number  = 17; //火墙1
     public static readonly BULLET_SCRIPT_FIREWALL2: number  = 18; //火墙2
-    public static readonly BULLET_SCRIPT_FIREWALL3: number  = 19; //火墙3
+    // public static readonly BULLET_SCRIPT_FIREWALL3: number  = 19; //火墙3
     public static readonly BULLET_SCRIPT_TIMEBOMB1: number  = 20; //定时炸弹1
     public static readonly BULLET_SCRIPT_TIMEBOMB2: number  = 21; //定时炸弹2
-    public static readonly BULLET_SCRIPT_TIMEBOMB3: number  = 22; //定时炸弹3
+    // public static readonly BULLET_SCRIPT_TIMEBOMB3: number  = 22; //定时炸弹3
+    public static readonly BULLET_SCRIPT_TIMEBOMB4: number  = 23; //定时炸弹4
+    public static readonly BULLET_SCRIPT_TIMEBOMB5: number  = 24; //定时炸弹5
 
 
     //子弹属性

@@ -4,6 +4,7 @@
 
 import GameData from "../../common/GameData";
 import Hero from "../../ghost/Hero";
+import BulletHelp from "../BulletHelp";
 import SkillParent from "../SkillParent";
 
 
@@ -12,12 +13,14 @@ const {ccclass, property} = cc._decorator;
 @ccclass
 export default class TimeBombSkill extends SkillParent {
 
+
+
     //发射子弹
     shootBullet()
     {
         var heroPosition = Hero.Instance.getEntity().position;
-        var x = Math.random() * GameData.App_Game_Width + heroPosition.x - GameData.App_Game_Width / 2;
-        var y = Math.random() * GameData.App_Game_Heigth + heroPosition.y - GameData.App_Game_Heigth / 2;
+        var x = Math.random() * 400 - 200 + heroPosition.x;
+        var y = Math.random() * 100 > 50 ? heroPosition.y + 100 : heroPosition.y - 100;
     
         var bullet = this.spawnBullet(this._skillInfo["spawnBullet"] );
         bullet.getNode().active = true;
@@ -25,6 +28,9 @@ export default class TimeBombSkill extends SkillParent {
         bullet.restart();
     }
 
-
+    getAttackEntity(bullet)
+    {
+        return BulletHelp.FindEnemyByMinDistanceOfBullet(bullet);
+    }
     
 }

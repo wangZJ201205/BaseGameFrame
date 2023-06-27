@@ -9,7 +9,16 @@
   "wrapMode": 2,
   "curveData": {
     "props": {
-      "position": []
+      "position": [
+        {
+          "frame": 0,
+          "value": [
+            0,
+            18,
+            0
+          ]
+        }
+      ]
     },
     "comps": {
       "cc.Sprite": {

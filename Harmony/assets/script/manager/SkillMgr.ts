@@ -17,6 +17,8 @@ import StopAfterAnimationFinishBullet from "../skill/bullet/StopAfterAnimationFi
 import SwordBallBullet from "../skill/bullet/SwordBallBullet";
 import TaijiBallBullet from "../skill/bullet/TaijiBallBullet";
 import ThunderBallBullet from "../skill/bullet/ThunderBallBullet";
+import TimeBombBox1Bullet from "../skill/bullet/TimeBombBox1Bullet";
+import TimeBombBoxesBullet from "../skill/bullet/TimeBombBoxesBullet";
 import TimeBombMidBullet from "../skill/bullet/TimeBombMidBullet";
 import TimeBombPrevBullet from "../skill/bullet/TimeBombPrevBullet";
 import ArcherySkill from "../skill/skills/ArcherySkill";
@@ -104,6 +106,9 @@ export default class SkillMgr extends ParentMgr {
         this._typeBulletClass[ClientDef.BULLET_SCRIPT_FIREWALL2]   = FireWallMidBullet;        //火墙类型子弹
         this._typeBulletClass[ClientDef.BULLET_SCRIPT_TIMEBOMB1]   = TimeBombPrevBullet;       //定时炸弹类型子弹
         this._typeBulletClass[ClientDef.BULLET_SCRIPT_TIMEBOMB2]   = TimeBombMidBullet;        //定时炸弹类型子弹
+        this._typeBulletClass[ClientDef.BULLET_SCRIPT_TIMEBOMB4]   = TimeBombBoxesBullet;        //定时炸弹类型子弹
+        this._typeBulletClass[ClientDef.BULLET_SCRIPT_TIMEBOMB5]   = TimeBombBox1Bullet;        //定时炸弹类型子弹
+
 
 
     }

@@ -53,11 +53,11 @@ export default class ComponentMgr{
 
     update (dt) 
     {
-        var delta = cc.director.getTotalTime() - this._delta;
-        if( delta < 500 ) //组件更新时间限制
-        {
-            return;
-        }
+        // var delta = cc.director.getTotalTime() - this._delta;
+        // if( delta < 500 ) //组件更新时间限制
+        // {
+        //     return;
+        // }
 
         this._delta = cc.director.getTotalTime();
 

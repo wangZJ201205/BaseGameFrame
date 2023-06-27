@@ -15,21 +15,15 @@ export default class PosionTimboMidBullet extends BulletParent {
 
     restart()
     {   
+        this._node.zIndex = 10;
         this._delta = cc.director.getTotalTime();
         this._runTime = 0;
         super.restart();
-        if(this.getNode().children[0])
-        {
-            var anim = this.getNode().children[0].getComponent(cc.Animation);
-            let curClip = anim.getClips()[0];
-            anim.resume(curClip.name);
-            anim.play(curClip.name);
-        }
     }
 
     update (dt) 
     {
-        super.update(dt);
+        // super.update(dt);
         var delay = cc.director.getTotalTime() - this._delta;
         if(delay > 100)
         {

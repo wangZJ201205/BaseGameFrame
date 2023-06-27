@@ -11,6 +11,7 @@ import SkillMgr from "./SkillMgr";
 import GameData from "../common/GameData";
 import GameHelp from "../help/GameHelp";
 import ParticleMgr from "./ParticleMgr";
+import HeadEffectMgr from "./HeadEffectMgr";
 
 const {ccclass, property} = cc._decorator;
 
@@ -38,6 +39,7 @@ export default class SceneMgr extends ParentMgr {
         GamePlay.Instance.onLoad();
         ItemMgr.Instance.onLoad();
         SkillMgr.Instance.onLoad();
+        HeadEffectMgr.Instance.onLoad();
 
     }
 
@@ -55,6 +57,7 @@ export default class SceneMgr extends ParentMgr {
         LabelMgr.Instance.start();
         ItemMgr.Instance.start();
         SkillMgr.Instance.start();
+        HeadEffectMgr.Instance.start();
 
         if( GameData.Game_Mode == ClientDef.GAME_MODE_TEST_FIGHT )
         {
@@ -86,6 +89,7 @@ export default class SceneMgr extends ParentMgr {
         SkillMgr.Instance.clear();
         GamePlay.Instance.clear();
         ParticleMgr.Instance.clear();
+        HeadEffectMgr.Instance.clear();
     }
 
     onLayerTouchEnd(event) {

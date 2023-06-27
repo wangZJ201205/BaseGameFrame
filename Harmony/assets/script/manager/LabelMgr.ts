@@ -28,11 +28,6 @@ export default class LabelMgr extends ParentMgr {
 
     // LIFE-CYCLE CALLBACKS:
 
-    static getInstance()
-    {
-        return LabelMgr.Instance;
-    }
-
     onLoad () 
     {
         super.onLoad();

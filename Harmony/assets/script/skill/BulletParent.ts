@@ -65,6 +65,8 @@ export default class BulletParent {
         this.setProp(ClientDef.BULLET_PROP_STRIKE,this._bulletInfo["strike"]);
         var sound = this._bulletInfo["sound"];
         AudioMgr.Instance.playEffect(sound,null);
+        this.replayAnimation();
+        
     }
 
     stop()
@@ -336,6 +338,21 @@ export default class BulletParent {
         var bullet = this._host.spawnBullet( this._bulletInfo.nextBullet );
         return bullet;
         
+    }
+
+    replayAnimation()
+    {
+        if(!this._bulletInfo.animation)
+        {
+            return;
+        }
+        var anipref = this.getNode().children[0];
+        if(anipref)
+        {
+            var anim = anipref.getComponent(cc.Animation); //添加自动播放对应的动画
+            anim.resume(this._bulletInfo.src);
+            anim.play(this._bulletInfo.src);
+        }
     }
 
 

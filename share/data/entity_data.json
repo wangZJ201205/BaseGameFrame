@@ -231,7 +231,7 @@
 		"collision": 1,
 		"dropItem": "1002",
 		"moveSpeed": 2,
-		"moveType": 2,
+		"moveType": 1,
 		"path": "kr4_dwarf_mecha",
 		"skillid": 0
 	},

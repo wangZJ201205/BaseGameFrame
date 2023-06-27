@@ -39,6 +39,38 @@ export default class BulletHelp{
         return minEnemy;
     }
 
+    static FindEnemyByMinDistanceOfBullet(bullet)
+    {
+        var minDistance = 99999999;
+        var minEnemy = null;
+        GhostMgr.Instance.foreachEntity((element)=>{
+            var tgtType = element.getClientProp(ClientDef.ENTITY_PROP_TYPE);
+            if(tgtType == ClientDef.ENTITY_TYPE_PLAYER)
+            {
+                return false;
+            }
+            if(element.getClientProp(ClientDef.ENTITY_PROP_ACTIVE_STATE) == ClientDef.ENTITY_ACTIVE_STATE_FREE)
+            {
+                return false;
+            }
+
+            if(!element.isLife())
+            {
+                return false;
+            }
+
+            var distance = element.position.sub(bullet.getNode().position).mag(); //计算两个对象之间的距离
+            if(distance < minDistance)
+            {
+                minDistance = distance;
+                minEnemy = element;
+            }
+            return false;
+        })   
+        
+        return minEnemy;
+    }
+
     //周围循环攻击
     static AngleConvertDirection(angle)
     {   

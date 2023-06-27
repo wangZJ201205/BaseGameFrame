@@ -217,6 +217,11 @@ export default class Entity extends cc.Node
         return this.getClientProp(ClientDef.ENTITY_PROP_TYPE) == ClientDef.ENTITY_TYPE_MONSTER;
     }
 
+    isLife()
+    {
+        return this.getClientProp(ClientDef.ENTITY_PROP_CUR_BLOOM) > 0;
+    }
+
     //更新下一个状态
     refreshEntityState()
     {

@@ -102,13 +102,13 @@
 	"11307": {"id": 11307,"name": "火墙","attackValue": "2-6","cooldown": 2000,"count": 7,"delaytime": 100,"desc": "火墙可以在英雄周围生成一片","icon": "special_icons_0022","range": 270,"spawnBullet": 24},
 	"11308": {"id": 11308,"name": "火墙","attackValue": "2-6","cooldown": 2000,"count": 8,"delaytime": 100,"desc": "火墙可以在英雄周围生成一片","icon": "special_icons_0022","range": 270,"spawnBullet": 24},
 	"11309": {"id": 11309,"name": "火墙","attackValue": "2-6","cooldown": 2000,"count": 9,"delaytime": 100,"desc": "火墙可以在英雄周围生成一片","icon": "special_icons_0022","range": 270,"spawnBullet": 24},
-	"11401": {"id": 11401,"name": "定时炸弹","attackValue": "10-20","cooldown": 8000,"count": 1,"delaytime": 100,"desc": "火墙可以在英雄周围生成一片","icon": "heroroom_powers_icons_1","range": 270,"spawnBullet": 27},
-	"11402": {"id": 11402,"name": "定时炸弹","attackValue": "10-20","cooldown": 8000,"count": 1,"delaytime": 100,"desc": "火墙可以在英雄周围生成一片","icon": "heroroom_powers_icons_1","range": 270,"spawnBullet": 27},
-	"11403": {"id": 11403,"name": "定时炸弹","attackValue": "10-20","cooldown": 8000,"count": 1,"delaytime": 100,"desc": "火墙可以在英雄周围生成一片","icon": "heroroom_powers_icons_1","range": 270,"spawnBullet": 27},
-	"11404": {"id": 11404,"name": "定时炸弹","attackValue": "10-20","cooldown": 8000,"count": 1,"delaytime": 100,"desc": "火墙可以在英雄周围生成一片","icon": "heroroom_powers_icons_1","range": 270,"spawnBullet": 27},
-	"11405": {"id": 11405,"name": "定时炸弹","attackValue": "10-20","cooldown": 8000,"count": 1,"delaytime": 100,"desc": "火墙可以在英雄周围生成一片","icon": "heroroom_powers_icons_1","range": 270,"spawnBullet": 27},
-	"11406": {"id": 11406,"name": "定时炸弹","attackValue": "10-20","cooldown": 8000,"count": 1,"delaytime": 100,"desc": "火墙可以在英雄周围生成一片","icon": "heroroom_powers_icons_1","range": 270,"spawnBullet": 27},
-	"11407": {"id": 11407,"name": "定时炸弹","attackValue": "10-20","cooldown": 8000,"count": 1,"delaytime": 100,"desc": "火墙可以在英雄周围生成一片","icon": "heroroom_powers_icons_1","range": 270,"spawnBullet": 27},
-	"11408": {"id": 11408,"name": "定时炸弹","attackValue": "10-20","cooldown": 8000,"count": 1,"delaytime": 100,"desc": "火墙可以在英雄周围生成一片","icon": "heroroom_powers_icons_1","range": 270,"spawnBullet": 27},
-	"11409": {"id": 11409,"name": "定时炸弹","attackValue": "10-20","cooldown": 8000,"count": 1,"delaytime": 100,"desc": "火墙可以在英雄周围生成一片","icon": "heroroom_powers_icons_1","range": 270,"spawnBullet": 27}
+	"11401": {"id": 11401,"name": "定时炸弹","attackValue": "10-20","cooldown": 10000,"count": 1,"delaytime": 100,"desc": "火墙可以在英雄周围生成一片","icon": "heroroom_powers_icons_1","range": 270,"spawnBullet": 27},
+	"11402": {"id": 11402,"name": "定时炸弹","attackValue": "10-20","cooldown": 10000,"count": 1,"delaytime": 100,"desc": "火墙可以在英雄周围生成一片","icon": "heroroom_powers_icons_1","range": 270,"spawnBullet": 27},
+	"11403": {"id": 11403,"name": "定时炸弹","attackValue": "10-20","cooldown": 10000,"count": 1,"delaytime": 100,"desc": "火墙可以在英雄周围生成一片","icon": "heroroom_powers_icons_1","range": 270,"spawnBullet": 27},
+	"11404": {"id": 11404,"name": "定时炸弹","attackValue": "10-20","cooldown": 10000,"count": 1,"delaytime": 100,"desc": "火墙可以在英雄周围生成一片","icon": "heroroom_powers_icons_1","range": 270,"spawnBullet": 27},
+	"11405": {"id": 11405,"name": "定时炸弹","attackValue": "10-20","cooldown": 10000,"count": 1,"delaytime": 100,"desc": "火墙可以在英雄周围生成一片","icon": "heroroom_powers_icons_1","range": 270,"spawnBullet": 27},
+	"11406": {"id": 11406,"name": "定时炸弹","attackValue": "10-20","cooldown": 10000,"count": 1,"delaytime": 100,"desc": "火墙可以在英雄周围生成一片","icon": "heroroom_powers_icons_1","range": 270,"spawnBullet": 27},
+	"11407": {"id": 11407,"name": "定时炸弹","attackValue": "10-20","cooldown": 10000,"count": 1,"delaytime": 100,"desc": "火墙可以在英雄周围生成一片","icon": "heroroom_powers_icons_1","range": 270,"spawnBullet": 27},
+	"11408": {"id": 11408,"name": "定时炸弹","attackValue": "10-20","cooldown": 10000,"count": 1,"delaytime": 100,"desc": "火墙可以在英雄周围生成一片","icon": "heroroom_powers_icons_1","range": 270,"spawnBullet": 27},
+	"11409": {"id": 11409,"name": "定时炸弹","attackValue": "10-20","cooldown": 10000,"count": 1,"delaytime": 100,"desc": "火墙可以在英雄周围生成一片","icon": "heroroom_powers_icons_1","range": 270,"spawnBullet": 27}
 }

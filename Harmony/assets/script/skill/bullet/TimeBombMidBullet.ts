@@ -4,13 +4,16 @@
 
 import ClientDef from "../../common/ClientDef";
 import GameData from "../../common/GameData";
+import Entity from "../../ghost/Entity";
 import Hero from "../../ghost/Hero";
 import LoadMgr from "../../manager/LoadMgr";
 import MovementParent, { MoveNodeConfig } from "../../movement/MovementParent";
 import LineMovement from "../../movement/children/LineMovement";
+import TraceEntityMovement, { TraceEntityConfig } from "../../movement/children/TraceEntityMovement";
 import GameMath from "../../utils/GameMath";
 import BulletHelp from "../BulletHelp";
 import BulletParent from "../BulletParent";
+import TimeBombSkill from "../skills/TimeBombSkill";
 
 
 const {ccclass, property} = cc._decorator;
@@ -18,23 +21,30 @@ const {ccclass, property} = cc._decorator;
 @ccclass
 export default class TimeBombMidBullet extends BulletParent {
 
-    private _delta:number = 0;
-    private _runTime:number = 0;
-    private _lineMovement:MovementParent;
-    private _curCpName : string = "";
+
+    private _lineMovement:LineMovement;
+    private _traceEntityMovement:TraceEntityMovement;
     private _startPos : cc.Vec3;
+
+    private _walkOutTimeOfDoor: number = 0;
+    private _attackEntity:Entity;
+    private _noAttackTime :number = 1000;
     
     onLoad (host) 
     {
         super.onLoad(host);
         this._lineMovement = new LineMovement();
+        this._traceEntityMovement = new TraceEntityMovement();
+    }
+
+    //重写
+    replayAnimation(){
     }
 
     restart()
     {   
-
-        this._delta = cc.director.getTotalTime();
-        this._runTime = 0;
+        this._attackEntity = null;
+        this._walkOutTimeOfDoor = cc.director.getTotalTime();
         super.restart();
         if(this.getNode().children[0])
         {
@@ -42,20 +52,16 @@ export default class TimeBombMidBullet extends BulletParent {
 
             var skins = this._bulletInfo.src.split(",");
             var rand = Math.floor(Math.random()*skins.length);
-            this._curCpName = skins[rand];
             anim.resume(skins[rand]);
             anim.play(skins[rand]);
-
         }
 
         //设置方向
-        const degree = Hero.Instance.getEntity().getClientProp(ClientDef.ENTITY_PROP_DEGREE);
-        var dir = GameMath.degreeToEntityDirection2(degree);
+        var dir = 1;
         var angle = dir == 2 ? 180 : 0;
-        this.getNode().scaleX = -1;
+        this.getNode().scaleX = dir == 2 ? -1 : 1;
         
         var direction = BulletHelp.AngleConvertDirection(angle);
-        this.getNode().angle = GameMath.directionToAngle(direction);
         this.setProp(ClientDef.BULLET_PROP_DIRECTION , direction);
         
         super.restart();
@@ -85,23 +91,69 @@ export default class TimeBombMidBullet extends BulletParent {
             this.stop();
         } 
 
-        this._lineMovement.update(dt);
-        super.update(dt);
+        if(!this._attackEntity)
+        {
+            this._lineMovement.update(dt);
+        }
+        else
+        {
+            if(this._attackEntity.getClientProp(ClientDef.ENTITY_PROP_ACTIVE_STATE) == ClientDef.ENTITY_ACTIVE_STATE_FREE ||
+                !this._attackEntity.isLife())
+            {
+                this._attackEntity = null;
+                return;
+            }
+
+            this.getNode().scaleX = this._attackEntity.position.x > this._node.position.x ? 1 : -1;
+            
+            this._traceEntityMovement.update(dt);
+        }
+
+        var walkTime = cc.director.getTotalTime() - this._walkOutTimeOfDoor;
+        if( walkTime > this._noAttackTime && !this._attackEntity)
+        {
+            this._attackEntity = (this._host as TimeBombSkill).getAttackEntity(this);
+            const info: TraceEntityConfig = {
+                moveNode: this.getNode(),
+                startPos: this.getNode().position,
+                tgtEntity: this._attackEntity,
+                speed: this._bulletInfo.speed * 2,
+              };
+    
+            this._traceEntityMovement.start(info);
+        }
     }
 
     //碰撞开始
     collisionEnter(other, self)
     {   
+        if(!other.node.isLife())
+        {
+            return;
+        }
+
+        var walkTime = cc.director.getTotalTime() - this._walkOutTimeOfDoor;
+        if( walkTime < this._noAttackTime ) //是否到攻击时间
+        {
+            return;
+        }
+
         this.stop();
 
         var bullet = this.spawnNextBullet();
         bullet.getNode().active = true;
         bullet.getNode().position = this.getNode().position;
         bullet.restart();
-        // var damageValue = this.getDamageValue(other);
-        // other.node.setClientProp(ClientDef.ENTITY_PROP_POSION_TIME,cc.director.getTotalTime());
-        //     if(damageValue == 0)return;
-        // other.node.getEntityComponent(ClientDef.ENTITY_COMP_BLOOM).addDamage( damageValue );
+
+        var damageValue = this.getDamageValue(other);
+        other.node.setClientProp(ClientDef.ENTITY_PROP_POSION_TIME,cc.director.getTotalTime());
+        if(damageValue == 0)return;
+        other.node.getEntityComponent(ClientDef.ENTITY_COMP_BLOOM).addDamage( damageValue );
+    }
+
+    collisionStay(other, self)
+    {
+        this.collisionEnter(other, self);
     }
 
     loadPrefab()
@@ -120,13 +172,8 @@ export default class TimeBombMidBullet extends BulletParent {
             var anim = aniPref.getComponent(cc.Animation); //添加自动播放对应的动画
             var skins = this._bulletInfo.src.split(",");
             var rand = Math.floor(Math.random()*skins.length);
-            this._curCpName = skins[rand];
             anim.resume(skins[rand]);
             anim.play(skins[rand]);
-            anim.on('finished',  this.onFinished,    this);
         });
     }
-
-    
-
 }

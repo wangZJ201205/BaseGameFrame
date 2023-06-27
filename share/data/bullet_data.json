@@ -233,19 +233,19 @@
 		"attackMoveType": 1,
 		"bulletNum": 5,
 		"collRect": "0",
-		"nextBullet": 28,
+		"nextBullet": 30,
 		"preftab": "skill_timebomb",
 		"scriptID": 20,
 		"sound": "effect_skill_lls",
 		"src": "skill_timeBomb_cp",
-		"zorder": 1
+		"zorder": 2
 	},
 	"28": {
 		"id": 28,
 		"animation": 1,
 		"atlas": "skill_timeBomb/timeBomb",
-		"attackMoveType": 1,
-		"collRect": "2,2,50,50",
+		"attackMoveType": 2,
+		"collRect": "2,20,40,40",
 		"collision": 1,
 		"nextBullet": 29,
 		"preftab": "skill_timebomb",
@@ -253,7 +253,7 @@
 		"sound": "effect_skill_lls",
 		"speed": 6,
 		"src": "skill_timeBomb_entity1_cp,skill_timeBomb_entity2_cp,skill_timeBomb_entity3_cp,skill_timeBomb_entity4_cp,skill_timeBomb_entity5_cp,skill_timeBomb_entity6_cp",
-		"zorder": 1
+		"zorder": 2
 	},
 	"29": {"id": 29,"animation": 1,"atlas": "skill_timeBomb/timeBomb","attackMoveType": 1,"collRect": "0","preftab": "skill_timebomb","scriptID": 16,"sound": "effect_skill_lls","src": "skill_timeBomb_bomb_cp","zorder": 1},
 	"3": {
@@ -270,6 +270,34 @@
 		"src": "skill_iceball",
 		"strike": 2,
 		"zorder": 1
+	},
+	"30": {
+		"id": 30,
+		"animation": 1,
+		"atlas": "skill_timeBomb/timeBomb",
+		"attackMoveType": 1,
+		"bulletNum": 5,
+		"collRect": "0",
+		"nextBullet": 31,
+		"preftab": "skill_timebomb",
+		"scriptID": 23,
+		"sound": "effect_skill_lls",
+		"src": "skill_timeBomb_bomb1_cp",
+		"zorder": 2
+	},
+	"31": {
+		"id": 31,
+		"animation": 1,
+		"atlas": "skill_timeBomb/timeBomb",
+		"attackMoveType": 1,
+		"bulletNum": 5,
+		"collRect": "0",
+		"nextBullet": 28,
+		"preftab": "skill_timebomb",
+		"scriptID": 24,
+		"sound": "effect_skill_lls",
+		"src": "skill_timeBomb_bomb2_cp",
+		"zorder": 2
 	},
 	"4": {
 		"id": 4,
