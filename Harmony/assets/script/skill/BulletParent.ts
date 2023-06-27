@@ -219,11 +219,17 @@ export default class BulletParent {
             anim.resume(this._bulletInfo.src);
             anim.play(this._bulletInfo.src);
             anim.on('finished',  this.onFinished,    this);
+            aniPref.on('Attack',  this.onAimAttack,    this);
 
         });
     }
 
     onFinished()
+    {
+        //动画结束
+    }
+
+    onAimAttack()
     {
         //动画结束
     }
@@ -325,7 +331,7 @@ export default class BulletParent {
         if(!this._bulletInfo.nextBullet)
         {
             console.info(">>>>没有下一阶段:"+this._bulletInfo.id);
-            return;
+            return null;
         }
         var bullet = this._host.spawnBullet( this._bulletInfo.nextBullet );
         return bullet;

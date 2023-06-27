@@ -59,7 +59,7 @@ export default class PosionTimboMidBullet extends BulletParent {
     {   
         var damageValue = this.getDamageValue(other);
         other.node.setClientProp(ClientDef.ENTITY_PROP_POSION_TIME,cc.director.getTotalTime());
-            if(damageValue == 0)return;
+        if(damageValue == 0)return;
         other.node.getEntityComponent(ClientDef.ENTITY_COMP_BLOOM).addDamage( damageValue );
     }
 

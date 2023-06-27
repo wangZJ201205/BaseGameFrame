@@ -25,16 +25,12 @@ function handle_skill(o)
 	d.name = o.b
 	d.attackValue = o.c
 	d.spawnBullet = o.d ~= "0" and tonumber(o.d) or nil
-	-- d.bullets = {}
-	-- d.bullets["1"] = gdSkillEffect[o.d ~= "0" and tonumber(o.d) or nil]
-	-- d.bullets["2"] = gdSkillEffect[o.e ~= "0" and tonumber(o.e) or nil]
-	-- d.bullets["3"] = gdSkillEffect[o.f ~= "0" and tonumber(o.f) or nil]
-	d.cooldown = o.g ~= "0" and tonumber(o.g) or nil
-	d.delaytime = o.h ~= "0" and tonumber(o.h) or nil
-	d.range = o.i ~= "0" and tonumber(o.i) or nil
-	d.count = o.j ~= "0" and tonumber(o.j) or nil
-	d.icon = o.k
-	d.desc = o.l
+	d.cooldown = o.e ~= "0" and tonumber(o.e) or nil
+	d.delaytime = o.f ~= "0" and tonumber(o.f) or nil
+	d.range = o.g ~= "0" and tonumber(o.g) or nil
+	d.count = o.h ~= "0" and tonumber(o.h) or nil
+	d.icon = o.i
+	d.desc = o.j
 	gdskill[tostring(d.id)] = d
 end
 

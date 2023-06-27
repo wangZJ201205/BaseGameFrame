@@ -1,5 +1,5 @@
 /**
- * 毒树藤 后期
+ * 动画播放完成后停止子弹
  */
 
 import BulletParent from "../BulletParent";
@@ -7,7 +7,7 @@ import BulletParent from "../BulletParent";
 const {ccclass, property} = cc._decorator;
 
 @ccclass
-export default class PosionTimboEndBullet extends BulletParent {
+export default class StopAfterAnimationFinishBullet extends BulletParent {
 
     restart(){
         var anipref = this.getNode().children[0];
@@ -24,7 +24,6 @@ export default class PosionTimboEndBullet extends BulletParent {
     {
         //动画结束
         this.stop();
-
     }
 
 }

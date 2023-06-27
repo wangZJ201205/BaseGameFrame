@@ -12,11 +12,6 @@ const {ccclass, property} = cc._decorator;
 @ccclass
 export default class TimeBombSkill extends SkillParent {
 
-    start () 
-    {
-        super.start();
-    }
-
     //发射子弹
     shootBullet()
     {

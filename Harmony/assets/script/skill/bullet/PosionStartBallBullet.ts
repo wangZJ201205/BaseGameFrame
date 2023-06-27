@@ -49,8 +49,6 @@ export default class PosionStartBallBullet extends BulletParent {
     completeCallBack()
     {
         this.stop();
-        var heroPosition = Hero.Instance.getEntity().position;
-        
         var bullet = this.spawnNextBullet();
         bullet.getNode().active = true;
         bullet.getNode().position = this.getNode().position;
@@ -61,11 +59,6 @@ export default class PosionStartBallBullet extends BulletParent {
     {
         super.update(dt);
         this._halfCircleMovement.update(dt);
-    }
-
-    //碰撞关闭
-    addCollision()
-    {
     }
 
 }

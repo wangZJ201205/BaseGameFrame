@@ -23,8 +23,6 @@ export default class TimeBombPrevBullet extends BulletParent {
     onFinished()
     {
         //动画结束
-        console.info(">>>>>>>>>>>>>>1");
-
         for (let index = 0; index < 6; index++) {
             var bullet = this.spawnNextBullet();
             bullet.getNode().active = true;
@@ -32,7 +30,8 @@ export default class TimeBombPrevBullet extends BulletParent {
             bullet.restart();
         }
         
-
     }
+
+    
 
 }

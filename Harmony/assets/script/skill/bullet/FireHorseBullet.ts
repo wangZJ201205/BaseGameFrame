@@ -60,7 +60,7 @@ export default class FireHorseBullet extends BulletParent {
             }
         }
 
-        this._startPos = this._host.getHost().getEntityNode().position;
+        this._startPos = this._node.position;
     }
 
     update (dt) 

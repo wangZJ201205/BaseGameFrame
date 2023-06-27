@@ -1,5 +1,5 @@
 /**
- * 冰球
+ * 通过角度来直线运行
  */
 
 import ClientDef from "../../common/ClientDef";
@@ -10,10 +10,11 @@ import GameMath from "../../utils/GameMath";
 import BulletHelp from "../BulletHelp";
 import BulletParent from "../BulletParent";
 
+
 const {ccclass, property} = cc._decorator;
 
 @ccclass
-export default class IceBallBullet extends BulletParent {
+export default class LineMoveByAngleBullet extends BulletParent {
 
     private _lineMovement:MovementParent;
 
@@ -29,7 +30,7 @@ export default class IceBallBullet extends BulletParent {
         var direction = BulletHelp.AngleConvertDirection(angle);
         this.getNode().angle = GameMath.directionToAngle(direction);
         this.setProp(ClientDef.BULLET_PROP_DIRECTION , direction);
-        
+
         super.restart();
         var bulletInfo = this._bulletInfo;
 

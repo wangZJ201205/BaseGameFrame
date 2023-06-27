@@ -2,10 +2,7 @@
  * 火墙 -- 中期
  */
 
-import ClientDef from "../../common/ClientDef";
 import BulletParent from "../BulletParent";
-
-
 
 const {ccclass, property} = cc._decorator;
 

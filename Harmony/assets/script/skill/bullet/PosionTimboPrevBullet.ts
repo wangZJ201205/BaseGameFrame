@@ -62,9 +62,4 @@ export default class PosionTimboPrevBullet extends BulletParent {
         this._halfCircleMovement.update(dt);
     }
 
-    //碰撞关闭
-    addCollision()
-    {
-    }
-
 }

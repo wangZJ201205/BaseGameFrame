@@ -102,7 +102,7 @@ export default class ClientDef{
     //子弹脚本ID
     public static readonly BULLET_SCRIPT_COMMON: number        = 1; //子弹父类
     public static readonly BULLET_SCRIPT_FIREBALL: number      = 2; //火球
-    public static readonly BULLET_SCRIPT_ICEBALL: number       = 3; //冰球
+    // public static readonly BULLET_SCRIPT_ICEBALL: number       = 3; //冰球
     public static readonly BULLET_SCRIPT_LEIPI: number         = 4; //雷劈
     public static readonly BULLET_SCRIPT_SWORD_AIR: number     = 5; //剑气
     public static readonly BULLET_SCRIPT_TAIJI: number         = 6; //太极

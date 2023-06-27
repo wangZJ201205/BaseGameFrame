@@ -355,13 +355,13 @@
       "custom": false
     },
     "_file": {
-      "__uuid__": "ca02f056-7dc6-4f9d-b2b8-5d2367c860e8"
+      "__uuid__": "a6b5b256-93ea-4362-a527-3c30eb85c74f"
     },
     "_spriteFrame": {
       "__uuid__": "bde29bf7-2e3e-4ede-a11c-f70b8cb881c0"
     },
     "_texture": null,
-    "_stopped": true,
+    "_stopped": false,
     "playOnLoad": true,
     "autoRemoveOnFinish": false,
     "totalParticles": 30,
@@ -371,31 +371,31 @@
     "lifeVar": 0.3,
     "_startColor": {
       "__type__": "cc.Color",
-      "r": 100,
-      "g": 202,
-      "b": 86,
+      "r": 0,
+      "g": 219,
+      "b": 255,
       "a": 72
     },
     "_startColorVar": {
       "__type__": "cc.Color",
-      "r": 229,
-      "g": 255,
-      "b": 173,
+      "r": 0,
+      "g": 219,
+      "b": 255,
       "a": 83
     },
     "_endColor": {
       "__type__": "cc.Color",
-      "r": 165,
-      "g": 255,
-      "b": 161,
-      "a": 95
+      "r": 0,
+      "g": 219,
+      "b": 255,
+      "a": 66
     },
     "_endColorVar": {
       "__type__": "cc.Color",
-      "r": 107,
-      "g": 249,
-      "b": 249,
-      "a": 76
+      "r": 0,
+      "g": 219,
+      "b": 255,
+      "a": 0
     },
     "angle": 0,
     "angleVar": 0,

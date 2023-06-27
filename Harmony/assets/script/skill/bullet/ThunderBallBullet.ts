@@ -1,5 +1,5 @@
 /**
- * 冰球
+ * 落雷
  */
 
 import BulletParent from "../BulletParent";

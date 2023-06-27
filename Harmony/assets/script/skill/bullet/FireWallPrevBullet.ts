@@ -27,6 +27,7 @@ export default class FireWallPrevBullet extends BulletParent {
         this.stop();
         
         var bullet = this.spawnNextBullet();
+        if(!bullet)return;
         bullet.getNode().active = true;
         bullet.getNode().position = this.getNode().position;
         bullet.restart();

@@ -2,27 +2,21 @@
  * 技能管理
  */
 import ClientDef from "../common/ClientDef";
-import Item from "../ghost/Item";
 import BulletParent from "../skill/BulletParent";
-import ArcheryBoomBullet from "../skill/bullet/ArcheryBoomBullet";
 import ArcheryBullet from "../skill/bullet/ArcheryBullet";
-import FireBallBullet from "../skill/bullet/FireBallBullet";
 import FireHorseBullet from "../skill/bullet/FireHorseBullet";
-import FireWallEndBullet from "../skill/bullet/FireWallEndBullet";
 import FireWallMidBullet from "../skill/bullet/FireWallMidBullet";
 import FireWallPrevBullet from "../skill/bullet/FireWallPrevBullet";
-import IceBallBullet from "../skill/bullet/IceBallBullet";
-import MiZongQuanBullet from "../skill/bullet/MiZongQuanBullet";
+import LineMoveByAngleBullet from "../skill/bullet/LineMoveByAngleBullet";
 import PosionEndBullet from "../skill/bullet/PosionEndBullet";
 import PosionStartBallBullet from "../skill/bullet/PosionStartBallBullet";
-import PosionTimboEndBullet from "../skill/bullet/PosionTimboEndBullet";
 import PosionTimboMidBullet from "../skill/bullet/PosionTimboMidBullet";
 import PosionTimboPrevBullet from "../skill/bullet/PosionTimboPrevBullet";
 import ShieldBallBullet from "../skill/bullet/ShieldBallBullet";
+import StopAfterAnimationFinishBullet from "../skill/bullet/StopAfterAnimationFinishBullet";
 import SwordBallBullet from "../skill/bullet/SwordBallBullet";
 import TaijiBallBullet from "../skill/bullet/TaijiBallBullet";
 import ThunderBallBullet from "../skill/bullet/ThunderBallBullet";
-import TimeBombEndBullet from "../skill/bullet/TimeBombEndBullet";
 import TimeBombMidBullet from "../skill/bullet/TimeBombMidBullet";
 import TimeBombPrevBullet from "../skill/bullet/TimeBombPrevBullet";
 import ArcherySkill from "../skill/skills/ArcherySkill";
@@ -40,7 +34,6 @@ import ThunderBallSkill from "../skill/skills/ThunderBallSkill";
 import TimeBombSkill from "../skill/skills/TimeBombSkill";
 import PosionBallSkill from "../skill/skills/posionBallSkill";
 import DictMgr from "./DictMgr";
-import GhostMgr from "./GhostMgr";
 import ParentMgr from "./ParentMgr";
 import SceneMgr from "./SceneMgr";
 
@@ -95,27 +88,22 @@ export default class SkillMgr extends ParentMgr {
 
 
         this._typeBulletClass[ClientDef.BULLET_SCRIPT_COMMON]   = BulletParent;          //子弹父类
-        this._typeBulletClass[ClientDef.BULLET_SCRIPT_FIREBALL] = FireBallBullet;         //火球类型子弹
-        this._typeBulletClass[ClientDef.BULLET_SCRIPT_ICEBALL] = IceBallBullet;           //冰球类型子弹
+        this._typeBulletClass[ClientDef.BULLET_SCRIPT_FIREBALL] = LineMoveByAngleBullet;         //通过角度来直线运动
         this._typeBulletClass[ClientDef.BULLET_SCRIPT_LEIPI]   = ThunderBallBullet;       //落雷类型子弹
         this._typeBulletClass[ClientDef.BULLET_SCRIPT_SWORD_AIR]   = SwordBallBullet;       //落雷类型子弹
         this._typeBulletClass[ClientDef.BULLET_SCRIPT_TAIJI]   = TaijiBallBullet;       //太极类型子弹
         this._typeBulletClass[ClientDef.BULLET_SCRIPT_SHIELD]   = ShieldBallBullet;       //护盾类型子弹
         this._typeBulletClass[ClientDef.BULLET_SCRIPT_POSION_START]   = PosionStartBallBullet;       //放毒类型子弹
         this._typeBulletClass[ClientDef.BULLET_SCRIPT_POSION_END]   = PosionEndBullet;       //放毒类型子弹
-        this._typeBulletClass[ClientDef.BULLET_SCRIPT_MIZONGQUAN]   = MiZongQuanBullet;       //迷踪拳类型子弹
         this._typeBulletClass[ClientDef.BULLET_SCRIPT_ARCHERY]      = ArcheryBullet;       //射箭类型子弹
-        this._typeBulletClass[ClientDef.BULLET_SCRIPT_ARCHERY_BOOM]   = ArcheryBoomBullet;       //射箭类型子弹
         this._typeBulletClass[ClientDef.BULLET_SCRIPT_FIRE_HORSE]   = FireHorseBullet;       //护盾类型子弹
-        this._typeBulletClass[ClientDef.BULLET_SCRIPT_POSION_TIMBO1]   = PosionTimboPrevBullet;       //护盾类型子弹
-        this._typeBulletClass[ClientDef.BULLET_SCRIPT_POSION_TIMBO2]   = PosionTimboMidBullet;       //护盾类型子弹
-        this._typeBulletClass[ClientDef.BULLET_SCRIPT_POSION_TIMBO3]   = PosionTimboEndBullet;       //护盾类型子弹
-        this._typeBulletClass[ClientDef.BULLET_SCRIPT_FIREWALL1]   = FireWallPrevBullet;       //护盾类型子弹
-        this._typeBulletClass[ClientDef.BULLET_SCRIPT_FIREWALL2]   = FireWallMidBullet;       //护盾类型子弹
-        this._typeBulletClass[ClientDef.BULLET_SCRIPT_FIREWALL3]   = FireWallEndBullet;       //护盾类型子弹
-        this._typeBulletClass[ClientDef.BULLET_SCRIPT_TIMEBOMB1]   = TimeBombPrevBullet;       //护盾类型子弹
-        this._typeBulletClass[ClientDef.BULLET_SCRIPT_TIMEBOMB2]   = TimeBombMidBullet;       //护盾类型子弹
-        this._typeBulletClass[ClientDef.BULLET_SCRIPT_TIMEBOMB3]   = TimeBombEndBullet;       //护盾类型子弹
+        this._typeBulletClass[ClientDef.BULLET_SCRIPT_POSION_TIMBO1]   = PosionTimboPrevBullet;      //毒树藤类型子弹
+        this._typeBulletClass[ClientDef.BULLET_SCRIPT_POSION_TIMBO2]   = PosionTimboMidBullet;       //毒树藤类型子弹
+        this._typeBulletClass[ClientDef.BULLET_SCRIPT_POSION_TIMBO3]   = StopAfterAnimationFinishBullet;       //毒树藤类型子弹
+        this._typeBulletClass[ClientDef.BULLET_SCRIPT_FIREWALL1]   = FireWallPrevBullet;       //火墙类型子弹
+        this._typeBulletClass[ClientDef.BULLET_SCRIPT_FIREWALL2]   = FireWallMidBullet;        //火墙类型子弹
+        this._typeBulletClass[ClientDef.BULLET_SCRIPT_TIMEBOMB1]   = TimeBombPrevBullet;       //定时炸弹类型子弹
+        this._typeBulletClass[ClientDef.BULLET_SCRIPT_TIMEBOMB2]   = TimeBombMidBullet;        //定时炸弹类型子弹
 
 
     }
