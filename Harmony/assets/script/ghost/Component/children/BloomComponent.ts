@@ -22,7 +22,6 @@ export default class BloomComponent extends ComponentParent {
         this._state = ClientDef.COMP_STATE_LOAD;
         this._host = host;
         this._node = new cc.Node();
-        this._node.scale = 0.3;
         HeadEffectMgr.Instance.addHeadEffect(this._node);
     }
 
@@ -38,13 +37,13 @@ export default class BloomComponent extends ComponentParent {
                 }
                 var node = new cc.Node()
                 this._green_bar = node.addComponent(cc.Sprite);
-                let spriteFrame = asset.getSpriteFrame("boss_health_bar_0001");
+                let spriteFrame = asset.getSpriteFrame("lifebar_small");
                 this._green_bar.spriteFrame = spriteFrame;
                 node.setAnchorPoint(0,0.5);
                 this._node.addChild(node);
                 var rednode = new cc.Node()
                 this._red_bar = rednode.addComponent(cc.Sprite);
-                let spriteFrame1 = asset.getSpriteFrame("boss_health_bar_0002");
+                let spriteFrame1 = asset.getSpriteFrame("lifebar_bg_small");
                 this._red_bar.spriteFrame = spriteFrame1;
                 rednode.setAnchorPoint(0,0.5);
                 this._node.addChild(rednode);
@@ -68,7 +67,7 @@ export default class BloomComponent extends ComponentParent {
 
     update (dt) 
     {        
-        this._node.setPosition(-25 + this._host.position.x ,50 + this._host.position.y,0);
+        this._node.setPosition(-10 + this._host.position.x ,50 + this._host.position.y,0);
     }
 
     addDamage(damageValue)

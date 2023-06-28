@@ -3,10 +3,10 @@
  */
 import ClientDef from "../common/ClientDef";
 import BulletParent from "../skill/BulletParent";
+import AnimationFinishPlayNextBBullet from "../skill/bullet/AnimationFinishPlayNextBBullet";
 import ArcheryBullet from "../skill/bullet/ArcheryBullet";
 import FireHorseBullet from "../skill/bullet/FireHorseBullet";
 import FireWallMidBullet from "../skill/bullet/FireWallMidBullet";
-import FireWallPrevBullet from "../skill/bullet/FireWallPrevBullet";
 import LineMoveByAngleBullet from "../skill/bullet/LineMoveByAngleBullet";
 import PosionEndBullet from "../skill/bullet/PosionEndBullet";
 import PosionStartBallBullet from "../skill/bullet/PosionStartBallBullet";
@@ -102,7 +102,7 @@ export default class SkillMgr extends ParentMgr {
         this._typeBulletClass[ClientDef.BULLET_SCRIPT_POSION_TIMBO1]   = PosionTimboPrevBullet;      //毒树藤类型子弹
         this._typeBulletClass[ClientDef.BULLET_SCRIPT_POSION_TIMBO2]   = PosionTimboMidBullet;       //毒树藤类型子弹
         this._typeBulletClass[ClientDef.BULLET_SCRIPT_POSION_TIMBO3]   = StopAfterAnimationFinishBullet;       //毒树藤类型子弹
-        this._typeBulletClass[ClientDef.BULLET_SCRIPT_FIREWALL1]   = FireWallPrevBullet;       //火墙类型子弹
+        this._typeBulletClass[ClientDef.BULLET_SCRIPT_FIREWALL1]   = AnimationFinishPlayNextBBullet;       //火墙类型子弹
         this._typeBulletClass[ClientDef.BULLET_SCRIPT_FIREWALL2]   = FireWallMidBullet;        //火墙类型子弹
         this._typeBulletClass[ClientDef.BULLET_SCRIPT_TIMEBOMB1]   = TimeBombPrevBullet;       //定时炸弹类型子弹
         this._typeBulletClass[ClientDef.BULLET_SCRIPT_TIMEBOMB2]   = TimeBombMidBullet;        //定时炸弹类型子弹

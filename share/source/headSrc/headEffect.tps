@@ -237,6 +237,12 @@
             <filename>blood_red_0006.png</filename>
             <filename>blood_red_0007.png</filename>
             <filename>blood_red_0008.png</filename>
+            <filename>lifebar_small.png</filename>
+            <filename>lifebar_bg_small.png</filename>
+            <filename>lifebar_bg_big.png</filename>
+            <filename>lifebar_bg_med.png</filename>
+            <filename>lifebar_big.png</filename>
+            <filename>lifebar_med.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>

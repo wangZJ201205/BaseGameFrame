@@ -1,5 +1,5 @@
 /**
- * 冰球
+ * 落雷技能
  */
 
 import ClientDef from "../../common/ClientDef";

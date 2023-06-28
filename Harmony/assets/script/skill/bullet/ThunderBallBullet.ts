@@ -9,23 +9,20 @@ const {ccclass, property} = cc._decorator;
 @ccclass
 export default class ThunderBallBullet extends BulletParent {
 
-    private _delta:number = 0;
-
     restart()
     {   
-        this._delta = 50;
         super.restart();
+        var bullet = this.spawnNextBullet();
+        if(!bullet)return;
+        bullet.getNode().active = true;
+        bullet.getNode().position = this.getNode().position;
+        bullet.restart();
     }
-
-    update (dt) 
-    {
-        this._delta--;
-        if(this._delta <= 0)
-        {
-            this.stop();
-        }
-        super.update(dt);
-    }
-
     
+    onFinished()
+    {
+        //动画结束
+        this.stop();
+    }
+
 }

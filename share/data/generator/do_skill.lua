@@ -29,8 +29,9 @@ function handle_skill(o)
 	d.delaytime = o.f ~= "0" and tonumber(o.f) or nil
 	d.range = o.g ~= "0" and tonumber(o.g) or nil
 	d.count = o.h ~= "0" and tonumber(o.h) or nil
-	d.icon = o.i
-	d.desc = o.j
+	d.subBulletCnt = o.i ~= "0" and tonumber(o.i) or nil
+	d.icon = o.j
+	d.desc = o.k
 	gdskill[tostring(d.id)] = d
 end
 

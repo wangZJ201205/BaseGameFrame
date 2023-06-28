@@ -218,6 +218,7 @@
             <filename>towerselect_powers_0031.png</filename>
             <filename>special_icons_0022.png</filename>
             <filename>heroroom_powers_icons_1.png</filename>
+            <filename>reinforcement_portrait_0004.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>

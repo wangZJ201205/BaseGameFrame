@@ -47,9 +47,8 @@ function handle_skill_effect(o)
 	d.atlas = o.n
 	d.attackMoveType = attackMoveType[o.o]
 	d.zorder = zorderIndexType[o.p]
-	d.bulletNum = o.q ~= "0" and tonumber(o.q) or nil
-	d.nextBullet = o.r ~= "0" and tonumber(o.r) or nil
-	d.scriptID = o.s ~= "0" and tonumber(o.s) or nil
+	d.nextBullet = o.q ~= "0" and tonumber(o.q) or nil
+	d.scriptID = o.r ~= "0" and tonumber(o.r) or nil
 
 	gdSkillEffect[d.id..""] = d
 end

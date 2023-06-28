@@ -1,5 +1,5 @@
 /**
- * 以一个原点为子弹
+ * 落雷 - 以英雄为中心 画个正方形
  */
 
 import GameData from "../../common/GameData";
@@ -13,18 +13,25 @@ const {ccclass, property} = cc._decorator;
 @ccclass
 export default class ThunderBallSkill extends SkillParent {
 
+    private readonly _rectPoses: cc.Vec3[] = [
+        cc.v3( 200, 100,0),
+        cc.v3(-200, 100,0),
+        cc.v3(-200, -100,0),
+        cc.v3( 200, -100,0),
+      ];
+
+    private _index : number = 0;
 
     //发射子弹
     shootBullet()
     {
-        var heroPosition = Hero.Instance.getEntity().position;
-        var x = Math.random() * GameData.App_Game_Width + heroPosition.x - GameData.App_Game_Width / 2;
-        var y = Math.random() * GameData.App_Game_Heigth + heroPosition.y - GameData.App_Game_Heigth / 2;
-    
+        var heroPosition = Hero.Instance.getEntity().position;    
         var bullet = this.spawnBullet(this._skillInfo["spawnBullet"] );
         bullet.getNode().active = true;
-        bullet.getNode().position = cc.v3(x,y,0);
+        bullet.getNode().position = heroPosition.add(this._rectPoses[this._index]);
         bullet.restart();
+
+        this._index = (this._index + 1) % 4;
     }
 
 

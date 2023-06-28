@@ -18,6 +18,7 @@ export default class GM {
         this.GMTable['addSkill'] = this.addSkill; //添加技能
         this.GMTable['addMonster'] = this.addMonster; //添加怪物
         this.GMTable['switchGameMode'] = this.switchGameMode; //切换游戏模式
+        this.GMTable['allFullSkill'] = this.allFullSkill; //所有技能满级
     }
 
     static useGm(data)
@@ -55,6 +56,21 @@ export default class GM {
     static switchGameMode(data)
     {
         GameData.Game_Mode = Number(data[1]);
+    }
+
+    static allFullSkill(data)
+    {
+
+        Hero.Instance.getEntity().getSkill().addSkill(10109);
+        Hero.Instance.getEntity().getSkill().addSkill(10207);
+        Hero.Instance.getEntity().getSkill().addSkill(10307);
+        Hero.Instance.getEntity().getSkill().addSkill(10407);
+        // Hero.Instance.getEntity().getSkill().addSkill(10603);
+        Hero.Instance.getEntity().getSkill().addSkill(11009);
+        Hero.Instance.getEntity().getSkill().addSkill(11109);
+        Hero.Instance.getEntity().getSkill().addSkill(11209);
+        Hero.Instance.getEntity().getSkill().addSkill(11309);
+        Hero.Instance.getEntity().getSkill().addSkill(11409);
     }
 
 

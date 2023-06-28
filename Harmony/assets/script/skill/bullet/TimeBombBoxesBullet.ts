@@ -40,7 +40,7 @@ export default class TimeBombBoxesBullet extends BulletParent {
     update (dt) 
     {
         var delta = cc.director.getTotalTime() - this._delayTime;
-        if( delta > 800 && this._spawnBulletCnt < this._bulletInfo.bulletNum )
+        if( delta > 800 && this._spawnBulletCnt < this._skillInfo.subBulletCnt )
         {
             var bullet = this._relationBullet.spawnNextBullet();
             bullet.getNode().active = true;
@@ -51,8 +51,8 @@ export default class TimeBombBoxesBullet extends BulletParent {
             this._spawnBulletCnt++;
             this._delayTime = cc.director.getTotalTime();
         }
-
-        if(this._spawnBulletCnt == this._bulletInfo.bulletNum && this._startRecvTime == false)
+        
+        if(this._spawnBulletCnt == this._skillInfo.subBulletCnt && this._startRecvTime == false)
         {
             this._startRecvTime = true;
             this._stopRecvTime = cc.director.getTotalTime();
