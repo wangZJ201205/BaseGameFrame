@@ -48,6 +48,7 @@ export default class ClientDef{
     public static readonly ENTITY_STATE_IDLE: number    = 0; //站立
     public static readonly ENTITY_STATE_WALK: number    = 1; //移动
     public static readonly ENTITY_STATE_DIE: number     = 2; //死亡
+    public static readonly ENTITY_STATE_ATTACK: number     = 3; //攻击
 
     //对象运行状态
     public static readonly ENTITY_ACTIVE_STATE_INIT : number = 1;//初始化
@@ -99,6 +100,8 @@ export default class ClientDef{
     public static readonly SKILL_TYPE_POSION_TIMBO: number  = 112; //毒树藤
     public static readonly SKILL_TYPE_FIREWALL: number      = 113; //火墙
     public static readonly SKILL_TYPE_TIMEBOMB : number     = 114; //定时炸弹
+
+    public static readonly SKILL_TYPE_COMMON : number       = 200; //普通技能
 
     //子弹脚本ID
     public static readonly BULLET_SCRIPT_COMMON: number        = 1; //子弹父类
@@ -182,7 +185,6 @@ export default class ClientDef{
     public static readonly PARTICLE_STATE_RUN : number      = 2;         //运行状态
     public static readonly PARTICLE_STATE_STOP : number     = 3;        //停止状态
     public static readonly PARTICLE_STATE_FREE : number     = 4;        //闲置状态
-
     
 
 }

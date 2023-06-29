@@ -101,11 +101,17 @@ export default class ClothComponent extends ComponentParent {
     }
 
     //运行状态
-    runState(state)
+    runState(state,replay:boolean = false)
     {
         
         var animationState = this.getAnimationState(state);
-        if(animationState == ANIMATION_STATE.LOADING || animationState == ANIMATION_STATE.USING) //如果在加载和使用中就return
+        if(animationState == ANIMATION_STATE.LOADING )
+        {
+            this._curState = state;
+            return;
+        } 
+        
+        if (animationState == ANIMATION_STATE.USING && !replay) //如果在加载和使用中就return
         {
             return;
         }
@@ -137,7 +143,7 @@ export default class ClothComponent extends ComponentParent {
         anim.pause();
         anim.resume(curClip.name);
         anim.play(curClip.name);
-
+        anim.on('finished',  this.onFinished,    this);
         for (let index = 1; index <= this._animation.node.childrenCount; index++) 
         {
             const element = this._animation.node.getChildByName(index+"");
@@ -150,6 +156,11 @@ export default class ClothComponent extends ComponentParent {
                 element.active = false;
             }
         } 
+    }
+
+    onFinished()
+    {
+        this._host.emit("animation_finish");
     }
 
     download()
@@ -174,7 +185,14 @@ export default class ClothComponent extends ComponentParent {
                 this._animation = aniPref.getComponent(cc.Animation);
                 this._animations_state = ANIMATION_STATE.LOAD_COMPLETE;
                 this.runState(this._curState);
+                aniPref.on('AttackFinish',  this.onAimAttack,    this);
             });
     }
+
+    onAimAttack()
+    {
+        this._host.emit("animation_AttackFinish");
+    }
+
 
 }

@@ -35,18 +35,20 @@ export default class BloomComponent extends ComponentParent {
                 {
                     return;
                 }
-                var node = new cc.Node()
-                this._green_bar = node.addComponent(cc.Sprite);
-                let spriteFrame = asset.getSpriteFrame("lifebar_small");
-                this._green_bar.spriteFrame = spriteFrame;
-                node.setAnchorPoint(0,0.5);
-                this._node.addChild(node);
+                
                 var rednode = new cc.Node()
                 this._red_bar = rednode.addComponent(cc.Sprite);
                 let spriteFrame1 = asset.getSpriteFrame("lifebar_bg_small");
                 this._red_bar.spriteFrame = spriteFrame1;
                 rednode.setAnchorPoint(0,0.5);
                 this._node.addChild(rednode);
+
+                var node = new cc.Node()
+                this._green_bar = node.addComponent(cc.Sprite);
+                let spriteFrame = asset.getSpriteFrame("lifebar_small");
+                this._green_bar.spriteFrame = spriteFrame;
+                node.setAnchorPoint(0,0.5);
+                this._node.addChild(node);
             });
             
     }
@@ -59,8 +61,8 @@ export default class BloomComponent extends ComponentParent {
         this._curBloom = entityInfo["bloom"];
         this._maxBloom = entityInfo["bloom"];
         this._host.setClientProp(ClientDef.ENTITY_PROP_CUR_BLOOM, this._curBloom);
-        if(this._red_bar){
-            this._red_bar.node.scaleX = 1;
+        if(this._green_bar){
+            this._green_bar.node.scaleX = 1;
         }
 
     }
@@ -87,11 +89,12 @@ export default class BloomComponent extends ComponentParent {
         this._host.setClientProp(ClientDef.ENTITY_PROP_CUR_BLOOM, this._curBloom);
 
         var per = this._curBloom / this._maxBloom;
-        this._red_bar.node.scaleX = per > 0 ? per : 0;
+        this._green_bar.node.scaleX = per > 0 ? per : 0;
 
         //进入死亡状态
         if( this._curBloom <= 0 )
         {
+            this._host.addEntityState(ClientDef.ENTITY_STATE_DIE);
             this._host.refreshEntityState();
             this._node.active = false;
         }

@@ -4,6 +4,7 @@
 import ClientDef from "../common/ClientDef";
 import GameData from "../common/GameData";
 import Entity from "../ghost/Entity";
+import Hero from "../ghost/Hero";
 import GameHelp from "../help/GameHelp";
 import ParentMgr from "./ParentMgr";
 import SceneMgr from "./SceneMgr";

@@ -22,6 +22,7 @@ import TimeBombBoxesBullet from "../skill/bullet/TimeBombBoxesBullet";
 import TimeBombMidBullet from "../skill/bullet/TimeBombMidBullet";
 import TimeBombPrevBullet from "../skill/bullet/TimeBombPrevBullet";
 import ArcherySkill from "../skill/skills/ArcherySkill";
+import CommonSkill from "../skill/skills/CommonSkill";
 import FireBallSkill from "../skill/skills/FireBallSkill";
 import FireHorseSkill from "../skill/skills/FireHorseSkill";
 import FireWallSkill from "../skill/skills/FireWallSkill";
@@ -86,6 +87,8 @@ export default class SkillMgr extends ParentMgr {
         this._typeSkillClass[ClientDef.SKILL_TYPE_POSION_TIMBO] = PosionTimboSkill;      //毒树藤
         this._typeSkillClass[ClientDef.SKILL_TYPE_FIREWALL] = FireWallSkill;             //火墙
         this._typeSkillClass[ClientDef.SKILL_TYPE_TIMEBOMB] = TimeBombSkill;             //定时炸弹
+
+        this._typeSkillClass[ClientDef.SKILL_TYPE_COMMON] = CommonSkill;             //常用技能
 
 
 

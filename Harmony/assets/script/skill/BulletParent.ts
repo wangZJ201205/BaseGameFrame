@@ -175,12 +175,17 @@ export default class BulletParent {
             return;
         }
 
+        if(!this._bulletInfo.animation || this._bulletInfo.animation == 0) //无皮肤表现
+        {
+            return;
+        }
+
         //子弹就是以一张图片的形式出现
-        if(!this._bulletInfo.animation)
+        if(this._bulletInfo.animation == 1)
         {
             this.loadSprite();
         }
-        else
+        else if(this._bulletInfo.animation == 2)
         {
             this.loadPrefab();
         }

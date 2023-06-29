@@ -47,7 +47,10 @@ export default class Hero{
         return this._entity;
     }
 
-    // update (dt) {}
+    update (dt) 
+    {
+        
+    }
 
     //增加经验
     addExp(exp)

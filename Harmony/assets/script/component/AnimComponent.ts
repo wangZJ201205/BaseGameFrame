@@ -13,5 +13,9 @@ export default class AnimComponent extends cc.Component {
         this.node.emit("Attack");
     }
     
+    AttackFinish()
+    {
+        this.node.emit("AttackFinish");
+    }
 
 }

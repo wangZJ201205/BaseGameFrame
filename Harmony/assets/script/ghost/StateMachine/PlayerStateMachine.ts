@@ -5,6 +5,7 @@
 import ClientDef from "../../common/ClientDef";
 import EntityStateMachine from "./EntityStateMachine";
 import StateParent from "./StateParent";
+import PlayerDie from "./states/PlayerDie";
 import PlayerIdle from "./states/PlayerIdle";
 import PlayerWalk from "./states/PlayerWalk";
 
@@ -18,7 +19,13 @@ export default class PlayerStateMachine extends EntityStateMachine {
     {
         var controlType = this.getHost().getClientProp(ClientDef.ENTITY_PROP_CONTROL_STATE);
         var newState = 0;
-        if(controlType == ClientDef.PLAYER_CONTROL_TYPE_ROCK)
+        var bloom = this.getHost().getClientProp(ClientDef.ENTITY_PROP_CUR_BLOOM)
+        
+        if(bloom <= 0) //死亡
+        {
+            newState = ClientDef.ENTITY_STATE_DIE;
+        }
+        else if(controlType == ClientDef.PLAYER_CONTROL_TYPE_ROCK)
         {
             newState = ClientDef.ENTITY_STATE_WALK;
         }
@@ -26,6 +33,7 @@ export default class PlayerStateMachine extends EntityStateMachine {
         {
             newState = ClientDef.ENTITY_STATE_IDLE;
         }
+        this._state_list.splice(0,1); 
         return newState;
     }
 
@@ -34,6 +42,7 @@ export default class PlayerStateMachine extends EntityStateMachine {
     {
         if(state == ClientDef.ENTITY_STATE_IDLE){return new PlayerIdle(); }
         else if(state == ClientDef.ENTITY_STATE_WALK){return new PlayerWalk(); }
+        else if(state == ClientDef.ENTITY_STATE_DIE){return new PlayerDie(); }
         return null;
     }
 

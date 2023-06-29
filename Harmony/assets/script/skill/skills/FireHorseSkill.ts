@@ -12,11 +12,7 @@ const {ccclass, property} = cc._decorator;
 @ccclass
 export default class FireHorseSkill extends SkillParent {
 
-    start () 
-    {
-        super.start();
-    }
-
+    
     //发射子弹
     shootBullet()
     {

@@ -230,5 +230,13 @@ export default class Entity extends cc.Node
             this._entityStateMachine.runNextState();
         }
     }
+    //添加状态
+    addEntityState(state)
+    {
+        if(this._entityStateMachine)
+        {
+            this._entityStateMachine.addState(state);
+        }
+    }
 
 }

@@ -35,6 +35,8 @@ export default class Skill {
 
     update (dt) 
     {
+        if(!this._host.isLife())return;
+        
         for (let i = 0; i < this._skills.length; i++) {
             const element = this._skills[i];
             element.update(dt);
@@ -73,6 +75,18 @@ export default class Skill {
         }
         skill.setStaticId(skillid);
         skill.start();
+
+        //技能按照优先级排序
+        this._skills.sort((skill1:SkillParent,skill2:SkillParent):number=>
+        {
+            if (skill1.getPriority() < skill2.getPriority()) {
+                return -1;
+            } else if (skill1.getPriority() > skill2.getPriority()) {
+                return 1;
+            } else {
+                return 0;
+            }
+        })
     }
 
     //原有的基础上升级

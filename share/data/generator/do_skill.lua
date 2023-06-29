@@ -35,10 +35,29 @@ function handle_skill(o)
 	gdskill[tostring(d.id)] = d
 end
 
+function handle_monster_skill(o)
+	local d = {}
+
+	d.id = tonumber(o.a) or 0
+	if d.id == 0 then
+		return
+	end
+
+	d.name = o.b
+	d.attackValue = tonumber(o.c)
+	d.spawnBullet = o.d ~= "0" and tonumber(o.d) or nil
+	d.cooldown = o.e ~= "0" and tonumber(o.e) or nil
+	d.distanceOfEnemy = o.f ~= "0" and tonumber(o.f) or nil
+	d.releaseAblePriority = o.g ~= "0" and tonumber(o.g) or nil
+	d.desc = o.h
+	gdskill[tostring(d.id)] = d
+end
+
 
 
 export_csv("..\\design\\技能.xlsx")
 handle_file("tmp\\技能.csv", handle_skill)
+handle_file("tmp\\怪物技能.csv", handle_monster_skill)
 clear_csv()
 
 output_table_json(gdskill, of_file, nil, true, weight_tbl,true)

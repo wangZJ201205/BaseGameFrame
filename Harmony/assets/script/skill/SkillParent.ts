@@ -40,7 +40,7 @@ export default class SkillParent {
         this._skillInfo = DictMgr.Instance.getDictByName('skill_data')[this._staticId+""];
         this._curDelay = cc.director.getTotalTime();
         // console.info(">>>>>>>>>"+this._staticId)
-        this._shootTime = this._skillInfo['cooldown'];
+        this._shootTime = this._skillInfo['cooldown'] || 0;
         this.setProp(ClientDef.SKILL_PROP_COUNT, this._skillInfo['count']);
     }
 
@@ -82,16 +82,33 @@ export default class SkillParent {
         return this._prop[type] || 0;
     }
 
+    getPriority()
+    {
+        return this._skillInfo["releaseAblePriority"] || 0;
+    }
+
+    releaseableSkill()
+    {
+        if(!this._isShootBullet)
+        {
+            return false;
+        }
+        return true;
+    }
+
     update (dt) 
     {
         this.checkOldBullet();
-        this.checkShootBullet();
+        this.releaseShootBullet();
         this.checkAllBullet(dt);
         this.checkShootCD();
     }
 
     checkShootCD()
     {
+        
+        if( this._isShootBullet ) return ;//发射子弹状态中
+
         var delay = cc.director.getTotalTime() - this._curDelay;
         if(delay > 100)
         {
@@ -121,7 +138,7 @@ export default class SkillParent {
     }
 
     //发射子弹状态中
-    checkShootBullet()
+    releaseShootBullet()
     {
         if( !this._isShootBullet ) return ;
         
@@ -137,6 +154,8 @@ export default class SkillParent {
         if(this._shootBulletCount >= bulletCount)
         {
             this._isShootBullet = false;
+            this._shootBulletCount = 0;
+            this._curDelay = cc.director.getTotalTime();
         }
         
     }
@@ -158,8 +177,6 @@ export default class SkillParent {
     perpareShootBullet()
     {   
         this._isShootBullet = true;
-        this._shootBulletCount = 0;
-        this._shootDelayTime = cc.director.getTotalTime();
     }
 
     //发射子弹

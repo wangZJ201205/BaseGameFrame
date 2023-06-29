@@ -38,8 +38,11 @@ export default class EntityWalk extends StateParent {
         if (distance <= GameData.Monster_And_Hero_Min_Distance || distance >= GameData.Monster_And_Hero_Max_Distance)
         {
           // 到达目标节点
-          this.getHost().getEntityNode().active = false;
-          this.getHost().setClientProp(ClientDef.ENTITY_PROP_ACTIVE_STATE, ClientDef.ENTITY_ACTIVE_STATE_FREE);
+        //   this.getHost().getEntityNode().active = false;
+        //   this.getHost().setClientProp(ClientDef.ENTITY_PROP_ACTIVE_STATE, ClientDef.ENTITY_ACTIVE_STATE_FREE);
+
+            this.getHost().getStateMachine().addState(ClientDef.ENTITY_STATE_ATTACK);
+            this.getHost().getStateMachine().runNextState();
         } 
         
         this.changePlayerDirection(direction);

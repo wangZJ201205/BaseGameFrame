@@ -19,8 +19,8 @@ export default class EntityStateMachine{
         this._state_list = [];
     }
 
-    start () {
-        
+    start () 
+    {    
     }
 
     restart()
@@ -42,19 +42,19 @@ export default class EntityStateMachine{
     //获取下一个状态
     getNextState()
     {
-        if(this._state_list.length == 0)
-        {
-            return ClientDef.ENTITY_STATE_IDLE;
-        }
-        var state = this._state_list[0];
-        this._state_list.splice(0,1);
-        return state;
+        return null;
     }
 
     //运行状态
     runNextState()
     {
         var state = this.getNextState();
+        
+        if(state == null)
+        {
+            return; //没有状态
+        }
+
         if(this._curState)
         {
             this._curState.stop();
@@ -65,8 +65,10 @@ export default class EntityStateMachine{
             }
             this._curState = null;
         }
+
         this._curState = this.spawnState(state);
         this._host.setClientProp(ClientDef.ENTITY_PROP_STATE,state); //对象状态
+        
         if(this._curState)
         {
             this._curState.onLoad(state,this._host);

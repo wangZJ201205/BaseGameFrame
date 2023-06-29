@@ -13,10 +13,7 @@ const {ccclass, property} = cc._decorator;
 @ccclass
 export default class FireWallSkill extends SkillParent {
 
-    start () 
-    {
-        super.start();
-    }
+  
 
     //发射子弹
     shootBullet()

@@ -10,6 +10,7 @@ export default class EntityIdle extends StateParent {
 
     update (dt) 
     {
+        this.getHost().getStateMachine().addState(ClientDef.ENTITY_STATE_WALK);
         this.getHost().getStateMachine().runNextState();
     }
 
