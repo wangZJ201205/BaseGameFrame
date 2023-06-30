@@ -20,14 +20,15 @@ export default class UIConfig{
         //注册界面
         this.UIReg[UIName.LOGIN] = { path: this.PreGame + 'LoginPref'  ,index:ClientDef.UI_INDEX_MIDDLE }; 
         this.UIReg[UIName.MSGBOX] = { path: this.PreGame + 'MsgBoxPref',index:ClientDef.UI_INDEX_TOP }; 
-        this.UIReg[UIName.ROCKVIEW] = { path: this.PreGame + 'RockPref',index:ClientDef.UI_INDEX_COMMON }; 
-        this.UIReg[UIName.TESTVIEW] = { path: this.PreGame + 'TestPref',index:ClientDef.UI_INDEX_COMMON }; 
-        this.UIReg[UIName.VIEW_PLAYER_PGB] = { path: this.PreGame + 'HeroExpPref',index:ClientDef.UI_INDEX_COMMON }; 
-        this.UIReg[UIName.VIEW_ADVERTISEMENT] = { path: this.PreGame + 'AdvertisePref',index:ClientDef.UI_INDEX_COMMON }; 
-        this.UIReg[UIName.VIEW_SELECTSKILL] = { path: this.PreGame + 'SelectSkillPref',index:ClientDef.UI_INDEX_COMMON }; 
-        this.UIReg[UIName.VIEW_START] = { path: this.PreGame + 'StartPref',index:ClientDef.UI_INDEX_COMMON }; 
-        this.UIReg[UIName.VIEW_SET] = { path: this.PreGame + 'SetPref',index:ClientDef.UI_INDEX_COMMON }; 
-        this.UIReg[UIName.VIEW_SEL_HERO] = { path: this.PreGame + 'SelectHeroPref',index:ClientDef.UI_INDEX_COMMON }; 
+        this.UIReg[UIName.ROCKVIEW] = { path: this.PreGame + 'RockPref',index:ClientDef.UI_INDEX_MIDDLE }; 
+        this.UIReg[UIName.TESTVIEW] = { path: this.PreGame + 'TestPref',index:ClientDef.UI_INDEX_MIDDLE }; 
+        this.UIReg[UIName.VIEW_PLAYER_PGB] = { path: this.PreGame + 'HeroExpPref',index:ClientDef.UI_INDEX_MIDDLE }; 
+        this.UIReg[UIName.VIEW_ADVERTISEMENT] = { path: this.PreGame + 'AdvertisePref',index:ClientDef.UI_INDEX_MIDDLE }; 
+        this.UIReg[UIName.VIEW_SELECTSKILL] = { path: this.PreGame + 'SelectSkillPref',index:ClientDef.UI_INDEX_MIDDLE }; 
+        this.UIReg[UIName.VIEW_START] = { path: this.PreGame + 'StartPref',index:ClientDef.UI_INDEX_LOW }; 
+        this.UIReg[UIName.VIEW_SET] = { path: this.PreGame + 'SetPref',index:ClientDef.UI_INDEX_MIDDLE }; 
+        this.UIReg[UIName.VIEW_SEL_HERO] = { path: this.PreGame + 'SelectHeroPref',index:ClientDef.UI_INDEX_MIDDLE }; 
+        this.UIReg[UIName.VIEW_PLAY_ADVERTISE] = { path: this.PreGame + 'PlayAdvertisePref',index:ClientDef.UI_INDEX_MIDDLE }; 
 
     }
 

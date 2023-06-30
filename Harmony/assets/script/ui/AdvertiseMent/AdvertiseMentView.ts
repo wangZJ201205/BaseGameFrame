@@ -4,6 +4,7 @@
 
 import ClientDef from "../../common/ClientDef";
 import EventName from "../../common/EventName";
+import GameData from "../../common/GameData";
 import UIName from "../../common/UIName";
 import Hero from "../../ghost/Hero";
 import EventMgr from "../../manager/EventMgr";
@@ -21,6 +22,9 @@ export default class AdvertiseMentView extends UIParent {
     @property(cc.Button)
     openBoxBtn: cc.Button = null;
 
+    @property(cc.Button)
+    setBoxBtn: cc.Button = null;
+
 
     onLoad () 
     {
@@ -31,12 +35,14 @@ export default class AdvertiseMentView extends UIParent {
     start () 
     {
         super.start();
+
     }
 
     register(): void 
     {
         this.upLevelBtn.node.on(cc.Node.EventType.TOUCH_END,this.UpLevelHandle,this); //添加监听
         this.openBoxBtn.node.on(cc.Node.EventType.TOUCH_END,this.openBoxHandle,this); //添加监听
+        this.setBoxBtn.node.on(cc.Node.EventType.TOUCH_END,this.openSetHandle,this); //添加监听
         super.register();
     }
 
@@ -59,7 +65,26 @@ export default class AdvertiseMentView extends UIParent {
 
     openBoxHandle(event,param)
     {
-        UIMgr.Instance.openUI(UIName.VIEW_SET);
+        if(!UIMgr.Instance.getUI(UIName.VIEW_PLAY_ADVERTISE))
+        {
+            UIMgr.Instance.openUI(UIName.VIEW_PLAY_ADVERTISE);
+        }
+        else
+        {
+            EventMgr.Instance.Emit(EventName.UI_CLOSE_PANEL + UIName.VIEW_PLAY_ADVERTISE,null);
+        }
+    }
+
+    openSetHandle(event,param)
+    {
+        if(!UIMgr.Instance.getUI(UIName.VIEW_SET))
+        {
+            UIMgr.Instance.openUI(UIName.VIEW_SET);
+        }
+        else
+        {
+            EventMgr.Instance.Emit(EventName.UI_CLOSE_PANEL + UIName.VIEW_SET,null);
+        }
     }
 
 }

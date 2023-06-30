@@ -35,7 +35,19 @@ export default class AudioMgr extends ParentMgr {
 
     onLoad () 
     {
-
+        var bgmVolume = cc.sys.localStorage.getItem("bgm_volume") || -1;
+        if(bgmVolume == -1)
+        {
+            cc.sys.localStorage.setItem('bgm_volume', 1);
+            cc.sys.localStorage.setItem('effect_volume', 1);
+            GameData.Switch_BGM_Audio = true;
+            GameData.Switch_Effect_Audio = true;
+        }
+        else
+        {
+            GameData.Switch_BGM_Audio = cc.sys.localStorage.getItem("bgm_volume") == 1;
+            GameData.Switch_Effect_Audio = cc.sys.localStorage.getItem("effect_volume") == 1;
+        }
     }
 
     start () 
@@ -52,6 +64,7 @@ export default class AudioMgr extends ParentMgr {
         }
 
         this._bgm_volume = volume;
+        cc.sys.localStorage.setItem('bgm_volume', true);
         cc.audioEngine.setMusicVolume(this._bgm_volume);
     }
 
@@ -69,6 +82,12 @@ export default class AudioMgr extends ParentMgr {
 
     playBGM() 
     {   
+
+        if(!GameData.Switch_BGM_Audio)
+        {
+            return;
+        }
+
         var path = "audio/music_xinshoucun";
         LoadMgr.Instance.LoadAssetWithType(path, cc.AudioClip, (audio) => {
             this._current_bgm_name = path;
@@ -90,6 +109,7 @@ export default class AudioMgr extends ParentMgr {
         }
     
         this._effect_volume = volume;
+        cc.sys.localStorage.setItem('effect_volume', true);
         cc.audioEngine.setEffectsVolume(this._effect_volume);
     }
 
@@ -107,11 +127,11 @@ export default class AudioMgr extends ParentMgr {
     playEffect(audio_key, id_cb)
     {
         // let id = cc.audioEngine.playEffect(audio, is_loop);
-        if(!GameData.Switch_Audio)
+        if(!GameData.Switch_Effect_Audio)
         {
             return;
         }
-        
+
         this.SetEffectVolume(this._effect_volume);
         var path = "audio/"+audio_key;
         LoadMgr.Instance.LoadAssetWithType(path, cc.AudioClip, (audio) => {

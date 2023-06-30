@@ -3,6 +3,8 @@
  */
 
 import ClientDef from "../../../common/ClientDef";
+import UIName from "../../../common/UIName";
+import UIMgr from "../../../manager/UIMgr";
 import StateParent from "../StateParent";
 
 const {ccclass, property} = cc._decorator;
@@ -12,7 +14,7 @@ export default class PlayerDie extends StateParent {
 
     start () 
     {
-        
+        UIMgr.Instance.openUI(UIName.VIEW_PLAY_ADVERTISE);
     }
 
     stop()

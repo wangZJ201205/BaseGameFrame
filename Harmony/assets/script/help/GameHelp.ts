@@ -20,6 +20,10 @@ export default class GameHelp  {
         {
             return true;
         }
+        else if((GameData.Game_Pause_FLAG & ClientDef.GAME_PAUSE_ADVERTISE) == ClientDef.GAME_PAUSE_ADVERTISE)
+        {
+            return true;
+        }
         return false;
     }
 

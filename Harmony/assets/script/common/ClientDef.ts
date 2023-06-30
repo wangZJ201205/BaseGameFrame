@@ -24,7 +24,7 @@ export default class ClientDef{
     
 
     //界面深度
-    public static readonly UI_INDEX_COMMON :number = 0;
+    public static readonly UI_INDEX_LOW :number = 0;
     public static readonly UI_INDEX_MIDDLE :number = 500;
     public static readonly UI_INDEX_TOP : number = 999;
 
@@ -179,6 +179,7 @@ export default class ClientDef{
     //游戏暂停列表
     public static readonly GAME_PAUSE_UPGRADE : number  = 1 << 1; //升级界面
     public static readonly GAME_PAUSE_SET : number      = 1 << 2;     //设置界面
+    public static readonly GAME_PAUSE_ADVERTISE : number      = 1 << 3;     //广告界面
 
     //粒子状态
     public static readonly PARTICLE_STATE_LOADING : number  = 1;         //加载状态

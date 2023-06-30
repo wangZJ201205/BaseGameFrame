@@ -1,0 +1,166 @@
+{
+  "__type__": "cc.AnimationClip",
+  "_name": "SetPref_cp",
+  "_objFlags": 0,
+  "_native": "",
+  "_duration": 0.2,
+  "sample": 60,
+  "speed": 0.7,
+  "wrapMode": 1,
+  "curveData": {
+    "paths": {
+      "background": {
+        "props": {
+          "scale": [
+            {
+              "frame": 0,
+              "value": {
+                "__type__": "cc.Vec3",
+                "x": 0.5,
+                "y": 0.5,
+                "z": 1
+              }
+            },
+            {
+              "frame": 0.08333333333333333,
+              "value": {
+                "__type__": "cc.Vec3",
+                "x": 1.2,
+                "y": 1.2,
+                "z": 1
+              }
+            },
+            {
+              "frame": 0.11666666666666667,
+              "value": {
+                "__type__": "cc.Vec3",
+                "x": 1,
+                "y": 1,
+                "z": 1
+              }
+            }
+          ]
+        }
+      },
+      "notification_title": {
+        "props": {
+          "active": [
+            {
+              "frame": 0,
+              "value": false
+            },
+            {
+              "frame": 0.11666666666666667,
+              "value": true
+            }
+          ],
+          "angle": [
+            {
+              "frame": 0.11666666666666667,
+              "value": 10
+            },
+            {
+              "frame": 0.16666666666666666,
+              "value": -10
+            },
+            {
+              "frame": 0.2,
+              "value": 0
+            }
+          ]
+        }
+      },
+      "goonButton": {
+        "props": {
+          "active": [
+            {
+              "frame": 0,
+              "value": false
+            },
+            {
+              "frame": 0.11666666666666667,
+              "value": true
+            }
+          ],
+          "opacity": [
+            {
+              "frame": 0.11666666666666667,
+              "value": 0
+            },
+            {
+              "frame": 0.2,
+              "value": 255
+            }
+          ]
+        }
+      },
+      "exitButton": {
+        "props": {
+          "active": [
+            {
+              "frame": 0,
+              "value": false
+            },
+            {
+              "frame": 0.11666666666666667,
+              "value": true
+            }
+          ],
+          "opacity": [
+            {
+              "frame": 0.11666666666666667,
+              "value": 0
+            },
+            {
+              "frame": 0.2,
+              "value": 255
+            }
+          ]
+        }
+      },
+      "bgMusicLabel": {
+        "props": {
+          "active": [
+            {
+              "frame": 0,
+              "value": false
+            },
+            {
+              "frame": 0.11666666666666667,
+              "value": true
+            }
+          ]
+        }
+      },
+      "audioLabel": {
+        "props": {
+          "active": [
+            {
+              "frame": 0,
+              "value": false
+            },
+            {
+              "frame": 0.11666666666666667,
+              "value": true
+            }
+          ]
+        }
+      },
+      "main_menues_bg_closeButton": {
+        "props": {
+          "active": [
+            {
+              "frame": 0,
+              "value": false
+            },
+            {
+              "frame": 0.11666666666666667,
+              "value": true
+            }
+          ]
+        }
+      }
+    }
+  },
+  "events": []
+}

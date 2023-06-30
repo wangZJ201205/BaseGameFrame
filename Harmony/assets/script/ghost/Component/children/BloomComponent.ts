@@ -67,9 +67,16 @@ export default class BloomComponent extends ComponentParent {
 
     }
 
+    remove()
+    {
+        this._node.removeFromParent();
+        super.remove();
+    }
+
     update (dt) 
     {        
         this._node.setPosition(-10 + this._host.position.x ,50 + this._host.position.y,0);
+        this._curBloom = this._host.getClientProp(ClientDef.ENTITY_PROP_CUR_BLOOM);
     }
 
     addDamage(damageValue)

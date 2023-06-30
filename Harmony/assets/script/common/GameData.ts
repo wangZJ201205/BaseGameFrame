@@ -48,7 +48,8 @@ export default class GameData{
 
     public static Item_Max_Count:number = 200; //场景中最大的物品数量
 
-    public static Switch_Audio:boolean = false; //音效开关
+    public static Switch_BGM_Audio:boolean = true; //音效开关
+    public static Switch_Effect_Audio:boolean = true; //音效开关
 
     public static Entity_Dead_Time:number = 3000; //对象死亡时间
 

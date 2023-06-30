@@ -193,7 +193,6 @@
             <filename>power_reinforcement_portrait_0018.png</filename>
             <filename>ui_common_background.png</filename>
             <filename>map_levelselect_playbutton.png</filename>
-            <filename>MainMenu_slots_bg.png</filename>
             <filename>menu_options_common_button_0003.png</filename>
             <filename>menu_options_socialmedia_bg.png</filename>
             <filename>MainMenu_slot_button_0001.png</filename>
@@ -219,6 +218,25 @@
             <filename>special_icons_0022.png</filename>
             <filename>heroroom_powers_icons_1.png</filename>
             <filename>reinforcement_portrait_0004.png</filename>
+            <filename>defeat_screen_buttons_0001.png</filename>
+            <filename>defeat_screen_buttons_0002.png</filename>
+            <filename>defeat_screen_buttons_0003.png</filename>
+            <filename>defeat_screen_buttons_0004.png</filename>
+            <filename>asset_steam_Asset_Victory_Chain_1.png</filename>
+            <filename>asset_steam_Asset_Victory_Chain_3.png</filename>
+            <filename>asset_steam_Asset_Victory_Chain_4.png</filename>
+            <filename>level_end_banner.png</filename>
+            <filename>option_menu_ingame_button_0002.png</filename>
+            <filename>option_menu_ingame_button_music_sound_0001.png</filename>
+            <filename>option_menu_ingame_button_music_sound_0002.png</filename>
+            <filename>option_menu_ingame_button_music_sound_0003.png</filename>
+            <filename>option_menu_ingame_button_music_sound_0004.png</filename>
+            <filename>notification_button.png</filename>
+            <filename>notification_title.png</filename>
+            <filename>notification_title_blue.png</filename>
+            <filename>hud_buttons_0001.png</filename>
+            <filename>map_mainbuttons_heroes_0014.png</filename>
+            <filename>portraits_small_states_0001.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>

@@ -44,11 +44,10 @@ export default class RockView extends UIParent {
         this.joyStickBG.node.on( cc.Node.EventType.TOUCH_MOVE,this.onJoyStickTouchMove,this); //添加监听
         this.joyStickBG.node.on( cc.Node.EventType.TOUCH_END,this.onJoyStickTouchEnd,this); //添加监听
         this.joyStickBG.node.on( cc.Node.EventType.TOUCH_CANCEL,this.onJoyStickTouchEnd,this); //添加监听
+        super.register();
     }
 
-    close()
-    {
-    }
+    
 
     onJoyStickTouchStart(event)
     {
