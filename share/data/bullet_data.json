@@ -289,7 +289,7 @@
 	},
 	"33": {"id": 33,"animation": 2,"atlas": "0","collRect": "0","preftab": "kr4_power_soul_impact","scriptID": 16,"sound": "0","src": "soul_impact_end_cp","zorder": 2},
 	"34": {"id": 34,"animation": 2,"atlas": "0","attackMoveType": 2,"collRect": "0","nextBullet": 35,"preftab": "skill_laser","scriptID": 17,"sound": "effect_skill_lls","src": "skill_laser_start_cp","zorder": 1},
-	"35": {"id": 35,"animation": 2,"atlas": "0","attackMoveType": 2,"collRect": "0","preftab": "skill_laser","scriptID": 16,"sound": "effect_skill_lls","src": "skill_laser_light_cp","zorder": 1},
+	"35": {"id": 35,"animation": 2,"atlas": "0","attackMoveType": 2,"collRect": "0","preftab": "skill_laser","scriptID": 25,"sound": "effect_skill_lls","src": "skill_laser_light_cp","zorder": 1},
 	"4": {"id": 4,"animation": 2,"atlas": "0","attackMoveType": 2,"collRect": "0","nextBullet": 32,"preftab": "kr4_power_soul_impact","scriptID": 17,"sound": "effect_skill_lls","src": "soul_impact_start_cp","zorder": 1},
 	"5": {
 		"id": 5,

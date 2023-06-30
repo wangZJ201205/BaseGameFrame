@@ -103,6 +103,7 @@ export default class ClientDef{
     public static readonly SKILL_TYPE_LASER : number        = 115; //激光
 
     public static readonly SKILL_TYPE_COMMON : number       = 200; //普通技能
+    public static readonly SKILL_TYPE_SUICIDE : number       = 201; //自杀技能
 
     //子弹脚本ID
     public static readonly BULLET_SCRIPT_COMMON: number        = 1; //子弹父类

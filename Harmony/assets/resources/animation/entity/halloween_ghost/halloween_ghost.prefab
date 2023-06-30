@@ -171,9 +171,7 @@
     "_fillStart": 0,
     "_fillRange": 0,
     "_isTrimmedMode": false,
-    "_atlas": {
-      "__uuid__": "b58daf05-c22b-49a5-980b-b9fe26887cfe"
-    },
+    "_atlas": null,
     "_id": ""
   },
   {
@@ -278,9 +276,7 @@
     "_fillStart": 0,
     "_fillRange": 0,
     "_isTrimmedMode": false,
-    "_atlas": {
-      "__uuid__": "b58daf05-c22b-49a5-980b-b9fe26887cfe"
-    },
+    "_atlas": null,
     "_id": ""
   },
   {
@@ -312,6 +308,9 @@
       },
       {
         "__uuid__": "008d3b01-a01f-4ac0-a97b-5ad2da91e74c"
+      },
+      {
+        "__uuid__": "803e3a3c-d013-42c9-a123-c7770b77c638"
       }
     ],
     "playOnLoad": false,

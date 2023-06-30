@@ -76,7 +76,14 @@ export default class BloomComponent extends ComponentParent {
     update (dt) 
     {        
         this._node.setPosition(-10 + this._host.position.x ,50 + this._host.position.y,0);
-        this._curBloom = this._host.getClientProp(ClientDef.ENTITY_PROP_CUR_BLOOM);
+
+        if(this._curBloom <= 0 && this._host.getClientProp(ClientDef.ENTITY_PROP_CUR_BLOOM) > 0) //判断复活
+        {
+            this._curBloom = this._host.getClientProp(ClientDef.ENTITY_PROP_CUR_BLOOM);
+            this._node.active = true;
+            var per = this._curBloom / this._maxBloom;
+            this._green_bar.node.scaleX = per > 0 ? per : 0;
+        }
     }
 
     addDamage(damageValue)

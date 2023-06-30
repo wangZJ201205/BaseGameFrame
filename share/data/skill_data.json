@@ -117,6 +117,6 @@
 	"11503": {"id": 11503,"name": "激光","attackValue": "10-20","cooldown": 10000,"count": 1,"delaytime": 100,"desc": "激光高爆炸弹","icon": "towerselect_powers_0035","range": 270,"spawnBullet": 34,"subBulletCnt": 1},
 	"11504": {"id": 11504,"name": "激光","attackValue": "10-20","cooldown": 10000,"count": 1,"delaytime": 100,"desc": "激光高爆炸弹","icon": "towerselect_powers_0035","range": 270,"spawnBullet": 34,"subBulletCnt": 1},
 	"20001": {"id": 20001,"name": "普通攻击","attackValue": 10,"cooldown": 2500,"desc": "直接冲撞敌人","distanceOfEnemy": 50,"releaseAblePriority": 1},
-	"20002": {"id": 20002,"name": "普通攻击","attackValue": 10,"cooldown": 2500,"desc": "直接冲撞敌人","distanceOfEnemy": 50,"releaseAblePriority": 2},
-	"20003": {"id": 20003,"name": "普通攻击","attackValue": 10,"cooldown": 2500,"desc": "直接冲撞敌人","distanceOfEnemy": 50,"releaseAblePriority": 3}
+	"20003": {"id": 20003,"name": "普通攻击","attackValue": 10,"cooldown": 2500,"desc": "直接冲撞敌人","distanceOfEnemy": 50,"releaseAblePriority": 3},
+	"20101": {"id": 20101,"name": "普通攻击","attackValue": 10,"cooldown": 2500,"desc": "直接冲撞敌人","distanceOfEnemy": 50,"releaseAblePriority": 2}
 }

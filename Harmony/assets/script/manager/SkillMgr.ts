@@ -33,6 +33,7 @@ import MiZongQuanSkill from "../skill/skills/MiZongQuanSkill";
 import PosionTimboSkill from "../skill/skills/PosionTimboSkill";
 import RevolutionBallSkill from "../skill/skills/RevolutionBallSkill";
 import ShieldBallSkill from "../skill/skills/ShieldBallSkill";
+import SuicideSkill from "../skill/skills/SuicideSkill";
 import SwordBallSkill from "../skill/skills/SwordBallSkill";
 import TaijiBallSkill from "../skill/skills/TaijiBallSkill";
 import ThunderBallSkill from "../skill/skills/ThunderBallSkill";
@@ -92,7 +93,7 @@ export default class SkillMgr extends ParentMgr {
         this._typeSkillClass[ClientDef.SKILL_TYPE_LASER] = LaserSkill;             //定时炸弹
 
         this._typeSkillClass[ClientDef.SKILL_TYPE_COMMON] = CommonSkill;             //常用技能
-
+        this._typeSkillClass[ClientDef.SKILL_TYPE_SUICIDE] = SuicideSkill;             //自杀技能
 
 
         this._typeBulletClass[ClientDef.BULLET_SCRIPT_COMMON]   = BulletParent;          //子弹父类

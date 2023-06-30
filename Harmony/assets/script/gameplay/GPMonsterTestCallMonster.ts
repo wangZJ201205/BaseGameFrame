@@ -59,8 +59,8 @@ export default class GPMonsterTestCallMonster {
         var monsters = []; //随机数组
         // monsters.push(200002);
         // monsters.push(200003);
-        monsters.push(200004);
-        // monsters.push(200005);
+        // monsters.push(200004);
+        monsters.push(200005);
         // monsters.push(200006);
         // monsters.push(200007);
         // monsters.push(200008);
