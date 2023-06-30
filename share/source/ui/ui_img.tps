@@ -237,6 +237,7 @@
             <filename>hud_buttons_0001.png</filename>
             <filename>map_mainbuttons_heroes_0014.png</filename>
             <filename>portraits_small_states_0001.png</filename>
+            <filename>towerselect_powers_0035.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>

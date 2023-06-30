@@ -8,6 +8,7 @@ import ArcheryBullet from "../skill/bullet/ArcheryBullet";
 import FireHorseBullet from "../skill/bullet/FireHorseBullet";
 import FireWallMidBullet from "../skill/bullet/FireWallMidBullet";
 import LineMoveByAngleBullet from "../skill/bullet/LineMoveByAngleBullet";
+import LoserBullet from "../skill/bullet/LoserBullet";
 import PosionEndBullet from "../skill/bullet/PosionEndBullet";
 import PosionStartBallBullet from "../skill/bullet/PosionStartBallBullet";
 import PosionTimboMidBullet from "../skill/bullet/PosionTimboMidBullet";
@@ -27,6 +28,7 @@ import FireBallSkill from "../skill/skills/FireBallSkill";
 import FireHorseSkill from "../skill/skills/FireHorseSkill";
 import FireWallSkill from "../skill/skills/FireWallSkill";
 import IceBallSkill from "../skill/skills/IceBallSkill";
+import LaserSkill from "../skill/skills/LaserSkill";
 import MiZongQuanSkill from "../skill/skills/MiZongQuanSkill";
 import PosionTimboSkill from "../skill/skills/PosionTimboSkill";
 import RevolutionBallSkill from "../skill/skills/RevolutionBallSkill";
@@ -87,6 +89,7 @@ export default class SkillMgr extends ParentMgr {
         this._typeSkillClass[ClientDef.SKILL_TYPE_POSION_TIMBO] = PosionTimboSkill;      //毒树藤
         this._typeSkillClass[ClientDef.SKILL_TYPE_FIREWALL] = FireWallSkill;             //火墙
         this._typeSkillClass[ClientDef.SKILL_TYPE_TIMEBOMB] = TimeBombSkill;             //定时炸弹
+        this._typeSkillClass[ClientDef.SKILL_TYPE_LASER] = LaserSkill;             //定时炸弹
 
         this._typeSkillClass[ClientDef.SKILL_TYPE_COMMON] = CommonSkill;             //常用技能
 
@@ -111,6 +114,7 @@ export default class SkillMgr extends ParentMgr {
         this._typeBulletClass[ClientDef.BULLET_SCRIPT_TIMEBOMB2]   = TimeBombMidBullet;        //定时炸弹类型子弹
         this._typeBulletClass[ClientDef.BULLET_SCRIPT_TIMEBOMB4]   = TimeBombBoxesBullet;        //定时炸弹类型子弹
         this._typeBulletClass[ClientDef.BULLET_SCRIPT_TIMEBOMB5]   = TimeBombBox1Bullet;        //定时炸弹类型子弹
+        this._typeBulletClass[ClientDef.BULLET_SCRIPT_LOSER]   = LoserBullet;        //激光类型子弹
 
 
 

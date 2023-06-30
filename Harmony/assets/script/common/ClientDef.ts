@@ -100,6 +100,7 @@ export default class ClientDef{
     public static readonly SKILL_TYPE_POSION_TIMBO: number  = 112; //毒树藤
     public static readonly SKILL_TYPE_FIREWALL: number      = 113; //火墙
     public static readonly SKILL_TYPE_TIMEBOMB : number     = 114; //定时炸弹
+    public static readonly SKILL_TYPE_LASER : number        = 115; //激光
 
     public static readonly SKILL_TYPE_COMMON : number       = 200; //普通技能
 
@@ -128,6 +129,7 @@ export default class ClientDef{
     // public static readonly BULLET_SCRIPT_TIMEBOMB3: number  = 22; //定时炸弹3
     public static readonly BULLET_SCRIPT_TIMEBOMB4: number  = 23; //定时炸弹4
     public static readonly BULLET_SCRIPT_TIMEBOMB5: number  = 24; //定时炸弹5
+    public static readonly BULLET_SCRIPT_LOSER: number  = 25; //激光子弹
 
 
     //子弹属性
