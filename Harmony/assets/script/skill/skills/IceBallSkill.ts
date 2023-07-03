@@ -19,7 +19,8 @@ export default class IceBallSkill extends SkillParent {
     shootBullet()
     {
         var bulletCount = this.getProp(ClientDef.SKILL_PROP_COUNT);
-        this._angle += 360/bulletCount;
+        // this._angle += 360/bulletCount;
+        this._angle += 5;
         this._angle = this._angle > 360 ? this._angle - 360 : this._angle;
         var bullet = this.spawnBullet(this._skillInfo["spawnBullet"] );
         bullet.getNode().active = true;
