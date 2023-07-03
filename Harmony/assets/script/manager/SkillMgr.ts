@@ -3,6 +3,7 @@
  */
 import ClientDef from "../common/ClientDef";
 import BulletParent from "../skill/BulletParent";
+import AnimationCreatePlayNextBBullet from "../skill/bullet/AnimationCreatePlayNextBBullet ";
 import AnimationFinishPlayNextBBullet from "../skill/bullet/AnimationFinishPlayNextBBullet";
 import ArcheryBullet from "../skill/bullet/ArcheryBullet";
 import FireHorseBullet from "../skill/bullet/FireHorseBullet";
@@ -28,6 +29,7 @@ import FireBallSkill from "../skill/skills/FireBallSkill";
 import FireHorseSkill from "../skill/skills/FireHorseSkill";
 import FireWallSkill from "../skill/skills/FireWallSkill";
 import IceBallSkill from "../skill/skills/IceBallSkill";
+import IcePitonSkill from "../skill/skills/IcePitonSkill";
 import LaserSkill from "../skill/skills/LaserSkill";
 import MiZongQuanSkill from "../skill/skills/MiZongQuanSkill";
 import PosionTimboSkill from "../skill/skills/PosionTimboSkill";
@@ -91,6 +93,7 @@ export default class SkillMgr extends ParentMgr {
         this._typeSkillClass[ClientDef.SKILL_TYPE_FIREWALL] = FireWallSkill;             //火墙
         this._typeSkillClass[ClientDef.SKILL_TYPE_TIMEBOMB] = TimeBombSkill;             //定时炸弹
         this._typeSkillClass[ClientDef.SKILL_TYPE_LASER] = LaserSkill;             //定时炸弹
+        this._typeSkillClass[ClientDef.SKILL_TYPE_ICE_PITON] = IcePitonSkill;             //冰锥
 
         this._typeSkillClass[ClientDef.SKILL_TYPE_COMMON] = CommonSkill;             //常用技能
         this._typeSkillClass[ClientDef.SKILL_TYPE_SUICIDE] = SuicideSkill;             //自杀技能
@@ -116,7 +119,7 @@ export default class SkillMgr extends ParentMgr {
         this._typeBulletClass[ClientDef.BULLET_SCRIPT_TIMEBOMB4]   = TimeBombBoxesBullet;        //定时炸弹类型子弹
         this._typeBulletClass[ClientDef.BULLET_SCRIPT_TIMEBOMB5]   = TimeBombBox1Bullet;        //定时炸弹类型子弹
         this._typeBulletClass[ClientDef.BULLET_SCRIPT_LOSER]   = LoserBullet;        //激光类型子弹
-
+        this._typeBulletClass[ClientDef.BULLET_SCRIPT_CTEATE_AND_PLAY_NEST]   = AnimationCreatePlayNextBBullet;        //激光类型子弹
 
 
     }

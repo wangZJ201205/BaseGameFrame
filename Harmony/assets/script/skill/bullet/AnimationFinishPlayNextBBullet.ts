@@ -1,16 +1,17 @@
 /**
- * 动画播放完毕后，自动播放下一个动画
+ * 动画播放开始后，自动播放下一个动画
  */
 
+import ClientDef from "../../common/ClientDef";
 import BulletParent from "../BulletParent";
 
 
 const {ccclass, property} = cc._decorator;
 
 @ccclass
-export default class AnimationFinishPlayNextBBullet extends BulletParent {
+export default class  AnimationFinishPlayNextBBullet extends BulletParent {
 
-
+    
 
     onFinished()
     {

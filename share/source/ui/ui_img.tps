@@ -159,32 +159,15 @@
             <filename>yaoganpan.png</filename>
             <filename>cjtubiao.jpg</filename>
             <filename>skill_zhanshenchongzhuang.png</filename>
-            <filename>skill_zhaohuanbaihu.png</filename>
-            <filename>skill_zhuorehuoqiang_sel.png</filename>
-            <filename>skill-reduce_bingpaoxiao.png</filename>
             <filename>skill-reduce_cisha.png</filename>
-            <filename>skill-reduce_lieyan.png</filename>
             <filename>skill-reduce_luolei.png</filename>
-            <filename>skill-reduce_quntifushi.png</filename>
-            <filename>skill-reduce_zhaohuanbaihu.png</filename>
-            <filename>skill-reduce_zhuorehuoqiang.png</filename>
-            <filename>skill-reduce_zhuri.png</filename>
             <filename>skill_badaohuoyu.png</filename>
-            <filename>skill_banyue.png</filename>
-            <filename>skill_bingpaoxiao.png</filename>
             <filename>skill_huimiehuoyu.png</filename>
             <filename>skill_kuanglongzidian.png</filename>
             <filename>skill_linghunhuo.png</filename>
             <filename>skill_luolei.png</filename>
-            <filename>skill_qiancheng1.png</filename>
-            <filename>skill_qiancheng4.png</filename>
             <filename>skill_shixueshu1.png</filename>
             <filename>skill_shouhuzhiyi.png</filename>
-            <filename>skill_siwangmaichong4.png</filename>
-            <filename>skill_tulongzhan1.png</filename>
-            <filename>skill_wujizhenqi.png</filename>
-            <filename>skill_xiuluoyinmie.png</filename>
-            <filename>skill_xuanfengzhan.png</filename>
             <filename>skill_xukongfalidun.png</filename>
             <filename>skill_youlanaoyi1.png</filename>
             <filename>xunzhangtubiao.png</filename>
@@ -238,6 +221,7 @@
             <filename>map_mainbuttons_heroes_0014.png</filename>
             <filename>portraits_small_states_0001.png</filename>
             <filename>towerselect_powers_0035.png</filename>
+            <filename>special_powers_icon_7.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>

@@ -46,9 +46,9 @@ export default class PosionEndBullet extends BulletParent {
     {   
         var damageValue = this.getDamageValue(other);
         other.node.setClientProp(ClientDef.ENTITY_PROP_POSION_TIME,cc.director.getTotalTime());
-        if(damageValue == 0)return;
+        if(damageValue == 0)return false;
         other.node.getEntityComponent(ClientDef.ENTITY_COMP_BLOOM).addDamage( damageValue );
-        
+        return true
     }
 
     //碰撞中

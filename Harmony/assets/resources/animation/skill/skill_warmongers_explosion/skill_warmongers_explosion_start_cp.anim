@@ -1,0 +1,97 @@
+{
+  "__type__": "cc.AnimationClip",
+  "_name": "skill_warmongers_explosion_start_cp",
+  "_objFlags": 0,
+  "_native": "",
+  "_duration": 0.16666666666666666,
+  "sample": 60,
+  "speed": 0.3,
+  "wrapMode": 2,
+  "curveData": {
+    "comps": {
+      "cc.Sprite": {
+        "spriteFrame": [
+          {
+            "frame": 0,
+            "value": {
+              "__uuid__": "1e0ce9af-1d1e-4bf8-a36d-05f69d7a7662"
+            }
+          },
+          {
+            "frame": 0.016666666666666666,
+            "value": {
+              "__uuid__": "9356aca3-1ee2-443e-94d4-8e5464a6f802"
+            }
+          },
+          {
+            "frame": 0.03333333333333333,
+            "value": {
+              "__uuid__": "4b755a99-7c8e-40c6-a2e6-b246ac612bb7"
+            }
+          },
+          {
+            "frame": 0.05,
+            "value": {
+              "__uuid__": "c765f815-f5b7-4e2b-9ba4-7afbf9c54590"
+            }
+          },
+          {
+            "frame": 0.06666666666666667,
+            "value": {
+              "__uuid__": "04bd963d-2528-4ab6-bc93-263eb4a3e3ce"
+            }
+          },
+          {
+            "frame": 0.08333333333333333,
+            "value": {
+              "__uuid__": "0de5cf9a-0e33-4e4c-a01a-723d623ebe1b"
+            }
+          },
+          {
+            "frame": 0.1,
+            "value": {
+              "__uuid__": "8bfc73c5-c7b8-48f4-b31e-6c46a764eb7d"
+            }
+          },
+          {
+            "frame": 0.11666666666666667,
+            "value": {
+              "__uuid__": "9b30e35a-5a9a-4ad3-94bd-133a1937543e"
+            }
+          },
+          {
+            "frame": 0.13333333333333333,
+            "value": {
+              "__uuid__": "fb128ec4-7bff-4488-bf9f-98acdcac2710"
+            }
+          },
+          {
+            "frame": 0.15,
+            "value": {
+              "__uuid__": "f2b4fda1-ed5a-4648-99d9-4be86b23a79f"
+            }
+          }
+        ]
+      }
+    },
+    "props": {
+      "position": [
+        {
+          "frame": 0,
+          "value": [
+            -70,
+            0,
+            0
+          ]
+        }
+      ],
+      "angle": [
+        {
+          "frame": 0,
+          "value": 180
+        }
+      ]
+    }
+  },
+  "events": []
+}

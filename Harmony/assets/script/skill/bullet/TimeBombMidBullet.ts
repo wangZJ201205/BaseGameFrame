@@ -129,13 +129,13 @@ export default class TimeBombMidBullet extends BulletParent {
     {   
         if(!other.node.isLife())
         {
-            return;
+            return false;
         }
 
         var walkTime = cc.director.getTotalTime() - this._walkOutTimeOfDoor;
         if( walkTime < this._noAttackTime ) //是否到攻击时间
         {
-            return;
+            return false;
         }
 
         this.stop();
@@ -147,8 +147,9 @@ export default class TimeBombMidBullet extends BulletParent {
 
         var damageValue = this.getDamageValue(other);
         other.node.setClientProp(ClientDef.ENTITY_PROP_POSION_TIME,cc.director.getTotalTime());
-        if(damageValue == 0)return;
+        if(damageValue == 0)return false;
         other.node.getEntityComponent(ClientDef.ENTITY_COMP_BLOOM).addDamage( damageValue );
+        return true;
     }
 
     collisionStay(other, self)

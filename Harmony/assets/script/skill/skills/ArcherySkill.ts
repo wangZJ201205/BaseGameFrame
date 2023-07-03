@@ -42,7 +42,7 @@ export default class ArcherySkill extends SkillParent {
             this._curBulletIndex = 0;
         }
 
-        console.info(">>>>>>>cur bullets lenght : " + this._bullets.length);
+        // console.info(">>>>>>>cur bullets lenght : " + this._bullets.length);
     }
 
 }

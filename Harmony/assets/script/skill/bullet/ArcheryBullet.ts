@@ -72,19 +72,15 @@ export default class ArcheryBullet extends BulletParent {
     //碰撞开始
     collisionEnter(other, self)
     {   
-        var tgt = other.node;
-        if(tgt.getClientProp(ClientDef.ENTITY_PROP_STATE) == ClientDef.ENTITY_STATE_DIE) //死亡状态不触发响应
-        {
-            return;
-        }
-        super.collisionEnter(other, self);
-        if( this._skillInfo.id == 11009 )
+        var suc = super.collisionEnter(other, self);
+        if( this._skillInfo.id == 11009 && suc )
         {
             var bullet = this.spawnNextBullet();
             bullet.getNode().active = true;
             bullet.getNode().position = this.getNode().position;
             bullet.restart();
         }
+        return true;
     }
     
 }

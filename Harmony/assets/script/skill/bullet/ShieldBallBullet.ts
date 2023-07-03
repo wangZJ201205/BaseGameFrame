@@ -38,6 +38,7 @@ export default class ShieldBallBullet extends BulletParent {
     //碰撞开始
     collisionEnter(other, self)
     {  
+        return true;
     }
 
     //碰撞中

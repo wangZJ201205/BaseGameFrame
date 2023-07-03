@@ -295,13 +295,17 @@ export default class BulletParent {
     //碰撞开始
     collisionEnter(other, self)
     {   
+        if(!other.node.isLife())
+        {
+            return false;
+        } 
         var tgt = other.node;
         if(tgt.getClientProp(ClientDef.ENTITY_PROP_STATE) == ClientDef.ENTITY_STATE_DIE) //死亡状态不触发响应
         {
-            return;
+            return false;
         }
         var damageValue = this.getDamageValue(other);
-        if(damageValue == 0)return;
+        if(damageValue == 0)return false;
         tgt.getEntityComponent(ClientDef.ENTITY_COMP_BLOOM).addDamage( damageValue );
         var strike = this.getProp(ClientDef.BULLET_PROP_STRIKE);
         strike --;
@@ -310,6 +314,7 @@ export default class BulletParent {
         {
             this.stop();
         }
+        return true;
     }
 
     //碰撞中
@@ -342,7 +347,6 @@ export default class BulletParent {
         }
         var bullet = this._host.spawnBullet( this._bulletInfo.nextBullet );
         return bullet;
-        
     }
 
     replayAnimation()

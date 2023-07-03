@@ -63,5 +63,16 @@ export default class LineMoveByAngleBullet extends BulletParent {
         super.update(dt);
     }
 
+    collisionEnter(other, self)
+    {   
+        var suc = super.collisionEnter(other, self);
+        if(!suc)return false;
+        var bullet = this.spawnNextBullet();
+        bullet.getNode().active = true;
+        bullet.getNode().position = this.getNode().position;
+        bullet.restart();
+        return true;
+    }
+
     
 }

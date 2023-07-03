@@ -248,6 +248,7 @@
             <filename>boom/warmongers_rocket_tower_lvl4_blue_explosion_0018.png</filename>
             <filename>spirit_mausoleum_bolt_0002.png</filename>
             <filename>ember_lords_mage_tower_bolt_lvl4_0001.png</filename>
+            <filename>hero_jigou_iceshard.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>

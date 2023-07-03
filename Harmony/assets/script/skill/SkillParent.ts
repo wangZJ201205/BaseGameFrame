@@ -187,7 +187,7 @@ export default class SkillParent {
     // //寻找闲置的子弹
     spawnBullet(bulletId)
     {
-        console.info(`>>>>>>length ${this._bullets.length}`);
+        // console.info(`>>>>>>length ${this._bullets.length}`);
         for (let index = 0; index < this._bullets.length; index++) {
             const element = this._bullets[index];
             var skillid = element.getProp(ClientDef.BULLET_PROP_STATICID);
