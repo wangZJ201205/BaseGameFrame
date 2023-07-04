@@ -7,11 +7,11 @@
             <key>hero_eiskalt_ice_peaks_0001.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{152,842},{52,30}}</string>
+                <string>{{146,1838},{52,30}}</string>
                 <key>offset</key>
                 <string>{0,-47}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
                 <string>{{24,102},{52,30}}</string>
                 <key>sourceSize</key>
@@ -20,7 +20,7 @@
             <key>hero_eiskalt_ice_peaks_0002.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{86,818},{64,60}}</string>
+                <string>{{80,1624},{64,60}}</string>
                 <key>offset</key>
                 <string>{-2,-33}</string>
                 <key>rotated</key>
@@ -33,7 +33,7 @@
             <key>hero_eiskalt_ice_peaks_0003.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{188,264},{64,92}}</string>
+                <string>{{82,292},{64,92}}</string>
                 <key>offset</key>
                 <string>{-2,-20}</string>
                 <key>rotated</key>
@@ -46,7 +46,7 @@
             <key>hero_eiskalt_ice_peaks_0004.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{130,2},{72,126}}</string>
+                <string>{{2,130},{72,126}}</string>
                 <key>offset</key>
                 <string>{-3,-7}</string>
                 <key>rotated</key>
@@ -59,7 +59,7 @@
             <key>hero_eiskalt_ice_peaks_0005.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{120,130},{70,124}}</string>
+                <string>{{82,2},{70,124}}</string>
                 <key>offset</key>
                 <string>{-3,-6}</string>
                 <key>rotated</key>
@@ -72,11 +72,11 @@
             <key>hero_eiskalt_ice_peaks_0006.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,242},{78,106}}</string>
+                <string>{{2,484},{78,106}}</string>
                 <key>offset</key>
                 <string>{-2,-12}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
                 <string>{{9,29},{78,106}}</string>
                 <key>sourceSize</key>
@@ -85,11 +85,11 @@
             <key>hero_eiskalt_ice_peaks_0007.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,162},{78,106}}</string>
+                <string>{{2,376},{78,106}}</string>
                 <key>offset</key>
                 <string>{-2,-11}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
                 <string>{{9,28},{78,106}}</string>
                 <key>sourceSize</key>
@@ -98,11 +98,11 @@
             <key>hero_eiskalt_ice_peaks_0008.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,82},{78,116}}</string>
+                <string>{{2,258},{78,116}}</string>
                 <key>offset</key>
                 <string>{-3,-6}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
                 <string>{{8,18},{78,116}}</string>
                 <key>sourceSize</key>
@@ -111,11 +111,11 @@
             <key>hero_eiskalt_ice_peaks_0009.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,82},{78,116}}</string>
+                <string>{{2,258},{78,116}}</string>
                 <key>offset</key>
                 <string>{-3,-6}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
                 <string>{{8,18},{78,116}}</string>
                 <key>sourceSize</key>
@@ -124,11 +124,11 @@
             <key>hero_eiskalt_ice_peaks_0010.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,82},{78,116}}</string>
+                <string>{{2,258},{78,116}}</string>
                 <key>offset</key>
                 <string>{-3,-6}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
                 <string>{{8,18},{78,116}}</string>
                 <key>sourceSize</key>
@@ -137,11 +137,11 @@
             <key>hero_eiskalt_ice_peaks_0011.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,82},{78,116}}</string>
+                <string>{{2,258},{78,116}}</string>
                 <key>offset</key>
                 <string>{-3,-6}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
                 <string>{{8,18},{78,116}}</string>
                 <key>sourceSize</key>
@@ -150,11 +150,11 @@
             <key>hero_eiskalt_ice_peaks_0012.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,82},{78,116}}</string>
+                <string>{{2,258},{78,116}}</string>
                 <key>offset</key>
                 <string>{-3,-6}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
                 <string>{{8,18},{78,116}}</string>
                 <key>sourceSize</key>
@@ -163,11 +163,11 @@
             <key>hero_eiskalt_ice_peaks_0013.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,82},{78,116}}</string>
+                <string>{{2,258},{78,116}}</string>
                 <key>offset</key>
                 <string>{-3,-6}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
                 <string>{{8,18},{78,116}}</string>
                 <key>sourceSize</key>
@@ -180,7 +180,7 @@
                 <key>offset</key>
                 <string>{-3,-7}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
                 <string>{{8,14},{78,126}}</string>
                 <key>sourceSize</key>
@@ -189,7 +189,7 @@
             <key>hero_eiskalt_ice_peaks_0015.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{110,256},{76,92}}</string>
+                <string>{{2,592},{76,92}}</string>
                 <key>offset</key>
                 <string>{-3,-20}</string>
                 <key>rotated</key>
@@ -202,7 +202,7 @@
             <key>hero_eiskalt_ice_peaks_0016.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{182,436},{76,60}}</string>
+                <string>{{80,688},{76,60}}</string>
                 <key>offset</key>
                 <string>{-3,-34}</string>
                 <key>rotated</key>
@@ -215,7 +215,7 @@
             <key>hero_eiskalt_ice_peaks_0017.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,868},{52,30}}</string>
+                <string>{{146,1652},{52,30}}</string>
                 <key>offset</key>
                 <string>{0,-47}</string>
                 <key>rotated</key>
@@ -228,11 +228,11 @@
             <key>hero_eiskalt_ice_peaks_0018.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{56,880},{52,26}}</string>
+                <string>{{178,1832},{52,26}}</string>
                 <key>offset</key>
                 <string>{-1,-48}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
                 <string>{{23,105},{52,26}}</string>
                 <key>sourceSize</key>
@@ -241,11 +241,11 @@
             <key>hero_eiskalt_ice_peaks_0019.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{56,880},{52,26}}</string>
+                <string>{{178,1832},{52,26}}</string>
                 <key>offset</key>
                 <string>{-1,-48}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
                 <string>{{23,105},{52,26}}</string>
                 <key>sourceSize</key>
@@ -254,11 +254,11 @@
             <key>hero_eiskalt_ice_peaks_0020.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{110,880},{46,26}}</string>
+                <string>{{178,1886},{46,26}}</string>
                 <key>offset</key>
                 <string>{0,-48}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
                 <string>{{27,105},{46,26}}</string>
                 <key>sourceSize</key>
@@ -267,11 +267,11 @@
             <key>hero_eiskalt_ice_peaks_0021.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{110,880},{46,26}}</string>
+                <string>{{178,1886},{46,26}}</string>
                 <key>offset</key>
                 <string>{0,-48}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
                 <string>{{27,105},{46,26}}</string>
                 <key>sourceSize</key>
@@ -280,7 +280,7 @@
             <key>hero_jigou_ultimate_ice_shards_1_0001.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{204,128},{54,50}}</string>
+                <string>{{154,198},{54,50}}</string>
                 <key>offset</key>
                 <string>{-1,-5}</string>
                 <key>rotated</key>
@@ -293,7 +293,7 @@
             <key>hero_jigou_ultimate_ice_shards_1_0002.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{204,68},{58,50}}</string>
+                <string>{{154,82},{58,50}}</string>
                 <key>offset</key>
                 <string>{-3,-5}</string>
                 <key>rotated</key>
@@ -306,7 +306,7 @@
             <key>hero_jigou_ultimate_ice_shards_1_0003.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{182,358},{76,70}}</string>
+                <string>{{82,214},{76,70}}</string>
                 <key>offset</key>
                 <string>{3,9}</string>
                 <key>rotated</key>
@@ -319,7 +319,7 @@
             <key>hero_jigou_ultimate_ice_shards_1_0004.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{170,764},{76,76}}</string>
+                <string>{{82,386},{76,76}}</string>
                 <key>offset</key>
                 <string>{3,12}</string>
                 <key>rotated</key>
@@ -332,7 +332,7 @@
             <key>hero_jigou_ultimate_ice_shards_1_0005.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{174,600},{84,76}}</string>
+                <string>{{2,1566},{84,76}}</string>
                 <key>offset</key>
                 <string>{5,12}</string>
                 <key>rotated</key>
@@ -345,11 +345,11 @@
             <key>hero_jigou_ultimate_ice_shards_1_0006.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,634},{84,76}}</string>
+                <string>{{2,1480},{84,76}}</string>
                 <key>offset</key>
                 <string>{5,12}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
                 <string>{{11,0},{84,76}}</string>
                 <key>sourceSize</key>
@@ -358,11 +358,11 @@
             <key>hero_jigou_ultimate_ice_shards_1_0007.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{88,584},{84,76}}</string>
+                <string>{{2,1394},{84,76}}</string>
                 <key>offset</key>
                 <string>{3,12}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
                 <string>{{9,0},{84,76}}</string>
                 <key>sourceSize</key>
@@ -371,11 +371,11 @@
             <key>hero_jigou_ultimate_ice_shards_1_0008.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,556},{84,76}}</string>
+                <string>{{2,1308},{84,76}}</string>
                 <key>offset</key>
                 <string>{3,12}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
                 <string>{{9,0},{84,76}}</string>
                 <key>sourceSize</key>
@@ -384,11 +384,11 @@
             <key>hero_jigou_ultimate_ice_shards_1_0009.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,790},{82,76}}</string>
+                <string>{{76,130},{82,76}}</string>
                 <key>offset</key>
                 <string>{4,12}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
                 <string>{{11,0},{82,76}}</string>
                 <key>sourceSize</key>
@@ -397,11 +397,11 @@
             <key>hero_jigou_ultimate_ice_shards_1_0010.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{86,740},{82,76}}</string>
+                <string>{{2,1904},{82,76}}</string>
                 <key>offset</key>
                 <string>{4,12}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
                 <string>{{11,0},{82,76}}</string>
                 <key>sourceSize</key>
@@ -410,7 +410,7 @@
             <key>hero_jigou_ultimate_ice_shards_1_0011.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{178,514},{84,76}}</string>
+                <string>{{2,1222},{84,76}}</string>
                 <key>offset</key>
                 <string>{3,12}</string>
                 <key>rotated</key>
@@ -423,11 +423,11 @@
             <key>hero_jigou_ultimate_ice_shards_1_0012.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{90,506},{86,76}}</string>
+                <string>{{2,1134},{86,76}}</string>
                 <key>offset</key>
                 <string>{2,12}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
                 <string>{{7,0},{86,76}}</string>
                 <key>sourceSize</key>
@@ -436,11 +436,11 @@
             <key>hero_jigou_ultimate_ice_shards_1_0013.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,478},{86,76}}</string>
+                <string>{{2,1046},{86,76}}</string>
                 <key>offset</key>
                 <string>{2,12}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
                 <string>{{7,0},{86,76}}</string>
                 <key>sourceSize</key>
@@ -449,11 +449,11 @@
             <key>hero_jigou_ultimate_ice_shards_1_0014.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{92,428},{88,76}}</string>
+                <string>{{2,956},{88,76}}</string>
                 <key>offset</key>
                 <string>{1,12}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
                 <string>{{5,0},{88,76}}</string>
                 <key>sourceSize</key>
@@ -462,11 +462,11 @@
             <key>hero_jigou_ultimate_ice_shards_1_0015.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,400},{88,76}}</string>
+                <string>{{2,866},{88,76}}</string>
                 <key>offset</key>
                 <string>{1,12}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
                 <string>{{5,0},{88,76}}</string>
                 <key>sourceSize</key>
@@ -475,11 +475,11 @@
             <key>hero_jigou_ultimate_ice_shards_1_0016.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{92,350},{88,76}}</string>
+                <string>{{2,776},{88,76}}</string>
                 <key>offset</key>
                 <string>{1,12}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
                 <string>{{5,0},{88,76}}</string>
                 <key>sourceSize</key>
@@ -488,11 +488,11 @@
             <key>hero_jigou_ultimate_ice_shards_1_0017.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,322},{88,76}}</string>
+                <string>{{2,686},{88,76}}</string>
                 <key>offset</key>
                 <string>{1,12}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
                 <string>{{5,0},{88,76}}</string>
                 <key>sourceSize</key>
@@ -501,11 +501,11 @@
             <key>hero_jigou_ultimate_ice_shards_1_0018.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{172,686},{82,76}}</string>
+                <string>{{2,1820},{82,76}}</string>
                 <key>offset</key>
                 <string>{4,12}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
                 <string>{{11,0},{82,76}}</string>
                 <key>sourceSize</key>
@@ -514,11 +514,11 @@
             <key>hero_jigou_ultimate_ice_shards_1_0019.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,712},{82,76}}</string>
+                <string>{{2,1736},{82,76}}</string>
                 <key>offset</key>
                 <string>{4,12}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
                 <string>{{11,0},{82,76}}</string>
                 <key>sourceSize</key>
@@ -527,11 +527,11 @@
             <key>hero_jigou_ultimate_ice_shards_1_0020.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,712},{82,76}}</string>
+                <string>{{2,1736},{82,76}}</string>
                 <key>offset</key>
                 <string>{4,12}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
                 <string>{{11,0},{82,76}}</string>
                 <key>sourceSize</key>
@@ -540,11 +540,11 @@
             <key>hero_jigou_ultimate_ice_shards_1_0021.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,712},{82,76}}</string>
+                <string>{{2,1736},{82,76}}</string>
                 <key>offset</key>
                 <string>{4,12}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
                 <string>{{11,0},{82,76}}</string>
                 <key>sourceSize</key>
@@ -553,11 +553,11 @@
             <key>hero_jigou_ultimate_ice_shards_1_0022.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{88,662},{82,76}}</string>
+                <string>{{2,1652},{82,76}}</string>
                 <key>offset</key>
                 <string>{4,12}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
                 <string>{{11,0},{82,76}}</string>
                 <key>sourceSize</key>
@@ -566,11 +566,11 @@
             <key>hero_jigou_ultimate_ice_shards_1_0023.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{88,662},{82,76}}</string>
+                <string>{{2,1652},{82,76}}</string>
                 <key>offset</key>
                 <string>{4,12}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
                 <string>{{11,0},{82,76}}</string>
                 <key>sourceSize</key>
@@ -579,7 +579,7 @@
             <key>hero_jigou_ultimate_ice_shards_1_0024.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{192,184},{78,62}}</string>
+                <string>{{82,464},{78,62}}</string>
                 <key>offset</key>
                 <string>{1,6}</string>
                 <key>rotated</key>
@@ -592,7 +592,7 @@
             <key>hero_jigou_ultimate_ice_shards_1_0025.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{192,184},{78,62}}</string>
+                <string>{{82,464},{78,62}}</string>
                 <key>offset</key>
                 <string>{1,6}</string>
                 <key>rotated</key>
@@ -605,7 +605,7 @@
             <key>hero_jigou_ultimate_ice_shards_1_0026.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{204,2},{64,46}}</string>
+                <string>{{148,1372},{64,46}}</string>
                 <key>offset</key>
                 <string>{4,-1}</string>
                 <key>rotated</key>
@@ -618,7 +618,7 @@
             <key>hero_jigou_ultimate_ice_shards_1_0027.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{204,2},{64,46}}</string>
+                <string>{{148,1372},{64,46}}</string>
                 <key>offset</key>
                 <string>{4,-1}</string>
                 <key>rotated</key>
@@ -631,7 +631,7 @@
             <key>hero_jigou_ultimate_ice_shards_1_0028.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{206,842},{42,28}}</string>
+                <string>{{162,1684},{42,28}}</string>
                 <key>offset</key>
                 <string>{4,-8}</string>
                 <key>rotated</key>
@@ -644,7 +644,7 @@
             <key>hero_jigou_ultimate_ice_shards_1_0029.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{206,842},{42,28}}</string>
+                <string>{{162,1684},{42,28}}</string>
                 <key>offset</key>
                 <string>{4,-8}</string>
                 <key>rotated</key>
@@ -657,11 +657,11 @@
             <key>hero_jigou_ultimate_ice_shards_1_0030.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{192,130},{32,10}}</string>
+                <string>{{146,676},{32,10}}</string>
                 <key>offset</key>
                 <string>{4,-14}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
                 <string>{{36,59},{32,10}}</string>
                 <key>sourceSize</key>
@@ -670,11 +670,11 @@
             <key>hero_jigou_ultimate_ice_shards_1_0031.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{192,130},{32,10}}</string>
+                <string>{{146,676},{32,10}}</string>
                 <key>offset</key>
                 <string>{4,-14}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
                 <string>{{36,59},{32,10}}</string>
                 <key>sourceSize</key>
@@ -683,7 +683,1034 @@
             <key>hero_jigou_ultimate_ice_shards_1_0032.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{252,2},{1,1}}</string>
+                <string>{{76,214},{1,1}}</string>
+                <key>offset</key>
+                <string>{-47.5,49.5}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{1,1}}</string>
+                <key>sourceSize</key>
+                <string>{96,100}</string>
+            </dict>
+            <key>hero_jigou_ultimate_ice_shards_2_0001.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{176,1934},{46,28}}</string>
+                <key>offset</key>
+                <string>{4,-11}</string>
+                <key>rotated</key>
+                <true/>
+                <key>sourceColorRect</key>
+                <string>{{29,47},{46,28}}</string>
+                <key>sourceSize</key>
+                <string>{96,100}</string>
+            </dict>
+            <key>hero_jigou_ultimate_ice_shards_2_0002.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{162,1714},{46,38}}</string>
+                <key>offset</key>
+                <string>{4,-6}</string>
+                <key>rotated</key>
+                <true/>
+                <key>sourceColorRect</key>
+                <string>{{29,37},{46,38}}</string>
+                <key>sourceSize</key>
+                <string>{96,100}</string>
+            </dict>
+            <key>hero_jigou_ultimate_ice_shards_2_0003.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{126,1934},{48,44}}</string>
+                <key>offset</key>
+                <string>{5,-3}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{29,31},{48,44}}</string>
+                <key>sourceSize</key>
+                <string>{96,100}</string>
+            </dict>
+            <key>hero_jigou_ultimate_ice_shards_2_0004.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{154,142},{50,54}}</string>
+                <key>offset</key>
+                <string>{4,2}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{27,21},{50,54}}</string>
+                <key>sourceSize</key>
+                <string>{96,100}</string>
+            </dict>
+            <key>hero_jigou_ultimate_ice_shards_2_0005.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{80,994},{54,72}}</string>
+                <key>offset</key>
+                <string>{2,9}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{23,5},{54,72}}</string>
+                <key>sourceSize</key>
+                <string>{96,100}</string>
+            </dict>
+            <key>hero_jigou_ultimate_ice_shards_2_0006.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{80,920},{54,72}}</string>
+                <key>offset</key>
+                <string>{2,9}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{23,5},{54,72}}</string>
+                <key>sourceSize</key>
+                <string>{96,100}</string>
+            </dict>
+            <key>hero_jigou_ultimate_ice_shards_2_0007.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{134,1270},{54,70}}</string>
+                <key>offset</key>
+                <string>{2,8}</string>
+                <key>rotated</key>
+                <true/>
+                <key>sourceColorRect</key>
+                <string>{{23,7},{54,70}}</string>
+                <key>sourceSize</key>
+                <string>{96,100}</string>
+            </dict>
+            <key>hero_jigou_ultimate_ice_shards_2_0008.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{134,1214},{54,70}}</string>
+                <key>offset</key>
+                <string>{2,8}</string>
+                <key>rotated</key>
+                <true/>
+                <key>sourceColorRect</key>
+                <string>{{23,7},{54,70}}</string>
+                <key>sourceSize</key>
+                <string>{96,100}</string>
+            </dict>
+            <key>hero_jigou_ultimate_ice_shards_2_0009.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{80,1140},{54,70}}</string>
+                <key>offset</key>
+                <string>{2,8}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{23,7},{54,70}}</string>
+                <key>sourceSize</key>
+                <string>{96,100}</string>
+            </dict>
+            <key>hero_jigou_ultimate_ice_shards_2_0010.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{80,1140},{54,70}}</string>
+                <key>offset</key>
+                <string>{2,8}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{23,7},{54,70}}</string>
+                <key>sourceSize</key>
+                <string>{96,100}</string>
+            </dict>
+            <key>hero_jigou_ultimate_ice_shards_2_0011.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{80,1140},{54,70}}</string>
+                <key>offset</key>
+                <string>{2,8}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{23,7},{54,70}}</string>
+                <key>sourceSize</key>
+                <string>{96,100}</string>
+            </dict>
+            <key>hero_jigou_ultimate_ice_shards_2_0012.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{80,1068},{54,70}}</string>
+                <key>offset</key>
+                <string>{2,8}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{23,7},{54,70}}</string>
+                <key>sourceSize</key>
+                <string>{96,100}</string>
+            </dict>
+            <key>hero_jigou_ultimate_ice_shards_2_0013.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{80,1068},{54,70}}</string>
+                <key>offset</key>
+                <string>{2,8}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{23,7},{54,70}}</string>
+                <key>sourceSize</key>
+                <string>{96,100}</string>
+            </dict>
+            <key>hero_jigou_ultimate_ice_shards_2_0014.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{142,762},{52,62}}</string>
+                <key>offset</key>
+                <string>{2,5}</string>
+                <key>rotated</key>
+                <true/>
+                <key>sourceColorRect</key>
+                <string>{{24,14},{52,62}}</string>
+                <key>sourceSize</key>
+                <string>{96,100}</string>
+            </dict>
+            <key>hero_jigou_ultimate_ice_shards_2_0015.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{142,762},{52,62}}</string>
+                <key>offset</key>
+                <string>{2,5}</string>
+                <key>rotated</key>
+                <true/>
+                <key>sourceColorRect</key>
+                <string>{{24,14},{52,62}}</string>
+                <key>sourceSize</key>
+                <string>{96,100}</string>
+            </dict>
+            <key>hero_jigou_ultimate_ice_shards_2_0016.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{80,1926},{44,50}}</string>
+                <key>offset</key>
+                <string>{3,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{29,25},{44,50}}</string>
+                <key>sourceSize</key>
+                <string>{96,100}</string>
+            </dict>
+            <key>hero_jigou_ultimate_ice_shards_2_0017.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{80,1926},{44,50}}</string>
+                <key>offset</key>
+                <string>{3,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{29,25},{44,50}}</string>
+                <key>sourceSize</key>
+                <string>{96,100}</string>
+            </dict>
+            <key>hero_jigou_ultimate_ice_shards_2_0018.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{142,816},{28,22}}</string>
+                <key>offset</key>
+                <string>{4,-13}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{38,52},{28,22}}</string>
+                <key>sourceSize</key>
+                <string>{96,100}</string>
+            </dict>
+            <key>hero_jigou_ultimate_ice_shards_2_0019.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{142,816},{28,22}}</string>
+                <key>offset</key>
+                <string>{4,-13}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{38,52},{28,22}}</string>
+                <key>sourceSize</key>
+                <string>{96,100}</string>
+            </dict>
+            <key>hero_jigou_ultimate_ice_shards_2_0020.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{76,214},{1,1}}</string>
+                <key>offset</key>
+                <string>{-47.5,49.5}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{1,1}}</string>
+                <key>sourceSize</key>
+                <string>{96,100}</string>
+            </dict>
+            <key>hero_jigou_ultimate_ice_shards_3_0001.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{160,440},{34,22}}</string>
+                <key>offset</key>
+                <string>{-3,-19}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{28,58},{34,22}}</string>
+                <key>sourceSize</key>
+                <string>{96,100}</string>
+            </dict>
+            <key>hero_jigou_ultimate_ice_shards_3_0002.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{120,1846},{54,24}}</string>
+                <key>offset</key>
+                <string>{6,-18}</string>
+                <key>rotated</key>
+                <true/>
+                <key>sourceColorRect</key>
+                <string>{{27,56},{54,24}}</string>
+                <key>sourceSize</key>
+                <string>{96,100}</string>
+            </dict>
+            <key>hero_jigou_ultimate_ice_shards_3_0003.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{80,1562},{64,60}}</string>
+                <key>offset</key>
+                <string>{2,-14}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{18,34},{64,60}}</string>
+                <key>sourceSize</key>
+                <string>{96,100}</string>
+            </dict>
+            <key>hero_jigou_ultimate_ice_shards_3_0004.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{136,1152},{66,60}}</string>
+                <key>offset</key>
+                <string>{3,-14}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{18,34},{66,60}}</string>
+                <key>sourceSize</key>
+                <string>{96,100}</string>
+            </dict>
+            <key>hero_jigou_ultimate_ice_shards_3_0005.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{80,1372},{66,64}}</string>
+                <key>offset</key>
+                <string>{3,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{18,18},{66,64}}</string>
+                <key>sourceSize</key>
+                <string>{96,100}</string>
+            </dict>
+            <key>hero_jigou_ultimate_ice_shards_3_0006.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{80,620},{66,64}}</string>
+                <key>offset</key>
+                <string>{2,0}</string>
+                <key>rotated</key>
+                <true/>
+                <key>sourceColorRect</key>
+                <string>{{17,18},{66,64}}</string>
+                <key>sourceSize</key>
+                <string>{96,100}</string>
+            </dict>
+            <key>hero_jigou_ultimate_ice_shards_3_0007.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{80,1500},{64,60}}</string>
+                <key>offset</key>
+                <string>{2,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{18,20},{64,60}}</string>
+                <key>sourceSize</key>
+                <string>{96,100}</string>
+            </dict>
+            <key>hero_jigou_ultimate_ice_shards_3_0008.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{80,1438},{64,60}}</string>
+                <key>offset</key>
+                <string>{1,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{17,20},{64,60}}</string>
+                <key>sourceSize</key>
+                <string>{96,100}</string>
+            </dict>
+            <key>hero_jigou_ultimate_ice_shards_3_0009.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{146,1438},{58,66}}</string>
+                <key>offset</key>
+                <string>{-1,3}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{18,14},{58,66}}</string>
+                <key>sourceSize</key>
+                <string>{96,100}</string>
+            </dict>
+            <key>hero_jigou_ultimate_ice_shards_3_0010.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{146,608},{58,66}}</string>
+                <key>offset</key>
+                <string>{-1,3}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{18,14},{58,66}}</string>
+                <key>sourceSize</key>
+                <string>{96,100}</string>
+            </dict>
+            <key>hero_jigou_ultimate_ice_shards_3_0011.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{146,536},{58,70}}</string>
+                <key>offset</key>
+                <string>{-1,5}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{18,10},{58,70}}</string>
+                <key>sourceSize</key>
+                <string>{96,100}</string>
+            </dict>
+            <key>hero_jigou_ultimate_ice_shards_3_0012.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{146,464},{58,70}}</string>
+                <key>offset</key>
+                <string>{-1,5}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{18,10},{58,70}}</string>
+                <key>sourceSize</key>
+                <string>{96,100}</string>
+            </dict>
+            <key>hero_jigou_ultimate_ice_shards_3_0013.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{80,766},{60,72}}</string>
+                <key>offset</key>
+                <string>{0,6}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{18,8},{60,72}}</string>
+                <key>sourceSize</key>
+                <string>{96,100}</string>
+            </dict>
+            <key>hero_jigou_ultimate_ice_shards_3_0014.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{82,544},{62,74}}</string>
+                <key>offset</key>
+                <string>{0,7}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{17,6},{62,74}}</string>
+                <key>sourceSize</key>
+                <string>{96,100}</string>
+            </dict>
+            <key>hero_jigou_ultimate_ice_shards_3_0015.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{142,688},{62,72}}</string>
+                <key>offset</key>
+                <string>{0,6}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{17,8},{62,72}}</string>
+                <key>sourceSize</key>
+                <string>{96,100}</string>
+            </dict>
+            <key>hero_jigou_ultimate_ice_shards_3_0016.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{136,1044},{68,66}}</string>
+                <key>offset</key>
+                <string>{0,3}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{14,14},{68,66}}</string>
+                <key>sourceSize</key>
+                <string>{96,100}</string>
+            </dict>
+            <key>hero_jigou_ultimate_ice_shards_3_0017.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{136,976},{68,66}}</string>
+                <key>offset</key>
+                <string>{0,3}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{14,14},{68,66}}</string>
+                <key>sourceSize</key>
+                <string>{96,100}</string>
+            </dict>
+            <key>hero_jigou_ultimate_ice_shards_3_0018.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{136,908},{68,66}}</string>
+                <key>offset</key>
+                <string>{0,-3}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{14,20},{68,66}}</string>
+                <key>sourceSize</key>
+                <string>{96,100}</string>
+            </dict>
+            <key>hero_jigou_ultimate_ice_shards_3_0019.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{136,840},{68,66}}</string>
+                <key>offset</key>
+                <string>{0,-3}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{14,20},{68,66}}</string>
+                <key>sourceSize</key>
+                <string>{96,100}</string>
+            </dict>
+            <key>hero_jigou_ultimate_ice_shards_3_0020.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{146,1568},{58,60}}</string>
+                <key>offset</key>
+                <string>{-1,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{18,20},{58,60}}</string>
+                <key>sourceSize</key>
+                <string>{96,100}</string>
+            </dict>
+            <key>hero_jigou_ultimate_ice_shards_3_0021.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{146,1506},{58,60}}</string>
+                <key>offset</key>
+                <string>{-1,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{18,20},{58,60}}</string>
+                <key>sourceSize</key>
+                <string>{96,100}</string>
+            </dict>
+            <key>hero_jigou_ultimate_ice_shards_3_0022.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{146,1506},{58,60}}</string>
+                <key>offset</key>
+                <string>{-1,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{18,20},{58,60}}</string>
+                <key>sourceSize</key>
+                <string>{96,100}</string>
+            </dict>
+            <key>hero_jigou_ultimate_ice_shards_3_0023.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{146,1506},{58,60}}</string>
+                <key>offset</key>
+                <string>{-1,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{18,20},{58,60}}</string>
+                <key>sourceSize</key>
+                <string>{96,100}</string>
+            </dict>
+            <key>hero_jigou_ultimate_ice_shards_3_0024.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{148,302},{56,56}}</string>
+                <key>offset</key>
+                <string>{-2,-3}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{18,25},{56,56}}</string>
+                <key>sourceSize</key>
+                <string>{96,100}</string>
+            </dict>
+            <key>hero_jigou_ultimate_ice_shards_3_0025.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{148,302},{56,56}}</string>
+                <key>offset</key>
+                <string>{-2,-3}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{18,25},{56,56}}</string>
+                <key>sourceSize</key>
+                <string>{96,100}</string>
+            </dict>
+            <key>hero_jigou_ultimate_ice_shards_3_0026.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{154,254},{50,46}}</string>
+                <key>offset</key>
+                <string>{-3,-6}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{20,33},{50,46}}</string>
+                <key>sourceSize</key>
+                <string>{96,100}</string>
+            </dict>
+            <key>hero_jigou_ultimate_ice_shards_3_0027.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{154,254},{50,46}}</string>
+                <key>offset</key>
+                <string>{-3,-6}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{20,33},{50,46}}</string>
+                <key>sourceSize</key>
+                <string>{96,100}</string>
+            </dict>
+            <key>hero_jigou_ultimate_ice_shards_3_0028.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{146,1892},{40,30}}</string>
+                <key>offset</key>
+                <string>{-3,-13}</string>
+                <key>rotated</key>
+                <true/>
+                <key>sourceColorRect</key>
+                <string>{{25,48},{40,30}}</string>
+                <key>sourceSize</key>
+                <string>{96,100}</string>
+            </dict>
+            <key>hero_jigou_ultimate_ice_shards_3_0029.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{146,1892},{40,30}}</string>
+                <key>offset</key>
+                <string>{-3,-13}</string>
+                <key>rotated</key>
+                <true/>
+                <key>sourceColorRect</key>
+                <string>{{25,48},{40,30}}</string>
+                <key>sourceSize</key>
+                <string>{96,100}</string>
+            </dict>
+            <key>hero_jigou_ultimate_ice_shards_3_0030.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{196,1372},{26,8}}</string>
+                <key>offset</key>
+                <string>{-3,-21}</string>
+                <key>rotated</key>
+                <true/>
+                <key>sourceColorRect</key>
+                <string>{{32,67},{26,8}}</string>
+                <key>sourceSize</key>
+                <string>{96,100}</string>
+            </dict>
+            <key>hero_jigou_ultimate_ice_shards_3_0031.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{196,1372},{26,8}}</string>
+                <key>offset</key>
+                <string>{-3,-21}</string>
+                <key>rotated</key>
+                <true/>
+                <key>sourceColorRect</key>
+                <string>{{32,67},{26,8}}</string>
+                <key>sourceSize</key>
+                <string>{96,100}</string>
+            </dict>
+            <key>hero_jigou_ultimate_ice_shards_3_0032.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{76,214},{1,1}}</string>
+                <key>offset</key>
+                <string>{-47.5,49.5}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{1,1}}</string>
+                <key>sourceSize</key>
+                <string>{96,100}</string>
+            </dict>
+            <key>hero_jigou_ultimate_ice_shards_4_0001.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{146,1630},{58,20}}</string>
+                <key>offset</key>
+                <string>{12,-30}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{31,70},{58,20}}</string>
+                <key>sourceSize</key>
+                <string>{96,100}</string>
+            </dict>
+            <key>hero_jigou_ultimate_ice_shards_4_0002.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{168,1762},{68,26}}</string>
+                <key>offset</key>
+                <string>{7,-33}</string>
+                <key>rotated</key>
+                <true/>
+                <key>sourceColorRect</key>
+                <string>{{21,70},{68,26}}</string>
+                <key>sourceSize</key>
+                <string>{96,100}</string>
+            </dict>
+            <key>hero_jigou_ultimate_ice_shards_4_0003.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{136,1112},{68,38}}</string>
+                <key>offset</key>
+                <string>{7,-29}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{21,60},{68,38}}</string>
+                <key>sourceSize</key>
+                <string>{96,100}</string>
+            </dict>
+            <key>hero_jigou_ultimate_ice_shards_4_0004.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{126,1766},{70,40}}</string>
+                <key>offset</key>
+                <string>{6,-30}</string>
+                <key>rotated</key>
+                <true/>
+                <key>sourceColorRect</key>
+                <string>{{19,60},{70,40}}</string>
+                <key>sourceSize</key>
+                <string>{96,100}</string>
+            </dict>
+            <key>hero_jigou_ultimate_ice_shards_4_0005.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{80,1766},{78,44}}</string>
+                <key>offset</key>
+                <string>{2,-28}</string>
+                <key>rotated</key>
+                <true/>
+                <key>sourceColorRect</key>
+                <string>{{11,56},{78,44}}</string>
+                <key>sourceSize</key>
+                <string>{96,100}</string>
+            </dict>
+            <key>hero_jigou_ultimate_ice_shards_4_0006.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{80,1686},{78,44}}</string>
+                <key>offset</key>
+                <string>{2,-28}</string>
+                <key>rotated</key>
+                <true/>
+                <key>sourceColorRect</key>
+                <string>{{11,56},{78,44}}</string>
+                <key>sourceSize</key>
+                <string>{96,100}</string>
+            </dict>
+            <key>hero_jigou_ultimate_ice_shards_4_0007.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{126,1326},{78,44}}</string>
+                <key>offset</key>
+                <string>{2,-22}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{11,50},{78,44}}</string>
+                <key>sourceSize</key>
+                <string>{96,100}</string>
+            </dict>
+            <key>hero_jigou_ultimate_ice_shards_4_0008.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{80,1292},{78,44}}</string>
+                <key>offset</key>
+                <string>{2,-22}</string>
+                <key>rotated</key>
+                <true/>
+                <key>sourceColorRect</key>
+                <string>{{11,50},{78,44}}</string>
+                <key>sourceSize</key>
+                <string>{96,100}</string>
+            </dict>
+            <key>hero_jigou_ultimate_ice_shards_4_0009.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{154,2},{78,50}}</string>
+                <key>offset</key>
+                <string>{2,-19}</string>
+                <key>rotated</key>
+                <true/>
+                <key>sourceColorRect</key>
+                <string>{{11,44},{78,50}}</string>
+                <key>sourceSize</key>
+                <string>{96,100}</string>
+            </dict>
+            <key>hero_jigou_ultimate_ice_shards_4_0010.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{154,2},{78,50}}</string>
+                <key>offset</key>
+                <string>{2,-19}</string>
+                <key>rotated</key>
+                <true/>
+                <key>sourceColorRect</key>
+                <string>{{11,44},{78,50}}</string>
+                <key>sourceSize</key>
+                <string>{96,100}</string>
+            </dict>
+            <key>hero_jigou_ultimate_ice_shards_4_0011.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{80,840},{78,54}}</string>
+                <key>offset</key>
+                <string>{2,-17}</string>
+                <key>rotated</key>
+                <true/>
+                <key>sourceColorRect</key>
+                <string>{{11,40},{78,54}}</string>
+                <key>sourceSize</key>
+                <string>{96,100}</string>
+            </dict>
+            <key>hero_jigou_ultimate_ice_shards_4_0012.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{80,840},{78,54}}</string>
+                <key>offset</key>
+                <string>{2,-17}</string>
+                <key>rotated</key>
+                <true/>
+                <key>sourceColorRect</key>
+                <string>{{11,40},{78,54}}</string>
+                <key>sourceSize</key>
+                <string>{96,100}</string>
+            </dict>
+            <key>hero_jigou_ultimate_ice_shards_4_0013.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{80,1212},{78,52}}</string>
+                <key>offset</key>
+                <string>{2,-18}</string>
+                <key>rotated</key>
+                <true/>
+                <key>sourceColorRect</key>
+                <string>{{11,42},{78,52}}</string>
+                <key>sourceSize</key>
+                <string>{96,100}</string>
+            </dict>
+            <key>hero_jigou_ultimate_ice_shards_4_0014.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{80,1212},{78,52}}</string>
+                <key>offset</key>
+                <string>{2,-18}</string>
+                <key>rotated</key>
+                <true/>
+                <key>sourceColorRect</key>
+                <string>{{11,42},{78,52}}</string>
+                <key>sourceSize</key>
+                <string>{96,100}</string>
+            </dict>
+            <key>hero_jigou_ultimate_ice_shards_4_0015.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{80,1212},{78,52}}</string>
+                <key>offset</key>
+                <string>{2,-18}</string>
+                <key>rotated</key>
+                <true/>
+                <key>sourceColorRect</key>
+                <string>{{11,42},{78,52}}</string>
+                <key>sourceSize</key>
+                <string>{96,100}</string>
+            </dict>
+            <key>hero_jigou_ultimate_ice_shards_4_0016.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{154,2},{78,50}}</string>
+                <key>offset</key>
+                <string>{2,-19}</string>
+                <key>rotated</key>
+                <true/>
+                <key>sourceColorRect</key>
+                <string>{{11,44},{78,50}}</string>
+                <key>sourceSize</key>
+                <string>{96,100}</string>
+            </dict>
+            <key>hero_jigou_ultimate_ice_shards_4_0017.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{154,2},{78,50}}</string>
+                <key>offset</key>
+                <string>{2,-19}</string>
+                <key>rotated</key>
+                <true/>
+                <key>sourceColorRect</key>
+                <string>{{11,44},{78,50}}</string>
+                <key>sourceSize</key>
+                <string>{96,100}</string>
+            </dict>
+            <key>hero_jigou_ultimate_ice_shards_4_0018.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{160,360},{78,44}}</string>
+                <key>offset</key>
+                <string>{2,-22}</string>
+                <key>rotated</key>
+                <true/>
+                <key>sourceColorRect</key>
+                <string>{{11,50},{78,44}}</string>
+                <key>sourceSize</key>
+                <string>{96,100}</string>
+            </dict>
+            <key>hero_jigou_ultimate_ice_shards_4_0019.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{160,360},{78,44}}</string>
+                <key>offset</key>
+                <string>{2,-22}</string>
+                <key>rotated</key>
+                <true/>
+                <key>sourceColorRect</key>
+                <string>{{11,50},{78,44}}</string>
+                <key>sourceSize</key>
+                <string>{96,100}</string>
+            </dict>
+            <key>hero_jigou_ultimate_ice_shards_4_0020.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{80,1846},{78,38}}</string>
+                <key>offset</key>
+                <string>{2,-25}</string>
+                <key>rotated</key>
+                <true/>
+                <key>sourceColorRect</key>
+                <string>{{11,56},{78,38}}</string>
+                <key>sourceSize</key>
+                <string>{96,100}</string>
+            </dict>
+            <key>hero_jigou_ultimate_ice_shards_4_0021.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{80,1846},{78,38}}</string>
+                <key>offset</key>
+                <string>{2,-25}</string>
+                <key>rotated</key>
+                <true/>
+                <key>sourceColorRect</key>
+                <string>{{11,56},{78,38}}</string>
+                <key>sourceSize</key>
+                <string>{96,100}</string>
+            </dict>
+            <key>hero_jigou_ultimate_ice_shards_4_0022.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{126,1686},{78,34}}</string>
+                <key>offset</key>
+                <string>{2,-27}</string>
+                <key>rotated</key>
+                <true/>
+                <key>sourceColorRect</key>
+                <string>{{11,60},{78,34}}</string>
+                <key>sourceSize</key>
+                <string>{96,100}</string>
+            </dict>
+            <key>hero_jigou_ultimate_ice_shards_4_0023.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{126,1686},{78,34}}</string>
+                <key>offset</key>
+                <string>{2,-27}</string>
+                <key>rotated</key>
+                <true/>
+                <key>sourceColorRect</key>
+                <string>{{11,60},{78,34}}</string>
+                <key>sourceSize</key>
+                <string>{96,100}</string>
+            </dict>
+            <key>hero_jigou_ultimate_ice_shards_4_0024.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{146,1630},{58,20}}</string>
+                <key>offset</key>
+                <string>{12,-30}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{31,70},{58,20}}</string>
+                <key>sourceSize</key>
+                <string>{96,100}</string>
+            </dict>
+            <key>hero_jigou_ultimate_ice_shards_4_0025.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{146,1630},{58,20}}</string>
+                <key>offset</key>
+                <string>{12,-30}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{31,70},{58,20}}</string>
+                <key>sourceSize</key>
+                <string>{96,100}</string>
+            </dict>
+            <key>hero_jigou_ultimate_ice_shards_4_0026.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{80,1978},{42,16}}</string>
+                <key>offset</key>
+                <string>{9,-29}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{36,71},{42,16}}</string>
+                <key>sourceSize</key>
+                <string>{96,100}</string>
+            </dict>
+            <key>hero_jigou_ultimate_ice_shards_4_0027.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{76,214},{1,1}}</string>
                 <key>offset</key>
                 <string>{-47.5,49.5}</string>
                 <key>rotated</key>
@@ -701,9 +1728,9 @@
             <key>realTextureFileName</key>
             <string>ice_shards.png</string>
             <key>size</key>
-            <string>{256,908}</string>
+            <string>{206,1997}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:c6660f772d2b9d911135daf074f81189:1/1$</string>
+            <string>$TexturePacker:SmartUpdate:2c7ae5572278d66a346ac742a004ddff:1/1$</string>
             <key>textureFileName</key>
             <string>ice_shards.png</string>
         </dict>

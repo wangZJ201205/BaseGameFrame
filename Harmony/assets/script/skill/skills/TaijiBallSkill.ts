@@ -86,8 +86,4 @@ export default class TaijiBallSkill extends SkillParent {
             }
         }
     }
-
-
-
-    
 }
