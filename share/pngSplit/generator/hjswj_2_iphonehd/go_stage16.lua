@@ -1,0 +1,17 @@
+return {
+["Stage16_0002"]={size={1672,1014}, trim={572,429,881,419}, a_name="go_stage16-1.png", a_size={2048,2048}, f_quad={392,6,219,166}, alias={}, },
+["Stage16_0003"]={size={1672,1014}, trim={817,476,475,265}, a_name="go_stage16-1.png", a_size={2048,2048}, f_quad={6,6,380,273}, alias={}, },
+["stage16_pathExplosion_0001"]={size={142,182}, trim={46,105,44,11}, a_name="go_stage16-1.png", a_size={2048,2048}, f_quad={555,178,52,66}, alias={"stage16_pathExplosion_0002",}, },
+["stage16_pathExplosion_0003"]={size={142,182}, trim={22,74,22,10}, a_name="go_stage16-1.png", a_size={2048,2048}, f_quad={392,178,98,98}, alias={"stage16_pathExplosion_0004",}, },
+["stage16_pathExplosion_0005"]={size={142,182}, trim={14,36,9,8}, a_name="go_stage16-1.png", a_size={2048,2048}, f_quad={1531,6,119,138}, alias={"stage16_pathExplosion_0006",}, },
+["stage16_pathExplosion_0007"]={size={142,182}, trim={11,14,8,8}, a_name="go_stage16-1.png", a_size={2048,2048}, f_quad={1020,6,123,160}, alias={"stage16_pathExplosion_0008",}, },
+["stage16_pathExplosion_0009"]={size={142,182}, trim={15,15,5,9}, a_name="go_stage16-1.png", a_size={2048,2048}, f_quad={1277,6,122,158}, alias={"stage16_pathExplosion_0010",}, },
+["stage16_pathExplosion_0011"]={size={142,182}, trim={13,6,7,9}, a_name="go_stage16-1.png", a_size={2048,2048}, f_quad={1149,6,122,167}, alias={"stage16_pathExplosion_0012",}, },
+["stage16_pathExplosion_0013"]={size={142,182}, trim={14,1,8,1}, a_name="go_stage16-1.png", a_size={2048,2048}, f_quad={1405,6,120,180}, alias={"stage16_pathExplosion_0014",}, },
+["stage16_pathExplosion_0015"]={size={142,182}, trim={11,1,8,1}, a_name="go_stage16-1.png", a_size={2048,2048}, f_quad={891,6,123,180}, alias={"stage16_pathExplosion_0016",}, },
+["stage16_pathExplosion_0017"]={size={142,182}, trim={5,14,8,4}, a_name="go_stage16-1.png", a_size={2048,2048}, f_quad={756,6,129,164}, alias={"stage16_pathExplosion_0018",}, },
+["stage16_pathExplosion_0019"]={size={142,182}, trim={1,4,8,4}, a_name="go_stage16-1.png", a_size={2048,2048}, f_quad={617,6,133,174}, alias={"stage16_pathExplosion_0020",}, },
+["stage16_pathExplosion_0021"]={size={142,182}, trim={16,44,8,5}, a_name="go_stage16-1.png", a_size={2048,2048}, f_quad={1656,6,118,133}, alias={"stage16_pathExplosion_0022",}, },
+["stage16_pathExplosion_0023"]={size={142,182}, trim={16,42,11,6}, a_name="go_stage16-1.png", a_size={2048,2048}, f_quad={1656,145,115,134}, alias={"stage16_pathExplosion_0024",}, },
+["stage16_pathExplosion_0025"]={size={142,182}, trim={51,79,38,6}, a_name="go_stage16-1.png", a_size={2048,2048}, f_quad={496,178,53,97}, alias={"stage16_pathExplosion_0026",}, },
+}
