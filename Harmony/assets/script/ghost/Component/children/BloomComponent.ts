@@ -17,6 +17,7 @@ export default class BloomComponent extends ComponentParent {
     private _green_bar:cc.Sprite;
     private _red_bar:cc.Sprite;
     private _maxBloom : number;
+    private _height : number = 50;
     onLoad (host) 
     {
         this._state = ClientDef.COMP_STATE_LOAD;
@@ -28,6 +29,15 @@ export default class BloomComponent extends ComponentParent {
     start () {
         super.start();
         
+        var entityInfo = this._host.getEntityDict();
+        if( entityInfo.collision == 1 )
+        {
+            var size:string = entityInfo.collRect;
+            var collSize:string[] = size.split(",");
+            this._height = Number(collSize[1]);
+            this._height += Number(collSize[2]);
+        }
+
         const loadPath = "headEffect/headEffect" ;
         LoadMgr.Instance.LoadAsset(loadPath,(asset)=>
             {
@@ -75,7 +85,7 @@ export default class BloomComponent extends ComponentParent {
 
     update (dt) 
     {        
-        this._node.setPosition(-10 + this._host.position.x ,50 + this._host.position.y,0);
+        this._node.setPosition(-10 + this._host.position.x, this._height + this._host.position.y, 0);
 
         if(this._curBloom <= 0 && this._host.getClientProp(ClientDef.ENTITY_PROP_CUR_BLOOM) > 0) //判断复活
         {

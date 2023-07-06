@@ -17,9 +17,10 @@ function find_lua_files(directory)
     return files
 end
 
-local directory = "F:/freeGame/hjswj_2_iphonehd"
+local directory = "F:/freeGame/BaseGameFrame/share/pngSplit/generator/iphonehd"
+print(">>>1")
 local lua_files = find_lua_files(directory)
-
+print(">>>2")
 for i, file in ipairs(lua_files) do
     
     local filename = file:match("[^/\\]+$")
@@ -28,7 +29,7 @@ for i, file in ipairs(lua_files) do
     print(file,filename,newFilename)
     data = dofile(file)
 
-    local of_file = io.open("..\\output2\\"..newFilename..".py", "w")
+    local of_file = io.open("..\\output3\\"..newFilename..".py", "w")
     output_table_json(data, of_file, nil, true, weight_tbl,true,"bullet")
 end
 

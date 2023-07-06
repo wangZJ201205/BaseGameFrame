@@ -102,6 +102,7 @@ export default class ClientDef{
     public static readonly SKILL_TYPE_TIMEBOMB : number     = 114; //定时炸弹
     public static readonly SKILL_TYPE_LASER : number        = 115; //激光
     public static readonly SKILL_TYPE_ICE_PITON : number        = 116; //冰锥
+    public static readonly SKILL_TYPE_PROPLE_STROM : number     = 117; //紫色风暴
 
     public static readonly SKILL_TYPE_COMMON : number       = 200; //普通技能
     public static readonly SKILL_TYPE_SUICIDE : number       = 201; //自杀技能
@@ -133,6 +134,7 @@ export default class ClientDef{
     public static readonly BULLET_SCRIPT_TIMEBOMB5: number  = 24; //定时炸弹5
     public static readonly BULLET_SCRIPT_LOSER: number  = 25; //激光子弹
     public static readonly BULLET_SCRIPT_CTEATE_AND_PLAY_NEST: number  = 26; //创建就播放下一阶段
+    public static readonly BULLET_SCRIPT_ANGLE_MOVE_NO_ANGLE: number  = 27; //根据angle运动但不选择
 
 
     //子弹属性

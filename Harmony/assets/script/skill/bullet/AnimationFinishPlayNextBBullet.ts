@@ -22,6 +22,7 @@ export default class  AnimationFinishPlayNextBBullet extends BulletParent {
         if(!bullet)return;
         bullet.getNode().active = true;
         bullet.getNode().position = this.getNode().position;
+        bullet.setProp(ClientDef.BULLET_PROP_ANGLE,this.getProp(ClientDef.BULLET_PROP_ANGLE));
         bullet.restart();
     }
 

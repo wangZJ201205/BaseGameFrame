@@ -57,16 +57,24 @@ export default class GPMonsterTestCallMonster {
         if( liveCnt >= GameData.Monster_Show_Amount )return;
 
         var monsters = []; //随机数组
-        monsters.push(200002);
-        monsters.push(200003);
-        monsters.push(200004);
-        monsters.push(200005);
-        monsters.push(200006);
-        monsters.push(200007);
-        monsters.push(200008);
-        monsters.push(200009);
-        monsters.push(200010);
-        monsters.push(200011);
+        // monsters.push(200002);
+        // monsters.push(200003);
+        // monsters.push(200004);
+        // monsters.push(200005);
+        // monsters.push(200006);
+        // monsters.push(200007);
+        // monsters.push(200008);
+        // monsters.push(200009);
+        // monsters.push(200010);
+        // monsters.push(200011);
+        // monsters.push(200013);
+        // monsters.push(200014);
+        // monsters.push(200015);
+        // monsters.push(200016);
+        // monsters.push(200017);
+        // monsters.push(200018);
+        // monsters.push(200019);
+        monsters.push(200020);
 
         var id = Math.random()*monsters.length ;
         id = monsters[ Math.floor(id) ];

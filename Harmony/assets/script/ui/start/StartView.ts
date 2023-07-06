@@ -28,7 +28,7 @@ export default class StartView extends UIParent {
     {
         super.start();
 
-        LoadMgr.Instance.LoadAsset("big/map_levelselect_backimages_stage_0005",(asset)=>{
+        LoadMgr.Instance.LoadAsset("big/loading_bg_5",(asset)=>{
             this.backGround.spriteFrame = new cc.SpriteFrame(asset);
         });
 
