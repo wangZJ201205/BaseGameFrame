@@ -101,7 +101,7 @@ if __name__ == '__main__':
             # 例如，打印文件内容
             print(">>>>>>>>>>filename>"+file)
             file_content = f.read()
-            data = eval(file_content)
+            data = eval(file_content) #将字符串转成py语言
             for key in data.keys():
                 print(key)
                 gen_png_from_plist(key, data[key],dirName,outPath)
