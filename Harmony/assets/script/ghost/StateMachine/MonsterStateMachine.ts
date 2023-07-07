@@ -7,6 +7,7 @@ import EntityStateMachine from "./EntityStateMachine";
 import EntityAttack from "./states/EntityAttack";
 import EntityDie from "./states/EntityDie";
 import EntityIdle from "./states/EntityIdle";
+import EntityShapeShift from "./states/EntityShapeShift";
 import EntityWalk from "./states/EntityWalk";
 const {ccclass, property} = cc._decorator;
 
@@ -32,6 +33,8 @@ export default class MonsterStateMachine extends EntityStateMachine {
         else if(state == ClientDef.ENTITY_STATE_WALK){return new EntityWalk(); }
         else if(state == ClientDef.ENTITY_STATE_DIE){return new EntityDie(); }
         else if(state == ClientDef.ENTITY_STATE_ATTACK){return new EntityAttack(); }
+        else if(state == ClientDef.ENTITY_STATE_SHAPESHIFT){return new EntityShapeShift(); }
+        else if(state == ClientDef.ENTITY_STATE_SHAPESHIFT_WALK){return new EntityWalk(); }
         return null;
     }
     

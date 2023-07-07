@@ -49,6 +49,8 @@ export default class ClientDef{
     public static readonly ENTITY_STATE_WALK: number    = 1; //移动
     public static readonly ENTITY_STATE_DIE: number     = 2; //死亡
     public static readonly ENTITY_STATE_ATTACK: number     = 3; //攻击
+    public static readonly ENTITY_STATE_SHAPESHIFT: number     = 4; //变身
+    public static readonly ENTITY_STATE_SHAPESHIFT_WALK: number     = 5; //变身移动
 
     //对象运行状态
     public static readonly ENTITY_ACTIVE_STATE_INIT : number = 1;//初始化
@@ -84,6 +86,7 @@ export default class ClientDef{
     public static readonly ENTITY_PROP_DEGREE : number = 16; //当前角度
     public static readonly ENTITY_PROP_CUR_BLOOM : number = 17; //当前血量
     public static readonly ENTITY_PROP_STATE : number = 18; //当前状态
+    public static readonly ENTITY_PROP_STATE_SHAPESHIFT : number = 19; //变身状态
 
     //技能类型
     public static readonly SKILL_TYPE_FIREBALL: number      = 101; //火球

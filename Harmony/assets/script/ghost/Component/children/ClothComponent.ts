@@ -20,7 +20,7 @@ import ComponentParent from "../ComponentParent";
 const {ccclass, property} = cc._decorator;
 
 declare var STATE_NAME : string[];
-STATE_NAME=["idle","walk","die"];
+STATE_NAME=["idle","walk","die","attack","shapeshift","shapeshift_walk"];
 
 //动画状态
 enum ANIMATION_STATE {
@@ -77,9 +77,16 @@ export default class ClothComponent extends ComponentParent {
     {
         var anim = this._animation;
         var clips = anim.getClips();
-        var curStateClip = clips[this._curState];
-        var paths = curStateClip.curveData.paths;
-        return Object.keys(paths).length
+        let clipname = STATE_NAME[this._curState];
+        for (let index = 0; index < clips.length; index++) {
+            const clip = clips[index];
+            if(clip.name == clipname)
+            {
+                var paths = clip.curveData.paths;
+                return Object.keys(paths).length
+            }
+        }
+        return 0;
     }
 
     changeDir()
@@ -139,10 +146,10 @@ export default class ClothComponent extends ComponentParent {
         this._curDir = dir;
         
         let anim = this._animation;
-        let curClip = anim.getClips()[this._curState];
+        let clipname = STATE_NAME[this._curState];
         anim.pause();
-        anim.resume(curClip.name);
-        anim.play(curClip.name);
+        anim.resume(clipname);
+        anim.play(clipname);
         anim.on('finished',  this.onFinished,    this);
         for (let index = 1; index <= this._animation.node.childrenCount; index++) 
         {

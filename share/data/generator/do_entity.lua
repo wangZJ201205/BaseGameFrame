@@ -38,6 +38,8 @@ function handle_entity(o)
 	d.moveSpeed = tonumber(o.j)
 	d.moveType = MoveType[o.k]
 	d.boss = tonumber(o.l) or 0
+	d.sceneid = tonumber(o.m) or 0
+	d.shapeshift = tonumber(o.n) or 0
 	gdentity[tostring(d.id)] = d
 end
 

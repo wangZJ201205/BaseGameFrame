@@ -31,6 +31,7 @@ function handle_gene(o)
 	d.datau = tonumber(o.h)
 	d.icon = o.i 
 	d.desc = o.j
+	d.removeAfterDead = tonumber(o.k)
 	gdgene[tostring(d.id)] = d
 end
 

@@ -20,6 +20,7 @@ export default class GeneParent
     protected _datau : number;
     protected _during : number;
     protected _state : number;
+    protected _noCd : boolean;
 
     onLoad () 
     {
@@ -34,6 +35,7 @@ export default class GeneParent
         this._datau = geneInfo.datau;
 
         this._during = cc.director.getTotalTime() + geneInfo.time;
+        this._noCd = geneInfo.time < 0 ? true : false;
         this._state = ClientDef.GENE_STATE_RUN;
     }
 
@@ -44,6 +46,11 @@ export default class GeneParent
 
     update (dt) 
     {
+        if(this._noCd)
+        {
+            return;
+        }
+        
         let delta = cc.director.getTotalTime() - this._during;
         if(delta >= 0)
         {

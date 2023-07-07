@@ -5,6 +5,7 @@
 import ClientDef from "../../common/ClientDef";
 import GameData from "../../common/GameData";
 import DictMgr from "../../manager/DictMgr";
+import Entity from "../Entity";
 import GeneParent from "./GeneParent";
 import SpeedGene from "./children/SpeedGene";
 
@@ -13,12 +14,13 @@ const {ccclass, property} = cc._decorator;
 @ccclass
 export default class GeneMgr 
 {
-
+    _host:Entity;
     private _genes : GeneParent[];
     private _typeClass : {};
 
     onLoad (host) 
     {
+        this._host = host;
         this._genes = [];
         
         this._typeClass = {};
@@ -64,12 +66,26 @@ export default class GeneMgr
         this._genes = [];
     }
 
+    removeGeneAfterDead()
+    {
+        var genedata = DictMgr.Instance.getDictByName("gene_data");
+        this._genes = this._genes.filter((gene) => {
+            let info = genedata[ gene.getStaticId() ];
+            if(info.removeAfterDead == 1)
+            {
+                gene.remove();
+                return false;
+            }
+            return true;
+        });
+    }
+
     getGenes()
     {
         return this._genes;
     }
 
-    addGene(geneid, host)
+    addGene(geneid)
     {
 
         var geneInfo = DictMgr.Instance.getDictByName("gene_data")[geneid];
@@ -111,7 +127,7 @@ export default class GeneMgr
         var gene = new (this._typeClass[geneType])();
         gene.onLoad();
         gene.setStaticId(geneid);
-        gene.setHost(host);
+        gene.setHost(this._host);
         gene.start();
         this._genes.push(gene);
     }

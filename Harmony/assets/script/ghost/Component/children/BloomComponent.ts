@@ -103,6 +103,11 @@ export default class BloomComponent extends ComponentParent {
             return;
         }
 
+        if(this.getHost().getClientProp(ClientDef.ENTITY_PROP_STATE_SHAPESHIFT) == 1)
+        {
+            return;
+        }
+
         //伤害弹跳
         var showDamageValue = this._curBloom > damageValue ? damageValue : this._curBloom;
         HeadEffectMgr.Instance.addDamageTips(1,showDamageValue,this._host.getPosition());
@@ -121,13 +126,39 @@ export default class BloomComponent extends ComponentParent {
         //进入死亡状态
         if( this._curBloom <= 0 )
         {
-            this._host.addEntityState(ClientDef.ENTITY_STATE_DIE);
-            this._host.refreshEntityState();
-            this._node.active = false;
+            this.checkShapeShift();
         }
         else
         {
             this.shakeBody();
+        }
+    }
+
+    //检测变身状态
+    checkShapeShift()
+    {
+        var entityInfo = this.getHost().getEntityDict();
+        let shapeShift = entityInfo["shapeshift"];
+        if(shapeShift > 0)
+        {
+            if(this.getHost().getClientProp(ClientDef.ENTITY_PROP_STATE_SHAPESHIFT) == 2)
+            {
+                this._host.addEntityState(ClientDef.ENTITY_STATE_DIE);
+                this._host.refreshEntityState();
+                this._node.active = false;
+            }
+            else
+            {
+                this.restart();
+                this._host.addEntityState(ClientDef.ENTITY_STATE_SHAPESHIFT);
+                this._host.refreshEntityState();
+            }
+        }
+        else
+        {
+            this._host.addEntityState(ClientDef.ENTITY_STATE_DIE);
+            this._host.refreshEntityState();
+            this._node.active = false;
         }
     }
 

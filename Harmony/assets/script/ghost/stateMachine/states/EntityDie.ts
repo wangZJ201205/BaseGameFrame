@@ -18,6 +18,7 @@ export default class EntityDie extends StateParent {
     {
         this._delay = cc.director.getTotalTime();
         super.start();
+        this._host.getGene().removeGeneAfterDead();
     }
 
     update (dt) 
