@@ -1,6 +1,6 @@
 {
 	"1001": {"id": 1001,"name": "速度","datau": 1,"datax": 1,"datay": 1,"dataz": 1,"desc": "速度","icon": "skill_zhanshenchongzhuang","removeAfterDead": 1,"time": 30000,"type": 1},
-	"1002": {"id": 1002,"name": "变身","datau": 0,"datax": 10,"datay": 0,"dataz": 0,"desc": "变身","icon": "skill_zhanshenchongzhuang","removeAfterDead": 1,"time": -1,"type": 1},
+	"1002": {"id": 1002,"name": "变身","datau": 0,"datax": 10,"datay": 0,"dataz": 0,"desc": "变身","icon": "skill_zhanshenchongzhuang","removeAfterDead": 1,"time": -1,"type": 2},
 	"1003": {"id": 1003,"name": "速度","datau": 1,"datax": 1,"datay": 1,"dataz": 1,"desc": "速度","icon": "skill_zhanshenchongzhuang","removeAfterDead": 1,"time": 30000,"type": 1},
 	"1004": {"id": 1004,"name": "速度","datau": 1,"datax": 1,"datay": 1,"dataz": 1,"desc": "速度","icon": "skill_zhanshenchongzhuang","removeAfterDead": 1,"time": 30000,"type": 1},
 	"1005": {"id": 1005,"name": "速度","datau": 1,"datax": 1,"datay": 1,"dataz": 1,"desc": "速度","icon": "skill_zhanshenchongzhuang","removeAfterDead": 1,"time": 30000,"type": 1}

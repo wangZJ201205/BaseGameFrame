@@ -7,418 +7,418 @@
             <key>hero_asra_0001.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{332,62},{64,58}}</string>
+                <string>{{2,240},{32,31}}</string>
                 <key>offset</key>
-                <string>{0,0}</string>
+                <string>{-3,-11}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
-                <string>{{2,2},{64,58}}</string>
+                <string>{{47,28},{32,31}}</string>
                 <key>sourceSize</key>
-                <string>{68,62}</string>
+                <string>{132,65}</string>
             </dict>
             <key>hero_asra_0002.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{332,62},{64,58}}</string>
+                <string>{{2,240},{32,31}}</string>
                 <key>offset</key>
-                <string>{0,0}</string>
+                <string>{-3,-11}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
-                <string>{{2,2},{64,58}}</string>
+                <string>{{47,28},{32,31}}</string>
                 <key>sourceSize</key>
-                <string>{68,62}</string>
+                <string>{132,65}</string>
             </dict>
             <key>hero_asra_0003.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{334,2},{64,58}}</string>
+                <string>{{2,206},{32,31}}</string>
                 <key>offset</key>
-                <string>{0,0}</string>
+                <string>{-3,-11}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
-                <string>{{2,2},{64,58}}</string>
+                <string>{{47,28},{32,31}}</string>
                 <key>sourceSize</key>
-                <string>{68,62}</string>
+                <string>{132,65}</string>
             </dict>
             <key>hero_asra_0004.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{334,2},{64,58}}</string>
+                <string>{{2,206},{32,31}}</string>
                 <key>offset</key>
-                <string>{0,0}</string>
+                <string>{-3,-11}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
-                <string>{{2,2},{64,58}}</string>
+                <string>{{47,28},{32,31}}</string>
                 <key>sourceSize</key>
-                <string>{68,62}</string>
+                <string>{132,65}</string>
             </dict>
             <key>hero_asra_0005.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{268,2},{64,58}}</string>
+                <string>{{2,172},{32,31}}</string>
                 <key>offset</key>
-                <string>{0,0}</string>
+                <string>{-3,-11}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
-                <string>{{2,2},{64,58}}</string>
+                <string>{{47,28},{32,31}}</string>
                 <key>sourceSize</key>
-                <string>{68,62}</string>
+                <string>{132,65}</string>
             </dict>
             <key>hero_asra_0006.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{268,2},{64,58}}</string>
+                <string>{{2,172},{32,31}}</string>
                 <key>offset</key>
-                <string>{0,0}</string>
+                <string>{-3,-11}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
-                <string>{{2,2},{64,58}}</string>
+                <string>{{47,28},{32,31}}</string>
                 <key>sourceSize</key>
-                <string>{68,62}</string>
+                <string>{132,65}</string>
             </dict>
             <key>hero_asra_0007.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{266,62},{64,58}}</string>
+                <string>{{2,138},{32,31}}</string>
                 <key>offset</key>
-                <string>{0,0}</string>
+                <string>{-3,-11}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
-                <string>{{2,2},{64,58}}</string>
+                <string>{{47,28},{32,31}}</string>
                 <key>sourceSize</key>
-                <string>{68,62}</string>
+                <string>{132,65}</string>
             </dict>
             <key>hero_asra_0008.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{266,62},{64,58}}</string>
+                <string>{{2,138},{32,31}}</string>
                 <key>offset</key>
-                <string>{0,0}</string>
+                <string>{-3,-11}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
-                <string>{{2,2},{64,58}}</string>
+                <string>{{47,28},{32,31}}</string>
                 <key>sourceSize</key>
-                <string>{68,62}</string>
+                <string>{132,65}</string>
             </dict>
             <key>hero_asra_0009.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{202,2},{64,58}}</string>
+                <string>{{2,104},{32,31}}</string>
                 <key>offset</key>
-                <string>{0,0}</string>
+                <string>{-3,-11}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
-                <string>{{2,2},{64,58}}</string>
+                <string>{{47,28},{32,31}}</string>
                 <key>sourceSize</key>
-                <string>{68,62}</string>
+                <string>{132,65}</string>
             </dict>
             <key>hero_asra_0010.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{202,2},{64,58}}</string>
+                <string>{{2,104},{32,31}}</string>
                 <key>offset</key>
-                <string>{0,0}</string>
+                <string>{-3,-11}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
-                <string>{{2,2},{64,58}}</string>
+                <string>{{47,28},{32,31}}</string>
                 <key>sourceSize</key>
-                <string>{68,62}</string>
+                <string>{132,65}</string>
             </dict>
             <key>hero_asra_0011.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{200,62},{64,58}}</string>
+                <string>{{2,70},{32,31}}</string>
                 <key>offset</key>
-                <string>{0,0}</string>
+                <string>{-3,-11}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
-                <string>{{2,2},{64,58}}</string>
+                <string>{{47,28},{32,31}}</string>
                 <key>sourceSize</key>
-                <string>{68,62}</string>
+                <string>{132,65}</string>
             </dict>
             <key>hero_asra_0012.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{200,62},{64,58}}</string>
+                <string>{{2,70},{32,31}}</string>
                 <key>offset</key>
-                <string>{0,0}</string>
+                <string>{-3,-11}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
-                <string>{{2,2},{64,58}}</string>
+                <string>{{47,28},{32,31}}</string>
                 <key>sourceSize</key>
-                <string>{68,62}</string>
+                <string>{132,65}</string>
             </dict>
             <key>hero_asra_0013.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{68,2},{64,60}}</string>
+                <string>{{2,36},{32,31}}</string>
                 <key>offset</key>
-                <string>{0,0}</string>
+                <string>{-3,-11}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
-                <string>{{2,2},{64,60}}</string>
+                <string>{{47,28},{32,31}}</string>
                 <key>sourceSize</key>
-                <string>{68,64}</string>
+                <string>{132,65}</string>
             </dict>
             <key>hero_asra_0014.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{68,2},{64,60}}</string>
+                <string>{{2,36},{32,31}}</string>
                 <key>offset</key>
-                <string>{0,0}</string>
+                <string>{-3,-11}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
-                <string>{{2,2},{64,60}}</string>
+                <string>{{47,28},{32,31}}</string>
                 <key>sourceSize</key>
-                <string>{68,64}</string>
+                <string>{132,65}</string>
             </dict>
             <key>hero_asra_0015.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{134,62},{64,58}}</string>
+                <string>{{2,344},{32,29}}</string>
                 <key>offset</key>
-                <string>{0,0}</string>
+                <string>{-3,-12}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
-                <string>{{2,2},{64,58}}</string>
+                <string>{{47,30},{32,29}}</string>
                 <key>sourceSize</key>
-                <string>{68,62}</string>
+                <string>{132,65}</string>
             </dict>
             <key>hero_asra_0016.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{134,62},{64,58}}</string>
+                <string>{{2,344},{32,29}}</string>
                 <key>offset</key>
-                <string>{0,0}</string>
+                <string>{-3,-12}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
-                <string>{{2,2},{64,58}}</string>
+                <string>{{47,30},{32,29}}</string>
                 <key>sourceSize</key>
-                <string>{68,62}</string>
+                <string>{132,65}</string>
             </dict>
             <key>hero_asra_0017.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,2},{64,62}}</string>
+                <string>{{2,2},{32,31}}</string>
                 <key>offset</key>
-                <string>{0,0}</string>
+                <string>{-3,-10}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
-                <string>{{2,2},{64,62}}</string>
+                <string>{{47,27},{32,31}}</string>
                 <key>sourceSize</key>
-                <string>{68,66}</string>
+                <string>{132,65}</string>
             </dict>
             <key>hero_asra_0018.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,2},{64,62}}</string>
+                <string>{{2,2},{32,31}}</string>
                 <key>offset</key>
-                <string>{0,0}</string>
+                <string>{-3,-10}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
-                <string>{{2,2},{64,62}}</string>
+                <string>{{47,27},{32,31}}</string>
                 <key>sourceSize</key>
-                <string>{68,66}</string>
+                <string>{132,65}</string>
             </dict>
             <key>hero_asra_0019.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{134,2},{66,58}}</string>
+                <string>{{2,274},{34,29}}</string>
                 <key>offset</key>
-                <string>{0,0}</string>
+                <string>{-3,-8}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
-                <string>{{2,2},{66,58}}</string>
+                <string>{{46,26},{34,29}}</string>
                 <key>sourceSize</key>
-                <string>{70,62}</string>
+                <string>{132,65}</string>
             </dict>
             <key>hero_asra_0020.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{134,2},{66,58}}</string>
+                <string>{{2,274},{34,29}}</string>
                 <key>offset</key>
-                <string>{0,0}</string>
+                <string>{-3,-8}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
-                <string>{{2,2},{66,58}}</string>
+                <string>{{46,26},{34,29}}</string>
                 <key>sourceSize</key>
-                <string>{70,62}</string>
+                <string>{132,65}</string>
             </dict>
             <key>hero_asra_0021.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,66},{64,52}}</string>
+                <string>{{2,378},{34,27}}</string>
                 <key>offset</key>
-                <string>{0,0}</string>
+                <string>{-3,-13}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
-                <string>{{2,2},{64,52}}</string>
+                <string>{{46,32},{34,27}}</string>
                 <key>sourceSize</key>
-                <string>{68,56}</string>
+                <string>{132,65}</string>
             </dict>
             <key>hero_asra_0022.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,66},{64,52}}</string>
+                <string>{{2,378},{34,27}}</string>
                 <key>offset</key>
-                <string>{0,0}</string>
+                <string>{-3,-13}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
-                <string>{{2,2},{64,52}}</string>
+                <string>{{46,32},{34,27}}</string>
                 <key>sourceSize</key>
-                <string>{68,56}</string>
+                <string>{132,65}</string>
             </dict>
             <key>hero_asra_0023.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{68,64},{64,56}}</string>
+                <string>{{2,310},{32,29}}</string>
                 <key>offset</key>
-                <string>{0,0}</string>
+                <string>{-3,-13}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
-                <string>{{2,2},{64,56}}</string>
+                <string>{{47,31},{32,29}}</string>
                 <key>sourceSize</key>
-                <string>{68,60}</string>
+                <string>{132,65}</string>
             </dict>
             <key>hero_asra_0024.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{134,62},{64,58}}</string>
+                <string>{{2,344},{32,29}}</string>
                 <key>offset</key>
-                <string>{0,0}</string>
+                <string>{-3,-12}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
-                <string>{{2,2},{64,58}}</string>
+                <string>{{47,30},{32,29}}</string>
                 <key>sourceSize</key>
-                <string>{68,62}</string>
+                <string>{132,65}</string>
             </dict>
             <key>hero_asra_0025.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{134,62},{64,58}}</string>
+                <string>{{2,344},{32,29}}</string>
                 <key>offset</key>
-                <string>{0,0}</string>
+                <string>{-3,-12}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
-                <string>{{2,2},{64,58}}</string>
+                <string>{{47,30},{32,29}}</string>
                 <key>sourceSize</key>
-                <string>{68,62}</string>
+                <string>{132,65}</string>
             </dict>
             <key>hero_asra_0026.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,2},{64,62}}</string>
+                <string>{{2,2},{32,31}}</string>
                 <key>offset</key>
-                <string>{0,0}</string>
+                <string>{-3,-10}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
-                <string>{{2,2},{64,62}}</string>
+                <string>{{47,27},{32,31}}</string>
                 <key>sourceSize</key>
-                <string>{68,66}</string>
+                <string>{132,65}</string>
             </dict>
             <key>hero_asra_0027.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,2},{64,62}}</string>
+                <string>{{2,2},{32,31}}</string>
                 <key>offset</key>
-                <string>{0,0}</string>
+                <string>{-3,-10}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
-                <string>{{2,2},{64,62}}</string>
+                <string>{{47,27},{32,31}}</string>
                 <key>sourceSize</key>
-                <string>{68,66}</string>
+                <string>{132,65}</string>
             </dict>
             <key>hero_asra_0028.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{134,2},{66,58}}</string>
+                <string>{{2,274},{34,29}}</string>
                 <key>offset</key>
-                <string>{0,0}</string>
+                <string>{-3,-8}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
-                <string>{{2,2},{66,58}}</string>
+                <string>{{46,26},{34,29}}</string>
                 <key>sourceSize</key>
-                <string>{70,62}</string>
+                <string>{132,65}</string>
             </dict>
             <key>hero_asra_0029.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{134,2},{66,58}}</string>
+                <string>{{2,274},{34,29}}</string>
                 <key>offset</key>
-                <string>{0,0}</string>
+                <string>{-3,-8}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
-                <string>{{2,2},{66,58}}</string>
+                <string>{{46,26},{34,29}}</string>
                 <key>sourceSize</key>
-                <string>{70,62}</string>
+                <string>{132,65}</string>
             </dict>
             <key>hero_asra_0030.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,66},{64,52}}</string>
+                <string>{{2,378},{34,27}}</string>
                 <key>offset</key>
-                <string>{0,0}</string>
+                <string>{-3,-13}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
-                <string>{{2,2},{64,52}}</string>
+                <string>{{46,32},{34,27}}</string>
                 <key>sourceSize</key>
-                <string>{68,56}</string>
+                <string>{132,65}</string>
             </dict>
             <key>hero_asra_0031.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,66},{64,52}}</string>
+                <string>{{2,378},{34,27}}</string>
                 <key>offset</key>
-                <string>{0,0}</string>
+                <string>{-3,-13}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
-                <string>{{2,2},{64,52}}</string>
+                <string>{{46,32},{34,27}}</string>
                 <key>sourceSize</key>
-                <string>{68,56}</string>
+                <string>{132,65}</string>
             </dict>
             <key>hero_asra_0032.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{68,64},{64,56}}</string>
+                <string>{{2,310},{32,29}}</string>
                 <key>offset</key>
-                <string>{0,0}</string>
+                <string>{-3,-13}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
-                <string>{{2,2},{64,56}}</string>
+                <string>{{47,31},{32,29}}</string>
                 <key>sourceSize</key>
-                <string>{68,60}</string>
+                <string>{132,65}</string>
             </dict>
         </dict>
         <key>metadata</key>
@@ -428,9 +428,9 @@
             <key>realTextureFileName</key>
             <string>kr4_hero_asra.png</string>
             <key>size</key>
-            <string>{400,122}</string>
+            <string>{35,414}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:c905532f3891d57e6ad4903debd2d7c8:1/1$</string>
+            <string>$TexturePacker:SmartUpdate:6d20ee0828384e29e2df4e4f8bc14fcd:1/1$</string>
             <key>textureFileName</key>
             <string>kr4_hero_asra.png</string>
         </dict>
