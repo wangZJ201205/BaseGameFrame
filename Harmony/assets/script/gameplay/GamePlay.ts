@@ -3,6 +3,7 @@ import EventName from "../common/EventName";
 import GameData from "../common/GameData";
 import UIName from "../common/UIName";
 import Hero from "../ghost/Hero";
+import GameHelp from "../help/GameHelp";
 import DictMgr from "../manager/DictMgr";
 import EventMgr from "../manager/EventMgr";
 import GhostMgr from "../manager/GhostMgr";
@@ -87,6 +88,11 @@ export default class GamePlay {
     
     update () 
     {
+        if(GameHelp.GetGamePauseState())
+        {
+            return;
+        }
+
         if(GameData.Game_Mode == ClientDef.GAME_MODE_NORMAL)
         {
             this._gpMonster.update();
@@ -242,7 +248,7 @@ export default class GamePlay {
 
         //显示场景
         var sceneInfo = DictMgr.Instance.getDictByName("map_data");
-        LoadMgr.Instance.LoadAsset(sceneInfo[sceneid].path,(asset)=>{
+        LoadMgr.Instance.LoadAssetWithType(sceneInfo[sceneid].path,cc.TiledMapAsset,(asset)=>{
             for (let index = 0; index < 4; index++) {
                 var node:cc.Node = new cc.Node();
                 this.layer.addChild(node);

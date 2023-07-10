@@ -2,7 +2,7 @@
 	"100001": {
 		"id": 100001,
 		"name": "暗夜精灵",
-		"bloom": 200,
+		"bloom": 50000,
 		"collGroup": "player",
 		"collRect": "0,60,48,111",
 		"collision": 0,
@@ -10,14 +10,14 @@
 		"desc": "<color=#00ff00>暗夜精灵</c><color=#0fffff>具有非常高的伤害</color>",
 		"headIcon": "map_mainbuttons_heroes_PC_0002",
 		"moveSpeed": 150,
-		"path": "kr4_hero_asra",
+		"path": "alleria",
 		"pickRange": 120,
 		"skillid": 11001
 	},
 	"100002": {
 		"id": 100002,
 		"name": "灯笼骑士",
-		"bloom": 200,
+		"bloom": 50000,
 		"collGroup": "player",
 		"collRect": "0,60,48,111",
 		"collision": 0,
@@ -32,7 +32,7 @@
 	"100003": {
 		"id": 100003,
 		"name": "熊猫人",
-		"bloom": 200,
+		"bloom": 50000,
 		"collGroup": "player",
 		"collRect": "0,60,48,111",
 		"collision": 0,
@@ -47,7 +47,7 @@
 	"100004": {
 		"id": 100004,
 		"name": "暗夜精灵",
-		"bloom": 16,
+		"bloom": 50000,
 		"collGroup": "player",
 		"collRect": "0,60,48,111",
 		"collision": 0,
@@ -62,7 +62,7 @@
 	"100005": {
 		"id": 100005,
 		"name": "暗夜精灵",
-		"bloom": 16,
+		"bloom": 50000,
 		"collGroup": "player",
 		"collRect": "0,60,48,111",
 		"collision": 0,
@@ -191,14 +191,43 @@
 		"moveSpeed": 0,
 		"moveType": 2,
 		"path": "1002",
-		"sceneid": 10001,
 		"shapeshift": 0,
 		"skillid": 20101
 	},
 	"200002": {
 		"id": 200002,
-		"name": "蝙蝠",
+		"name": "强盗",
 		"bloom": 10,
+		"boss": 0,
+		"collGroup": "monster",
+		"collRect": "0,0,12",
+		"collision": 1,
+		"dropItem": "1002",
+		"moveSpeed": 4,
+		"moveType": 1,
+		"path": "brigand",
+		"shapeshift": 0,
+		"skillid": 20101
+	},
+	"200003": {
+		"id": 200003,
+		"name": "彪形大汉",
+		"bloom": 20,
+		"boss": 0,
+		"collGroup": "monster",
+		"collRect": "0,0,25",
+		"collision": 1,
+		"dropItem": "1001",
+		"moveSpeed": 4,
+		"moveType": 1,
+		"path": "kr4_dwarven_empire_bruiser",
+		"shapeshift": 0,
+		"skillid": 20101
+	},
+	"200004": {
+		"id": 200004,
+		"name": "蝙蝠",
+		"bloom": 25,
 		"boss": 0,
 		"collGroup": "monster",
 		"collRect": "0,0,25",
@@ -207,31 +236,59 @@
 		"moveSpeed": 4,
 		"moveType": 2,
 		"path": "screecher_bat",
-		"sceneid": 10001,
 		"shapeshift": 0,
 		"skillid": 20101
 	},
-	"200003": {
-		"id": 200003,
-		"name": "彪形大汉",
-		"bloom": 10,
-		"boss": 1,
+	"200005": {
+		"id": 200005,
+		"name": "狼人",
+		"bloom": 40,
+		"boss": 0,
 		"collGroup": "monster",
-		"collRect": "0,0,25",
+		"collRect": "0,25,25",
 		"collision": 1,
 		"dropItem": "1001",
 		"moveSpeed": 4,
 		"moveType": 1,
-		"path": "kr4_dwarven_empire_bruiser",
-		"sceneid": 10001,
+		"path": "halloween_werewolf",
 		"shapeshift": 0,
 		"skillid": 20101
 	},
-	"200004": {
-		"id": 200004,
+	"200006": {
+		"id": 200006,
+		"name": "蒙面盗贼",
+		"bloom": 100,
+		"boss": 0,
+		"collGroup": "monster",
+		"collRect": "0,0,12",
+		"collision": 1,
+		"dropItem": "1002",
+		"moveSpeed": 4,
+		"moveType": 1,
+		"path": "bandit",
+		"shapeshift": 0,
+		"skillid": 20101
+	},
+	"200007": {
+		"id": 200007,
+		"name": "兽人领主",
+		"bloom": 200,
+		"boss": 1,
+		"collGroup": "monster",
+		"collRect": "0,50,50",
+		"collision": 1,
+		"dropItem": "1002",
+		"moveSpeed": 6,
+		"moveType": 1,
+		"path": "boss_gulthak",
+		"shapeshift": 0,
+		"skillid": 20101
+	},
+	"200008": {
+		"id": 200008,
 		"name": "高达",
 		"bloom": 200,
-		"boss": 0,
+		"boss": 1,
 		"collGroup": "monster",
 		"collRect": "0,10,40",
 		"collision": 1,
@@ -239,12 +296,11 @@
 		"moveSpeed": 2,
 		"moveType": 1,
 		"path": "kr4_dwarf_mecha",
-		"sceneid": 10001,
 		"shapeshift": 0,
 		"skillid": 20001
 	},
-	"200005": {
-		"id": 200005,
+	"200009": {
+		"id": 200009,
 		"name": "飞机",
 		"bloom": 100,
 		"boss": 0,
@@ -255,12 +311,11 @@
 		"moveSpeed": 8,
 		"moveType": 2,
 		"path": "kr4_dwarven_flyer",
-		"sceneid": 10001,
 		"shapeshift": 0,
 		"skillid": 20101
 	},
-	"200006": {
-		"id": 200006,
+	"200010": {
+		"id": 200010,
 		"name": "鬼魂",
 		"bloom": 10,
 		"boss": 0,
@@ -271,12 +326,11 @@
 		"moveSpeed": 4,
 		"moveType": 1,
 		"path": "halloween_ghost",
-		"sceneid": 10002,
 		"shapeshift": 0,
 		"skillid": 20101
 	},
-	"200007": {
-		"id": 200007,
+	"200011": {
+		"id": 200011,
 		"name": "骷髅将军",
 		"bloom": 100,
 		"boss": 0,
@@ -287,28 +341,11 @@
 		"moveSpeed": 2,
 		"moveType": 1,
 		"path": "halloween_bone",
-		"sceneid": 10002,
 		"shapeshift": 0,
 		"skillid": 20101
 	},
-	"200008": {
-		"id": 200008,
-		"name": "狼人",
-		"bloom": 60,
-		"boss": 0,
-		"collGroup": "monster",
-		"collRect": "0,25,25",
-		"collision": 1,
-		"dropItem": "1001",
-		"moveSpeed": 4,
-		"moveType": 1,
-		"path": "halloween_werewolf",
-		"sceneid": 10002,
-		"shapeshift": 0,
-		"skillid": 20101
-	},
-	"200009": {
-		"id": 200009,
+	"200012": {
+		"id": 200012,
 		"name": "狼人鬼魂",
 		"bloom": 50,
 		"boss": 0,
@@ -319,12 +356,11 @@
 		"moveSpeed": 8,
 		"moveType": 1,
 		"path": "halloween_corrosive_soul",
-		"sceneid": 10002,
 		"shapeshift": 0,
 		"skillid": 20101
 	},
-	"200010": {
-		"id": 200010,
+	"200013": {
+		"id": 200013,
 		"name": "骷髅小兵",
 		"bloom": 20,
 		"boss": 0,
@@ -335,12 +371,11 @@
 		"moveSpeed": 4,
 		"moveType": 1,
 		"path": "halloween_haunted_skeleton",
-		"sceneid": 10002,
 		"shapeshift": 0,
 		"skillid": 20101
 	},
-	"200011": {
-		"id": 200011,
+	"200014": {
+		"id": 200014,
 		"name": "法师亡灵",
 		"bloom": 30,
 		"boss": 0,
@@ -351,12 +386,11 @@
 		"moveSpeed": 4,
 		"moveType": 1,
 		"path": "halloween_lich",
-		"sceneid": 10002,
 		"shapeshift": 0,
 		"skillid": 20101
 	},
-	"200012": {
-		"id": 200012,
+	"200015": {
+		"id": 200015,
 		"name": "飞蛾",
 		"bloom": 10,
 		"boss": 0,
@@ -367,44 +401,11 @@
 		"moveSpeed": 4,
 		"moveType": 2,
 		"path": "1002",
-		"sceneid": 10002,
 		"shapeshift": 0,
 		"skillid": 20101
 	},
-	"200013": {
-		"id": 200013,
-		"name": "蒙面盗贼",
-		"bloom": 10,
-		"boss": 0,
-		"collGroup": "monster",
-		"collRect": "0,0,12",
-		"collision": 1,
-		"dropItem": "1002",
-		"moveSpeed": 4,
-		"moveType": 1,
-		"path": "bandit",
-		"sceneid": 10002,
-		"shapeshift": 0,
-		"skillid": 20101
-	},
-	"200014": {
-		"id": 200014,
-		"name": "兽人领主",
-		"bloom": 100,
-		"boss": 0,
-		"collGroup": "monster",
-		"collRect": "0,50,50",
-		"collision": 1,
-		"dropItem": "1002",
-		"moveSpeed": 6,
-		"moveType": 1,
-		"path": "boss_gulthak",
-		"sceneid": 10002,
-		"shapeshift": 0,
-		"skillid": 20101
-	},
-	"200015": {
-		"id": 200015,
+	"200016": {
+		"id": 200016,
 		"name": "恶魔大王",
 		"bloom": 500,
 		"boss": 0,
@@ -415,12 +416,11 @@
 		"moveSpeed": 4,
 		"moveType": 1,
 		"path": "inferno_moloch",
-		"sceneid": 10002,
 		"shapeshift": 0,
 		"skillid": 20101
 	},
-	"200016": {
-		"id": 200016,
+	"200017": {
+		"id": 200017,
 		"name": "机械战甲",
 		"bloom": 500,
 		"boss": 0,
@@ -431,23 +431,6 @@
 		"moveSpeed": 4,
 		"moveType": 1,
 		"path": "boss_juggernaut",
-		"sceneid": 10002,
-		"shapeshift": 0,
-		"skillid": 20101
-	},
-	"200017": {
-		"id": 200017,
-		"name": "强盗",
-		"bloom": 30,
-		"boss": 0,
-		"collGroup": "monster",
-		"collRect": "0,0,12",
-		"collision": 1,
-		"dropItem": "1002",
-		"moveSpeed": 4,
-		"moveType": 1,
-		"path": "brigand",
-		"sceneid": 10002,
 		"shapeshift": 0,
 		"skillid": 20101
 	},
@@ -463,7 +446,6 @@
 		"moveSpeed": 4,
 		"moveType": 1,
 		"path": "abomination",
-		"sceneid": 10002,
 		"shapeshift": 0,
 		"skillid": 20101
 	},
@@ -479,7 +461,6 @@
 		"moveSpeed": 4,
 		"moveType": 1,
 		"path": "forest_troll",
-		"sceneid": 10002,
 		"shapeshift": 0,
 		"skillid": 20101
 	},
@@ -495,7 +476,6 @@
 		"moveSpeed": 4,
 		"moveType": 1,
 		"path": "hero_oni",
-		"sceneid": 10002,
 		"shapeshift": 0,
 		"skillid": 20101
 	},
@@ -511,7 +491,6 @@
 		"moveSpeed": 4,
 		"moveType": 1,
 		"path": "hero_viking",
-		"sceneid": 10002,
 		"shapeshift": 0,
 		"skillid": 20101
 	},
@@ -527,7 +506,6 @@
 		"moveSpeed": 4,
 		"moveType": 1,
 		"path": "hero_reinforce",
-		"sceneid": 10002,
 		"shapeshift": 0,
 		"skillid": 20101
 	},
@@ -543,7 +521,6 @@
 		"moveSpeed": 4,
 		"moveType": 1,
 		"path": "hobgoblin",
-		"sceneid": 10002,
 		"shapeshift": 0,
 		"skillid": 20101
 	},
@@ -559,7 +536,6 @@
 		"moveSpeed": 4,
 		"moveType": 1,
 		"path": "boss_sarelgaz",
-		"sceneid": 10002,
 		"shapeshift": 0,
 		"skillid": 20101
 	},
@@ -575,7 +551,6 @@
 		"moveSpeed": 4,
 		"moveType": 1,
 		"path": "boss_bandit",
-		"sceneid": 10002,
 		"shapeshift": 0,
 		"skillid": 20101
 	},
@@ -591,7 +566,6 @@
 		"moveSpeed": 4,
 		"moveType": 1,
 		"path": "cb_death_knight",
-		"sceneid": 10002,
 		"shapeshift": 0,
 		"skillid": 20101
 	},
@@ -607,7 +581,6 @@
 		"moveSpeed": 4,
 		"moveType": 1,
 		"path": "cb_lycan",
-		"sceneid": 10002,
 		"shapeshift": 1002,
 		"skillid": 20101
 	},
@@ -623,7 +596,6 @@
 		"moveSpeed": 4,
 		"moveType": 1,
 		"path": "hero_artillery",
-		"sceneid": 10002,
 		"shapeshift": 0,
 		"skillid": 20101
 	},
@@ -639,7 +611,6 @@
 		"moveSpeed": 15,
 		"moveType": 2,
 		"path": "rocketeer",
-		"sceneid": 10002,
 		"shapeshift": 0,
 		"skillid": 20101
 	},
@@ -655,7 +626,6 @@
 		"moveSpeed": 4,
 		"moveType": 1,
 		"path": "orge",
-		"sceneid": 10002,
 		"shapeshift": 0,
 		"skillid": 20101
 	},
@@ -671,7 +641,6 @@
 		"moveSpeed": 4,
 		"moveType": 1,
 		"path": "orc_armored",
-		"sceneid": 10002,
 		"shapeshift": 0,
 		"skillid": 20101
 	},
@@ -687,7 +656,6 @@
 		"moveSpeed": 4,
 		"moveType": 1,
 		"path": "troll_chieftain",
-		"sceneid": 10002,
 		"shapeshift": 0,
 		"skillid": 20101
 	},
@@ -703,7 +671,6 @@
 		"moveSpeed": 4,
 		"moveType": 1,
 		"path": "boss_godieth",
-		"sceneid": 10002,
 		"shapeshift": 0,
 		"skillid": 20101
 	},
@@ -719,7 +686,6 @@
 		"moveSpeed": 4,
 		"moveType": 1,
 		"path": "boss_jt",
-		"sceneid": 10002,
 		"shapeshift": 0,
 		"skillid": 20101
 	},
@@ -735,7 +701,51 @@
 		"moveSpeed": 4,
 		"moveType": 1,
 		"path": "gollem",
-		"sceneid": 10002,
+		"shapeshift": 0,
+		"skillid": 20101
+	},
+	"200036": {
+		"id": 200036,
+		"name": "阿努比斯",
+		"bloom": 60,
+		"boss": 0,
+		"collGroup": "monster",
+		"collRect": "0,50,70,100",
+		"collision": 2,
+		"dropItem": "1002",
+		"moveSpeed": 4,
+		"moveType": 1,
+		"path": "abubis",
+		"shapeshift": 0,
+		"skillid": 20101
+	},
+	"200037": {
+		"id": 200037,
+		"name": "骷髅龙",
+		"bloom": 60,
+		"boss": 0,
+		"collGroup": "monster",
+		"collRect": "0,0,40",
+		"collision": 1,
+		"dropItem": "1002",
+		"moveSpeed": 4,
+		"moveType": 1,
+		"path": "halloween_hero_bones_golem",
+		"shapeshift": 0,
+		"skillid": 20101
+	},
+	"200038": {
+		"id": 200038,
+		"name": "吸血鬼",
+		"bloom": 60,
+		"boss": 0,
+		"collGroup": "monster",
+		"collRect": "0,35,25,65",
+		"collision": 2,
+		"dropItem": "1002",
+		"moveSpeed": 4,
+		"moveType": 1,
+		"path": "halloween_vampire",
 		"shapeshift": 0,
 		"skillid": 20101
 	}

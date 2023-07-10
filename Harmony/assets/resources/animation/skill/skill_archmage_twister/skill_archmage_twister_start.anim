@@ -1,0 +1,43 @@
+{
+  "__type__": "cc.AnimationClip",
+  "_name": "skill_archmage_twister_start",
+  "_objFlags": 0,
+  "_native": "",
+  "_duration": 0.06666666666666667,
+  "sample": 60,
+  "speed": 0.4,
+  "wrapMode": 1,
+  "curveData": {
+    "comps": {
+      "cc.Sprite": {
+        "spriteFrame": [
+          {
+            "frame": 0,
+            "value": {
+              "__uuid__": "1da55d18-495a-43bc-b4fb-dbf948fa9752"
+            }
+          },
+          {
+            "frame": 0.016666666666666666,
+            "value": {
+              "__uuid__": "77607b45-8315-4635-b3e0-9275cf19eed3"
+            }
+          },
+          {
+            "frame": 0.03333333333333333,
+            "value": {
+              "__uuid__": "3f5cec3b-61b9-475b-a7ad-d05377ab1b3d"
+            }
+          },
+          {
+            "frame": 0.05,
+            "value": {
+              "__uuid__": "23b3cdeb-a727-41e1-b95c-f63b682df079"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "events": []
+}

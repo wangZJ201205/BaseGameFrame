@@ -5,6 +5,7 @@
 
 import GameData from "../common/GameData";
 import Hero from "../ghost/Hero";
+import GameHelp from "../help/GameHelp";
 import DictMgr from "../manager/DictMgr";
 import GhostMgr from "../manager/GhostMgr";
 
@@ -28,7 +29,7 @@ export default class GPMonster {
 
         rules.forEach(rule => {
             var info:any = {};
-            info.timeEvent = rule.timeEvent;
+            info.time = rule.time;
             info.monster = rule.monster;
             // info.group = rule.group;
             info.delay = rule.delay;
@@ -42,13 +43,15 @@ export default class GPMonster {
 
     update () 
     {
+       
+
         var durTime : number = cc.director.getTotalTime() - this._startTime;
         const eventsToBeRemoved = [];
 
         for (let i = 0; i < this._eventArray.length; i++) 
         {
             var event = this._eventArray[i];
-            if (durTime < event.timeEvent) {
+            if (durTime < event.time) {
                 // 尚未到事件时间
                 break;
             }
@@ -58,7 +61,6 @@ export default class GPMonster {
                 // 尚未到延迟时间
                 continue;
             }
-
             //放怪
             this.callMonster(event.monster);
 

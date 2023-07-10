@@ -47,6 +47,25 @@ export default class CollComponent extends ComponentParent {
             physicsCircleCollider.offset.y = Number(collSize[1]);
             physicsCircleCollider.radius = Number(collSize[2]);
         }
+        else if(entityInfo.collision == 2)
+        {
+            var boxColl1 = this._host.addComponent(cc.BoxCollider);
+            this._host.group = entityInfo.collGroup;
+            var size:string = entityInfo.collRect;
+            var collSize:string[] = size.split(",");
+            boxColl1.offset.x = Number(collSize[0]);
+            boxColl1.offset.y = Number(collSize[1]);
+            boxColl1.size.width = Number(collSize[2]);
+            boxColl1.size.height = Number(collSize[3]);
+
+            var collCmp = this._host.addComponent(CollisionComponent);
+            collCmp.setCollisioner(this);
+
+            var physicsCircleCollider = this._host.addComponent(cc.PhysicsCircleCollider);
+            physicsCircleCollider.offset.x = Number(collSize[0]);
+            physicsCircleCollider.offset.y = Number(collSize[1]);
+            physicsCircleCollider.radius = Number(collSize[2]);
+        }
     }
 
     collisionEnter(other, self)

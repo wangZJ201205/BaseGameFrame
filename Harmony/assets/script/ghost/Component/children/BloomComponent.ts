@@ -29,14 +29,7 @@ export default class BloomComponent extends ComponentParent {
     start () {
         super.start();
         
-        var entityInfo = this._host.getEntityDict();
-        if( entityInfo.collision == 1 )
-        {
-            var size:string = entityInfo.collRect;
-            var collSize:string[] = size.split(",");
-            this._height = Number(collSize[1]);
-            this._height += Number(collSize[2]);
-        }
+        this.adjustHeight();
 
         const loadPath = "headEffect/headEffect" ;
         LoadMgr.Instance.LoadAsset(loadPath,(asset)=>
@@ -75,6 +68,24 @@ export default class BloomComponent extends ComponentParent {
             this._green_bar.node.scaleX = 1;
         }
 
+    }
+
+    adjustHeight()
+    {
+        var entityInfo = this._host.getEntityDict();
+        if( entityInfo.collision == 1 )
+        {
+            var size:string = entityInfo.collRect;
+            var collSize:string[] = size.split(",");
+            this._height = Number(collSize[1]);
+            this._height += Number(collSize[2]);
+        }
+        else if(entityInfo.collision == 2)
+        {
+            var size:string = entityInfo.collRect;
+            var collSize:string[] = size.split(",");
+            this._height = Number(collSize[3]);
+        }
     }
 
     remove()

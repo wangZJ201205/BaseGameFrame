@@ -148,11 +148,6 @@
         </struct>
         <key>fileList</key>
         <array>
-            <filename>screecher_bat_0084.png</filename>
-            <filename>screecher_bat_0085.png</filename>
-            <filename>screecher_bat_0086.png</filename>
-            <filename>screecher_bat_0087.png</filename>
-            <filename>screecher_bat_0088.png</filename>
             <filename>werewolf_0001.png</filename>
             <filename>werewolf_0002.png</filename>
             <filename>werewolf_0003.png</filename>
@@ -615,7 +610,6 @@
             <filename>ghost_0120.png</filename>
             <filename>ghost_0121.png</filename>
             <filename>ghost_0122.png</filename>
-            <filename>ghost_shadow.png</filename>
             <filename>haunted_skeleton_0001.png</filename>
             <filename>haunted_skeleton_0002.png</filename>
             <filename>haunted_skeleton_0003.png</filename>
@@ -846,70 +840,6 @@
             <filename>lich_0213.png</filename>
             <filename>lich_0214.png</filename>
             <filename>lich_shadow.png</filename>
-            <filename>screecher_bat_0001.png</filename>
-            <filename>screecher_bat_0002.png</filename>
-            <filename>screecher_bat_0003.png</filename>
-            <filename>screecher_bat_0004.png</filename>
-            <filename>screecher_bat_0005.png</filename>
-            <filename>screecher_bat_0006.png</filename>
-            <filename>screecher_bat_0007.png</filename>
-            <filename>screecher_bat_0008.png</filename>
-            <filename>screecher_bat_0009.png</filename>
-            <filename>screecher_bat_0010.png</filename>
-            <filename>screecher_bat_0011.png</filename>
-            <filename>screecher_bat_0012.png</filename>
-            <filename>screecher_bat_0013.png</filename>
-            <filename>screecher_bat_0014.png</filename>
-            <filename>screecher_bat_0015.png</filename>
-            <filename>screecher_bat_0016.png</filename>
-            <filename>screecher_bat_0017.png</filename>
-            <filename>screecher_bat_0018.png</filename>
-            <filename>screecher_bat_0019.png</filename>
-            <filename>screecher_bat_0020.png</filename>
-            <filename>screecher_bat_0021.png</filename>
-            <filename>screecher_bat_0022.png</filename>
-            <filename>screecher_bat_0023.png</filename>
-            <filename>screecher_bat_0024.png</filename>
-            <filename>screecher_bat_0025.png</filename>
-            <filename>screecher_bat_0026.png</filename>
-            <filename>screecher_bat_0027.png</filename>
-            <filename>screecher_bat_0028.png</filename>
-            <filename>screecher_bat_0029.png</filename>
-            <filename>screecher_bat_0030.png</filename>
-            <filename>screecher_bat_0031.png</filename>
-            <filename>screecher_bat_0032.png</filename>
-            <filename>screecher_bat_0033.png</filename>
-            <filename>screecher_bat_0034.png</filename>
-            <filename>screecher_bat_0035.png</filename>
-            <filename>screecher_bat_0036.png</filename>
-            <filename>screecher_bat_0037.png</filename>
-            <filename>screecher_bat_0038.png</filename>
-            <filename>screecher_bat_0039.png</filename>
-            <filename>screecher_bat_0040.png</filename>
-            <filename>screecher_bat_0041.png</filename>
-            <filename>screecher_bat_0042.png</filename>
-            <filename>screecher_bat_0043.png</filename>
-            <filename>screecher_bat_0044.png</filename>
-            <filename>screecher_bat_0045.png</filename>
-            <filename>screecher_bat_0046.png</filename>
-            <filename>screecher_bat_0047.png</filename>
-            <filename>screecher_bat_0048.png</filename>
-            <filename>screecher_bat_0049.png</filename>
-            <filename>screecher_bat_0050.png</filename>
-            <filename>screecher_bat_0051.png</filename>
-            <filename>screecher_bat_0052.png</filename>
-            <filename>screecher_bat_0072.png</filename>
-            <filename>screecher_bat_0073.png</filename>
-            <filename>screecher_bat_0074.png</filename>
-            <filename>screecher_bat_0075.png</filename>
-            <filename>screecher_bat_0076.png</filename>
-            <filename>screecher_bat_0077.png</filename>
-            <filename>screecher_bat_0078.png</filename>
-            <filename>screecher_bat_0079.png</filename>
-            <filename>screecher_bat_0080.png</filename>
-            <filename>screecher_bat_0081.png</filename>
-            <filename>screecher_bat_0082.png</filename>
-            <filename>screecher_bat_0083.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>

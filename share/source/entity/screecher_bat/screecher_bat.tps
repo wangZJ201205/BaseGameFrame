@@ -204,25 +204,6 @@
             <filename>screecher_bat_0050.png</filename>
             <filename>screecher_bat_0051.png</filename>
             <filename>screecher_bat_0052.png</filename>
-            <filename>screecher_bat_0053.png</filename>
-            <filename>screecher_bat_0054.png</filename>
-            <filename>screecher_bat_0055.png</filename>
-            <filename>screecher_bat_0056.png</filename>
-            <filename>screecher_bat_0057.png</filename>
-            <filename>screecher_bat_0058.png</filename>
-            <filename>screecher_bat_0059.png</filename>
-            <filename>screecher_bat_0060.png</filename>
-            <filename>screecher_bat_0061.png</filename>
-            <filename>screecher_bat_0062.png</filename>
-            <filename>screecher_bat_0063.png</filename>
-            <filename>screecher_bat_0064.png</filename>
-            <filename>screecher_bat_0065.png</filename>
-            <filename>screecher_bat_0066.png</filename>
-            <filename>screecher_bat_0067.png</filename>
-            <filename>screecher_bat_0068.png</filename>
-            <filename>screecher_bat_0069.png</filename>
-            <filename>screecher_bat_0070.png</filename>
-            <filename>screecher_bat_0071.png</filename>
             <filename>screecher_bat_0072.png</filename>
             <filename>screecher_bat_0073.png</filename>
             <filename>screecher_bat_0074.png</filename>

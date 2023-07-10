@@ -388,7 +388,7 @@
 		"animation": 2,
 		"atlas": "0",
 		"attackMoveType": 2,
-		"collRect": "2,2,40,40",
+		"collRect": "2,40,70,80",
 		"collision": 1,
 		"nextBullet": 48,
 		"preftab": "skill_purple_storm",
@@ -400,6 +400,7 @@
 		"zorder": 1
 	},
 	"48": {"id": 48,"animation": 2,"atlas": "0","attackMoveType": 2,"collRect": "0","preftab": "skill_purple_storm","scriptID": 16,"sound": "effect_skill_lls","src": "skill_purple_storm_end_cp","zorder": 1},
+	"49": {"id": 49,"animation": 2,"atlas": "0","attackMoveType": 2,"collRect": "0","nextBullet": 50,"preftab": "skill_ultimate_twister","scriptID": 17,"sound": "effect_skill_lhh","src": "skill_ultimate_twister_start","zorder": 1},
 	"5": {
 		"id": 5,
 		"animation": 2,
@@ -416,6 +417,41 @@
 		"strike": 2,
 		"zorder": 1
 	},
+	"50": {
+		"id": 50,
+		"animation": 2,
+		"atlas": "0",
+		"attackMoveType": 2,
+		"collRect": "2,40,70,80",
+		"collision": 1,
+		"nextBullet": 51,
+		"preftab": "skill_ultimate_twister",
+		"scriptID": 27,
+		"sound": "effect_skill_lhh",
+		"speed": 15,
+		"src": "skill_ultimate_twister_run_cp",
+		"strike": 2,
+		"zorder": 1
+	},
+	"51": {"id": 51,"animation": 2,"atlas": "0","attackMoveType": 2,"collRect": "0","preftab": "skill_ultimate_twister","scriptID": 16,"sound": "effect_skill_lls","src": "skill_ultimate_twister_end_cp","zorder": 1},
+	"52": {"id": 52,"animation": 2,"atlas": "0","attackMoveType": 2,"collRect": "0","nextBullet": 53,"preftab": "skill_archmage_twister","scriptID": 17,"sound": "effect_skill_lhh","src": "skill_archmage_twister_start","zorder": 1},
+	"53": {
+		"id": 53,
+		"animation": 2,
+		"atlas": "0",
+		"attackMoveType": 2,
+		"collRect": "2,40,70,80",
+		"collision": 1,
+		"nextBullet": 54,
+		"preftab": "skill_archmage_twister",
+		"scriptID": 27,
+		"sound": "effect_skill_lhh",
+		"speed": 15,
+		"src": "skill_archmage_twister_run",
+		"strike": 2,
+		"zorder": 1
+	},
+	"54": {"id": 54,"animation": 2,"atlas": "0","attackMoveType": 2,"collRect": "0","preftab": "skill_archmage_twister","scriptID": 16,"sound": "effect_skill_lls","src": "skill_archmage_twister_end","zorder": 1},
 	"6": {
 		"id": 6,
 		"animation": 2,

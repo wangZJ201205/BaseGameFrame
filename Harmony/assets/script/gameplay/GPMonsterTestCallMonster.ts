@@ -7,6 +7,7 @@
 import ClientDef from "../common/ClientDef";
 import GameData from "../common/GameData";
 import Hero from "../ghost/Hero";
+import GameHelp from "../help/GameHelp";
 import GhostMgr from "../manager/GhostMgr";
 
 const {ccclass, property} = cc._decorator;
@@ -28,7 +29,7 @@ export default class GPMonsterTestCallMonster {
 
     update () 
     {
-        
+
         this.delta -= 1;
         if(this.delta <= 0)
         {
@@ -69,7 +70,7 @@ export default class GPMonsterTestCallMonster {
         // monsters.push(200011);
         // monsters.push(200013);
         // monsters.push(200014);
-        // monsters.push(200015);
+        monsters.push(200015);
         // monsters.push(200016);
         // monsters.push(200017);
         // monsters.push(200018);
@@ -89,7 +90,11 @@ export default class GPMonsterTestCallMonster {
         // monsters.push(200032);
         // monsters.push(200033);
         // monsters.push(200034);
-        monsters.push(200035);
+        // monsters.push(200035);
+        // monsters.push(200036);
+        // monsters.push(200037);
+        // monsters.push(200038);
+
 
         var id = Math.random()*monsters.length ;
         id = monsters[ Math.floor(id) ];

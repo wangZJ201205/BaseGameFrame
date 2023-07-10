@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="40" height="40" tilewidth="72" tileheight="36">
+ <tileset firstgid="1" name="land" tilewidth="72" tileheight="36">
+  <image source="land.png" width="640" height="360"/>
+ </tileset>
+ <layer name="块层 1" width="40" height="40">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+3VtWEDARAAwZdlZma2JZmZmZn6r8ZTgwP/BRdMtAVspSiKJqo000IrbbRTKbl30EkX3fTQSx/9AfoAgwwxzAijjDEeoE8wyRTTzDDLHPMB+gKLLLFMjToNVgL0VdZYZ4NNtthmJ0DfZY99DjjkiGNOAvRTzjjngkuuuOYmQL/ljnseeOSJZ14C9FfeeOeDT7745idAL/sP+Y/8R/4j/5H/yH/kP/If+Y/8R/4j/5H/yH/8Ry/7D/mP/Ef+4+/9F9QgLN4AGQAA
+  </data>
+ </layer>
+</map>

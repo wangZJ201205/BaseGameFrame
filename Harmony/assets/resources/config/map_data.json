@@ -7,7 +7,7 @@
 			{"id": 100001,"delay": 500},
 			{"id": 100001,"delay": 500}
 		],
-		"path": "map/scene2/scene"
+		"path": "map/land/land"
 	},
 	"10002": {
 		"id": 10002,
@@ -31,6 +31,36 @@
 	},
 	"10004": {
 		"id": 10004,
+		"monsters": [
+			{"id": 100001,"delay": 700},
+			{"id": 100001,"delay": 700},
+			{"id": 100001,"delay": 700},
+			{"id": 100001,"delay": 700}
+		],
+		"path": "map/iceland/iceland"
+	},
+	"10005": {
+		"id": 10005,
+		"monsters": [
+			{"id": 100001,"delay": 700},
+			{"id": 100001,"delay": 700},
+			{"id": 100001,"delay": 700},
+			{"id": 100001,"delay": 700}
+		],
+		"path": "map/scene1/scene4"
+	},
+	"10006": {
+		"id": 10006,
+		"monsters": [
+			{"id": 100001,"delay": 700},
+			{"id": 100001,"delay": 700},
+			{"id": 100001,"delay": 700},
+			{"id": 100001,"delay": 700}
+		],
+		"path": "map/scene1/scene4"
+	},
+	"10007": {
+		"id": 10007,
 		"monsters": [
 			{"id": 100001,"delay": 700},
 			{"id": 100001,"delay": 700},

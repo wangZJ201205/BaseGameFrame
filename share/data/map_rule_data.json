@@ -1,14 +1,17 @@
 {
 	"10001": [
-		{"createCount": -1,"delay": 1500,"group": 0,"monster": 200002,"sceneid": 10001,"timeEvent": 1},
-		{"createCount": 1,"delay": 0,"group": 0,"monster": 200003,"sceneid": 10001,"timeEvent": 30},
-		{"createCount": 1,"delay": 0,"group": 0,"monster": 200002,"sceneid": 10001,"timeEvent": 60},
-		{"createCount": -1,"delay": 3000,"group": 0,"monster": 200003,"sceneid": 10001,"timeEvent": 80}
+		{"createCount": -1,"delay": 1500,"group": 0,"monster": 200002,"sceneid": 10001,"time": 1000},
+		{"createCount": -1,"delay": 2000,"group": 0,"monster": 200003,"sceneid": 10001,"time": 60000},
+		{"createCount": 30,"delay": 500,"group": 0,"monster": 200004,"sceneid": 10001,"time": 120000},
+		{"createCount": 1,"delay": 0,"group": 0,"monster": 200007,"sceneid": 10001,"time": 180000},
+		{"createCount": 30,"delay": 3000,"group": 0,"monster": 200005,"sceneid": 10001,"time": 240000},
+		{"createCount": -1,"delay": 2000,"group": 0,"monster": 200006,"sceneid": 10001,"time": 300000},
+		{"createCount": 1,"delay": 0,"group": 0,"monster": 200008,"sceneid": 10001,"time": 360000}
 	],
 	"10002": [
-		{"createCount": -1,"delay": 100,"group": 1,"monster": 200002,"sceneid": 10002,"timeEvent": 1},
-		{"createCount": 1,"delay": 0,"group": 2,"monster": 200003,"sceneid": 10002,"timeEvent": 30},
-		{"createCount": -1,"delay": 90,"group": 1,"monster": 200002,"sceneid": 10002,"timeEvent": 60},
-		{"createCount": -1,"delay": 500,"group": 3,"monster": 200002,"sceneid": 10002,"timeEvent": 80}
+		{"createCount": -1,"delay": 100,"group": 1,"monster": 200002,"sceneid": 10002,"time": 1000},
+		{"createCount": 1,"delay": 0,"group": 2,"monster": 200003,"sceneid": 10002,"time": 30000},
+		{"createCount": -1,"delay": 90,"group": 1,"monster": 200002,"sceneid": 10002,"time": 60000},
+		{"createCount": -1,"delay": 500,"group": 3,"monster": 200002,"sceneid": 10002,"time": 80000}
 	]
 }
