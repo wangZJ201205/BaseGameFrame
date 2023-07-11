@@ -15,7 +15,8 @@ const {ccclass, property} = cc._decorator;
 export default class GPMonster {
 
     _eventArray : any[];
-    _startTime : number; //记录开始时间
+    _deltaTime : number; //记录开始时间
+    _duringTime:number; //运行时间
     _curSceneRule : any;
     onLoad () 
     {
@@ -24,7 +25,8 @@ export default class GPMonster {
 
     start () 
     {
-        this._startTime = cc.director.getTotalTime();
+        this._duringTime = 0;
+        this._deltaTime = cc.director.getTotalTime();
         var rules = DictMgr.Instance.getDictByName("map_rule_data")[GameData.Map_Current_Id];
 
         rules.forEach(rule => {
@@ -35,7 +37,7 @@ export default class GPMonster {
             info.delay = rule.delay;
             info.createCount = rule.createCount;
             info.progress = 0; //进度
-            info.delayStart = this._startTime;
+            info.delayStart = this._deltaTime;
             this._eventArray.push(info);
         });
 
@@ -45,13 +47,19 @@ export default class GPMonster {
     {
        
 
-        var durTime : number = cc.director.getTotalTime() - this._startTime;
+        var durTime : number = cc.director.getTotalTime() - this._deltaTime;
+        if(durTime > 100)
+        {
+            this._duringTime ++;
+            this._deltaTime = cc.director.getTotalTime();
+        }
+
         const eventsToBeRemoved = [];
 
         for (let i = 0; i < this._eventArray.length; i++) 
         {
             var event = this._eventArray[i];
-            if (durTime < event.time) {
+            if (this._duringTime < event.time) {
                 // 尚未到事件时间
                 break;
             }
@@ -90,38 +98,9 @@ export default class GPMonster {
     {
         var entity = GhostMgr.Instance.spawnEntity(monsterId); // 200001怪物id 怪物的释放规则还没有实现
         entity.restart();
-
-        var direction = this.calculateRandomDirection();
-        var position = this.calculateSpawnPosition(direction);
-
-        entity.getEntityNode().setPosition(position.x, position.y);
-        entity.getEntityNode().zIndex = GameData.App_Game_Heigth - position.y;
+        entity.randomEntityPosition();
     }
 
-    private calculateRandomDirection() 
-    {
-        var randX = Math.random() * 2 - 1;
-        var randY = Math.random() * 2 - 1;
-        return new cc.Vec2(randX, randY);
-    }
     
-    private calculateSpawnPosition(direction) 
-    {
-        var heroPosition = Hero.Instance.getEntity().position;
-        var x = 0;
-        var y = 0;
-    
-        if (direction.x < 0) {
-            x = Math.random() * GameData.App_Game_Width + heroPosition.x - GameData.App_Game_Width / 2;
-            y = direction.y < 0 ? -360 : 360;
-            y += heroPosition.y;
-        } else {
-            y = Math.random() * GameData.App_Game_Heigth + heroPosition.y - GameData.App_Game_Heigth / 2;
-            x = direction.y < 0 ? -640 : 640;
-            x += heroPosition.x;
-        }
-    
-        return new cc.Vec2(x, y);
-    }
     
 }

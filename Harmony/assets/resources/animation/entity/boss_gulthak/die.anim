@@ -1,6 +1,6 @@
 {
   "__type__": "cc.AnimationClip",
-  "_name": "boss_gulthak_die_cp",
+  "_name": "die",
   "_objFlags": 0,
   "_native": "",
   "_duration": 0.5666666666666667,
@@ -221,16 +221,6 @@
           }
         },
         "props": {
-          "position": [
-            {
-              "frame": 0,
-              "value": [
-                0,
-                62,
-                0
-              ]
-            }
-          ],
           "scaleX": [
             {
               "frame": 0,
@@ -451,16 +441,6 @@
           }
         },
         "props": {
-          "position": [
-            {
-              "frame": 0,
-              "value": [
-                0,
-                60,
-                0
-              ]
-            }
-          ],
           "scaleX": [
             {
               "frame": 0,

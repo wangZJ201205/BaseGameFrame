@@ -1,4 +1,6 @@
 import ClientDef from "../common/ClientDef";
+import GameData from "../common/GameData";
+import GameHelp from "../help/GameHelp";
 import DictMgr from "../manager/DictMgr";
 import Skill from "../skill/Skill";
 import ClothComponent from "./component/children/ClothComponent";
@@ -90,6 +92,15 @@ export default class Entity extends cc.Node
             this._gene.remove();
         }
         this.removeFromParent();
+    }
+
+    //随机位置
+    randomEntityPosition()
+    {
+        var direction = GameHelp.calculateRandomDirection();
+        var position = GameHelp.calculateSpawnPosition(direction);
+        this.setPosition(position.x, position.y);
+        this.zIndex = GameData.App_Game_Heigth - position.y;
     }
 
     //进入休息状态，等待被召唤
@@ -216,6 +227,12 @@ export default class Entity extends cc.Node
     isMonster()
     {
         return this.getClientProp(ClientDef.ENTITY_PROP_TYPE) == ClientDef.ENTITY_TYPE_MONSTER;
+    }
+
+    isBoss()
+    {
+        var entityInfo = DictMgr.Instance.getDictByName('entity_data');
+        return entityInfo["boss"] == 1 ? true : false;
     }
 
     isLife()

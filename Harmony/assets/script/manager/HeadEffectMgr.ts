@@ -12,8 +12,10 @@ const {ccclass, property} = cc._decorator;
 interface DictEffect {
     type: number;
     data:number;
+    path:string;
     pos:cc.Vec2;
   }
+
 
 @ccclass
 export default class HeadEffectMgr extends ParentMgr {
@@ -57,7 +59,11 @@ export default class HeadEffectMgr extends ParentMgr {
     {
         for (let index = 0; index < this._effectList.length; index++) {
             const element = this._effectList[index];
-            this.showDamageTips(element);
+            if(element.data != 0 ){
+                this.showDamageTips(element);
+            }else{
+                this.showBloomEffect(element);
+            }
         }
         this._effectList = [];
     }
@@ -72,7 +78,7 @@ export default class HeadEffectMgr extends ParentMgr {
         var newPos:cc.Vec2 = new cc.Vec2;
         newPos.x = pos.x;
         newPos.y = pos.y;
-        var dl :DictEffect = {type:type,data:data,pos:newPos};
+        var dl :DictEffect = {type:type,data:data,path:"",pos:newPos};
         this._effectList.push(dl);
     }
 
@@ -87,11 +93,45 @@ export default class HeadEffectMgr extends ParentMgr {
             this.layer.addChild(node);
             node.setPosition(info.pos.x, info.pos.y);
             
-            cc.tween(node).by(0.2,{x:100*Math.random() ,y:100*Math.random()}).delay(1).call(function () {
+            cc.tween(node).by(0.2,{x:100 ,y:100}).delay(1).call(function () {
                 node.active = false;
                 node.removeFromParent();
             }).start();
         })
+    }
+
+    addBloomEffect(type:number,data:string,pos:cc.Vec2)
+    {
+        var newPos:cc.Vec2 = new cc.Vec2;
+        newPos.x = pos.x;
+        newPos.y = pos.y;
+        var de :DictEffect = {type:type,data:0,path:data,pos:newPos};
+        this._effectList.push(de);
+    }
+
+    showBloomEffect(info)
+    {
+        var loadPath = 'effect/BloomEffectPref'
+        LoadMgr.Instance.LoadAssetWithType(loadPath, cc.Prefab ,(asset)=>
+            {
+               
+                var aniPref = cc.instantiate(asset);
+                aniPref.parent = this.layer;
+                for (let index = 1; index <= aniPref.childrenCount; index++) {
+                    const element = aniPref.getChildByName(index+"");
+                    element.active = false;
+                }
+                var anim = aniPref.getComponent(cc.Animation);
+                anim.pause();
+                anim.resume(info.path);
+                anim.play(info.path);
+                aniPref.setPosition(info.pos.x, info.pos.y);
+
+                cc.tween(aniPref).delay(1).call(function () {
+                    aniPref.active = false;
+                    aniPref.removeFromParent();
+                }).start();
+            });
     }
 
 }

@@ -1,6 +1,7 @@
 
 import ClientDef from "../../../common/ClientDef";
 import GameData from "../../../common/GameData";
+import GameHelp from "../../../help/GameHelp";
 import Hero from "../../Hero";
 import ClothComponent from "../../component/children/ClothComponent";
 import StateParent from "../StateParent";
@@ -40,11 +41,18 @@ export default class EntityWalk extends StateParent {
             this.getHost().getStateMachine().addState(ClientDef.ENTITY_STATE_ATTACK);
             this.getHost().getStateMachine().runNextState();
         } 
-        else if(distance >= GameData.Monster_And_Hero_Max_Distance) // 超出最大范围
+        else if(distance >= GameData.Monster_And_Hero_Max_Distance) // 超出最大范围,重新设置位置
         {
-            
-            this.getHost().getEntityNode().active = false;
-            this.getHost().setClientProp(ClientDef.ENTITY_PROP_ACTIVE_STATE, ClientDef.ENTITY_ACTIVE_STATE_FREE);
+            //特殊处理boss要随机，普通怪物就销毁
+            if(this.getHost().isBoss())
+            {
+                this.getHost().randomEntityPosition();
+            }
+            else
+            {
+                this.getHost().getEntityNode().active = false;
+                this.getHost().setClientProp(ClientDef.ENTITY_PROP_ACTIVE_STATE, ClientDef.ENTITY_ACTIVE_STATE_FREE);
+            }
         }
         
         this.changePlayerDirection(direction);

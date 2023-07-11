@@ -174,9 +174,7 @@
     "_fillStart": 0,
     "_fillRange": 0,
     "_isTrimmedMode": false,
-    "_atlas": {
-      "__uuid__": "8dc8de03-7e97-41ea-ba6d-898c3917ce5c"
-    },
+    "_atlas": null,
     "_id": ""
   },
   {
@@ -281,9 +279,7 @@
     "_fillStart": 0,
     "_fillRange": 0,
     "_isTrimmedMode": false,
-    "_atlas": {
-      "__uuid__": "8dc8de03-7e97-41ea-ba6d-898c3917ce5c"
-    },
+    "_atlas": null,
     "_id": ""
   },
   {

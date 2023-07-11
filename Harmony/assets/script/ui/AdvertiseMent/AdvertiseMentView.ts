@@ -22,10 +22,6 @@ export default class AdvertiseMentView extends UIParent {
     @property(cc.Button)
     openBoxBtn: cc.Button = null;
 
-    @property(cc.Button)
-    setBoxBtn: cc.Button = null;
-
-
     onLoad () 
     {
         this.setUIName(UIName.VIEW_ADVERTISEMENT);
@@ -42,7 +38,7 @@ export default class AdvertiseMentView extends UIParent {
     {
         this.upLevelBtn.node.on(cc.Node.EventType.TOUCH_END,this.UpLevelHandle,this); //添加监听
         this.openBoxBtn.node.on(cc.Node.EventType.TOUCH_END,this.openBoxHandle,this); //添加监听
-        this.setBoxBtn.node.on(cc.Node.EventType.TOUCH_END,this.openSetHandle,this); //添加监听
+        
         super.register();
     }
 
@@ -75,16 +71,6 @@ export default class AdvertiseMentView extends UIParent {
         }
     }
 
-    openSetHandle(event,param)
-    {
-        if(!UIMgr.Instance.getUI(UIName.VIEW_SET))
-        {
-            UIMgr.Instance.openUI(UIName.VIEW_SET);
-        }
-        else
-        {
-            EventMgr.Instance.Emit(EventName.UI_CLOSE_PANEL + UIName.VIEW_SET,null);
-        }
-    }
+   
 
 }

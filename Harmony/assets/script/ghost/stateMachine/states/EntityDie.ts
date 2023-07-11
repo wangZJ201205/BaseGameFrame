@@ -52,5 +52,7 @@ export default class EntityDie extends StateParent {
             GhostMgr.Instance.setEntityZOrder(item.getEntityNode());
         }
     }
+
+    
     
 }

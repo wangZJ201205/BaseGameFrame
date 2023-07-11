@@ -1,6 +1,6 @@
 {
   "__type__": "cc.AnimationClip",
-  "_name": "boss_gulthak_idle_cp",
+  "_name": "idle",
   "_objFlags": 0,
   "_native": "",
   "_duration": 0.016666666666666666,
@@ -28,7 +28,7 @@
               "frame": 0,
               "value": [
                 0,
-                62,
+                0,
                 0
               ]
             }
@@ -53,16 +53,6 @@
             {
               "frame": 0,
               "value": -1
-            }
-          ],
-          "position": [
-            {
-              "frame": 0,
-              "value": [
-                0,
-                62,
-                0
-              ]
             }
           ]
         }

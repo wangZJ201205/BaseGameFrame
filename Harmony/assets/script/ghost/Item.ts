@@ -8,7 +8,7 @@ import GameData from "../common/GameData";
 import DictMgr from "../manager/DictMgr";
 import EventMgr from "../manager/EventMgr";
 import ItemMgr from "../manager/ItemMgr";
-import ItemSkinComponent from "./Component/children/ItemSkinComponent";
+import ItemSkinComponent from "./component/children/ItemSkinComponent";
 import Entity from "./Entity";
 import Hero from "./Hero";
 

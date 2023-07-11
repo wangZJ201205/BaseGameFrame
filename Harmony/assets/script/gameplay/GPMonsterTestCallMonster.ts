@@ -68,9 +68,10 @@ export default class GPMonsterTestCallMonster {
         // monsters.push(200009);
         // monsters.push(200010);
         // monsters.push(200011);
+        // monsters.push(200012);
         // monsters.push(200013);
         // monsters.push(200014);
-        monsters.push(200015);
+        // monsters.push(200015);
         // monsters.push(200016);
         // monsters.push(200017);
         // monsters.push(200018);
@@ -94,42 +95,15 @@ export default class GPMonsterTestCallMonster {
         // monsters.push(200036);
         // monsters.push(200037);
         // monsters.push(200038);
-
+        monsters.push(200039);
 
         var id = Math.random()*monsters.length ;
         id = monsters[ Math.floor(id) ];
         var entity = GhostMgr.Instance.spawnEntity(id); // 200001怪物id 怪物的释放规则还没有实现
         entity.restart();
-
-        var direction = this.calculateRandomDirection();
-        var position = this.calculateSpawnPosition(direction);
-
-        entity.getEntityNode().setPosition(position.x, position.y);
-        entity.getEntityNode().zIndex = GameData.App_Game_Heigth - position.y;
+        entity.randomEntityPosition();
+        
     }
 
-    private calculateRandomDirection() {
-        var randX = Math.random() * 2 - 1;
-        var randY = Math.random() * 2 - 1;
-        return new cc.Vec2(randX, randY);
-    }
-    
-    private calculateSpawnPosition(direction) {
-        var heroPosition = Hero.Instance.getEntity().position;
-        var x = 0;
-        var y = 0;
-    
-        if (direction.x < 0) {
-            x = Math.random() * GameData.App_Game_Width + heroPosition.x - GameData.App_Game_Width / 2;
-            y = direction.y < 0 ? -360 : 360;
-            y += heroPosition.y;
-        } else {
-            y = Math.random() * GameData.App_Game_Heigth + heroPosition.y - GameData.App_Game_Heigth / 2;
-            x = direction.y < 0 ? -640 : 640;
-            x += heroPosition.x;
-        }
-    
-        return new cc.Vec2(x, y);
-    }
 
 }

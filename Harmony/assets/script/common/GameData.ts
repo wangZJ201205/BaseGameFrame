@@ -29,7 +29,7 @@ export default class GameData{
     public static Hero_Current_ID : number = 100002; //当前英雄id
 
     public static Monster_Show_Amount : number = 0; //游戏中展示的怪物数量
-    public static Monster_And_Hero_Min_Distance : number = 30; //怪物和人物之间最短距离
+    public static Monster_And_Hero_Min_Distance : number = 50; //怪物和人物之间最短距离
     public static Monster_And_Hero_Max_Distance : number = GameData.App_Game_Width / 2 + 200; //怪物和人物之间最短距离
 
 

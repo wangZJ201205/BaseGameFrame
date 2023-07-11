@@ -1,6 +1,6 @@
 {
   "__type__": "cc.AnimationClip",
-  "_name": "boss_gulthak_walk_cp",
+  "_name": "walk",
   "_objFlags": 0,
   "_native": "",
   "_duration": 0.2833333333333333,
@@ -130,7 +130,7 @@
               "frame": 0,
               "value": [
                 0,
-                61,
+                0,
                 0
               ]
             }
@@ -258,7 +258,7 @@
               "frame": 0,
               "value": [
                 0,
-                61,
+                0,
                 0
               ]
             }

@@ -21,7 +21,7 @@ function handle_map_rule(o)
 		return
 	end
 
-	d.time = tonumber(o.b) * 1000
+	d.time = tonumber(o.b) * 10
 	d.group = tonumber(o.c)
 	d.monster = tonumber(o.d)
 	d.delay = tonumber(o.e)

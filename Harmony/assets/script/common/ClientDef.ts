@@ -33,6 +33,7 @@ export default class ClientDef{
     public static readonly ENTITY_COMP_BLOOM : number = 2; //对象组件 - 血条
     public static readonly ENTITY_COMP_TITLE : number = 3; //对象组件 - 称号
     public static readonly ENTITY_COMP_COLL : number = 4; //对象组件 - 碰撞
+    public static readonly ENTITY_COMP_NAME : number = 5; //对象组件 - 名字
 
     //对象组件运行状态
     public static readonly COMP_STATE_LOAD : number = 1; //组件状态--加载
@@ -185,6 +186,7 @@ export default class ClientDef{
     //基因类型
     public static readonly GENE_TYPE_SPEED : number = 1; //速度
     public static readonly GENE_TYPE_POSION : number = 2; //毒
+    public static readonly GENE_TYPE_SHAPESHIFT : number = 3; //变身
 
     //游戏暂停列表
     public static readonly GAME_PAUSE_UPGRADE : number  = 1 << 1; //升级界面

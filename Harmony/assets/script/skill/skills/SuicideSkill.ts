@@ -4,7 +4,7 @@
 
 import ClientDef from "../../common/ClientDef";
 import Hero from "../../ghost/Hero";
-import DictMgr from "../../manager/DictMgr";
+import GameHelp from "../../help/GameHelp";
 import SkillParent from "../SkillParent";
 
 
@@ -30,6 +30,9 @@ export default class SuicideSkill extends SkillParent {
 
         this.getHost().getEntityNode().active = false;
         this.getHost().setClientProp(ClientDef.ENTITY_PROP_ACTIVE_STATE, ClientDef.ENTITY_ACTIVE_STATE_FREE);
+
+        //抖动
+        GameHelp.shakeBody(tgt);
     }
 
 }

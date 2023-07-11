@@ -1,8 +1,10 @@
 import ClientDef from "../../common/ClientDef";
+import GameData from "../../common/GameData";
 import Entity from "../Entity";
 import BloomComponent from "./children/BloomComponent";
 import ClothComponent from "./children/ClothComponent";
 import CollComponent from "./children/CollComponent";
+import NameComponent from "./children/NameComponent";
 import TitleComponent from "./children/TitleComponent";
 
 /**
@@ -36,6 +38,12 @@ export default class ComponentMgr{
         title.onLoad(host);
         this.addEntityComponent(ClientDef.ENTITY_COMP_TITLE,title);
 
+        if(GameData.IsDebug)
+        {
+            var name = new NameComponent();
+            name.onLoad(host);
+            this.addEntityComponent(ClientDef.ENTITY_COMP_NAME,name);
+        }
     }
 
     start () 
@@ -43,6 +51,10 @@ export default class ComponentMgr{
         this.getEntityComponent(ClientDef.ENTITY_COMP_CLOTH).start();
         this.getEntityComponent(ClientDef.ENTITY_COMP_BLOOM).start();
         this.getEntityComponent(ClientDef.ENTITY_COMP_TITLE).start();
+        if(GameData.IsDebug)
+        {
+            this.getEntityComponent(ClientDef.ENTITY_COMP_NAME).start();
+        }
         this.addCollision();
     }
 

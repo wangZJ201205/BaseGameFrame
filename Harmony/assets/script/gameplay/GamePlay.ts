@@ -115,9 +115,13 @@ export default class GamePlay {
         UIMgr.Instance.openUI(UIName.ROCKVIEW);
         UIMgr.Instance.openUI(UIName.VIEW_PLAYER_PGB);
         UIMgr.Instance.openUI(UIName.VIEW_ADVERTISEMENT);
-        if(GameData.IsDebug)
+        if(GameData.Game_Mode == ClientDef.GAME_MODE_TEST_CALL_MONSTER)
         {
             UIMgr.Instance.openUI(UIName.TESTVIEW);
+        }
+        else if(GameData.Game_Mode == ClientDef.GAME_MODE_NORMAL)
+        {
+            UIMgr.Instance.openUI(UIName.VIEW_PLAY_GAMING_TOP);
         }
     }
 

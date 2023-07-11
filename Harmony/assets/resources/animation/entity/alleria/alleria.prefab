@@ -56,7 +56,7 @@
       "ctor": "Float64Array",
       "array": [
         0,
-        26,
+        0,
         0,
         0,
         0,
@@ -171,9 +171,7 @@
     "_fillStart": 0,
     "_fillRange": 0,
     "_isTrimmedMode": false,
-    "_atlas": {
-      "__uuid__": "3b6a6b51-816e-4e4a-ab99-c78a3f939885"
-    },
+    "_atlas": null,
     "_id": ""
   },
   {
@@ -278,9 +276,7 @@
     "_fillStart": 0,
     "_fillRange": 0,
     "_isTrimmedMode": false,
-    "_atlas": {
-      "__uuid__": "3b6a6b51-816e-4e4a-ab99-c78a3f939885"
-    },
+    "_atlas": null,
     "_id": ""
   },
   {

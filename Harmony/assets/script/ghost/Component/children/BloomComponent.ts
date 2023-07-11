@@ -84,7 +84,7 @@ export default class BloomComponent extends ComponentParent {
         {
             var size:string = entityInfo.collRect;
             var collSize:string[] = size.split(",");
-            this._height = Number(collSize[3]);
+            this._height = Number(collSize[3])/2;
         }
     }
 
@@ -122,6 +122,9 @@ export default class BloomComponent extends ComponentParent {
         //伤害弹跳
         var showDamageValue = this._curBloom > damageValue ? damageValue : this._curBloom;
         HeadEffectMgr.Instance.addDamageTips(1,showDamageValue,this._host.getPosition());
+
+        var entityInfo = this.getHost().getEntityDict();
+        HeadEffectMgr.Instance.addBloomEffect(1, entityInfo["bloomEffect"] ,this._host.getPosition());
         // var type = 1;
         // LabelMgr.Instance.addLabel(type,showDamageValue,this._host.getPosition());
 
@@ -138,10 +141,6 @@ export default class BloomComponent extends ComponentParent {
         if( this._curBloom <= 0 )
         {
             this.checkShapeShift();
-        }
-        else
-        {
-            this.shakeBody();
         }
     }
 
@@ -173,23 +172,6 @@ export default class BloomComponent extends ComponentParent {
         }
     }
 
-    //添加抖动效果
-    shakeBody()
-    {
-        if(this._curBloom <= 0 )
-        {
-            return;
-        }
-        cc.tween(this._host)
-        .to(0.05, { position: cc.v3(this._host.position.x - 5, this._host.position.y) })
-        .to(0.05, { position: cc.v3(this._host.position.x + 5, this._host.position.y) })
-        .to(0.05, { position: cc.v3(this._host.position.x - 5, this._host.position.y) })
-        .to(0.05, { position: cc.v3(this._host.position.x + 5, this._host.position.y) })
-        .to(0.05, { position: cc.v3(this._host.position.x - 5, this._host.position.y) })
-        .to(0.05, { position: cc.v3(this._host.position.x + 5, this._host.position.y) })
-        .to(0.05, { position: cc.v3(this._host.position.x - 5, this._host.position.y) })
-        .to(0.05, { position: cc.v3(this._host.position.x,     this._host.position.y) })
-        .start();
-    }
+    
 
 }

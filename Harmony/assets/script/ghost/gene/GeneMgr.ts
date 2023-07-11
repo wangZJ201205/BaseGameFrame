@@ -25,6 +25,7 @@ export default class GeneMgr
         
         this._typeClass = {};
         this._typeClass[ClientDef.GENE_TYPE_SPEED] = SpeedGene;
+        this._typeClass[ClientDef.GENE_TYPE_SHAPESHIFT] = SpeedGene;
 
     }
 

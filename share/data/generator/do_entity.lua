@@ -39,6 +39,7 @@ function handle_entity(o)
 	d.moveType = MoveType[o.k]
 	d.boss = tonumber(o.l) or 0
 	d.shapeshift = tonumber(o.m) or 0
+	d.bloomEffect = o.n
 	gdentity[tostring(d.id)] = d
 end
 

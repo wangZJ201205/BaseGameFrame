@@ -14,8 +14,8 @@ export default class ItemSkinComponent extends ComponentParent {
     {
 
         var entityInfo = this.getHost().getEntityDict();
-        var loadPath = "item/itemsAlas" ;
-        LoadMgr.Instance.LoadAsset(loadPath,(asset)=>
+        var loadPath = "item/itemAlas" ;
+        LoadMgr.Instance.LoadAssetWithType(loadPath,cc.SpriteAtlas,(asset)=>
             {
                 if(this.getState() == ClientDef.COMP_STATE_REMOVE)
                 {

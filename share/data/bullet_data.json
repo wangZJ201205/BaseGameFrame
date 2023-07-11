@@ -69,7 +69,7 @@
 		"animation": 1,
 		"atlas": "skill_res",
 		"attackMoveType": 2,
-		"collRect": "2,2,50,20",
+		"collRect": "2,2,30,20",
 		"collision": 1,
 		"preftab": "0",
 		"scriptID": 11,

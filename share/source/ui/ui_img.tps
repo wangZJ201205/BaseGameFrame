@@ -224,6 +224,11 @@
             <filename>special_powers_icon_7.png</filename>
             <filename>heroroom_upgradeIcons_0010.png</filename>
             <filename>hero_portraits_0008.png</filename>
+            <filename>optionsUI_button.png</filename>
+            <filename>optionsUI_button_over.png</filename>
+            <filename>achievementsBanner.png</filename>
+            <filename>upgrades_buyBut_0001.png</filename>
+            <filename>gui_bottom_info_icon_0005.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>
