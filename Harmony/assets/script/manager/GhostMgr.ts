@@ -113,7 +113,7 @@ export default class GhostMgr extends ParentMgr {
         for (let index = 0; index < this.entitys.length; index++) {
             const element = this.entitys[index];
             if( element.getClientProp(ClientDef.ENTITY_PROP_ACTIVE_STATE) == ClientDef.ENTITY_ACTIVE_STATE_FREE  && 
-                element.getClientProp(ClientDef.ENTITY_PROP_TYPE) == entityType) //判断状态和对象类型
+                element.getClientProp(ClientDef.ENTITY_PROP_STATICID) == entityStaticID) //判断状态和对象类型
             {
                 entity = element;
                 break;
@@ -125,7 +125,7 @@ export default class GhostMgr extends ParentMgr {
             entity = new (this._typeClass[entityType ])();
             entity.onLoad();
             entity.setClientProp(ClientDef.ENTITY_PROP_TYPE,entityType);
-            entity.setClientProp(ClientDef.ENTITY_PROP_STATICID,"" + entityStaticID);
+            entity.setClientProp(ClientDef.ENTITY_PROP_STATICID, entityStaticID);
             entity.start();
             this.layer.addChild(entity);
             this.addEntity(entity)

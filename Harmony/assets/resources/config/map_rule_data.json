@@ -1,6 +1,7 @@
 {
 	"10001": [
 		{"createCount": -1,"delay": 1500,"group": 0,"monster": 200002,"sceneid": 10001,"time": 10},
+		{"createCount": 1,"delay": 0,"group": 0,"monster": 200012,"sceneid": 10001,"time": 20},
 		{"createCount": -1,"delay": 2000,"group": 0,"monster": 200003,"sceneid": 10001,"time": 600},
 		{"createCount": 100,"delay": 1000,"group": 0,"monster": 200004,"sceneid": 10001,"time": 1200},
 		{"createCount": 1,"delay": 0,"group": 0,"monster": 200012,"sceneid": 10001,"time": 1800},

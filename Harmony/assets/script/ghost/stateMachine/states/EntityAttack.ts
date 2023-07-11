@@ -60,7 +60,6 @@ export default class EntityAttack extends StateParent {
         var skill : SkillParent = this.findReleasableSkill();
         if(skill)
         {
-            console.info(">>>>>>>>>>>>>>>>>>>>"+skill.getStaticId());
             skill.releaseShootBullet();
             this._skillReleaseState = true;
             var cloth = this._host.getEntityComponent(ClientDef.ENTITY_COMP_CLOTH);
