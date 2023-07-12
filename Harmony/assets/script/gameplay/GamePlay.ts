@@ -80,19 +80,22 @@ export default class GamePlay {
         EventMgr.Instance.Emit(EventName.UI_CLOSE_PANEL + UIName.VIEW_ADVERTISEMENT,null);
         EventMgr.Instance.Emit(EventName.UI_CLOSE_PANEL + UIName.VIEW_SELECTSKILL,null);
         
-        if(GameData.IsDebug)
+        if(GameData.Game_Mode == ClientDef.GAME_MODE_TEST_CALL_MONSTER)
         {
             EventMgr.Instance.Emit(EventName.UI_CLOSE_PANEL + UIName.TESTVIEW,null);
+        }
+        else if(GameData.Game_Mode == ClientDef.GAME_MODE_NORMAL)
+        {
+            EventMgr.Instance.Emit(EventName.UI_CLOSE_PANEL + UIName.VIEW_PLAY_GAMING_TOP,null);
         }
     }
     
     update () 
     {
-        if(GameHelp.GetGamePauseState())
+        if(GameHelp.GetGamePauseState()) //游戏停止状态
         {
             return;
         }
-
         if(GameData.Game_Mode == ClientDef.GAME_MODE_NORMAL)
         {
             this._gpMonster.update();

@@ -148,107 +148,31 @@
         </struct>
         <key>fileList</key>
         <array>
-            <filename>skill_fireball.png</filename>
-            <filename>skill_iceball.png</filename>
-            <filename>i_jpql_01.png</filename>
-            <filename>i_jpql_02.png</filename>
-            <filename>i_jpql_03.png</filename>
-            <filename>sword_176.png</filename>
-            <filename>skill_zhanshi_banyue_13.png</filename>
             <filename>fire_bunch.png</filename>
             <filename>darkarmy_archer_arrow_lvl4.png</filename>
-            <filename>fire_horse/hero_jack_o_lantern_ultimate_horse_0001.png</filename>
-            <filename>fire_horse/hero_jack_o_lantern_ultimate_horse_0002.png</filename>
-            <filename>fire_horse/hero_jack_o_lantern_ultimate_horse_0003.png</filename>
-            <filename>fire_horse/hero_jack_o_lantern_ultimate_horse_0004.png</filename>
-            <filename>fire_horse/hero_jack_o_lantern_ultimate_horse_0005.png</filename>
-            <filename>fire_horse/hero_jack_o_lantern_ultimate_horse_0006.png</filename>
-            <filename>fire_horse/hero_jack_o_lantern_ultimate_horse_0007.png</filename>
-            <filename>fire_horse/hero_jack_o_lantern_ultimate_horse_0008.png</filename>
-            <filename>fire_horse/hero_jack_o_lantern_ultimate_horse_0009.png</filename>
-            <filename>fire_horse/hero_jack_o_lantern_ultimate_horse_0010.png</filename>
-            <filename>fire_horse/hero_jack_o_lantern_ultimate_horse_0011.png</filename>
-            <filename>fire_horse/hero_jack_o_lantern_ultimate_horse_0012.png</filename>
-            <filename>fire_horse/hero_jack_o_lantern_ultimate_horse_0013.png</filename>
-            <filename>fire_horse/hero_jack_o_lantern_ultimate_horse_0014.png</filename>
-            <filename>fire_horse/hero_jack_o_lantern_ultimate_horse_0015.png</filename>
-            <filename>fire_horse/hero_jack_o_lantern_ultimate_horse_0016.png</filename>
-            <filename>fire_horse/hero_jack_o_lantern_ultimate_horse_0017.png</filename>
-            <filename>fire_horse/hero_jack_o_lantern_ultimate_horse_0018.png</filename>
-            <filename>fire_horse/hero_jack_o_lantern_ultimate_horse_0019.png</filename>
-            <filename>fire_horse/hero_jack_o_lantern_ultimate_horse_0020.png</filename>
-            <filename>fire_horse/hero_jack_o_lantern_ultimate_horse_0021.png</filename>
-            <filename>fire_horse/hero_jack_o_lantern_ultimate_horse_0022.png</filename>
-            <filename>fire_horse/hero_jack_o_lantern_ultimate_horse_0023.png</filename>
-            <filename>fire_horse/hero_jack_o_lantern_ultimate_horse_0024.png</filename>
-            <filename>fire_horse/hero_jack_o_lantern_ultimate_horse_0025.png</filename>
-            <filename>fire_horse/hero_jack_o_lantern_ultimate_horse_0026.png</filename>
-            <filename>fire_horse/hero_jack_o_lantern_ultimate_horse_0027.png</filename>
-            <filename>fire_horse/hero_jack_o_lantern_ultimate_horse_0028.png</filename>
-            <filename>fire_horse/hero_jack_o_lantern_ultimate_horse_0029.png</filename>
-            <filename>fire_horse/hero_jack_o_lantern_ultimate_horse_0030.png</filename>
-            <filename>fire_horse/hero_jack_o_lantern_ultimate_horse_0031.png</filename>
-            <filename>fire_horse/hero_jack_o_lantern_ultimate_horse_0032.png</filename>
-            <filename>fire_horse/hero_jack_o_lantern_ultimate_horse_0033.png</filename>
-            <filename>fire_horse/hero_jack_o_lantern_ultimate_horse_0034.png</filename>
-            <filename>fire_horse/hero_jack_o_lantern_ultimate_horse_0035.png</filename>
-            <filename>fire_horse/hero_jack_o_lantern_ultimate_horse_0036.png</filename>
-            <filename>fire_horse/hero_jack_o_lantern_ultimate_particle_0001.png</filename>
-            <filename>fire_horse/hero_jack_o_lantern_ultimate_particle_0002.png</filename>
-            <filename>fire_horse/hero_jack_o_lantern_ultimate_particle_0003.png</filename>
-            <filename>fire_horse/hero_jack_o_lantern_ultimate_particle_0004.png</filename>
-            <filename>fire_horse/hero_jack_o_lantern_ultimate_particle_0005.png</filename>
-            <filename>fire_horse/hero_jack_o_lantern_ultimate_particle_0006.png</filename>
-            <filename>fire_horse/hero_jack_o_lantern_ultimate_particle_0007.png</filename>
-            <filename>fire_horse/hero_jack_o_lantern_ultimate_particle_0008.png</filename>
-            <filename>fire_horse/hero_jack_o_lantern_ultimate_particle_0009.png</filename>
-            <filename>fire_horse/hero_jack_o_lantern_ultimate_particle_0010.png</filename>
-            <filename>fire_horse/hero_jack_o_lantern_ultimate_smoke_0001.png</filename>
-            <filename>fire_horse/hero_jack_o_lantern_ultimate_smoke_0002.png</filename>
-            <filename>fire_horse/hero_jack_o_lantern_ultimate_smoke_0003.png</filename>
-            <filename>fire_horse/hero_jack_o_lantern_ultimate_smoke_0004.png</filename>
-            <filename>fire_horse/hero_jack_o_lantern_ultimate_smoke_0005.png</filename>
-            <filename>fire_horse/hero_jack_o_lantern_ultimate_smoke_0006.png</filename>
-            <filename>fire_horse/hero_jack_o_lantern_ultimate_smoke_0007.png</filename>
-            <filename>fire_horse/hero_jack_o_lantern_ultimate_smoke_0008.png</filename>
-            <filename>fire_horse/hero_jack_o_lantern_ultimate_smoke_0009.png</filename>
-            <filename>fire_horse/hero_jack_o_lantern_ultimate_smoke_0010.png</filename>
-            <filename>fire_horse/hero_jack_o_lantern_ultimate_smoke_0011.png</filename>
-            <filename>fire_horse/hero_jack_o_lantern_ultimate_smoke_0012.png</filename>
-            <filename>fire_horse/hero_jack_o_lantern_ultimate_smoke_0013.png</filename>
-            <filename>fire_horse/hero_jack_o_lantern_ultimate_smoke_0014.png</filename>
-            <filename>fire_horse/hero_jack_o_lantern_ultimate_smoke_0015.png</filename>
-            <filename>fire_horse/hero_jack_o_lantern_ultimate_smoke_0016.png</filename>
-            <filename>fire_horse/hero_jack_o_lantern_ultimate_smoke_0017.png</filename>
-            <filename>fire_horse/hero_jack_o_lantern_ultimate_smoke_0018.png</filename>
-            <filename>fire_horse/hero_jack_o_lantern_ultimate_smoke_0019.png</filename>
-            <filename>fire_horse/hero_jack_o_lantern_ultimate_smoke_0020.png</filename>
-            <filename>fire_horse/hero_jack_o_lantern_ultimate_smoke_0021.png</filename>
             <filename>shooter_lvl4_proyectile.png</filename>
             <filename>alleria_arrow_multishoot.png</filename>
             <filename>stage13_elf_arrow.png</filename>
             <filename>alleria_arrow.png</filename>
-            <filename>boom/warmongers_rocket_tower_lvl4_blue_explosion_0001.png</filename>
-            <filename>boom/warmongers_rocket_tower_lvl4_blue_explosion_0002.png</filename>
-            <filename>boom/warmongers_rocket_tower_lvl4_blue_explosion_0003.png</filename>
-            <filename>boom/warmongers_rocket_tower_lvl4_blue_explosion_0004.png</filename>
-            <filename>boom/warmongers_rocket_tower_lvl4_blue_explosion_0005.png</filename>
-            <filename>boom/warmongers_rocket_tower_lvl4_blue_explosion_0006.png</filename>
-            <filename>boom/warmongers_rocket_tower_lvl4_blue_explosion_0007.png</filename>
-            <filename>boom/warmongers_rocket_tower_lvl4_blue_explosion_0008.png</filename>
-            <filename>boom/warmongers_rocket_tower_lvl4_blue_explosion_0009.png</filename>
-            <filename>boom/warmongers_rocket_tower_lvl4_blue_explosion_0010.png</filename>
-            <filename>boom/warmongers_rocket_tower_lvl4_blue_explosion_0011.png</filename>
-            <filename>boom/warmongers_rocket_tower_lvl4_blue_explosion_0012.png</filename>
-            <filename>boom/warmongers_rocket_tower_lvl4_blue_explosion_0013.png</filename>
-            <filename>boom/warmongers_rocket_tower_lvl4_blue_explosion_0014.png</filename>
-            <filename>boom/warmongers_rocket_tower_lvl4_blue_explosion_0015.png</filename>
-            <filename>boom/warmongers_rocket_tower_lvl4_blue_explosion_0016.png</filename>
-            <filename>boom/warmongers_rocket_tower_lvl4_blue_explosion_0017.png</filename>
-            <filename>boom/warmongers_rocket_tower_lvl4_blue_explosion_0018.png</filename>
             <filename>spirit_mausoleum_bolt_0002.png</filename>
             <filename>ember_lords_mage_tower_bolt_lvl4_0001.png</filename>
             <filename>hero_jigou_iceshard.png</filename>
+            <filename>svell_druid_proyectile_0001.png</filename>
+            <filename>apex_shard_proyectile.png</filename>
+            <filename>fireball_proyectile_0004.png</filename>
+            <filename>fireball_proyectile_0005.png</filename>
+            <filename>fireball_proyectile_0006.png</filename>
+            <filename>fireball_proyectile_0001.png</filename>
+            <filename>fireball_proyectile_0002.png</filename>
+            <filename>fireball_proyectile_0003.png</filename>
+            <filename>hero_murglun_ultimate_proy.png</filename>
+            <filename>hero_tank_ultimate_proyectile.png</filename>
+            <filename>juggernaut_bomb.png</filename>
+            <filename>hero_tank_missile_proyectile.png</filename>
+            <filename>hero_tank_simple_proyectile.png</filename>
+            <filename>arcane_mage_projectile.png</filename>
+            <filename>boss_dwarf_mecha_proyectile_0001.png</filename>
+            <filename>hero_murglun_lava_blood_proy.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>

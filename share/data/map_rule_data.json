@@ -1,23 +1,26 @@
 {
 	"10001": [
-		{"createCount": -1,"delay": 1500,"group": 0,"monster": 200002,"sceneid": 10001,"time": 10},
-		{"createCount": 1,"delay": 0,"group": 0,"monster": 200012,"sceneid": 10001,"time": 20},
-		{"createCount": -1,"delay": 2000,"group": 0,"monster": 200003,"sceneid": 10001,"time": 600},
-		{"createCount": 100,"delay": 1000,"group": 0,"monster": 200004,"sceneid": 10001,"time": 1200},
-		{"createCount": 1,"delay": 0,"group": 0,"monster": 200012,"sceneid": 10001,"time": 1800},
-		{"createCount": -1,"delay": 3000,"group": 0,"monster": 200005,"sceneid": 10001,"time": 2400},
-		{"createCount": -1,"delay": 2000,"group": 0,"monster": 200006,"sceneid": 10001,"time": 3000},
-		{"createCount": 150,"delay": 500,"group": 0,"monster": 200007,"sceneid": 10001,"time": 3500},
-		{"createCount": 1,"delay": 0,"group": 0,"monster": 200013,"sceneid": 10001,"time": 3600},
-		{"createCount": -1,"delay": 1000,"group": 0,"monster": 200008,"sceneid": 10001,"time": 4800},
-		{"createCount": -1,"delay": 1500,"group": 0,"monster": 200009,"sceneid": 10001,"time": 5400},
-		{"createCount": -1,"delay": 1000,"group": 0,"monster": 200010,"sceneid": 10001,"time": 6000},
-		{"createCount": 1,"delay": 0,"group": 0,"monster": 200014,"sceneid": 10001,"time": 6600}
+		{"createCount": 15,"delay": 2000,"monster": 200002,"sceneid": 10001,"time": 10},
+		{"createCount": -1,"delay": 5000,"monster": 200002,"sceneid": 10001,"time": 300},
+		{"createCount": 15,"delay": 2000,"monster": 200003,"sceneid": 10001,"time": 600},
+		{"createCount": -1,"delay": 5000,"monster": 200003,"sceneid": 10001,"time": 900},
+		{"createCount": 100,"delay": 1000,"monster": 200004,"sceneid": 10001,"time": 2400},
+		{"createCount": -1,"delay": 5000,"monster": 200004,"sceneid": 10001,"time": 2700},
+		{"createCount": 1,"delay": 0,"monster": 200012,"sceneid": 10001,"time": 3600},
+		{"createCount": 15,"delay": 3000,"monster": 200005,"sceneid": 10001,"time": 4800},
+		{"createCount": -1,"delay": 3000,"monster": 200005,"sceneid": 10001,"time": 5400},
+		{"createCount": -1,"delay": 2000,"monster": 200006,"sceneid": 10001,"time": 6000},
+		{"createCount": 150,"delay": 500,"monster": 200007,"sceneid": 10001,"time": 7200},
+		{"createCount": 1,"delay": 0,"monster": 200013,"sceneid": 10001,"time": 8400},
+		{"createCount": -1,"delay": 1000,"monster": 200008,"sceneid": 10001,"time": 9600},
+		{"createCount": -1,"delay": 2000,"monster": 200009,"sceneid": 10001,"time": 10800},
+		{"createCount": -1,"delay": 2000,"monster": 200010,"sceneid": 10001,"time": 12000},
+		{"createCount": 1,"delay": 0,"monster": 200014,"sceneid": 10001,"time": 13200}
 	],
 	"10002": [
-		{"createCount": -1,"delay": 100,"group": 1,"monster": 200002,"sceneid": 10002,"time": 10},
-		{"createCount": 1,"delay": 0,"group": 2,"monster": 200003,"sceneid": 10002,"time": 300},
-		{"createCount": -1,"delay": 90,"group": 1,"monster": 200002,"sceneid": 10002,"time": 600},
-		{"createCount": -1,"delay": 500,"group": 3,"monster": 200002,"sceneid": 10002,"time": 800}
+		{"createCount": 100,"delay": 200002,"monster": 1,"sceneid": 10002,"time": 10},
+		{"createCount": 0,"delay": 200003,"monster": 2,"sceneid": 10002,"time": 300},
+		{"createCount": 90,"delay": 200002,"monster": 1,"sceneid": 10002,"time": 600},
+		{"createCount": 500,"delay": 200002,"monster": 3,"sceneid": 10002,"time": 800}
 	]
 }

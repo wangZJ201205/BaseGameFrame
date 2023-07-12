@@ -29,11 +29,9 @@ export default class ArcheryBullet extends BulletParent {
     {   
 
         //设置方向
-        const degree = Hero.Instance.getEntity().getClientProp(ClientDef.ENTITY_PROP_DEGREE);
-        var dir = GameMath.degreeToEntityDirection2(degree);
-        var angle = dir == 2 ? 180 : 0;
-        this.getNode().scaleX = -1;
         
+        this.getNode().scaleX = -1;
+        var angle = this.getProp(ClientDef.BULLET_PROP_ANGLE);
         var direction = BulletHelp.AngleConvertDirection(angle);
         this.getNode().angle = GameMath.directionToAngle(direction);
         this.setProp(ClientDef.BULLET_PROP_DIRECTION , direction);

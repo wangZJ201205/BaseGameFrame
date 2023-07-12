@@ -26,6 +26,9 @@ export default class GamingTopView extends UIParent {
     @property(cc.Label)
     monsterLab: cc.Label = null;
 
+    @property(cc.Label)
+    killMonstersLab: cc.Label = null;
+
     _runTime : number;
 
     onLoad () 
@@ -64,8 +67,8 @@ export default class GamingTopView extends UIParent {
         {
             return;
         }
-        this.monsterLab.string = GhostMgr.Instance.entitys.length + "";
-        
+        this.monsterLab.string = "怪物数量:" + GhostMgr.Instance.entitys.length;
+        this.killMonstersLab.string = "杀死数量:" + GameData.Kill_Monster_Count;
         this._runTime++;
         this.time.string = GameMath.convertToTimeFormat(this._runTime);
     }

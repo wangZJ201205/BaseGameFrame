@@ -12,7 +12,8 @@ export default class GameHelp  {
 
     //获取游戏状态
     static GetGamePauseState()
-    {
+    {   
+        
         if((GameData.Game_Pause_FLAG & ClientDef.GAME_PAUSE_UPGRADE) == ClientDef.GAME_PAUSE_UPGRADE)
         {
             return true;
@@ -25,6 +26,12 @@ export default class GameHelp  {
         {
             return true;
         }
+
+        if(!GameData.Game_Show) //游戏是否显示或进入后台状态
+        {
+            return true;
+        }
+
         return false;
     }
 

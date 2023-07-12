@@ -37,7 +37,7 @@ export default class ItemMgr extends ParentMgr {
         this._layer.height = cc.winSize.height;
         this._layer.parent = SceneMgr.Instance.getLayer();
 
-        this._timerID = setInterval(this.update.bind(this), 1000);
+        this._timerID = setInterval(this.update.bind(this), 200);
     }
 
     clear()
@@ -49,13 +49,13 @@ export default class ItemMgr extends ParentMgr {
         this.spawnItemId = 0;
     }
 
-    private update (dt) {
+    private update (dt) 
+    {
         
         if(GameHelp.GetGamePauseState())
         {
             return;
         }
-
         const delta = cc.director.getDeltaTime();
         this._items = this._items.filter((element) => {
             if (element.getClientProp(ClientDef.ENTITY_PROP_ACTIVE_STATE) === ClientDef.ENTITY_ACTIVE_STATE_RUN) 

@@ -22,10 +22,10 @@ function handle_map_rule(o)
 	end
 
 	d.time = tonumber(o.b) * 10
-	d.group = tonumber(o.c)
-	d.monster = tonumber(o.d)
-	d.delay = tonumber(o.e)
-	d.createCount = tonumber(o.f) -- -1无限 >1 一次以上  控制怪物数量
+	-- d.group = tonumber(o.c)
+	d.monster = tonumber(o.c)
+	d.delay = tonumber(o.d)
+	d.createCount = tonumber(o.e) -- -1无限 >1 一次以上  控制怪物数量
 
 	if not gdmapRule[d.sceneid..""] then
 		gdmapRule[d.sceneid..""] = {}

@@ -19,6 +19,8 @@ export default class EntityDie extends StateParent {
         this._delay = cc.director.getTotalTime();
         super.start();
         this._host.getGene().removeGeneAfterDead();
+
+        this.dropItem();
     }
 
     update (dt) 
@@ -26,7 +28,6 @@ export default class EntityDie extends StateParent {
         var durTime = cc.director.getTotalTime() - this._delay;
         if(durTime >= GameData.Entity_Dead_Time)
         {
-            this.dropItem();
             this.getHost().stopAllActions();
             this.getHost().active = false;
             this.getHost().setClientProp(ClientDef.ENTITY_PROP_ACTIVE_STATE, ClientDef.ENTITY_ACTIVE_STATE_FREE);
@@ -44,7 +45,6 @@ export default class EntityDie extends StateParent {
         }
 
         var item = ItemMgr.Instance.spawnItem(Number(dropItem));
-        // var item = GhostMgr.Instance.spawnItem(Number(dropItem));
         if(item)
         {
             item.restart();

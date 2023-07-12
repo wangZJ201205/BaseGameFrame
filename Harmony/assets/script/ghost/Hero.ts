@@ -19,13 +19,6 @@ export default class Hero{
     }
 
     start () {
-        // this._entity.getSkill().addSkill(10101);
-        // this._entity.getSkill().addSkill(10201);
-        // this._entity.getSkill().addSkill(10301);
-        // this._entity.getSkill().addSkill(10401);
-        // this._entity.getSkill().addSkill(10501);
-        // this._entity.getSkill().addSkill(10601);
-        this._entity.getGene().addGene(1001,this._entity);
         var info = this._entity.getEntityDict();
         this._entity.setClientProp(ClientDef.ENTITY_PROP_PICKUP_RANGE,info.pickRange);
         
@@ -61,7 +54,7 @@ export default class Hero{
         {
             UIMgr.Instance.openUI(UIName.VIEW_SELECTSKILL);
             this.setLevel(this._entity.getClientProp(ClientDef.ENTITY_PROP_LV) + 1);
-            this._entity.setClientProp(ClientDef.ENTITY_PROP_CUR_EXP, value- this._entity.getClientProp(ClientDef.ENTITY_PROP_MAX_EXP));
+            this._entity.setClientProp(ClientDef.ENTITY_PROP_CUR_EXP, 0);
         }
         else
         {

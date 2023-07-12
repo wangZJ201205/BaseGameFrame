@@ -11,7 +11,7 @@
 		"scriptID": 2,
 		"sound": "effect_skill_lhh",
 		"speed": 5,
-		"src": "skill_fireball",
+		"src": "hero_murglun_ultimate_proy",
 		"strike": 1,
 		"zorder": 1
 	},
@@ -267,7 +267,7 @@
 		"scriptID": 2,
 		"sound": "effect_skill_hbj",
 		"speed": 70,
-		"src": "hero_jigou_iceshard",
+		"src": "svell_druid_proyectile_0001",
 		"strike": 2,
 		"zorder": 1
 	},
@@ -452,6 +452,40 @@
 		"zorder": 1
 	},
 	"54": {"id": 54,"animation": 2,"atlas": "0","attackMoveType": 2,"collRect": "0","preftab": "skill_archmage_twister","scriptID": 16,"sound": "effect_skill_lls","src": "skill_archmage_twister_end","zorder": 1},
+	"55": {
+		"id": 55,
+		"animation": 1,
+		"atlas": "skill_res",
+		"attackMoveType": 2,
+		"collRect": "2,2,40,40",
+		"collision": 1,
+		"nextBullet": 40,
+		"particle": "blue_pt",
+		"preftab": "0",
+		"scriptID": 2,
+		"sound": "effect_skill_hbj",
+		"speed": 70,
+		"src": "apex_shard_proyectile",
+		"strike": 2,
+		"zorder": 1
+	},
+	"56": {
+		"id": 56,
+		"animation": 1,
+		"atlas": "skill_res",
+		"attackMoveType": 2,
+		"collRect": "2,2,60,60",
+		"collision": 1,
+		"nextBullet": 40,
+		"particle": "blue_pt",
+		"preftab": "0",
+		"scriptID": 2,
+		"sound": "effect_skill_hbj",
+		"speed": 70,
+		"src": "hero_jigou_iceshard",
+		"strike": 2,
+		"zorder": 1
+	},
 	"6": {
 		"id": 6,
 		"animation": 2,

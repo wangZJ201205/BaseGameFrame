@@ -96,6 +96,18 @@ export default class GameStart extends cc.Component {
     register()
     {
         EventMgr.Instance.On(EventName.EVENT_LOADED_MODULE,this.onLoaded,this);
+
+        cc.game.on(cc.game.EVENT_HIDE, () => {
+            // 游戏进入后台时的处理逻辑
+            GameData.Game_Show = false;
+            console.log('游戏进入后台');
+        });
+
+        cc.game.on(cc.game.EVENT_SHOW, () => {
+            // 游戏从后台返回前台时的处理逻辑
+            GameData.Game_Show = true;
+            console.log('游戏从后台返回前台');
+        });
     }
 
     update (dt) 

@@ -122,7 +122,7 @@ export default class GhostMgr extends ParentMgr {
 
         if (entity == null)
         {
-            entity = new (this._typeClass[entityType ])();
+            entity = new (this._typeClass[entityType])();
             entity.onLoad();
             entity.setClientProp(ClientDef.ENTITY_PROP_TYPE,entityType);
             entity.setClientProp(ClientDef.ENTITY_PROP_STATICID, entityStaticID);

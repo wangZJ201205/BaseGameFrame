@@ -1,4 +1,5 @@
 import ClientDef from "../../../common/ClientDef";
+import GameData from "../../../common/GameData";
 import HeadEffectMgr from "../../../manager/HeadEffectMgr";
 import LabelMgr from "../../../manager/LabelMgr";
 import LoadMgr from "../../../manager/LoadMgr";
@@ -156,6 +157,7 @@ export default class BloomComponent extends ComponentParent {
                 this._host.addEntityState(ClientDef.ENTITY_STATE_DIE);
                 this._host.refreshEntityState();
                 this._node.active = false;
+                GameData.Kill_Monster_Count ++;
             }
             else
             {
@@ -169,6 +171,7 @@ export default class BloomComponent extends ComponentParent {
             this._host.addEntityState(ClientDef.ENTITY_STATE_DIE);
             this._host.refreshEntityState();
             this._node.active = false;
+            GameData.Kill_Monster_Count ++;
         }
     }
 

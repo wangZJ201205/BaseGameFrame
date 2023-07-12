@@ -4,8 +4,6 @@
  */
 
 import GameData from "../common/GameData";
-import Hero from "../ghost/Hero";
-import GameHelp from "../help/GameHelp";
 import DictMgr from "../manager/DictMgr";
 import GhostMgr from "../manager/GhostMgr";
 
@@ -46,14 +44,17 @@ export default class GPMonster {
     update () 
     {
        
-
         var durTime : number = cc.director.getTotalTime() - this._deltaTime;
         if(durTime > 100)
         {
             this._duringTime ++;
             this._deltaTime = cc.director.getTotalTime();
         }
-
+        else
+        {
+            return;
+        }
+        
         const eventsToBeRemoved = [];
 
         for (let i = 0; i < this._eventArray.length; i++) 
@@ -96,7 +97,7 @@ export default class GPMonster {
 
     callMonster(monsterId)
     {
-        var entity = GhostMgr.Instance.spawnEntity(monsterId); // 200001怪物id 怪物的释放规则还没有实现
+        var entity = GhostMgr.Instance.spawnEntity(monsterId); 
         entity.restart();
         entity.randomEntityPosition();
     }

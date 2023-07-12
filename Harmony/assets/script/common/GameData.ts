@@ -53,6 +53,9 @@ export default class GameData{
 
     public static Entity_Dead_Time:number = 3000; //对象死亡时间
 
+    public static Game_Show : boolean = true; //true游戏显示 false游戏进入后台
+
+    public static Kill_Monster_Count : number = 0; //杀死怪物数量
 
 
 }
