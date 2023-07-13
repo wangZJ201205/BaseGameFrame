@@ -21,7 +21,7 @@ export default class Hero{
     start () {
         var info = this._entity.getEntityDict();
         this._entity.setClientProp(ClientDef.ENTITY_PROP_PICKUP_RANGE,info.pickRange);
-        
+        this._entity.getGene().addGene(1004);
         this.setLevel(1);
     }
 

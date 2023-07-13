@@ -37,7 +37,7 @@ export default class SelectSkillView extends UIParent {
         this._learnList.push(10401);
         // this._learnList.push(10501);
         this._learnList.push(10601);
-        // this._learnList.push(10701);
+        this._learnList.push(10701);
         // this._learnList.push(10801);
         // this._learnList.push(10901);
         this._learnList.push(11001);

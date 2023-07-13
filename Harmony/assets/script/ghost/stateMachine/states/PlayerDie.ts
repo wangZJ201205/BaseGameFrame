@@ -15,6 +15,7 @@ export default class PlayerDie extends StateParent {
     start () 
     {
         UIMgr.Instance.openUI(UIName.VIEW_PLAY_ADVERTISE);
+        this._host.getGene().removeGeneAfterDead();
     }
 
     stop()

@@ -21,18 +21,16 @@ export default class ShieldBallBullet extends BulletParent {
     restart()
     {   
         this._delta = cc.director.getTotalTime();
-        this._node.opacity = 125;
+        // this._node.opacity = 255;
         super.restart();
     }
 
     update (dt) 
     {
-        this._node.angle ++;
-        this._node.angle %= 360;
+        // this._node.angle ++;
+        // this._node.angle %= 360;
         var heroPosition = Hero.Instance.getEntity().position;
-        var x =  heroPosition.x;
-        var y =  heroPosition.y + GameData.Player_Height;
-        this._node.position = cc.v3(x,y,0);
+        this._node.position = heroPosition;
     }
 
     //碰撞开始

@@ -187,6 +187,7 @@ export default class ClientDef{
     public static readonly GENE_TYPE_SPEED : number = 1; //速度
     public static readonly GENE_TYPE_POSION : number = 2; //毒
     public static readonly GENE_TYPE_SHAPESHIFT : number = 3; //变身
+    public static readonly GENE_TYPE_RENEW : number = 5; //恢复
 
     //游戏暂停列表
     public static readonly GAME_PAUSE_UPGRADE : number  = 1 << 1; //升级界面

@@ -106,6 +106,12 @@ export default class BloomComponent extends ComponentParent {
             var per = this._curBloom / this._maxBloom;
             this._green_bar.node.scaleX = per > 0 ? per : 0;
         }
+        else if(this._curBloom < this._host.getClientProp(ClientDef.ENTITY_PROP_CUR_BLOOM))
+        {
+            this._curBloom = this._host.getClientProp(ClientDef.ENTITY_PROP_CUR_BLOOM);
+            var per = this._curBloom / this._maxBloom;
+            this._green_bar.node.scaleX = per > 0 ? per : 0;
+        }
     }
 
     addDamage(damageValue)

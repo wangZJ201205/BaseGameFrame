@@ -7,6 +7,7 @@ import GameData from "../../common/GameData";
 import DictMgr from "../../manager/DictMgr";
 import Entity from "../Entity";
 import GeneParent from "./GeneParent";
+import RenewGene from "./children/RenewGene";
 import SpeedGene from "./children/SpeedGene";
 
 const {ccclass, property} = cc._decorator;
@@ -26,7 +27,7 @@ export default class GeneMgr
         this._typeClass = {};
         this._typeClass[ClientDef.GENE_TYPE_SPEED] = SpeedGene;
         this._typeClass[ClientDef.GENE_TYPE_SHAPESHIFT] = SpeedGene;
-
+        this._typeClass[ClientDef.GENE_TYPE_RENEW] = RenewGene;
     }
 
     start () 
