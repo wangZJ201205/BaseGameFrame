@@ -44,15 +44,15 @@ export default class EntityWalk extends StateParent {
         else if(distance >= GameData.Monster_And_Hero_Max_Distance) // 超出最大范围,重新设置位置
         {
             //特殊处理boss要随机，普通怪物就销毁
-            if(this.getHost().isBoss())
-            {
+            // if(this.getHost().isBoss())
+            // {
                 this.getHost().randomEntityPosition();
-            }
-            else
-            {
-                this.getHost().getEntityNode().active = false;
-                this.getHost().setClientProp(ClientDef.ENTITY_PROP_ACTIVE_STATE, ClientDef.ENTITY_ACTIVE_STATE_FREE);
-            }
+            // }
+            // else
+            // {
+            //     this.getHost().getEntityNode().active = false;
+            //     this.getHost().setClientProp(ClientDef.ENTITY_PROP_ACTIVE_STATE, ClientDef.ENTITY_ACTIVE_STATE_FREE);
+            // }
         }
         
         this.changePlayerDirection(direction);
