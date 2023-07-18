@@ -2,8 +2,6 @@
  * 落雷 - 以英雄为中心 画个正方形
  */
 
-import GameData from "../../common/GameData";
-import Hero from "../../ghost/Hero";
 import SkillParent from "../SkillParent";
 
 
@@ -25,7 +23,7 @@ export default class ThunderBallSkill extends SkillParent {
     //发射子弹
     shootBullet()
     {
-        var heroPosition = Hero.Instance.getEntity().position;    
+        var heroPosition = this._host.position;    
         var bullet = this.spawnBullet(this._skillInfo["spawnBullet"] );
         bullet.getNode().active = true;
         bullet.getNode().position = heroPosition.add(this._rectPoses[this._index]);

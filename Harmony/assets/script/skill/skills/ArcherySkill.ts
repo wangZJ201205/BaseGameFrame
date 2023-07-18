@@ -3,7 +3,6 @@
  */
 
 import ClientDef from "../../common/ClientDef";
-import { Hero } from "../../ghost/Hero";
 import GameMath from "../../utils/GameMath";
 import SkillParent from "../SkillParent";
 
@@ -18,7 +17,7 @@ export default class ArcherySkill extends SkillParent {
     //发射子弹
     shootBullet()
     {   
-        const degree = Hero.Instance.getEntity().getCProp(ClientDef.ENTITY_PROP_DEGREE);
+        const degree = this._host.getCProp(ClientDef.ENTITY_PROP_DEGREE);
         var dir = GameMath.degreeToEntityDirection2(degree);
         var angle = dir == 2 ? 180 : 360;
 

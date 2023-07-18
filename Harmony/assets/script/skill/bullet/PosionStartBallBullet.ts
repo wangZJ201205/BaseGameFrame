@@ -2,7 +2,6 @@
  * 放毒 前期
  */
 
-import Hero from "../../ghost/Hero";
 import MovementParent, { MoveNodeConfig } from "../../movement/MovementParent";
 import HalfCircleMovement from "../../movement/children/HalfCircleMovement";
 import GameMath from "../../utils/GameMath";
@@ -25,7 +24,7 @@ export default class PosionStartBallBullet extends BulletParent {
     restart()
     {   
         super.restart();
-        var heroNode = Hero.Instance.getEntity();
+        var heroNode = this._host.getHost();
         const angle = Math.random() * 360;
         // 计算点的x和y坐标
         var x = GameMath.getCosCache(angle) * 330 + heroNode.position.x;

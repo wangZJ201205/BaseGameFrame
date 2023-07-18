@@ -2,7 +2,6 @@
  * 放毒
  */
 
-import Hero from "../../ghost/Hero";
 import SkillParent from "../SkillParent";
 
 
@@ -17,7 +16,7 @@ export default class PosionBallSkill extends SkillParent {
     shootBullet()
     {
         
-        var heroPosition = Hero.Instance.getEntity().position;
+        var heroPosition = this._host.position;
         var bullet = this.spawnBullet(this._skillInfo["spawnBullet"] );
         bullet.getNode().active = true;
         bullet.getNode().position = heroPosition;

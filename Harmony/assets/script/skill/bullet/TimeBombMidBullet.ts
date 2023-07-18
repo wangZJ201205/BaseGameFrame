@@ -147,7 +147,7 @@ export default class TimeBombMidBullet extends BulletParent {
         var damageValue = this.getDamageValue(other);
         other.node.setCProp(ClientDef.ENTITY_PROP_POSION_TIME,cc.director.getTotalTime());
         if(damageValue == 0)return false;
-        DamageSys.addDamage(other, damageValue );
+        DamageSys.addDamage(other.node, damageValue );
         return true;
     }
 

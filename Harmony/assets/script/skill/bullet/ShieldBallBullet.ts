@@ -4,7 +4,6 @@
 
 import ClientDef from "../../common/ClientDef";
 import GameData from "../../common/GameData";
-import { Hero } from "../../ghost/Hero";
 import { DamageSys } from "../../ghost/compSystem/DamageSys";
 import BulletParent from "../BulletParent";
 
@@ -30,7 +29,7 @@ export default class ShieldBallBullet extends BulletParent {
     {
         // this._node.angle ++;
         // this._node.angle %= 360;
-        var heroPosition = Hero.Instance.getEntity().position;
+        var heroPosition = this._host.getHost().position;
         this._node.position = heroPosition;
     }
 
@@ -61,7 +60,7 @@ export default class ShieldBallBullet extends BulletParent {
         }
         var damageValue = this.getDamageValue(other);
         if(damageValue == 0)return;
-        DamageSys.addDamage(other, damageValue );
+        DamageSys.addDamage(other.node, damageValue );
     }
     
 }

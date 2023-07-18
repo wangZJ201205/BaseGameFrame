@@ -4,7 +4,6 @@
 
 import ClientDef from "../../common/ClientDef";
 import GameData from "../../common/GameData";
-import { Hero } from "../../ghost/Hero";
 import SkillParent from "../SkillParent";
 
 
@@ -43,7 +42,7 @@ export default class ShieldBallSkill extends SkillParent {
     //发射子弹
     shootBullet()
     {
-        var heroPosition = Hero.Instance.getEntity().position;
+        var heroPosition = this._host.position;
         var x =  heroPosition.x;
         var y =  heroPosition.y + GameData.Player_Height;
     

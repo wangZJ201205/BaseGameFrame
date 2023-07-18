@@ -3,7 +3,6 @@
  */
 
 import ClientDef from "../../common/ClientDef";
-import { Hero } from "../../ghost/Hero";
 import { DamageSys } from "../../ghost/compSystem/DamageSys";
 import GameHelp from "../../help/GameHelp";
 import SkillParent from "../SkillParent";
@@ -25,7 +24,7 @@ export default class SuicideSkill extends SkillParent {
     //发射子弹
     shootBullet()
     {   
-        var tgt = Hero.Instance.getEntity();
+        var tgt = this._host;
         var damage = this._skillInfo["attackValue"];
         DamageSys.addDamage(tgt, damage );
 

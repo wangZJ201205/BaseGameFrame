@@ -2,7 +2,6 @@
  * 定时炸弹
  */
 
-import { Hero } from "../../ghost/Hero";
 import BulletHelp from "../BulletHelp";
 import SkillParent from "../SkillParent";
 
@@ -17,7 +16,7 @@ export default class TimeBombSkill extends SkillParent {
     //发射子弹
     shootBullet()
     {
-        var heroPosition = Hero.Instance.getEntity().position;
+        var heroPosition = this._host.position;
         var x = Math.random() * 400 - 200 + heroPosition.x;
         var y = Math.random() * 100 > 50 ? heroPosition.y + 100 : heroPosition.y - 100;
     

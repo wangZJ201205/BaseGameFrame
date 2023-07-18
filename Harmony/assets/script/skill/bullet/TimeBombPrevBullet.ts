@@ -2,7 +2,6 @@
  * 定时炸弹 前期
  */
 
-import ClientDef from "../../common/ClientDef";
 import BulletParent from "../BulletParent";
 
 const {ccclass, property} = cc._decorator;

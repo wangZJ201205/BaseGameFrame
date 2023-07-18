@@ -3,7 +3,6 @@
  */
 
 import ClientDef from "../../common/ClientDef";
-import { Hero } from "../../ghost/Hero";
 import SkillParent from "../SkillParent";
 
 
@@ -19,7 +18,7 @@ export default class LaserSkill extends SkillParent {
     shootBullet()
     {
         
-        var heroPosition = Hero.Instance.getEntity().position;
+        var heroPosition = this._host.position;
         heroPosition.y += 100;
         var bullet = this.spawnBullet(this._skillInfo["spawnBullet"] );
         bullet.getNode().active = true;

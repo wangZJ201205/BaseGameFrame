@@ -3,7 +3,6 @@
  */
 
 import ClientDef from "../../common/ClientDef";
-import Hero from "../../ghost/Hero";
 import GameMath from "../../utils/GameMath";
 import SkillParent from "../SkillParent";
 
@@ -21,12 +20,12 @@ export default class IcePitonSkill extends SkillParent {
 
         if(this._shootBulletCount == 1)
         {
-            const degree = Hero.Instance.getEntity().getCProp(ClientDef.ENTITY_PROP_DEGREE);
+            const degree = this._host.getCProp(ClientDef.ENTITY_PROP_DEGREE);
             var dir = GameMath.degreeToEntityDirection2(degree);
             this._dir = dir == 2 ? -1 : 1;
         }
 
-        var heroPosition = Hero.Instance.getEntity().position;
+        var heroPosition = this._host.position;
         heroPosition.x += this._shootBulletCount * 75 * this._dir;
         var bullet = this.spawnBullet(this._skillInfo["spawnBullet"] );
         bullet.getNode().active = true;

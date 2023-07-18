@@ -20,6 +20,11 @@ export class DamageSys {
             return;
         }
 
+        if(entity.getCProp(ClientDef.ENTITY_PROP_CUR_BLOOM) < 0)
+        {
+            return;
+        }
+
         //伤害弹跳
         var curBloom = entity.getCProp(ClientDef.ENTITY_PROP_CUR_BLOOM);
         var showDamageValue = curBloom > damageValue ? damageValue : curBloom;
@@ -27,8 +32,6 @@ export class DamageSys {
 
         var entityInfo = entity.getEntityDict();
         HeadEffectMgr.Instance.addBloomEffect(1, entityInfo["bloomEffect"], entity.getPosition());
-        // var type = 1;
-        // LabelMgr.Instance.addLabel(type,showDamageValue,this._host.getPosition());
 
         entity.addCProp(ClientDef.ENTITY_PROP_CUR_BLOOM, -damageValue);
 

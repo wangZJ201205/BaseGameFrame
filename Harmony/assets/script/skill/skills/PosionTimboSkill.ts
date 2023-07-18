@@ -3,7 +3,6 @@
  */
 
 import ClientDef from "../../common/ClientDef";
-import { Hero } from "../../ghost/Hero";
 import SkillParent from "../SkillParent";
 
 
@@ -21,7 +20,7 @@ export default class PosionTimboSkill extends SkillParent {
     {
         this._angle += 30;
         this._angle = this._angle > 360 ? this._angle - 360 : this._angle;
-        var heroPosition = Hero.Instance.getEntity().position;
+        var heroPosition = this._host.position;
         var bullet = this.spawnBullet(this._skillInfo["spawnBullet"] );
         bullet.getNode().active = true;
         bullet.getNode().position = heroPosition;

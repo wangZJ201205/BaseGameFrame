@@ -3,7 +3,6 @@
  */
 
 import ClientDef from "../../common/ClientDef";
-import { Hero } from "../../ghost/Hero";
 import MovementParent, { MoveNodeConfig } from "../../movement/MovementParent";
 import HalfCircleMovement from "../../movement/children/HalfCircleMovement";
 import GameMath from "../../utils/GameMath";
@@ -25,7 +24,7 @@ export default class PosionTimboPrevBullet extends BulletParent {
     restart()
     {   
         super.restart();
-        var heroNode = Hero.Instance.getEntity();
+        var heroNode = this._host.getHost();
         const angle = this.getProp(ClientDef.BULLET_PROP_ANGLE);
         // 计算点的x和y坐标
         var x = GameMath.getCosCache(angle) * this._skillInfo.range + heroNode.position.x;

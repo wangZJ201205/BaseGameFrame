@@ -2,7 +2,6 @@
  * 火墙
  */
 
-import { Hero } from "../../ghost/Hero";
 import GameMath from "../../utils/GameMath";
 import SkillParent from "../SkillParent";
 
@@ -49,7 +48,7 @@ export default class FireWallSkill extends SkillParent {
     //发射子弹
     shootBullet()
     {
-        var heroPosition = Hero.Instance.getEntity().position;
+        var heroPosition = this._host.position;
         var centerx = heroPosition.x + this._skillInfo["range"] * GameMath.getCosCache(this._angle);
         var centery = heroPosition.y + this._skillInfo["range"] * GameMath.getSinCache(this._angle);
 
