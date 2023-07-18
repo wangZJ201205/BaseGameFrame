@@ -2,7 +2,7 @@
  * 配置管理器
  */
 
-import EventName from "../common/EventName";
+import { EventName } from "../common/EventName";
 import GameData from "../common/GameData";
 import DictConfig from "../config/DictConfig";
 import EventMgr from "./EventMgr";

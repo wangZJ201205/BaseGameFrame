@@ -28,39 +28,39 @@ export default class ComponentMgr{
 
         var cloth = new ClothComponent();
         cloth.onLoad(host);
-        this.addEntityComponent(ClientDef.ENTITY_COMP_CLOTH,cloth); //添加衣服组件
+        this.add(ClientDef.ENTITY_COMP_CLOTH,cloth); //添加衣服组件
 
         var bloom = new BloomComponent();
         bloom.onLoad(host);
-        this.addEntityComponent(ClientDef.ENTITY_COMP_BLOOM,bloom); //添加衣服组件
+        this.add(ClientDef.ENTITY_COMP_BLOOM,bloom); //添加衣服组件
 
         var title = new TitleComponent();
         title.onLoad(host);
-        this.addEntityComponent(ClientDef.ENTITY_COMP_TITLE,title);
+        this.add(ClientDef.ENTITY_COMP_TITLE,title);
 
         if(GameData.IsDebug)
         {
             var name = new NameComponent();
             name.onLoad(host);
-            this.addEntityComponent(ClientDef.ENTITY_COMP_NAME,name);
+            this.add(ClientDef.ENTITY_COMP_NAME,name);
         }
     }
 
     start () 
     {
-        this.getEntityComponent(ClientDef.ENTITY_COMP_CLOTH).start();
-        this.getEntityComponent(ClientDef.ENTITY_COMP_BLOOM).start();
-        this.getEntityComponent(ClientDef.ENTITY_COMP_TITLE).start();
+        this.get(ClientDef.ENTITY_COMP_CLOTH).start();
+        this.get(ClientDef.ENTITY_COMP_BLOOM).start();
+        this.get(ClientDef.ENTITY_COMP_TITLE).start();
         if(GameData.IsDebug)
         {
-            this.getEntityComponent(ClientDef.ENTITY_COMP_NAME).start();
+            this.get(ClientDef.ENTITY_COMP_NAME).start();
         }
         this.addCollision();
     }
 
     restart () 
     {
-        this.getEntityComponent(ClientDef.ENTITY_COMP_BLOOM).restart();
+        this.get(ClientDef.ENTITY_COMP_BLOOM).restart();
     }
 
     update (dt) 
@@ -98,22 +98,22 @@ export default class ComponentMgr{
         if(coll)
         {
             coll.onLoad(this._host);
-            this.addEntityComponent(ClientDef.ENTITY_COMP_COLL,coll);
+            this.add(ClientDef.ENTITY_COMP_COLL,coll);
             coll.start();
         }
     }
 
-    getEntityComponent(type)
+    get(type)
     {
         return this._entity_components[type] || null;
     }
 
-    addEntityComponent(type,component)
+    add(type,component)
     {
         this._entity_components[type] = component;
     }
 
-    delEntityComponent(type)
+    del(type)
     {
         if(!this._entity_components[type])
         {

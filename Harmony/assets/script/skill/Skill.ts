@@ -25,7 +25,7 @@ export default class Skill {
 
     start () 
     {
-        var entityStatic = this._host.getClientProp(ClientDef.ENTITY_PROP_STATICID);
+        var entityStatic = this._host.getCProp(ClientDef.ENTITY_PROP_STATICID);
         var skillid = DictMgr.Instance.getDictByName('entity_data')[entityStatic+""].skillid
         if(skillid != 0)
         {

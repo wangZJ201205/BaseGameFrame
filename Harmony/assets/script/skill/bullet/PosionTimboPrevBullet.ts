@@ -3,7 +3,7 @@
  */
 
 import ClientDef from "../../common/ClientDef";
-import Hero from "../../ghost/Hero";
+import { Hero } from "../../ghost/Hero";
 import MovementParent, { MoveNodeConfig } from "../../movement/MovementParent";
 import HalfCircleMovement from "../../movement/children/HalfCircleMovement";
 import GameMath from "../../utils/GameMath";

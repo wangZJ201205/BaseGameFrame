@@ -96,7 +96,7 @@ export default class ClothComponent extends ComponentParent {
         {
             return;
         }
-        var degree = this._host.getClientProp(ClientDef.ENTITY_PROP_DEGREE)
+        var degree = this._host.getCProp(ClientDef.ENTITY_PROP_DEGREE)
         var childrenCnt = this.getAnimationCurStatePathLength();
         let dir = GameMath.degreeToEntityDirection(childrenCnt, degree);
         if( dir == this._curDir )
@@ -140,7 +140,7 @@ export default class ClothComponent extends ComponentParent {
             return;
         }
 
-        var degree = this._host.getClientProp(ClientDef.ENTITY_PROP_DEGREE)
+        var degree = this._host.getCProp(ClientDef.ENTITY_PROP_DEGREE)
         var childrenCnt = this.getAnimationCurStatePathLength();
         let dir = GameMath.degreeToEntityDirection(childrenCnt, degree);
         this._curDir = dir;
@@ -151,6 +151,7 @@ export default class ClothComponent extends ComponentParent {
         anim.resume(clipname);
         anim.play(clipname);
         anim.on('finished',  this.onFinished,    this);
+        anim.on('AttackFinish',  this.onAimAttack,    this);
         for (let index = 1; index <= this._animation.node.childrenCount; index++) 
         {
             const element = this._animation.node.getChildByName(index+"");
@@ -170,10 +171,15 @@ export default class ClothComponent extends ComponentParent {
         this._host.emit("animation_finish");
     }
 
+    onAimAttack()
+    {
+        this._host.emit("animation_AttackFinish");
+    }
+
     download()
     {
         this._animations_state = ANIMATION_STATE.LOADING;
-        var clothId = this.getHost().getClientProp(ClientDef.ENTITY_PROP_STATICID) || 0;
+        var clothId = this.getHost().getCProp(ClientDef.ENTITY_PROP_STATICID) || 0;
         var clothResource = DictMgr.Instance.getDictByName("entity_data")[clothId].path;
         var loadPath = 'animation/entity/' +  clothResource +"/"+ clothResource ;
         LoadMgr.Instance.LoadAssetWithType(loadPath, cc.Prefab ,(asset)=>
@@ -192,14 +198,6 @@ export default class ClothComponent extends ComponentParent {
                 this._animation = aniPref.getComponent(cc.Animation);
                 this._animations_state = ANIMATION_STATE.LOAD_COMPLETE;
                 this.runState(this._curState);
-                aniPref.on('AttackFinish',  this.onAimAttack,    this);
             });
     }
-
-    onAimAttack()
-    {
-        this._host.emit("animation_AttackFinish");
-    }
-
-
 }

@@ -58,13 +58,13 @@ export default class ItemMgr extends ParentMgr {
         }
         const delta = cc.director.getDeltaTime();
         this._items = this._items.filter((element) => {
-            if (element.getClientProp(ClientDef.ENTITY_PROP_ACTIVE_STATE) === ClientDef.ENTITY_ACTIVE_STATE_RUN) 
+            if (element.getCProp(ClientDef.ENTITY_PROP_ACTIVE_STATE) === ClientDef.ENTITY_ACTIVE_STATE_RUN) 
             {
               element.update(delta);
               return true;
             } else {
-              var time = element.getClientProp(ClientDef.ENTITY_PROP_WAIT_DESTROY_TIME) || 0;
-              element.setClientProp(ClientDef.ENTITY_PROP_WAIT_DESTROY_TIME, time + 1);
+              var time = element.getCProp(ClientDef.ENTITY_PROP_WAIT_DESTROY_TIME) || 0;
+              element.setCProp(ClientDef.ENTITY_PROP_WAIT_DESTROY_TIME, time + 1);
               if (time >= 10) { // 设定时间，10秒倒计时
                 element.remove();
                 return false;
@@ -88,7 +88,7 @@ export default class ItemMgr extends ParentMgr {
         //对象池中寻找闲置对象
         for (let index = 0; index < this._items.length; index++) {
             const element = this._items[index];
-            if( element.getClientProp(ClientDef.ENTITY_PROP_ACTIVE_STATE) == ClientDef.ENTITY_ACTIVE_STATE_FREE) //判断状态和对象类型
+            if( element.getCProp(ClientDef.ENTITY_PROP_ACTIVE_STATE) == ClientDef.ENTITY_ACTIVE_STATE_FREE) //判断状态和对象类型
             {
                 item = element;
                 break;
@@ -104,8 +104,8 @@ export default class ItemMgr extends ParentMgr {
         {
             item = new Item();
             item.onLoad();
-            item.setClientProp(ClientDef.ENTITY_PROP_TYPE,itemType);
-            item.setClientProp(ClientDef.ENTITY_PROP_STATICID,"" + itemStaticID);
+            item.setCProp(ClientDef.ENTITY_PROP_TYPE,itemType);
+            item.setCProp(ClientDef.ENTITY_PROP_STATICID,"" + itemStaticID);
             item.start();
             this._layer.addChild(item);
             // GhostMgr.Instance.getLayer().addChild(item);
@@ -123,7 +123,7 @@ export default class ItemMgr extends ParentMgr {
     {
         this.spawnItemId++;
         item.name = "item"+this.spawnItemId;
-        item.setClientProp(ClientDef.ENTITY_PROP_ID,this.spawnItemId); //设置它的ID
+        item.setCProp(ClientDef.ENTITY_PROP_ID,this.spawnItemId); //设置它的ID
         this._items.push(item);
         // console.info(">>>>>>>item count : " + this._items.length + "  >>time = " + cc.director.getTotalTime());
     }

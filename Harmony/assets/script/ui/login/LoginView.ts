@@ -1,12 +1,9 @@
 import Definition from "../../common/Definition";
-import EventName from "../../common/EventName";
-import GameData from "../../common/GameData";
+import { EventName } from "../../common/EventName";
 import MessageName from "../../common/MessageDefine";
-import UIName from "../../common/UIName";
-import AudioMgr from "../../manager/AudioMgr";
+import { UIName } from "../../common/UIName";
 import EventMgr from "../../manager/EventMgr";
 import NetMgr from "../../manager/NetMgr";
-import SceneMgr from "../../manager/SceneMgr";
 import UIMgr from "../../manager/UIMgr";
 import UIParent from "../UIParent";
 
@@ -75,7 +72,7 @@ export default class LoginView extends UIParent {
             return;
         }
         
-        EventMgr.Instance.Emit(EventName.UI_CLOSE_PANEL + this.getUIName(),null);
+        EventMgr.Instance.Emit(EventName.UI_CLOSE_PANEL + this.getUIName());
         UIMgr.Instance.openUI(UIName.VIEW_START);
         
 

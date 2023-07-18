@@ -21,7 +21,7 @@ export default class IcePitonSkill extends SkillParent {
 
         if(this._shootBulletCount == 1)
         {
-            const degree = Hero.Instance.getEntity().getClientProp(ClientDef.ENTITY_PROP_DEGREE);
+            const degree = Hero.Instance.getEntity().getCProp(ClientDef.ENTITY_PROP_DEGREE);
             var dir = GameMath.degreeToEntityDirection2(degree);
             this._dir = dir == 2 ? -1 : 1;
         }

@@ -196,7 +196,7 @@ export default class BulletParent {
         let atlas = this._bulletInfo.atlas;
         LoadMgr.Instance.LoadAssetWithType("animation/skill/"+atlas, cc.SpriteAtlas,(sp)=>{
             //检查人物状态
-            if(this._host.getHost().getClientProp(ClientDef.ENTITY_PROP_ACTIVE_STATE) != ClientDef.ENTITY_ACTIVE_STATE_RUN)
+            if(this._host.getHost().getCProp(ClientDef.ENTITY_PROP_ACTIVE_STATE) != ClientDef.ENTITY_ACTIVE_STATE_RUN)
             {
                 return;
             }
@@ -214,7 +214,7 @@ export default class BulletParent {
         var loadPath = 'animation/skill/' +  this._bulletInfo.preftab +"/"+ this._bulletInfo.preftab;
         var self = this
         LoadMgr.Instance.LoadAssetWithType(loadPath,cc.Prefab,(asset)=>{
-            if(this._host.getHost().getClientProp(ClientDef.ENTITY_PROP_ACTIVE_STATE) != ClientDef.ENTITY_ACTIVE_STATE_RUN)
+            if(this._host.getHost().getCProp(ClientDef.ENTITY_PROP_ACTIVE_STATE) != ClientDef.ENTITY_ACTIVE_STATE_RUN)
             {
                 return;
             }
@@ -300,7 +300,7 @@ export default class BulletParent {
             return false;
         } 
         var tgt = other.node;
-        if(tgt.getClientProp(ClientDef.ENTITY_PROP_STATE) == ClientDef.ENTITY_STATE_DIE) //死亡状态不触发响应
+        if(tgt.getCProp(ClientDef.ENTITY_PROP_STATE) == ClientDef.ENTITY_STATE_DIE) //死亡状态不触发响应
         {
             return false;
         }

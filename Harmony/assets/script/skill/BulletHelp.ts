@@ -16,13 +16,13 @@ export default class BulletHelp{
         var minDistance = 99999999;
         var minEnemy = null;
         GhostMgr.Instance.foreachEntity((element)=>{
-            var tgtType = element.getClientProp(ClientDef.ENTITY_PROP_TYPE);
-            var myType = srcEntity.getClientProp(ClientDef.ENTITY_PROP_TYPE);
+            var tgtType = element.getCProp(ClientDef.ENTITY_PROP_TYPE);
+            var myType = srcEntity.getCProp(ClientDef.ENTITY_PROP_TYPE);
             if(tgtType == myType)
             {
                 return false;
             }
-            if(element.getClientProp(ClientDef.ENTITY_PROP_ACTIVE_STATE) == ClientDef.ENTITY_ACTIVE_STATE_FREE)
+            if(element.getCProp(ClientDef.ENTITY_PROP_ACTIVE_STATE) == ClientDef.ENTITY_ACTIVE_STATE_FREE)
             {
                 return false;
             }
@@ -44,12 +44,12 @@ export default class BulletHelp{
         var minDistance = 99999999;
         var minEnemy = null;
         GhostMgr.Instance.foreachEntity((element)=>{
-            var tgtType = element.getClientProp(ClientDef.ENTITY_PROP_TYPE);
+            var tgtType = element.getCProp(ClientDef.ENTITY_PROP_TYPE);
             if(tgtType == ClientDef.ENTITY_TYPE_PLAYER)
             {
                 return false;
             }
-            if(element.getClientProp(ClientDef.ENTITY_PROP_ACTIVE_STATE) == ClientDef.ENTITY_ACTIVE_STATE_FREE)
+            if(element.getCProp(ClientDef.ENTITY_PROP_ACTIVE_STATE) == ClientDef.ENTITY_ACTIVE_STATE_FREE)
             {
                 return false;
             }

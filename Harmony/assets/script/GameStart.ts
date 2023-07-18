@@ -1,13 +1,13 @@
 
 //游戏入口
 
-import EventName from "./common/EventName";
+import { EventName } from "./common/EventName";
 import GM from "./common/GM";
 import GameData from "./common/GameData";
-import UIName from "./common/UIName";
+import { UIName } from "./common/UIName";
 import DictConfig from "./config/DictConfig";
 import UIConfig from "./config/UIConfig";
-import Hero from "./ghost/Hero";
+import { Hero } from "./ghost/Hero";
 import EntityProxy from "./ghost/proxy/EntityProxy";
 import HeroProxy from "./ghost/proxy/HeroProxy";
 import AudioMgr from "./manager/AudioMgr";
@@ -22,6 +22,7 @@ import LoginProxy from "./ui/login/LoginProxy";
 import GameMath from "./utils/GameMath";
 
 const {ccclass, property} = cc._decorator;
+
 
 @ccclass
 export default class GameStart extends cc.Component {

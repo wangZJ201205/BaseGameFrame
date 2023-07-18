@@ -3,15 +3,21 @@
  * 界面配置文件
  */
 import ClientDef from "../common/ClientDef";
-import EventName from "../common/EventName";
-import UIName from "../common/UIName";
+import { UIName } from "../common/UIName";
+
+export interface UIConfigItem {
+    /** 远程包名 */
+    path?: string;
+    /** 窗口层级 */
+    index: number;
+}
 
 export default class UIConfig{
 
     private static readonly PreGame : string = '/ui/mainUI/';
 
 
-    private static UIReg : {}; //界面地址注册
+    private static UIReg : {[key:string]:UIConfigItem} = {}; //界面地址注册
 
     static init()
     {

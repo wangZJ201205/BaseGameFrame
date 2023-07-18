@@ -3,10 +3,9 @@
  */
 
 import ClientDef from "../../common/ClientDef";
-import EventName from "../../common/EventName";
+import { EventName } from "../../common/EventName";
 import GameData from "../../common/GameData";
-import UIName from "../../common/UIName";
-import AudioMgr from "../../manager/AudioMgr";
+import { UIName } from "../../common/UIName";
 import EventMgr from "../../manager/EventMgr";
 import SceneMgr from "../../manager/SceneMgr";
 import UIMgr from "../../manager/UIMgr";
@@ -69,18 +68,18 @@ export default class SetView extends UIParent {
     {
         // SceneMgr.Instance.enterScene();
         SceneMgr.Instance.exitScene();
-        EventMgr.Instance.Emit(EventName.UI_CLOSE_PANEL + this.getUIName(),null);
+        EventMgr.Instance.Emit(EventName.UI_CLOSE_PANEL + this.getUIName());
         UIMgr.Instance.openUI(UIName.VIEW_START);
     }
 
     goonGame(event,param)
     {
-        EventMgr.Instance.Emit(EventName.UI_CLOSE_PANEL + this.getUIName(),null);
+        EventMgr.Instance.Emit(EventName.UI_CLOSE_PANEL + this.getUIName());
     }
 
     closeHandle(event,param)
     {
-        EventMgr.Instance.Emit(EventName.UI_CLOSE_PANEL + this.getUIName(),null);
+        EventMgr.Instance.Emit(EventName.UI_CLOSE_PANEL + this.getUIName());
     }
 
     bgMusicToggleHandle(event,param)

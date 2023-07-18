@@ -3,7 +3,7 @@
  */
 
 import ClientDef from "../../common/ClientDef";
-import Hero from "../../ghost/Hero";
+import { Hero } from "../../ghost/Hero";
 import SkillParent from "../SkillParent";
 
 

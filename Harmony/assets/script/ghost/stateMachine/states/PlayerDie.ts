@@ -3,7 +3,7 @@
  */
 
 import ClientDef from "../../../common/ClientDef";
-import UIName from "../../../common/UIName";
+import { UIName } from "../../../common/UIName";
 import UIMgr from "../../../manager/UIMgr";
 import StateParent from "../StateParent";
 
@@ -25,7 +25,7 @@ export default class PlayerDie extends StateParent {
 
     update (dt) 
     {   
-        var bloom = this.getHost().getClientProp(ClientDef.ENTITY_PROP_CUR_BLOOM)
+        var bloom = this.getHost().getCProp(ClientDef.ENTITY_PROP_CUR_BLOOM)
         if(bloom > 0)
         {
             super.update(dt);

@@ -5,12 +5,10 @@
 import ClientDef from "../../common/ClientDef";
 import GameData from "../../common/GameData";
 import Entity from "../../ghost/Entity";
-import Hero from "../../ghost/Hero";
 import LoadMgr from "../../manager/LoadMgr";
 import MovementParent, { MoveNodeConfig } from "../../movement/MovementParent";
 import LineMovement from "../../movement/children/LineMovement";
 import TraceEntityMovement, { TraceEntityConfig } from "../../movement/children/TraceEntityMovement";
-import GameMath from "../../utils/GameMath";
 import BulletHelp from "../BulletHelp";
 import BulletParent from "../BulletParent";
 import TimeBombSkill from "../skills/TimeBombSkill";
@@ -97,7 +95,7 @@ export default class TimeBombMidBullet extends BulletParent {
         }
         else
         {
-            if(this._attackEntity.getClientProp(ClientDef.ENTITY_PROP_ACTIVE_STATE) == ClientDef.ENTITY_ACTIVE_STATE_FREE ||
+            if(this._attackEntity.getCProp(ClientDef.ENTITY_PROP_ACTIVE_STATE) == ClientDef.ENTITY_ACTIVE_STATE_FREE ||
                 !this._attackEntity.isLife())
             {
                 this._attackEntity = null;
@@ -146,7 +144,7 @@ export default class TimeBombMidBullet extends BulletParent {
         bullet.restart();
 
         var damageValue = this.getDamageValue(other);
-        other.node.setClientProp(ClientDef.ENTITY_PROP_POSION_TIME,cc.director.getTotalTime());
+        other.node.setCProp(ClientDef.ENTITY_PROP_POSION_TIME,cc.director.getTotalTime());
         if(damageValue == 0)return false;
         other.node.getEntityComponent(ClientDef.ENTITY_COMP_BLOOM).addDamage( damageValue );
         return true;
@@ -162,7 +160,7 @@ export default class TimeBombMidBullet extends BulletParent {
         var loadPath = 'animation/skill/' +  this._bulletInfo.preftab +"/"+ this._bulletInfo.preftab;
         var self = this
         LoadMgr.Instance.LoadAssetWithType(loadPath,cc.Prefab,(asset)=>{
-            if(this._host.getHost().getClientProp(ClientDef.ENTITY_PROP_ACTIVE_STATE) != ClientDef.ENTITY_ACTIVE_STATE_RUN)
+            if(this._host.getHost().getCProp(ClientDef.ENTITY_PROP_ACTIVE_STATE) != ClientDef.ENTITY_ACTIVE_STATE_RUN)
             {
                 return;
             }

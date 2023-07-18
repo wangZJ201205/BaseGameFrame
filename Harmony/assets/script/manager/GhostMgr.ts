@@ -4,7 +4,6 @@
 import ClientDef from "../common/ClientDef";
 import GameData from "../common/GameData";
 import Entity from "../ghost/Entity";
-import Hero from "../ghost/Hero";
 import GameHelp from "../help/GameHelp";
 import ParentMgr from "./ParentMgr";
 import SceneMgr from "./SceneMgr";
@@ -65,7 +64,7 @@ export default class GhostMgr extends ParentMgr {
         var needRemoveEntity = [];
         for (let index = 0; index < this.entitys.length; index++) {
             const element = this.entitys[index];
-            if( element.getClientProp(ClientDef.ENTITY_PROP_ACTIVE_STATE) == ClientDef.ENTITY_ACTIVE_STATE_RUN )
+            if( element.getCProp(ClientDef.ENTITY_PROP_ACTIVE_STATE) == ClientDef.ENTITY_ACTIVE_STATE_RUN )
             {
                 element.update(delta);
             }
@@ -82,8 +81,8 @@ export default class GhostMgr extends ParentMgr {
                 const ele = this.entitys[i];
                 if( ele == element )
                 {
-                    var time = ele.getClientProp(ClientDef.ENTITY_PROP_WAIT_DESTROY_TIME) || 0;
-                    ele.setClientProp(ClientDef.ENTITY_PROP_WAIT_DESTROY_TIME, time + 1);
+                    var time = ele.getCProp(ClientDef.ENTITY_PROP_WAIT_DESTROY_TIME) || 0;
+                    ele.setCProp(ClientDef.ENTITY_PROP_WAIT_DESTROY_TIME, time + 1);
                     if(time >= 100) //设定时间，10秒倒计时
                     {
                         ele.remove();
@@ -112,8 +111,8 @@ export default class GhostMgr extends ParentMgr {
         //对象池中寻找闲置对象
         for (let index = 0; index < this.entitys.length; index++) {
             const element = this.entitys[index];
-            if( element.getClientProp(ClientDef.ENTITY_PROP_ACTIVE_STATE) == ClientDef.ENTITY_ACTIVE_STATE_FREE  && 
-                element.getClientProp(ClientDef.ENTITY_PROP_STATICID) == entityStaticID) //判断状态和对象类型
+            if( element.getCProp(ClientDef.ENTITY_PROP_ACTIVE_STATE) == ClientDef.ENTITY_ACTIVE_STATE_FREE  && 
+                element.getCProp(ClientDef.ENTITY_PROP_STATICID) == entityStaticID) //判断状态和对象类型
             {
                 entity = element;
                 break;
@@ -124,8 +123,8 @@ export default class GhostMgr extends ParentMgr {
         {
             entity = new (this._typeClass[entityType])();
             entity.onLoad();
-            entity.setClientProp(ClientDef.ENTITY_PROP_TYPE,entityType);
-            entity.setClientProp(ClientDef.ENTITY_PROP_STATICID, entityStaticID);
+            entity.setCProp(ClientDef.ENTITY_PROP_TYPE,entityType);
+            entity.setCProp(ClientDef.ENTITY_PROP_STATICID, entityStaticID);
             entity.start();
             this.layer.addChild(entity);
             this.addEntity(entity)
@@ -142,7 +141,7 @@ export default class GhostMgr extends ParentMgr {
     {
         this.spawnEntityId++;
         entity.name = "entity"+this.spawnEntityId;
-        entity.setClientProp(ClientDef.ENTITY_PROP_ID,this.spawnEntityId); //设置它的ID
+        entity.setCProp(ClientDef.ENTITY_PROP_ID,this.spawnEntityId); //设置它的ID
         this.entitys.push(entity);
     }
 

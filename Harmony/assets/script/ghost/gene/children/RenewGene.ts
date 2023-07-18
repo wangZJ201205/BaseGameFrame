@@ -21,7 +21,7 @@ export default class RenewGene extends GeneParent {
     {
         super.update(dt);
         var host = this._host;
-        let curBloom = host.getClientProp(ClientDef.ENTITY_PROP_CUR_BLOOM);
+        let curBloom = host.getCProp(ClientDef.ENTITY_PROP_CUR_BLOOM);
         var entityInfo = host.getEntityDict();
         let totBloom = entityInfo["bloom"];
         if( curBloom != totBloom )
@@ -29,7 +29,7 @@ export default class RenewGene extends GeneParent {
             var during = cc.director.getTotalTime() - this._delta;
             if(during >= this._datay)
             {
-                host.addClientProp(ClientDef.ENTITY_PROP_CUR_BLOOM,this._datax);
+                host.addCProp(ClientDef.ENTITY_PROP_CUR_BLOOM,this._datax);
                 this._delta = cc.director.getTotalTime();
             }
         }

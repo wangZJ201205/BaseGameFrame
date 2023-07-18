@@ -3,14 +3,14 @@
  */
 
 import ClientDef from "../common/ClientDef";
-import EventName from "../common/EventName";
+import { EventName } from "../common/EventName";
 import GameData from "../common/GameData";
 import DictMgr from "../manager/DictMgr";
 import EventMgr from "../manager/EventMgr";
 import ItemMgr from "../manager/ItemMgr";
 import ItemSkinComponent from "./component/children/ItemSkinComponent";
 import Entity from "./Entity";
-import Hero from "./Hero";
+import { Hero } from "./Hero";
 
 const {ccclass, property} = cc._decorator;
 
@@ -30,7 +30,7 @@ export default class Item extends Entity {
         this._recycleTime = GameData.Item_Recycle_Time;
         this._delta = cc.director.getTotalTime();
         
-        this.setClientProp(ClientDef.ENTITY_PROP_ACTIVE_STATE,ClientDef.ENTITY_ACTIVE_STATE_INIT);
+        this.setCProp(ClientDef.ENTITY_PROP_ACTIVE_STATE,ClientDef.ENTITY_ACTIVE_STATE_INIT);
     }
 
     start () {
@@ -42,8 +42,8 @@ export default class Item extends Entity {
 
     restart()
     {
-        this.setClientProp(ClientDef.ENTITY_PROP_ACTIVE_STATE,ClientDef.ENTITY_ACTIVE_STATE_RUN);
-        this.setClientProp(ClientDef.ENTITY_PROP_WAIT_DESTROY_TIME, 0);
+        this.setCProp(ClientDef.ENTITY_PROP_ACTIVE_STATE,ClientDef.ENTITY_ACTIVE_STATE_RUN);
+        this.setCProp(ClientDef.ENTITY_PROP_WAIT_DESTROY_TIME, 0);
         this.active = true;
         this._isMove = false;
         this._createTime = cc.director.getTotalTime();
@@ -54,7 +54,7 @@ export default class Item extends Entity {
     getEntityDict()
     {
         var entityInfo = DictMgr.Instance.getDictByName('item_data');
-        entityInfo = entityInfo[this.getClientProp(ClientDef.ENTITY_PROP_STATICID)];
+        entityInfo = entityInfo[this.getCProp(ClientDef.ENTITY_PROP_STATICID)];
         return entityInfo;
     }
 
@@ -83,7 +83,7 @@ export default class Item extends Entity {
         this._delta = cc.director.getTotalTime();
         //  const startTime = cc.director.getTotalTime();
         var distance = this.calculateDistance(this,Hero.Instance.getEntity());
-        var pickUpRange = Hero.Instance.getEntity().getClientProp(ClientDef.ENTITY_PROP_PICKUP_RANGE);
+        var pickUpRange = Hero.Instance.getEntity().getCProp(ClientDef.ENTITY_PROP_PICKUP_RANGE);
         pickUpRange = pickUpRange * GameData.Player_PickItem_Range; //拾取范围检测
         if(distance <= pickUpRange ) //是否进入拾取范围
         {
@@ -106,7 +106,7 @@ export default class Item extends Entity {
             node.restEntity();
             var itemInfo = node.getEntityDict();
             Hero.Instance.addExp(itemInfo.datax);
-            EventMgr.Instance.Emit(EventName.EVENT_PLAYER_EXP_CHANGE,null);
+            EventMgr.Instance.Emit(EventName.EVENT_PLAYER_EXP_CHANGE);
         }).start();
     }
 

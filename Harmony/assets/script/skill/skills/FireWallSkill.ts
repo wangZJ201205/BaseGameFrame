@@ -2,8 +2,7 @@
  * 火墙
  */
 
-import GameData from "../../common/GameData";
-import Hero from "../../ghost/Hero";
+import { Hero } from "../../ghost/Hero";
 import GameMath from "../../utils/GameMath";
 import SkillParent from "../SkillParent";
 

@@ -1,9 +1,9 @@
 /**
  * 英雄选择界面
  */
-import EventName from "../../common/EventName";
+import { EventName } from "../../common/EventName";
 import GameData from "../../common/GameData";
-import UIName from "../../common/UIName";
+import { UIName } from "../../common/UIName";
 import DictConfig from "../../config/DictConfig";
 import DictMgr from "../../manager/DictMgr";
 import EventMgr from "../../manager/EventMgr";
@@ -95,13 +95,13 @@ export default class HeroSelectView extends UIParent {
     openGame(event,param)
     {
         SceneMgr.Instance.enterScene();
-        EventMgr.Instance.Emit(EventName.UI_CLOSE_PANEL + this.getUIName(),null);
-        EventMgr.Instance.Emit(EventName.UI_CLOSE_PANEL + UIName.VIEW_START,null);
+        EventMgr.Instance.Emit(EventName.UI_CLOSE_PANEL + this.getUIName());
+        EventMgr.Instance.Emit(EventName.UI_CLOSE_PANEL + UIName.VIEW_START);
     }
 
     closeView(event,param)
     {
-        EventMgr.Instance.Emit(EventName.UI_CLOSE_PANEL + this.getUIName(),null);
+        EventMgr.Instance.Emit(EventName.UI_CLOSE_PANEL + this.getUIName());
     }
     
     selectHero(info)

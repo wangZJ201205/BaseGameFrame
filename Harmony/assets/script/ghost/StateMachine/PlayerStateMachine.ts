@@ -17,9 +17,9 @@ export default class PlayerStateMachine extends EntityStateMachine {
     
     getNextState()
     {
-        var controlType = this.getHost().getClientProp(ClientDef.ENTITY_PROP_CONTROL_STATE);
+        var controlType = this.getHost().getCProp(ClientDef.ENTITY_PROP_CONTROL_STATE);
         var newState = 0;
-        var bloom = this.getHost().getClientProp(ClientDef.ENTITY_PROP_CUR_BLOOM)
+        var bloom = this.getHost().getCProp(ClientDef.ENTITY_PROP_CUR_BLOOM)
         
         if(bloom <= 0) //死亡
         {

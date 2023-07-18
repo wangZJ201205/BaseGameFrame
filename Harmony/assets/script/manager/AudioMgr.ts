@@ -8,10 +8,11 @@ import ParentMgr from "./ParentMgr";
 
 const {ccclass, property} = cc._decorator;
 
-AudioType:cc.Enum({
-    BGM:0,
-    EFFECT:1,
-})
+
+export enum AudioType{
+    BGM=0,
+    EFFECT=1,
+}
 
 @ccclass
 export default class AudioMgr extends ParentMgr {

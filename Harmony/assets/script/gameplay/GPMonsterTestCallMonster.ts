@@ -4,10 +4,7 @@
  * 测试召唤怪物
  */
 
-import ClientDef from "../common/ClientDef";
 import GameData from "../common/GameData";
-import Hero from "../ghost/Hero";
-import GameHelp from "../help/GameHelp";
 import GhostMgr from "../manager/GhostMgr";
 
 const {ccclass, property} = cc._decorator;

@@ -2,7 +2,7 @@
  * 以一个原点为子弹
  */
 
-import Hero from "../../ghost/Hero";
+import { Hero } from "../../ghost/Hero";
 import SkillParent from "../SkillParent";
 
 

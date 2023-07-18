@@ -1,4 +1,5 @@
-import Hero from "../ghost/Hero";
+
+import { Hero } from "../ghost/Hero";
 import GameData from "./GameData";
 
 /**

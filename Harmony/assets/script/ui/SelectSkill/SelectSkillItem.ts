@@ -4,16 +4,12 @@
  * 销毁的时候随着主对象关闭即可
  */
 
-import ClientDef from "../../common/ClientDef";
-import EventName from "../../common/EventName";
-import GameData from "../../common/GameData";
-import UIName from "../../common/UIName";
-import Hero from "../../ghost/Hero";
+import { EventName } from "../../common/EventName";
+import { UIName } from "../../common/UIName";
+import { Hero } from "../../ghost/Hero";
 import DictMgr from "../../manager/DictMgr";
 import EventMgr from "../../manager/EventMgr";
 import LoadMgr from "../../manager/LoadMgr";
-import UIMgr from "../../manager/UIMgr";
-import UIParent from "../UIParent";
 
 const {ccclass, property} = cc._decorator;
 
@@ -41,7 +37,7 @@ export default class SelectSkillItem extends cc.Component {
     selectItemHandle(event,param)
     {
         Hero.Instance.getEntity().getSkill().addSkill(this._skillId);
-        EventMgr.Instance.Emit(EventName.UI_CLOSE_PANEL + UIName.VIEW_SELECTSKILL,null);
+        EventMgr.Instance.Emit(EventName.UI_CLOSE_PANEL + UIName.VIEW_SELECTSKILL);
     }
 
     initItem(data)

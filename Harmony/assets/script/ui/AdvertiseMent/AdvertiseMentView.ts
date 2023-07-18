@@ -2,11 +2,8 @@
  * 广告界面
  */
 
-import ClientDef from "../../common/ClientDef";
-import EventName from "../../common/EventName";
-import GameData from "../../common/GameData";
-import UIName from "../../common/UIName";
-import Hero from "../../ghost/Hero";
+import { EventName } from "../../common/EventName";
+import { UIName } from "../../common/UIName";
 import EventMgr from "../../manager/EventMgr";
 import UIMgr from "../../manager/UIMgr";
 import UIParent from "../UIParent";
@@ -55,7 +52,7 @@ export default class AdvertiseMentView extends UIParent {
         }
         else
         {
-            EventMgr.Instance.Emit(EventName.UI_CLOSE_PANEL + UIName.VIEW_SELECTSKILL,null);
+            EventMgr.Instance.Emit(EventName.UI_CLOSE_PANEL + UIName.VIEW_SELECTSKILL);
         }
     }
 
@@ -67,7 +64,7 @@ export default class AdvertiseMentView extends UIParent {
         }
         else
         {
-            EventMgr.Instance.Emit(EventName.UI_CLOSE_PANEL + UIName.VIEW_PLAY_ADVERTISE,null);
+            EventMgr.Instance.Emit(EventName.UI_CLOSE_PANEL + UIName.VIEW_PLAY_ADVERTISE);
         }
     }
 

@@ -1,6 +1,6 @@
 import ClientDef from "../common/ClientDef";
 import GameData from "../common/GameData";
-import Hero from "../ghost/Hero";
+import { Hero } from "../ghost/Hero";
 
 /**
  * 游戏帮助

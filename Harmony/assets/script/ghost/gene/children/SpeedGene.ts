@@ -19,13 +19,13 @@ export default class SpeedGene extends GeneParent {
     start () 
     {
         super.start();
-        this._host.addClientProp(ClientDef.ENTITY_PROP_MOVE_SPEED,this._datax);
+        this._host.addCProp(ClientDef.ENTITY_PROP_MOVE_SPEED,this._datax);
     }
 
     remove()
     {
         super.remove();
 
-        this._host.addClientProp(ClientDef.ENTITY_PROP_MOVE_SPEED, -this._datax);
+        this._host.addCProp(ClientDef.ENTITY_PROP_MOVE_SPEED, -this._datax);
     }
 }

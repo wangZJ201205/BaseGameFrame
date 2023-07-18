@@ -3,6 +3,7 @@
  */
 import ClientDef from "../common/ClientDef";
 import BulletParent from "../skill/BulletParent";
+import SkillParent from "../skill/SkillParent";
 import AngleMoveWithNoAngleBullet from "../skill/bullet/AngleMoveWithNoAngleBullet";
 import AnimationCreatePlayNextBBullet from "../skill/bullet/AnimationCreatePlayNextBBullet ";
 import AnimationFinishPlayNextBBullet from "../skill/bullet/AnimationFinishPlayNextBBullet";
@@ -57,8 +58,8 @@ export default class SkillMgr extends ParentMgr {
     private _layerHigh: cc.Node = null; //引用的ghostMgr对象层级 高层
     private _layerLow: cc.Node = null; //引用的ghostMgr对象层级 底层
 
-    private _typeSkillClass : {};
-    private _typeBulletClass : {};
+    private _typeSkillClass : {[key:number]:typeof SkillParent};
+    private _typeBulletClass : {[key:number]:typeof BulletParent};
 
     onLoad () 
     {

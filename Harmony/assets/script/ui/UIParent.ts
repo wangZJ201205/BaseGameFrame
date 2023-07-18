@@ -2,7 +2,7 @@
  * ui父类
  */
 
-import EventName from "../common/EventName";
+import { EventName } from "../common/EventName";
 import EventMgr from "../manager/EventMgr";
 import UIMgr from "../manager/UIMgr";
 

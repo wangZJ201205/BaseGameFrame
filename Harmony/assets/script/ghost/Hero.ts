@@ -1,6 +1,6 @@
 
 import ClientDef from "../common/ClientDef";
-import UIName from "../common/UIName";
+import { UIName } from "../common/UIName";
 import DictMgr from "../manager/DictMgr";
 import UIMgr from "../manager/UIMgr";
 import Entity from "./Entity";
@@ -8,7 +8,7 @@ import Entity from "./Entity";
 const {ccclass, property} = cc._decorator;
 
 @ccclass
-export default class Hero{
+export class Hero{
     public static readonly Instance : Hero = new Hero();
 
     private _entity:Entity;
@@ -20,7 +20,7 @@ export default class Hero{
 
     start () {
         var info = this._entity.getEntityDict();
-        this._entity.setClientProp(ClientDef.ENTITY_PROP_PICKUP_RANGE,info.pickRange);
+        this._entity.setCProp(ClientDef.ENTITY_PROP_PICKUP_RANGE,info.pickRange);
         this._entity.getGene().addGene(1004);
         this.setLevel(1);
     }
@@ -48,17 +48,17 @@ export default class Hero{
     //增加经验
     addExp(exp)
     {
-        var value = this._entity.getClientProp(ClientDef.ENTITY_PROP_CUR_EXP);
+        var value = this._entity.getCProp(ClientDef.ENTITY_PROP_CUR_EXP);
         value += exp;
-        if( value >= this._entity.getClientProp(ClientDef.ENTITY_PROP_MAX_EXP) )
+        if( value >= this._entity.getCProp(ClientDef.ENTITY_PROP_MAX_EXP) )
         {
             UIMgr.Instance.openUI(UIName.VIEW_SELECTSKILL);
-            this.setLevel(this._entity.getClientProp(ClientDef.ENTITY_PROP_LV) + 1);
-            this._entity.setClientProp(ClientDef.ENTITY_PROP_CUR_EXP, 0);
+            this.setLevel(this._entity.getCProp(ClientDef.ENTITY_PROP_LV) + 1);
+            this._entity.setCProp(ClientDef.ENTITY_PROP_CUR_EXP, 0);
         }
         else
         {
-            this._entity.setClientProp(ClientDef.ENTITY_PROP_CUR_EXP, value);
+            this._entity.setCProp(ClientDef.ENTITY_PROP_CUR_EXP, value);
         }
     }
 
@@ -66,8 +66,8 @@ export default class Hero{
     setLevel(lv)
     {
         var lvInfo = DictMgr.Instance.getDictByName("exp_data");
-        this._entity.setClientProp(ClientDef.ENTITY_PROP_LV, lv);
-        this._entity.setClientProp(ClientDef.ENTITY_PROP_MAX_EXP, lvInfo[lv].exp);
+        this._entity.setCProp(ClientDef.ENTITY_PROP_LV, lv);
+        this._entity.setCProp(ClientDef.ENTITY_PROP_MAX_EXP, lvInfo[lv].exp);
     }
 
     addSkill(skillid)

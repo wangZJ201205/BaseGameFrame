@@ -2,8 +2,7 @@
  * 定时炸弹
  */
 
-import GameData from "../../common/GameData";
-import Hero from "../../ghost/Hero";
+import { Hero } from "../../ghost/Hero";
 import BulletHelp from "../BulletHelp";
 import SkillParent from "../SkillParent";
 

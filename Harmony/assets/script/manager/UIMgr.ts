@@ -2,8 +2,8 @@
  * 界面管理类
  */
 import ClientDef from "../common/ClientDef";
-import EventName from "../common/EventName";
 import GameData from "../common/GameData";
+import { UIName } from "../common/UIName";
 import UIConfig from "../config/UIConfig";
 import EventMgr from "./EventMgr";
 import LoadMgr from "./LoadMgr";
@@ -11,7 +11,7 @@ import ParentMgr from "./ParentMgr";
 
 const {ccclass, property} = cc._decorator;
 
-enum UIState
+export enum UIState
 {
     Loading, //加载状态
     Open,    //运行状态
@@ -65,7 +65,7 @@ export default class UIMgr extends ParentMgr {
         // EventMgr.Instance.On(EventName.UI_OPEN_PANEL,this.openUI,this);//打开界面
     }
 
-    openUI(uiname)
+    openUI(uiname:UIName)
     {   
         var uiConfig = UIConfig.getUIPath(uiname);
 
@@ -80,7 +80,6 @@ export default class UIMgr extends ParentMgr {
             console.info(">>>>>>open uiname:" + uiname+" | uipath:"+uiConfig.path);
         }
         
-    
         for (let index = 0; index < this.uiList.length; index++) 
         {
             const uiInfo = this.uiList[index];

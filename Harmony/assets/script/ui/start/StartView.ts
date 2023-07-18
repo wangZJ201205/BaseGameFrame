@@ -2,7 +2,7 @@
  * 开始界面
  */
 
-import UIName from "../../common/UIName";
+import { UIName } from "../../common/UIName";
 import LoadMgr from "../../manager/LoadMgr";
 import UIMgr from "../../manager/UIMgr";
 import UIParent from "../UIParent";

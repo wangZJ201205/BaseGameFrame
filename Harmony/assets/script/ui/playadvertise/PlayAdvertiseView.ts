@@ -3,10 +3,10 @@
  */
 
 import ClientDef from "../../common/ClientDef";
-import EventName from "../../common/EventName";
+import { EventName } from "../../common/EventName";
 import GameData from "../../common/GameData";
-import UIName from "../../common/UIName";
-import Hero from "../../ghost/Hero";
+import { UIName } from "../../common/UIName";
+import { Hero } from "../../ghost/Hero";
 import EventMgr from "../../manager/EventMgr";
 import SceneMgr from "../../manager/SceneMgr";
 import UIMgr from "../../manager/UIMgr";
@@ -51,15 +51,15 @@ export default class PlayAdvertiseView extends UIParent {
     exitBtnHandle(event,param)
     {
         SceneMgr.Instance.exitScene();
-        EventMgr.Instance.Emit(EventName.UI_CLOSE_PANEL + this.getUIName(),null);
+        EventMgr.Instance.Emit(EventName.UI_CLOSE_PANEL + this.getUIName());
         UIMgr.Instance.openUI(UIName.VIEW_START);
     }
 
     reliveHandle(event,param)
     {
-        EventMgr.Instance.Emit(EventName.UI_CLOSE_PANEL + this.getUIName(),null);
+        EventMgr.Instance.Emit(EventName.UI_CLOSE_PANEL + this.getUIName());
         var entityInfo = Hero.Instance.getEntity().getEntityDict();
-        Hero.Instance.getEntity().setClientProp(ClientDef.ENTITY_PROP_CUR_BLOOM, entityInfo["bloom"]);
+        Hero.Instance.getEntity().setCProp(ClientDef.ENTITY_PROP_CUR_BLOOM, entityInfo["bloom"]);
     }
 
 

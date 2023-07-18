@@ -5,7 +5,7 @@
 import ClientDef from "../../../common/ClientDef";
 import DictMgr from "../../../manager/DictMgr";
 import SkillParent from "../../../skill/SkillParent";
-import Hero from "../../Hero";
+import { Hero } from "../../Hero";
 import StateParent from "../StateParent";
 
 const {ccclass, property} = cc._decorator;

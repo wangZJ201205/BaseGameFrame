@@ -30,7 +30,7 @@ export default class EntityDie extends StateParent {
         {
             this.getHost().stopAllActions();
             this.getHost().active = false;
-            this.getHost().setClientProp(ClientDef.ENTITY_PROP_ACTIVE_STATE, ClientDef.ENTITY_ACTIVE_STATE_FREE);
+            this.getHost().setCProp(ClientDef.ENTITY_PROP_ACTIVE_STATE, ClientDef.ENTITY_ACTIVE_STATE_FREE);
         }
     }
 

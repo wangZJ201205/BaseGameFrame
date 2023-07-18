@@ -3,9 +3,9 @@
  */
 
 import ClientDef from "../../common/ClientDef";
-import EventName from "../../common/EventName";
-import UIName from "../../common/UIName";
-import Hero from "../../ghost/Hero";
+import { EventName } from "../../common/EventName";
+import { UIName } from "../../common/UIName";
+import { Hero } from "../../ghost/Hero";
 import EventMgr from "../../manager/EventMgr";
 import UIParent from "../UIParent";
 
@@ -50,8 +50,8 @@ export default class PlayerExpView extends UIParent {
     playerExpChange(data)
     {
         var entity = Hero.Instance.getEntity();
-        this.pgb.progress = entity.getClientProp(ClientDef.ENTITY_PROP_CUR_EXP) / entity.getClientProp(ClientDef.ENTITY_PROP_MAX_EXP);
-        this.lvLab.string = "LV."+ entity.getClientProp(ClientDef.ENTITY_PROP_LV);
+        this.pgb.progress = entity.getCProp(ClientDef.ENTITY_PROP_CUR_EXP) / entity.getCProp(ClientDef.ENTITY_PROP_MAX_EXP);
+        this.lvLab.string = "LV."+ entity.getCProp(ClientDef.ENTITY_PROP_LV);
     }
 
 }

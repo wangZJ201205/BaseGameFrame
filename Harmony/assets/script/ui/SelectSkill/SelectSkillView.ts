@@ -3,12 +3,10 @@
  */
 
 import ClientDef from "../../common/ClientDef";
-import EventName from "../../common/EventName";
 import GameData from "../../common/GameData";
-import UIName from "../../common/UIName";
+import { UIName } from "../../common/UIName";
 import Hero from "../../ghost/Hero";
 import DictMgr from "../../manager/DictMgr";
-import EventMgr from "../../manager/EventMgr";
 import UIParent from "../UIParent";
 
 const {ccclass, property} = cc._decorator;

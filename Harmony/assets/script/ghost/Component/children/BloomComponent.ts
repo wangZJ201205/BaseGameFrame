@@ -1,7 +1,6 @@
 import ClientDef from "../../../common/ClientDef";
 import GameData from "../../../common/GameData";
 import HeadEffectMgr from "../../../manager/HeadEffectMgr";
-import LabelMgr from "../../../manager/LabelMgr";
 import LoadMgr from "../../../manager/LoadMgr";
 import ComponentParent from "../ComponentParent";
 
@@ -64,7 +63,7 @@ export default class BloomComponent extends ComponentParent {
         var entityInfo = this.getHost().getEntityDict();
         this._curBloom = entityInfo["bloom"];
         this._maxBloom = entityInfo["bloom"];
-        this._host.setClientProp(ClientDef.ENTITY_PROP_CUR_BLOOM, this._curBloom);
+        this._host.setCProp(ClientDef.ENTITY_PROP_CUR_BLOOM, this._curBloom);
         if(this._green_bar){
             this._green_bar.node.scaleX = 1;
         }
@@ -99,16 +98,16 @@ export default class BloomComponent extends ComponentParent {
     {        
         this._node.setPosition(-10 + this._host.position.x, this._height + this._host.position.y, 0);
 
-        if(this._curBloom <= 0 && this._host.getClientProp(ClientDef.ENTITY_PROP_CUR_BLOOM) > 0) //判断复活
+        if(this._curBloom <= 0 && this._host.getCProp(ClientDef.ENTITY_PROP_CUR_BLOOM) > 0) //判断复活
         {
-            this._curBloom = this._host.getClientProp(ClientDef.ENTITY_PROP_CUR_BLOOM);
+            this._curBloom = this._host.getCProp(ClientDef.ENTITY_PROP_CUR_BLOOM);
             this._node.active = true;
             var per = this._curBloom / this._maxBloom;
             this._green_bar.node.scaleX = per > 0 ? per : 0;
         }
-        else if(this._curBloom < this._host.getClientProp(ClientDef.ENTITY_PROP_CUR_BLOOM))
+        else if(this._curBloom < this._host.getCProp(ClientDef.ENTITY_PROP_CUR_BLOOM))
         {
-            this._curBloom = this._host.getClientProp(ClientDef.ENTITY_PROP_CUR_BLOOM);
+            this._curBloom = this._host.getCProp(ClientDef.ENTITY_PROP_CUR_BLOOM);
             var per = this._curBloom / this._maxBloom;
             this._green_bar.node.scaleX = per > 0 ? per : 0;
         }
@@ -121,7 +120,7 @@ export default class BloomComponent extends ComponentParent {
             return;
         }
 
-        if(this.getHost().getClientProp(ClientDef.ENTITY_PROP_STATE_SHAPESHIFT) == 1)
+        if(this.getHost().getCProp(ClientDef.ENTITY_PROP_STATE_SHAPESHIFT) == 1)
         {
             return;
         }
@@ -136,7 +135,7 @@ export default class BloomComponent extends ComponentParent {
         // LabelMgr.Instance.addLabel(type,showDamageValue,this._host.getPosition());
 
         this._curBloom -= damageValue;
-        this._host.setClientProp(ClientDef.ENTITY_PROP_CUR_BLOOM, this._curBloom);
+        this._host.setCProp(ClientDef.ENTITY_PROP_CUR_BLOOM, this._curBloom);
 
         if(this._green_bar)
         {
@@ -158,7 +157,7 @@ export default class BloomComponent extends ComponentParent {
         let shapeShift = entityInfo["shapeshift"];
         if(shapeShift > 0)
         {
-            if(this.getHost().getClientProp(ClientDef.ENTITY_PROP_STATE_SHAPESHIFT) == 2)
+            if(this.getHost().getCProp(ClientDef.ENTITY_PROP_STATE_SHAPESHIFT) == 2)
             {
                 this._host.addEntityState(ClientDef.ENTITY_STATE_DIE);
                 this._host.refreshEntityState();

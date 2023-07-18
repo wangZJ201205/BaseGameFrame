@@ -2,8 +2,8 @@
  * 公共文字提示类
  */
 
-import EventName from "../../common/EventName";
-import UIName from "../../common/UIName";
+import { EventName } from "../../common/EventName";
+import { UIName } from "../../common/UIName";
 import DictMgr from "../../manager/DictMgr";
 import EventMgr from "../../manager/EventMgr";
 import UIParent from "../UIParent";

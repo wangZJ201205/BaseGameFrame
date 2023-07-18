@@ -53,7 +53,7 @@ export default class EventMgr extends ParentMgr {
     /*====================================================================================================
     /*(p1, p2, p3, p4, p5) => { }
     /====================================================================================================*/
-    Emit(event_type, p1) {
+    Emit(event_type, p1?:any) {
         this._event_target && this._event_target.emit(event_type, p1);
     }
 

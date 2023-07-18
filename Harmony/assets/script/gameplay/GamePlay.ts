@@ -1,8 +1,8 @@
 import ClientDef from "../common/ClientDef";
-import EventName from "../common/EventName";
+import { EventName } from "../common/EventName";
 import GameData from "../common/GameData";
-import UIName from "../common/UIName";
-import Hero from "../ghost/Hero";
+import { UIName } from "../common/UIName";
+import { Hero } from "../ghost/Hero";
 import GameHelp from "../help/GameHelp";
 import DictMgr from "../manager/DictMgr";
 import EventMgr from "../manager/EventMgr";
@@ -75,18 +75,18 @@ export default class GamePlay {
         this.layer = null;
 
         Hero.Instance.clear();
-        EventMgr.Instance.Emit(EventName.UI_CLOSE_PANEL + UIName.ROCKVIEW,null);
-        EventMgr.Instance.Emit(EventName.UI_CLOSE_PANEL + UIName.VIEW_PLAYER_PGB,null);
-        EventMgr.Instance.Emit(EventName.UI_CLOSE_PANEL + UIName.VIEW_ADVERTISEMENT,null);
-        EventMgr.Instance.Emit(EventName.UI_CLOSE_PANEL + UIName.VIEW_SELECTSKILL,null);
+        EventMgr.Instance.Emit(EventName.UI_CLOSE_PANEL + UIName.ROCKVIEW);
+        EventMgr.Instance.Emit(EventName.UI_CLOSE_PANEL + UIName.VIEW_PLAYER_PGB);
+        EventMgr.Instance.Emit(EventName.UI_CLOSE_PANEL + UIName.VIEW_ADVERTISEMENT);
+        EventMgr.Instance.Emit(EventName.UI_CLOSE_PANEL + UIName.VIEW_SELECTSKILL);
         
         if(GameData.Game_Mode == ClientDef.GAME_MODE_TEST_CALL_MONSTER)
         {
-            EventMgr.Instance.Emit(EventName.UI_CLOSE_PANEL + UIName.TESTVIEW,null);
+            EventMgr.Instance.Emit(EventName.UI_CLOSE_PANEL + UIName.TESTVIEW);
         }
         else if(GameData.Game_Mode == ClientDef.GAME_MODE_NORMAL)
         {
-            EventMgr.Instance.Emit(EventName.UI_CLOSE_PANEL + UIName.VIEW_PLAY_GAMING_TOP,null);
+            EventMgr.Instance.Emit(EventName.UI_CLOSE_PANEL + UIName.VIEW_PLAY_GAMING_TOP);
         }
     }
     

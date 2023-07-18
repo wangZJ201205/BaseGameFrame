@@ -1,9 +1,8 @@
 
 import ClientDef from "../../common/ClientDef";
-import UIName from "../../common/UIName";
-import Hero from "../../ghost/Hero";
+import { UIName } from "../../common/UIName";
+import { Hero } from "../../ghost/Hero";
 import ClothComponent from "../../ghost/component/children/ClothComponent";
-import GameMath from "../../utils/GameMath";
 import UIParent from "../UIParent";
 
 const {ccclass, property} = cc._decorator;
@@ -94,20 +93,20 @@ export default class RockView extends UIParent {
         // 如果没有人物节点或者遥感半径过小，则不移动人物
         if ( this.joyStickDistance < this.radius_threshold) 
         {
-            Hero.Instance.getEntity().setClientProp(ClientDef.ENTITY_PROP_CONTROL_STATE, 0);
+            Hero.Instance.getEntity().setCProp(ClientDef.ENTITY_PROP_CONTROL_STATE, 0);
             return;
         }
         // console.info(this.joyStickDistance ,this.radius_threshold);
-        Hero.Instance.getEntity().setClientProp(ClientDef.ENTITY_PROP_CONTROL_STATE, ClientDef.PLAYER_CONTROL_TYPE_ROCK);
-        Hero.Instance.getEntity().setClientProp(ClientDef.ENTITY_PROP_MOVE_X,this.joyStickDir.x);
-        Hero.Instance.getEntity().setClientProp(ClientDef.ENTITY_PROP_MOVE_Y,this.joyStickDir.y);
+        Hero.Instance.getEntity().setCProp(ClientDef.ENTITY_PROP_CONTROL_STATE, ClientDef.PLAYER_CONTROL_TYPE_ROCK);
+        Hero.Instance.getEntity().setCProp(ClientDef.ENTITY_PROP_MOVE_X,this.joyStickDir.x);
+        Hero.Instance.getEntity().setCProp(ClientDef.ENTITY_PROP_MOVE_Y,this.joyStickDir.y);
     }
 
     changePlayerDirection(joyStickPos)
     {
         let angleRadian = Math.atan2(joyStickPos.y, joyStickPos.x);
         let degree = angleRadian * 180 / Math.PI; // 转换为角度制
-        Hero.Instance.getEntity().setClientProp(ClientDef.ENTITY_PROP_DEGREE,degree);
+        Hero.Instance.getEntity().setCProp(ClientDef.ENTITY_PROP_DEGREE,degree);
         var cloth:ClothComponent = Hero.Instance.getEntity().getEntityComponent(ClientDef.ENTITY_COMP_CLOTH);
         if(cloth)
         {

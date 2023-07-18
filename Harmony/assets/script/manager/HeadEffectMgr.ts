@@ -9,7 +9,7 @@ import SceneMgr from "./SceneMgr";
 
 const {ccclass, property} = cc._decorator;
 
-interface DictEffect {
+export interface DictEffect {
     type: number;
     data:number;
     path:string;

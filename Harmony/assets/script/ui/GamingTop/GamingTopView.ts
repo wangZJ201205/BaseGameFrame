@@ -2,9 +2,9 @@
  * 游戏顶部
  */
 
-import EventName from "../../common/EventName";
+import { EventName } from "../../common/EventName";
 import GameData from "../../common/GameData";
-import UIName from "../../common/UIName";
+import { UIName } from "../../common/UIName";
 import GameHelp from "../../help/GameHelp";
 import EventMgr from "../../manager/EventMgr";
 import GhostMgr from "../../manager/GhostMgr";
@@ -81,7 +81,7 @@ export default class GamingTopView extends UIParent {
         }
         else
         {
-            EventMgr.Instance.Emit(EventName.UI_CLOSE_PANEL + UIName.VIEW_SET,null);
+            EventMgr.Instance.Emit(EventName.UI_CLOSE_PANEL + UIName.VIEW_SET);
         }
     }
 

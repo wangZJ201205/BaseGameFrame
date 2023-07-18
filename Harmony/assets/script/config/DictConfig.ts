@@ -3,7 +3,6 @@
  * 配置文件
  */
 
-import EventName from "../common/EventName";
 
 interface DictEntry {
     path: string;

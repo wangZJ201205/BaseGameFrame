@@ -15,7 +15,7 @@ export default class EntityWalk extends StateParent {
     start () 
     {
         super.start();
-        var moveSpeed = this.getHost().getClientProp(ClientDef.ENTITY_PROP_MOVE_SPEED);
+        var moveSpeed = this.getHost().getCProp(ClientDef.ENTITY_PROP_MOVE_SPEED);
         this.speed = (moveSpeed+GameData.MonsterMoveSpeed) ;
     }
 
@@ -51,7 +51,7 @@ export default class EntityWalk extends StateParent {
             // else
             // {
             //     this.getHost().getEntityNode().active = false;
-            //     this.getHost().setClientProp(ClientDef.ENTITY_PROP_ACTIVE_STATE, ClientDef.ENTITY_ACTIVE_STATE_FREE);
+            //     this.getHost().setCProp(ClientDef.ENTITY_PROP_ACTIVE_STATE, ClientDef.ENTITY_ACTIVE_STATE_FREE);
             // }
         }
         
@@ -65,7 +65,7 @@ export default class EntityWalk extends StateParent {
     {
         let angleRadian = Math.atan2(direction.y, direction.x);
         let degree = angleRadian * 180 / Math.PI; // 转换为角度制
-        this.getHost().setClientProp(ClientDef.ENTITY_PROP_DEGREE,degree);
+        this.getHost().setCProp(ClientDef.ENTITY_PROP_DEGREE,degree);
         var cloth:ClothComponent = this.getHost().getEntityComponent(ClientDef.ENTITY_COMP_CLOTH);
         if(cloth)
         {

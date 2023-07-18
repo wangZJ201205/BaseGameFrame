@@ -20,7 +20,7 @@ export default class Entity extends cc.Node
 {
 
    
-    protected _client_prop_map:{}; //对象客户端属性
+    protected _client_prop_map:{[key:number] : any}; //对象客户端属性
     protected _server_prop_map:{}; //对象服务器属性
 
     private _entityStateMachine:EntityStateMachine; //对象状态机
@@ -42,7 +42,7 @@ export default class Entity extends cc.Node
         this._gene = new GeneMgr();
         this._gene.onLoad(this);
 
-        this.setClientProp(ClientDef.ENTITY_PROP_ACTIVE_STATE,ClientDef.ENTITY_ACTIVE_STATE_INIT);
+        this.setCProp(ClientDef.ENTITY_PROP_ACTIVE_STATE,ClientDef.ENTITY_ACTIVE_STATE_INIT);
     }
 
     //可以用于延迟加载
@@ -59,15 +59,15 @@ export default class Entity extends cc.Node
 
         var entityInfo = this.getEntityDict();
 
-        this.setClientProp(ClientDef.ENTITY_PROP_MOVE_SPEED, entityInfo.moveSpeed);
+        this.setCProp(ClientDef.ENTITY_PROP_MOVE_SPEED, entityInfo.moveSpeed);
     }
 
     //反复初始化
     restart()
     {
-        this.setClientProp(ClientDef.ENTITY_PROP_ACTIVE_STATE,ClientDef.ENTITY_ACTIVE_STATE_RUN);
-        this.setClientProp(ClientDef.ENTITY_PROP_WAIT_DESTROY_TIME, 0);
-        this.setClientProp(ClientDef.ENTITY_PROP_STATE_SHAPESHIFT, 0);
+        this.setCProp(ClientDef.ENTITY_PROP_ACTIVE_STATE,ClientDef.ENTITY_ACTIVE_STATE_RUN);
+        this.setCProp(ClientDef.ENTITY_PROP_WAIT_DESTROY_TIME, 0);
+        this.setCProp(ClientDef.ENTITY_PROP_STATE_SHAPESHIFT, 0);
 
         this.active = true;
         this._entityComponents.restart();
@@ -107,7 +107,7 @@ export default class Entity extends cc.Node
     restEntity()
     {
         this.active = false;
-        this.setClientProp(ClientDef.ENTITY_PROP_ACTIVE_STATE, ClientDef.ENTITY_ACTIVE_STATE_FREE);
+        this.setCProp(ClientDef.ENTITY_PROP_ACTIVE_STATE, ClientDef.ENTITY_ACTIVE_STATE_FREE);
     }
 
     getSkill()
@@ -144,18 +144,18 @@ export default class Entity extends cc.Node
         return this;
     }
 
-    setClientProp(type,value)
+    setCProp(type,value)
     {
         this._client_prop_map[type] = value;
     }
 
-    addClientProp(type,value)
+    addCProp(type,value)
     {
         var curValue = this._client_prop_map[type];
-        this.setClientProp(type,value + curValue)
+        this.setCProp(type,value + curValue)
     }
 
-    getClientProp(type)
+    getCProp(type)
     {
         return this._client_prop_map[type] || null;
     }
@@ -175,7 +175,7 @@ export default class Entity extends cc.Node
     {
         if(this._entityComponents)
         {
-            return this._entityComponents.getEntityComponent(type);
+            return this._entityComponents.get(type);
         }
         return null;
     }
@@ -209,24 +209,24 @@ export default class Entity extends cc.Node
     getEntityDict()
     {
         var entityInfo = DictMgr.Instance.getDictByName('entity_data');
-        entityInfo = entityInfo[this.getClientProp(ClientDef.ENTITY_PROP_STATICID)];
+        entityInfo = entityInfo[this.getCProp(ClientDef.ENTITY_PROP_STATICID)];
         return entityInfo;
     }
 
     //是否在运行
     isRun()
     {
-        return this.getClientProp(ClientDef.ENTITY_PROP_ACTIVE_STATE) == ClientDef.ENTITY_ACTIVE_STATE_RUN;
+        return this.getCProp(ClientDef.ENTITY_PROP_ACTIVE_STATE) == ClientDef.ENTITY_ACTIVE_STATE_RUN;
     }
 
     isHero()
     {
-        return this.getClientProp(ClientDef.ENTITY_PROP_TYPE) == ClientDef.ENTITY_TYPE_PLAYER;
+        return this.getCProp(ClientDef.ENTITY_PROP_TYPE) == ClientDef.ENTITY_TYPE_PLAYER;
     }
 
     isMonster()
     {
-        return this.getClientProp(ClientDef.ENTITY_PROP_TYPE) == ClientDef.ENTITY_TYPE_MONSTER;
+        return this.getCProp(ClientDef.ENTITY_PROP_TYPE) == ClientDef.ENTITY_TYPE_MONSTER;
     }
 
     isBoss()
@@ -237,7 +237,7 @@ export default class Entity extends cc.Node
 
     isLife()
     {
-        return this.getClientProp(ClientDef.ENTITY_PROP_CUR_BLOOM) > 0;
+        return this.getCProp(ClientDef.ENTITY_PROP_CUR_BLOOM) > 0;
     }
 
     //更新下一个状态

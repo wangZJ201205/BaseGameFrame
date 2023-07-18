@@ -45,7 +45,7 @@ export default class PosionEndBullet extends BulletParent {
     collisionEnter(other, self)
     {   
         var damageValue = this.getDamageValue(other);
-        other.node.setClientProp(ClientDef.ENTITY_PROP_POSION_TIME,cc.director.getTotalTime());
+        other.node.setCProp(ClientDef.ENTITY_PROP_POSION_TIME,cc.director.getTotalTime());
         if(damageValue == 0)return false;
         other.node.getEntityComponent(ClientDef.ENTITY_COMP_BLOOM).addDamage( damageValue );
         return true
@@ -54,11 +54,11 @@ export default class PosionEndBullet extends BulletParent {
     //碰撞中
     collisionStay(other, self)
     {
-        var delay = cc.director.getTotalTime() - other.node.getClientProp(ClientDef.ENTITY_PROP_POSION_TIME);
+        var delay = cc.director.getTotalTime() - other.node.getCProp(ClientDef.ENTITY_PROP_POSION_TIME);
         if(delay >= this._bulletInfo["delayDamage"])
         {
             var damageValue = this.getDamageValue(other);
-            other.node.setClientProp(ClientDef.ENTITY_PROP_POSION_TIME,cc.director.getTotalTime());
+            other.node.setCProp(ClientDef.ENTITY_PROP_POSION_TIME,cc.director.getTotalTime());
             if(damageValue == 0)return;
             other.node.getEntityComponent(ClientDef.ENTITY_COMP_BLOOM).addDamage( damageValue );
             

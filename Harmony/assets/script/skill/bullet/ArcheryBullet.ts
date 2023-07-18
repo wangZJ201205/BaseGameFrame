@@ -4,7 +4,6 @@
 
 import ClientDef from "../../common/ClientDef";
 import GameData from "../../common/GameData";
-import Hero from "../../ghost/Hero";
 import MovementParent, { MoveNodeConfig } from "../../movement/MovementParent";
 import LineMovement from "../../movement/children/LineMovement";
 import GameMath from "../../utils/GameMath";

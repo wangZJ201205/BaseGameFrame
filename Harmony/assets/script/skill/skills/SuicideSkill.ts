@@ -29,7 +29,7 @@ export default class SuicideSkill extends SkillParent {
         tgt.getEntityComponent(ClientDef.ENTITY_COMP_BLOOM).addDamage( damage );
 
         this.getHost().getEntityNode().active = false;
-        this.getHost().setClientProp(ClientDef.ENTITY_PROP_ACTIVE_STATE, ClientDef.ENTITY_ACTIVE_STATE_FREE);
+        this.getHost().setCProp(ClientDef.ENTITY_PROP_ACTIVE_STATE, ClientDef.ENTITY_ACTIVE_STATE_FREE);
 
         //抖动
         GameHelp.shakeBody(tgt);

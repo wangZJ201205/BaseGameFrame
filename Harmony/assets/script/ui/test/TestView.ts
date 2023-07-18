@@ -4,7 +4,7 @@
 
 import GM from "../../common/GM";
 import GameData from "../../common/GameData";
-import Hero from "../../ghost/Hero";
+import { Hero } from "../../ghost/Hero";
 import GameHelp from "../../help/GameHelp";
 import GhostMgr from "../../manager/GhostMgr";
 import GameMath from "../../utils/GameMath";
