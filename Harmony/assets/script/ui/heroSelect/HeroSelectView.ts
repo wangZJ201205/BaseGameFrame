@@ -9,6 +9,7 @@ import DictMgr from "../../manager/DictMgr";
 import EventMgr from "../../manager/EventMgr";
 import LoadMgr from "../../manager/LoadMgr";
 import SceneMgr from "../../manager/SceneMgr";
+import UIMgr from "../../manager/UIMgr";
 import UIParent from "../UIParent";
 
 
@@ -95,13 +96,13 @@ export default class HeroSelectView extends UIParent {
     openGame(event,param)
     {
         SceneMgr.Instance.enterScene();
-        EventMgr.Instance.Emit(EventName.UI_CLOSE_PANEL + this.getUIName());
-        EventMgr.Instance.Emit(EventName.UI_CLOSE_PANEL + UIName.VIEW_START);
+        UIMgr.Instance.closeUI(this.getUIName());
+        UIMgr.Instance.closeUI(UIName.VIEW_START);
     }
 
     closeView(event,param)
     {
-        EventMgr.Instance.Emit(EventName.UI_CLOSE_PANEL + this.getUIName());
+        UIMgr.Instance.closeUI(this.getUIName());
     }
     
     selectHero(info)

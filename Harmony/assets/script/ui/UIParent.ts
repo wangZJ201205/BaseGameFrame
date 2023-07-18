@@ -25,13 +25,10 @@ export default class UIParent extends cc.Component {
 
     register()
     {
-        EventMgr.Instance.On(EventName.UI_CLOSE_PANEL + this._uiName, this.close, this); //关闭界面
     }
 
     close()
     {
-        EventMgr.Instance.Off(EventName.UI_CLOSE_PANEL + this._uiName, this.close, this); //关闭界面
-        UIMgr.Instance.closeUI(this._uiName);
     }
 
     setUIName(uiname)

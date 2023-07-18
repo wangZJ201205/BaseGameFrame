@@ -12,11 +12,13 @@ export default class EntityStateMachine{
     _state_list:number[];//状态列表
     _curState : StateParent;
     _host:Entity;
+    _stateModule:Map<number,StateParent>;
 
     onLoad (host) 
     {
         this._host = host;
         this._state_list = [];
+        this._stateModule = new Map<number,StateParent>();
     }
 
     start () 
@@ -79,7 +81,11 @@ export default class EntityStateMachine{
     //生成状态
     spawnState(state)
     {
-        
+        var stateClass = this._stateModule[state];
+        if(stateClass)
+        {
+            return new stateClass();
+        }
         return null;
     }
 

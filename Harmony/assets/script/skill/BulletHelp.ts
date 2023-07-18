@@ -15,7 +15,7 @@ export default class BulletHelp{
     {
         var minDistance = 99999999;
         var minEnemy = null;
-        GhostMgr.Instance.foreachEntity((element)=>{
+        GhostMgr.Instance.foreach((element)=>{
             var tgtType = element.getCProp(ClientDef.ENTITY_PROP_TYPE);
             var myType = srcEntity.getCProp(ClientDef.ENTITY_PROP_TYPE);
             if(tgtType == myType)
@@ -43,7 +43,7 @@ export default class BulletHelp{
     {
         var minDistance = 99999999;
         var minEnemy = null;
-        GhostMgr.Instance.foreachEntity((element)=>{
+        GhostMgr.Instance.foreach((element)=>{
             var tgtType = element.getCProp(ClientDef.ENTITY_PROP_TYPE);
             if(tgtType == ClientDef.ENTITY_TYPE_PLAYER)
             {

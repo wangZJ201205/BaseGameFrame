@@ -68,18 +68,18 @@ export default class SetView extends UIParent {
     {
         // SceneMgr.Instance.enterScene();
         SceneMgr.Instance.exitScene();
-        EventMgr.Instance.Emit(EventName.UI_CLOSE_PANEL + this.getUIName());
+        UIMgr.Instance.closeUI(this.getUIName());
         UIMgr.Instance.openUI(UIName.VIEW_START);
     }
 
     goonGame(event,param)
     {
-        EventMgr.Instance.Emit(EventName.UI_CLOSE_PANEL + this.getUIName());
+        UIMgr.Instance.closeUI(this.getUIName());
     }
 
     closeHandle(event,param)
     {
-        EventMgr.Instance.Emit(EventName.UI_CLOSE_PANEL + this.getUIName());
+        UIMgr.Instance.closeUI(this.getUIName());
     }
 
     bgMusicToggleHandle(event,param)

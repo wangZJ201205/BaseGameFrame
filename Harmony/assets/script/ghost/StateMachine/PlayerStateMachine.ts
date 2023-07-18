@@ -4,7 +4,6 @@
 
 import ClientDef from "../../common/ClientDef";
 import EntityStateMachine from "./EntityStateMachine";
-import StateParent from "./StateParent";
 import PlayerDie from "./states/PlayerDie";
 import PlayerIdle from "./states/PlayerIdle";
 import PlayerWalk from "./states/PlayerWalk";
@@ -14,7 +13,14 @@ const {ccclass, property} = cc._decorator;
 @ccclass
 export default class PlayerStateMachine extends EntityStateMachine {
 
-    
+    onLoad (host) 
+    {
+        super.onLoad(host);
+        this._stateModule[ClientDef.ENTITY_STATE_IDLE] = PlayerIdle;
+        this._stateModule[ClientDef.ENTITY_STATE_WALK] = PlayerWalk;
+        this._stateModule[ClientDef.ENTITY_STATE_DIE] = PlayerDie;
+    }
+
     getNextState()
     {
         var controlType = this.getHost().getCProp(ClientDef.ENTITY_PROP_CONTROL_STATE);
@@ -35,15 +41,6 @@ export default class PlayerStateMachine extends EntityStateMachine {
         }
         this._state_list.splice(0,1); 
         return newState;
-    }
-
-    //生成状态
-    spawnState(state)
-    {
-        if(state == ClientDef.ENTITY_STATE_IDLE){return new PlayerIdle(); }
-        else if(state == ClientDef.ENTITY_STATE_WALK){return new PlayerWalk(); }
-        else if(state == ClientDef.ENTITY_STATE_DIE){return new PlayerDie(); }
-        return null;
     }
 
     

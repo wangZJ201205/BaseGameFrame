@@ -2,7 +2,7 @@
 import ClientDef from "../../../common/ClientDef";
 import GameData from "../../../common/GameData";
 import GameHelp from "../../../help/GameHelp";
-import Hero from "../../Hero";
+import { Hero } from "../../Hero";
 import ClothComponent from "../../component/children/ClothComponent";
 import StateParent from "../StateParent";
 

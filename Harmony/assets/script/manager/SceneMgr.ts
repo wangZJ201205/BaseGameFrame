@@ -78,7 +78,6 @@ export default class SceneMgr extends ParentMgr {
     enterScene()
     {
         GamePlay.Instance.start();
-
     }
 
     exitScene()

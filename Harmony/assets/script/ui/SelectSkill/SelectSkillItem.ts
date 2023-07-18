@@ -10,6 +10,7 @@ import { Hero } from "../../ghost/Hero";
 import DictMgr from "../../manager/DictMgr";
 import EventMgr from "../../manager/EventMgr";
 import LoadMgr from "../../manager/LoadMgr";
+import UIMgr from "../../manager/UIMgr";
 
 const {ccclass, property} = cc._decorator;
 
@@ -37,7 +38,7 @@ export default class SelectSkillItem extends cc.Component {
     selectItemHandle(event,param)
     {
         Hero.Instance.getEntity().getSkill().addSkill(this._skillId);
-        EventMgr.Instance.Emit(EventName.UI_CLOSE_PANEL + UIName.VIEW_SELECTSKILL);
+        UIMgr.Instance.closeUI(UIName.VIEW_SELECTSKILL);
     }
 
     initItem(data)

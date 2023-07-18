@@ -3,6 +3,7 @@
  */
 
 import ClientDef from "../../common/ClientDef";
+import { DamageSys } from "../../ghost/compSystem/DamageSys";
 import BulletParent from "../BulletParent";
 
 const {ccclass, property} = cc._decorator;
@@ -54,7 +55,7 @@ export default class PosionTimboMidBullet extends BulletParent {
         var damageValue = this.getDamageValue(other);
         other.node.setCProp(ClientDef.ENTITY_PROP_POSION_TIME,cc.director.getTotalTime());
         if(damageValue == 0)return;
-        other.node.getEntityComponent(ClientDef.ENTITY_COMP_BLOOM).addDamage( damageValue );
+        DamageSys.addDamage(other, damageValue );
         return true;
     }
 
@@ -67,7 +68,7 @@ export default class PosionTimboMidBullet extends BulletParent {
             var damageValue = this.getDamageValue(other);
             other.node.setCProp(ClientDef.ENTITY_PROP_POSION_TIME,cc.director.getTotalTime());
             if(damageValue == 0)return;
-            other.node.getEntityComponent(ClientDef.ENTITY_COMP_BLOOM).addDamage( damageValue );
+            DamageSys.addDamage(other, damageValue );
         }
     }
 

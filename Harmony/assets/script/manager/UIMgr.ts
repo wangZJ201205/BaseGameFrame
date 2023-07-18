@@ -5,7 +5,6 @@ import ClientDef from "../common/ClientDef";
 import GameData from "../common/GameData";
 import { UIName } from "../common/UIName";
 import UIConfig from "../config/UIConfig";
-import EventMgr from "./EventMgr";
 import LoadMgr from "./LoadMgr";
 import ParentMgr from "./ParentMgr";
 
@@ -48,16 +47,16 @@ export default class UIMgr extends ParentMgr {
 
     update (dt) 
     {
-        for (let index = 0; index < this.uiList.length; index++) 
+        this.uiList = this.uiList.filter((ui)=>
         {
-            const uiInfo = this.uiList[index];
-            if(uiInfo.state == UIState.Close)
+            if(ui.state == UIState.Close)
             {
-                uiInfo.uiContainer.parent = null;
-                this.uiList.splice(index , 1);
-                return;
+                ui.uiContainer.parent = null;
+                return false;
             }
-        }
+            return true;
+        });
+        console.info(">>>>>>ui lenght : " + this.uiList.length);
     }
 
     register()
@@ -121,6 +120,8 @@ export default class UIMgr extends ParentMgr {
             {
                 uiInfo.uiContainer.active = false;
                 uiInfo.state = UIState.Close;
+                var script = uiInfo.uiContainer.getComponent('UIParent');
+                script!.close();
                 break;
             }
         }

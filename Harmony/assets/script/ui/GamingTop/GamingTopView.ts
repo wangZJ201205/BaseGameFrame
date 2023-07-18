@@ -81,7 +81,7 @@ export default class GamingTopView extends UIParent {
         }
         else
         {
-            EventMgr.Instance.Emit(EventName.UI_CLOSE_PANEL + UIName.VIEW_SET);
+            UIMgr.Instance.closeUI(UIName.VIEW_SET);
         }
     }
 

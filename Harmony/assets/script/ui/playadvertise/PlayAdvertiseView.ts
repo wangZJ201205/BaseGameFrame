@@ -51,13 +51,13 @@ export default class PlayAdvertiseView extends UIParent {
     exitBtnHandle(event,param)
     {
         SceneMgr.Instance.exitScene();
-        EventMgr.Instance.Emit(EventName.UI_CLOSE_PANEL + this.getUIName());
+        UIMgr.Instance.closeUI(this.getUIName());
         UIMgr.Instance.openUI(UIName.VIEW_START);
     }
 
     reliveHandle(event,param)
     {
-        EventMgr.Instance.Emit(EventName.UI_CLOSE_PANEL + this.getUIName());
+        UIMgr.Instance.closeUI(this.getUIName());
         var entityInfo = Hero.Instance.getEntity().getEntityDict();
         Hero.Instance.getEntity().setCProp(ClientDef.ENTITY_PROP_CUR_BLOOM, entityInfo["bloom"]);
     }

@@ -35,7 +35,6 @@ export default class LoginView extends UIParent {
 
     openGame(event,param)
     {
-        EventMgr.Instance.Emit(EventName.UI_CLOSE_PANEL + this.getUIName(),null);
     }
 
     close()

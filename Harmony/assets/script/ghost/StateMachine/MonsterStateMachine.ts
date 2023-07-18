@@ -14,6 +14,16 @@ const {ccclass, property} = cc._decorator;
 @ccclass
 export default class MonsterStateMachine extends EntityStateMachine {
 
+    onLoad (host) 
+    {
+        super.onLoad(host);
+        this._stateModule[ClientDef.ENTITY_STATE_IDLE] = EntityIdle;
+        this._stateModule[ClientDef.ENTITY_STATE_WALK] = EntityWalk;
+        this._stateModule[ClientDef.ENTITY_STATE_DIE] = EntityDie;
+        this._stateModule[ClientDef.ENTITY_STATE_ATTACK] = EntityAttack;
+        this._stateModule[ClientDef.ENTITY_STATE_SHAPESHIFT] = EntityShapeShift;
+        this._stateModule[ClientDef.ENTITY_STATE_SHAPESHIFT_WALK] = EntityWalk;
+    }
 
     getNextState()
     {
@@ -25,18 +35,5 @@ export default class MonsterStateMachine extends EntityStateMachine {
         this._state_list.splice(0,1);
         return state;
     }
-
-    //生成状态
-    spawnState(state)
-    {
-        if(state == ClientDef.ENTITY_STATE_IDLE){return new EntityIdle(); }
-        else if(state == ClientDef.ENTITY_STATE_WALK){return new EntityWalk(); }
-        else if(state == ClientDef.ENTITY_STATE_DIE){return new EntityDie(); }
-        else if(state == ClientDef.ENTITY_STATE_ATTACK){return new EntityAttack(); }
-        else if(state == ClientDef.ENTITY_STATE_SHAPESHIFT){return new EntityShapeShift(); }
-        else if(state == ClientDef.ENTITY_STATE_SHAPESHIFT_WALK){return new EntityWalk(); }
-        return null;
-    }
-    
     
 }

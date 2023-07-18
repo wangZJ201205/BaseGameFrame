@@ -52,7 +52,7 @@ export default class AdvertiseMentView extends UIParent {
         }
         else
         {
-            EventMgr.Instance.Emit(EventName.UI_CLOSE_PANEL + UIName.VIEW_SELECTSKILL);
+            UIMgr.Instance.closeUI(UIName.VIEW_SELECTSKILL);
         }
     }
 
@@ -64,7 +64,7 @@ export default class AdvertiseMentView extends UIParent {
         }
         else
         {
-            EventMgr.Instance.Emit(EventName.UI_CLOSE_PANEL + UIName.VIEW_PLAY_ADVERTISE);
+            UIMgr.Instance.closeUI(UIName.VIEW_PLAY_ADVERTISE);
         }
     }
 

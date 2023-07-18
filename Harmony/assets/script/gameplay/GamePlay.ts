@@ -75,18 +75,18 @@ export default class GamePlay {
         this.layer = null;
 
         Hero.Instance.clear();
-        EventMgr.Instance.Emit(EventName.UI_CLOSE_PANEL + UIName.ROCKVIEW);
-        EventMgr.Instance.Emit(EventName.UI_CLOSE_PANEL + UIName.VIEW_PLAYER_PGB);
-        EventMgr.Instance.Emit(EventName.UI_CLOSE_PANEL + UIName.VIEW_ADVERTISEMENT);
-        EventMgr.Instance.Emit(EventName.UI_CLOSE_PANEL + UIName.VIEW_SELECTSKILL);
+        UIMgr.Instance.closeUI(UIName.ROCKVIEW);
+        UIMgr.Instance.closeUI(UIName.VIEW_PLAYER_PGB);
+        UIMgr.Instance.closeUI(UIName.VIEW_ADVERTISEMENT);
+        UIMgr.Instance.closeUI(UIName.VIEW_SELECTSKILL);
         
         if(GameData.Game_Mode == ClientDef.GAME_MODE_TEST_CALL_MONSTER)
         {
-            EventMgr.Instance.Emit(EventName.UI_CLOSE_PANEL + UIName.TESTVIEW);
+            UIMgr.Instance.closeUI(UIName.TESTVIEW);
         }
         else if(GameData.Game_Mode == ClientDef.GAME_MODE_NORMAL)
         {
-            EventMgr.Instance.Emit(EventName.UI_CLOSE_PANEL + UIName.VIEW_PLAY_GAMING_TOP);
+            UIMgr.Instance.closeUI(UIName.VIEW_PLAY_GAMING_TOP);
         }
     }
     

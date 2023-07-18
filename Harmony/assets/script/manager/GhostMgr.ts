@@ -3,6 +3,7 @@
  */
 import ClientDef from "../common/ClientDef";
 import GameData from "../common/GameData";
+import { Logger } from "../common/log/Logger";
 import Entity from "../ghost/Entity";
 import GameHelp from "../help/GameHelp";
 import ParentMgr from "./ParentMgr";
@@ -16,7 +17,7 @@ export default class GhostMgr extends ParentMgr {
     public static readonly Instance : GhostMgr = new GhostMgr();
 
     layer: cc.Node = null; //ui显示层
-    entitys:Entity[];
+    entitys:Array<Entity>;
     spawnEntityId:number = 0; //用来生成对象id
     private _timerID: number;
     private _typeClass : {};
@@ -59,44 +60,29 @@ export default class GhostMgr extends ParentMgr {
         {
             return;
         }
-
+        // Logger.start("ghostmgr > update");
         const delta = cc.director.getDeltaTime();
-        var needRemoveEntity = [];
-        for (let index = 0; index < this.entitys.length; index++) {
-            const element = this.entitys[index];
-            if( element.getCProp(ClientDef.ENTITY_PROP_ACTIVE_STATE) == ClientDef.ENTITY_ACTIVE_STATE_RUN )
+
+        this.entitys = this.entitys.filter((entity)=>
+        {
+            if( entity.getCProp(ClientDef.ENTITY_PROP_ACTIVE_STATE) == ClientDef.ENTITY_ACTIVE_STATE_RUN )
             {
-                element.update(delta);
+                entity.update(delta);
             }
             else
             {
-                needRemoveEntity.push(element);
-            }
-        }
-
-        for (let index = 0; index < needRemoveEntity.length; index++) {
-            const element = needRemoveEntity[index];
-            var findIndex = -1;
-            for (let i = 0; i < this.entitys.length; i++) {
-                const ele = this.entitys[i];
-                if( ele == element )
+                var time = entity.getCProp(ClientDef.ENTITY_PROP_WAIT_DESTROY_TIME) || 0;
+                entity.setCProp(ClientDef.ENTITY_PROP_WAIT_DESTROY_TIME, time + 1);
+                if(time >= 100) //设定时间，10秒倒计时
                 {
-                    var time = ele.getCProp(ClientDef.ENTITY_PROP_WAIT_DESTROY_TIME) || 0;
-                    ele.setCProp(ClientDef.ENTITY_PROP_WAIT_DESTROY_TIME, time + 1);
-                    if(time >= 100) //设定时间，10秒倒计时
-                    {
-                        ele.remove();
-                        findIndex = i;
-                    }
-                    break;
+                    entity.remove();
+                    return false;
                 }
             }
-            if(findIndex >= 0)
-            {
-                this.entitys.splice(findIndex,1);
-            }
-        }
-        
+            return true;
+        });
+
+        // Logger.end("ghostmgr > update");
     }
 
     /**
@@ -164,7 +150,7 @@ export default class GhostMgr extends ParentMgr {
         return this.layer;
     }
 
-    foreachEntity(callback)
+    foreach(callback)
     {
         for (let i = 0; i < this.entitys.length; i++) {
             const element = this.entitys[i];

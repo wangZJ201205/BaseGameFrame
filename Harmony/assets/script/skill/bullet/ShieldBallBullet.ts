@@ -4,7 +4,8 @@
 
 import ClientDef from "../../common/ClientDef";
 import GameData from "../../common/GameData";
-import Hero from "../../ghost/Hero";
+import { Hero } from "../../ghost/Hero";
+import { DamageSys } from "../../ghost/compSystem/DamageSys";
 import BulletParent from "../BulletParent";
 
 
@@ -60,7 +61,7 @@ export default class ShieldBallBullet extends BulletParent {
         }
         var damageValue = this.getDamageValue(other);
         if(damageValue == 0)return;
-        other.node.getEntityComponent(ClientDef.ENTITY_COMP_BLOOM).addDamage( damageValue );
+        DamageSys.addDamage(other, damageValue );
     }
     
 }

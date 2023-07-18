@@ -5,7 +5,7 @@
 import ClientDef from "../../common/ClientDef";
 import GameData from "../../common/GameData";
 import { UIName } from "../../common/UIName";
-import Hero from "../../ghost/Hero";
+import { Hero } from "../../ghost/Hero";
 import DictMgr from "../../manager/DictMgr";
 import UIParent from "../UIParent";
 

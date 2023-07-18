@@ -3,7 +3,8 @@
  */
 
 import ClientDef from "../../common/ClientDef";
-import Hero from "../../ghost/Hero";
+import { Hero } from "../../ghost/Hero";
+import { DamageSys } from "../../ghost/compSystem/DamageSys";
 import GameHelp from "../../help/GameHelp";
 import SkillParent from "../SkillParent";
 
@@ -26,7 +27,7 @@ export default class SuicideSkill extends SkillParent {
     {   
         var tgt = Hero.Instance.getEntity();
         var damage = this._skillInfo["attackValue"];
-        tgt.getEntityComponent(ClientDef.ENTITY_COMP_BLOOM).addDamage( damage );
+        DamageSys.addDamage(tgt, damage );
 
         this.getHost().getEntityNode().active = false;
         this.getHost().setCProp(ClientDef.ENTITY_PROP_ACTIVE_STATE, ClientDef.ENTITY_ACTIVE_STATE_FREE);

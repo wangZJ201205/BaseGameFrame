@@ -54,7 +54,6 @@ export default class LoginView extends UIParent {
         cc.sys.localStorage.setItem('user_name', this.accountEB.string);
         cc.sys.localStorage.setItem('user_password', this.passwordEB.string);
 
-        // EventMgr.Instance.Emit(EventName.UI_CLOSE_PANEL + this.getUIName(),null);
     }
 
     close()
@@ -72,7 +71,7 @@ export default class LoginView extends UIParent {
             return;
         }
         
-        EventMgr.Instance.Emit(EventName.UI_CLOSE_PANEL + this.getUIName());
+        UIMgr.Instance.closeUI(this.getUIName());
         UIMgr.Instance.openUI(UIName.VIEW_START);
         
 

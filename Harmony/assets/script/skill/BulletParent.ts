@@ -12,6 +12,7 @@ import SkillParent from "./SkillParent";
 import ParticleMgr from "../manager/ParticleMgr";
 import EffectParent from "../effect/EffectParent";
 import AudioMgr from "../manager/AudioMgr";
+import { DamageSys } from "../ghost/compSystem/DamageSys";
 
 const {ccclass, property} = cc._decorator;
 
@@ -306,7 +307,7 @@ export default class BulletParent {
         }
         var damageValue = this.getDamageValue(other);
         if(damageValue == 0)return false;
-        tgt.getEntityComponent(ClientDef.ENTITY_COMP_BLOOM).addDamage( damageValue );
+        DamageSys.addDamage(tgt, damageValue );
         var strike = this.getProp(ClientDef.BULLET_PROP_STRIKE);
         strike --;
         this.setProp(ClientDef.BULLET_PROP_STRIKE,strike);

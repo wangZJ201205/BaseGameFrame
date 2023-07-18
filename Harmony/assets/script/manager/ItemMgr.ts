@@ -5,7 +5,6 @@ import ClientDef from "../common/ClientDef";
 import GameData from "../common/GameData";
 import Item from "../ghost/Item";
 import GameHelp from "../help/GameHelp";
-import GhostMgr from "./GhostMgr";
 import ParentMgr from "./ParentMgr";
 import SceneMgr from "./SceneMgr";
 
