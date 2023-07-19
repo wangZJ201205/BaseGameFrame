@@ -25,7 +25,8 @@ function handle_map_rule(o)
 	-- d.group = tonumber(o.c)
 	d.monster = tonumber(o.c)
 	d.delay = tonumber(o.d)
-	d.createCount = tonumber(o.e) -- -1无限 >1 一次以上  控制怪物数量
+	d.callmode = tonumber(o.e) -- 出现模式
+	d.percent = tonumber(o.f)
 
 	if not gdmapRule[d.sceneid..""] then
 		gdmapRule[d.sceneid..""] = {}

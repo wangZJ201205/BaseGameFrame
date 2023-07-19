@@ -24,7 +24,7 @@ export default class GameData{
     public static App_Game_Heigth : number = 720; //游戏高度
 
 
-    public static Map_Current_Id : number = 10001; //当前地图id
+    public static Map_Current_Id : number = 10002; //当前地图id
 
     public static Hero_Current_ID : number = 100002; //当前英雄id
 

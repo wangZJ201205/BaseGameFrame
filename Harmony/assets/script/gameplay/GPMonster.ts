@@ -4,38 +4,56 @@
  */
 
 import GameData from "../common/GameData";
+import { Logger } from "../common/log/Logger";
 import DictMgr from "../manager/DictMgr";
 import GhostMgr from "../manager/GhostMgr";
 
 const {ccclass, property} = cc._decorator;
 
+interface MapEventInfo {
+    time ?:number;
+    monster ?:number;
+    delay ?:number;
+    callmode ?:number;
+    progress ?:number;
+    delayStart ?:number;
+}
+
 @ccclass
 export default class GPMonster {
 
-    _eventArray : any[];
+    _eventArray : MapEventInfo[];
     _deltaTime : number; //记录开始时间
     _duringTime:number; //运行时间
     _curSceneRule : any;
+
+    _totalPercent : number = 0;
+    _deltaCallMonsterTime : number = 0; //放怪时间
+    _duringCallMonsterTime : number = 0;
+    _callMonsterCD : number = 0;
+    _callMonsterArray : MapEventInfo[];
     onLoad () 
     {
         this._eventArray = [];
+        this._callMonsterArray = [];
     }
 
     start () 
     {
         this._duringTime = 0;
         this._deltaTime = cc.director.getTotalTime();
+        this._deltaCallMonsterTime = cc.director.getTotalTime();
         var rules = DictMgr.Instance.getDictByName("map_rule_data")[GameData.Map_Current_Id];
 
         rules.forEach(rule => {
-            var info:any = {};
-            info.time = rule.time;
-            info.monster = rule.monster;
-            // info.group = rule.group;
-            info.delay = rule.delay;
-            info.createCount = rule.createCount;
-            info.progress = 0; //进度
-            info.delayStart = this._deltaTime;
+            var info:MapEventInfo = { 
+            time : rule.time,
+            monster : rule.monster,
+            delay : rule.delay,
+            callmode : rule.callmode,
+            progress : rule.percent, //进度
+            delayStart : this._deltaTime,
+            }
             this._eventArray.push(info);
         });
 
@@ -43,7 +61,49 @@ export default class GPMonster {
 
     update () 
     {
-       
+        this.checkEventTime();
+        this.checkCallMonster();   
+    }
+
+    checkCallMonster()
+    {
+        var durTime : number = cc.director.getTotalTime() - this._deltaCallMonsterTime;
+        if(durTime > 100)
+        {
+            this._duringCallMonsterTime ++;
+            this._deltaCallMonsterTime = cc.director.getTotalTime();
+        }
+        else
+        {
+            return;
+        }
+
+        //放怪
+        if(this._duringCallMonsterTime*100 >= this._callMonsterCD)
+        {
+            var rand = Math.random()*this._totalPercent;
+            var curpge = 0;
+            var maxpge = 0;
+            var callMonsterId = 0;
+            for (let index = 0; index < this._callMonsterArray.length; index++) {
+                const element = this._callMonsterArray[index];
+                maxpge += element.progress;
+                if( curpge <= rand && rand <= maxpge)
+                {
+                    callMonsterId = element.monster;
+                    break;
+                }
+            }
+
+            this.callMonster(callMonsterId);
+            this._duringCallMonsterTime = 0;
+
+            Logger.trace(">>this._callMonsterCD: "+this._callMonsterCD+" monsterId:" + callMonsterId + ">>_totalPercent:" + this._totalPercent);
+        }
+    }
+
+    checkEventTime()
+    {
         var durTime : number = cc.director.getTotalTime() - this._deltaTime;
         if(durTime > 100)
         {
@@ -54,8 +114,6 @@ export default class GPMonster {
         {
             return;
         }
-        
-        const eventsToBeRemoved = [];
 
         for (let i = 0; i < this._eventArray.length; i++) 
         {
@@ -65,38 +123,24 @@ export default class GPMonster {
                 break;
             }
 
-            const dtime = cc.director.getTotalTime() - event.delayStart;
-            if (dtime < event.delay) {
-                // 尚未到延迟时间
-                continue;
-            }
-            //放怪
-            this.callMonster(event.monster);
-
-            event.delayStart = cc.director.getTotalTime();
-            if(event.createCount > 0)
+            this._totalPercent += event.progress;
+            this._callMonsterCD = event.delay;
+            if(event.callmode == 1) //以概率方式召唤怪物
             {
-                event.progress++;
+                this._callMonsterArray.push(event);
             }
-
-             // 事件已全部触发完毕
-            if (event.progress >= event.createCount && event.createCount > 0) {
-                eventsToBeRemoved.push(event);
+            else if(event.callmode  == 2) //必定出现怪物
+            {
+                this.callMonster(event.monster);
             }
+            this._eventArray.splice(i,1);
+            break;
         }
-
-         // 删除已触发完毕的事件
-        for (const event of eventsToBeRemoved) {
-            const index = this._eventArray.indexOf(event);
-            if (index >= 0) {
-                this._eventArray.splice(index, 1);
-            }
-        }
-
     }
 
     callMonster(monsterId)
     {
+        if(monsterId == 0)return;
         var entity = GhostMgr.Instance.spawnEntity(monsterId); 
         entity.restart();
         entity.randomEntityPosition();

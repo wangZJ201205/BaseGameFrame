@@ -2,7 +2,7 @@
 	"100001": {
 		"id": 100001,
 		"name": "暗夜精灵",
-		"bloom": 50,
+		"bloom": 500000,
 		"collGroup": "player",
 		"collRect": "0,60,48,111",
 		"collision": 0,
