@@ -14,4 +14,5 @@ export enum UIName {
      VIEW_SEL_HERO  = 'VIEW_SEL_HERO',      //选择英雄
      VIEW_PLAY_ADVERTISE = 'VIEW_PLAY_ADVERTISE',      //播放广告
      VIEW_PLAY_GAMING_TOP  = 'VIEW_PLAY_GAMING_TOP',      //游戏顶部信息
+     VIEW_SEL_SCENE  = 'VIEW_SEL_SCENE',      //选择场景
 }

@@ -7,6 +7,7 @@ import GameData from "../../common/GameData";
 import { UIName } from "../../common/UIName";
 import { Hero } from "../../ghost/Hero";
 import DictMgr from "../../manager/DictMgr";
+import UIMgr from "../../manager/UIMgr";
 import UIParent from "../UIParent";
 
 const {ccclass, property} = cc._decorator;

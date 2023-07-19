@@ -95,9 +95,10 @@ export default class HeroSelectView extends UIParent {
 
     openGame(event,param)
     {
-        SceneMgr.Instance.enterScene();
+        UIMgr.Instance.openUI(UIName.VIEW_SEL_SCENE);
+        // SceneMgr.Instance.enterScene();
         UIMgr.Instance.closeUI(this.getUIName());
-        UIMgr.Instance.closeUI(UIName.VIEW_START);
+        // UIMgr.Instance.closeUI(UIName.VIEW_START);
     }
 
     closeView(event,param)

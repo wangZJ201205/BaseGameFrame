@@ -229,6 +229,14 @@
             <filename>achievementsBanner.png</filename>
             <filename>upgrades_buyBut_0001.png</filename>
             <filename>gui_bottom_info_icon_0005.png</filename>
+            <filename>button_privacy_confirm_0001.png</filename>
+            <filename>button_privacy_confirm_0002.png</filename>
+            <filename>heroroom_upgradeIcons_0006.png</filename>
+            <filename>heroroom_upgradeIcons_0001.png</filename>
+            <filename>heroroom_upgradeIcons_0002.png</filename>
+            <filename>heroroom_upgradeIcons_0003.png</filename>
+            <filename>heroroom_upgradeIcons_0004.png</filename>
+            <filename>heroroom_upgradeIcons_0005.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>

@@ -21,8 +21,8 @@ export default class ArcherySkill extends SkillParent {
         var dir = GameMath.degreeToEntityDirection2(degree);
         var angle = dir == 2 ? 180 : 360;
 
-        angle -= Math.floor(this._skillInfo["count"] / 2) * 5;
-        angle += (this._shootBulletCount - 1) * 5;
+        angle -= Math.floor(this._skillInfo["count"] / 2) * 10;
+        angle += (this._shootBulletCount - 1) * 10;
 
         var startPos = this.getHost().position;
         var bullet = this.spawnBullet(this._skillInfo["spawnBullet"] );

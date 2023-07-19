@@ -1,0 +1,49 @@
+{
+  "__type__": "cc.AnimationClip",
+  "_name": "SelectScenePref_cp",
+  "_objFlags": 0,
+  "_native": "",
+  "_duration": 0.2,
+  "sample": 60,
+  "speed": 0.6,
+  "wrapMode": 1,
+  "curveData": {
+    "props": {
+      "position": [
+        {
+          "frame": 0,
+          "value": [
+            0,
+            654.313,
+            0
+          ]
+        },
+        {
+          "frame": 0.11666666666666667,
+          "value": [
+            0,
+            -48.922,
+            0
+          ]
+        },
+        {
+          "frame": 0.16666666666666666,
+          "value": [
+            0,
+            -2.782,
+            0
+          ]
+        },
+        {
+          "frame": 0.2,
+          "value": [
+            0,
+            -20.837,
+            0
+          ]
+        }
+      ]
+    }
+  },
+  "events": []
+}

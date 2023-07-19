@@ -1,72 +1,9 @@
 {
-	"10001": {
-		"id": 10001,
-		"monsters": [
-			{"id": 100001,"delay": 100},
-			{"id": 100001,"delay": 500},
-			{"id": 100001,"delay": 500},
-			{"id": 100001,"delay": 500}
-		],
-		"path": "map/land/land"
-	},
-	"10002": {
-		"id": 10002,
-		"monsters": [
-			{"id": 100001,"delay": 500},
-			{"id": 100001,"delay": 500},
-			{"id": 100001,"delay": 500},
-			{"id": 100001,"delay": 700}
-		],
-		"path": "map/scene2/scene"
-	},
-	"10003": {
-		"id": 10003,
-		"monsters": [
-			{"id": 100001,"delay": 700},
-			{"id": 100001,"delay": 700},
-			{"id": 100001,"delay": 700},
-			{"id": 100001,"delay": 700}
-		],
-		"path": "map/scene1/scene3"
-	},
-	"10004": {
-		"id": 10004,
-		"monsters": [
-			{"id": 100001,"delay": 700},
-			{"id": 100001,"delay": 700},
-			{"id": 100001,"delay": 700},
-			{"id": 100001,"delay": 700}
-		],
-		"path": "map/iceland/iceland"
-	},
-	"10005": {
-		"id": 10005,
-		"monsters": [
-			{"id": 100001,"delay": 700},
-			{"id": 100001,"delay": 700},
-			{"id": 100001,"delay": 700},
-			{"id": 100001,"delay": 700}
-		],
-		"path": "map/scene1/scene4"
-	},
-	"10006": {
-		"id": 10006,
-		"monsters": [
-			{"id": 100001,"delay": 700},
-			{"id": 100001,"delay": 700},
-			{"id": 100001,"delay": 700},
-			{"id": 100001,"delay": 700}
-		],
-		"path": "map/scene1/scene4"
-	},
-	"10007": {
-		"id": 10007,
-		"monsters": [
-			{"id": 100001,"delay": 700},
-			{"id": 100001,"delay": 700},
-			{"id": 100001,"delay": 700},
-			{"id": 100001,"delay": 700}
-		],
-		"path": "map/scene1/scene4"
-	}
+	"10001": {"id": 10001,"icon": "heroroom_upgradeIcons_0001","path": "map/land/land"},
+	"10002": {"id": 10002,"icon": "heroroom_upgradeIcons_0001","path": "map/scene2/scene"},
+	"10003": {"id": 10003,"icon": "heroroom_upgradeIcons_0001","path": "map/scene1/scene3"},
+	"10004": {"id": 10004,"icon": "heroroom_upgradeIcons_0001","path": "map/iceland/iceland"},
+	"10005": {"id": 10005,"icon": "heroroom_upgradeIcons_0001","path": "map/scene1/scene4"},
+	"10006": {"id": 10006,"icon": "heroroom_upgradeIcons_0001","path": "map/scene1/scene4"},
+	"10007": {"id": 10007,"icon": "heroroom_upgradeIcons_0001","path": "map/scene1/scene4"}
 }

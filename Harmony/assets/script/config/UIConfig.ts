@@ -36,6 +36,7 @@ export default class UIConfig{
         this.UIReg[UIName.VIEW_SEL_HERO] = { path: this.PreGame + 'SelectHeroPref',index:ClientDef.UI_INDEX_MIDDLE }; 
         this.UIReg[UIName.VIEW_PLAY_ADVERTISE] = { path: this.PreGame + 'PlayAdvertisePref',index:ClientDef.UI_INDEX_MIDDLE }; 
         this.UIReg[UIName.VIEW_PLAY_GAMING_TOP] = { path: this.PreGame + 'GamIngTopPref',index:ClientDef.UI_INDEX_MIDDLE }; 
+        this.UIReg[UIName.VIEW_SEL_SCENE] = { path: this.PreGame + 'SelectScenePref',index:ClientDef.UI_INDEX_MIDDLE }; 
 
     }
 
