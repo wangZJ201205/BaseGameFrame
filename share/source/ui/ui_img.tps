@@ -237,6 +237,13 @@
             <filename>heroroom_upgradeIcons_0003.png</filename>
             <filename>heroroom_upgradeIcons_0004.png</filename>
             <filename>heroroom_upgradeIcons_0005.png</filename>
+            <filename>screen_map_stage_thumbs-23.png</filename>
+            <filename>screen_map_stage_thumbs-1.png</filename>
+            <filename>screen_map_stage_thumbs-2.png</filename>
+            <filename>screen_map_stage_thumbs-4.png</filename>
+            <filename>screen_map_stage_thumbs-8.png</filename>
+            <filename>screen_map_stage_thumbs-20.png</filename>
+            <filename>demo_stage_card_cover.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>

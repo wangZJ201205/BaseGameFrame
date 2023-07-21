@@ -151,8 +151,9 @@ export default class Entity extends cc.Node
 
     addCProp(type,value)
     {
-        var curValue = this._client_prop_map[type];
-        this.setCProp(type,value + curValue)
+        var curValue = this._client_prop_map[type] || 0;
+        curValue = curValue + value
+        this.setCProp(type,curValue)
     }
 
     getCProp(type)
@@ -178,6 +179,16 @@ export default class Entity extends cc.Node
             return this._entityComponents.get(type);
         }
         return null;
+    }
+
+    addEntityComponent(type)
+    {
+        this._entityComponents?.add(type);
+    }
+
+    rmvEntityComponent(type)
+    {
+        this._entityComponents?.del(type);
     }
 
     getStateMachine()

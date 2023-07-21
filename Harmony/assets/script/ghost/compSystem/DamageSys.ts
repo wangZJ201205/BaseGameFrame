@@ -25,6 +25,41 @@ export class DamageSys {
             return;
         }
 
+        damageValue = DamageSys.addShieldDamage(entity, damageValue); //添加护盾防御
+
+        if( damageValue <= 0)
+        {
+            return;
+        }
+
+        DamageSys.addEndDamage(entity, damageValue); //最后伤害
+    }
+
+    //护盾
+    private static addShieldDamage(entity:Entity, damageValue:number = 0)
+    {
+        var curBloom = entity.getCProp(ClientDef.ENTITY_PROP_SHIELD_BLOOM);
+        if(curBloom > 0) //护盾防御
+        {
+            var showDamageValue = curBloom > damageValue ? damageValue : curBloom;
+            HeadEffectMgr.Instance.addDamageTips(1,showDamageValue, entity.getPosition());
+
+            var entityInfo = entity.getEntityDict();
+            HeadEffectMgr.Instance.addBloomEffect(1, entityInfo["bloomEffect"], entity.getPosition());
+
+            entity.addCProp(ClientDef.ENTITY_PROP_SHIELD_BLOOM, -damageValue);
+            if(curBloom - damageValue > 0)
+            {
+                return 0;
+            }
+            damageValue = damageValue - curBloom;
+        }
+        return damageValue;
+    }
+
+    //添加血条伤害
+    private static addEndDamage(entity:Entity, damageValue:number = 0)
+    {
         //伤害弹跳
         var curBloom = entity.getCProp(ClientDef.ENTITY_PROP_CUR_BLOOM);
         var showDamageValue = curBloom > damageValue ? damageValue : curBloom;
@@ -42,7 +77,6 @@ export class DamageSys {
         }
 
         entity.getEntityComponent(ClientDef.ENTITY_COMP_BLOOM).addDamage( damageValue );
-
     }
 
     //检测变身状态

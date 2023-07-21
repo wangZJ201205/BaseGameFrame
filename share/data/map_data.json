@@ -1,9 +1,9 @@
 {
-	"10001": {"id": 10001,"icon": "heroroom_upgradeIcons_0001","path": "map/land/land"},
-	"10002": {"id": 10002,"icon": "heroroom_upgradeIcons_0001","path": "map/scene2/scene"},
-	"10003": {"id": 10003,"icon": "heroroom_upgradeIcons_0001","path": "map/scene1/scene3"},
-	"10004": {"id": 10004,"icon": "heroroom_upgradeIcons_0001","path": "map/iceland/iceland"},
-	"10005": {"id": 10005,"icon": "heroroom_upgradeIcons_0001","path": "map/scene1/scene4"},
-	"10006": {"id": 10006,"icon": "heroroom_upgradeIcons_0001","path": "map/scene1/scene4"},
-	"10007": {"id": 10007,"icon": "heroroom_upgradeIcons_0001","path": "map/scene1/scene4"}
+	"10001": {"id": 10001,"desc": "<color=#00ff00>草原</c>\n<color=#0fffff>这个地图有许多来自远古的怪物，\n</color>赶快来击杀他们吧。","icon": "screen_map_stage_thumbs-1","path": "map/land/land"},
+	"10002": {"id": 10002,"desc": "<color=#00ff00>城镇</c>\n<color=#0fffff>这个地图有许多来自远古的怪物，\n</color>赶快来击杀他们吧。","icon": "screen_map_stage_thumbs-2","path": "map/scene2/scene"},
+	"10003": {"id": 10003,"desc": "<color=#00ff00>皇宫</c>\n<color=#0fffff>这个地图有许多来自远古的怪物，\n</color>赶快来击杀他们吧。","icon": "screen_map_stage_thumbs-4","path": "map/scene1/scene3"},
+	"10004": {"id": 10004,"desc": "<color=#00ff00>冰岛</c>\n<color=#0fffff>这个地图有许多来自远古的怪物，\n</color>赶快来击杀他们吧。","icon": "screen_map_stage_thumbs-8","path": "map/iceland/iceland"},
+	"10005": {"id": 10005,"desc": "<color=#00ff00>墓地</c>\n<color=#0fffff>这个地图有许多来自远古的怪物，\n</color>赶快来击杀他们吧。","icon": "screen_map_stage_thumbs-20","path": "map/scene1/scene4"},
+	"10006": {"id": 10006,"desc": "<color=#00ff00>沼泽</c>\n<color=#0fffff>这个地图有许多来自远古的怪物，\n</color>赶快来击杀他们吧。","icon": "screen_map_stage_thumbs-23","path": "map/scene1/scene4"},
+	"10007": {"id": 10007,"desc": "<color=#00ff00>火山</c>\n<color=#0fffff>这个地图有许多来自远古的怪物，\n</color>赶快来击杀他们吧。","icon": "screen_map_stage_thumbs-8","path": "map/scene1/scene4"}
 }

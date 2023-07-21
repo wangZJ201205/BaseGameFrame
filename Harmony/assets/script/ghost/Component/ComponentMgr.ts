@@ -1,10 +1,12 @@
 import ClientDef from "../../common/ClientDef";
 import GameData from "../../common/GameData";
 import Entity from "../Entity";
+import ComponentParent from "./ComponentParent";
 import BloomComponent from "./children/BloomComponent";
 import ClothComponent from "./children/ClothComponent";
 import CollComponent from "./children/CollComponent";
 import NameComponent from "./children/NameComponent";
+import ShieldComponent from "./children/ShieldComponent";
 import TitleComponent from "./children/TitleComponent";
 
 /**
@@ -19,43 +21,38 @@ export default class ComponentMgr{
     _entity_components:{}; //对象组件
     _delta : number;
 
+    static componentClass: Map<number,ComponentParent> = new Map<number,ComponentParent>();
+
+    static init()
+    {
+        ComponentMgr.componentClass[ClientDef.ENTITY_COMP_CLOTH] = ClothComponent;
+        ComponentMgr.componentClass[ClientDef.ENTITY_COMP_BLOOM] = BloomComponent;
+        ComponentMgr.componentClass[ClientDef.ENTITY_COMP_TITLE] = TitleComponent;
+        ComponentMgr.componentClass[ClientDef.ENTITY_COMP_NAME]  = NameComponent;
+        ComponentMgr.componentClass[ClientDef.ENTITY_COMP_COLL]  = CollComponent;
+        ComponentMgr.componentClass[ClientDef.ENTITY_COMP_SHIELD]  = ShieldComponent;
+    }
+
     onLoad (host) 
     {
-
         this._host = host;
         this._entity_components = {};
         this._delta = cc.director.getTotalTime();
-
-        var cloth = new ClothComponent();
-        cloth.onLoad(host);
-        this.add(ClientDef.ENTITY_COMP_CLOTH,cloth); //添加衣服组件
-
-        var bloom = new BloomComponent();
-        bloom.onLoad(host);
-        this.add(ClientDef.ENTITY_COMP_BLOOM,bloom); //添加衣服组件
-
-        var title = new TitleComponent();
-        title.onLoad(host);
-        this.add(ClientDef.ENTITY_COMP_TITLE,title);
-
-        if(GameData.IsDebug)
-        {
-            var name = new NameComponent();
-            name.onLoad(host);
-            this.add(ClientDef.ENTITY_COMP_NAME,name);
-        }
     }
 
     start () 
     {
-        this.get(ClientDef.ENTITY_COMP_CLOTH).start();
-        this.get(ClientDef.ENTITY_COMP_BLOOM).start();
-        this.get(ClientDef.ENTITY_COMP_TITLE).start();
+        this.add(ClientDef.ENTITY_COMP_CLOTH);
+        this.add(ClientDef.ENTITY_COMP_BLOOM);
+        this.add(ClientDef.ENTITY_COMP_TITLE);
         if(GameData.IsDebug)
         {
-            this.get(ClientDef.ENTITY_COMP_NAME).start();
+            this.add(ClientDef.ENTITY_COMP_NAME);
         }
-        this.addCollision();
+        if(this._host.isMonster())
+        {
+            this.add(ClientDef.ENTITY_COMP_COLL);   
+        }
     }
 
     restart () 
@@ -65,12 +62,6 @@ export default class ComponentMgr{
 
     update (dt) 
     {
-        // var delta = cc.director.getTotalTime() - this._delta;
-        // if( delta < 500 ) //组件更新时间限制
-        // {
-        //     return;
-        // }
-
         this._delta = cc.director.getTotalTime();
 
         for (const key in this._entity_components) {
@@ -84,22 +75,7 @@ export default class ComponentMgr{
         for (const key in this._entity_components) {
             const element = this._entity_components[key];
             element.remove();
-        }
-    }
-
-    //添加碰撞
-    addCollision()
-    {
-        var coll = null;
-        if(this._host.isMonster())
-        {
-            coll = new CollComponent();
-        }
-        if(coll)
-        {
-            coll.onLoad(this._host);
-            this.add(ClientDef.ENTITY_COMP_COLL,coll);
-            coll.start();
+            element.getNode().parent = null;
         }
     }
 
@@ -108,9 +84,13 @@ export default class ComponentMgr{
         return this._entity_components[type] || null;
     }
 
-    add(type,component)
+    add(type)
     {
-        this._entity_components[type] = component;
+        var cmpClass = ComponentMgr.componentClass[type];
+        var cmp = new cmpClass();
+        cmp.onLoad(this._host);
+        cmp.start();
+        this._entity_components[type] = cmp;
     }
 
     del(type)
@@ -121,7 +101,7 @@ export default class ComponentMgr{
         }
         var component = this._entity_components[type];
         component.remove();
-        component.parent = null;
+        component.getNode().parent = null;
         delete this._entity_components[type];
     }
 

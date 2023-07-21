@@ -63,6 +63,7 @@ export default class BloomComponent extends ComponentParent {
         this._curBloom = entityInfo["bloom"];
         this._maxBloom = entityInfo["bloom"];
         this._host.setCProp(ClientDef.ENTITY_PROP_CUR_BLOOM, this._curBloom);
+        this._host.setCProp(ClientDef.ENTITY_PROP_MAX_BLOOM, this._maxBloom);
         if(this._green_bar){
             this._green_bar.node.scaleX = 1;
         }

@@ -27,7 +27,8 @@ function handle_map_rule(o)
 	d.delay = tonumber(o.d)
 	d.callmode = tonumber(o.e) -- 出现模式
 	d.percent = tonumber(o.f)
-
+	d.gene = tonumber(o.g) or 0
+	
 	if not gdmapRule[d.sceneid..""] then
 		gdmapRule[d.sceneid..""] = {}
 	end

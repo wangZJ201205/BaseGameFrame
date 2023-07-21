@@ -34,6 +34,7 @@ export default class ClientDef{
     public static readonly ENTITY_COMP_TITLE : number = 3; //对象组件 - 称号
     public static readonly ENTITY_COMP_COLL : number = 4; //对象组件 - 碰撞
     public static readonly ENTITY_COMP_NAME : number = 5; //对象组件 - 名字
+    public static readonly ENTITY_COMP_SHIELD : number = 6 //对象组件 - 护盾
 
     //对象组件运行状态
     public static readonly COMP_STATE_LOAD : number = 1; //组件状态--加载
@@ -86,8 +87,10 @@ export default class ClientDef{
     public static readonly ENTITY_PROP_POSION_TIME : number = 15; //毒的时间
     public static readonly ENTITY_PROP_DEGREE : number = 16; //当前角度
     public static readonly ENTITY_PROP_CUR_BLOOM : number = 17; //当前血量
-    public static readonly ENTITY_PROP_STATE : number = 18; //当前状态
-    public static readonly ENTITY_PROP_STATE_SHAPESHIFT : number = 19; //变身状态
+    public static readonly ENTITY_PROP_MAX_BLOOM : number = 18; //当前血量
+    public static readonly ENTITY_PROP_STATE : number = 19; //当前状态
+    public static readonly ENTITY_PROP_STATE_SHAPESHIFT : number = 20; //变身状态
+    public static readonly ENTITY_PROP_SHIELD_BLOOM : number = 21; //魔法盾血量
 
     //技能类型
     public static readonly SKILL_TYPE_FIREBALL: number      = 101; //火球
@@ -187,6 +190,7 @@ export default class ClientDef{
     public static readonly GENE_TYPE_SPEED : number = 1; //速度
     public static readonly GENE_TYPE_POSION : number = 2; //毒
     public static readonly GENE_TYPE_SHAPESHIFT : number = 3; //变身
+    public static readonly GENE_TYPE_SHIELD : number = 4; //shield
     public static readonly GENE_TYPE_RENEW : number = 5; //恢复
 
     //游戏暂停列表

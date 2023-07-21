@@ -23,6 +23,8 @@ export default class SelectSkillItem extends cc.Component {
     @property(cc.RichText)
     skillDescRT: cc.RichText = null;
 
+    
+
     _skillId:number;
     
     onLoad () 

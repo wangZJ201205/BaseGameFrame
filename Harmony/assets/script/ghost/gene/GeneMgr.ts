@@ -8,6 +8,7 @@ import DictMgr from "../../manager/DictMgr";
 import Entity from "../Entity";
 import GeneParent from "./GeneParent";
 import RenewGene from "./children/RenewGene";
+import ShieldGene from "./children/ShieldGene";
 import SpeedGene from "./children/SpeedGene";
 
 const {ccclass, property} = cc._decorator;
@@ -28,6 +29,7 @@ export default class GeneMgr
         this._typeClass[ClientDef.GENE_TYPE_SPEED] = SpeedGene;
         this._typeClass[ClientDef.GENE_TYPE_SHAPESHIFT] = SpeedGene;
         this._typeClass[ClientDef.GENE_TYPE_RENEW] = RenewGene;
+        this._typeClass[ClientDef.GENE_TYPE_SHIELD] = ShieldGene;
     }
 
     start () 

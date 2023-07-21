@@ -17,6 +17,7 @@ interface MapEventInfo {
     callmode ?:number;
     progress ?:number;
     delayStart ?:number;
+    gene?:number;
 }
 
 @ccclass
@@ -53,6 +54,7 @@ export default class GPMonster {
             callmode : rule.callmode,
             progress : rule.percent, //进度
             delayStart : this._deltaTime,
+            gene : rule.gene,
             }
             this._eventArray.push(info);
         });
@@ -85,17 +87,19 @@ export default class GPMonster {
             var curpge = 0;
             var maxpge = 0;
             var callMonsterId = 0;
+            var event :MapEventInfo = null;
             for (let index = 0; index < this._callMonsterArray.length; index++) {
                 const element = this._callMonsterArray[index];
                 maxpge += element.progress;
                 if( curpge <= rand && rand <= maxpge)
                 {
                     callMonsterId = element.monster;
+                    event = element;
                     break;
                 }
             }
 
-            this.callMonster(callMonsterId);
+            this.callMonster(callMonsterId,event);
             this._duringCallMonsterTime = 0;
 
             Logger.trace(">>this._callMonsterCD: "+this._callMonsterCD+" monsterId:" + callMonsterId + ">>_totalPercent:" + this._totalPercent);
@@ -131,19 +135,24 @@ export default class GPMonster {
             }
             else if(event.callmode  == 2) //必定出现怪物
             {
-                this.callMonster(event.monster);
+                this.callMonster(event.monster,event);
             }
             this._eventArray.splice(i,1);
             break;
         }
     }
 
-    callMonster(monsterId)
+    callMonster(monsterId,event?:MapEventInfo)
     {
-        if(monsterId == 0)return;
+        if(monsterId == 0)return null;
         var entity = GhostMgr.Instance.spawnEntity(monsterId); 
         entity.restart();
         entity.randomEntityPosition();
+
+        if(event?.gene > 0 )
+        {
+            entity.getGene().addGene(event.gene);
+        }
     }
 
     

@@ -3,7 +3,7 @@
   "_name": "die",
   "_objFlags": 0,
   "_native": "",
-  "_duration": 0.31666666666666665,
+  "_duration": 0.3,
   "sample": 60,
   "speed": 0.4,
   "wrapMode": 1,
@@ -236,23 +236,12 @@
                 "value": {
                   "__uuid__": "3262c3bb-7e09-41d9-8ecc-e57bc935fae6"
                 }
-              },
-              {
-                "frame": 0.3,
-                "value": {
-                  "__uuid__": "9900b7e5-0cec-4440-963a-3a145213cb31"
-                }
               }
             ]
           }
         },
         "props": {
-          "scaleX": [
-            {
-              "frame": 0.3,
-              "value": -1
-            }
-          ]
+          "scaleX": []
         }
       }
     }

@@ -25,6 +25,7 @@ function handle_map(o)
 	d.id = id
 	d.path = o[1].b
 	d.icon = o[1].f
+	d.desc = o[1].g
 	-- d.monsters = {}
 	-- for i=1,4 do
 	-- 	local monsters= {}

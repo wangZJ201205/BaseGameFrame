@@ -8,6 +8,7 @@ import { UIName } from "./common/UIName";
 import DictConfig from "./config/DictConfig";
 import UIConfig from "./config/UIConfig";
 import { Hero } from "./ghost/Hero";
+import ComponentMgr from "./ghost/component/ComponentMgr";
 import EntityProxy from "./ghost/proxy/EntityProxy";
 import HeroProxy from "./ghost/proxy/HeroProxy";
 import AudioMgr from "./manager/AudioMgr";
@@ -43,7 +44,7 @@ export default class GameStart extends cc.Component {
 
         cc.director.getPhysicsManager().gravity = cc.v2(0, 0);
         if (this.isDebug) {
-            cc.director.getCollisionManager().enabledDebugDraw = false;   //显示碰撞检测区域
+            cc.director.getCollisionManager().enabledDebugDraw = true;   //显示碰撞检测区域
         }
 
         GameData.Game_Mode = this.gameMode; //游戏模式
@@ -59,7 +60,8 @@ export default class GameStart extends cc.Component {
         //加载配置文件
         UIConfig.init();
         DictConfig.init();
-
+        ComponentMgr.init();
+        
         if(this.isDebug)
         {
             GM.init();
@@ -80,6 +82,7 @@ export default class GameStart extends cc.Component {
         DictMgr.Instance.start();
         AudioMgr.Instance.start();
         ParticleMgr.Instance.start();
+        
 
         //注册所有的消息
         SocketRegister.start();
