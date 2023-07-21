@@ -75,7 +75,7 @@ export default class ComponentMgr{
         for (const key in this._entity_components) {
             const element = this._entity_components[key];
             element.remove();
-            element.getNode().parent = null;
+            // element.getNode().parent = null;
         }
     }
 
