@@ -56,7 +56,7 @@ export default class UIMgr extends ParentMgr {
             }
             return true;
         });
-        console.info(">>>>>>ui lenght : " + this.uiList.length);
+        // console.info(">>>>>>ui lenght : " + this.uiList.length);
     }
 
     register()

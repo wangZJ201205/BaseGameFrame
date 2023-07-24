@@ -3,6 +3,7 @@
  */
 
 import ClientDef from "../../../common/ClientDef";
+import GameData from "../../../common/GameData";
 import DictMgr from "../../../manager/DictMgr";
 import SkillParent from "../../../skill/SkillParent";
 import { Hero } from "../../Hero";
@@ -22,6 +23,9 @@ export default class EntityAttack extends StateParent {
         this._bulletInfo = DictMgr.Instance.getDictByName("skill_data")[entityInfo.skillid];
 
         this._host.on("animation_AttackFinish",this.onFinish, this);
+
+        var cloth = this._host.getEntityComponent(ClientDef.ENTITY_COMP_CLOTH);
+        cloth.runState(ClientDef.ENTITY_STATE_IDLE);
     }
 
     stop()
@@ -44,26 +48,24 @@ export default class EntityAttack extends StateParent {
             return;
         }
 
+        if(this._skillReleaseState) return;
+
         var myNode = this.getHost().getEntityNode();
         var currentPosition = this.getHost().getEntityNode().position;
-
         const distance = heroNode.position.sub(currentPosition).mag();
-
-        //超出范围移除
-        if (distance > this._bulletInfo.distanceOfEnemy )
-        {
-            this.getHost().getStateMachine().addState(ClientDef.ENTITY_STATE_WALK);
-            this.getHost().getStateMachine().runNextState();
-        }
-
-        if(this._skillReleaseState) return;
+        
         var skill : SkillParent = this.findReleasableSkill();
         if(skill)
         {
-            skill.releaseShootBullet();
+            skill.releaseBullet();
             this._skillReleaseState = true;
             var cloth = this._host.getEntityComponent(ClientDef.ENTITY_COMP_CLOTH);
             cloth.runState(this._stateID,true);
+        }
+        else if (distance > GameData.Monster_And_Hero_Min_Distance ) //超出范围移除
+        {
+            this.getHost().getStateMachine().addState(ClientDef.ENTITY_STATE_WALK);
+            this.getHost().getStateMachine().runNextState();
         }
     }
 
@@ -77,7 +79,7 @@ export default class EntityAttack extends StateParent {
         var skills = skillmgr.getSkills();
         for (let index = 0; index < skills.length; index++) {
             const skill = skills[index];
-            if(skill && skill.releaseableSkill())
+            if(skill && skill.releaseableSkill(Hero.Instance.getEntity()))
             {
                 return skill;
             }

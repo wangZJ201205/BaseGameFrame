@@ -44,7 +44,7 @@ function handle_monster_skill(o)
 	end
 
 	d.name = o.b
-	d.attackValue = tonumber(o.c)
+	d.attackValue = o.c
 	d.spawnBullet = o.d ~= "0" and tonumber(o.d) or nil
 	d.cooldown = o.e ~= "0" and tonumber(o.e) or nil
 	d.distanceOfEnemy = o.f ~= "0" and tonumber(o.f) or nil

@@ -151,7 +151,7 @@ export default class ClothComponent extends ComponentParent {
         anim.resume(clipname);
         anim.play(clipname);
         anim.on('finished',  this.onFinished,    this);
-        anim.on('AttackFinish',  this.onAimAttack,    this);
+        anim.node.on('AttackFinish',  this.onAimAttack,    this);
         for (let index = 1; index <= this._animation.node.childrenCount; index++) 
         {
             const element = this._animation.node.getChildByName(index+"");

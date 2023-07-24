@@ -36,7 +36,12 @@ export default class EntityWalk extends StateParent {
         
         const distance = heroNode.position.sub(currentPosition).mag();
         //超出范围移除
-        if (distance <= GameData.Monster_And_Hero_Min_Distance)
+        if(this.findReleasableSkill())
+        {
+            this.getHost().getStateMachine().addState(ClientDef.ENTITY_STATE_ATTACK);
+            this.getHost().getStateMachine().runNextState();
+        }
+        else if (distance <= GameData.Monster_And_Hero_Min_Distance)
         {
             this.getHost().getStateMachine().addState(ClientDef.ENTITY_STATE_ATTACK);
             this.getHost().getStateMachine().runNextState();
@@ -57,6 +62,25 @@ export default class EntityWalk extends StateParent {
         
         this.changePlayerDirection(direction);
     }
+
+    //寻找可以释放的技能
+    findReleasableSkill()
+    {
+        var skillmgr = this._host.getSkill();
+        if(!skillmgr){
+            return null;
+        }
+        var skills = skillmgr.getSkills();
+        for (let index = 0; index < skills.length; index++) {
+            const skill = skills[index];
+            if(skill && skill.releaseableSkill(Hero.Instance.getEntity()))
+            {
+                return skill;
+            }
+        }
+        return null;
+    }
+
     /**
      * 改变方向
      * @param direction 方向

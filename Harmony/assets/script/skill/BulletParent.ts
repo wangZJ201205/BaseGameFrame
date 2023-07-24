@@ -259,7 +259,7 @@ export default class BulletParent {
     {
         var collrect: string = this._bulletInfo.collRect;
         var cr : string[] = collrect.split(",");
-
+        var entityInfo = this._host.getHost().getEntityDict();
         //添加碰撞外框
         var box = this.getNode().addComponent(cc.BoxCollider);
         box.offset.x = Number(cr[0]);
@@ -267,7 +267,7 @@ export default class BulletParent {
         box.size.width = Number(cr[2]);
         box.size.height = Number(cr[3]);
         box.name = "bullet" + this.getProp(ClientDef.BULLET_PROP_ID);
-        this.getNode().group = ClientDef.COLLISION_GROUP_BULLET;
+        this.getNode().group = entityInfo.collGroup; 
 
         //添加碰撞组件
         var collCmp = this.getNode().addComponent(CollisionComponent);
@@ -279,14 +279,14 @@ export default class BulletParent {
     {
         var collrect: string = this._bulletInfo.collRect;
         var cr : string[] = collrect.split(",");
-
+        var entityInfo = this._host.getHost().getEntityDict();
         //添加碰撞外框
         var circle = this.getNode().addComponent(cc.CircleCollider);
         circle.offset.x = Number(cr[0]);
         circle.offset.y = Number(cr[1]);
         circle.radius = Number(cr[2]);
         circle.name = "bullet" + this.getProp(ClientDef.BULLET_PROP_ID);
-        this.getNode().group = ClientDef.COLLISION_GROUP_BULLET;
+        this.getNode().group = entityInfo.collGroup; 
 
         //添加碰撞组件
         var collCmp = this.getNode().addComponent(CollisionComponent);

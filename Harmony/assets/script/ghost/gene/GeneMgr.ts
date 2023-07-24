@@ -3,13 +3,13 @@
  */
 
 import ClientDef from "../../common/ClientDef";
-import GameData from "../../common/GameData";
 import DictMgr from "../../manager/DictMgr";
 import Entity from "../Entity";
 import GeneParent from "./GeneParent";
 import RenewGene from "./children/RenewGene";
 import ShieldGene from "./children/ShieldGene";
 import SpeedGene from "./children/SpeedGene";
+import ThunderRayGene from "./children/ThunderRayGene";
 
 const {ccclass, property} = cc._decorator;
 
@@ -30,6 +30,7 @@ export default class GeneMgr
         this._typeClass[ClientDef.GENE_TYPE_SHAPESHIFT] = SpeedGene;
         this._typeClass[ClientDef.GENE_TYPE_RENEW] = RenewGene;
         this._typeClass[ClientDef.GENE_TYPE_SHIELD] = ShieldGene;
+        this._typeClass[ClientDef.GENE_TYPE_THUNDER_RAY] = ThunderRayGene;
     }
 
     start () 

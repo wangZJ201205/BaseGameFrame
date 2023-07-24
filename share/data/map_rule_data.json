@@ -4,7 +4,7 @@
 		{"callmode": 1,"delay": 950,"gene": 1003,"monster": 200003,"percent": 2,"sceneid": 10001,"time": 600},
 		{"callmode": 1,"delay": 900,"gene": 0,"monster": 200004,"percent": 6,"sceneid": 10001,"time": 1200},
 		{"callmode": 2,"delay": 850,"gene": 0,"monster": 200012,"percent": 0,"sceneid": 10001,"time": 1800},
-		{"callmode": 1,"delay": 800,"gene": 1003,"monster": 200016,"percent": 9,"sceneid": 10001,"time": 2400},
+		{"callmode": 1,"delay": 800,"gene": 0,"monster": 200044,"percent": 9,"sceneid": 10001,"time": 2400},
 		{"callmode": 1,"delay": 750,"gene": 0,"monster": 200005,"percent": 18,"sceneid": 10001,"time": 3000},
 		{"callmode": 1,"delay": 700,"gene": 0,"monster": 200015,"percent": 36,"sceneid": 10001,"time": 3600},
 		{"callmode": 1,"delay": 650,"gene": 0,"monster": 200006,"percent": 72,"sceneid": 10001,"time": 4200},
@@ -15,7 +15,9 @@
 		{"callmode": 1,"delay": 350,"gene": 0,"monster": 200010,"percent": 364,"sceneid": 10001,"time": 7200},
 		{"callmode": 1,"delay": 300,"gene": 0,"monster": 200011,"percent": 546,"sceneid": 10001,"time": 7800},
 		{"callmode": 2,"delay": 250,"gene": 0,"monster": 200014,"percent": 0,"sceneid": 10001,"time": 8400},
-		{"callmode": 1,"delay": 250,"gene": 1003,"monster": 200011,"percent": 546,"sceneid": 10001,"time": 9000}
+		{"callmode": 1,"delay": 250,"gene": 1003,"monster": 200011,"percent": 546,"sceneid": 10001,"time": 9000},
+		{"callmode": 2,"delay": 250,"gene": 0,"monster": 200045,"percent": 0,"sceneid": 10001,"time": 10200},
+		{"callmode": 2,"delay": 250,"gene": 0,"monster": 200046,"percent": 0,"sceneid": 10001,"time": 12000}
 	],
 	"10002": [
 		{"callmode": 1,"delay": 1000,"gene": 0,"monster": 200015,"percent": 1,"sceneid": 10002,"time": 0},

@@ -49,7 +49,8 @@ function handle_skill_effect(o)
 	d.zorder = zorderIndexType[o.p]
 	d.nextBullet = o.q ~= "0" and tonumber(o.q) or nil
 	d.scriptID = o.r ~= "0" and tonumber(o.r) or nil
-
+	d.gene = o.s ~= "0" and tonumber(o.s) or nil
+	
 	gdSkillEffect[d.id..""] = d
 end
 

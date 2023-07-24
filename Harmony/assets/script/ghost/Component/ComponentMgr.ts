@@ -7,6 +7,7 @@ import ClothComponent from "./children/ClothComponent";
 import CollComponent from "./children/CollComponent";
 import NameComponent from "./children/NameComponent";
 import ShieldComponent from "./children/ShieldComponent";
+import ThunderRayComponent from "./children/ThunderRayComponent";
 import TitleComponent from "./children/TitleComponent";
 
 /**
@@ -31,6 +32,7 @@ export default class ComponentMgr{
         ComponentMgr.componentClass[ClientDef.ENTITY_COMP_NAME]  = NameComponent;
         ComponentMgr.componentClass[ClientDef.ENTITY_COMP_COLL]  = CollComponent;
         ComponentMgr.componentClass[ClientDef.ENTITY_COMP_SHIELD]  = ShieldComponent;
+        ComponentMgr.componentClass[ClientDef.ENTITY_COMP_THUNDERRAY]  = ThunderRayComponent;
     }
 
     onLoad (host) 
@@ -49,10 +51,10 @@ export default class ComponentMgr{
         {
             this.add(ClientDef.ENTITY_COMP_NAME);
         }
-        if(this._host.isMonster())
-        {
-            this.add(ClientDef.ENTITY_COMP_COLL);   
-        }
+        // if(this._host.isMonster())
+        // {
+        this.add(ClientDef.ENTITY_COMP_COLL);   
+        // }
     }
 
     restart () 

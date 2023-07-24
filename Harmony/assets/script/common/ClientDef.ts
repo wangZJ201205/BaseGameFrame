@@ -34,7 +34,8 @@ export default class ClientDef{
     public static readonly ENTITY_COMP_TITLE : number = 3; //对象组件 - 称号
     public static readonly ENTITY_COMP_COLL : number = 4; //对象组件 - 碰撞
     public static readonly ENTITY_COMP_NAME : number = 5; //对象组件 - 名字
-    public static readonly ENTITY_COMP_SHIELD : number = 6 //对象组件 - 护盾
+    public static readonly ENTITY_COMP_SHIELD : number = 6; //对象组件 - 护盾
+    public static readonly ENTITY_COMP_THUNDERRAY : number = 7; //对象组件 - 护盾
 
     //对象组件运行状态
     public static readonly COMP_STATE_LOAD : number = 1; //组件状态--加载
@@ -110,9 +111,11 @@ export default class ClientDef{
     public static readonly SKILL_TYPE_LASER : number        = 115; //激光
     public static readonly SKILL_TYPE_ICE_PITON : number        = 116; //冰锥
     public static readonly SKILL_TYPE_PROPLE_STROM : number     = 117; //紫色风暴
+    public static readonly SKILL_TYPE_THUNDER_RAY : number = 118;   //雷击
 
     public static readonly SKILL_TYPE_COMMON : number       = 200; //普通技能
     public static readonly SKILL_TYPE_SUICIDE : number       = 201; //自杀技能
+    public static readonly SKILL_TYPE_FIRE_COLUMN : number    = 203; //火柱
 
     //子弹脚本ID
     public static readonly BULLET_SCRIPT_COMMON: number        = 1; //子弹父类
@@ -142,6 +145,7 @@ export default class ClientDef{
     public static readonly BULLET_SCRIPT_LOSER: number  = 25; //激光子弹
     public static readonly BULLET_SCRIPT_CTEATE_AND_PLAY_NEST: number  = 26; //创建就播放下一阶段
     public static readonly BULLET_SCRIPT_ANGLE_MOVE_NO_ANGLE: number  = 27; //根据angle运动但不选择
+    public static readonly BULLET_SCRIPT_THUNDER_RAY: number  = 28; //s随机一个敌人攻击
 
 
     //子弹属性
@@ -192,6 +196,7 @@ export default class ClientDef{
     public static readonly GENE_TYPE_SHAPESHIFT : number = 3; //变身
     public static readonly GENE_TYPE_SHIELD : number = 4; //shield
     public static readonly GENE_TYPE_RENEW : number = 5; //恢复
+    public static readonly GENE_TYPE_THUNDER_RAY : number = 6; //雷击麻痹
 
     //游戏暂停列表
     public static readonly GAME_PAUSE_UPGRADE : number  = 1 << 1; //升级界面

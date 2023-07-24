@@ -12,6 +12,12 @@ import BulletParent from "./BulletParent";
 
 const {ccclass, property} = cc._decorator;
 
+export enum SkillReleaseType
+{
+    release = 0, //自动释放
+    manual, //手动释放
+}
+
 @ccclass
 export default class SkillParent {
 
@@ -22,6 +28,7 @@ export default class SkillParent {
     protected _curDelay:number;
     protected _curShootTime: number; //当前cd倒计时
     protected _shootTime:number = 60; //设计时间
+    protected _releaseType : number = SkillReleaseType.release;
     protected _prop: { [key: string]: any } = {};
 
     protected _isShootBullet:boolean = false; //是否在发射状态中
@@ -87,9 +94,16 @@ export default class SkillParent {
         return this._skillInfo["releaseAblePriority"] || 0;
     }
 
-    releaseableSkill()
+    releaseableSkill(tgt:Entity)
     {
         if(!this._isShootBullet)
+        {
+            return false;
+        }
+        var heroNode = tgt;
+        var currentPosition = this.getHost().getEntityNode().position;
+        const distance = heroNode.position.sub(currentPosition).mag();
+        if (distance > this._skillInfo["distanceOfEnemy"])
         {
             return false;
         }
@@ -141,7 +155,12 @@ export default class SkillParent {
     releaseShootBullet()
     {
         if( !this._isShootBullet ) return ;
-        
+        if( this._releaseType != SkillReleaseType.release )return;
+        this.releaseBullet();
+    }
+
+    releaseBullet()
+    {
         var delat = cc.director.getTotalTime() - this._shootDelayTime;
         var delaytime = this._skillInfo["delaytime"] || 0;
         if(delat >= delaytime)
@@ -157,7 +176,6 @@ export default class SkillParent {
             this._shootBulletCount = 0;
             this._curDelay = cc.director.getTotalTime();
         }
-        
     }
 
     //将旧等级的子弹移除

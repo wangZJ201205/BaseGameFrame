@@ -486,6 +486,48 @@
 		"strike": 2,
 		"zorder": 1
 	},
+	"57": {
+		"id": 57,
+		"animation": 2,
+		"atlas": "0",
+		"attackMoveType": 2,
+		"collRect": "0",
+		"gene": 1005,
+		"preftab": "lethalprism_ray",
+		"scriptID": 28,
+		"sound": "effect_skill_hbj",
+		"src": "lethalprism_ray_start_cp",
+		"strike": 2,
+		"zorder": 1
+	},
+	"58": {
+		"id": 58,
+		"animation": 2,
+		"atlas": "0",
+		"attackMoveType": 2,
+		"collRect": "0",
+		"nextBullet": 59,
+		"preftab": "oloch_teleport_decal",
+		"scriptID": 17,
+		"sound": "effect_skill_hbj",
+		"src": "oloch_teleport_start_cp",
+		"strike": 2,
+		"zorder": 2
+	},
+	"59": {
+		"id": 59,
+		"animation": 2,
+		"atlas": "0",
+		"attackMoveType": 2,
+		"collRect": "2,2,60,60",
+		"collision": 1,
+		"preftab": "oloch_teleport_decal",
+		"scriptID": 16,
+		"sound": "effect_skill_hbj",
+		"src": "oloch_teleport_boom_cp",
+		"strike": 99,
+		"zorder": 1
+	},
 	"6": {
 		"id": 6,
 		"animation": 2,

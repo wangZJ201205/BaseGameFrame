@@ -3,5 +3,5 @@
 	"1002": {"id": 1002,"name": "变身","datau": 0,"datax": 10,"datay": 0,"dataz": 0,"desc": "变身","icon": "skill_zhanshenchongzhuang","removeAfterDead": 1,"time": -1,"type": 3},
 	"1003": {"id": 1003,"name": "魔法盾","datau": 0,"datax": 2,"datay": 0,"dataz": 0,"desc": "魔法盾，将血量提升至原来的两倍","icon": "skill_zhanshenchongzhuang","removeAfterDead": 1,"time": -1,"type": 4},
 	"1004": {"id": 1004,"name": "回复","datau": 0,"datax": 0.5,"datay": 1000,"dataz": 0,"desc": "回复血量","icon": "0","removeAfterDead": 0,"time": -1,"type": 5},
-	"1005": {"id": 1005,"name": "速度","datau": 1,"datax": 1,"datay": 1,"dataz": 1,"desc": "速度","icon": "skill_zhanshenchongzhuang","removeAfterDead": 1,"time": 30000,"type": 1}
+	"1005": {"id": 1005,"name": "雷击麻痹","datau": 0,"datax": 500,"datay": 1,"dataz": 0,"desc": "雷击麻痹，每一秒受到7点伤害，持续3秒","icon": "0","removeAfterDead": 1,"time": 3000,"type": 6}
 }

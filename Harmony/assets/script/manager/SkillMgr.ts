@@ -21,6 +21,7 @@ import StopAfterAnimationFinishBullet from "../skill/bullet/StopAfterAnimationFi
 import SwordBallBullet from "../skill/bullet/SwordBallBullet";
 import TaijiBallBullet from "../skill/bullet/TaijiBallBullet";
 import ThunderBallBullet from "../skill/bullet/ThunderBallBullet";
+import ThunderRayBullet from "../skill/bullet/ThunderRayBullet";
 import TimeBombBox1Bullet from "../skill/bullet/TimeBombBox1Bullet";
 import TimeBombBoxesBullet from "../skill/bullet/TimeBombBoxesBullet";
 import TimeBombMidBullet from "../skill/bullet/TimeBombMidBullet";
@@ -28,6 +29,7 @@ import TimeBombPrevBullet from "../skill/bullet/TimeBombPrevBullet";
 import ArcherySkill from "../skill/skills/ArcherySkill";
 import CommonSkill from "../skill/skills/CommonSkill";
 import FireBallSkill from "../skill/skills/FireBallSkill";
+import FireColumnSkill from "../skill/skills/FireColumnSkill";
 import FireHorseSkill from "../skill/skills/FireHorseSkill";
 import FireWallSkill from "../skill/skills/FireWallSkill";
 import IceBallSkill from "../skill/skills/IceBallSkill";
@@ -42,6 +44,7 @@ import SuicideSkill from "../skill/skills/SuicideSkill";
 import SwordBallSkill from "../skill/skills/SwordBallSkill";
 import TaijiBallSkill from "../skill/skills/TaijiBallSkill";
 import ThunderBallSkill from "../skill/skills/ThunderBallSkill";
+import ThunderRaySkill from "../skill/skills/ThunderRaySkill";
 import TimeBombSkill from "../skill/skills/TimeBombSkill";
 import PosionBallSkill from "../skill/skills/posionBallSkill";
 import DictMgr from "./DictMgr";
@@ -98,9 +101,11 @@ export default class SkillMgr extends ParentMgr {
         this._typeSkillClass[ClientDef.SKILL_TYPE_LASER] = LaserSkill;             //定时炸弹
         this._typeSkillClass[ClientDef.SKILL_TYPE_ICE_PITON] = IcePitonSkill;             //冰锥
         this._typeSkillClass[ClientDef.SKILL_TYPE_PROPLE_STROM] = PurpleStormSkill;             //冰锥
+        this._typeSkillClass[ClientDef.SKILL_TYPE_THUNDER_RAY] = ThunderRaySkill;             //冰锥
 
         this._typeSkillClass[ClientDef.SKILL_TYPE_COMMON] = CommonSkill;             //常用技能
         this._typeSkillClass[ClientDef.SKILL_TYPE_SUICIDE] = SuicideSkill;             //自杀技能
+        this._typeSkillClass[ClientDef.SKILL_TYPE_FIRE_COLUMN] = FireColumnSkill;      //火柱技能
 
 
         this._typeBulletClass[ClientDef.BULLET_SCRIPT_COMMON]   = BulletParent;          //子弹父类
@@ -125,6 +130,7 @@ export default class SkillMgr extends ParentMgr {
         this._typeBulletClass[ClientDef.BULLET_SCRIPT_LOSER]   = LoserBullet;        //激光类型子弹
         this._typeBulletClass[ClientDef.BULLET_SCRIPT_CTEATE_AND_PLAY_NEST]   = AnimationCreatePlayNextBBullet;        //激光类型子弹
         this._typeBulletClass[ClientDef.BULLET_SCRIPT_ANGLE_MOVE_NO_ANGLE]   = AngleMoveWithNoAngleBullet;        //激光类型子弹
+        this._typeBulletClass[ClientDef.BULLET_SCRIPT_THUNDER_RAY]   = ThunderRayBullet;        //激光类型子弹
 
 
     }

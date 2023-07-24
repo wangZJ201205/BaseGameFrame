@@ -11,12 +11,6 @@ const {ccclass, property} = cc._decorator;
 @ccclass
 export default class ShieldComponent extends ComponentParent {
 
-
-    onLoad (host) 
-    {
-        super.onLoad(host);
-    }
-
     start () {
         super.start();
         var loadPath = "animation/effect/buffing_armor/buffing_armor";
@@ -30,15 +24,5 @@ export default class ShieldComponent extends ComponentParent {
                 aniPref.parent = this.getNode();
             });
     }
-
-    restart () {
-        super.restart();
-    }
-
-    remove()
-    {
-        super.remove();
-    }
-
 
 }
