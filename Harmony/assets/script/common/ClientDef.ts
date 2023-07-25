@@ -94,6 +94,10 @@ export default class ClientDef{
     public static readonly ENTITY_PROP_SHIELD_BLOOM : number = 21; //魔法盾血量
     public static readonly ENTITY_PROP_ATTACK_SPEED : number = 22 ; //攻击速度
     public static readonly ENTITY_PROP_ADD_DAMAGE : number = 23 ; //增加攻击力
+    public static readonly ENTITY_PROP_ADD_ATKRANGE : number = 24 ; //增加攻击力范围
+    public static readonly ENTITY_PROP_ADD_EXP : number = 25 ; //增加经验值
+    public static readonly ENTITY_PROP_ADD_BULLET : number = 26 ; //增加飞行子弹数
+    public static readonly ENTITY_PROP_ADD_SHIELD : number = 27 ; //减免护盾伤害
 
     //技能类型
     public static readonly SKILL_TYPE_FIREBALL: number      = 101; //火球
@@ -203,6 +207,11 @@ export default class ClientDef{
     public static readonly GENE_TYPE_ATTACK_DAMGE : number = 8; //增加攻击力
     public static readonly GENE_TYPE_BLOOM : number = 9; //血量基因
     public static readonly GENE_TYPE_MAGNET : number = 10; //无影手基因
+    public static readonly GENE_TYPE_RECV_BLOOM : number = 11; //九花玉露丸基因
+    public static readonly GENE_TYPE_ADD_ATKRANGE : number = 12; //千里眼基因
+    public static readonly GENE_TYPE_ADD_EXP : number = 13; //吸心大法基因
+    public static readonly GENE_TYPE_SUB_SHIELD : number = 14; //降龙十八掌基因
+    public static readonly GENE_TYPE_ADD_BULLET : number = 15; //碧波基因
 
     //游戏暂停列表
     public static readonly GAME_PAUSE_UPGRADE : number  = 1 << 1; //升级界面
