@@ -267,7 +267,7 @@ export default class BulletParent {
         box.size.width = Number(cr[2]);
         box.size.height = Number(cr[3]);
         box.name = "bullet" + this.getProp(ClientDef.BULLET_PROP_ID);
-        this.getNode().group = entityInfo.collGroup; 
+        this.getNode().group = ClientDef.COLLISION_GROUP_BULLET + "_" + entityInfo.collGroup; 
 
         //添加碰撞组件
         var collCmp = this.getNode().addComponent(CollisionComponent);
@@ -286,7 +286,7 @@ export default class BulletParent {
         circle.offset.y = Number(cr[1]);
         circle.radius = Number(cr[2]);
         circle.name = "bullet" + this.getProp(ClientDef.BULLET_PROP_ID);
-        this.getNode().group = entityInfo.collGroup; 
+        this.getNode().group = ClientDef.COLLISION_GROUP_BULLET + "_"+ entityInfo.collGroup;
 
         //添加碰撞组件
         var collCmp = this.getNode().addComponent(CollisionComponent);

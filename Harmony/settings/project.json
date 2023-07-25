@@ -1,9 +1,9 @@
 {
   "start-scene": "723f66dc-d985-4a79-a5ab-1f17ab4b0fc9",
   "group-list": [
-    "default",
+    "bullet_monster",
     "player",
-    "bullet",
+    "bullet_player",
     "monster",
     "ui",
     ""
@@ -12,15 +12,15 @@
   "collision-matrix": [
     [
       false,
-      false,
+      true,
       false,
       false
     ],
     [
-      false,
-      false,
-      false,
       true,
+      false,
+      false,
+      false,
       null,
       false
     ],
@@ -28,12 +28,12 @@
       false,
       false,
       false,
-      false
+      true
     ],
     [
       false,
-      true,
       false,
+      true,
       false
     ],
     [
