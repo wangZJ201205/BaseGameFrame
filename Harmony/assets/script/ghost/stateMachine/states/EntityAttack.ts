@@ -40,7 +40,7 @@ export default class EntityAttack extends StateParent {
 
     update (dt) 
     {
-        
+        var hostInfo = this.getHost().getEntityDict();
         var heroNode = Hero.Instance.getEntity().getEntityNode();
 
         if(!heroNode.isLife())
@@ -62,7 +62,7 @@ export default class EntityAttack extends StateParent {
             var cloth = this._host.getEntityComponent(ClientDef.ENTITY_COMP_CLOTH);
             cloth.runState(this._stateID,true);
         }
-        else if (distance > GameData.Monster_And_Hero_Min_Distance ) //超出范围移除
+        else if (distance > hostInfo.mindistance ) //超出范围移除
         {
             this.getHost().getStateMachine().addState(ClientDef.ENTITY_STATE_WALK);
             this.getHost().getStateMachine().runNextState();

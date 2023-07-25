@@ -37,7 +37,8 @@ end
 
 
 export_csv("..\\design\\基因.xlsx")
-handle_file("tmp\\基因类型.csv", handle_gene)
+handle_file("tmp\\可选择基因.csv", handle_gene)
+handle_file("tmp\\不可选择基因.csv", handle_gene)
 clear_csv()
 
 output_table_json(gdgene, of_file, nil, true, weight_tbl,true)

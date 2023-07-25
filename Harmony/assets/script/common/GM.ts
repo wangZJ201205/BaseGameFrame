@@ -76,6 +76,7 @@ export default class GM {
         Hero.Instance.getEntity().getSkill().addSkill(11509);
         Hero.Instance.getEntity().getSkill().addSkill(11609);
         Hero.Instance.getEntity().getSkill().addSkill(11709);
+        Hero.Instance.getEntity().getSkill().addSkill(11809);
     }
 
 

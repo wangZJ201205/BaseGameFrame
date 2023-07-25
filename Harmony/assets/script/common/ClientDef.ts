@@ -92,6 +92,8 @@ export default class ClientDef{
     public static readonly ENTITY_PROP_STATE : number = 19; //当前状态
     public static readonly ENTITY_PROP_STATE_SHAPESHIFT : number = 20; //变身状态
     public static readonly ENTITY_PROP_SHIELD_BLOOM : number = 21; //魔法盾血量
+    public static readonly ENTITY_PROP_ATTACK_SPEED : number = 22 ; //攻击速度
+    public static readonly ENTITY_PROP_ADD_DAMAGE : number = 23 ; //增加攻击力
 
     //技能类型
     public static readonly SKILL_TYPE_FIREBALL: number      = 101; //火球
@@ -197,6 +199,10 @@ export default class ClientDef{
     public static readonly GENE_TYPE_SHIELD : number = 4; //shield
     public static readonly GENE_TYPE_RENEW : number = 5; //恢复
     public static readonly GENE_TYPE_THUNDER_RAY : number = 6; //雷击麻痹
+    public static readonly GENE_TYPE_ADD_ATKSPEED : number = 7; //增加攻击速度
+    public static readonly GENE_TYPE_ATTACK_DAMGE : number = 8; //增加攻击力
+    public static readonly GENE_TYPE_BLOOM : number = 9; //血量基因
+    public static readonly GENE_TYPE_MAGNET : number = 10; //无影手基因
 
     //游戏暂停列表
     public static readonly GAME_PAUSE_UPGRADE : number  = 1 << 1; //升级界面

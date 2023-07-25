@@ -307,7 +307,7 @@ export default class BulletParent {
         }
         var damageValue = this.getDamageValue(other);
         if(damageValue == 0)return false;
-        DamageSys.addDamage(tgt, damageValue );
+        DamageSys.addDamage(this._host.getHost(), tgt, damageValue );
         var strike = this.getProp(ClientDef.BULLET_PROP_STRIKE);
         strike --;
         this.setProp(ClientDef.BULLET_PROP_STRIKE,strike);

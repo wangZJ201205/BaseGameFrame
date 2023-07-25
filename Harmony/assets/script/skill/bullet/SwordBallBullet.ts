@@ -40,7 +40,7 @@ export default class SwordBallBullet extends BulletParent {
     {   
         var damageValue = this.getDamageValue(other);
         if(damageValue == 0)return;
-        DamageSys.addDamage(other.node, damageValue );
+        DamageSys.addDamage(this._host.getHost(), other.node, damageValue );
         return true;
     }
     

@@ -6,6 +6,10 @@ import ClientDef from "../../common/ClientDef";
 import DictMgr from "../../manager/DictMgr";
 import Entity from "../Entity";
 import GeneParent from "./GeneParent";
+import AddAttackGene from "./children/AddAttackGene";
+import AttackSpeedGene from "./children/AttackSpeedGene";
+import BloomGene from "./children/BloomGene";
+import MagnetGene from "./children/MagnetGene";
 import RenewGene from "./children/RenewGene";
 import ShieldGene from "./children/ShieldGene";
 import SpeedGene from "./children/SpeedGene";
@@ -31,6 +35,11 @@ export default class GeneMgr
         this._typeClass[ClientDef.GENE_TYPE_RENEW] = RenewGene;
         this._typeClass[ClientDef.GENE_TYPE_SHIELD] = ShieldGene;
         this._typeClass[ClientDef.GENE_TYPE_THUNDER_RAY] = ThunderRayGene;
+        this._typeClass[ClientDef.GENE_TYPE_BLOOM] = BloomGene;
+        this._typeClass[ClientDef.GENE_TYPE_MAGNET] = MagnetGene;
+        this._typeClass[ClientDef.GENE_TYPE_ADD_ATKSPEED] = AttackSpeedGene;
+        this._typeClass[ClientDef.GENE_TYPE_ATTACK_DAMGE] = AddAttackGene;
+
     }
 
     start () 

@@ -44,6 +44,7 @@ export default class ShieldBallBullet extends BulletParent {
     {
         var delay = cc.director.getTotalTime() - this._delta;
         var damageTime = this._skillInfo['delay'] * GameData.Skill_Shoot_Accelerate; //是否全局加速
+        damageTime *= (1-this._host.getHost().getCProp(ClientDef.ENTITY_PROP_ATTACK_SPEED) / 100); //增加攻速
         if( damageTime < delay ) //是否在攻击范围之内
         {
             this._damagePlayers++;
@@ -60,7 +61,7 @@ export default class ShieldBallBullet extends BulletParent {
         }
         var damageValue = this.getDamageValue(other);
         if(damageValue == 0)return;
-        DamageSys.addDamage(other.node, damageValue );
+        DamageSys.addDamage(this._host.getHost(), other.node, damageValue );
     }
     
 }

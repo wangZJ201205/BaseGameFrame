@@ -44,7 +44,7 @@ export default class GameStart extends cc.Component {
 
         cc.director.getPhysicsManager().gravity = cc.v2(0, 0);
         if (this.isDebug) {
-            cc.director.getCollisionManager().enabledDebugDraw = true;   //显示碰撞检测区域
+            cc.director.getCollisionManager().enabledDebugDraw = false;   //显示碰撞检测区域
         }
 
         GameData.Game_Mode = this.gameMode; //游戏模式

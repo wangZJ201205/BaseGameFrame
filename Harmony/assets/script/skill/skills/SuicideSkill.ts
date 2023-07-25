@@ -26,8 +26,11 @@ export default class SuicideSkill extends SkillParent {
     shootBullet()
     {   
         var tgt = Hero.Instance.getEntity();
-        var damage = this._skillInfo["attackValue"];
-        DamageSys.addDamage(tgt, damage );
+        var damage = this._skillInfo["attackValue"].split("-");
+        var min = Number(damage[0]);
+        var max = Number(damage[1]);
+        var value = Math.floor(min + Math.random() * (max-min));
+        DamageSys.addDamage(this.getHost() ,tgt, value );
 
         this.getHost().getEntityNode().active = false;
         this.getHost().setCProp(ClientDef.ENTITY_PROP_ACTIVE_STATE, ClientDef.ENTITY_ACTIVE_STATE_FREE);

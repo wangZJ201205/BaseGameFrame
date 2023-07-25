@@ -158,7 +158,6 @@
             <filename>yaogan.png</filename>
             <filename>yaoganpan.png</filename>
             <filename>cjtubiao.jpg</filename>
-            <filename>skill_zhanshenchongzhuang.png</filename>
             <filename>skill-reduce_cisha.png</filename>
             <filename>skill-reduce_luolei.png</filename>
             <filename>skill_badaohuoyu.png</filename>
@@ -244,6 +243,16 @@
             <filename>screen_map_stage_thumbs-8.png</filename>
             <filename>screen_map_stage_thumbs-20.png</filename>
             <filename>demo_stage_card_cover.png</filename>
+            <filename>special_icons_0052.png</filename>
+            <filename>special_icons_0007.png</filename>
+            <filename>special_icons_0010.png</filename>
+            <filename>special_icons_0019.png</filename>
+            <filename>special_icons_00521.png</filename>
+            <filename>g_special_icons_0052.png</filename>
+            <filename>upgrades_icons_0017.png</filename>
+            <filename>upgrades_icons_0013.png</filename>
+            <filename>upgrades_icons_0024.png</filename>
+            <filename>special_icons_0033.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>

@@ -24,7 +24,7 @@ export default class CommonSkill extends SkillParent {
     {   
         var tgt = this._host;
         var damage = this._skillInfo["attackValue"];
-        DamageSys.addDamage(tgt, damage );
+        DamageSys.addDamage(this.getHost(), tgt, damage );
     }
 
 }

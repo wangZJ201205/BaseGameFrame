@@ -4,11 +4,9 @@
  * 销毁的时候随着主对象关闭即可
  */
 
-import { EventName } from "../../common/EventName";
 import { UIName } from "../../common/UIName";
 import { Hero } from "../../ghost/Hero";
 import DictMgr from "../../manager/DictMgr";
-import EventMgr from "../../manager/EventMgr";
 import LoadMgr from "../../manager/LoadMgr";
 import UIMgr from "../../manager/UIMgr";
 
@@ -23,9 +21,8 @@ export default class SelectSkillItem extends cc.Component {
     @property(cc.RichText)
     skillDescRT: cc.RichText = null;
 
-    
-
     _skillId:number;
+    private _isSkill:boolean;    
     
     onLoad () 
     {
@@ -39,7 +36,14 @@ export default class SelectSkillItem extends cc.Component {
 
     selectItemHandle(event,param)
     {
-        Hero.Instance.getEntity().getSkill().addSkill(this._skillId);
+        if(this._isSkill)
+        {
+            Hero.Instance.getEntity().getSkill().addSkill(this._skillId);
+        }
+        else
+        {
+            Hero.Instance.getEntity().getGene().addGene(this._skillId);
+        }
         UIMgr.Instance.closeUI(UIName.VIEW_SELECTSKILL);
     }
 
@@ -53,6 +57,7 @@ export default class SelectSkillItem extends cc.Component {
         {
             this.pushGene(data);
         }
+        this._isSkill = data.type == 1;
     }
 
     pushSkill(data)

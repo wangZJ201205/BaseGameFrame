@@ -6,7 +6,6 @@ import ClientDef from "../common/ClientDef";
 import GameData from "../common/GameData";
 import Entity from "../ghost/Entity";
 import DictMgr from "../manager/DictMgr";
-import GhostMgr from "../manager/GhostMgr";
 import SkillMgr from "../manager/SkillMgr";
 import BulletParent from "./BulletParent";
 
@@ -46,7 +45,6 @@ export default class SkillParent {
     {
         this._skillInfo = DictMgr.Instance.getDictByName('skill_data')[this._staticId+""];
         this._curDelay = cc.director.getTotalTime();
-        // console.info(">>>>>>>>>"+this._staticId)
         this._shootTime = this._skillInfo['cooldown'] || 0;
         this.setProp(ClientDef.SKILL_PROP_COUNT, this._skillInfo['count']);
     }
@@ -135,6 +133,8 @@ export default class SkillParent {
         }
 
         var shootTime = this._shootTime / 100 * GameData.Skill_Shoot_Accelerate; //是否全局加速
+        shootTime *= (1-this._host.getCProp(ClientDef.ENTITY_PROP_ATTACK_SPEED) / 100); //增加攻速
+
         if( this._curShootTime >= shootTime )
         {
             this._curShootTime = 0;

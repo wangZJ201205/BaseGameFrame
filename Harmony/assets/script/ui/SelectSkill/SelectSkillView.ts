@@ -7,7 +7,6 @@ import GameData from "../../common/GameData";
 import { UIName } from "../../common/UIName";
 import { Hero } from "../../ghost/Hero";
 import DictMgr from "../../manager/DictMgr";
-import UIMgr from "../../manager/UIMgr";
 import UIParent from "../UIParent";
 
 const {ccclass, property} = cc._decorator;
@@ -30,27 +29,36 @@ export default class SelectSkillView extends UIParent {
         super.onLoad();
 
         this._learnList = [];
-        // this._learnList.push(10101);
-        // this._learnList.push(10201);
-        // this._learnList.push(10301);
-        // this._learnList.push(10401);
-        // // this._learnList.push(10501);
-        // this._learnList.push(10601);
-        // this._learnList.push(10701);
-        // // this._learnList.push(10801);
-        // // this._learnList.push(10901);
-        // this._learnList.push(11001);
-        // // this._learnList.push(11101);
-        // this._learnList.push(11201);
-        // this._learnList.push(11301);
-        // this._learnList.push(11401);
-        // this._learnList.push(11501);
-        // this._learnList.push(11601);
-        // this._learnList.push(11701);
+        this._learnList.push(10101);
+        this._learnList.push(10201);
+        this._learnList.push(10301);
+        this._learnList.push(10401);
+        // this._learnList.push(10501);
+        this._learnList.push(10601);
+        this._learnList.push(10701);
+        // this._learnList.push(10801);
+        // this._learnList.push(10901);
+        this._learnList.push(11001);
+        // this._learnList.push(11101);
+        this._learnList.push(11201);
+        this._learnList.push(11301);
+        this._learnList.push(11401);
+        this._learnList.push(11501);
+        this._learnList.push(11601);
+        this._learnList.push(11701);
         this._learnList.push(11801);
 
         this._learnGeneList = [];
-        // this._learnGeneList.push(1001);
+        this._learnGeneList.push(10001);
+        this._learnGeneList.push(10101);
+        this._learnGeneList.push(10201);
+        this._learnGeneList.push(10301);
+        this._learnGeneList.push(10401);
+        this._learnGeneList.push(10501);
+        this._learnGeneList.push(10601);
+        this._learnGeneList.push(10701);
+        this._learnGeneList.push(10801);
+        this._learnGeneList.push(10901);
     }
 
     start () 

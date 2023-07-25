@@ -22,6 +22,7 @@ export default class EntityWalk extends StateParent {
     update (dt) 
     {
 
+        var hostInfo = this.getHost().getEntityDict();
         var heroNode = Hero.Instance.getEntity().getEntityNode();
         var myNode = this.getHost().getEntityNode();
         var currentPosition = this.getHost().getEntityNode().position;
@@ -41,7 +42,7 @@ export default class EntityWalk extends StateParent {
             this.getHost().getStateMachine().addState(ClientDef.ENTITY_STATE_ATTACK);
             this.getHost().getStateMachine().runNextState();
         }
-        else if (distance <= GameData.Monster_And_Hero_Min_Distance)
+        else if (distance <= hostInfo.mindistance)
         {
             this.getHost().getStateMachine().addState(ClientDef.ENTITY_STATE_ATTACK);
             this.getHost().getStateMachine().runNextState();

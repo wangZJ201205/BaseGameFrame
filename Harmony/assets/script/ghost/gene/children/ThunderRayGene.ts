@@ -43,7 +43,7 @@ export default class ThunderRayGene extends GeneParent {
 
     addDamage()
     {
-        DamageSys.addDamage(this._host, this._datay);
+        DamageSys.addDamage(null, this._host, this._datay);
     }
 
 }

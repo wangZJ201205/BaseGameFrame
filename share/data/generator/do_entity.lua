@@ -40,6 +40,7 @@ function handle_entity(o)
 	d.boss = tonumber(o.l) or 0
 	d.shapeshift = tonumber(o.m) or 0
 	d.bloomEffect = o.n
+	d.mindistance = tonumber(o.o) or 0
 	gdentity[tostring(d.id)] = d
 end
 

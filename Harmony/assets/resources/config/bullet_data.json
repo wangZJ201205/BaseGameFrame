@@ -492,7 +492,7 @@
 		"atlas": "0",
 		"attackMoveType": 2,
 		"collRect": "0",
-		"gene": 1005,
+		"gene": 2004,
 		"preftab": "lethalprism_ray",
 		"scriptID": 28,
 		"sound": "effect_skill_hbj",
