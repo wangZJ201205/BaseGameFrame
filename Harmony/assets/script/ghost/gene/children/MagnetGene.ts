@@ -25,7 +25,7 @@ export default class MagnetGene extends GeneParent {
         this._add = Math.floor(range* this._datax / 100);
         this._host.addCProp(ClientDef.ENTITY_PROP_PICKUP_RANGE, this._add);
 
-        console.info(">>range : " + range + " >>cur range : " + this._host.getCProp(ClientDef.ENTITY_PROP_PICKUP_RANGE));
+        // console.info(">>range : " + range + " >>cur range : " + this._host.getCProp(ClientDef.ENTITY_PROP_PICKUP_RANGE));
     }
 
     remove()

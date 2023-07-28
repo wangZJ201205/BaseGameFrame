@@ -10,8 +10,15 @@ export default class EntityIdle extends StateParent {
 
     update (dt) 
     {
-        this.getHost().getStateMachine().addState(ClientDef.ENTITY_STATE_WALK);
-        this.getHost().getStateMachine().runNextState();
+        if(this._host.getCProp(ClientDef.ENTITY_PROP_FROZEN) == 1)//冰冻效果
+        {
+            //不做任何处理
+        }
+        else
+        {
+            this.getHost().getStateMachine().addState(ClientDef.ENTITY_STATE_WALK);
+            this.getHost().getStateMachine().runNextState();
+        }
     }
 
 

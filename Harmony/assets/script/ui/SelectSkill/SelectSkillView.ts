@@ -3,10 +3,12 @@
  */
 
 import ClientDef from "../../common/ClientDef";
+import { EventName } from "../../common/EventName";
 import GameData from "../../common/GameData";
 import { UIName } from "../../common/UIName";
 import { Hero } from "../../ghost/Hero";
 import DictMgr from "../../manager/DictMgr";
+import EventMgr from "../../manager/EventMgr";
 import UIParent from "../UIParent";
 
 const {ccclass, property} = cc._decorator;
@@ -29,36 +31,36 @@ export default class SelectSkillView extends UIParent {
         super.onLoad();
 
         this._learnList = [];
-        this._learnList.push(10101);
-        this._learnList.push(10201);
-        this._learnList.push(10301);
-        this._learnList.push(10401);
-        // this._learnList.push(10501);
-        this._learnList.push(10601);
-        this._learnList.push(10701);
-        // this._learnList.push(10801);
-        // this._learnList.push(10901);
-        this._learnList.push(11001);
-        // this._learnList.push(11101);
-        this._learnList.push(11201);
-        this._learnList.push(11301);
-        this._learnList.push(11401);
-        this._learnList.push(11501);
+        // this._learnList.push(10101);
+        // this._learnList.push(10201);
+        // this._learnList.push(10301);
+        // this._learnList.push(10401);
+        // // this._learnList.push(10501);
+        // this._learnList.push(10601);
+        // this._learnList.push(10701);
+        // // this._learnList.push(10801);
+        // // this._learnList.push(10901);
+        // this._learnList.push(11001);
+        // // this._learnList.push(11101);
+        // this._learnList.push(11201);
+        // this._learnList.push(11301);
+        // this._learnList.push(11401);
+        // this._learnList.push(11501);
         this._learnList.push(11601);
-        this._learnList.push(11701);
-        this._learnList.push(11801);
+        // this._learnList.push(11701);
+        // this._learnList.push(11801);
 
         this._learnGeneList = [];
-        this._learnGeneList.push(10001);
-        this._learnGeneList.push(10101);
-        this._learnGeneList.push(10201);
-        this._learnGeneList.push(10301);
-        this._learnGeneList.push(10401);
-        this._learnGeneList.push(10501);
-        this._learnGeneList.push(10601);
-        this._learnGeneList.push(10701);
-        this._learnGeneList.push(10801);
-        this._learnGeneList.push(10901);
+        // this._learnGeneList.push(10001);
+        // this._learnGeneList.push(10101);
+        // this._learnGeneList.push(10201);
+        // this._learnGeneList.push(10301);
+        // this._learnGeneList.push(10401);
+        // this._learnGeneList.push(10501);
+        // this._learnGeneList.push(10601);
+        // this._learnGeneList.push(10701);
+        // this._learnGeneList.push(10801);
+        // this._learnGeneList.push(10901);
     }
 
     start () 
@@ -74,12 +76,19 @@ export default class SelectSkillView extends UIParent {
     register(): void 
     {
         super.register();
+        EventMgr.Instance.On(EventName.EVENT_PLAYER_RAND_SKILL,this.onRandSkill,this);
     }
 
     close()
     {
         super.close();
+        EventMgr.Instance.Off(EventName.EVENT_PLAYER_RAND_SKILL,this.onRandSkill,this);
         GameData.Game_Pause_FLAG &= ~ClientDef.GAME_PAUSE_UPGRADE;
+    }
+
+    onRandSkill(data)
+    {
+        this.prepareSkillInfo();
     }
 
     //准备数据
@@ -90,7 +99,7 @@ export default class SelectSkillView extends UIParent {
         // var skillCount = skills.length;
         // if( skillCount == GameData.Player_Skill_Max )
         // {
-        //     this.pushInfoIntoList(canLearnSkill);
+        //     this.prepareGeneInfo(canLearnSkill);
         //     return;
         // }
 
@@ -105,7 +114,7 @@ export default class SelectSkillView extends UIParent {
                 {
                     if ( skillDict[sid + 1]) 
                     {
-                        canLearnSkill.push({id:sid + 1,type:1});
+                        canLearnSkill.push({ id:sid + 1, type:1 });
                     }
                     canLearn = false;
                     break;
@@ -172,6 +181,7 @@ export default class SelectSkillView extends UIParent {
         var len = data.length >= GameData.Player_Skill_UpLevel_Count ? GameData.Player_Skill_UpLevel_Count : data.length;
         const randomValues = this.getRandomValues(data,len);
         this.scrollView.content.height = GameData.Player_Skill_UpLevel_Count * 100 + 50; // get total content height
+        this.scrollView.content.removeAllChildren();
     	for (let i = 0; i < randomValues.length; ++i) { // spawn items, we only need to do this once
     		let item = cc.instantiate(this.skillItem);
     		this.scrollView.content.addChild(item);

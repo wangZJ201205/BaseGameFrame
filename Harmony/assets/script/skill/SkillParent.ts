@@ -169,7 +169,9 @@ export default class SkillParent {
             this._shootBulletCount ++;
             this.shootBullet();
         }
-        var bulletCount = this.getProp(ClientDef.SKILL_PROP_COUNT);
+        
+        //当前子弹数量
+        var bulletCount = this.getProp(ClientDef.SKILL_PROP_COUNT) + this._host.getCProp(ClientDef.ENTITY_PROP_ADD_BULLET);
         if(this._shootBulletCount >= bulletCount)
         {
             this._isShootBullet = false;

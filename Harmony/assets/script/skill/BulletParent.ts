@@ -308,6 +308,12 @@ export default class BulletParent {
         var damageValue = this.getDamageValue(other);
         if(damageValue == 0)return false;
         DamageSys.addDamage(this._host.getHost(), tgt, damageValue );
+
+        if( this._bulletInfo.gene && other.node.isLife() ) //检测基因状态
+        {
+            tgt.getGene().addGene(this._bulletInfo.gene);
+        }
+
         var strike = this.getProp(ClientDef.BULLET_PROP_STRIKE);
         strike --;
         this.setProp(ClientDef.BULLET_PROP_STRIKE,strike);

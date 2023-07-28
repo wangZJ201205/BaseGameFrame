@@ -48,13 +48,17 @@ export class Hero{
     //增加经验
     addExp(exp)
     {
+        var percent = this._entity.getCProp(ClientDef.ENTITY_PROP_ADD_EXP);
+        exp *= (1 + percent / 100);
+        
         var value = this._entity.getCProp(ClientDef.ENTITY_PROP_CUR_EXP);
+        var max = this._entity.getCProp(ClientDef.ENTITY_PROP_MAX_EXP);
         value += exp;
-        if( value >= this._entity.getCProp(ClientDef.ENTITY_PROP_MAX_EXP) )
+        if( value >= max )
         {
             UIMgr.Instance.openUI(UIName.VIEW_SELECTSKILL);
             this.setLevel(this._entity.getCProp(ClientDef.ENTITY_PROP_LV) + 1);
-            this._entity.setCProp(ClientDef.ENTITY_PROP_CUR_EXP, 0);
+            this._entity.setCProp(ClientDef.ENTITY_PROP_CUR_EXP, max - value);
         }
         else
         {

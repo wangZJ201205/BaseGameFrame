@@ -5,6 +5,7 @@ import ComponentParent from "./ComponentParent";
 import BloomComponent from "./children/BloomComponent";
 import ClothComponent from "./children/ClothComponent";
 import CollComponent from "./children/CollComponent";
+import FrozenComponent from "./children/FrozenComponent";
 import NameComponent from "./children/NameComponent";
 import ShieldComponent from "./children/ShieldComponent";
 import ThunderRayComponent from "./children/ThunderRayComponent";
@@ -33,6 +34,7 @@ export default class ComponentMgr{
         ComponentMgr.componentClass[ClientDef.ENTITY_COMP_COLL]  = CollComponent;
         ComponentMgr.componentClass[ClientDef.ENTITY_COMP_SHIELD]  = ShieldComponent;
         ComponentMgr.componentClass[ClientDef.ENTITY_COMP_THUNDERRAY]  = ThunderRayComponent;
+        ComponentMgr.componentClass[ClientDef.ENTITY_COMP_FROZEN]  = FrozenComponent;
     }
 
     onLoad (host) 

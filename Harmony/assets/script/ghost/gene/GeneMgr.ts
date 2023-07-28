@@ -12,6 +12,7 @@ import AddEXPGene from "./children/AddEXPGene";
 import AddRangeGene from "./children/AddRangeGene";
 import AttackSpeedGene from "./children/AttackSpeedGene";
 import BloomGene from "./children/BloomGene";
+import IceFrozenGene from "./children/IceFrozenGene";
 import MagnetGene from "./children/MagnetGene";
 import RecvBloomGene from "./children/RecvBloomGene";
 import RenewGene from "./children/RenewGene";
@@ -27,14 +28,14 @@ export default class GeneMgr
 {
     _host:Entity;
     private _genes : GeneParent[];
-    private _typeClass : {};
+    private _typeClass : Map<number,GeneParent>;
 
     onLoad (host) 
     {
         this._host = host;
         this._genes = [];
         
-        this._typeClass = {};
+        this._typeClass = new Map<number,GeneParent>();
         this._typeClass[ClientDef.GENE_TYPE_SPEED] = SpeedGene;
         this._typeClass[ClientDef.GENE_TYPE_SHAPESHIFT] = SpeedGene;
         this._typeClass[ClientDef.GENE_TYPE_RENEW] = RenewGene;
@@ -49,7 +50,7 @@ export default class GeneMgr
         this._typeClass[ClientDef.GENE_TYPE_ADD_EXP] = AddEXPGene;
         this._typeClass[ClientDef.GENE_TYPE_SUB_SHIELD] = SubShieldGene;
         this._typeClass[ClientDef.GENE_TYPE_ADD_BULLET] = AddBulletGene;
-        
+        this._typeClass[ClientDef.GENE_TYPE_ICE_FROZEN] = IceFrozenGene;
     }
 
     start () 

@@ -84,7 +84,7 @@ export default class RevolutionBallSkill extends SkillParent {
         var heroNode = this.getHost().getEntityNode();
         
         var offsetY = GameData.Player_Height; // 子弹的高度偏移
-        var radius:number = this._skillInfo["range"]; // 子弹的半径
+        var radius:number = this._skillInfo["range"] + this._host.getCProp(ClientDef.ENTITY_PROP_ADD_ATKRANGE); // 子弹的半径
         for (let index = 0; index < this._bullets.length; index++) {
             const bullet = this._bullets[index];
             if(bullet.getProp(ClientDef.BULLET_PROP_STATE) == ClientDef.BULLET_STATE_FREE)

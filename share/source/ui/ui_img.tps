@@ -151,8 +151,6 @@
             <filename>btn_shenlu1.png</filename>
             <filename>btn_shenlu2.png</filename>
             <filename>charname.png</filename>
-            <filename>item_767.png</filename>
-            <filename>item_mohe.png</filename>
             <filename>login.png</filename>
             <filename>tips2.png</filename>
             <filename>yaogan.png</filename>
@@ -253,6 +251,8 @@
             <filename>upgrades_icons_0013.png</filename>
             <filename>upgrades_icons_0024.png</filename>
             <filename>special_icons_0033.png</filename>
+            <filename>mainButtons_0003.png</filename>
+            <filename>offers_icon_map.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>

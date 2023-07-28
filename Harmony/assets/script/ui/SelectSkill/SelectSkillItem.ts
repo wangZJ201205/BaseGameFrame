@@ -4,9 +4,13 @@
  * 销毁的时候随着主对象关闭即可
  */
 
+import ClientDef from "../../common/ClientDef";
+import { EventName } from "../../common/EventName";
+import GameData from "../../common/GameData";
 import { UIName } from "../../common/UIName";
 import { Hero } from "../../ghost/Hero";
 import DictMgr from "../../manager/DictMgr";
+import EventMgr from "../../manager/EventMgr";
 import LoadMgr from "../../manager/LoadMgr";
 import UIMgr from "../../manager/UIMgr";
 
@@ -44,7 +48,17 @@ export default class SelectSkillItem extends cc.Component {
         {
             Hero.Instance.getEntity().getGene().addGene(this._skillId);
         }
-        UIMgr.Instance.closeUI(UIName.VIEW_SELECTSKILL);
+        GameData.Select_Skill_Time ++;
+        var lv = Hero.Instance.getEntity().getCProp(ClientDef.ENTITY_PROP_LV);
+
+        if( GameData.Select_Skill_Time >= lv)
+        {
+            UIMgr.Instance.closeUI(UIName.VIEW_SELECTSKILL);
+        }
+        else
+        {
+            EventMgr.Instance.Emit(EventName.EVENT_PLAYER_RAND_SKILL);
+        }
     }
 
     initItem(data)

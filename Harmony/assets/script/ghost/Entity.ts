@@ -3,7 +3,6 @@ import GameData from "../common/GameData";
 import GameHelp from "../help/GameHelp";
 import DictMgr from "../manager/DictMgr";
 import Skill from "../skill/Skill";
-import ClothComponent from "./component/children/ClothComponent";
 import ComponentMgr from "./component/ComponentMgr";
 import GeneMgr from "./gene/GeneMgr";
 import EntityStateMachine from "./stateMachine/EntityStateMachine";
@@ -60,6 +59,7 @@ export default class Entity extends cc.Node
         var entityInfo = this.getEntityDict();
 
         this.setCProp(ClientDef.ENTITY_PROP_MOVE_SPEED, entityInfo.moveSpeed);
+        this.setCProp(ClientDef.ENTITY_PROP_DEFENSE, entityInfo.defense);
     }
 
     //反复初始化

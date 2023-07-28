@@ -57,5 +57,7 @@ export default class GameData{
 
     public static Kill_Monster_Count : number = 0; //杀死怪物数量
 
+    public static Select_Skill_Time : number = 1; //选择技能次数
+
 
 }

@@ -1,5 +1,5 @@
 {
 	"1001": {"id": 1001,"name": "经验球","datau": 0,"datax": 1,"datay": 0,"dataz": 0,"src": "blazing_watcher_gem_0031","type": 1},
-	"1002": {"id": 1002,"name": "经验球","datau": 0,"datax": 1,"datay": 0,"dataz": 0,"src": "blazing_watcher_gem_0036","type": 1},
-	"1003": {"id": 1003,"name": "经验球","datau": 0,"datax": 1,"datay": 0,"dataz": 0,"src": "blazing_watcher_gem_0040","type": 1}
+	"1002": {"id": 1002,"name": "经验球","datau": 0,"datax": 10,"datay": 0,"dataz": 0,"src": "blazing_watcher_gem_0036","type": 1},
+	"1003": {"id": 1003,"name": "经验球","datau": 0,"datax": 50,"datay": 0,"dataz": 0,"src": "blazing_watcher_gem_0040","type": 1}
 }

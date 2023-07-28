@@ -29,12 +29,20 @@ export class DamageSys {
 
         damageValue = DamageSys.addShieldDamage(src, tgt, damageValue); //添加护盾防御
 
-        if( damageValue <= 0)
-        {
-            return;
-        }
+        damageValue = DamageSys.subDefenseDamge(tgt, damageValue); //添加护盾防御
+
+        if( damageValue <= 0)return;
 
         DamageSys.addEndDamage(src, tgt, damageValue); //最后伤害
+    }
+
+    //去除护盾的防御
+    private static subDefenseDamge(tgt:Entity , damageValue : number = 0)
+    {
+        var defenseValue = tgt.getCProp(ClientDef.ENTITY_PROP_DEFENSE) - tgt.getCProp(ClientDef.ENTITY_PROP_ADD_SHIELD);
+        defenseValue = defenseValue < 0 ? 0 : defenseValue;
+        damageValue = damageValue - defenseValue;
+        return damageValue;
     }
 
     //附加攻击

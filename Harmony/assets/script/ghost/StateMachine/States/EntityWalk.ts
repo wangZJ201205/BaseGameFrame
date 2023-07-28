@@ -22,6 +22,13 @@ export default class EntityWalk extends StateParent {
     update (dt) 
     {
 
+        if(this._host.getCProp(ClientDef.ENTITY_PROP_FROZEN) == 1)//冰冻效果
+        {
+            this.getHost().getStateMachine().addState(ClientDef.ENTITY_STATE_IDLE);
+            this.getHost().getStateMachine().runNextState();
+            return;
+        }
+
         var hostInfo = this.getHost().getEntityDict();
         var heroNode = Hero.Instance.getEntity().getEntityNode();
         var myNode = this.getHost().getEntityNode();

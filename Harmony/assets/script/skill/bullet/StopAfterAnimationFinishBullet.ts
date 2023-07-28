@@ -14,6 +14,7 @@ export default class StopAfterAnimationFinishBullet extends BulletParent {
     {
         //动画结束
         this.stop();
+
     }
 
 }

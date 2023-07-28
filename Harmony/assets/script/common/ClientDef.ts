@@ -36,6 +36,7 @@ export default class ClientDef{
     public static readonly ENTITY_COMP_NAME : number = 5; //对象组件 - 名字
     public static readonly ENTITY_COMP_SHIELD : number = 6; //对象组件 - 护盾
     public static readonly ENTITY_COMP_THUNDERRAY : number = 7; //对象组件 - 护盾
+    public static readonly ENTITY_COMP_FROZEN : number = 8; //对象组件 - 冰冻
 
     //对象组件运行状态
     public static readonly COMP_STATE_LOAD : number = 1; //组件状态--加载
@@ -98,6 +99,8 @@ export default class ClientDef{
     public static readonly ENTITY_PROP_ADD_EXP : number = 25 ; //增加经验值
     public static readonly ENTITY_PROP_ADD_BULLET : number = 26 ; //增加飞行子弹数
     public static readonly ENTITY_PROP_ADD_SHIELD : number = 27 ; //减免护盾伤害
+    public static readonly ENTITY_PROP_DEFENSE : number = 28; //防御
+    public static readonly ENTITY_PROP_FROZEN : number = 29; //冰冻
 
     //技能类型
     public static readonly SKILL_TYPE_FIREBALL: number      = 101; //火球
@@ -212,6 +215,7 @@ export default class ClientDef{
     public static readonly GENE_TYPE_ADD_EXP : number = 13; //吸心大法基因
     public static readonly GENE_TYPE_SUB_SHIELD : number = 14; //降龙十八掌基因
     public static readonly GENE_TYPE_ADD_BULLET : number = 15; //碧波基因
+    public static readonly GENE_TYPE_ICE_FROZEN : number = 16; //冰冻基因
 
     //游戏暂停列表
     public static readonly GAME_PAUSE_UPGRADE : number  = 1 << 1; //升级界面

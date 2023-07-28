@@ -31,16 +31,17 @@ function handle_entity(o)
 
 	d.skillid = tonumber(o.d) or 0
 	d.bloom = tonumber(o.e) or 0
-	d.collision = tonumber(o.f)
-	d.collRect = o.g
-	d.collGroup = o.h
-	d.dropItem = o.i
-	d.moveSpeed = tonumber(o.j)
-	d.moveType = MoveType[o.k]
-	d.boss = tonumber(o.l) or 0
-	d.shapeshift = tonumber(o.m) or 0
-	d.bloomEffect = o.n
-	d.mindistance = tonumber(o.o) or 0
+	d.defense = tonumber(o.f)
+	d.collision = tonumber(o.g)
+	d.collRect = o.h
+	d.collGroup = o.i
+	d.dropItem = o.j
+	d.moveSpeed = tonumber(o.k)
+	d.moveType = MoveType[o.l]
+	d.boss = tonumber(o.m) or 0
+	d.shapeshift = tonumber(o.n) or 0
+	d.bloomEffect = o.o
+	d.mindistance = tonumber(o.p) or 0
 	gdentity[tostring(d.id)] = d
 end
 
@@ -57,14 +58,15 @@ function handle_player(o)
 
 	d.skillid = tonumber(o.d) or 0
 	d.bloom = tonumber(o.e) or 0
-	d.collision = tonumber(o.f)
-	d.collRect = o.g
-	d.collGroup = o.h
-	d.defense = tonumber(o.i)
-	d.pickRange = tonumber(o.j)
-	d.moveSpeed = tonumber(o.k)
-	d.headIcon = o.l
-	d.desc = o.m
+	d.defense = tonumber(o.f)
+	d.collision = tonumber(o.g)
+	d.collRect = o.h
+	d.collGroup = o.i
+	d.defense = tonumber(o.j)
+	d.pickRange = tonumber(o.k)
+	d.moveSpeed = tonumber(o.l)
+	d.headIcon = o.m
+	d.desc = o.n
 	gdentity[tostring(d.id)] = d
 end
 

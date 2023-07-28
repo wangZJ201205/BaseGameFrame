@@ -44,13 +44,21 @@ export default class EntityDie extends StateParent {
             return;
         }
 
-        var item = ItemMgr.Instance.spawnItem(Number(dropItem));
-        if(item)
+        var dropItems = dropItem.split(",");
+        for (let index = 0; index < Number(dropItems[1]); index++) 
         {
-            item.restart();
-            item.getEntityNode().setPosition(this.getHost().getEntityNode().position);
-            GhostMgr.Instance.setEntityZOrder(item.getEntityNode());
+            var item = ItemMgr.Instance.spawnItem(Number(dropItems[0]));
+            if(item)
+            {
+                item.restart();
+                var position = this.getHost().getEntityNode().position;
+                position.x += Math.floor(index / 4) * 30;
+                position.y += Math.floor(index % 4) * 30;
+                item.getEntityNode().setPosition(position);
+                GhostMgr.Instance.setEntityZOrder(item.getEntityNode());
+            }
         }
+        
     }
 
     
