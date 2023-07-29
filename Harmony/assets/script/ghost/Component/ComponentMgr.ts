@@ -7,6 +7,7 @@ import ClothComponent from "./children/ClothComponent";
 import CollComponent from "./children/CollComponent";
 import FrozenComponent from "./children/FrozenComponent";
 import NameComponent from "./children/NameComponent";
+import PosionFireComponent from "./children/PosionFireComponent";
 import ShieldComponent from "./children/ShieldComponent";
 import ThunderRayComponent from "./children/ThunderRayComponent";
 import TitleComponent from "./children/TitleComponent";
@@ -35,6 +36,7 @@ export default class ComponentMgr{
         ComponentMgr.componentClass[ClientDef.ENTITY_COMP_SHIELD]  = ShieldComponent;
         ComponentMgr.componentClass[ClientDef.ENTITY_COMP_THUNDERRAY]  = ThunderRayComponent;
         ComponentMgr.componentClass[ClientDef.ENTITY_COMP_FROZEN]  = FrozenComponent;
+        ComponentMgr.componentClass[ClientDef.ENTITY_COMP_POSION_FIRE] = PosionFireComponent;
     }
 
     onLoad (host) 

@@ -37,6 +37,7 @@ export default class ClientDef{
     public static readonly ENTITY_COMP_SHIELD : number = 6; //对象组件 - 护盾
     public static readonly ENTITY_COMP_THUNDERRAY : number = 7; //对象组件 - 护盾
     public static readonly ENTITY_COMP_FROZEN : number = 8; //对象组件 - 冰冻
+    public static readonly ENTITY_COMP_POSION_FIRE : number = 9; //对象组件 - 毒火
 
     //对象组件运行状态
     public static readonly COMP_STATE_LOAD : number = 1; //组件状态--加载
@@ -121,6 +122,7 @@ export default class ClientDef{
     public static readonly SKILL_TYPE_ICE_PITON : number        = 116; //冰锥
     public static readonly SKILL_TYPE_PROPLE_STROM : number     = 117; //紫色风暴
     public static readonly SKILL_TYPE_THUNDER_RAY : number = 118;   //雷击
+    public static readonly SKILL_TYPE_POSION_FIRE : number = 119;   //毒火
 
     public static readonly SKILL_TYPE_COMMON : number       = 200; //普通技能
     public static readonly SKILL_TYPE_SUICIDE : number       = 201; //自杀技能
@@ -216,6 +218,7 @@ export default class ClientDef{
     public static readonly GENE_TYPE_SUB_SHIELD : number = 14; //降龙十八掌基因
     public static readonly GENE_TYPE_ADD_BULLET : number = 15; //碧波基因
     public static readonly GENE_TYPE_ICE_FROZEN : number = 16; //冰冻基因
+    public static readonly GENE_TYPE_POSION_FIRE : number = 17; //毒火基因
 
     //游戏暂停列表
     public static readonly GAME_PAUSE_UPGRADE : number  = 1 << 1; //升级界面

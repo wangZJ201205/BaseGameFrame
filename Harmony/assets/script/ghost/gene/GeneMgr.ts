@@ -14,6 +14,7 @@ import AttackSpeedGene from "./children/AttackSpeedGene";
 import BloomGene from "./children/BloomGene";
 import IceFrozenGene from "./children/IceFrozenGene";
 import MagnetGene from "./children/MagnetGene";
+import PosionFireGene from "./children/PosionFireGene";
 import RecvBloomGene from "./children/RecvBloomGene";
 import RenewGene from "./children/RenewGene";
 import ShieldGene from "./children/ShieldGene";
@@ -51,6 +52,7 @@ export default class GeneMgr
         this._typeClass[ClientDef.GENE_TYPE_SUB_SHIELD] = SubShieldGene;
         this._typeClass[ClientDef.GENE_TYPE_ADD_BULLET] = AddBulletGene;
         this._typeClass[ClientDef.GENE_TYPE_ICE_FROZEN] = IceFrozenGene;
+        this._typeClass[ClientDef.GENE_TYPE_POSION_FIRE] = PosionFireGene;
     }
 
     start () 

@@ -148,30 +148,46 @@
         </struct>
         <key>fileList</key>
         <array>
-            <filename>devoted_priest_modifier_decal_0006.png</filename>
-            <filename>devoted_priest_modifier_decal_0007.png</filename>
-            <filename>devoted_priest_modifier_decal_0008.png</filename>
-            <filename>devoted_priest_modifier_decal_0009.png</filename>
-            <filename>devoted_priest_modifier_decal_0010.png</filename>
-            <filename>devoted_priest_modifier_decal_0011.png</filename>
-            <filename>devoted_priest_modifier_decal_0012.png</filename>
-            <filename>devoted_priest_modifier_decal_0013.png</filename>
-            <filename>devoted_priest_modifier_decal_0014.png</filename>
-            <filename>devoted_priest_modifier_decal_0015.png</filename>
-            <filename>devoted_priest_modifier_decal_0016.png</filename>
-            <filename>devoted_priest_modifier_decal_0017.png</filename>
-            <filename>devoted_priest_modifier_decal_0018.png</filename>
-            <filename>devoted_priest_modifier_decal_0019.png</filename>
-            <filename>devoted_priest_modifier_decal_0020.png</filename>
-            <filename>devoted_priest_modifier_decal_0021.png</filename>
-            <filename>devoted_priest_modifier_decal_0022.png</filename>
-            <filename>devoted_priest_modifier_decal_0023.png</filename>
-            <filename>devoted_priest_modifier_decal_0024.png</filename>
-            <filename>devoted_priest_modifier_decal_0001.png</filename>
-            <filename>devoted_priest_modifier_decal_0002.png</filename>
-            <filename>devoted_priest_modifier_decal_0003.png</filename>
-            <filename>devoted_priest_modifier_decal_0004.png</filename>
-            <filename>devoted_priest_modifier_decal_0005.png</filename>
+            <filename>hero_eiskalt_cold_fury_smoke_0001.png</filename>
+            <filename>hero_eiskalt_cold_fury_smoke_0002.png</filename>
+            <filename>hero_eiskalt_cold_fury_smoke_0003.png</filename>
+            <filename>hero_eiskalt_cold_fury_smoke_0004.png</filename>
+            <filename>hero_eiskalt_cold_fury_smoke_0005.png</filename>
+            <filename>hero_eiskalt_cold_fury_smoke_0006.png</filename>
+            <filename>hero_eiskalt_cold_fury_smoke_0007.png</filename>
+            <filename>hero_eiskalt_cold_fury_smoke_0008.png</filename>
+            <filename>hero_eiskalt_cold_fury_smoke_0009.png</filename>
+            <filename>hero_eiskalt_cold_fury_smoke_0010.png</filename>
+            <filename>hero_eiskalt_cold_fury_smoke_0011.png</filename>
+            <filename>hero_eiskalt_cold_fury_smoke_0012.png</filename>
+            <filename>hero_eiskalt_cold_fury_smoke_0013.png</filename>
+            <filename>hero_eiskalt_cold_fury_smoke_0014.png</filename>
+            <filename>hero_eiskalt_cold_fury_smoke_0015.png</filename>
+            <filename>hero_eiskalt_cold_fury_smoke_0016.png</filename>
+            <filename>hero_eiskalt_cold_fury_smoke_0017.png</filename>
+            <filename>hero_eiskalt_cold_fury_smoke_0018.png</filename>
+            <filename>hero_eiskalt_cold_fury_smoke_0019.png</filename>
+            <filename>hero_eiskalt_cold_fury_smoke_0020.png</filename>
+            <filename>hero_eiskalt_cold_fury_smoke_0021.png</filename>
+            <filename>hero_eiskalt_cold_fury_smoke_0022.png</filename>
+            <filename>hero_eiskalt_cold_fury_smoke_0023.png</filename>
+            <filename>hero_eiskalt_cold_fury_smoke_0024.png</filename>
+            <filename>hero_eiskalt_cold_fury_smoke_0025.png</filename>
+            <filename>hero_eiskalt_cold_fury_smoke_0026.png</filename>
+            <filename>hero_eiskalt_cold_fury_smoke_0027.png</filename>
+            <filename>hero_eiskalt_cold_fury_smoke_0028.png</filename>
+            <filename>hero_eiskalt_cold_fury_smoke_0029.png</filename>
+            <filename>hero_eiskalt_cold_fury_smoke_0030.png</filename>
+            <filename>hero_eiskalt_cold_fury_smoke_0031.png</filename>
+            <filename>hero_eiskalt_cold_fury_smoke_0032.png</filename>
+            <filename>hero_eiskalt_cold_fury_smoke_0033.png</filename>
+            <filename>hero_eiskalt_cold_fury_smoke_0034.png</filename>
+            <filename>hero_eiskalt_cold_fury_smoke_0035.png</filename>
+            <filename>hero_eiskalt_cold_fury_smoke_0036.png</filename>
+            <filename>hero_eiskalt_cold_fury_smoke_0037.png</filename>
+            <filename>hero_eiskalt_cold_fury_smoke_0038.png</filename>
+            <filename>hero_eiskalt_cold_fury_smoke_0039.png</filename>
+            <filename>hero_eiskalt_cold_fury_smoke_0040.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>

@@ -36,6 +36,7 @@ import IceBallSkill from "../skill/skills/IceBallSkill";
 import IcePitonSkill from "../skill/skills/IcePitonSkill";
 import LaserSkill from "../skill/skills/LaserSkill";
 import MiZongQuanSkill from "../skill/skills/MiZongQuanSkill";
+import PosionFireSkill from "../skill/skills/PosionFireSkill";
 import PosionTimboSkill from "../skill/skills/PosionTimboSkill";
 import PurpleStormSkill from "../skill/skills/PurpleStormSkill";
 import RevolutionBallSkill from "../skill/skills/RevolutionBallSkill";
@@ -102,6 +103,7 @@ export default class SkillMgr extends ParentMgr {
         this._typeSkillClass[ClientDef.SKILL_TYPE_ICE_PITON] = IcePitonSkill;             //冰锥
         this._typeSkillClass[ClientDef.SKILL_TYPE_PROPLE_STROM] = PurpleStormSkill;             //冰锥
         this._typeSkillClass[ClientDef.SKILL_TYPE_THUNDER_RAY] = ThunderRaySkill;             //冰锥
+        this._typeSkillClass[ClientDef.SKILL_TYPE_POSION_FIRE] = PosionFireSkill;   //毒火
 
         this._typeSkillClass[ClientDef.SKILL_TYPE_COMMON] = CommonSkill;             //常用技能
         this._typeSkillClass[ClientDef.SKILL_TYPE_SUICIDE] = SuicideSkill;             //自杀技能

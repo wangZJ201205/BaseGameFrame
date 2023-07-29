@@ -253,6 +253,8 @@
             <filename>special_icons_0033.png</filename>
             <filename>mainButtons_0003.png</filename>
             <filename>offers_icon_map.png</filename>
+            <filename>items_power_veznan_portrait_0003.png</filename>
+            <filename>towerselect_powers_0028.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>

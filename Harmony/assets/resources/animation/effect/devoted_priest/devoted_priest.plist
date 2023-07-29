@@ -4,317 +4,525 @@
     <dict>
         <key>frames</key>
         <dict>
-            <key>devoted_priest_modifier_decal_0001.png</key>
+            <key>hero_eiskalt_cold_fury_smoke_0001.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{846,2},{34,16}}</string>
+                <string>{{2,900},{73,80}}</string>
                 <key>offset</key>
-                <string>{0,-1}</string>
+                <string>{-2,-1}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{3,8},{34,16}}</string>
+                <string>{{14,11},{73,80}}</string>
                 <key>sourceSize</key>
-                <string>{40,30}</string>
+                <string>{105,100}</string>
             </dict>
-            <key>devoted_priest_modifier_decal_0002.png</key>
+            <key>hero_eiskalt_cold_fury_smoke_0002.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{774,2},{34,18}}</string>
+                <string>{{2,412},{75,80}}</string>
+                <key>offset</key>
+                <string>{-2,-1}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{13,11},{75,80}}</string>
+                <key>sourceSize</key>
+                <string>{105,100}</string>
+            </dict>
+            <key>hero_eiskalt_cold_fury_smoke_0003.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{2,330},{75,80}}</string>
+                <key>offset</key>
+                <string>{-2,-1}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{13,11},{75,80}}</string>
+                <key>sourceSize</key>
+                <string>{105,100}</string>
+            </dict>
+            <key>hero_eiskalt_cold_fury_smoke_0004.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{2,818},{73,80}}</string>
+                <key>offset</key>
+                <string>{-2,-1}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{14,11},{73,80}}</string>
+                <key>sourceSize</key>
+                <string>{105,100}</string>
+            </dict>
+            <key>hero_eiskalt_cold_fury_smoke_0005.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{80,800},{69,78}}</string>
                 <key>offset</key>
                 <string>{0,-2}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
-                <string>{{3,8},{34,18}}</string>
+                <string>{{18,13},{69,78}}</string>
                 <key>sourceSize</key>
-                <string>{40,30}</string>
+                <string>{105,100}</string>
             </dict>
-            <key>devoted_priest_modifier_decal_0003.png</key>
+            <key>hero_eiskalt_cold_fury_smoke_0006.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{702,2},{34,20}}</string>
+                <string>{{156,983},{71,68}}</string>
                 <key>offset</key>
-                <string>{0,-2}</string>
+                <string>{0,-7}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{3,7},{34,20}}</string>
+                <string>{{17,23},{71,68}}</string>
                 <key>sourceSize</key>
-                <string>{40,30}</string>
+                <string>{105,100}</string>
             </dict>
-            <key>devoted_priest_modifier_decal_0004.png</key>
+            <key>hero_eiskalt_cold_fury_smoke_0007.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{666,2},{34,20}}</string>
+                <string>{{160,843},{71,68}}</string>
                 <key>offset</key>
-                <string>{0,-2}</string>
+                <string>{1,-7}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{3,7},{34,20}}</string>
+                <string>{{18,23},{71,68}}</string>
                 <key>sourceSize</key>
-                <string>{40,30}</string>
+                <string>{105,100}</string>
             </dict>
-            <key>devoted_priest_modifier_decal_0005.png</key>
+            <key>hero_eiskalt_cold_fury_smoke_0008.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{630,2},{34,20}}</string>
+                <string>{{156,913},{73,68}}</string>
                 <key>offset</key>
-                <string>{0,-2}</string>
+                <string>{1,-7}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{3,7},{34,20}}</string>
+                <string>{{17,23},{73,68}}</string>
                 <key>sourceSize</key>
-                <string>{40,30}</string>
+                <string>{105,100}</string>
             </dict>
-            <key>devoted_priest_modifier_decal_0006.png</key>
+            <key>hero_eiskalt_cold_fury_smoke_0009.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{594,2},{34,20}}</string>
+                <string>{{160,768},{73,70}}</string>
                 <key>offset</key>
-                <string>{0,-2}</string>
+                <string>{1,-6}</string>
+                <key>rotated</key>
+                <true/>
+                <key>sourceColorRect</key>
+                <string>{{17,21},{73,70}}</string>
+                <key>sourceSize</key>
+                <string>{105,100}</string>
+            </dict>
+            <key>hero_eiskalt_cold_fury_smoke_0010.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{156,696},{75,70}}</string>
+                <key>offset</key>
+                <string>{1,-6}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{3,7},{34,20}}</string>
+                <string>{{16,21},{75,70}}</string>
                 <key>sourceSize</key>
-                <string>{40,30}</string>
+                <string>{105,100}</string>
             </dict>
-            <key>devoted_priest_modifier_decal_0007.png</key>
+            <key>hero_eiskalt_cold_fury_smoke_0011.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{340,2},{36,22}}</string>
+                <string>{{2,982},{75,72}}</string>
                 <key>offset</key>
-                <string>{0,-2}</string>
+                <string>{1,-5}</string>
+                <key>rotated</key>
+                <true/>
+                <key>sourceColorRect</key>
+                <string>{{16,19},{75,72}}</string>
+                <key>sourceSize</key>
+                <string>{105,100}</string>
+            </dict>
+            <key>hero_eiskalt_cold_fury_smoke_0012.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{155,622},{77,72}}</string>
+                <key>offset</key>
+                <string>{1,-5}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{2,6},{36,22}}</string>
+                <string>{{15,19},{77,72}}</string>
                 <key>sourceSize</key>
-                <string>{40,30}</string>
+                <string>{105,100}</string>
             </dict>
-            <key>devoted_priest_modifier_decal_0008.png</key>
+            <key>hero_eiskalt_cold_fury_smoke_0013.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{302,2},{36,22}}</string>
+                <string>{{156,396},{77,72}}</string>
                 <key>offset</key>
-                <string>{0,-2}</string>
+                <string>{1,-5}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{2,6},{36,22}}</string>
+                <string>{{15,19},{77,72}}</string>
                 <key>sourceSize</key>
-                <string>{40,30}</string>
+                <string>{105,100}</string>
             </dict>
-            <key>devoted_priest_modifier_decal_0009.png</key>
+            <key>hero_eiskalt_cold_fury_smoke_0014.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{78,2},{36,24}}</string>
+                <string>{{155,546},{77,74}}</string>
                 <key>offset</key>
-                <string>{0,-2}</string>
+                <string>{2,-4}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{2,5},{36,24}}</string>
+                <string>{{16,17},{77,74}}</string>
                 <key>sourceSize</key>
-                <string>{40,30}</string>
+                <string>{105,100}</string>
             </dict>
-            <key>devoted_priest_modifier_decal_0010.png</key>
+            <key>hero_eiskalt_cold_fury_smoke_0015.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{40,2},{36,24}}</string>
+                <string>{{155,470},{77,74}}</string>
                 <key>offset</key>
-                <string>{0,-1}</string>
+                <string>{2,-4}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{2,4},{36,24}}</string>
+                <string>{{16,17},{77,74}}</string>
                 <key>sourceSize</key>
-                <string>{40,30}</string>
+                <string>{105,100}</string>
             </dict>
-            <key>devoted_priest_modifier_decal_0011.png</key>
+            <key>hero_eiskalt_cold_fury_smoke_0016.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,2},{36,24}}</string>
+                <string>{{77,871},{77,74}}</string>
                 <key>offset</key>
-                <string>{0,-1}</string>
+                <string>{2,-4}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{2,4},{36,24}}</string>
+                <string>{{16,17},{77,74}}</string>
                 <key>sourceSize</key>
-                <string>{40,30}</string>
+                <string>{105,100}</string>
             </dict>
-            <key>devoted_priest_modifier_decal_0012.png</key>
+            <key>hero_eiskalt_cold_fury_smoke_0017.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{264,2},{36,22}}</string>
+                <string>{{2,737},{79,76}}</string>
                 <key>offset</key>
-                <string>{0,-1}</string>
+                <string>{2,-3}</string>
+                <key>rotated</key>
+                <true/>
+                <key>sourceColorRect</key>
+                <string>{{15,15},{79,76}}</string>
+                <key>sourceSize</key>
+                <string>{105,100}</string>
+            </dict>
+            <key>hero_eiskalt_cold_fury_smoke_0018.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{2,656},{79,76}}</string>
+                <key>offset</key>
+                <string>{2,-3}</string>
+                <key>rotated</key>
+                <true/>
+                <key>sourceColorRect</key>
+                <string>{{15,15},{79,76}}</string>
+                <key>sourceSize</key>
+                <string>{105,100}</string>
+            </dict>
+            <key>hero_eiskalt_cold_fury_smoke_0019.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{164,2},{81,76}}</string>
+                <key>offset</key>
+                <string>{2,-3}</string>
+                <key>rotated</key>
+                <true/>
+                <key>sourceColorRect</key>
+                <string>{{14,15},{81,76}}</string>
+                <key>sourceSize</key>
+                <string>{105,100}</string>
+            </dict>
+            <key>hero_eiskalt_cold_fury_smoke_0020.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{2,575},{79,76}}</string>
+                <key>offset</key>
+                <string>{3,-3}</string>
+                <key>rotated</key>
+                <true/>
+                <key>sourceColorRect</key>
+                <string>{{16,15},{79,76}}</string>
+                <key>sourceSize</key>
+                <string>{105,100}</string>
+            </dict>
+            <key>hero_eiskalt_cold_fury_smoke_0021.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{79,320},{75,78}}</string>
+                <key>offset</key>
+                <string>{5,-2}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{2,5},{36,22}}</string>
+                <string>{{20,13},{75,78}}</string>
                 <key>sourceSize</key>
-                <string>{40,30}</string>
+                <string>{105,100}</string>
             </dict>
-            <key>devoted_priest_modifier_decal_0013.png</key>
+            <key>hero_eiskalt_cold_fury_smoke_0022.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{226,2},{36,22}}</string>
+                <string>{{162,243},{75,78}}</string>
                 <key>offset</key>
-                <string>{0,0}</string>
+                <string>{6,-2}</string>
+                <key>rotated</key>
+                <true/>
+                <key>sourceColorRect</key>
+                <string>{{21,13},{75,78}}</string>
+                <key>sourceSize</key>
+                <string>{105,100}</string>
+            </dict>
+            <key>hero_eiskalt_cold_fury_smoke_0023.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{162,164},{77,78}}</string>
+                <key>offset</key>
+                <string>{5,-2}</string>
+                <key>rotated</key>
+                <true/>
+                <key>sourceColorRect</key>
+                <string>{{19,13},{77,78}}</string>
+                <key>sourceSize</key>
+                <string>{105,100}</string>
+            </dict>
+            <key>hero_eiskalt_cold_fury_smoke_0024.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{83,84},{77,80}}</string>
+                <key>offset</key>
+                <string>{5,-1}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{2,4},{36,22}}</string>
+                <string>{{19,11},{77,80}}</string>
                 <key>sourceSize</key>
-                <string>{40,30}</string>
+                <string>{105,100}</string>
             </dict>
-            <key>devoted_priest_modifier_decal_0014.png</key>
+            <key>hero_eiskalt_cold_fury_smoke_0025.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{188,2},{36,22}}</string>
+                <string>{{2,166},{77,80}}</string>
                 <key>offset</key>
-                <string>{0,0}</string>
+                <string>{5,-1}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{2,4},{36,22}}</string>
+                <string>{{19,11},{77,80}}</string>
                 <key>sourceSize</key>
-                <string>{40,30}</string>
+                <string>{105,100}</string>
             </dict>
-            <key>devoted_priest_modifier_decal_0015.png</key>
+            <key>hero_eiskalt_cold_fury_smoke_0026.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{486,2},{34,22}}</string>
+                <string>{{83,2},{79,80}}</string>
                 <key>offset</key>
-                <string>{0,0}</string>
+                <string>{4,-1}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{3,4},{34,22}}</string>
+                <string>{{17,11},{79,80}}</string>
                 <key>sourceSize</key>
-                <string>{40,30}</string>
+                <string>{105,100}</string>
             </dict>
-            <key>devoted_priest_modifier_decal_0016.png</key>
+            <key>hero_eiskalt_cold_fury_smoke_0027.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{450,2},{34,22}}</string>
+                <string>{{2,84},{79,80}}</string>
                 <key>offset</key>
-                <string>{0,0}</string>
+                <string>{4,-1}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{3,4},{34,22}}</string>
+                <string>{{17,11},{79,80}}</string>
                 <key>sourceSize</key>
-                <string>{40,30}</string>
+                <string>{105,100}</string>
             </dict>
-            <key>devoted_priest_modifier_decal_0017.png</key>
+            <key>hero_eiskalt_cold_fury_smoke_0028.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{152,2},{34,24}}</string>
+                <string>{{2,2},{79,80}}</string>
                 <key>offset</key>
-                <string>{0,1}</string>
+                <string>{4,-1}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{3,2},{34,24}}</string>
+                <string>{{17,11},{79,80}}</string>
                 <key>sourceSize</key>
-                <string>{40,30}</string>
+                <string>{105,100}</string>
             </dict>
-            <key>devoted_priest_modifier_decal_0018.png</key>
+            <key>hero_eiskalt_cold_fury_smoke_0029.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{414,2},{34,22}}</string>
+                <string>{{162,85},{77,78}}</string>
                 <key>offset</key>
-                <string>{0,1}</string>
+                <string>{2,-2}</string>
+                <key>rotated</key>
+                <true/>
+                <key>sourceColorRect</key>
+                <string>{{16,13},{77,78}}</string>
+                <key>sourceSize</key>
+                <string>{105,100}</string>
+            </dict>
+            <key>hero_eiskalt_cold_fury_smoke_0030.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{77,947},{77,72}}</string>
+                <key>offset</key>
+                <string>{2,-4}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{3,3},{34,22}}</string>
+                <string>{{16,18},{77,72}}</string>
                 <key>sourceSize</key>
-                <string>{40,30}</string>
+                <string>{105,100}</string>
             </dict>
-            <key>devoted_priest_modifier_decal_0019.png</key>
+            <key>hero_eiskalt_cold_fury_smoke_0031.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{378,2},{34,22}}</string>
+                <string>{{80,721},{77,74}}</string>
                 <key>offset</key>
-                <string>{0,1}</string>
+                <string>{2,-3}</string>
+                <key>rotated</key>
+                <true/>
+                <key>sourceColorRect</key>
+                <string>{{16,16},{77,74}}</string>
+                <key>sourceSize</key>
+                <string>{105,100}</string>
+            </dict>
+            <key>hero_eiskalt_cold_fury_smoke_0032.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{156,320},{79,74}}</string>
+                <key>offset</key>
+                <string>{2,-3}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{3,3},{34,22}}</string>
+                <string>{{15,16},{79,74}}</string>
                 <key>sourceSize</key>
-                <string>{40,30}</string>
+                <string>{105,100}</string>
             </dict>
-            <key>devoted_priest_modifier_decal_0020.png</key>
+            <key>hero_eiskalt_cold_fury_smoke_0033.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{116,2},{34,24}}</string>
+                <string>{{79,400},{79,74}}</string>
                 <key>offset</key>
-                <string>{0,2}</string>
+                <string>{2,-3}</string>
+                <key>rotated</key>
+                <true/>
+                <key>sourceColorRect</key>
+                <string>{{15,16},{79,74}}</string>
+                <key>sourceSize</key>
+                <string>{105,100}</string>
+            </dict>
+            <key>hero_eiskalt_cold_fury_smoke_0034.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{81,244},{79,74}}</string>
+                <key>offset</key>
+                <string>{2,-3}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{3,1},{34,24}}</string>
+                <string>{{15,16},{79,74}}</string>
                 <key>sourceSize</key>
-                <string>{40,30}</string>
+                <string>{105,100}</string>
             </dict>
-            <key>devoted_priest_modifier_decal_0021.png</key>
+            <key>hero_eiskalt_cold_fury_smoke_0035.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{810,2},{34,16}}</string>
+                <string>{{2,494},{79,76}}</string>
                 <key>offset</key>
-                <string>{0,-1}</string>
+                <string>{2,-2}</string>
+                <key>rotated</key>
+                <true/>
+                <key>sourceColorRect</key>
+                <string>{{15,14},{79,76}}</string>
+                <key>sourceSize</key>
+                <string>{105,100}</string>
+            </dict>
+            <key>hero_eiskalt_cold_fury_smoke_0036.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{81,166},{79,76}}</string>
+                <key>offset</key>
+                <string>{1,-2}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{3,8},{34,16}}</string>
+                <string>{{14,14},{79,76}}</string>
                 <key>sourceSize</key>
-                <string>{40,30}</string>
+                <string>{105,100}</string>
             </dict>
-            <key>devoted_priest_modifier_decal_0022.png</key>
+            <key>hero_eiskalt_cold_fury_smoke_0037.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{738,2},{34,18}}</string>
+                <string>{{80,641},{73,78}}</string>
                 <key>offset</key>
-                <string>{0,-2}</string>
+                <string>{-2,-2}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{3,8},{34,18}}</string>
+                <string>{{14,13},{73,78}}</string>
                 <key>sourceSize</key>
-                <string>{40,30}</string>
+                <string>{105,100}</string>
             </dict>
-            <key>devoted_priest_modifier_decal_0023.png</key>
+            <key>hero_eiskalt_cold_fury_smoke_0038.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{558,2},{34,20}}</string>
+                <string>{{80,561},{73,78}}</string>
                 <key>offset</key>
-                <string>{0,-2}</string>
+                <string>{-2,-2}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{3,7},{34,20}}</string>
+                <string>{{14,13},{73,78}}</string>
                 <key>sourceSize</key>
-                <string>{40,30}</string>
+                <string>{105,100}</string>
             </dict>
-            <key>devoted_priest_modifier_decal_0024.png</key>
+            <key>hero_eiskalt_cold_fury_smoke_0039.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{522,2},{34,20}}</string>
+                <string>{{80,481},{73,78}}</string>
                 <key>offset</key>
-                <string>{0,-2}</string>
+                <string>{-2,-2}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{3,7},{34,20}}</string>
+                <string>{{14,13},{73,78}}</string>
                 <key>sourceSize</key>
-                <string>{40,30}</string>
+                <string>{105,100}</string>
+            </dict>
+            <key>hero_eiskalt_cold_fury_smoke_0040.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{2,248},{75,80}}</string>
+                <key>offset</key>
+                <string>{-2,-1}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{13,11},{75,80}}</string>
+                <key>sourceSize</key>
+                <string>{105,100}</string>
             </dict>
         </dict>
         <key>metadata</key>
@@ -324,9 +532,9 @@
             <key>realTextureFileName</key>
             <string>devoted_priest.png</string>
             <key>size</key>
-            <string>{882,28}</string>
+            <string>{242,1060}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:038f0c9b7335802f75c7a1067ae2277b:1/1$</string>
+            <string>$TexturePacker:SmartUpdate:be17994a5788c70749e2cdd580ee5dd6:1/1$</string>
             <key>textureFileName</key>
             <string>devoted_priest.png</string>
         </dict>

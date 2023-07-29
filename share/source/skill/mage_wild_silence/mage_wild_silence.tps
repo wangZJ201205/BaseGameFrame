@@ -148,22 +148,16 @@
         </struct>
         <key>fileList</key>
         <array>
-            <filename>mage_wild_silence_decal_0008.png</filename>
-            <filename>mage_wild_silence_decal_0009.png</filename>
-            <filename>mage_wild_silence_decal_0010.png</filename>
-            <filename>mage_wild_silence_decal_0011.png</filename>
-            <filename>mage_wild_silence_decal_0012.png</filename>
-            <filename>mage_wild_silence_decal_0013.png</filename>
-            <filename>mage_wild_silence_decal_0014.png</filename>
-            <filename>mage_wild_silence_decal_0015.png</filename>
-            <filename>mage_wild_silence_decal.png</filename>
-            <filename>mage_wild_silence_decal_0001.png</filename>
-            <filename>mage_wild_silence_decal_0002.png</filename>
-            <filename>mage_wild_silence_decal_0003.png</filename>
-            <filename>mage_wild_silence_decal_0004.png</filename>
-            <filename>mage_wild_silence_decal_0005.png</filename>
-            <filename>mage_wild_silence_decal_0006.png</filename>
-            <filename>mage_wild_silence_decal_0007.png</filename>
+            <filename>hero_eiskalt_proyectile_0005.png</filename>
+            <filename>hero_eiskalt_proyectile_0006.png</filename>
+            <filename>hero_eiskalt_proyectile_0007.png</filename>
+            <filename>hero_eiskalt_proyectile_0008.png</filename>
+            <filename>hero_eiskalt_proyectile_0009.png</filename>
+            <filename>hero_eiskalt_proyectile_0010.png</filename>
+            <filename>hero_eiskalt_proyectile_0001.png</filename>
+            <filename>hero_eiskalt_proyectile_0002.png</filename>
+            <filename>hero_eiskalt_proyectile_0003.png</filename>
+            <filename>hero_eiskalt_proyectile_0004.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>

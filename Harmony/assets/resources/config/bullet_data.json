@@ -561,6 +561,24 @@
 		"strike": 99,
 		"zorder": 1
 	},
+	"60": {
+		"id": 60,
+		"animation": 2,
+		"atlas": "0",
+		"attackMoveType": 2,
+		"collRect": "2,2,40,40",
+		"collision": 1,
+		"gene": 2006,
+		"nextBullet": 61,
+		"preftab": "kr4_item_valyrian_fire",
+		"scriptID": 2,
+		"sound": "effect_skill_lhh",
+		"speed": 50,
+		"src": "kr4_item_valyrian_fire_1_cp",
+		"strike": 1,
+		"zorder": 1
+	},
+	"61": {"id": 61,"animation": 2,"atlas": "0","attackMoveType": 2,"collRect": "0","preftab": "kr4_item_valyrian_fire","scriptID": 16,"sound": "effect_skill_lhh","src": "kr4_item_valyrian_fire_explotion_cp","strike": 1,"zorder": 2},
 	"7": {
 		"id": 7,
 		"animation": 1,
