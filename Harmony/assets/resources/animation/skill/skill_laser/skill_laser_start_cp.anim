@@ -124,16 +124,6 @@
             ]
           }
         }
-      },
-      "2": {
-        "comps": {
-          "cc.Sprite": {
-            "spriteFrame": []
-          }
-        },
-        "props": {
-          "angle": []
-        }
       }
     }
   },
