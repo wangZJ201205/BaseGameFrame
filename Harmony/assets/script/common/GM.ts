@@ -62,7 +62,7 @@ export default class GM {
     static allFullSkill(data)
     {
 
-        Hero.Instance.getEntity().getSkill().addSkill(10708);
+        Hero.Instance.getEntity().getSkill().addSkill(10709);
         Hero.Instance.getEntity().getSkill().addSkill(10109);
         Hero.Instance.getEntity().getSkill().addSkill(10207);
         Hero.Instance.getEntity().getSkill().addSkill(10307);

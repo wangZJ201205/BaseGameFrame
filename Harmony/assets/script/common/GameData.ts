@@ -42,6 +42,7 @@ export default class GameData{
     public static Player_Height : number = 40;  //人物的高度
 
     public static Player_Skill_Max : number = 6; //技能最多个数
+    public static Player_Gene_Max : number = 6; //基因最多个数
     public static Player_Skill_UpLevel_Count : number = 4; //技能升级最多显示个数
 
     public static Particle_Delay_Time : number = 10; //粒子延迟回收和等待时间

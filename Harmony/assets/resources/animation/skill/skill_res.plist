@@ -7,11 +7,11 @@
             <key>alleria_arrow.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{50,205},{42,14}}</string>
+                <string>{{102,604},{42,14}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
                 <string>{{2,2},{42,14}}</string>
                 <key>sourceSize</key>
@@ -20,7 +20,7 @@
             <key>alleria_arrow_multishoot.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{96,20},{56,30}}</string>
+                <string>{{70,562},{56,30}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -33,7 +33,7 @@
             <key>apex_shard_proyectile.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,251},{42,43}}</string>
+                <string>{{150,559},{42,43}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -46,7 +46,7 @@
             <key>arcane_mage_projectile.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,2},{119,16}}</string>
+                <string>{{96,490},{119,16}}</string>
                 <key>offset</key>
                 <string>{-3,0}</string>
                 <key>rotated</key>
@@ -56,10 +56,36 @@
                 <key>sourceSize</key>
                 <string>{125,20}</string>
             </dict>
+            <key>asset_summon_rune.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{2,246},{240,242}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{1,1},{240,242}}</string>
+                <key>sourceSize</key>
+                <string>{242,244}</string>
+            </dict>
+            <key>asset_summon_rune_yellow.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{2,2},{240,242}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{1,1},{240,242}}</string>
+                <key>sourceSize</key>
+                <string>{242,244}</string>
+            </dict>
             <key>boss_dwarf_mecha_proyectile_0001.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{96,78},{30,16}}</string>
+                <string>{{82,620},{30,16}}</string>
                 <key>offset</key>
                 <string>{-1,1}</string>
                 <key>rotated</key>
@@ -72,11 +98,11 @@
             <key>darkarmy_archer_arrow_lvl4.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{92,271},{34,12}}</string>
+                <string>{{230,604},{34,12}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
                 <string>{{1,0},{34,12}}</string>
                 <key>sourceSize</key>
@@ -85,11 +111,11 @@
             <key>ember_lords_mage_tower_bolt_lvl4_0001.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{96,110},{28,26}}</string>
+                <string>{{215,528},{28,26}}</string>
                 <key>offset</key>
                 <string>{0,1}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
                 <string>{{22,22},{28,26}}</string>
                 <key>sourceSize</key>
@@ -98,7 +124,7 @@
             <key>fire_bunch.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,155},{48,62}}</string>
+                <string>{{96,508},{48,62}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -111,11 +137,11 @@
             <key>fireball_proyectile_0001.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{68,251},{40,22}}</string>
+                <string>{{146,604},{40,22}}</string>
                 <key>offset</key>
                 <string>{-10,-1}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
                 <string>{{2,4},{40,22}}</string>
                 <key>sourceSize</key>
@@ -124,11 +150,11 @@
             <key>fireball_proyectile_0002.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{68,251},{40,22}}</string>
+                <string>{{146,604},{40,22}}</string>
                 <key>offset</key>
                 <string>{-10,-1}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
                 <string>{{2,4},{40,22}}</string>
                 <key>sourceSize</key>
@@ -137,7 +163,7 @@
             <key>fireball_proyectile_0003.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{104,209},{40,22}}</string>
+                <string>{{194,559},{40,22}}</string>
                 <key>offset</key>
                 <string>{-9,-2}</string>
                 <key>rotated</key>
@@ -150,7 +176,7 @@
             <key>fireball_proyectile_0004.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{104,209},{40,22}}</string>
+                <string>{{194,559},{40,22}}</string>
                 <key>offset</key>
                 <string>{-9,-2}</string>
                 <key>rotated</key>
@@ -163,11 +189,11 @@
             <key>fireball_proyectile_0005.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{46,251},{42,20}}</string>
+                <string>{{2,625},{42,20}}</string>
                 <key>offset</key>
                 <string>{-11,-1}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
                 <string>{{0,5},{42,20}}</string>
                 <key>sourceSize</key>
@@ -176,11 +202,11 @@
             <key>fireball_proyectile_0006.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{46,251},{42,20}}</string>
+                <string>{{2,625},{42,20}}</string>
                 <key>offset</key>
                 <string>{-11,-1}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
                 <string>{{0,5},{42,20}}</string>
                 <key>sourceSize</key>
@@ -189,7 +215,7 @@
             <key>hero_jigou_iceshard.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,92},{66,61}}</string>
+                <string>{{2,562},{66,61}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -202,7 +228,7 @@
             <key>hero_murglun_lava_blood_proy.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{96,96},{30,12}}</string>
+                <string>{{114,620},{30,12}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -215,7 +241,7 @@
             <key>hero_murglun_ultimate_proy.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,20},{92,70}}</string>
+                <string>{{2,490},{92,70}}</string>
                 <key>offset</key>
                 <string>{0,2}</string>
                 <key>rotated</key>
@@ -228,7 +254,7 @@
             <key>hero_tank_missile_proyectile.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{92,251},{34,18}}</string>
+                <string>{{46,625},{34,18}}</string>
                 <key>offset</key>
                 <string>{-1,0}</string>
                 <key>rotated</key>
@@ -241,7 +267,7 @@
             <key>hero_tank_simple_proyectile.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{96,138},{16,16}}</string>
+                <string>{{218,586},{16,16}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -254,7 +280,7 @@
             <key>hero_tank_ultimate_proyectile.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{66,158},{49,53}}</string>
+                <string>{{160,508},{49,53}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -267,11 +293,11 @@
             <key>juggernaut_bomb.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{66,209},{40,36}}</string>
+                <string>{{188,604},{40,36}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
                 <string>{{0,0},{40,36}}</string>
                 <key>sourceSize</key>
@@ -280,7 +306,7 @@
             <key>shooter_lvl4_proyectile.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{70,92},{36,24}}</string>
+                <string>{{218,490},{36,24}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -293,7 +319,7 @@
             <key>spirit_mausoleum_bolt_0002.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{70,130},{24,26}}</string>
+                <string>{{218,558},{24,26}}</string>
                 <key>offset</key>
                 <string>{0,-1}</string>
                 <key>rotated</key>
@@ -306,7 +332,7 @@
             <key>stage13_elf_arrow.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{68,293},{36,10}}</string>
+                <string>{{146,628},{36,10}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -319,7 +345,7 @@
             <key>svell_druid_proyectile_0001.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,205},{46,44}}</string>
+                <string>{{102,558},{46,44}}</string>
                 <key>offset</key>
                 <string>{1,0}</string>
                 <key>rotated</key>
@@ -337,9 +363,9 @@
             <key>realTextureFileName</key>
             <string>skill_res.png</string>
             <key>size</key>
-            <string>{128,305}</string>
+            <string>{244,647}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:d01a43a466a6b7feb85721cd090add02:1/1$</string>
+            <string>$TexturePacker:SmartUpdate:5a88f46263604fb249a805f06c25e1f5:1/1$</string>
             <key>textureFileName</key>
             <string>skill_res.png</string>
         </dict>

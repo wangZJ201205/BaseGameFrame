@@ -85,7 +85,15 @@
 	"2001": {"id": 2001,"name": "变身","datau": 0,"datax": 10,"datay": 0,"dataz": 0,"desc": "变身","icon": "skill_zhanshenchongzhuang","removeAfterDead": 1,"time": -1,"type": 3},
 	"2002": {"id": 2002,"name": "魔法盾","datau": 0,"datax": 2,"datay": 0,"dataz": 0,"desc": "魔法盾，将血量提升至原来的两倍","icon": "skill_zhanshenchongzhuang","removeAfterDead": 1,"time": -1,"type": 4},
 	"2003": {"id": 2003,"name": "回复","datau": 0,"datax": 0.5,"datay": 1000,"dataz": 0,"desc": "回复血量","icon": "0","removeAfterDead": 0,"time": -1,"type": 5},
-	"2004": {"id": 2004,"name": "雷击麻痹","datau": 0,"datax": 500,"datay": 1,"dataz": 0,"desc": "雷击麻痹，每一秒受到7点伤害，持续3秒","icon": "0","removeAfterDead": 1,"time": 3000,"type": 6},
-	"2005": {"id": 2005,"name": "冰冻基因","datau": 0,"datax": 1000,"datay": 5,"dataz": 0,"desc": "冰冻基因，每一秒受到5点伤害，持续3秒","icon": "0","removeAfterDead": 1,"time": 3000,"type": 16},
-	"2006": {"id": 2006,"name": "中毒","datau": 0,"datax": 1000,"datay": 10,"dataz": 0,"desc": "中毒基因，每一秒受到10点伤害，持续5秒","icon": "0","removeAfterDead": 1,"time": 5000,"type": 17}
+	"2004": {"id": 2004,"name": "雷击麻痹","datau": 0,"datax": 500,"datay": 10,"dataz": 0,"desc": "雷击麻痹，每一秒受到7点伤害，持续3秒","icon": "0","removeAfterDead": 1,"time": 3000,"type": 6},
+	"2005": {"id": 2005,"name": "冰冻基因","datau": 0,"datax": 1000,"datay": 7,"dataz": 0,"desc": "冰冻基因，每一秒受到5点伤害，持续3秒","icon": "0","removeAfterDead": 1,"time": 3000,"type": 16},
+	"2006": {"id": 2006,"name": "中毒","datau": 0,"datax": 1000,"datay": 10,"dataz": 0,"desc": "中毒基因，每一秒受到10点伤害，持续5秒","icon": "0","removeAfterDead": 1,"time": 5000,"type": 17},
+	"2007": {"id": 2007,"name": "雷击麻痹","datau": 0,"datax": 500,"datay": 15,"dataz": 0,"desc": "雷击麻痹，每一秒受到15点伤害，持续3秒","icon": "0","removeAfterDead": 1,"time": 3000,"type": 6},
+	"2008": {"id": 2008,"name": "雷击麻痹","datau": 0,"datax": 500,"datay": 20,"dataz": 0,"desc": "雷击麻痹，每一秒受到20点伤害，持续3秒","icon": "0","removeAfterDead": 1,"time": 3000,"type": 6},
+	"2009": {"id": 2009,"name": "雷击麻痹","datau": 0,"datax": 500,"datay": 25,"dataz": 0,"desc": "雷击麻痹，每一秒受到25点伤害，持续3秒","icon": "0","removeAfterDead": 1,"time": 3000,"type": 6},
+	"2010": {"id": 2010,"name": "雷击麻痹","datau": 0,"datax": 500,"datay": 30,"dataz": 0,"desc": "雷击麻痹，每一秒受到30点伤害，持续3秒","icon": "0","removeAfterDead": 1,"time": 3000,"type": 6},
+	"2011": {"id": 2011,"name": "雷击麻痹","datau": 0,"datax": 500,"datay": 35,"dataz": 0,"desc": "雷击麻痹，每一秒受到35点伤害，持续3秒","icon": "0","removeAfterDead": 1,"time": 3000,"type": 6},
+	"2012": {"id": 2012,"name": "雷击麻痹","datau": 0,"datax": 500,"datay": 40,"dataz": 0,"desc": "雷击麻痹，每一秒受到40点伤害，持续3秒","icon": "0","removeAfterDead": 1,"time": 3000,"type": 6},
+	"2013": {"id": 2013,"name": "雷击麻痹","datau": 0,"datax": 500,"datay": 45,"dataz": 0,"desc": "雷击麻痹，每一秒受到45点伤害，持续3秒","icon": "0","removeAfterDead": 1,"time": 3000,"type": 6},
+	"2014": {"id": 2014,"name": "雷击麻痹","datau": 0,"datax": 500,"datay": 50,"dataz": 0,"desc": "雷击麻痹，每一秒受到50点伤害，持续3秒","icon": "0","removeAfterDead": 1,"time": 3000,"type": 6}
 }

@@ -29,6 +29,11 @@ export default class ThunderRayBullet extends BulletParent {
             this.stop();
             return;
         }
+        else if( !entity.isLife() )
+        {
+            this.stop();
+            return;
+        }
 
         this.tgtEntity = entity;
         this.getNode().position = entity.position;

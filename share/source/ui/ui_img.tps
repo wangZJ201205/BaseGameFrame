@@ -158,14 +158,12 @@
             <filename>cjtubiao.jpg</filename>
             <filename>skill-reduce_cisha.png</filename>
             <filename>skill-reduce_luolei.png</filename>
-            <filename>skill_badaohuoyu.png</filename>
             <filename>skill_huimiehuoyu.png</filename>
             <filename>skill_kuanglongzidian.png</filename>
             <filename>skill_linghunhuo.png</filename>
             <filename>skill_luolei.png</filename>
             <filename>skill_shixueshu1.png</filename>
             <filename>skill_shouhuzhiyi.png</filename>
-            <filename>skill_xukongfalidun.png</filename>
             <filename>skill_youlanaoyi1.png</filename>
             <filename>xunzhangtubiao.png</filename>
             <filename>jineng.png</filename>

@@ -97,12 +97,7 @@ export default class SelectSkillView extends UIParent {
     {
         var canLearnSkill = [];
         var skills = Hero.Instance.getEntity().getSkill().getSkills();
-        // var skillCount = skills.length;
-        // if( skillCount == GameData.Player_Skill_Max )
-        // {
-        //     this.prepareGeneInfo(canLearnSkill);
-        //     return;
-        // }
+        var skillCount = skills.length;
 
         const skillDict = DictMgr.Instance.getDictByName('skill_data');
         
@@ -122,7 +117,7 @@ export default class SelectSkillView extends UIParent {
                 }    
             }
 
-            if(canLearn)
+            if(canLearn && skillCount != GameData.Player_Skill_Max)
             {
                 canLearnSkill.push({id:skillId,type:1});
             }
@@ -135,7 +130,15 @@ export default class SelectSkillView extends UIParent {
     prepareGeneInfo(canLearnSkill)
     {
         var genes = Hero.Instance.getEntity().getGene().getGenes();
-
+        var geneCnt = 0;
+        for (let index = 0; index < genes.length; index++) {
+            const gene = genes[index];
+            const gid = gene.getStaticId();
+            if( Math.floor(gid / 10000) == 1 )
+            {
+                geneCnt++;
+            }
+        }
         const geneDict = DictMgr.Instance.getDictByName('gene_data');
         
         this._learnGeneList.forEach(geneId => { //踢出重复的元素
@@ -154,7 +157,7 @@ export default class SelectSkillView extends UIParent {
                 }    
             }
 
-            if(canLearn)
+            if(canLearn && geneCnt != GameData.Player_Gene_Max)
             {
                 canLearnSkill.push({id:geneId,type:2});
             }

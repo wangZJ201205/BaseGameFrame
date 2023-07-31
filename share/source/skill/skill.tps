@@ -173,6 +173,8 @@
             <filename>arcane_mage_projectile.png</filename>
             <filename>boss_dwarf_mecha_proyectile_0001.png</filename>
             <filename>hero_murglun_lava_blood_proy.png</filename>
+            <filename>asset_summon_rune.png</filename>
+            <filename>asset_summon_rune_yellow.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>
