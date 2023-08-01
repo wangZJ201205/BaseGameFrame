@@ -5,6 +5,7 @@ import ComponentParent from "./ComponentParent";
 import BloomComponent from "./children/BloomComponent";
 import ClothComponent from "./children/ClothComponent";
 import CollComponent from "./children/CollComponent";
+import FireShieldComponent from "./children/FireShieldComponent";
 import FrozenComponent from "./children/FrozenComponent";
 import NameComponent from "./children/NameComponent";
 import PosionFireComponent from "./children/PosionFireComponent";
@@ -30,13 +31,14 @@ export default class ComponentMgr{
     {
         ComponentMgr.componentClass[ClientDef.ENTITY_COMP_CLOTH] = ClothComponent;
         ComponentMgr.componentClass[ClientDef.ENTITY_COMP_BLOOM] = BloomComponent;
-        ComponentMgr.componentClass[ClientDef.ENTITY_COMP_TITLE] = TitleComponent;
+        // ComponentMgr.componentClass[ClientDef.ENTITY_COMP_TITLE] = TitleComponent;
         ComponentMgr.componentClass[ClientDef.ENTITY_COMP_NAME]  = NameComponent;
         ComponentMgr.componentClass[ClientDef.ENTITY_COMP_COLL]  = CollComponent;
         ComponentMgr.componentClass[ClientDef.ENTITY_COMP_SHIELD]  = ShieldComponent;
         ComponentMgr.componentClass[ClientDef.ENTITY_COMP_THUNDERRAY]  = ThunderRayComponent;
         ComponentMgr.componentClass[ClientDef.ENTITY_COMP_FROZEN]  = FrozenComponent;
         ComponentMgr.componentClass[ClientDef.ENTITY_COMP_POSION_FIRE] = PosionFireComponent;
+        ComponentMgr.componentClass[ClientDef.ENTITY_COMP_FIRE_SHIELD] = FireShieldComponent;
     }
 
     onLoad (host) 
@@ -50,7 +52,7 @@ export default class ComponentMgr{
     {
         this.add(ClientDef.ENTITY_COMP_CLOTH);
         this.add(ClientDef.ENTITY_COMP_BLOOM);
-        this.add(ClientDef.ENTITY_COMP_TITLE);
+        // this.add(ClientDef.ENTITY_COMP_TITLE);
         if(GameData.IsDebug)
         {
             this.add(ClientDef.ENTITY_COMP_NAME);

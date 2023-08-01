@@ -82,8 +82,8 @@
 	"10809": {"id": 10809,"name": "降龙十八掌9级","datau": 0,"datax": 9,"datay": 0,"dataz": 0,"desc": "护盾减防9","icon": "upgrades_icons_0024","removeAfterDead": 0,"time": -1,"type": 14},
 	"10901": {"id": 10901,"name": "碧波1级","datau": 0,"datax": 1,"datay": 0,"dataz": 0,"desc": "飞弹数量加1","icon": "special_icons_0033","removeAfterDead": 0,"time": -1,"type": 15},
 	"10902": {"id": 10902,"name": "碧波2级","datau": 0,"datax": 2,"datay": 0,"dataz": 0,"desc": "飞弹数量加2","icon": "special_icons_0033","removeAfterDead": 0,"time": -1,"type": 15},
-	"2001": {"id": 2001,"name": "变身","datau": 0,"datax": 10,"datay": 0,"dataz": 0,"desc": "变身","icon": "skill_zhanshenchongzhuang","removeAfterDead": 1,"time": -1,"type": 3},
-	"2002": {"id": 2002,"name": "魔法盾","datau": 0,"datax": 2,"datay": 0,"dataz": 0,"desc": "魔法盾，将血量提升至原来的两倍","icon": "skill_zhanshenchongzhuang","removeAfterDead": 1,"time": -1,"type": 4},
+	"2001": {"id": 2001,"name": "变身","datau": 0,"datax": 10,"datay": 0,"dataz": 0,"desc": "变身","icon": "0","removeAfterDead": 1,"time": -1,"type": 3},
+	"2002": {"id": 2002,"name": "魔法盾","datau": 0,"datax": 2,"datay": 0,"dataz": 0,"desc": "魔法盾，将血量提升至原来的两倍","icon": "0","removeAfterDead": 1,"time": -1,"type": 4},
 	"2003": {"id": 2003,"name": "回复","datau": 0,"datax": 0.5,"datay": 1000,"dataz": 0,"desc": "回复血量","icon": "0","removeAfterDead": 0,"time": -1,"type": 5},
 	"2004": {"id": 2004,"name": "雷击麻痹","datau": 0,"datax": 500,"datay": 10,"dataz": 0,"desc": "雷击麻痹，每一秒受到7点伤害，持续3秒","icon": "0","removeAfterDead": 1,"time": 3000,"type": 6},
 	"2005": {"id": 2005,"name": "冰冻基因","datau": 0,"datax": 1000,"datay": 7,"dataz": 0,"desc": "冰冻基因，每一秒受到5点伤害，持续3秒","icon": "0","removeAfterDead": 1,"time": 3000,"type": 16},
@@ -95,5 +95,6 @@
 	"2011": {"id": 2011,"name": "雷击麻痹","datau": 0,"datax": 500,"datay": 35,"dataz": 0,"desc": "雷击麻痹，每一秒受到35点伤害，持续3秒","icon": "0","removeAfterDead": 1,"time": 3000,"type": 6},
 	"2012": {"id": 2012,"name": "雷击麻痹","datau": 0,"datax": 500,"datay": 40,"dataz": 0,"desc": "雷击麻痹，每一秒受到40点伤害，持续3秒","icon": "0","removeAfterDead": 1,"time": 3000,"type": 6},
 	"2013": {"id": 2013,"name": "雷击麻痹","datau": 0,"datax": 500,"datay": 45,"dataz": 0,"desc": "雷击麻痹，每一秒受到45点伤害，持续3秒","icon": "0","removeAfterDead": 1,"time": 3000,"type": 6},
-	"2014": {"id": 2014,"name": "雷击麻痹","datau": 0,"datax": 500,"datay": 50,"dataz": 0,"desc": "雷击麻痹，每一秒受到50点伤害，持续3秒","icon": "0","removeAfterDead": 1,"time": 3000,"type": 6}
+	"2014": {"id": 2014,"name": "雷击麻痹","datau": 0,"datax": 500,"datay": 50,"dataz": 0,"desc": "雷击麻痹，每一秒受到50点伤害，持续3秒","icon": "0","removeAfterDead": 1,"time": 3000,"type": 6},
+	"2015": {"id": 2015,"name": "火系护盾","datau": 0,"datax": 4,"datay": 0,"dataz": 0,"desc": "魔法盾，将血量提升至原来的4倍","icon": "0","removeAfterDead": 1,"time": -1,"type": 18}
 }

@@ -55,7 +55,7 @@ export default class GPMonsterTestCallMonster {
         if( liveCnt >= GameData.Monster_Show_Amount )return;
 
         var monsters = []; //随机数组
-        monsters.push(200002);
+        // monsters.push(200002);
         // monsters.push(200003);
         // monsters.push(200004);
         // monsters.push(200005);
@@ -97,6 +97,7 @@ export default class GPMonsterTestCallMonster {
         // monsters.push(200045);
         // monsters.push(200046);
         // monsters.push(200047);
+        monsters.push(200048);
 
         var id = Math.random()*monsters.length ;
         id = monsters[ Math.floor(id) ];

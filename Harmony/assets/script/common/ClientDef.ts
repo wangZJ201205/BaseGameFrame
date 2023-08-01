@@ -38,6 +38,7 @@ export default class ClientDef{
     public static readonly ENTITY_COMP_THUNDERRAY : number = 7; //对象组件 - 护盾
     public static readonly ENTITY_COMP_FROZEN : number = 8; //对象组件 - 冰冻
     public static readonly ENTITY_COMP_POSION_FIRE : number = 9; //对象组件 - 毒火
+    public static readonly ENTITY_COMP_FIRE_SHIELD : number = 10; //对象组件 - 火盾
 
     //对象组件运行状态
     public static readonly COMP_STATE_LOAD : number = 1; //组件状态--加载
@@ -219,6 +220,7 @@ export default class ClientDef{
     public static readonly GENE_TYPE_ADD_BULLET : number = 15; //碧波基因
     public static readonly GENE_TYPE_ICE_FROZEN : number = 16; //冰冻基因
     public static readonly GENE_TYPE_POSION_FIRE : number = 17; //毒火基因
+    public static readonly GENE_TYPE_FIRE_SHIELD : number = 18; //fire shield
 
     //游戏暂停列表
     public static readonly GAME_PAUSE_UPGRADE : number  = 1 << 1; //升级界面

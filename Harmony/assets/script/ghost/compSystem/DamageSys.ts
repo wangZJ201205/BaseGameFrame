@@ -24,15 +24,17 @@ export class DamageSys {
         {
             return;
         }
-
+        var oldDamage = damageValue;
         damageValue = DamageSys.addAttackDamage(src, tgt, damageValue);
-
+        var oldDamage1 = damageValue;
         damageValue = DamageSys.addShieldDamage(src, tgt, damageValue); //添加护盾防御
-
+        var oldDamage2 = damageValue;
         damageValue = DamageSys.subDefenseDamge(tgt, damageValue); //添加护盾防御
 
         if( damageValue <= 0)return;
 
+        console.info(`>>>>>>>>>>damage : old & actual > ${oldDamage} & ${oldDamage1} & ${oldDamage2} & ${damageValue}` );
+        
         DamageSys.addEndDamage(src, tgt, damageValue); //最后伤害
     }
 

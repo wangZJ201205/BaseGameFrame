@@ -4,9 +4,11 @@
  */
 
 import GameData from "../common/GameData";
+import { UIName } from "../common/UIName";
 import { Logger } from "../common/log/Logger";
 import DictMgr from "../manager/DictMgr";
 import GhostMgr from "../manager/GhostMgr";
+import UIMgr from "../manager/UIMgr";
 
 const {ccclass, property} = cc._decorator;
 
@@ -136,6 +138,7 @@ export default class GPMonster {
             else if(event.callmode  == 2) //必定出现怪物
             {
                 this.callMonster(event.monster,event);
+                UIMgr.Instance.openUI(UIName.VIEW_BOSS_COMING);
             }
             this._eventArray.splice(i,1);
             break;
