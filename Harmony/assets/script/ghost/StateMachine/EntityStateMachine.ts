@@ -1,5 +1,5 @@
 import ClientDef from "../../common/ClientDef";
-import Entity from "../Entity";
+import EntityParent from "../EntityParent";
 import StateParent from "./StateParent";
 /**
  * 对象状态机
@@ -11,7 +11,7 @@ export default class EntityStateMachine{
 
     _state_list:number[];//状态列表
     _curState : StateParent;
-    _host:Entity;
+    _host:EntityParent;
     _stateModule:Map<number,StateParent>;
 
     onLoad (host) 

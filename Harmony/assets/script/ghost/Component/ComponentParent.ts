@@ -1,5 +1,5 @@
 import ClientDef from "../../common/ClientDef";
-import Entity from "../Entity";
+import EntityParent from "../EntityParent";
 
 /**
  * 人物组件父类
@@ -9,7 +9,7 @@ const {ccclass, property} = cc._decorator;
 @ccclass
 export default class ComponentParent{
 
-    protected _host:Entity;
+    protected _host:EntityParent;
     protected _node:cc.Node;
     protected _state :number;
 

@@ -3,8 +3,8 @@
  */
 import ClientDef from "../common/ClientDef";
 import GameData from "../common/GameData";
-import { Logger } from "../common/log/Logger";
 import Entity from "../ghost/Entity";
+import EntityParent from "../ghost/EntityParent";
 import GameHelp from "../help/GameHelp";
 import ParentMgr from "./ParentMgr";
 import SceneMgr from "./SceneMgr";

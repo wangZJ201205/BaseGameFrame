@@ -4,7 +4,7 @@
 
 import ClientDef from "../../common/ClientDef";
 import DictMgr from "../../manager/DictMgr";
-import Entity from "../Entity";
+import EntityParent from "../EntityParent";
 import GeneParent from "./GeneParent";
 import AddAttackGene from "./children/AddAttackGene";
 import AddBulletGene from "./children/AddBulletGene";
@@ -28,7 +28,7 @@ const {ccclass, property} = cc._decorator;
 @ccclass
 export default class GeneMgr 
 {
-    _host:Entity;
+    _host:EntityParent;
     private _genes : GeneParent[];
     private _typeClass : Map<number,GeneParent>;
 

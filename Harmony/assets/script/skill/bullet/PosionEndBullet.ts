@@ -3,7 +3,7 @@
  */
 
 import ClientDef from "../../common/ClientDef";
-import { DamageSys } from "../../ghost/compSystem/DamageSys";
+import { DamageSystem } from "../../ghost/system/DamageSystem";
 import BulletParent from "../BulletParent";
 
 
@@ -48,7 +48,7 @@ export default class PosionEndBullet extends BulletParent {
         var damageValue = this.getDamageValue(other);
         other.node.setCProp(ClientDef.ENTITY_PROP_POSION_TIME,cc.director.getTotalTime());
         if(damageValue == 0)return false;
-        DamageSys.addDamage(this._host.getHost(), other.node, damageValue );
+        DamageSystem.addDamage(this._host.getHost(), other.node, damageValue );
         return true
     }
 
@@ -61,7 +61,7 @@ export default class PosionEndBullet extends BulletParent {
             var damageValue = this.getDamageValue(other);
             other.node.setCProp(ClientDef.ENTITY_PROP_POSION_TIME,cc.director.getTotalTime());
             if(damageValue == 0)return;
-            DamageSys.addDamage(this._host.getHost(), other.node, damageValue );
+            DamageSystem.addDamage(this._host.getHost(), other.node, damageValue );
             
         }
     }

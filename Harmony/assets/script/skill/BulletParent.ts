@@ -12,7 +12,7 @@ import SkillParent from "./SkillParent";
 import ParticleMgr from "../manager/ParticleMgr";
 import EffectParent from "../effect/EffectParent";
 import AudioMgr from "../manager/AudioMgr";
-import { DamageSys } from "../ghost/compSystem/DamageSys";
+import { DamageSystem } from "../ghost/system/DamageSystem";
 
 const {ccclass, property} = cc._decorator;
 
@@ -307,7 +307,7 @@ export default class BulletParent {
         }
         var damageValue = this.getDamageValue(other);
         if(damageValue == 0)return false;
-        DamageSys.addDamage(this._host.getHost(), tgt, damageValue );
+        DamageSystem.addDamage(this._host.getHost(), tgt, damageValue );
 
         if( this._bulletInfo.gene && other.node.isLife() ) //检测基因状态
         {

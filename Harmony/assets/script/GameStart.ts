@@ -8,9 +8,9 @@ import { UIName } from "./common/UIName";
 import DictConfig from "./config/DictConfig";
 import UIConfig from "./config/UIConfig";
 import { Hero } from "./ghost/Hero";
-import ComponentMgr from "./ghost/component/ComponentMgr";
 import EntityProxy from "./ghost/proxy/EntityProxy";
 import HeroProxy from "./ghost/proxy/HeroProxy";
+import ComponentSystem from "./ghost/system/ComponentSystem";
 import AudioMgr from "./manager/AudioMgr";
 import DictMgr from "./manager/DictMgr";
 import EventMgr from "./manager/EventMgr";
@@ -60,7 +60,7 @@ export default class GameStart extends cc.Component {
         //加载配置文件
         UIConfig.init();
         DictConfig.init();
-        ComponentMgr.init();
+        ComponentSystem.init();
         
         if(this.isDebug)
         {

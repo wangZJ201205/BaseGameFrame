@@ -3,7 +3,7 @@
  */
 
 import ClientDef from "../../common/ClientDef";
-import { DamageSys } from "../../ghost/compSystem/DamageSys";
+import { DamageSystem } from "../../ghost/system/DamageSystem";
 import BulletParent from "../BulletParent";
 
 
@@ -40,7 +40,7 @@ export default class SwordBallBullet extends BulletParent {
     {   
         var damageValue = this.getDamageValue(other);
         if(damageValue == 0)return;
-        DamageSys.addDamage(this._host.getHost(), other.node, damageValue );
+        DamageSystem.addDamage(this._host.getHost(), other.node, damageValue );
         return true;
     }
     

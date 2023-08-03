@@ -1,5 +1,5 @@
 import ClientDef from "../../common/ClientDef";
-import Entity from "../Entity";
+import EntityParent from "../EntityParent";
 
 
 const {ccclass, property} = cc._decorator;
@@ -8,7 +8,7 @@ const {ccclass, property} = cc._decorator;
 export default class StateParent {
 
     _stateID:number;
-    _host:Entity;
+    _host:EntityParent;
 
     onLoad (id,host) 
     {

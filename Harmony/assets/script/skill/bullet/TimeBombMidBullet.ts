@@ -5,7 +5,7 @@
 import ClientDef from "../../common/ClientDef";
 import GameData from "../../common/GameData";
 import Entity from "../../ghost/Entity";
-import { DamageSys } from "../../ghost/compSystem/DamageSys";
+import { DamageSystem } from "../../ghost/system/DamageSystem";
 import LoadMgr from "../../manager/LoadMgr";
 import MovementParent, { MoveNodeConfig } from "../../movement/MovementParent";
 import LineMovement from "../../movement/children/LineMovement";
@@ -147,7 +147,7 @@ export default class TimeBombMidBullet extends BulletParent {
         var damageValue = this.getDamageValue(other);
         other.node.setCProp(ClientDef.ENTITY_PROP_POSION_TIME,cc.director.getTotalTime());
         if(damageValue == 0)return false;
-        DamageSys.addDamage(this._host.getHost(), other.node, damageValue );
+        DamageSystem.addDamage(this._host.getHost(), other.node, damageValue );
         return true;
     }
 

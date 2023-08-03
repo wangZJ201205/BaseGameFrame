@@ -6,6 +6,7 @@ import ClientDef from "../../../common/ClientDef";
 import GameData from "../../../common/GameData";
 import GhostMgr from "../../../manager/GhostMgr";
 import ItemMgr from "../../../manager/ItemMgr";
+import Entity from "../../Entity";
 import StateParent from "../StateParent";
 
 const {ccclass, property} = cc._decorator;
@@ -18,7 +19,7 @@ export default class EntityDie extends StateParent {
     {
         this._delay = cc.director.getTotalTime();
         super.start();
-        this._host.getGene().removeGeneAfterDead();
+        (this._host as Entity).getGene().removeGeneAfterDead();
 
         this.dropItem();
     }

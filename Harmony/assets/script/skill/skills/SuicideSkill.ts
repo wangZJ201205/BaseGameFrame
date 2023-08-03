@@ -4,7 +4,7 @@
 
 import ClientDef from "../../common/ClientDef";
 import { Hero } from "../../ghost/Hero";
-import { DamageSys } from "../../ghost/compSystem/DamageSys";
+import { DamageSystem } from "../../ghost/system/DamageSystem";
 import GameHelp from "../../help/GameHelp";
 import SkillParent from "../SkillParent";
 
@@ -30,7 +30,7 @@ export default class SuicideSkill extends SkillParent {
         var min = Number(damage[0]);
         var max = Number(damage[1]);
         var value = Math.floor(min + Math.random() * (max-min));
-        DamageSys.addDamage(this.getHost() ,tgt, value );
+        DamageSystem.addDamage(this.getHost() ,tgt, value );
 
         this.getHost().getEntityNode().active = false;
         this.getHost().setCProp(ClientDef.ENTITY_PROP_ACTIVE_STATE, ClientDef.ENTITY_ACTIVE_STATE_FREE);

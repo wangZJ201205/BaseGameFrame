@@ -3,7 +3,7 @@
  */
 
 import ClientDef from "../../../common/ClientDef";
-import { DamageSys } from "../../compSystem/DamageSys";
+import { DamageSystem } from "../../system/DamageSystem";
 import GeneParent from "../GeneParent";
 
 const {ccclass, property} = cc._decorator;
@@ -43,7 +43,7 @@ export default class ThunderRayGene extends GeneParent {
 
     addDamage()
     {
-        DamageSys.addDamage(null, this._host, this._datay);
+        DamageSystem.addDamage(null, this._host, this._datay);
     }
 
 }

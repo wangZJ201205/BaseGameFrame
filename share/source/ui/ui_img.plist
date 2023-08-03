@@ -524,6 +524,19 @@
                 <key>sourceSize</key>
                 <string>{380,155}</string>
             </dict>
+            <key>map_levelselect_rules_icon_0002.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{506,728},{28,26}}</string>
+                <key>offset</key>
+                <string>{-1,0}</string>
+                <key>rotated</key>
+                <true/>
+                <key>sourceColorRect</key>
+                <string>{{3,5},{28,26}}</string>
+                <key>sourceSize</key>
+                <string>{36,36}</string>
+            </dict>
             <key>map_mainbuttons_heroes_0014.png</key>
             <dict>
                 <key>frame</key>
@@ -1392,7 +1405,7 @@
             <key>size</key>
             <string>{1315,2033}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:cc6a5b9b1b719e8ff75ef084cec1bffc:1/1$</string>
+            <string>$TexturePacker:SmartUpdate:701af5f8ca518e10d21479fd266f0070:1/1$</string>
             <key>textureFileName</key>
             <string>ui_img.png</string>
         </dict>

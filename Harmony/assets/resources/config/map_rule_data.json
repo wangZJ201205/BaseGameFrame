@@ -1,8 +1,11 @@
 {
 	"10001": [
 		{"callmode": 1,"delay": 1000,"gene": 0,"monster": 200002,"percent": 1,"sceneid": 10001,"time": 0},
-		{"callmode": 1,"delay": 800,"gene": 0,"monster": 200003,"percent": 2,"sceneid": 10001,"time": 600},
-		{"callmode": 1,"delay": 600,"gene": 0,"monster": 200004,"percent": 6,"sceneid": 10001,"time": 1200},
+		{"callmode": 1,"delay": 800,"gene": 0,"monster": 200003,"percent": 2,"sceneid": 10001,"time": 590},
+		{"callmode": 2,"delay": 800,"gene": 0,"monster": 200012,"percent": 0,"sceneid": 10001,"time": 600},
+		{"callmode": 1,"delay": 600,"gene": 0,"monster": 200004,"percent": 6,"sceneid": 10001,"time": 1190},
+		{"callmode": 2,"delay": 600,"gene": 0,"monster": 200012,"percent": 0,"sceneid": 10001,"time": 1200},
+		{"callmode": 2,"delay": 600,"gene": 0,"monster": 300001,"percent": 0,"sceneid": 10001,"time": 1210},
 		{"callmode": 2,"delay": 500,"gene": 2002,"monster": 200012,"percent": 0,"sceneid": 10001,"time": 1800},
 		{"callmode": 1,"delay": 400,"gene": 0,"monster": 200044,"percent": 9,"sceneid": 10001,"time": 2400},
 		{"callmode": 1,"delay": 400,"gene": 0,"monster": 200005,"percent": 18,"sceneid": 10001,"time": 3000},

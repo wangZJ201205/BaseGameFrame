@@ -2,7 +2,7 @@
  * 追踪对象
  */
 
-import Entity from "../../ghost/Entity";
+import EntityParent from "../../ghost/EntityParent";
 import MovementParent from "../MovementParent";
 
 const {ccclass, property} = cc._decorator;
@@ -10,14 +10,14 @@ const {ccclass, property} = cc._decorator;
 export interface TraceEntityConfig {
     moveNode: cc.Node; // 运动的对象 -- 由外部传入
     startPos: cc.Vec3; // 开始点
-    tgtEntity: Entity; // 攻击对象
+    tgtEntity: EntityParent; // 攻击对象
     speed: number;      // 速度
   }
 
 @ccclass
 export default class TraceEntityMovement extends MovementParent {
 
-    private _traceEntity : Entity;
+    private _traceEntity : EntityParent;
     start (data ) {
         this._moveNode  = data.moveNode;
         this._startPos  = data.startPos;

@@ -3,6 +3,7 @@
  */
 
 import ClientDef from "../../../common/ClientDef";
+import Entity from "../../Entity";
 import StateParent from "../StateParent";
 
 const {ccclass, property} = cc._decorator;
@@ -15,7 +16,7 @@ export default class EntityShapeShift extends StateParent {
         super.start();
         var entityInfo = this._host.getEntityDict();
         let shapeShift = entityInfo["shapeshift"];
-        this._host.getGene().addGene(shapeShift);
+        (this._host as Entity).getGene().addGene(shapeShift);
         this._host.setCProp(ClientDef.ENTITY_PROP_STATE_SHAPESHIFT,1);
         this._host.on("animation_finish",this.onFinish, this);
     }

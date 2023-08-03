@@ -1,7 +1,7 @@
 
 import ClientDef from "../../../common/ClientDef";
 import GameData from "../../../common/GameData";
-import GameHelp from "../../../help/GameHelp";
+import Entity from "../../Entity";
 import { Hero } from "../../Hero";
 import ClothComponent from "../../component/children/ClothComponent";
 import StateParent from "../StateParent";
@@ -74,7 +74,7 @@ export default class EntityWalk extends StateParent {
     //寻找可以释放的技能
     findReleasableSkill()
     {
-        var skillmgr = this._host.getSkill();
+        var skillmgr = (this._host as Entity).getSkill();
         if(!skillmgr){
             return null;
         }

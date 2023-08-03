@@ -4,7 +4,7 @@
 
 import ClientDef from "../common/ClientDef";
 import GameData from "../common/GameData";
-import Entity from "../ghost/Entity";
+import EntityParent from "../ghost/EntityParent";
 import DictMgr from "../manager/DictMgr";
 import SkillMgr from "../manager/SkillMgr";
 import BulletParent from "./BulletParent";
@@ -20,7 +20,7 @@ export enum SkillReleaseType
 @ccclass
 export default class SkillParent {
 
-    protected _host:Entity;
+    protected _host:EntityParent;
     protected _staticId:number;
     protected _skillInfo:{};
     protected _bullets:BulletParent[];
@@ -92,7 +92,7 @@ export default class SkillParent {
         return this._skillInfo["releaseAblePriority"] || 0;
     }
 
-    releaseableSkill(tgt:Entity)
+    releaseableSkill(tgt:EntityParent)
     {
         if(!this._isShootBullet)
         {

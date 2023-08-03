@@ -4,14 +4,14 @@
 
 import ClientDef from "../../common/ClientDef";
 import DictMgr from "../../manager/DictMgr";
-import Entity from "../Entity";
+import EntityParent from "../EntityParent";
 
 const {ccclass, property} = cc._decorator;
 
 @ccclass
 export default class GeneParent  
 {
-    protected _host : Entity;
+    protected _host : EntityParent;
     protected _rule : number;
     protected _geneStaticId : number; //配置id
     protected _datax : number;

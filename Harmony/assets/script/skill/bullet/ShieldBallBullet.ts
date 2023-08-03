@@ -4,13 +4,13 @@
 
 import ClientDef from "../../common/ClientDef";
 import GameData from "../../common/GameData";
-import Entity from "../../ghost/Entity";
-import { DamageSys } from "../../ghost/compSystem/DamageSys";
+import EntityParent from "../../ghost/EntityParent";
+import { DamageSystem } from "../../ghost/system/DamageSystem";
 import BulletParent from "../BulletParent";
 
 interface collEntity
 {
-    entity : Entity,
+    entity : EntityParent,
     delay : number;
 }
 
@@ -67,7 +67,7 @@ export default class ShieldBallBullet extends BulletParent {
                     collentity.delay = cc.director.getTotalTime();
                     var damageValue = this.getDamageValue(other);
                     if(damageValue == 0)return;
-                    DamageSys.addDamage(this._host.getHost(), other.node, damageValue );
+                    DamageSystem.addDamage(this._host.getHost(), other.node, damageValue );
                 }
                 return;
             }

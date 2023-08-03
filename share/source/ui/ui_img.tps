@@ -254,6 +254,7 @@
             <filename>items_power_veznan_portrait_0003.png</filename>
             <filename>towerselect_powers_0028.png</filename>
             <filename>bossComing.png</filename>
+            <filename>map_levelselect_rules_icon_0002.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>

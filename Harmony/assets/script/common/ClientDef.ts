@@ -39,6 +39,8 @@ export default class ClientDef{
     public static readonly ENTITY_COMP_FROZEN : number = 8; //对象组件 - 冰冻
     public static readonly ENTITY_COMP_POSION_FIRE : number = 9; //对象组件 - 毒火
     public static readonly ENTITY_COMP_FIRE_SHIELD : number = 10; //对象组件 - 火盾
+    public static readonly ENTITY_COMP_ITEM_SKIN : number = 11; //物品组件
+    public static readonly ENTITY_COMP_ITEM_STATE : number = 12; //物品组件
 
     //对象组件运行状态
     public static readonly COMP_STATE_LOAD : number = 1; //组件状态--加载

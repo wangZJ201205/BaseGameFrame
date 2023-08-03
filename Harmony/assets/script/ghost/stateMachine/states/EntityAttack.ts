@@ -6,6 +6,7 @@ import ClientDef from "../../../common/ClientDef";
 import GameData from "../../../common/GameData";
 import DictMgr from "../../../manager/DictMgr";
 import SkillParent from "../../../skill/SkillParent";
+import Entity from "../../Entity";
 import { Hero } from "../../Hero";
 import StateParent from "../StateParent";
 
@@ -72,7 +73,7 @@ export default class EntityAttack extends StateParent {
     //寻找可以释放的技能
     findReleasableSkill()
     {
-        var skillmgr = this._host.getSkill();
+        var skillmgr = (this._host as Entity).getSkill();
         if(!skillmgr){
             return null;
         }

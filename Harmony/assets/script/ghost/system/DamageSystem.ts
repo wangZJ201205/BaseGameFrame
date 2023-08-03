@@ -5,15 +5,15 @@
 import ClientDef from "../../common/ClientDef";
 import GameData from "../../common/GameData";
 import HeadEffectMgr from "../../manager/HeadEffectMgr";
-import Entity from "../Entity";
+import EntityParent from "../EntityParent";
 
 const {ccclass, property} = cc._decorator;
 
 @ccclass
-export class DamageSys {
+export class DamageSystem {
 
     //添加伤害
-    static addDamage(src:Entity,tgt:Entity, damageValue:number = 0)
+    static addDamage(src:EntityParent,tgt:EntityParent, damageValue:number = 0)
     {
         if(tgt.getCProp(ClientDef.ENTITY_PROP_STATE_SHAPESHIFT) == 1)
         {
@@ -25,21 +25,21 @@ export class DamageSys {
             return;
         }
         var oldDamage = damageValue;
-        damageValue = DamageSys.addAttackDamage(src, tgt, damageValue);
+        damageValue = DamageSystem.addAttackDamage(src, tgt, damageValue);
         var oldDamage1 = damageValue;
-        damageValue = DamageSys.addShieldDamage(src, tgt, damageValue); //添加护盾防御
+        damageValue = DamageSystem.addShieldDamage(src, tgt, damageValue); //添加护盾防御
         var oldDamage2 = damageValue;
-        damageValue = DamageSys.subDefenseDamge(tgt, damageValue); //添加护盾防御
+        damageValue = DamageSystem.subDefenseDamge(tgt, damageValue); //添加护盾防御
 
         if( damageValue <= 0)return;
 
         console.info(`>>>>>>>>>>damage : old & actual > ${oldDamage} & ${oldDamage1} & ${oldDamage2} & ${damageValue}` );
         
-        DamageSys.addEndDamage(src, tgt, damageValue); //最后伤害
+        DamageSystem.addEndDamage(src, tgt, damageValue); //最后伤害
     }
 
     //去除护盾的防御
-    private static subDefenseDamge(tgt:Entity , damageValue : number = 0)
+    private static subDefenseDamge(tgt:EntityParent , damageValue : number = 0)
     {
         var defenseValue = tgt.getCProp(ClientDef.ENTITY_PROP_DEFENSE) - tgt.getCProp(ClientDef.ENTITY_PROP_ADD_SHIELD);
         defenseValue = defenseValue < 0 ? 0 : defenseValue;
@@ -48,7 +48,7 @@ export class DamageSys {
     }
 
     //附加攻击
-    private static addAttackDamage(src:Entity, tgt:Entity, damageValue:number = 0)
+    private static addAttackDamage(src:EntityParent, tgt:EntityParent, damageValue:number = 0)
     {
         if(src)
         {
@@ -58,7 +58,7 @@ export class DamageSys {
     }
 
     //护盾
-    private static addShieldDamage(src:Entity, tgt:Entity, damageValue:number = 0)
+    private static addShieldDamage(src:EntityParent, tgt:EntityParent, damageValue:number = 0)
     {
         var curBloom = tgt.getCProp(ClientDef.ENTITY_PROP_SHIELD_BLOOM);
         if(curBloom > 0) //护盾防御
@@ -80,7 +80,7 @@ export class DamageSys {
     }
 
     //添加血条伤害
-    private static addEndDamage(src:Entity, tgt:Entity, damageValue:number = 0)
+    private static addEndDamage(src:EntityParent, tgt:EntityParent, damageValue:number = 0)
     {
         //伤害弹跳
         var curBloom = tgt.getCProp(ClientDef.ENTITY_PROP_CUR_BLOOM);
@@ -95,14 +95,14 @@ export class DamageSys {
         //进入死亡状态
         if( curBloom-damageValue <= 0 )
         {
-            DamageSys.checkShapeShift(tgt);
+            DamageSystem.checkShapeShift(tgt);
         }
 
         tgt.getEntityComponent(ClientDef.ENTITY_COMP_BLOOM).addDamage( damageValue );
     }
 
     //检测变身状态
-    static checkShapeShift(tgt : Entity)
+    static checkShapeShift(tgt : EntityParent)
     {
         var entityInfo = tgt.getEntityDict();
         let shapeShift = entityInfo["shapeshift"];

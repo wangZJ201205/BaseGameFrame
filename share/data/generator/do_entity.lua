@@ -74,6 +74,7 @@ end
 export_csv("..\\design\\对象表.xlsx")
 handle_file("tmp\\对象.csv", handle_entity)
 handle_file("tmp\\玩家.csv", handle_player)
+handle_file("tmp\\场景对象.csv", handle_entity)
 clear_csv()
 
 output_table_json(gdentity, of_file, nil, true, weight_tbl,true)

@@ -2,7 +2,7 @@
  * 常用技能怪物 -- 冲撞
  */
 
-import { DamageSys } from "../../ghost/compSystem/DamageSys";
+import { DamageSystem } from "../../ghost/system/DamageSystem";
 import SkillParent from "../SkillParent";
 
 
@@ -24,7 +24,7 @@ export default class CommonSkill extends SkillParent {
     {   
         var tgt = this._host;
         var damage = this._skillInfo["attackValue"];
-        DamageSys.addDamage(this.getHost(), tgt, damage );
+        DamageSystem.addDamage(this.getHost(), tgt, damage );
     }
 
 }
