@@ -141,7 +141,7 @@ export default class TimeBombMidBullet extends BulletParent {
 
         var bullet = this.spawnNextBullet();
         bullet.getNode().active = true;
-        bullet.getNode().position = this.getNode().position;
+        bullet.getNode().position = other.node.position;
         bullet.restart();
 
         var damageValue = this.getDamageValue(other);

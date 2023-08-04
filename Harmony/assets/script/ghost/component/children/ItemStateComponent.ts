@@ -27,10 +27,10 @@ export default class ItemStateComponent extends ComponentParent {
         this._recycleTime = GameData.Item_Recycle_Time;
         this._delta = cc.director.getTotalTime();
     }
-
-    start () 
+    
+    restart() 
     {
-        super.start();
+        super.restart();
         this._isMove = false;
         this._createTime = cc.director.getTotalTime();
     }

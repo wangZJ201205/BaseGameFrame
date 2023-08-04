@@ -23,12 +23,12 @@ export default class TimeBombBoxesBullet extends BulletParent {
 
         var bullet = this.spawnNextBullet();
         bullet.getNode().active = true;
-        bullet.getNode().zIndex = 100;
+        bullet.getNode().zIndex = 200;
         bullet.getNode().position = this.getNode().position;
         bullet.restart();
         this._relationBullet = bullet;
 
-        this._node.zIndex = 10000;
+        this._node.zIndex = 100;
 
         this._spawnBulletCnt = 0;
         this._delayTime = cc.director.getTotalTime();
@@ -44,7 +44,7 @@ export default class TimeBombBoxesBullet extends BulletParent {
         {
             var bullet = this._relationBullet.spawnNextBullet();
             bullet.getNode().active = true;
-            bullet.getNode().zIndex = 200;
+            bullet.getNode().zIndex = 1000;
             bullet.getNode().position = this.getNode().position;
             bullet.restart();
 

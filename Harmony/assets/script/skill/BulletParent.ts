@@ -53,7 +53,9 @@ export default class BulletParent {
         }
         else
         {
+           
             SkillMgr.Instance.getLayerLow().addChild(this._node);
+            
         }
 
         this.addBulletSkin();
@@ -67,7 +69,14 @@ export default class BulletParent {
         var sound = this._bulletInfo["sound"];
         AudioMgr.Instance.playEffect(sound,null);
         this.replayAnimation();
-        
+        if(this._bulletInfo.zIndex)
+        {
+            this._node.zIndex = this._bulletInfo.zIndex;
+        }
+        else
+        {
+            this._node.zIndex = 0;
+        }
     }
 
     stop()

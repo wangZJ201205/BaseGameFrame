@@ -18,7 +18,7 @@ export default class EntityComponentMgr extends ComponentMgr{
         this.add(ClientDef.ENTITY_COMP_BLOOM);
         if(GameData.IsDebug)
         {
-            this.add(ClientDef.ENTITY_COMP_NAME);
+            // this.add(ClientDef.ENTITY_COMP_NAME);
         }
         this.add(ClientDef.ENTITY_COMP_COLL);   
     }

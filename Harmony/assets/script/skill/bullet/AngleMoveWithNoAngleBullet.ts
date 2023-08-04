@@ -69,7 +69,7 @@ export default class AngleMoveWithNoAngleBullet extends BulletParent {
         if(!suc)return false;
         var bullet = this.spawnNextBullet();
         bullet.getNode().active = true;
-        bullet.getNode().position = this.getNode().position;
+        bullet.getNode().position = other.node.position;
         bullet.restart();
         return true;
     }

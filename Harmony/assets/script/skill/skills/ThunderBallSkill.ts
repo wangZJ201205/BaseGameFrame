@@ -12,8 +12,8 @@ const {ccclass, property} = cc._decorator;
 export default class ThunderBallSkill extends SkillParent {
 
     private readonly _rectPoses: cc.Vec3[] = [
-        cc.v3( 200, 100,0),
-        cc.v3(-200, 100,0),
+        cc.v3( 200, 100 ,0),
+        cc.v3(-200, 100 ,0),
         cc.v3(-200, -100,0),
         cc.v3( 200, -100,0),
       ];

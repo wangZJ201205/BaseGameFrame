@@ -48,7 +48,7 @@ export default class ShieldBallSkill extends SkillParent {
     
         var bullet = this.spawnBullet(this._skillInfo["spawnBullet"] );
         bullet.getNode().active = true;
-        bullet.getNode().position = cc.v3(x,y,0);
+        bullet.getNode().position = cc.v3(x,y,50);
         bullet.restart();
     }
     

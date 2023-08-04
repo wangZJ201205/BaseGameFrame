@@ -29,6 +29,7 @@
 		"speed": 3,
 		"src": "asset_summon_rune",
 		"strike": 99,
+		"zIndex": 1000,
 		"zorder": 2
 	},
 	"11": {"id": 11,"atlas": "skill_res","attackMoveType": 2,"collRect": "0","collision": 0,"preftab": "0","scriptID": 8,"sound": "effect_skill_fss","speed": 3,"src": "0","zorder": 2},
@@ -199,7 +200,7 @@
 		"sound": "0",
 		"speed": 1,
 		"src": "wicked_sisters_proy_green_0001",
-		"zorder": 2
+		"zorder": 1
 	},
 	"22": {
 		"id": 22,
@@ -216,10 +217,24 @@
 		"src": "skill_posion_start",
 		"strike": 99,
 		"sustaintime": 3000,
+		"zIndex": 10,
 		"zorder": 2
 	},
-	"23": {"id": 23,"animation": 2,"atlas": "skill_posion/posion","attackMoveType": 1,"collRect": "0","preftab": "skill_posion","scriptID": 16,"sound": "effect_skill_lls","src": "skill_posion_vanish","zorder": 2},
-	"24": {"id": 24,"animation": 2,"atlas": "skill_fire_wall/firewall","attackMoveType": 1,"collRect": "0","nextBullet": 25,"preftab": "skill_fire_wall","scriptID": 17,"sound": "effect_skill_lls","src": "skill_fire_wall_start_cp","zorder": 2},
+	"23": {"id": 23,"animation": 2,"atlas": "skill_posion/posion","attackMoveType": 1,"collRect": "0","preftab": "skill_posion","scriptID": 16,"sound": "effect_skill_lls","src": "skill_posion_vanish","zIndex": 12,"zorder": 2},
+	"24": {
+		"id": 24,
+		"animation": 2,
+		"atlas": "skill_fire_wall/firewall",
+		"attackMoveType": 1,
+		"collRect": "0",
+		"nextBullet": 25,
+		"preftab": "skill_fire_wall",
+		"scriptID": 17,
+		"sound": "effect_skill_lls",
+		"src": "skill_fire_wall_start_cp",
+		"zIndex": 13,
+		"zorder": 2
+	},
 	"25": {
 		"id": 25,
 		"animation": 2,
@@ -235,10 +250,24 @@
 		"src": "skill_fire_wall_run_cp",
 		"strike": 99,
 		"sustaintime": 3000,
+		"zIndex": 40,
 		"zorder": 2
 	},
-	"26": {"id": 26,"animation": 2,"atlas": "skill_fire_wall/firewall","attackMoveType": 1,"collRect": "0","preftab": "skill_fire_wall","scriptID": 16,"sound": "effect_skill_lls","src": "skill_fire_wall_end_cp","zorder": 2},
-	"27": {"id": 27,"animation": 2,"atlas": "skill_timeBomb/timeBomb","attackMoveType": 1,"collRect": "0","nextBullet": 30,"preftab": "skill_timebomb","scriptID": 20,"sound": "effect_skill_lls","src": "skill_timeBomb_cp","zorder": 2},
+	"26": {"id": 26,"animation": 2,"atlas": "skill_fire_wall/firewall","attackMoveType": 1,"collRect": "0","preftab": "skill_fire_wall","scriptID": 16,"sound": "effect_skill_lls","src": "skill_fire_wall_end_cp","zIndex": 41,"zorder": 2},
+	"27": {
+		"id": 27,
+		"animation": 2,
+		"atlas": "skill_timeBomb/timeBomb",
+		"attackMoveType": 1,
+		"collRect": "0",
+		"nextBullet": 30,
+		"preftab": "skill_timebomb",
+		"scriptID": 20,
+		"sound": "effect_skill_lls",
+		"src": "skill_timeBomb_cp",
+		"zIndex": 42,
+		"zorder": 2
+	},
 	"28": {
 		"id": 28,
 		"animation": 2,
@@ -252,9 +281,10 @@
 		"sound": "effect_skill_lls",
 		"speed": 6,
 		"src": "skill_timeBomb_entity1_cp,skill_timeBomb_entity2_cp,skill_timeBomb_entity3_cp,skill_timeBomb_entity4_cp,skill_timeBomb_entity5_cp,skill_timeBomb_entity6_cp",
+		"zIndex": 43,
 		"zorder": 2
 	},
-	"29": {"id": 29,"animation": 2,"atlas": "skill_timeBomb/timeBomb","attackMoveType": 1,"collRect": "0","preftab": "skill_timebomb","scriptID": 16,"sound": "effect_skill_lls","src": "skill_timeBomb_bomb_cp","zorder": 1},
+	"29": {"id": 29,"animation": 2,"atlas": "skill_timeBomb/timeBomb","attackMoveType": 1,"collRect": "0","preftab": "skill_timebomb","scriptID": 16,"sound": "effect_skill_lls","src": "skill_timeBomb_bomb_cp","zIndex": 44,"zorder": 1},
 	"3": {
 		"id": 3,
 		"animation": 1,
@@ -272,8 +302,34 @@
 		"strike": 2,
 		"zorder": 1
 	},
-	"30": {"id": 30,"animation": 2,"atlas": "skill_timeBomb/timeBomb","attackMoveType": 1,"collRect": "0","nextBullet": 31,"preftab": "skill_timebomb","scriptID": 23,"sound": "effect_skill_lls","src": "skill_timeBomb_bomb1_cp","zorder": 2},
-	"31": {"id": 31,"animation": 2,"atlas": "skill_timeBomb/timeBomb","attackMoveType": 1,"collRect": "0","nextBullet": 28,"preftab": "skill_timebomb","scriptID": 24,"sound": "effect_skill_lls","src": "skill_timeBomb_bomb2_cp","zorder": 2},
+	"30": {
+		"id": 30,
+		"animation": 2,
+		"atlas": "skill_timeBomb/timeBomb",
+		"attackMoveType": 1,
+		"collRect": "0",
+		"nextBullet": 31,
+		"preftab": "skill_timebomb",
+		"scriptID": 23,
+		"sound": "effect_skill_lls",
+		"src": "skill_timeBomb_bomb1_cp",
+		"zIndex": 900,
+		"zorder": 2
+	},
+	"31": {
+		"id": 31,
+		"animation": 2,
+		"atlas": "skill_timeBomb/timeBomb",
+		"attackMoveType": 1,
+		"collRect": "0",
+		"nextBullet": 28,
+		"preftab": "skill_timebomb",
+		"scriptID": 24,
+		"sound": "effect_skill_lls",
+		"src": "skill_timeBomb_bomb2_cp",
+		"zIndex": 41,
+		"zorder": 2
+	},
 	"32": {
 		"id": 32,
 		"animation": 2,
@@ -289,11 +345,24 @@
 		"strike": 99,
 		"zorder": 1
 	},
-	"33": {"id": 33,"animation": 2,"atlas": "0","collRect": "0","preftab": "kr4_power_soul_impact","scriptID": 16,"sound": "0","src": "soul_impact_end_cp","zorder": 2},
+	"33": {"id": 33,"animation": 2,"atlas": "0","collRect": "0","preftab": "kr4_power_soul_impact","scriptID": 16,"sound": "0","src": "soul_impact_end_cp","zIndex": 1,"zorder": 2},
 	"34": {"id": 34,"animation": 2,"atlas": "0","attackMoveType": 2,"collRect": "0","nextBullet": 35,"preftab": "skill_laser","scriptID": 26,"sound": "effect_skill_lls","src": "skill_laser_start_cp","zorder": 1},
 	"35": {"id": 35,"animation": 2,"atlas": "0","attackMoveType": 2,"collRect": "0","nextBullet": 36,"preftab": "skill_laser","scriptID": 25,"sound": "effect_skill_lls","src": "skill_laser_light_cp","zorder": 1},
 	"36": {"id": 36,"animation": 2,"atlas": "0","attackMoveType": 2,"collRect": "0","nextBullet": 37,"preftab": "skill_laser","scriptID": 26,"sound": "effect_skill_lls","src": "skill_laser_boom_cp","zorder": 1},
-	"37": {"id": 37,"animation": 2,"atlas": "0","attackMoveType": 2,"collRect": "2,2,200,100","collision": 1,"preftab": "skill_laser","scriptID": 16,"sound": "effect_skill_lls","src": "skill_laser_fireland_cp","zorder": 2},
+	"37": {
+		"id": 37,
+		"animation": 2,
+		"atlas": "0",
+		"attackMoveType": 2,
+		"collRect": "2,2,200,100",
+		"collision": 1,
+		"preftab": "skill_laser",
+		"scriptID": 16,
+		"sound": "effect_skill_lls",
+		"src": "skill_laser_fireland_cp",
+		"zIndex": 1,
+		"zorder": 2
+	},
 	"38": {
 		"id": 38,
 		"animation": 2,
@@ -339,7 +408,8 @@
 		"sound": "effect_skill_lhh",
 		"src": "skill_ice_shards_start3_cp",
 		"strike": 99,
-		"zorder": 1
+		"zIndex": 20,
+		"zorder": 2
 	},
 	"42": {
 		"id": 42,
@@ -354,7 +424,8 @@
 		"sound": "effect_skill_lhh",
 		"src": "skill_ice_shards_start2_cp",
 		"strike": 99,
-		"zorder": 1
+		"zIndex": 20,
+		"zorder": 2
 	},
 	"43": {
 		"id": 43,
@@ -369,7 +440,8 @@
 		"sound": "effect_skill_lhh",
 		"src": "skill_ice_shards_start1_cp",
 		"strike": 99,
-		"zorder": 1
+		"zIndex": 20,
+		"zorder": 2
 	},
 	"44": {
 		"id": 44,
@@ -384,7 +456,8 @@
 		"sound": "effect_skill_lhh",
 		"src": "skill_ice_shards_start_cp",
 		"strike": 99,
-		"zorder": 1
+		"zIndex": 20,
+		"zorder": 2
 	},
 	"45": {
 		"id": 45,
@@ -399,7 +472,8 @@
 		"sound": "effect_skill_lhh",
 		"src": "skill_ice_shards_advance_cp",
 		"strike": 99,
-		"zorder": 1
+		"zIndex": 20,
+		"zorder": 2
 	},
 	"46": {"id": 46,"animation": 2,"atlas": "0","attackMoveType": 2,"collRect": "0","nextBullet": 47,"preftab": "skill_purple_storm","scriptID": 17,"sound": "effect_skill_lhh","src": "skill_purple_storm_start_cp","zorder": 1},
 	"47": {
@@ -594,6 +668,7 @@
 		"sound": "effect_action_transfer",
 		"src": "asset_summon_rune",
 		"strike": 99,
+		"zIndex": 1000,
 		"zorder": 2
 	},
 	"63": {
@@ -609,6 +684,7 @@
 		"sound": "effect_action_transfer",
 		"src": "asset_summon_rune",
 		"strike": 99,
+		"zIndex": 1000,
 		"zorder": 2
 	},
 	"64": {
@@ -624,6 +700,7 @@
 		"sound": "effect_action_transfer",
 		"src": "asset_summon_rune",
 		"strike": 99,
+		"zIndex": 1000,
 		"zorder": 2
 	},
 	"65": {
@@ -639,6 +716,7 @@
 		"sound": "effect_action_transfer",
 		"src": "asset_summon_rune",
 		"strike": 99,
+		"zIndex": 1000,
 		"zorder": 2
 	},
 	"66": {
@@ -654,6 +732,7 @@
 		"sound": "effect_action_transfer",
 		"src": "asset_summon_rune",
 		"strike": 99,
+		"zIndex": 1000,
 		"zorder": 2
 	},
 	"67": {
@@ -669,6 +748,7 @@
 		"sound": "effect_action_transfer",
 		"src": "asset_summon_rune",
 		"strike": 99,
+		"zIndex": 1000,
 		"zorder": 2
 	},
 	"68": {
@@ -684,6 +764,7 @@
 		"sound": "effect_action_transfer",
 		"src": "asset_summon_rune",
 		"strike": 99,
+		"zIndex": 1000,
 		"zorder": 2
 	},
 	"69": {
@@ -699,6 +780,7 @@
 		"sound": "effect_action_transfer",
 		"src": "asset_summon_rune",
 		"strike": 99,
+		"zIndex": 1000,
 		"zorder": 2
 	},
 	"7": {

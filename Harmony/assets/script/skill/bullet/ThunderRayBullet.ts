@@ -4,6 +4,7 @@
 
 import ClientDef from "../../common/ClientDef";
 import { Logger } from "../../common/log/Logger";
+import Entity from "../../ghost/Entity";
 import EntityParent from "../../ghost/EntityParent";
 import GhostMgr from "../../manager/GhostMgr";
 import BulletParent from "../BulletParent";
@@ -43,7 +44,7 @@ export default class ThunderRayBullet extends BulletParent {
     {
         //动画结束
         this.stop();
-        if(!this.tgtEntity.isLife())
+        if(!(this.tgtEntity as Entity).isLife())
         {
             return false;
         }
@@ -52,7 +53,7 @@ export default class ThunderRayBullet extends BulletParent {
             return false;
         }
 
-        this.tgtEntity.getGene().addGene(this._bulletInfo.gene);
+        (this.tgtEntity as Entity).getGene().addGene(this._bulletInfo.gene);
         
     }
 

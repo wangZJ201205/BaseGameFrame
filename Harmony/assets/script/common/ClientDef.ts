@@ -51,6 +51,7 @@ export default class ClientDef{
     public static readonly ENTITY_TYPE_PLAYER : number = 1;     //对象id
     public static readonly ENTITY_TYPE_MONSTER : number = 2;    //怪物
     public static readonly ENTITY_TYPE_ITEM : number = 3;       //物品
+    public static readonly ENTITY_TYPE_EFFECT : number = 4;     //场景特效
 
     //对象状态
     public static readonly ENTITY_STATE_IDLE: number    = 0; //站立
