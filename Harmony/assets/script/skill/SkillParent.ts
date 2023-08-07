@@ -6,8 +6,8 @@ import ClientDef from "../common/ClientDef";
 import GameData from "../common/GameData";
 import EntityParent from "../ghost/EntityParent";
 import DictMgr from "../manager/DictMgr";
-import SkillMgr from "../manager/SkillMgr";
 import BulletParent from "./BulletParent";
+import SkillSystem from "./system/SkillSystem";
 
 const {ccclass, property} = cc._decorator;
 
@@ -45,7 +45,7 @@ export default class SkillParent {
     {
         this._skillInfo = DictMgr.Instance.getDictByName('skill_data')[this._staticId+""];
         this._curDelay = cc.director.getTotalTime();
-        console.info(">>>>"+this._staticId);
+        // console.info(">>>>"+this._staticId);
         this._shootTime = this._skillInfo['cooldown'] || 0;
         this.setProp(ClientDef.SKILL_PROP_COUNT, this._skillInfo['count']);
     }
@@ -227,7 +227,7 @@ export default class SkillParent {
     // //创建一个新的子弹
     createBullet(bulletID)
     { 
-        var bulletClass = SkillMgr.Instance.getBulletClass(bulletID);
+        var bulletClass = SkillSystem.getBulletClass(bulletID);
         var bullet = new bulletClass();
         bullet.onLoad(this);
         bullet.setProp(ClientDef.BULLET_PROP_ID , this._bullets.length + 1);

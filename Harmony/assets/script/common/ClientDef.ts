@@ -123,14 +123,14 @@ export default class ClientDef{
     public static readonly SKILL_TYPE_FIREWALL: number      = 113; //火墙
     public static readonly SKILL_TYPE_TIMEBOMB : number     = 114; //定时炸弹
     public static readonly SKILL_TYPE_LASER : number        = 115; //激光
-    public static readonly SKILL_TYPE_ICE_PITON : number        = 116; //冰锥
-    public static readonly SKILL_TYPE_PROPLE_STROM : number     = 117; //紫色风暴
-    public static readonly SKILL_TYPE_THUNDER_RAY : number = 118;   //雷击
-    public static readonly SKILL_TYPE_POSION_FIRE : number = 119;   //毒火
+    public static readonly SKILL_TYPE_ICE_PITON : number    = 116; //冰锥
+    public static readonly SKILL_TYPE_PROPLE_STROM : number = 117; //紫色风暴
+    public static readonly SKILL_TYPE_THUNDER_RAY : number  = 118; //雷击
+    public static readonly SKILL_TYPE_POSION_FIRE : number  = 119; //毒火
 
     public static readonly SKILL_TYPE_COMMON : number       = 200; //普通技能
-    public static readonly SKILL_TYPE_SUICIDE : number       = 201; //自杀技能
-    public static readonly SKILL_TYPE_FIRE_COLUMN : number    = 203; //火柱
+    public static readonly SKILL_TYPE_SUICIDE : number      = 201; //自杀技能
+    public static readonly SKILL_TYPE_FIRE_COLUMN : number  = 203; //火柱
 
     //子弹脚本ID
     public static readonly BULLET_SCRIPT_COMMON: number        = 1; //子弹父类
@@ -206,29 +206,29 @@ export default class ClientDef{
     public static readonly GENE_STATE_REMOVE : number = 2; //移除
 
     //基因类型
-    public static readonly GENE_TYPE_SPEED : number = 1; //速度
-    public static readonly GENE_TYPE_POSION : number = 2; //毒
-    public static readonly GENE_TYPE_SHAPESHIFT : number = 3; //变身
-    public static readonly GENE_TYPE_SHIELD : number = 4; //shield
-    public static readonly GENE_TYPE_RENEW : number = 5; //恢复
-    public static readonly GENE_TYPE_THUNDER_RAY : number = 6; //雷击麻痹
-    public static readonly GENE_TYPE_ADD_ATKSPEED : number = 7; //增加攻击速度
-    public static readonly GENE_TYPE_ATTACK_DAMGE : number = 8; //增加攻击力
-    public static readonly GENE_TYPE_BLOOM : number = 9; //血量基因
-    public static readonly GENE_TYPE_MAGNET : number = 10; //无影手基因
-    public static readonly GENE_TYPE_RECV_BLOOM : number = 11; //九花玉露丸基因
-    public static readonly GENE_TYPE_ADD_ATKRANGE : number = 12; //千里眼基因
-    public static readonly GENE_TYPE_ADD_EXP : number = 13; //吸心大法基因
-    public static readonly GENE_TYPE_SUB_SHIELD : number = 14; //降龙十八掌基因
-    public static readonly GENE_TYPE_ADD_BULLET : number = 15; //碧波基因
-    public static readonly GENE_TYPE_ICE_FROZEN : number = 16; //冰冻基因
-    public static readonly GENE_TYPE_POSION_FIRE : number = 17; //毒火基因
-    public static readonly GENE_TYPE_FIRE_SHIELD : number = 18; //fire shield
+    public static readonly GENE_TYPE_SPEED : number         = 1; //速度
+    public static readonly GENE_TYPE_POSION : number        = 2; //毒
+    public static readonly GENE_TYPE_SHAPESHIFT : number    = 3; //变身
+    public static readonly GENE_TYPE_SHIELD : number        = 4; //shield
+    public static readonly GENE_TYPE_RENEW : number         = 5; //恢复
+    public static readonly GENE_TYPE_THUNDER_RAY : number   = 6; //雷击麻痹
+    public static readonly GENE_TYPE_ADD_ATKSPEED : number  = 7; //增加攻击速度
+    public static readonly GENE_TYPE_ATTACK_DAMGE : number  = 8; //增加攻击力
+    public static readonly GENE_TYPE_BLOOM : number         = 9; //血量基因
+    public static readonly GENE_TYPE_MAGNET : number        = 10; //无影手基因
+    public static readonly GENE_TYPE_RECV_BLOOM : number    = 11; //九花玉露丸基因
+    public static readonly GENE_TYPE_ADD_ATKRANGE : number  = 12; //千里眼基因
+    public static readonly GENE_TYPE_ADD_EXP : number       = 13; //吸心大法基因
+    public static readonly GENE_TYPE_SUB_SHIELD : number    = 14; //降龙十八掌基因
+    public static readonly GENE_TYPE_ADD_BULLET : number    = 15; //碧波基因
+    public static readonly GENE_TYPE_ICE_FROZEN : number    = 16; //冰冻基因
+    public static readonly GENE_TYPE_POSION_FIRE : number   = 17; //毒火基因
+    public static readonly GENE_TYPE_FIRE_SHIELD : number   = 18; //fire shield
 
     //游戏暂停列表
-    public static readonly GAME_PAUSE_UPGRADE : number  = 1 << 1; //升级界面
-    public static readonly GAME_PAUSE_SET : number      = 1 << 2;     //设置界面
-    public static readonly GAME_PAUSE_ADVERTISE : number      = 1 << 3;     //广告界面
+    public static readonly GAME_PAUSE_UPGRADE : number      = 1 << 1; //升级界面
+    public static readonly GAME_PAUSE_SET : number          = 1 << 2;     //设置界面
+    public static readonly GAME_PAUSE_ADVERTISE : number    = 1 << 3;     //广告界面
 
     //粒子状态
     public static readonly PARTICLE_STATE_LOADING : number  = 1;         //加载状态

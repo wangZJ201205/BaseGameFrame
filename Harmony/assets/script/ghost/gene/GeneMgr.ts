@@ -5,23 +5,8 @@
 import ClientDef from "../../common/ClientDef";
 import DictMgr from "../../manager/DictMgr";
 import EntityParent from "../EntityParent";
+import GeneSystem from "../system/GeneSystem";
 import GeneParent from "./GeneParent";
-import AddAttackGene from "./children/AddAttackGene";
-import AddBulletGene from "./children/AddBulletGene";
-import AddEXPGene from "./children/AddEXPGene";
-import AddRangeGene from "./children/AddRangeGene";
-import AttackSpeedGene from "./children/AttackSpeedGene";
-import BloomGene from "./children/BloomGene";
-import FireShieldGene from "./children/FireShieldGene";
-import IceFrozenGene from "./children/IceFrozenGene";
-import MagnetGene from "./children/MagnetGene";
-import PosionFireGene from "./children/PosionFireGene";
-import RecvBloomGene from "./children/RecvBloomGene";
-import RenewGene from "./children/RenewGene";
-import ShieldGene from "./children/ShieldGene";
-import SpeedGene from "./children/SpeedGene";
-import SubShieldGene from "./children/SubShieldGene";
-import ThunderRayGene from "./children/ThunderRayGene";
 
 const {ccclass, property} = cc._decorator;
 
@@ -30,31 +15,12 @@ export default class GeneMgr
 {
     _host:EntityParent;
     private _genes : GeneParent[];
-    private _typeClass : Map<number,GeneParent>;
+    
 
     onLoad (host) 
     {
         this._host = host;
         this._genes = [];
-        
-        this._typeClass = new Map<number,GeneParent>();
-        this._typeClass[ClientDef.GENE_TYPE_SPEED] = SpeedGene;
-        this._typeClass[ClientDef.GENE_TYPE_SHAPESHIFT] = SpeedGene;
-        this._typeClass[ClientDef.GENE_TYPE_RENEW] = RenewGene;
-        this._typeClass[ClientDef.GENE_TYPE_SHIELD] = ShieldGene;
-        this._typeClass[ClientDef.GENE_TYPE_THUNDER_RAY] = ThunderRayGene;
-        this._typeClass[ClientDef.GENE_TYPE_ADD_ATKSPEED] = AttackSpeedGene;
-        this._typeClass[ClientDef.GENE_TYPE_ATTACK_DAMGE] = AddAttackGene;
-        this._typeClass[ClientDef.GENE_TYPE_BLOOM] = BloomGene;
-        this._typeClass[ClientDef.GENE_TYPE_MAGNET] = MagnetGene;
-        this._typeClass[ClientDef.GENE_TYPE_RECV_BLOOM] = RecvBloomGene;
-        this._typeClass[ClientDef.GENE_TYPE_ADD_ATKRANGE] = AddRangeGene;
-        this._typeClass[ClientDef.GENE_TYPE_ADD_EXP] = AddEXPGene;
-        this._typeClass[ClientDef.GENE_TYPE_SUB_SHIELD] = SubShieldGene;
-        this._typeClass[ClientDef.GENE_TYPE_ADD_BULLET] = AddBulletGene;
-        this._typeClass[ClientDef.GENE_TYPE_ICE_FROZEN] = IceFrozenGene;
-        this._typeClass[ClientDef.GENE_TYPE_POSION_FIRE] = PosionFireGene;
-        this._typeClass[ClientDef.GENE_TYPE_FIRE_SHIELD] = FireShieldGene;
     }
 
     start () 
@@ -153,7 +119,8 @@ export default class GeneMgr
             }
         }
 
-        var gene = new (this._typeClass[geneType])();
+        var typeclass = GeneSystem.get(geneType);
+        var gene = new (typeclass)();
         gene.onLoad();
         gene.setStaticId(geneid);
         gene.setHost(this._host);

@@ -129,8 +129,4 @@ export default class BloomComponent extends ComponentParent {
         }
     }
 
-    
-
-    
-
 }

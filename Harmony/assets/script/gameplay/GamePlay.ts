@@ -1,11 +1,9 @@
 import ClientDef from "../common/ClientDef";
-import { EventName } from "../common/EventName";
 import GameData from "../common/GameData";
 import { UIName } from "../common/UIName";
 import { Hero } from "../ghost/Hero";
 import GameHelp from "../help/GameHelp";
 import DictMgr from "../manager/DictMgr";
-import EventMgr from "../manager/EventMgr";
 import GhostMgr from "../manager/GhostMgr";
 import LoadMgr from "../manager/LoadMgr";
 import SceneMgr from "../manager/SceneMgr";

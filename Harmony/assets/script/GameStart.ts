@@ -11,6 +11,7 @@ import { Hero } from "./ghost/Hero";
 import EntityProxy from "./ghost/proxy/EntityProxy";
 import HeroProxy from "./ghost/proxy/HeroProxy";
 import ComponentSystem from "./ghost/system/ComponentSystem";
+import GeneSystem from "./ghost/system/GeneSystem";
 import AudioMgr from "./manager/AudioMgr";
 import DictMgr from "./manager/DictMgr";
 import EventMgr from "./manager/EventMgr";
@@ -18,6 +19,7 @@ import NetMgr from "./manager/NetMgr";
 import ParticleMgr from "./manager/ParticleMgr";
 import SceneMgr from "./manager/SceneMgr";
 import UIMgr from "./manager/UIMgr";
+import SkillSystem from "./skill/system/SkillSystem";
 import SocketRegister from "./socket/SocketRegister";
 import LoginProxy from "./ui/login/LoginProxy";
 import GameMath from "./utils/GameMath";
@@ -61,6 +63,8 @@ export default class GameStart extends cc.Component {
         UIConfig.init();
         DictConfig.init();
         ComponentSystem.init();
+        GeneSystem.init();
+        SkillSystem.init();
         
         if(this.isDebug)
         {

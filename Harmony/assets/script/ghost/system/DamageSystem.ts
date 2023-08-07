@@ -4,6 +4,7 @@
 
 import ClientDef from "../../common/ClientDef";
 import GameData from "../../common/GameData";
+import GameHelp from "../../help/GameHelp";
 import HeadEffectMgr from "../../manager/HeadEffectMgr";
 import EntityParent from "../EntityParent";
 
@@ -15,15 +16,12 @@ export class DamageSystem {
     //添加伤害
     static addDamage(src:EntityParent,tgt:EntityParent, damageValue:number = 0)
     {
-        if(tgt.getCProp(ClientDef.ENTITY_PROP_STATE_SHAPESHIFT) == 1)
+        if(tgt.getCProp(ClientDef.ENTITY_PROP_STATE_SHAPESHIFT) == 1 || tgt.getCProp(ClientDef.ENTITY_PROP_CUR_BLOOM) < 0 ||
+            GameHelp.GetGamePauseState() )
         {
             return;
         }
 
-        if(tgt.getCProp(ClientDef.ENTITY_PROP_CUR_BLOOM) < 0)
-        {
-            return;
-        }
         var oldDamage = damageValue;
         damageValue = DamageSystem.addAttackDamage(src, tgt, damageValue);
         var oldDamage1 = damageValue;
@@ -33,7 +31,7 @@ export class DamageSystem {
 
         if( damageValue <= 0)return;
 
-        console.info(`>>>>>>>>>>damage : old & actual > ${oldDamage} & ${oldDamage1} & ${oldDamage2} & ${damageValue}` );
+        // console.info(`>>>>>>>>>>damage : old & actual > ${oldDamage} & ${oldDamage1} & ${oldDamage2} & ${damageValue}` );
         
         DamageSystem.addEndDamage(src, tgt, damageValue); //最后伤害
     }

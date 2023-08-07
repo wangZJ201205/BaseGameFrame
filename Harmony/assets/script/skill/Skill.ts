@@ -6,8 +6,8 @@ import ClientDef from "../common/ClientDef";
 import GameData from "../common/GameData";
 import Entity from "../ghost/Entity";
 import DictMgr from "../manager/DictMgr";
-import SkillMgr from "../manager/SkillMgr";
 import SkillParent from "./SkillParent";
+import SkillSystem from "./system/SkillSystem";
 
 const {ccclass, property} = cc._decorator;
 
@@ -61,7 +61,7 @@ export default class Skill {
         }
 
         var type = Math.floor(skillid / 100); //去整型
-        var classT = SkillMgr.Instance.getSkillClass(type);
+        var classT = SkillSystem.getSkillClass(type);
         if( !classT )
         {
             console.info("没有这种类型的技能对象 :" + type);
@@ -106,7 +106,7 @@ export default class Skill {
     //生成一个新技能
     spawnSkill(type)
     {
-        var classT = SkillMgr.Instance.getSkillClass(type);
+        var classT = SkillSystem.getSkillClass(type);
         var skill = new classT();
         skill.onLoad(this._host);
         this._skills.push(skill);
